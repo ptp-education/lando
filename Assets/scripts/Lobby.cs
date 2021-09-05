@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class Lobby : MonoBehaviourPunCallbacks
 {
+    public const string kShareMode = "share";
+    public const string kPromptMode= "prompt";
+
     [SerializeField] Text status_;
     [SerializeField] InputField inputField_;
     [SerializeField] ButtonToggle buttonToggle_;
@@ -53,12 +56,14 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         inputField_.interactable = false;
 
-        if (string.Equals(buttonToggle_.Selected, "share"))
+        PhotonNetwork.NickName = buttonToggle_.Selected + "-" + System.Guid.NewGuid().ToString();
+
+        if (string.Equals(buttonToggle_.Selected, kShareMode))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("share");
-        } else if (string.Equals(buttonToggle_.Selected, "prompt"))
+            UnityEngine.SceneManagement.SceneManager.LoadScene(kShareMode);
+        } else if (string.Equals(buttonToggle_.Selected, kPromptMode))
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("prompt");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(kPromptMode);
         }
     }
 
