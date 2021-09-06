@@ -35,7 +35,6 @@ public class WebcamPlayer : MonoBehaviour
         {
             webcamImage.enabled = true;
 
-            Debug.LogError("has auth");
             WebCamTexture wct = new WebCamTexture(webcam);
             externalWebcamPlayer_.webCamTexture = wct;
 

@@ -18,43 +18,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
     public const byte kNewEpisodeCode = 1;
     public const byte kNewEpisodeNodeCode = 2;
-    public const byte kPrompterActionCode = 3;  //only changed by prompters, 
-    public const byte kNewEpisodeNodeStateCode= 4;    //only changed by sharers
+    public const byte kPrompterActionCode = 3;
+    public const byte kNewEpisodeNodeStateCode= 4;
+    public const byte kNewPlayerCode= 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        CheckForPrompters();
-    }
-
-    private int CheckForPrompters()
-    {
-        string checkFor = type_ == GameManager.Type.Prompter ? Lobby.kShareMode : Lobby.kPromptMode;
-
-        int count = 0;
-        foreach (KeyValuePair<int, Player> kvp in PhotonNetwork.CurrentRoom.Players)
-        {
-            if (kvp.Value.NickName.Contains(Lobby.kPromptMode))
-            {
-                count++;
-            }
-        }
-
-        if (count == 0)
-        {
-            SetStatus(string.Format("You need to connect to the same room, with at least one additional client in \"{0}\" Mode", checkFor));
-        }
-        else
-        {
-            if (type_ == GameManager.Type.Sharer)
-            {
-                SetStatus("Prompt Mode Connected!\n\nSelect an episode to play in the \"Prompt\" Mode client!");
-            } else
-            {
-                SetStatus(null);
-            }
-        }
-        return count;
     }
 
     private void SetStatus(string s)
@@ -67,16 +37,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
         statusObject_.SetActive(true);
         statusText_.text = s;
-    }
-
-    public override void OnPlayerEnteredRoom(Player other)
-    {
-        CheckForPrompters();
-    }
-
-    public override void OnPlayerLeftRoom(Player other)
-    {
-        CheckForPrompters();
     }
 
     public void OnEvent(EventData photonEvent)

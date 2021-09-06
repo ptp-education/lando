@@ -44,7 +44,6 @@ public class WebcamSelector : MonoBehaviour
 
     private void ButtonClicked(string webcam)
     {
-        Debug.LogError(webcam);
         webcamSelected_.Invoke(webcam);
     }
 }

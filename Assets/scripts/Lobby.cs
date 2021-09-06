@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 using Photon.Realtime;
 using Photon.Pun;
-using UnityEngine.UI;
+using Photon;
+using ExitGames.Client.Photon;
 
 public class Lobby : MonoBehaviourPunCallbacks
 {
@@ -26,7 +29,14 @@ public class Lobby : MonoBehaviourPunCallbacks
     {
         if (inputField_.text.Length > 0 && Input.GetKeyUp(KeyCode.Return))
         {
-            PhotonNetwork.CreateRoom(inputField_.text);
+            PhotonNetwork.NickName = buttonToggle_.Selected + "-" + System.Guid.NewGuid().ToString();
+
+            RoomOptions roomOptions = new RoomOptions
+            {
+                PublishUserId = true
+            };
+
+            PhotonNetwork.CreateRoom(inputField_.text, roomOptions);
             status_.text = "Creating room...";
         }
     }
@@ -38,6 +48,12 @@ public class Lobby : MonoBehaviourPunCallbacks
         {
             placeholderText.text = s;
         }
+    }
+
+    public void OnClick()
+    {
+        Episode o = Resources.Load<Episode>("prefabs/episodes/" + "test_episode");
+        Instantiate<Episode>(o);
     }
 
     #region callbacks
@@ -55,8 +71,6 @@ public class Lobby : MonoBehaviourPunCallbacks
         status_.text = "Successfully joined room!";
 
         inputField_.interactable = false;
-
-        PhotonNetwork.NickName = buttonToggle_.Selected + "-" + System.Guid.NewGuid().ToString();
 
         if (string.Equals(buttonToggle_.Selected, kShareMode))
         {
