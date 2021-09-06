@@ -11,55 +11,29 @@ public class VideoEpisodeManager : GameManager
     void Start()
     {
         videoPlayer_.loopPointReached += VideoFinished;
-        LoadEpisode("test_episode");
+        //LoadEpisode("test_episode");
     }
 
-    public override void PlayNewNode(EpisodeNode n)
+    public override void NewNodeEvent(string n)
     {
-        base.PlayNewNode(n);
+        base.NewNodeEvent(n);
 
         videoPlayer_.clip = currentNode_.Video;
         videoPlayer_.isLooping = false;
         videoPlayer_.Play();
-        currentState_ = EpisodeState.Playing;
-    }
 
-    public override void ReceiveAction(string a)
-    {
-        base.ReceiveAction(a);
-
-        if (a.Equals("space"))
-        {
-            if (currentNode_.NextNode != null)
-            {
-                PlayNewNode(currentNode_.NextNode);
-            }
-        } else
-        {
-            int index = -1;
-            try
-            {
-                index = System.Int32.Parse(a);
-            }
-            catch (System.FormatException e)
-            {
-                Debug.LogError(string.Format("Error parsing action with string {0} and error {1}", a, e.Message));
-            }
-            if (index >= 0 && index < currentNode_.Options.Count)
-            {
-                PlayNewNode(currentNode_.Options[index].Node);
-            }
-        }
+        UpdateNodeState(NodeState.Playing);
     }
 
     private void VideoFinished(VideoPlayer vp)
     {
-        if (currentState_ == EpisodeState.Playing)
+        if (currentNodeState_ == NodeState.Playing)
         {
             videoPlayer_.clip = currentNode_.VideoLoop;
             videoPlayer_.isLooping = true;
             videoPlayer_.Play();
-            currentState_ = EpisodeState.Looping;
+
+            UpdateNodeState(NodeState.Looping);
         }
     }
 }

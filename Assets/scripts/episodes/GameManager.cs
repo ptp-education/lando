@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using ExitGames.Client.Photon;
+using Photon.Realtime;
+using Photon.Pun;
+using Photon;
+
 public class GameManager : MonoBehaviour
 {
-    public enum EpisodeState
+    public class NodeState
     {
-        Playing,
-        Looping
+        public const string Playing = "playing";
+        public const string Looping = "looping";
     }
 
     public enum Type
@@ -16,11 +21,33 @@ public class GameManager : MonoBehaviour
         Sharer
     }
 
-    protected EpisodeState currentState_;
     protected Episode episode_;
     protected EpisodeNode currentNode_;
+    protected string currentNodeState_;
 
-    public void LoadEpisode(string e)
+    private NetworkManager networkManager_;
+
+    public void Init(NetworkManager nm)
+    {
+        networkManager_ = nm;
+    }
+
+    public void UpdateEpisode(string e)
+    {
+        networkManager_.SendNewEpisodeMessage(e);
+    }
+
+    public void UpdateEpisodeNode(string n)
+    {
+        networkManager_.SendNewEpisodeNodeMessage(n);
+    }
+
+    public void UpdateNodeState(string s)
+    {
+        networkManager_.SendNewNodeStateMessage(s);
+    }
+
+    public virtual void NewEpisodeEvent(string e)
     {
         if (episode_ != null)
         {
@@ -29,22 +56,25 @@ public class GameManager : MonoBehaviour
         Episode o = Resources.Load<Episode>("prefabs/episodes/" + e);
         episode_ = Instantiate<Episode>(o);
 
-        PlayNewNode(episode_.StartingNode);
+        UpdateEpisodeNode(episode_.StartingNode.gameObject.name);
     }
 
-    public virtual void ReceiveAction(string a)
+    public virtual void NewNodeEvent(string n)
     {
+        foreach(EpisodeNode node in episode_.AllNodes)
+        {
+            if (n.Equals(node.gameObject.name))
+            {
+                currentNode_ = node;
+                break;
+            }
+        }
+    }
+
+    public virtual void NewStateEvent(string s)
+    {
+        currentNodeState_ = s;
         //stub
     }
 
-    public virtual void PlayNewNode(EpisodeNode n)
-    {
-        currentNode_ = n;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

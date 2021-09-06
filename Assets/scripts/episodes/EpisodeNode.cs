@@ -25,16 +25,4 @@ public class EpisodeNode : MonoBehaviour
     [SerializeField] public EpisodeNode NextNode;
 
     [SerializeField] public List<Option> Options = new List<Option>();
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

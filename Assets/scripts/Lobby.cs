@@ -33,11 +33,14 @@ public class Lobby : MonoBehaviourPunCallbacks
 
             RoomOptions roomOptions = new RoomOptions
             {
-                PublishUserId = true
+                PublishUserId = true,
+                CleanupCacheOnLeave = false
             };
 
-            PhotonNetwork.CreateRoom(inputField_.text, roomOptions);
-            status_.text = "Creating room...";
+            TypedLobby typedLobby = new TypedLobby(null, LobbyType.Default);
+
+            PhotonNetwork.JoinOrCreateRoom(inputField_.text, roomOptions, typedLobby);
+            status_.text = "Joining room...";
         }
     }
 
@@ -63,6 +66,8 @@ public class Lobby : MonoBehaviourPunCallbacks
         status_.text = "Connected to server!";
         UpdatePlaceholderText("Enter code");
         inputField_.interactable = true;
+
+        Debug.Log(string.Format("Connected to server. Region: {0}, AppVersion: {1}", PhotonNetwork.CloudRegion, PhotonNetwork.AppVersion));
     }
 
     public override void OnJoinedRoom()
@@ -79,14 +84,8 @@ public class Lobby : MonoBehaviourPunCallbacks
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(kPromptMode);
         }
-    }
 
-    public override void OnCreateRoomFailed(short returnCode, string message)
-    {
-        base.OnCreateRoomFailed(returnCode, message);
-        status_.text = "Creating room failed. Trying to join room instead.";
-
-        PhotonNetwork.JoinRoom(inputField_.text);
+        Debug.Log(string.Format("Joined room {0}, there are {1} players", PhotonNetwork.CurrentRoom.Name, PhotonNetwork.CurrentRoom.PlayerCount));
     }
 
     public override void OnJoinRoomFailed(short returnCode, string message)
