@@ -12,6 +12,11 @@ public class Build : IPreprocessBuildWithReport
 
     public void OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
     {
+        SaveEpisodes();
+    }
+
+    private void SaveEpisodes()
+    {
         string path = Application.dataPath + "/Resources/prefabs/episodes/";
 
         string[] fileNames = Directory.GetFiles(path)

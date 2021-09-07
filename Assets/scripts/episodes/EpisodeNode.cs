@@ -13,8 +13,8 @@ public class EpisodeNode : MonoBehaviour
         [SerializeField] public EpisodeNode Node;
     }
 
-    [SerializeField] public VideoClip Video;
-    [SerializeField] public VideoClip VideoLoop;
+    [SerializeField] public UnityEngine.Object Video;
+    [SerializeField] public UnityEngine.Object VideoLoop;
 
     [TextArea(15, 20)]
     [SerializeField] public string Prompt;

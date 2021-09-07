@@ -18,7 +18,7 @@ public class VideoEpisodeManager : GameManager
     {
         base.NewNodeEvent(n);
 
-        videoPlayer_.clip = currentNode_.Video;
+        videoPlayer_.clip = (VideoClip)currentNode_.Video;
         videoPlayer_.isLooping = false;
         videoPlayer_.Play();
 
@@ -29,7 +29,7 @@ public class VideoEpisodeManager : GameManager
     {
         if (currentNodeState_ == NodeState.Playing)
         {
-            videoPlayer_.clip = currentNode_.VideoLoop;
+            videoPlayer_.clip = (VideoClip)currentNode_.VideoLoop;
             videoPlayer_.isLooping = true;
             videoPlayer_.Play();
 

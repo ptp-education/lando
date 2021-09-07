@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 32900000, guid: 1e60ce7b7c13f4f91b65f0f156c78931, type: 3}
-  VideoLoop: {fileID: 32900000, guid: 6b4c39989a53749f29c673bab0001bd7, type: 3}
+  Video: {fileID: 102900000, guid: 1e60ce7b7c13f4f91b65f0f156c78931, type: 3}
+  VideoLoop: {fileID: 102900000, guid: 6b4c39989a53749f29c673bab0001bd7, type: 3}
   Prompt: 
   NextNode: {fileID: 0}
   Options: []
@@ -153,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 32900000, guid: d72c579aabdde408d92296809d817588, type: 3}
-  VideoLoop: {fileID: 32900000, guid: 8fd949b067bd64985a5f09095c4471ab, type: 3}
+  Video: {fileID: 102900000, guid: d72c579aabdde408d92296809d817588, type: 3}
+  VideoLoop: {fileID: 102900000, guid: 8fd949b067bd64985a5f09095c4471ab, type: 3}
   Prompt: 
   NextNode: {fileID: 7501269872559863202}
   Options: []
@@ -206,8 +206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 32900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoop: {fileID: 32900000, guid: d1333f007aa5540fd9271d60e128e5fb, type: 3}
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoop: {fileID: 102900000, guid: d1333f007aa5540fd9271d60e128e5fb, type: 3}
   Prompt: 'Test Prompt
 
 
