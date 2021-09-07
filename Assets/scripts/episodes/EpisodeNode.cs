@@ -14,7 +14,9 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [SerializeField] public UnityEngine.Object Video;
+    [SerializeField] public string VideoFilePath;
     [SerializeField] public UnityEngine.Object VideoLoop;
+    [SerializeField] public string VideoLoopFilePath;
 
     [TextArea(15, 20)]
     [SerializeField] public string Prompt;
