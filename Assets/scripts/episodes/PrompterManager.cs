@@ -39,6 +39,27 @@ public class PrompterManager : GameManager
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            AdjustTeleprompterPosition(100);
+        } else if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            AdjustTeleprompterPosition(-100);
+        }
+    }
+
+    private void AdjustTeleprompterPosition(int position)
+    {
+        teleprompter_.transform.position = new Vector3(teleprompter_.transform.position.x, teleprompter_.transform.position.y + position, teleprompter_.transform.position.z);
+    }
+
+    private void ResetTeleprompterPosition()
+    {
+        teleprompter_.transform.position = new Vector3(teleprompter_.transform.position.x, 100, teleprompter_.transform.position.z);
+    }
+
     private void SpawnButtons()
     {
         int buttonCounter = 1;
@@ -108,11 +129,11 @@ public class PrompterManager : GameManager
         if (s.Equals(NodeState.Looping))
         {
             SpawnButtons();
+            AdjustTeleprompterPosition(0);
         } else if (s.Equals(NodeState.Playing))
         {
             teleprompter_.text = currentNode_.Prompt;
             HideButtons();
         }
     }
-
 }
