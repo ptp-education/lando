@@ -33,7 +33,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
         RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All };
         PhotonNetwork.RaiseEvent(kNewEpisodeCode, content, raiseEventOptions, SendOptions.SendReliable);
 
-        UpdateRoomState(episode: e, node:"", state:GameManager.NodeState.Playing);
+        UpdateRoomState(episode: e, node: "", state:GameManager.NodeState.Playing);
     }
 
     public void SendNewEpisodeNodeMessage(string n)
