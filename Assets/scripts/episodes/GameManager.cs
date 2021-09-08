@@ -57,6 +57,8 @@ public class GameManager : MonoBehaviour
             return;
 
         cachedEpisode_ = e;
+        cachedNode_ = "";
+        cachedState_ = "";
 
         if (episode_ != null)
         {
@@ -80,6 +82,7 @@ public class GameManager : MonoBehaviour
             return;
 
         cachedNode_ = n;
+        cachedState_ = "";
 
         foreach(EpisodeNode node in episode_.AllNodes)
         {

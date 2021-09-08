@@ -62,6 +62,10 @@ public class PrompterManager : GameManager
 
     private void SpawnButtons()
     {
+        if (currentNode_ == null)
+        {
+            return;
+        }
         int buttonCounter = 1;
         if (currentNode_.NextNode != null)
         {
