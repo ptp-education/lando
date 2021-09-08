@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour
     protected EpisodeNode currentNode_;
     protected string currentNodeState_;
 
+    private string cachedEpisode_ = "";
+    private string cachedNode_ = "";
+    private string cachedState_ = "";
+
     private NetworkManager networkManager_;
 
     public void Init(NetworkManager nm)
@@ -47,8 +51,13 @@ public class GameManager : MonoBehaviour
         networkManager_.SendNewNodeStateMessage(s);
     }
 
-    public virtual void NewEpisodeEvent(string e)
+    public void NewEpisodeEvent(string e)
     {
+        if (e.Equals(cachedEpisode_)) 
+            return;
+
+        cachedEpisode_ = e;
+
         if (episode_ != null)
         {
             Destroy(episode_.gameObject);
@@ -56,25 +65,51 @@ public class GameManager : MonoBehaviour
         Episode o = Resources.Load<Episode>("prefabs/episodes/" + e);
         episode_ = Instantiate<Episode>(o);
 
-        UpdateEpisodeNode(episode_.StartingNode.gameObject.name);
+        NewEpisodeEventInternal(episode_);
     }
 
-    public virtual void NewNodeEvent(string n)
+    protected virtual void NewEpisodeEventInternal(Episode e)
     {
+        episode_ = e;
+        UpdateEpisodeNode(e.StartingNode.gameObject.name);
+    }
+
+    public void NewNodeEvent(string n)
+    {
+        if (n.Equals(cachedNode_))
+            return;
+
+        cachedNode_ = n;
+
         foreach(EpisodeNode node in episode_.AllNodes)
         {
             if (n.Equals(node.gameObject.name))
             {
-                currentNode_ = node;
+                NewNodeEventInternal(node);
                 break;
             }
         }
     }
 
-    public virtual void NewStateEvent(string s)
+    protected virtual void NewNodeEventInternal(EpisodeNode n)
+    {
+        currentNode_ = n;
+        //stub
+    }
+
+    public void NewStateEvent(string s)
+    {
+        if (s.Equals(cachedState_))
+            return;
+
+        cachedState_ = s;
+
+        NewStateEventInternal(s);
+    }
+
+    protected virtual void NewStateEventInternal(string s)
     {
         currentNodeState_ = s;
         //stub
     }
-
 }

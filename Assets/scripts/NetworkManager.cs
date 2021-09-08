@@ -14,17 +14,22 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
     public const string kEpisodeNodeKey = "node";
     public const string kNodeStateKey = "node-state";
 
-    [SerializeField] GameManager gameManager_;
     [SerializeField] GameManager.Type type_;
 
     public const byte kNewEpisodeCode = 1;
     public const byte kNewEpisodeNodeCode = 2;
     public const byte kNewEpisodeNodeStateCode= 3;
 
+    private List<GameManager> gameManagers_ = new List<GameManager>();
+
     // Start is called before the first frame update
     void Start()
     {
-        gameManager_.Init(this);
+        foreach (GameManager gm in FindObjectsOfType<GameManager>())
+        {
+            gm.Init(this);
+            gameManagers_.Add(gm);
+        }
     }
 
     public void SendNewEpisodeMessage(string e)
@@ -86,16 +91,25 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
         if (eventCode == kNewEpisodeCode)
         {
             string episode = (string)data[0];
-            gameManager_.NewEpisodeEvent(episode);
+            foreach(GameManager gm in gameManagers_)
+            {
+                gm.NewEpisodeEvent(episode);
+            }
 
         } else if (eventCode == kNewEpisodeNodeCode)
         {
             string node = (string)data[0];
-            gameManager_.NewNodeEvent(node);
+            foreach (GameManager gm in gameManagers_)
+            {
+                gm.NewNodeEvent(node);
+            }
         } else if (eventCode == kNewEpisodeNodeStateCode)
         {
             string state = (string)data[0];
-            gameManager_.NewStateEvent(state);
+            foreach (GameManager gm in gameManagers_)
+            {
+                gm.NewStateEvent(state);
+            }
         }
     }
 

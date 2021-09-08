@@ -114,17 +114,17 @@ public class PrompterManager : GameManager
         UpdateEpisode(episodesDropdown_.options[episodesDropdown_.value].text);
     }
 
-    public override void NewEpisodeEvent(string e)
+    protected override void NewEpisodeEventInternal(Episode e)
     {
-        base.NewEpisodeEvent(e);
+        base.NewEpisodeEventInternal(e);
 
         teleprompter_.text = "";
         HideButtons();
     }
 
-    public override void NewStateEvent(string s)
+    protected override void NewStateEventInternal(string s)
     {
-        base.NewStateEvent(s);
+        base.NewStateEventInternal(s);
 
         if (s.Equals(NodeState.Looping))
         {

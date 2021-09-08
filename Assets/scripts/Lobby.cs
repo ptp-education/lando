@@ -23,6 +23,17 @@ public class Lobby : MonoBehaviourPunCallbacks
         status_.text = "Connecting";
         inputField_.interactable = false;
         UpdatePlaceholderText("Waiting for server");
+
+        StartCoroutine(RequestAuthorization());
+        if (!Application.HasUserAuthorization(UserAuthorization.WebCam))
+        {
+            Debug.LogError("does not has auth");
+        }
+    }
+
+    IEnumerator RequestAuthorization()
+    {
+        yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
     }
 
     private void Update()

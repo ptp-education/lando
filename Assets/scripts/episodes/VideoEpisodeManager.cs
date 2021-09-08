@@ -11,14 +11,13 @@ public class VideoEpisodeManager : GameManager
     void Start()
     {
         videoPlayer_.loopPointReached += VideoFinished;
-        //LoadEpisode("test_episode");
     }
 
-    public override void NewNodeEvent(string n)
+    protected override void NewNodeEventInternal(EpisodeNode node)
     {
-        base.NewNodeEvent(n);
+        base.NewNodeEventInternal(node);
 
-        videoPlayer_.url = System.IO.Path.Combine(Application.streamingAssetsPath, currentNode_.VideoFilePath);
+        videoPlayer_.url = System.IO.Path.Combine(Application.streamingAssetsPath, node.VideoFilePath);
         videoPlayer_.isLooping = false;
         videoPlayer_.Play();
 
