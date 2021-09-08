@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+
 [CustomEditor(typeof(EpisodeNode))]
 public class StreamingImageEditor : Editor
 {
@@ -12,6 +13,10 @@ public class StreamingImageEditor : Editor
     SerializedProperty loopingFilePath;
     SerializedProperty loopingFileAsset;
 
+    SerializedProperty prompt;
+    SerializedProperty nextVideo;
+    SerializedProperty options;
+
     const string kAssetPrefix = "Assets/StreamingAssets/";
 
     void OnEnable()
@@ -20,6 +25,10 @@ public class StreamingImageEditor : Editor
         videoFileAsset = serializedObject.FindProperty("Video");
         loopingFilePath = serializedObject.FindProperty("VideoLoopFilePath");
         loopingFileAsset = serializedObject.FindProperty("VideoLoop");
+
+        prompt = serializedObject.FindProperty("Prompt");
+        nextVideo = serializedObject.FindProperty("NextNode");
+        options = serializedObject.FindProperty("Options");
     }
 
     public override void OnInspectorGUI()
@@ -29,6 +38,9 @@ public class StreamingImageEditor : Editor
         EditorGUILayout.PropertyField(videoFileAsset);
         EditorGUILayout.PropertyField(loopingFilePath);
         EditorGUILayout.PropertyField(loopingFileAsset);
+        EditorGUILayout.PropertyField(prompt, GUILayout.Width(400), GUILayout.Height(400));
+        EditorGUILayout.PropertyField(nextVideo);
+        EditorGUILayout.PropertyField(options);
 
         if (videoFileAsset.objectReferenceValue != null)
         {
