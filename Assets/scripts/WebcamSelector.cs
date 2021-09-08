@@ -8,6 +8,8 @@ public class WebcamSelector : MonoBehaviour
     public delegate void WebcamSelected(string w);
 
     [SerializeField] Button button_;
+    [SerializeField] int xOffset_;
+    [SerializeField] int yOffset_;
 
     private WebcamSelected webcamSelected_;
 
@@ -25,7 +27,7 @@ public class WebcamSelector : MonoBehaviour
             Button b = Instantiate<Button>(button_);
             b.transform.SetParent(transform, true);
 
-            b.transform.localPosition = new Vector3(0, -45 * i);
+            b.transform.localPosition = new Vector3(xOffset_*i, yOffset_*i);
 
             if (i < devices.Length)
             {

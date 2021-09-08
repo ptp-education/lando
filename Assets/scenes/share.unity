@@ -829,6 +829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button_: {fileID: 1190767500160091226, guid: 8934dea574e0249888058e670e48649a, type: 3}
+  xOffset_: 0
+  yOffset_: -45
 --- !u!224 &1717999121 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7826561188481268667, guid: 2f423fc863dda5a4597aaf64346e63ab, type: 3}
@@ -887,7 +889,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e77acf1d5fa4c4712b508bb27ca7caae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager_: {fileID: 1968126629}
   type_: 1
 --- !u!1 &1924597685
 GameObject:
