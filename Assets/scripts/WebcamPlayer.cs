@@ -21,16 +21,15 @@ public class WebcamPlayer : MonoBehaviour
 
         if (webcam != null)
         {
-            StartCoroutine(InitializeWebcam(webcam));
+            InitializeWebcam(webcam);
         } else
         {
             webcamImage.gameObject.SetActive(false);
         }
     }
 
-    IEnumerator InitializeWebcam(string webcam)
+    private void InitializeWebcam(string webcam)
     {
-        yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
         if (Application.HasUserAuthorization(UserAuthorization.WebCam))
         {
             webcamImage.enabled = true;
