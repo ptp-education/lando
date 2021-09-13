@@ -56,7 +56,11 @@
       const videoSource = id;
       const constraints = {
         audio: false,
-        video: {deviceId: videoSource ? {exact: videoSource} : undefined}
+        video: {
+          width: { ideal: 1920 },
+          height: { ideal: 1080 },
+          deviceId: videoSource ? {exact: videoSource} : undefined
+        }
       };
       return navigator.mediaDevices.getUserMedia(constraints).
         then(gotStream).catch(handleError);
