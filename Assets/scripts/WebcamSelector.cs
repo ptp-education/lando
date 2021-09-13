@@ -12,8 +12,11 @@ public class WebcamSelector : MonoBehaviour
     [SerializeField] Button button_;
     [SerializeField] int xOffset_;
     [SerializeField] int yOffset_;
+    [SerializeField] bool spawnNoWebcam_ = true;
 
     private WebcamSelected webcamSelected_;
+
+    private int buttonCounter_ = 0;
 
     public void Init(WebcamSelected webcamSelected)
     {
@@ -22,11 +25,23 @@ public class WebcamSelector : MonoBehaviour
 
     void Start()
     {
-        GetCameras();
+        SpawnButtons();
     }
 
-    void GetCameras()
+    private void SpawnButtons()
     {
+        buttonCounter_ = 0;
+
+        if (spawnNoWebcam_)
+        {
+            Button b = Instantiate<Button>(button_);
+            b.transform.SetParent(transform, true);
+
+            b.transform.localPosition = buttonPosition();
+            b.GetComponentInChildren<Text>().text = "No Webcam";
+            b.onClick.AddListener(delegate { ButtonClicked(null); });
+        }
+
         Application.ExternalCall("GetCameras");
     }
 
@@ -35,35 +50,35 @@ public class WebcamSelector : MonoBehaviour
         var parsedJSON = JSON.Parse(camerasJson);
         JSONArray devicesArray = parsedJSON.AsArray;
 
-        for (int i = 0; i <= devicesArray.Count; i++)
+        int offsetCounter = 0;
+        for (int i = 0; i < devicesArray.Count; i++)
         {
             if (devicesArray[i]["kind"] == "videoinput")
             {
                 Button b = Instantiate<Button>(button_);
                 b.transform.SetParent(transform, true);
 
-                b.transform.localPosition = new Vector3(xOffset_ * i, yOffset_ * i);
+                b.transform.localPosition = buttonPosition();
 
-                if (i < devicesArray.Count)
-                {
-                    string s = null;
-                    string deviceId = devicesArray[i]["deviceId"];
-                    Debug.Log("unity: " + deviceId);
-                    s = devicesArray[i]["label"];
-                    b.GetComponentInChildren<Text>().text = s;
-                    b.onClick.AddListener(delegate {
-                        ButtonClicked(s);
-                        Application.ExternalCall("getStream", deviceId);
-                    });
-                }
-                else
-                {
-                    b.GetComponentInChildren<Text>().text = "No webcam";
-                    b.onClick.AddListener(delegate { ButtonClicked(null); });
-                }
+                string s = null;
+                string deviceId = devicesArray[i]["deviceId"];
+                s = devicesArray[i]["label"];
+                b.GetComponentInChildren<Text>().text = s;
+                b.onClick.AddListener(delegate {
+                    ButtonClicked(s);
+                    Application.ExternalCall("getStream", deviceId);
+                });
+
+                offsetCounter++;
             }
         }
+    }
 
+    private Vector3 buttonPosition()
+    {
+        Vector3 p = new Vector3(xOffset_ * buttonCounter_, yOffset_ * buttonCounter_);
+        buttonCounter_++;
+        return p;
     }
 
     private void ButtonClicked(string webcam)
