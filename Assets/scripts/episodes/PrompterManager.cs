@@ -43,10 +43,10 @@ public class PrompterManager : GameManager
     {
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            AdjustTeleprompterPosition(-100);
+            AdjustTeleprompterPosition(100);
         } else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            AdjustTeleprompterPosition(100);
+            AdjustTeleprompterPosition(-100);
         }
     }
 
@@ -57,7 +57,7 @@ public class PrompterManager : GameManager
 
     private void ResetTeleprompterPosition()
     {
-        teleprompter_.transform.localPosition = new Vector3(0, -200, teleprompter_.transform.position.z);
+        teleprompter_.transform.localPosition = new Vector3(0, -100, teleprompter_.transform.position.z);
     }
 
     private void SpawnButtons()
@@ -130,17 +130,17 @@ public class PrompterManager : GameManager
     {
         base.NewStateEventInternal(s);
 
-        if (string.Equals(s, NodeState.Looping))
-        {
-            Debug.Log("spawning button because of new state: " + s);
-
-            SpawnButtons();
-            AdjustTeleprompterPosition(0);
-        } else if (string.Equals(s, NodeState.Playing))
+        if (string.Equals(s, NodeState.Playing))
         {
             teleprompter_.text = currentNode_.Prompt;
             ResetTeleprompterPosition();
-            HideButtons();
         }
+    }
+
+    protected override void NewNodeEventInternal(EpisodeNode n)
+    {
+        base.NewNodeEventInternal(n);
+
+        SpawnButtons();
     }
 }

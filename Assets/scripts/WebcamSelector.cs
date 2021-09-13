@@ -12,7 +12,6 @@ public class WebcamSelector : MonoBehaviour
     [SerializeField] Button button_;
     [SerializeField] int xOffset_;
     [SerializeField] int yOffset_;
-    [SerializeField] bool spawnNoWebcam_ = true;
 
     private WebcamSelected webcamSelected_;
 
@@ -31,16 +30,6 @@ public class WebcamSelector : MonoBehaviour
     private void SpawnButtons()
     {
         buttonCounter_ = 0;
-
-        if (spawnNoWebcam_)
-        {
-            Button b = Instantiate<Button>(button_);
-            b.transform.SetParent(transform, true);
-
-            b.transform.localPosition = buttonPosition();
-            b.GetComponentInChildren<Text>().text = "No Webcam";
-            b.onClick.AddListener(delegate { ButtonClicked(null); });
-        }
 
         Application.ExternalCall("GetCameras");
     }

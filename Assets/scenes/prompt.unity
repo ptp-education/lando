@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43529412, g: 0.58431375, b: 0.8627451, a: 1}
+  m_Color: {r: 0.43529412, g: 0.58431375, b: 0.8627451, a: 0.8666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -691,8 +691,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12.5720215}
+  m_SizeDelta: {x: 0, y: -519.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &458797635
 GameObject:
@@ -730,7 +730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 913.64386, y: 0}
+  m_AnchoredPosition: {x: 890.64386, y: 87}
   m_SizeDelta: {x: 94.8877, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458797637
@@ -1130,9 +1130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button_: {fileID: 1190767500160091226, guid: 8934dea574e0249888058e670e48649a, type: 3}
   xOffset_: 0
-  yOffset_: -45
+  yOffset_: -35
   spawnNoWebcam_: 1
-  spawnNoVideo_: 1
 --- !u!1 &539157966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1247,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816218454}
   m_CullTransparentMesh: 1
+--- !u!1 &897899509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897899510}
+  m_Layer: 5
+  m_Name: video_player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &897899510
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897899509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1425731005}
+  m_Father: {fileID: 1601324936}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &923148295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,7 +1321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 650, y: 0}
+  m_AnchoredPosition: {x: 627, y: 87}
   m_SizeDelta: {x: 351.76404, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923148297
@@ -1886,7 +1921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.43529412, g: 0.58431375, b: 0.8627451, a: 1}
+  m_Color: {r: 0.43529412, g: 0.58431375, b: 0.8627451, a: 0.8666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2040,11 +2075,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1601324936}
+    m_TransformParent: {fileID: 897899510}
     m_Modifications:
     - target: {fileID: 7826561188481268664, guid: 2f423fc863dda5a4597aaf64346e63ab, type: 3}
       propertyPath: m_AudioOutputMode
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7826561188481268666, guid: 2f423fc863dda5a4597aaf64346e63ab, type: 3}
       propertyPath: m_Name
@@ -2060,7 +2095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7826561188481268667, guid: 2f423fc863dda5a4597aaf64346e63ab, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7826561188481268667, guid: 2f423fc863dda5a4597aaf64346e63ab, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2508,7 +2543,7 @@ RectTransform:
   - {fileID: 1274568132}
   - {fileID: 15398188}
   - {fileID: 1326084034}
-  - {fileID: 1425731005}
+  - {fileID: 897899510}
   - {fileID: 420552200}
   - {fileID: 528616053}
   m_Father: {fileID: 0}

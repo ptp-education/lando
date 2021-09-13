@@ -17,8 +17,6 @@ public class WebcamPlayer : MonoBehaviour
 
     private void WebcamSelected(string webcam)
     {
-        webcamSelector_.gameObject.SetActive(false);
-
         if (webcam != null)
         {
             InitializeWebcam(webcam);
