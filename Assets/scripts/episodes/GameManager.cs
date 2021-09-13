@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void NewEpisodeEvent(string e)
     {
-        if (e.Equals(cachedEpisode_)) 
+        if (string.Equals(e, cachedEpisode_))
             return;
 
         cachedEpisode_ = e;
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void NewNodeEvent(string n)
     {
-        if (n.Equals(cachedNode_))
+        if (string.Equals(n, cachedNode_))
             return;
 
         cachedNode_ = n;
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
 
         foreach(EpisodeNode node in episode_.AllNodes)
         {
-            if (n.Equals(node.gameObject.name))
+            if (string.Equals(n, node.gameObject.name))
             {
                 NewNodeEventInternal(node);
                 break;
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
 
     public void NewStateEvent(string s)
     {
-        if (s.Equals(cachedState_))
+        if (string.Equals(s, cachedState_))
             return;
 
         cachedState_ = s;

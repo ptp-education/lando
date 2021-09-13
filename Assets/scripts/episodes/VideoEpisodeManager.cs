@@ -29,7 +29,7 @@ public class VideoEpisodeManager : GameManager
 
     private void VideoFinished(VideoPlayer vp)
     {
-        if (internalState_.Equals(NodeState.Playing))
+        if (string.Equals(internalState_, NodeState.Playing))
         {
             videoPlayer_.url = System.IO.Path.Combine(Application.streamingAssetsPath, currentNode_.VideoLoopFilePath);
             videoPlayer_.isLooping = true;
