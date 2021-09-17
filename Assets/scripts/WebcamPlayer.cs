@@ -10,6 +10,8 @@ public class WebcamPlayer : MonoBehaviour
     [SerializeField] RawImage webcamImage;
     [SerializeField] Nexweron.WebCamPlayer.WebCamPlayer externalWebcamPlayer_;
 
+    [SerializeField] bool hideSelectorOnTap_;
+
     void Start()
     {
         webcamSelector_.Init(WebcamSelected);
@@ -23,6 +25,11 @@ public class WebcamPlayer : MonoBehaviour
         } else
         {
             webcamImage.gameObject.SetActive(false);
+        }
+
+        if (hideSelectorOnTap_)
+        {
+            webcamSelector_.gameObject.SetActive(false);
         }
     }
 

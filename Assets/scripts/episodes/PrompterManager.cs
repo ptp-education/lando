@@ -66,6 +66,9 @@ public class PrompterManager : GameManager
         {
             return;
         }
+
+        HideButtons();
+
         int buttonCounter = 1;
         if (currentNode_.NextNode != null)
         {
@@ -103,14 +106,7 @@ public class PrompterManager : GameManager
 
     private void CommandButtonPressed(string linkedEpisode)
     {
-        if (string.Equals(currentNodeState_, NodeState.Looping))
-        {
-            UpdateEpisodeNode(linkedEpisode);
-            HideButtons();
-        } else
-        {
-            Debug.LogWarning("Command button was pressed while video is not ready for command...somehow");
-        }
+        UpdateEpisodeNode(linkedEpisode);
     }
 
     public void OnEpisodeLoadClick()
