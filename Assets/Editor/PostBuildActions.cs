@@ -1,0 +1,25 @@
+﻿using System;
+using System.IO;
+using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEditor.Callbacks;
+
+public class PostBuildActions
+{
+    [PostProcessBuild]
+    public static void OnPostProcessBuild(BuildTarget target, string targetPath)
+    {
+
+        //var path = Path.Combine(targetPath, "Build/temp.txt");
+        string[] pathName  = targetPath.Split('/');
+        string fileName = pathName[pathName.Length - 1];
+        var filePath = targetPath+"/Build/"+ fileName+".framework.js";
+        string frameWorkText = File.ReadAllText(filePath);
+
+        string updatedText = frameWorkText.Replace("function SendMessage(gameObject,func,param)", "function GetCameras(){         var constraints = {           audio: false,           video: {             height: {               ideal: 1080             },             width: {               ideal:1920             }           }         };          navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {             navigator.mediaDevices.enumerateDevices().then(function (devices) {                  gameInstance.Module.asmLibraryArg.FillMediaSpots();                 gameInstance.SendMessage('webcam_selector', 'Cameras', JSON.stringify(devices));             });         });       }     function FillMediaSpots(){         MediaDevices = [];         var enumerateMediaDevices = (function() {             var getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;             if (!getMedia)                 return;             function addDevice(label) {                 label = label ? label : 'device #' + MediaDevices.length;                 var device = {                     deviceName: label,                     refCount: 0,                     video: null                 };                 MediaDevices.push(device)             }             if (!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices) {                 if (typeof MediaStreamTrack == 'undefined' || typeof MediaStreamTrack.getSources == 'undefined') {                     console.log('Media Devices cannot be enumerated on this browser.');                     return                 }                 function gotSources(sourceInfos) {                     for (var i = 0; i !== sourceInfos.length; ++i) {                         var sourceInfo = sourceInfos[i];                         if (sourceInfo.kind === 'video')                             addDevice(sourceInfo.label)                     }                 }                 MediaStreamTrack.getSources(gotSources)             }             navigator.mediaDevices.enumerateDevices().then((function(devices) {                 devices.forEach((function(device) {                     if (device.kind == 'videoinput')                         addDevice(device.label)                 }                 ))             }             )).catch((function(err) {                 console.log(err.name + ': '  + error.message)             }             ))         }         );         enumerateMediaDevices()     }     function SendMessage(gameObject, func, param)");
+        updatedText = updatedText.Replace("function _JS_WebCamVideo_Start(deviceId)", "    function _JS_WebCamVideo_Start(deviceId) {         if (MediaDevices[deviceId].video) {             MediaDevices[deviceId].refCount++;             return         }         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {             navigator.getMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia         } else {             navigator.getMedia = (function(constraints, success, error) {                 navigator.mediaDevices.getUserMedia(constraints).then(success).catch(error)             }             )         }         if (!navigator.getMedia) {             console.log('WebCam is not supported. Try a different browser.');             return         }         if (!webcam.canvas) {             canvas = document.createElement('canvas');             canvas.style.display = 'none';             var context2d = canvas.getContext('2d');             if (!context2d) {                 console.log('context2d is null');                 return             }             document.body.appendChild(canvas);             webcam.canvas = canvas         }         navigator.getMedia({             video: true,             audio: false         }, (function(stream) {             webcam.canvas.appendChild(document.getElementById('videoStream'));             MediaDevices[deviceId].video = document.getElementById('videoStream');             MediaDevices[deviceId].stream = stream;             MediaDevices[deviceId].refCount++         }         ), (function(err) {             console.log('An error occurred! ' + err)         }         ))     } function _JS_WebCamVideo_Start_Removed(deviceId)");
+        updatedText = updatedText.Replace("Module.asmLibraryArg={", "Module.asmLibraryArg = { 'FillMediaSpots': FillMediaSpots,");
+        File.WriteAllText(filePath, updatedText);
+
+    }
+}
