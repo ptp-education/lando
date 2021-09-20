@@ -359,7 +359,7 @@ RectTransform:
   m_Children:
   - {fileID: 1717999121}
   m_Father: {fileID: 1601324936}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -802,9 +802,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1216268425}
-  - {fileID: 1680444310}
   - {fileID: 503152890}
   - {fileID: 1946673346}
+  - {fileID: 1680444310}
   - {fileID: 1968126628}
   - {fileID: 1738641444}
   m_Father: {fileID: 0}
@@ -845,7 +845,7 @@ RectTransform:
   m_Children:
   - {fileID: 1483238882}
   m_Father: {fileID: 1601324936}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -867,7 +867,6 @@ MonoBehaviour:
   button_: {fileID: 1190767500160091226, guid: 8934dea574e0249888058e670e48649a, type: 3}
   xOffset_: 0
   yOffset_: -45
-  spawnNoWebcam_: 1
 --- !u!224 &1717999121 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7826561188481268667, guid: 2f423fc863dda5a4597aaf64346e63ab, type: 3}
@@ -1058,7 +1057,7 @@ RectTransform:
   - {fileID: 235757478}
   - {fileID: 1048080823}
   m_Father: {fileID: 1601324936}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1081,6 +1080,7 @@ MonoBehaviour:
   statusText_: {fileID: 235757479}
   webcamImage: {fileID: 1048080824}
   externalWebcamPlayer_: {fileID: 1335704984}
+  hideSelectorOnTap_: 1
 --- !u!222 &1946673349
 CanvasRenderer:
   m_ObjectHideFlags: 0
