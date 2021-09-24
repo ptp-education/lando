@@ -6,6 +6,12 @@ using System;
 
 public class EpisodeNode : MonoBehaviour
 {
+    public enum EpisodeType
+    {
+        Video,
+        Prefab
+    }
+
     [Serializable]
     public class Option
     {
@@ -13,18 +19,18 @@ public class EpisodeNode : MonoBehaviour
         [SerializeField] public EpisodeNode Node;
     }
 
-    [SerializeField] public UnityEngine.Object Video;
-    [SerializeField] public string VideoFilePath;
-    [SerializeField] public UnityEngine.Object VideoLoop;
-    [SerializeField] public string VideoLoopFilePath;
+    public EpisodeType Type;
+    public UnityEngine.Object Video;
+    public string VideoFilePath;
+    public UnityEngine.Object VideoLoop;
+    public string VideoLoopFilePath;
 
-    [TextArea(15, 20)]
-    [SerializeField] public string Prompt;
+    public GameObject Prefab;
+    public string PrefabPath;
 
-    [Space]
-    [Header("   Optional - include a next video as the first option")]
-    [Space]
-    [SerializeField] public EpisodeNode NextNode;
+    public string Prompt;
 
-    [SerializeField] public List<Option> Options = new List<Option>();
+    public EpisodeNode NextNode;
+
+    public List<Option> Options = new List<Option>();
 }
