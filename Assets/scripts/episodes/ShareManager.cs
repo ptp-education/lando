@@ -54,7 +54,10 @@ public class ShareManager : GameManager
             cachedNodeObjects_[Key(currentNode)].Play();
         }
 
-        yield return 0;
+        for (int i = 0; i < 12; i ++)
+        {
+            yield return 0;
+        }
 
         cachedNodeObjects_[Key(currentNode)].transform.SetAsLastSibling();
 
@@ -63,6 +66,10 @@ public class ShareManager : GameManager
         List<string> allKeys = new List<string>(cachedNodeObjects_.Keys);
         foreach (string k in allKeys)
         {
+            if (!string.Equals(k, Key(currentNode)))
+            {
+                cachedNodeObjects_[k].Hide();
+            }
             if (!preloadedAssets.Any(p => string.Equals(p, k)))
             {
                 GameObject.Destroy(cachedNodeObjects_[k].gameObject);
@@ -88,7 +95,6 @@ public class ShareManager : GameManager
         }
 
         nodeObject.gameObject.name = node.gameObject.name;
-        Debug.LogError("instantiated object with name " + nodeObject.gameObject.name);
 
         nodeObject.transform.SetParent(nodeObjectParent_);
         nodeObject.transform.localPosition = Vector3.zero;

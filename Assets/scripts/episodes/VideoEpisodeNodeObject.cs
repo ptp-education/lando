@@ -36,18 +36,29 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     {
         base.Play();
 
-        videoPlayerMain_.Play();
-        videoPlayerMain_.transform.localScale = Vector3.one;
-        videoPlayerLoop_.transform.localScale = Vector3.zero;
+        StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_));
     }
 
     public override void Loop()
     {
         base.Loop();
 
-        videoPlayerLoop_.Play();
-        videoPlayerLoop_.transform.localScale = Vector3.one;
-        videoPlayerMain_.transform.localScale = Vector3.zero;
+        StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_));
+    }
+
+    private IEnumerator SwapPlayer(VideoPlayer play, VideoPlayer stop)
+    {
+        play.Play();
+
+        for (int i = 0; i < 12; i++)
+        {
+            yield return 0;
+        }
+
+        stop.Pause();
+
+        play.transform.localScale = Vector3.one;
+        stop.transform.localScale = Vector3.zero;
     }
 
     public override void Preload(EpisodeNode node)
