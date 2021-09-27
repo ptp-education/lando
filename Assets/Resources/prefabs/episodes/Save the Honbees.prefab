@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &40413990051420138
+--- !u!1 &190570330699456351
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,452 +8,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4790844087142415694}
-  - component: {fileID: 591856533359637322}
+  - component: {fileID: 36260017000382373}
+  - component: {fileID: 4828334070117496000}
   m_Layer: 5
-  m_Name: b3-0
+  m_Name: b1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4790844087142415694
+--- !u!224 &36260017000382373
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40413990051420138}
+  m_GameObject: {fileID: 190570330699456351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 20
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &591856533359637322
+--- !u!114 &4828334070117496000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 40413990051420138}
+  m_GameObject: {fileID: 190570330699456351}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: c8f6e4c52623c4566b2563f8f15ef6be, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
-  Prompt: 'That sounds serious.
-
-'
-  NextNode: {fileID: 3832465645083260589}
-  Options: []
---- !u!1 &131026721658336898
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3642136901781289935}
-  - component: {fileID: 1395958982226949827}
-  m_Layer: 5
-  m_Name: b3-1.3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3642136901781289935
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131026721658336898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1395958982226949827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 131026721658336898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 4ef42fe2a7b134133bfbe6130670f594, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.2.mp4
-  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
-  Prompt: MISSING REPEAT LOOP
-  NextNode: {fileID: 281480429775445087}
-  Options:
-  - Prompt: Repeat
-    Node: {fileID: 1395958982226949827}
---- !u!1 &315099325248633560
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 263188017402950952}
-  - component: {fileID: 142120579237375284}
-  m_Layer: 5
-  m_Name: b2-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &263188017402950952
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315099325248633560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &142120579237375284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315099325248633560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 166b4a8c1b3f1433a88b03bddd63d7cb, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-1.0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: "Lisa: See how there\u2019s an even rhythm that we can clap along to? That\u2019s
-    the beat!\n\n<i>Clap along </i>\n\nAlright, I think I got it!\n"
-  NextNode: {fileID: 6801422115088960883}
-  Options: []
---- !u!1 &641939241022176000
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9033934586959470779}
-  - component: {fileID: 6265150879806104290}
-  m_Layer: 5
-  m_Name: b2-3.1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &9033934586959470779
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641939241022176000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6265150879806104290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641939241022176000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 83d03b08586024cdf939546ec0959efb, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-3.1.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: "<i>After stretching...</i>\x03\nOoh, starting to feel stretched out!"
-  NextNode: {fileID: 9064138862556080802}
-  Options: []
---- !u!1 &974185083685480832
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1118625769941293518}
-  - component: {fileID: 2365301560553390607}
-  m_Layer: 5
-  m_Name: b2-3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1118625769941293518
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974185083685480832}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2365301560553390607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974185083685480832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 9c396f3f430cc470ca819d3424c65725, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-3.0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: "Lisa: Next, we need to stretch\n\nWe don\u2019t want to hurt our muscles!\n"
-  NextNode: {fileID: 6265150879806104290}
-  Options: []
---- !u!1 &1192884511763963057
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6584194071286252606}
-  - component: {fileID: 8098478356324334977}
-  m_Layer: 5
-  m_Name: b3-1.1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6584194071286252606
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192884511763963057}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8098478356324334977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192884511763963057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 402b79da242f04ef68da7342ff68b3d8, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.1.mp4
-  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
-  Prompt: <i>Follow along with dance</i>
-  NextNode: {fileID: 0}
-  Options:
-  - Prompt: Repeat
-    Node: {fileID: 8098478356324334977}
---- !u!1 &1335859295004310104
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8125046062782287309}
-  - component: {fileID: 6800584080635827934}
-  m_Layer: 5
-  m_Name: b2-4.1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8125046062782287309
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335859295004310104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6800584080635827934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335859295004310104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 06737e3864ba243f483624c3ad145d92, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-4.1.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: MIGHT NEED LOOP
-  NextNode: {fileID: 591856533359637322}
-  Options: []
---- !u!1 &1682445888132999223
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1185253363432334289}
-  - component: {fileID: 6792503073138618401}
-  m_Layer: 5
-  m_Name: b1-4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1185253363432334289
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682445888132999223}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6792503073138618401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1682445888132999223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 1db092a6fd07d49529db255306016196, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B1-0.4.mp4
+  Type: 0
+  Video: {fileID: 102900000, guid: a8f853e5f85ae4ecb8ccd8b15a6a9e0e, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B1-0.3.mp4
   VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
   Prompt: 
-  NextNode: {fileID: 8914876065498540941}
+  NextNode: {fileID: 5035001517572116124}
   Options:
   - Prompt: Sign language
-    Node: {fileID: 9036010827850224081}
+    Node: {fileID: 4828334070117496000}
   - Prompt: Generic
-    Node: {fileID: 6792503073138618401}
+    Node: {fileID: 6927726133709460784}
   - Prompt: Dancing
-    Node: {fileID: 4605072622601721563}
---- !u!1 &1699594462468859874
+    Node: {fileID: 112425744790008778}
+--- !u!1 &930089200756436176
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,55 +72,63 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2398674306961268665}
-  - component: {fileID: 7501269872559863202}
+  - component: {fileID: 8809681208852112705}
+  - component: {fileID: 112425744790008778}
   m_Layer: 5
-  m_Name: a1-1
+  m_Name: b1-5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2398674306961268665
+--- !u!224 &8809681208852112705
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699594462468859874}
+  m_GameObject: {fileID: 930089200756436176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 2
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7501269872559863202
+--- !u!114 &112425744790008778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699594462468859874}
+  m_GameObject: {fileID: 930089200756436176}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: d72c579aabdde408d92296809d817588, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A1-0.1.mp4
-  VideoLoop: {fileID: 102900000, guid: 8fd949b067bd64985a5f09095c4471ab, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A1-0.2 LOOP.mp4
-  Prompt: 'Everyone, this is Lando, the owner of this comic store, and our friend
-    Lisa. [indicating students] These are my new buddies. '
-  NextNode: {fileID: 2973912277175463143}
-  Options: []
---- !u!1 &1740632040314503487
+  Type: 0
+  Video: {fileID: 102900000, guid: 7224e0c89ac974767aba381c72fbccb1, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B1-0.5.mp4
+  VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 5035001517572116124}
+  Options:
+  - Prompt: Sign language
+    Node: {fileID: 4828334070117496000}
+  - Prompt: Generic
+    Node: {fileID: 6927726133709460784}
+  - Prompt: Dancing
+    Node: {fileID: 112425744790008778}
+--- !u!1 &1068590022853942461
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -517,8 +136,305 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7175300679932060152}
-  - component: {fileID: 1208279298356462912}
+  - component: {fileID: 3356474375689484027}
+  - component: {fileID: 1221195326903939363}
+  m_Layer: 5
+  m_Name: b3-2.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3356474375689484027
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068590022853942461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1221195326903939363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068590022853942461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 54ee4645ba9814844a11b4b8bc6b9934, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-2.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 534c6721995884168a32a9b4ce23023d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-2.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 0}
+  Options: []
+--- !u!1 &1534123338510516271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6149728536922056169}
+  - component: {fileID: 4195082865684368747}
+  m_Layer: 5
+  m_Name: a1-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6149728536922056169
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534123338510516271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4195082865684368747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534123338510516271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 1
+  Video: {fileID: 102900000, guid: d1333f007aa5540fd9271d60e128e5fb, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A1-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 97dcc0b0f506944c29fa61b37e3e9806, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A1-0.1 LOOP.mp4
+  Prefab: {fileID: 6671369158388938810, guid: c85e97bdc70bd444299ad8d525a83e36, type: 3}
+  PrefabPath: test_object
+  Prompt: Hey Lando and Lisa!
+  NextNode: {fileID: 6232478913153028275}
+  Options:
+  - Prompt: Left
+    Node: {fileID: 0}
+  - Prompt: Right
+    Node: {fileID: 0}
+--- !u!1 &1750245083411516264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5013477186820333232}
+  - component: {fileID: 6918772406169462882}
+  m_Layer: 5
+  m_Name: b2-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5013477186820333232
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750245083411516264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6918772406169462882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750245083411516264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: a25a1784bdd85463da7e7f82b1af4bba, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-2.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: <i>Follow along with Lisa</i>
+  NextNode: {fileID: 2212629181679413022}
+  Options: []
+--- !u!1 &2150486387779178120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3727074724945247907}
+  - component: {fileID: 812983891077829564}
+  m_Layer: 5
+  m_Name: b3-1.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3727074724945247907
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150486387779178120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &812983891077829564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150486387779178120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: d1bba163e81b4465896c207485ba72fa, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: <i>Follow along with dance</i>
+  NextNode: {fileID: 8621586019826982029}
+  Options:
+  - Prompt: Repeat
+    Node: {fileID: 5621750795259795600}
+--- !u!1 &2542740669006710949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3415881953467375820}
+  - component: {fileID: 4663789762102650015}
+  m_Layer: 5
+  m_Name: b2-3.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3415881953467375820
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542740669006710949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4663789762102650015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542740669006710949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: def2f18a2dec740e4b1978d928d0c13b, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-3.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "<i>After stretching...</i>\x03\nDo you remember what\u2019s next?\n\n[students
+    respond]\n\nYou\u2019re right! \n\nOR\n\nClose, it\u2019s the runner\u2019s pose!\n"
+  NextNode: {fileID: 6863160888980358780}
+  Options: []
+--- !u!1 &2756233921506075694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6770073849542493417}
+  - component: {fileID: 3360600282947035217}
   m_Layer: 5
   m_Name: Save the Honbees
   m_TagString: Untagged
@@ -526,47 +442,47 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7175300679932060152
+--- !u!224 &6770073849542493417
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740632040314503487}
+  m_GameObject: {fileID: 2756233921506075694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 104572428280038842}
-  - {fileID: 7728126648289984760}
-  - {fileID: 2398674306961268665}
-  - {fileID: 6758805224061509567}
-  - {fileID: 3413956034042814506}
-  - {fileID: 335314532537854102}
-  - {fileID: 2670236967099617037}
-  - {fileID: 182226101381848680}
-  - {fileID: 4532655267254835892}
-  - {fileID: 1185253363432334289}
-  - {fileID: 4910522122424287312}
-  - {fileID: 2517670555552392969}
-  - {fileID: 263188017402950952}
-  - {fileID: 8931932495888202657}
-  - {fileID: 1118625769941293518}
-  - {fileID: 9033934586959470779}
-  - {fileID: 3280959898652527431}
-  - {fileID: 1225063973939529181}
-  - {fileID: 7716693230703858933}
-  - {fileID: 8125046062782287309}
-  - {fileID: 4790844087142415694}
-  - {fileID: 999466031446416306}
-  - {fileID: 6584194071286252606}
-  - {fileID: 2709658241366746286}
-  - {fileID: 3642136901781289935}
-  - {fileID: 12047439058965805}
-  - {fileID: 5551389074001728461}
-  - {fileID: 2097485385390974884}
-  - {fileID: 2397919778902017929}
-  - {fileID: 1221456336444740586}
+  - {fileID: 4545380697815310507}
+  - {fileID: 6149728536922056169}
+  - {fileID: 2246775228092136104}
+  - {fileID: 7182100331241798318}
+  - {fileID: 1226990468356638011}
+  - {fileID: 4233574355422776711}
+  - {fileID: 1975248345031682588}
+  - {fileID: 4386662254539914105}
+  - {fileID: 36260017000382373}
+  - {fileID: 3320619810498594496}
+  - {fileID: 8809681208852112705}
+  - {fileID: 2060251417967673880}
+  - {fileID: 4449806721877889081}
+  - {fileID: 5013477186820333232}
+  - {fileID: 3594368993532493023}
+  - {fileID: 4843920590232995242}
+  - {fileID: 1436547251951382102}
+  - {fileID: 3415881953467375820}
+  - {fileID: 6156658337701147108}
+  - {fileID: 5667250032442566876}
+  - {fileID: 8942905210212915295}
+  - {fileID: 3727074724945247907}
+  - {fileID: 7293625946766860591}
+  - {fileID: 2016847820275024319}
+  - {fileID: 931281466705288926}
+  - {fileID: 4489286926742614076}
+  - {fileID: 8317468236363331292}
+  - {fileID: 2556963081675670197}
+  - {fileID: 2243061916455592600}
+  - {fileID: 3356474375689484027}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -575,20 +491,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1208279298356462912
+--- !u!114 &3360600282947035217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1740632040314503487}
+  m_GameObject: {fileID: 2756233921506075694}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 8102411195138699109}
---- !u!1 &2102700070490729908
+  StartingNode: {fileID: 5626798815706057332}
+--- !u!1 &2972046069240139046
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -596,55 +512,180 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1225063973939529181}
-  - component: {fileID: 9142016613391204750}
+  - component: {fileID: 3320619810498594496}
+  - component: {fileID: 6927726133709460784}
   m_Layer: 5
-  m_Name: b2-3.3
+  m_Name: b1-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1225063973939529181
+--- !u!224 &3320619810498594496
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102700070490729908}
+  m_GameObject: {fileID: 2972046069240139046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 17
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9142016613391204750
+--- !u!114 &6927726133709460784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102700070490729908}
+  m_GameObject: {fileID: 2972046069240139046}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: def2f18a2dec740e4b1978d928d0c13b, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-3.3.mp4
+  Type: 0
+  Video: {fileID: 102900000, guid: 1db092a6fd07d49529db255306016196, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B1-0.4.mp4
+  VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 5035001517572116124}
+  Options:
+  - Prompt: Sign language
+    Node: {fileID: 4828334070117496000}
+  - Prompt: Generic
+    Node: {fileID: 6927726133709460784}
+  - Prompt: Dancing
+    Node: {fileID: 112425744790008778}
+--- !u!1 &3022416250181583603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2246775228092136104}
+  - component: {fileID: 6232478913153028275}
+  m_Layer: 5
+  m_Name: a1-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2246775228092136104
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022416250181583603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6232478913153028275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022416250181583603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: d72c579aabdde408d92296809d817588, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A1-0.1.mp4
+  VideoLoop: {fileID: 102900000, guid: 8fd949b067bd64985a5f09095c4471ab, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A1-0.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 'Everyone, this is Lando, the owner of this comic store, and our friend
+    Lisa. [indicating students] These are my new buddies. '
+  NextNode: {fileID: 1667069419226597878}
+  Options: []
+--- !u!1 &3237533201677082441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5667250032442566876}
+  - component: {fileID: 6919618688037811151}
+  m_Layer: 5
+  m_Name: b2-4.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5667250032442566876
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3237533201677082441}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6919618688037811151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3237533201677082441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 06737e3864ba243f483624c3ad145d92, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-4.1.mp4
   VideoLoop: {fileID: 0}
   VideoLoopFilePath: 
-  Prompt: "<i>After stretching...</i>\x03\nDo you remember what\u2019s next?\n\n[students
-    respond]\n\nYou\u2019re right! \n\nOR\n\nClose, it\u2019s the runner\u2019s pose!\n"
-  NextNode: {fileID: 7014694858872529773}
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: MIGHT NEED LOOP
+  NextNode: {fileID: 3914008343231419995}
   Options: []
---- !u!1 &2576028482307386265
+--- !u!1 &3380533835817941408
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -652,56 +693,59 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 999466031446416306}
-  - component: {fileID: 3832465645083260589}
+  - component: {fileID: 7293625946766860591}
+  - component: {fileID: 5621750795259795600}
   m_Layer: 5
-  m_Name: b3-1.0
+  m_Name: b3-1.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &999466031446416306
+--- !u!224 &7293625946766860591
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2576028482307386265}
+  m_GameObject: {fileID: 3380533835817941408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 21
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3832465645083260589
+--- !u!114 &5621750795259795600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2576028482307386265}
+  m_GameObject: {fileID: 3380533835817941408}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: d1bba163e81b4465896c207485ba72fa, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.0.mp4
+  Type: 0
+  Video: {fileID: 102900000, guid: 402b79da242f04ef68da7342ff68b3d8, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.1.mp4
   VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
   Prompt: <i>Follow along with dance</i>
-  NextNode: {fileID: 5314790126849538460}
+  NextNode: {fileID: 0}
   Options:
   - Prompt: Repeat
-    Node: {fileID: 8098478356324334977}
---- !u!1 &2751124435590344313
+    Node: {fileID: 5621750795259795600}
+--- !u!1 &3738809663107550353
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,54 +753,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8931932495888202657}
-  - component: {fileID: 6801422115088960883}
+  - component: {fileID: 3594368993532493023}
+  - component: {fileID: 2212629181679413022}
   m_Layer: 5
-  m_Name: b2-2
+  m_Name: b2-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8931932495888202657
+--- !u!224 &3594368993532493023
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2751124435590344313}
+  m_GameObject: {fileID: 3738809663107550353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 13
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6801422115088960883
+--- !u!114 &2212629181679413022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2751124435590344313}
+  m_GameObject: {fileID: 3738809663107550353}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: a25a1784bdd85463da7e7f82b1af4bba, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-2.0.mp4
+  Type: 0
+  Video: {fileID: 102900000, guid: 9c396f3f430cc470ca819d3424c65725, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-3.0.mp4
   VideoLoop: {fileID: 0}
   VideoLoopFilePath: 
-  Prompt: <i>Follow along with Lisa</i>
-  NextNode: {fileID: 2365301560553390607}
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "Lisa: Next, we need to stretch\n\nWe don\u2019t want to hurt our muscles!\n"
+  NextNode: {fileID: 7536107945655650291}
   Options: []
---- !u!1 &3111326209998464318
+--- !u!1 &3931444489089900049
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -764,54 +811,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7728126648289984760}
-  - component: {fileID: 310755089514866810}
+  - component: {fileID: 4843920590232995242}
+  - component: {fileID: 7536107945655650291}
   m_Layer: 5
-  m_Name: a1-0
+  m_Name: b2-3.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7728126648289984760
+--- !u!224 &4843920590232995242
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3111326209998464318}
+  m_GameObject: {fileID: 3931444489089900049}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 1
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &310755089514866810
+--- !u!114 &7536107945655650291
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3111326209998464318}
+  m_GameObject: {fileID: 3931444489089900049}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: d1333f007aa5540fd9271d60e128e5fb, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A1-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 97dcc0b0f506944c29fa61b37e3e9806, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A1-0.1 LOOP.mp4
-  Prompt: Hey Lando and Lisa!
-  NextNode: {fileID: 7501269872559863202}
+  Type: 0
+  Video: {fileID: 102900000, guid: 83d03b08586024cdf939546ec0959efb, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-3.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "<i>After stretching...</i>\x03\nOoh, starting to feel stretched out!"
+  NextNode: {fileID: 4876732082860822451}
   Options: []
---- !u!1 &3509306102445521324
+--- !u!1 &4195277406970617801
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -819,54 +869,533 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1221456336444740586}
-  - component: {fileID: 3356700241157264434}
+  - component: {fileID: 4449806721877889081}
+  - component: {fileID: 4584385495796746277}
   m_Layer: 5
-  m_Name: b3-2.0
+  m_Name: b2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1221456336444740586
+--- !u!224 &4449806721877889081
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509306102445521324}
+  m_GameObject: {fileID: 4195277406970617801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 29
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3356700241157264434
+--- !u!114 &4584385495796746277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3509306102445521324}
+  m_GameObject: {fileID: 4195277406970617801}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 54ee4645ba9814844a11b4b8bc6b9934, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-2.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 534c6721995884168a32a9b4ce23023d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-2.2 LOOP.mp4
+  Type: 0
+  Video: {fileID: 102900000, guid: 166b4a8c1b3f1433a88b03bddd63d7cb, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-1.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "Lisa: See how there\u2019s an even rhythm that we can clap along to? That\u2019s
+    the beat!\n\n<i>Clap along </i>\n\nAlright, I think I got it!\n"
+  NextNode: {fileID: 6918772406169462882}
+  Options: []
+--- !u!1 &4533013724287791867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8942905210212915295}
+  - component: {fileID: 3914008343231419995}
+  m_Layer: 5
+  m_Name: b3-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8942905210212915295
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533013724287791867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3914008343231419995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4533013724287791867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: c8f6e4c52623c4566b2563f8f15ef6be, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 'That sounds serious.
+
+'
+  NextNode: {fileID: 812983891077829564}
+  Options: []
+--- !u!1 &4590975221168280467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931281466705288926}
+  - component: {fileID: 3258524703542432722}
+  m_Layer: 5
+  m_Name: b3-1.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &931281466705288926
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590975221168280467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3258524703542432722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4590975221168280467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 4ef42fe2a7b134133bfbe6130670f594, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.2.mp4
+  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: MISSING REPEAT LOOP
+  NextNode: {fileID: 4436027275953125710}
+  Options:
+  - Prompt: Repeat
+    Node: {fileID: 3258524703542432722}
+--- !u!1 &5329606496418550585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436547251951382102}
+  - component: {fileID: 4876732082860822451}
+  m_Layer: 5
+  m_Name: b2-3.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1436547251951382102
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329606496418550585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4876732082860822451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5329606496418550585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 3cfd785817776408987a8e11e43c7f1c, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-3.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "<i>After stretching...</i>\x03\nDo you remember what\u2019s next?\n\n[students
+    respond]\n\nYou\u2019re right! \n\nOR\n\nClose, it\u2019s the runner\u2019s pose!\n"
+  NextNode: {fileID: 4663789762102650015}
+  Options: []
+--- !u!1 &6108944096390506783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226990468356638011}
+  - component: {fileID: 2214612899582421874}
+  m_Layer: 5
+  m_Name: a1-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1226990468356638011
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108944096390506783}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2214612899582421874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6108944096390506783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 6b4c39989a53749f29c673bab0001bd7, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A1-0.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "I see your gym bag there\u2014did you just finish working out, Lisa?"
+  NextNode: {fileID: 2251543761070808093}
+  Options: []
+--- !u!1 &6232945428513819889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6156658337701147108}
+  - component: {fileID: 6863160888980358780}
+  m_Layer: 5
+  m_Name: b2-4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6156658337701147108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232945428513819889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6863160888980358780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232945428513819889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 8d9562ae1867b4e76b76af99fc2585f0, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B2-4.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "Why don\u2019t we take a water break before working on our dance message?\n\nMIGHT
+    NEED LOOP"
+  NextNode: {fileID: 6919618688037811151}
+  Options: []
+--- !u!1 &6585458152081686678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1975248345031682588}
+  - component: {fileID: 553639800733523901}
+  m_Layer: 5
+  m_Name: b1-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1975248345031682588
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585458152081686678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &553639800733523901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585458152081686678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 8d5dee3a0b4e14a32b76eaf48632cbef, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B1-0.1.mp4
+  VideoLoop: {fileID: 102900000, guid: 11d6df985d7a24a4abcbdac7c39423f1, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.1 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "<i>[Lando] Negative. This is the chief of the Honbees, a non-verbal alien
+    species.</i>\n\nSo they... don\u2019t speak?"
+  NextNode: {fileID: 6446087236104155991}
+  Options: []
+--- !u!1 &6872364610146277382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016847820275024319}
+  - component: {fileID: 8621586019826982029}
+  m_Layer: 5
+  m_Name: b3-1.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2016847820275024319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872364610146277382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8621586019826982029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872364610146277382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 4ef42fe2a7b134133bfbe6130670f594, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.2.mp4
+  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: <i>Follow along with dance</i>
+  NextNode: {fileID: 4436027275953125710}
+  Options:
+  - Prompt: Repeat
+    Node: {fileID: 3258524703542432722}
+--- !u!1 &7466696147421344055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2556963081675670197}
+  - component: {fileID: 8454923376535281934}
+  m_Layer: 5
+  m_Name: b3-1.7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2556963081675670197
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466696147421344055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8454923376535281934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466696147421344055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 96e45a633e916430cbd659c13085ddb1, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.7.mp4
+  VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
   Prompt: 
-  NextNode: {fileID: 0}
-  Options: []
---- !u!1 &3643337928926546369
+  NextNode: {fileID: 1221195326903939363}
+  Options:
+  - Prompt: Repeat
+    Node: {fileID: 8454923376535281934}
+--- !u!1 &7472911082110968558
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -874,60 +1403,175 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4910522122424287312}
-  - component: {fileID: 4605072622601721563}
+  - component: {fileID: 4233574355422776711}
+  - component: {fileID: 2251543761070808093}
   m_Layer: 5
-  m_Name: b1-5
+  m_Name: b1-0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4910522122424287312
+--- !u!224 &4233574355422776711
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643337928926546369}
+  m_GameObject: {fileID: 7472911082110968558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 10
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4605072622601721563
+--- !u!114 &2251543761070808093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3643337928926546369}
+  m_GameObject: {fileID: 7472911082110968558}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: d2c64ea0be20943ce8036033a499629c, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B1-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: d2c64ea0be20943ce8036033a499629c, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.0.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: Woah, are we...?
+  NextNode: {fileID: 553639800733523901}
+  Options: []
+--- !u!1 &7539856846744733883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4489286926742614076}
+  - component: {fileID: 4436027275953125710}
+  m_Layer: 5
+  m_Name: b3-1.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4489286926742614076
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539856846744733883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4436027275953125710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539856846744733883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: 4c73dbfd625234c2fa74b9d914e0055e, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.4.mp4
+  VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: MISSING REPEAT LOOP
+  NextNode: {fileID: 8454923376535281934}
+  Options:
+  - Prompt: Repeat
+    Node: {fileID: 4798263188426790047}
+--- !u!1 &7803749960450693840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2060251417967673880}
+  - component: {fileID: 5035001517572116124}
+  m_Layer: 5
+  m_Name: b1-6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2060251417967673880
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803749960450693840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5035001517572116124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7803749960450693840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
   Video: {fileID: 102900000, guid: 7224e0c89ac974767aba381c72fbccb1, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/B1-0.5.mp4
   VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
-  Prompt: 
-  NextNode: {fileID: 8914876065498540941}
-  Options:
-  - Prompt: Sign language
-    Node: {fileID: 9036010827850224081}
-  - Prompt: Generic
-    Node: {fileID: 6792503073138618401}
-  - Prompt: Dancing
-    Node: {fileID: 4605072622601721563}
---- !u!1 &4378309231775693390
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: MISSING B1-0.6 FILE
+  NextNode: {fileID: 4584385495796746277}
+  Options: []
+--- !u!1 &7808188682497892566
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -935,60 +1579,57 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4532655267254835892}
-  - component: {fileID: 9036010827850224081}
+  - component: {fileID: 7182100331241798318}
+  - component: {fileID: 1667069419226597878}
   m_Layer: 5
-  m_Name: b1-3
+  m_Name: a1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4532655267254835892
+--- !u!224 &7182100331241798318
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378309231775693390}
+  m_GameObject: {fileID: 7808188682497892566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 8
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9036010827850224081
+--- !u!114 &1667069419226597878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4378309231775693390}
+  m_GameObject: {fileID: 7808188682497892566}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: a8f853e5f85ae4ecb8ccd8b15a6a9e0e, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B1-0.3.mp4
-  VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
-  Prompt: 
-  NextNode: {fileID: 8914876065498540941}
-  Options:
-  - Prompt: Sign language
-    Node: {fileID: 9036010827850224081}
-  - Prompt: Generic
-    Node: {fileID: 6792503073138618401}
-  - Prompt: Dancing
-    Node: {fileID: 4605072622601721563}
---- !u!1 &4782645910483915087
+  Type: 0
+  Video: {fileID: 102900000, guid: 1e60ce7b7c13f4f91b65f0f156c78931, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A1-0.2.mp4
+  VideoLoop: {fileID: 102900000, guid: 8fd949b067bd64985a5f09095c4471ab, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A1-0.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: "I see your gym bag there\u2014did you just finish working out, Lisa?"
+  NextNode: {fileID: 2214612899582421874}
+  Options: []
+--- !u!1 &7817822800093606048
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -996,8 +1637,132 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 104572428280038842}
-  - component: {fileID: 8102411195138699109}
+  - component: {fileID: 4386662254539914105}
+  - component: {fileID: 6446087236104155991}
+  m_Layer: 5
+  m_Name: b1-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4386662254539914105
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817822800093606048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6446087236104155991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817822800093606048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: a9352f65ad87a47c1a3f56e75a8bdae0, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B1-0.2.mp4
+  VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 5035001517572116124}
+  Options:
+  - Prompt: Sign language
+    Node: {fileID: 4828334070117496000}
+  - Prompt: Generic
+    Node: {fileID: 6927726133709460784}
+  - Prompt: Dancing
+    Node: {fileID: 112425744790008778}
+--- !u!1 &8933024263307346829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8317468236363331292}
+  - component: {fileID: 4798263188426790047}
+  m_Layer: 5
+  m_Name: b3-1.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8317468236363331292
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933024263307346829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6770073849542493417}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4798263188426790047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8933024263307346829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Video: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
+  VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 8454923376535281934}
+  Options:
+  - Prompt: Repeat
+    Node: {fileID: 4798263188426790047}
+--- !u!1 &8951102884355912798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4545380697815310507}
+  - component: {fileID: 5626798815706057332}
   m_Layer: 5
   m_Name: a0
   m_TagString: Untagged
@@ -1005,18 +1770,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &104572428280038842
+--- !u!224 &4545380697815310507
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782645910483915087}
+  m_GameObject: {fileID: 8951102884355912798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
+  m_Father: {fileID: 6770073849542493417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1024,22 +1789,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8102411195138699109
+--- !u!114 &5626798815706057332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782645910483915087}
+  m_GameObject: {fileID: 8951102884355912798}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
   VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
   Prompt: "Hey everyone! I\u2019m [name], great to see you here! Say \u2013 have
     any of you got an earworm at the moment? I know I have\u2026 sounds gross, right?
     Don\u2019t worry \u2013 an earworm is when you have a song stuck in your head!
@@ -1050,9 +1818,9 @@ MonoBehaviour:
     there! Well, I was just going to head over to that comic book store and see what\u2019s
     new this week. My buddy Lando runs it. Why don\u2019t we take our earworms and
     go meet him?\n"
-  NextNode: {fileID: 310755089514866810}
+  NextNode: {fileID: 4195082865684368747}
   Options: []
---- !u!1 &4824795162640128422
+--- !u!1 &8976507605172911287
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1060,8 +1828,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2397919778902017929}
-  - component: {fileID: 7432218689764475886}
+  - component: {fileID: 2243061916455592600}
+  - component: {fileID: 6432090508439463679}
   m_Layer: 5
   m_Name: b3-1.9
   m_TagString: Untagged
@@ -1069,18 +1837,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2397919778902017929
+--- !u!224 &2243061916455592600
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4824795162640128422}
+  m_GameObject: {fileID: 8976507605172911287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7175300679932060152}
+  m_Father: {fileID: 6770073849542493417}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1088,701 +1856,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7432218689764475886
+--- !u!114 &6432090508439463679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4824795162640128422}
+  m_GameObject: {fileID: 8976507605172911287}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   Video: {fileID: 102900000, guid: 1957c3a4fd5c84663993d0948c6a8027, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/B3-1.9.mp4
   VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
+  Prefab: {fileID: 0}
+  PrefabPath: 
   Prompt: 
-  NextNode: {fileID: 3356700241157264434}
+  NextNode: {fileID: 1221195326903939363}
   Options:
   - Prompt: Repeat
-    Node: {fileID: 7432218689764475886}
---- !u!1 &5016888511651718812
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5551389074001728461}
-  - component: {fileID: 9003031327676526990}
-  m_Layer: 5
-  m_Name: b3-1.5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5551389074001728461
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5016888511651718812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 26
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9003031327676526990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5016888511651718812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
-  VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
-  Prompt: 
-  NextNode: {fileID: 5418401803623744543}
-  Options:
-  - Prompt: Repeat
-    Node: {fileID: 9003031327676526990}
---- !u!1 &5915926517121750449
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 182226101381848680}
-  - component: {fileID: 7427264303884310086}
-  m_Layer: 5
-  m_Name: b1-2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &182226101381848680
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5915926517121750449}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7427264303884310086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5915926517121750449}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: a9352f65ad87a47c1a3f56e75a8bdae0, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B1-0.2.mp4
-  VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
-  Prompt: 
-  NextNode: {fileID: 8914876065498540941}
-  Options:
-  - Prompt: Sign language
-    Node: {fileID: 9036010827850224081}
-  - Prompt: Generic
-    Node: {fileID: 6792503073138618401}
-  - Prompt: Dancing
-    Node: {fileID: 4605072622601721563}
---- !u!1 &5920991639433494465
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2517670555552392969}
-  - component: {fileID: 8914876065498540941}
-  m_Layer: 5
-  m_Name: b1-6
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2517670555552392969
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5920991639433494465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8914876065498540941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5920991639433494465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 7224e0c89ac974767aba381c72fbccb1, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B1-0.5.mp4
-  VideoLoop: {fileID: 102900000, guid: 2c7226505f1f942999ff43933af73b45, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.2 LOOP.mp4
-  Prompt: MISSING B1-0.6 FILE
-  NextNode: {fileID: 142120579237375284}
-  Options: []
---- !u!1 &5925516123320567239
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6758805224061509567}
-  - component: {fileID: 2973912277175463143}
-  m_Layer: 5
-  m_Name: a1-2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6758805224061509567
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925516123320567239}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2973912277175463143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925516123320567239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 1e60ce7b7c13f4f91b65f0f156c78931, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A1-0.2.mp4
-  VideoLoop: {fileID: 102900000, guid: 8fd949b067bd64985a5f09095c4471ab, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A1-0.2 LOOP.mp4
-  Prompt: "I see your gym bag there\u2014did you just finish working out, Lisa?"
-  NextNode: {fileID: 2367777445132095075}
-  Options: []
---- !u!1 &6252430470640315818
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 12047439058965805}
-  - component: {fileID: 281480429775445087}
-  m_Layer: 5
-  m_Name: b3-1.4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &12047439058965805
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6252430470640315818}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &281480429775445087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6252430470640315818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 4c73dbfd625234c2fa74b9d914e0055e, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.4.mp4
-  VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
-  Prompt: MISSING REPEAT LOOP
-  NextNode: {fileID: 5418401803623744543}
-  Options:
-  - Prompt: Repeat
-    Node: {fileID: 9003031327676526990}
---- !u!1 &6472506856594049023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 335314532537854102}
-  - component: {fileID: 2402948196801394956}
-  m_Layer: 5
-  m_Name: b1-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &335314532537854102
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6472506856594049023}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2402948196801394956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6472506856594049023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: d2c64ea0be20943ce8036033a499629c, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B1-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: d2c64ea0be20943ce8036033a499629c, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.0.mp4
-  Prompt: Woah, are we...?
-  NextNode: {fileID: 4163867917846395564}
-  Options: []
---- !u!1 &6483181449067353126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2097485385390974884}
-  - component: {fileID: 5418401803623744543}
-  m_Layer: 5
-  m_Name: b3-1.7
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2097485385390974884
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6483181449067353126}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 27
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5418401803623744543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6483181449067353126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 96e45a633e916430cbd659c13085ddb1, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.7.mp4
-  VideoLoop: {fileID: 102900000, guid: de8ecb0d4e3df485aa4ab360c043e062, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.5 LOOP.mp4
-  Prompt: 
-  NextNode: {fileID: 3356700241157264434}
-  Options:
-  - Prompt: Repeat
-    Node: {fileID: 5418401803623744543}
---- !u!1 &7005455374054620439
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2709658241366746286}
-  - component: {fileID: 5314790126849538460}
-  m_Layer: 5
-  m_Name: b3-1.2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2709658241366746286
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7005455374054620439}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5314790126849538460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7005455374054620439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 4ef42fe2a7b134133bfbe6130670f594, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B3-1.2.mp4
-  VideoLoop: {fileID: 102900000, guid: 440e258192f854417a596da00981861d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B3-1.0 LOOP.mp4
-  Prompt: <i>Follow along with dance</i>
-  NextNode: {fileID: 281480429775445087}
-  Options:
-  - Prompt: Repeat
-    Node: {fileID: 1395958982226949827}
---- !u!1 &7278895567212373383
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2670236967099617037}
-  - component: {fileID: 4163867917846395564}
-  m_Layer: 5
-  m_Name: b1-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2670236967099617037
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7278895567212373383}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4163867917846395564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7278895567212373383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 8d5dee3a0b4e14a32b76eaf48632cbef, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B1-0.1.mp4
-  VideoLoop: {fileID: 102900000, guid: 11d6df985d7a24a4abcbdac7c39423f1, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/B1-0.1 LOOP.mp4
-  Prompt: "<i>[Lando] Negative. This is the chief of the Honbees, a non-verbal alien
-    species.</i>\n\nSo they... don\u2019t speak?"
-  NextNode: {fileID: 7427264303884310086}
-  Options: []
---- !u!1 &7500803933265881568
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7716693230703858933}
-  - component: {fileID: 7014694858872529773}
-  m_Layer: 5
-  m_Name: b2-4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7716693230703858933
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7500803933265881568}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7014694858872529773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7500803933265881568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 8d9562ae1867b4e76b76af99fc2585f0, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-4.0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: "Why don\u2019t we take a water break before working on our dance message?\n\nMIGHT
-    NEED LOOP"
-  NextNode: {fileID: 6800584080635827934}
-  Options: []
---- !u!1 &7683352011685694478
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3413956034042814506}
-  - component: {fileID: 2367777445132095075}
-  m_Layer: 5
-  m_Name: a1-3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3413956034042814506
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7683352011685694478}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2367777445132095075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7683352011685694478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 6b4c39989a53749f29c673bab0001bd7, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A1-0.3.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: "I see your gym bag there\u2014did you just finish working out, Lisa?"
-  NextNode: {fileID: 2402948196801394956}
-  Options: []
---- !u!1 &8615803243197904424
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3280959898652527431}
-  - component: {fileID: 9064138862556080802}
-  m_Layer: 5
-  m_Name: b2-3.2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3280959898652527431
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8615803243197904424}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 7175300679932060152}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9064138862556080802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8615803243197904424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Video: {fileID: 102900000, guid: 3cfd785817776408987a8e11e43c7f1c, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/B2-3.2.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: 
-  Prompt: "<i>After stretching...</i>\x03\nDo you remember what\u2019s next?\n\n[students
-    respond]\n\nYou\u2019re right! \n\nOR\n\nClose, it\u2019s the runner\u2019s pose!\n"
-  NextNode: {fileID: 9142016613391204750}
-  Options: []
+    Node: {fileID: 6432090508439463679}

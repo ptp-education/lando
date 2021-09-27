@@ -74,7 +74,7 @@ public class PrompterManager : GameManager
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
             b.transform.SetParent(buttonsHome_.transform, true);
-            b.Init("Next", currentNode_.NextNode.name, buttonCounter, CommandButtonPressed);
+            b.Init("Next", GameManager.NODE_PREFIX + currentNode_.NextNode.name, buttonCounter, CommandButtonPressed);
 
             buttonCounter++;
         } else if (currentNode_.NextNode == null && currentNode_.Options.Count == 0)
@@ -90,7 +90,17 @@ public class PrompterManager : GameManager
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
             b.transform.SetParent(buttonsHome_.transform, true);
-            b.Init(currentNode_.Options[i].Prompt, currentNode_.Options[i].Node.name, buttonCounter, CommandButtonPressed);
+
+            string action = "";
+            if (currentNode_.Options[i].Node != null)
+            {
+                action = GameManager.NODE_PREFIX + currentNode_.Options[i].Node.name;
+            } else
+            {
+                action = GameManager.ACTION_PREFIX + currentNode_.Options[i].Prompt;
+            }
+
+            b.Init(currentNode_.Options[i].Prompt, action, buttonCounter, CommandButtonPressed);
 
             buttonCounter++;
         }

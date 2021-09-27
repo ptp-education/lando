@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Video;
 using System.Linq;
+using UnityEngine.UI;
 
 public class ShareManager : GameManager
 {
-    [SerializeField] private EpisodeNodeObject videoPlayer_;
-    [SerializeField] private EpisodeNodeObject prefabPlayer_;
+    public const string PREFAB_PATH = "prefabs/episode_objects/";
+
     [SerializeField] private Transform nodeObjectParent_;
 
     private string internalState_ = "";
@@ -22,6 +21,13 @@ public class ShareManager : GameManager
         UpdateNodeState(NodeState.Playing);
 
         StartCoroutine(UpdateEpisodeNode(internalState_, currentNode_));
+    }
+
+    protected override void NewActionInternal(string a)
+    {
+        base.NewActionInternal(a);
+
+        cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
     }
 
     private IEnumerator UpdateEpisodeNode(string nodeState, EpisodeNode currentNode)
@@ -39,8 +45,11 @@ public class ShareManager : GameManager
 
         foreach (EpisodeNode.Option o in currentNode_.Options)
         {
-            PreloadObject(o.Node);
-            preloadedAssets.Add(Key(o.Node));
+            if (o.Node != null)
+            {
+                PreloadObject(o.Node);
+                preloadedAssets.Add(Key(o.Node));
+            }
         }
 
         yield return 0;
@@ -83,22 +92,25 @@ public class ShareManager : GameManager
         if (cachedNodeObjects_.ContainsKey(Key(node))) return;
 
         EpisodeNodeObject nodeObject = null;
-        switch(node.Type)
+        string prefabPath = PREFAB_PATH;
+        switch (node.Type)
         {
             case EpisodeNode.EpisodeType.Video:
-                nodeObject = GameObject.Instantiate<EpisodeNodeObject>(videoPlayer_);
+                prefabPath += "video_player";
                 break;
 
             case EpisodeNode.EpisodeType.Prefab:
-                nodeObject = GameObject.Instantiate<EpisodeNodeObject>(prefabPlayer_);
+                prefabPath += "prefab_player";
                 break;
         }
+        EpisodeNodeObject o = Resources.Load<EpisodeNodeObject>(prefabPath);
+        nodeObject = GameObject.Instantiate<EpisodeNodeObject>(o);
 
         nodeObject.gameObject.name = node.gameObject.name;
-
         nodeObject.transform.SetParent(nodeObjectParent_);
         nodeObject.transform.localPosition = Vector3.zero;
-        nodeObject.Init(EpisodeNodeFinished);
+
+        nodeObject.Init(currentNode_, EpisodeNodeFinished);
         nodeObject.Preload(node);
         nodeObject.Hide();
         cachedNodeObjects_[Key(node)] = nodeObject;

@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
         public const string Looping = "looping";
     }
 
+    public const string ACTION_PREFIX = "action:";
+    public const string NODE_PREFIX = "node:";
+
     public enum Type
     {
         Prompter,
@@ -24,6 +27,8 @@ public class GameManager : MonoBehaviour
     protected Episode episode_;
     protected EpisodeNode currentNode_;
     protected string currentNodeState_;
+
+    protected GameStorage storage_ = new GameStorage();
 
     private string cachedEpisode_ = "";
     private string cachedNode_ = "";
@@ -53,12 +58,11 @@ public class GameManager : MonoBehaviour
 
     public void NewEpisodeEvent(string e)
     {
-        if (string.Equals(e, cachedEpisode_))
-            return;
-
         cachedEpisode_ = e;
         cachedNode_ = "";
         cachedState_ = "";
+
+        storage_.ResetStorage();
 
         if (episode_ != null)
         {
@@ -73,25 +77,39 @@ public class GameManager : MonoBehaviour
     protected virtual void NewEpisodeEventInternal(Episode e)
     {
         episode_ = e;
-        UpdateEpisodeNode(e.StartingNode.gameObject.name);
+        UpdateEpisodeNode(NODE_PREFIX + e.StartingNode.gameObject.name);
     }
 
-    public void NewNodeEvent(string n)
+    public void NewNodeAction(string a)
     {
-        if (string.Equals(n, cachedNode_))
-            return;
-
-        cachedNode_ = n;
-        cachedState_ = "";
-
-        foreach(EpisodeNode node in episode_.AllNodes)
+        if (a.Contains(NODE_PREFIX))
         {
-            if (string.Equals(n, node.gameObject.name))
+            string node = a.Substring(NODE_PREFIX.Length);
+
+            if (string.Equals(node, cachedNode_))
+                return;
+
+            cachedNode_ = node;
+            cachedState_ = "";
+
+            foreach (EpisodeNode n in episode_.AllNodes)
             {
-                NewNodeEventInternal(node);
-                break;
+                if (string.Equals(node, n.gameObject.name))
+                {
+                    NewNodeEventInternal(n);
+                    break;
+                }
             }
+        } else if (a.Contains(ACTION_PREFIX))
+        {
+            NewActionInternal(a.Substring(ACTION_PREFIX.Length));
         }
+        
+    }
+
+    protected virtual void NewActionInternal(string a)
+    {
+        //stub
     }
 
     protected virtual void NewNodeEventInternal(EpisodeNode n)

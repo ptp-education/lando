@@ -10,18 +10,18 @@ public class PromptButton : MonoBehaviour
 
     public delegate void ActionDetected(string linkedEpisode);
 
-    private string linkedEpisode_;
+    private string action_;
     private ActionDetected callback_;
     private int index_;
 
-    public void Init(string prompt, string linkedEpisode, int index, ActionDetected callback)
+    public void Init(string prompt, string action, int index, ActionDetected callback)
     {
         prompt_.text = prompt;
-        linkedEpisode_ = linkedEpisode;
+        action_ = action;
         callback_ = callback;
         index_ = index;
 
-        if (linkedEpisode != null && linkedEpisode.Length > 0)
+        if (action != null && action.Length > 0)
         {
             command_.text = (index_).ToString();
         } else
@@ -32,7 +32,7 @@ public class PromptButton : MonoBehaviour
 
     public void OnClick()
     {
-        callback_.Invoke(linkedEpisode_);
+        callback_.Invoke(action_);
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class PromptButton : MonoBehaviour
     {
         if (Input.GetKeyDown((index_).ToString()))
         {
-            callback_.Invoke(linkedEpisode_);
+            callback_.Invoke(action_);
         }
     }
 }

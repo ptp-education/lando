@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EpisodeNodeObject : MonoBehaviour
 {
     public delegate void ReadyToStartLoop();
 
     protected ReadyToStartLoop startLoopCallback_;
+    protected EpisodeNode episodeNode_;
 
-    public virtual void Init(ReadyToStartLoop callback)
+    public virtual void Init(EpisodeNode node, ReadyToStartLoop callback)
     {
         startLoopCallback_ = callback;
+        episodeNode_ = node;
     }
 
     public virtual void Preload(EpisodeNode node)

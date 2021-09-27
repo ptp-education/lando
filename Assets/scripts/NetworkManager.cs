@@ -85,7 +85,20 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
 
         if (photonEvent.CustomData != null && eventCode < 200)
         {
-            Debug.Log(string.Format("Received event: {0} {1}", eventCode.ToString(), data[0].ToString()));
+            string eventDescriptor = "";
+            switch (eventCode)
+            {
+                case kNewEpisodeCode:
+                    eventDescriptor = "new_episode";
+                    break;
+                case kNewEpisodeNodeCode:
+                    eventDescriptor = "new_node";
+                    break;
+                case kNewEpisodeNodeStateCode:
+                    eventDescriptor = "new_state";
+                    break;
+            }
+            Debug.Log(string.Format("Received event: {0} {1}", eventDescriptor, data[0].ToString()));
         }
 
         if (eventCode == kNewEpisodeCode)
@@ -101,7 +114,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
             string node = (string)data[0];
             foreach (GameManager gm in gameManagers_)
             {
-                gm.NewNodeEvent(node);
+                gm.NewNodeAction(node);
             }
         } else if (eventCode == kNewEpisodeNodeStateCode)
         {

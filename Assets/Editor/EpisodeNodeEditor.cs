@@ -7,17 +7,15 @@ using UnityEditor;
 public class EpisodeNodeEditor : Editor
 {
     const string kAssetPrefix = "Assets/StreamingAssets/";
-
-    void OnEnable()
-    {
-
-    }
+    const string kEpisodeObjectPrefix = "Assets/Resources/prefabs/episode_objects/";
+    const string kPrefabSuffix = ".prefab";
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
         SerializedProperty video = serializedObject.FindProperty("Video");
         SerializedProperty videoLoop = serializedObject.FindProperty("VideoLoop");
+        SerializedProperty prefab = serializedObject.FindProperty("Prefab");
 
         EditorGUILayout.LabelField(string.Format("Node Type"));
         EpisodeNode myTarget = (EpisodeNode)target;
@@ -48,7 +46,14 @@ public class EpisodeNodeEditor : Editor
             myTarget.VideoLoop = EditorGUILayout.ObjectField(myTarget.VideoLoop, typeof(Object), false);
         } else if (myTarget.Type == EpisodeNode.EpisodeType.Prefab)
         {
-            EditorGUILayout.LabelField("Prefab");
+            string prefabPath = "empty";
+            if (prefab.objectReferenceValue != null)
+            {
+                prefabPath = AssetDatabase.GetAssetPath(prefab.objectReferenceValue.GetInstanceID());
+                prefabPath = prefabPath.Substring(kEpisodeObjectPrefix.Length, prefabPath.Length - (kEpisodeObjectPrefix.Length + kPrefabSuffix.Length));
+                myTarget.PrefabPath = prefabPath;
+            }
+            EditorGUILayout.LabelField(string.Format("Prefab ({0})", myTarget.PrefabPath));
             myTarget.Prefab = (GameObject)EditorGUILayout.ObjectField(myTarget.Prefab, typeof(GameObject), false);
         }
 
