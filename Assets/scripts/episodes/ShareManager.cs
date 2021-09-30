@@ -23,6 +23,17 @@ public class ShareManager : GameManager
         StartCoroutine(UpdateEpisodeNode(internalState_, currentNode_));
     }
 
+    protected override void NewEpisodeEventInternal(Episode e)
+    {
+        base.NewEpisodeEventInternal(e);
+
+        foreach(EpisodeNodeObject o in cachedNodeObjects_.Values)
+        {
+            GameObject.Destroy(o.gameObject);
+        }
+        cachedNodeObjects_ = new Dictionary<string, EpisodeNodeObject>();
+    }
+
     protected override void NewActionInternal(string a)
     {
         base.NewActionInternal(a);

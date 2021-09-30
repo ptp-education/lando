@@ -10,4 +10,14 @@ public class PrefabContent : MonoBehaviour
     {
         //stub
     }
+
+    public virtual void Play()
+    {
+        //stub
+    }
+
+    public virtual void Loop()
+    {
+        //stub
+    }
 }

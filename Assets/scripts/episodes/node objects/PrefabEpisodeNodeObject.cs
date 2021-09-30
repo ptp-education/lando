@@ -11,6 +11,14 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
     private PrefabContent content_;
     private Camera camera_;
 
+    private void OnDestroy()
+    {
+        if (content_ != null)
+        {
+            GameObject.Destroy(content_.gameObject);
+        }
+    }
+
     public override void Init(EpisodeNode node, ReadyToStartLoop callback)
     {
         base.Init(node, callback);
@@ -29,14 +37,26 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
 
         if (renderTexture_ == null) {
             renderTexture_ = new RenderTexture(1920, 1080, 0);
+            renderTexture_.graphicsFormat = UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_UNorm;
+            renderTexture_.depth = 24;
         }
         camera_.targetTexture = renderTexture_;
         cameraImage_.texture = renderTexture_;
+
+        if (content_ != null)
+        {
+            content_.Play();
+        }
     }
 
     public override void Loop()
     {
         base.Loop();
+
+        if (content_ != null)
+        {
+            content_.Loop();
+        }
     }
 
     public override void Preload(EpisodeNode node)
@@ -52,6 +72,9 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
     {
         base.ReceiveAction(action);
 
-        content_.ReceiveAction(action);
+        if (content_ != null)
+        {
+            content_.ReceiveAction(action);
+        }
     }
 }
