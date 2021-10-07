@@ -121,7 +121,7 @@ public class ShareManager : GameManager
         nodeObject.transform.SetParent(nodeObjectParent_);
         nodeObject.transform.localPosition = Vector3.zero;
 
-        nodeObject.Init(currentNode_, EpisodeNodeFinished);
+        nodeObject.Init(this, currentNode_, EpisodeNodeFinished);
         nodeObject.Preload(node);
         nodeObject.Hide();
         cachedNodeObjects_[Key(node)] = nodeObject;

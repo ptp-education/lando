@@ -6,6 +6,13 @@ public class PrefabContent : MonoBehaviour
 {
     [SerializeField] public Camera Camera;
 
+    protected GameManager gameManager_;
+
+    public void Init(GameManager gameManager)
+    {
+        gameManager_ = gameManager;
+    }
+
     public virtual void ReceiveAction(string action)
     {
         //stub
@@ -17,6 +24,11 @@ public class PrefabContent : MonoBehaviour
     }
 
     public virtual void Loop()
+    {
+        //stub
+    }
+
+    public virtual void OnFirstHide()
     {
         //stub
     }

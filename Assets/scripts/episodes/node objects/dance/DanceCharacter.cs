@@ -16,4 +16,9 @@ public class DanceCharacter : MonoBehaviour
     {
         anim_.Play("Victory");
     }
+
+    public void PlayAnimation(string animation)
+    {
+        anim_.Play(animation);
+    }
 }

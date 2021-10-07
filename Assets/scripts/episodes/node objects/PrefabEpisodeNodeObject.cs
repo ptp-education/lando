@@ -19,9 +19,9 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
         }
     }
 
-    public override void Init(EpisodeNode node, ReadyToStartLoop callback)
+    public override void Init(GameManager gameManager, EpisodeNode node, ReadyToStartLoop callback)
     {
-        base.Init(node, callback);
+        base.Init(gameManager, node, callback);
     }
 
     public override void Hide()
@@ -65,6 +65,7 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
 
         PrefabContent o = Resources.Load<PrefabContent>(ShareManager.PREFAB_PATH + node.PrefabPath);
         content_ = GameObject.Instantiate<PrefabContent>(o);
+        content_.Init(gameManager_);
         camera_ = content_.Camera;
     }
 
@@ -75,6 +76,16 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
         if (content_ != null)
         {
             content_.ReceiveAction(action);
+        }
+    }
+
+    protected override void OnFirstHide() 
+    {
+        base.OnFirstHide();
+
+        if (content_ != null)
+        {
+            content_.OnFirstHide();
         }
     }
 }

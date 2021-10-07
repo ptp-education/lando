@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     protected EpisodeNode currentNode_;
     protected string currentNodeState_;
 
-    protected GameStorage storage_ = new GameStorage();
+    public GameStorage Storage = new GameStorage();
 
     private string cachedEpisode_ = "";
     private string cachedNode_ = "";
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         cachedNode_ = "";
         cachedState_ = "";
 
-        storage_.ResetStorage();
+        Storage.ResetStorage();
 
         if (episode_ != null)
         {

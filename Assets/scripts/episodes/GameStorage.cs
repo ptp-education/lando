@@ -8,7 +8,8 @@ public class GameStorage
 
     public void Add<T>(string key, T value) where T : class
     {
-        dict_.Add(key, value);
+        dict_[key] = value;
+        // dict_.Add(key, value);
     }
 
     public T GetValue<T>(string key) where T : class

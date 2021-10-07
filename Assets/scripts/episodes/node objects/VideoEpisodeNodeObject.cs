@@ -9,9 +9,9 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     [SerializeField] private VideoPlayer videoPlayerMain_;
     [SerializeField] private VideoPlayer videoPlayerLoop_;
 
-    public override void Init(EpisodeNode node, ReadyToStartLoop callback)
+    public override void Init(GameManager gameManager, EpisodeNode node, ReadyToStartLoop callback)
     {
-        base.Init(node, callback);
+        base.Init(gameManager, node, callback);
 
         videoPlayerMain_.loopPointReached += VideoFinished;
 

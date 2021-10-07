@@ -9,34 +9,50 @@ public class EpisodeNodeObject : MonoBehaviour
 
     protected ReadyToStartLoop startLoopCallback_;
     protected EpisodeNode episodeNode_;
+    protected GameManager gameManager_;
 
-    public virtual void Init(EpisodeNode node, ReadyToStartLoop callback)
+    private bool hidden_ = false;
+
+    public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
     {
+        gameManager_ = manager;
         startLoopCallback_ = callback;
         episodeNode_ = node;
     }
 
     public virtual void Preload(EpisodeNode node)
     {
-        transform.localScale = Vector3.zero;
+        Hide();
     }
 
     public virtual void Hide()
     {
+        if (!hidden_) 
+        {
+            OnFirstHide();
+        }
+        hidden_ = true;
         transform.localScale = Vector3.zero;
     }
 
     public virtual void Play()
     {
+        hidden_ = false;
         transform.localScale = Vector3.one;
     }
 
     public virtual void Loop()
     {
+        hidden_ = false;
         transform.localScale = Vector3.one;
     }
 
     public virtual void ReceiveAction(string action)
+    {
+
+    }
+
+    protected virtual void OnFirstHide() 
     {
 
     }
