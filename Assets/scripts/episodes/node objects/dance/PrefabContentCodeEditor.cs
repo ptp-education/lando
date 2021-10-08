@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PrefabContentCodeEditor : PrefabContent
 {
-    public const string DANCE_CODE_KEY = "dance_code";
-
     [SerializeField] GameObject light_;
     [SerializeField] List<DanceCharacter> characters_;
     [SerializeField] List<Image> codeOptions_;
@@ -21,7 +19,7 @@ public class PrefabContentCodeEditor : PrefabContent
     {
         base.Play();
 
-        string selectedCharacter = gameManager_.Storage.GetValue<string>(PrefabContentDanceSelector.DANCE_CHARACTER_KEY);
+        string selectedCharacter = gameManager_.Storage.GetValue<string>(GameStorage.Key.SelectedCharacter);
         foreach(DanceCharacter c in characters_) 
         {
             bool rightCharacter = string.Equals(c.gameObject.name, selectedCharacter);

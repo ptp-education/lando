@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class PrefabContentDanceSelector : PrefabContent
 {
-    public const string DANCE_CHARACTER_KEY = "selected_dance_character";
-
     [SerializeField] List<DanceCharacter> characters_;
     [SerializeField] List<Image> charactersAvatars_;
     [SerializeField] Image border_;
@@ -33,7 +31,7 @@ public class PrefabContentDanceSelector : PrefabContent
 
     public override void OnExit() 
     {
-        gameManager_.Storage.Add<string>(DANCE_CHARACTER_KEY, charactersAvatars_[counter_].gameObject.name);
+        gameManager_.Storage.Add<string>(GameStorage.Key.SelectedCharacter, charactersAvatars_[counter_].gameObject.name);
     }
 
     public override void ReceiveAction(string action)
