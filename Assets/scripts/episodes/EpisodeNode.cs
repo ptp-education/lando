@@ -33,4 +33,20 @@ public class EpisodeNode : MonoBehaviour
     public EpisodeNode NextNode;
 
     public List<Option> Options = new List<Option>();
+
+    public override string ToString()
+    {
+        string contentName = "";
+        switch(Type)
+        {
+            case EpisodeType.Video:
+                contentName = VideoFilePath;
+                break;
+            case EpisodeType.Prefab:
+                contentName = PrefabPath;
+                break;
+        }
+
+        return string.Format("{0} - {1} - {2}", gameObject.name, Type.ToString(), contentName);
+    }
 }

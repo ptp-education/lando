@@ -14,11 +14,17 @@ public class DanceCharacter : MonoBehaviour
 
     public void Selected()
     {
-        anim_.Play("Victory");
+        if (anim_ != null)
+        {
+            anim_.Play("Victory");
+        }
     }
 
     public void PlayAnimation(string animation)
     {
-        anim_.Play(animation);
+        if (anim_ != null)
+        {
+            anim_.Play(animation);
+        }
     }
 }

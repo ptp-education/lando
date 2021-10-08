@@ -12,6 +12,7 @@ public class ShareManager : GameManager
 
     private string internalState_ = "";
     private Dictionary<string, EpisodeNodeObject> cachedNodeObjects_ = new Dictionary<string, EpisodeNodeObject>();
+    private EpisodeNode previousNode_;
 
     protected override void NewNodeEventInternal(EpisodeNode node)
     {
@@ -43,6 +44,11 @@ public class ShareManager : GameManager
 
     private IEnumerator UpdateEpisodeNode(string nodeState, EpisodeNode currentNode)
     {
+        if (previousNode_ != null && previousNode_ != currentNode)
+        {
+            cachedNodeObjects_[Key(previousNode_)].OnExit();
+        }
+
         List<string> preloadedAssets = new List<string>();
 
         PreloadObject(currentNode);
@@ -96,6 +102,8 @@ public class ShareManager : GameManager
                 cachedNodeObjects_.Remove(k);
             }
         }
+
+        previousNode_ = currentNode;
     }
 
     private void PreloadObject(EpisodeNode node)
@@ -121,7 +129,7 @@ public class ShareManager : GameManager
         nodeObject.transform.SetParent(nodeObjectParent_);
         nodeObject.transform.localPosition = Vector3.zero;
 
-        nodeObject.Init(this, currentNode_, EpisodeNodeFinished);
+        nodeObject.Init(this, node, EpisodeNodeFinished);
         nodeObject.Preload(node);
         nodeObject.Hide();
         cachedNodeObjects_[Key(node)] = nodeObject;

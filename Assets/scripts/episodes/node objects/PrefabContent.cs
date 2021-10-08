@@ -28,7 +28,7 @@ public class PrefabContent : MonoBehaviour
         //stub
     }
 
-    public virtual void OnFirstHide()
+    public virtual void OnExit()
     {
         //stub
     }

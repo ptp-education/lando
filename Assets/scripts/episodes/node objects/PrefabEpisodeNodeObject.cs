@@ -29,11 +29,21 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
         base.Hide();
 
         cameraImage_.texture = null;
+
+        if (content_ != null)
+        {
+            content_.transform.localScale = Vector3.zero;
+        }
     }
 
     public override void Play()
     {
         base.Play();
+
+        if (content_ != null)
+        {
+            content_.transform.localScale = Vector3.one;
+        }
 
         if (renderTexture_ == null) {
             renderTexture_ = new RenderTexture(1920, 1080, 0);
@@ -79,13 +89,13 @@ public class PrefabEpisodeNodeObject : EpisodeNodeObject
         }
     }
 
-    protected override void OnFirstHide() 
+    public override void OnExit() 
     {
-        base.OnFirstHide();
+        base.OnExit();
 
         if (content_ != null)
         {
-            content_.OnFirstHide();
+            content_.OnExit();
         }
     }
 }

@@ -11,8 +11,6 @@ public class EpisodeNodeObject : MonoBehaviour
     protected EpisodeNode episodeNode_;
     protected GameManager gameManager_;
 
-    private bool hidden_ = false;
-
     public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
     {
         gameManager_ = manager;
@@ -27,23 +25,16 @@ public class EpisodeNodeObject : MonoBehaviour
 
     public virtual void Hide()
     {
-        if (!hidden_) 
-        {
-            OnFirstHide();
-        }
-        hidden_ = true;
         transform.localScale = Vector3.zero;
     }
 
     public virtual void Play()
     {
-        hidden_ = false;
         transform.localScale = Vector3.one;
     }
 
     public virtual void Loop()
     {
-        hidden_ = false;
         transform.localScale = Vector3.one;
     }
 
@@ -52,7 +43,7 @@ public class EpisodeNodeObject : MonoBehaviour
 
     }
 
-    protected virtual void OnFirstHide() 
+    public virtual void OnExit() 
     {
 
     }

@@ -31,9 +31,8 @@ public class PrefabContentDanceSelector : PrefabContent
         counter_ = 0;
     }
 
-    public override void OnFirstHide() 
+    public override void OnExit() 
     {
-        Debug.LogError("saving character " + charactersAvatars_[counter_].gameObject.name);
         gameManager_.Storage.Add<string>(DANCE_CHARACTER_KEY, charactersAvatars_[counter_].gameObject.name);
     }
 

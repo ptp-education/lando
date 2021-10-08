@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PrefabContentCodeEditor : PrefabContent
 {
+    public const string DANCE_CODE_KEY = "dance_code";
+
     [SerializeField] List<DanceCharacter> characters_;
     [SerializeField] List<Image> codeOptions_;
     [SerializeField] Image border_;
@@ -12,6 +14,7 @@ public class PrefabContentCodeEditor : PrefabContent
 
     private int counter_ = 0;
     private DanceCharacter activeCharacter_;
+    private DanceCode code_;
 
     public override void Play() 
     {
@@ -27,6 +30,8 @@ public class PrefabContentCodeEditor : PrefabContent
                 activeCharacter_ = c;
             }
         }
+
+        code_ = new DanceCode();
     }
 
     public override void ReceiveAction(string action)
@@ -42,13 +47,13 @@ public class PrefabContentCodeEditor : PrefabContent
         }
         else if (string.Equals(action, "Play"))
         {
-
+            activeCharacter_.PlayAnimation(codeOptions_[counter_].name);
         } else if (string.Equals(action, "Enter"))
         {
-
+            AddCode(codeOptions_[counter_].name);
         } else if (string.Equals(action, "Delete"))
         {
-
+            DeleteCode();
         }
     }
 
@@ -62,18 +67,20 @@ public class PrefabContentCodeEditor : PrefabContent
         border_.transform.localPosition = codeOptions_[counter_].transform.localPosition;
     }
 
-    private void PlayCodeAnimation(string animation)
+    private void AddCode(string animation)
     {
-        activeCharacter_.PlayAnimation(animation);
-    }
-
-    private void AddCode(string code)
-    {
-        codeText_.text = codeText_.text + "\n" + code;
+        code_.AddCommand(animation);
+        RefreshCodeText();
     }
 
     private void DeleteCode()
     {
+        code_.RemoveCommand();
+        RefreshCodeText();
+    }
 
+    private void RefreshCodeText()
+    {
+        codeText_.text = code_.ToString();
     }
 }
