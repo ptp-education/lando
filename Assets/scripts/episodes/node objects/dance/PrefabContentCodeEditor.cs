@@ -36,6 +36,13 @@ public class PrefabContentCodeEditor : PrefabContent
         code_ = new DanceCode();
     }
 
+    public override void OnExit()
+    {
+        base.OnExit();
+
+        gameManager_.Storage.Add<DanceCode>(GameStorage.Key.DanceCode, code_);
+    }
+
     public override void ReceiveAction(string action)
     {
         base.ReceiveAction(action);
