@@ -36,7 +36,7 @@ public class DanceCode
         foreach(Command c in Commands)
         {
             ret += c.AnimationName;
-            ret += "\n\n";
+            ret += "\n";
         }
         return ret;
     }

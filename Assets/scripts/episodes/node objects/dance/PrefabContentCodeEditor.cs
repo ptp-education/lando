@@ -7,6 +7,7 @@ public class PrefabContentCodeEditor : PrefabContent
 {
     public const string DANCE_CODE_KEY = "dance_code";
 
+    [SerializeField] GameObject light_;
     [SerializeField] List<DanceCharacter> characters_;
     [SerializeField] List<Image> codeOptions_;
     [SerializeField] Image border_;
@@ -30,6 +31,9 @@ public class PrefabContentCodeEditor : PrefabContent
                 activeCharacter_ = c;
             }
         }
+
+        Camera.transform.SetParent(activeCharacter_.transform);
+        light_.transform.SetParent(activeCharacter_.transform);
 
         code_ = new DanceCode();
     }
