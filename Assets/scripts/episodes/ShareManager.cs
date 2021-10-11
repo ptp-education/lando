@@ -80,6 +80,14 @@ public class ShareManager : GameManager
             cachedNodeObjects_[Key(currentNode)].Play();
         }
 
+        if (currentNode.Type == EpisodeNode.EpisodeType.Prefab)
+        {
+            if (previousNode_ != null)
+            {
+                cachedNodeObjects_[Key(previousNode_)].Hide();
+            }
+        }
+
         for (int i = 0; i < 12; i ++)
         {
             yield return 0;
