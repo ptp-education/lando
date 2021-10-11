@@ -49,4 +49,6 @@ public class EpisodeNode : MonoBehaviour
 
         return string.Format("{0} - {1} - {2}", gameObject.name, Type.ToString(), contentName);
     }
+
+    public NodeVisualizer VisualNode;
 }
