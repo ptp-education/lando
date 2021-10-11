@@ -34,11 +34,23 @@ public class Episode : MonoBehaviour
 
     public void RemoveVisualize()
     {
-        foreach (Transform o in StageUtility.GetCurrentStageHandle().FindComponentsOfType<Transform>())
+        if (Application.isPlaying)
         {
-            if (string.Equals(o.tag, kVisualizerTag))
+            foreach(GameObject o in GameObject.FindGameObjectsWithTag(kVisualizerTag))
             {
-                DestroyImmediate(o.gameObject);
+                Destroy(o.gameObject);
+            }
+        } else if (Application.isEditor)
+        {
+            foreach (Transform o in StageUtility.GetCurrentStageHandle().FindComponentsOfType<Transform>())
+            {
+                if (o != null)
+                {
+                    if (string.Equals(o.tag, kVisualizerTag))
+                    {
+                        DestroyImmediate(o.gameObject);
+                    }
+                }
             }
         }
     }
