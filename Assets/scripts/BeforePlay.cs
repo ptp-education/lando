@@ -1,21 +1,19 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.Build;
-using UnityEditor.Build.Reporting;
 using UnityEngine;
 using System.IO;
 using System.Linq;
 
-public class Build : IPreprocessBuildWithReport
+public class BeforePlay
 {
-    public int callbackOrder { get { return 0; } }
-
-    public void OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    static private void OnBeforeSceneLoadRuntimeMethod()
     {
         SaveEpisodes();
     }
 
-    private void SaveEpisodes()
+    static private void SaveEpisodes()
     {
         string path = Application.dataPath + "/Resources/prefabs/episodes/";
 
