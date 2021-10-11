@@ -7,6 +7,7 @@ public class NodeVisualizer : MonoBehaviour
 {
     [SerializeField] TextMeshPro title_;
     [SerializeField] TextMeshPro type_;
+    [SerializeField] TextMeshPro prompt_;
     [SerializeField] TextMeshPro path_;
     [SerializeField] Transform optionsParent_;
     [SerializeField] TextMeshPro optionCopy_;
@@ -18,6 +19,7 @@ public class NodeVisualizer : MonoBehaviour
     public void Init(EpisodeNode node)
     {
         title_.text = node.name;
+        prompt_.text = node.Prompt;
         node.VisualNode = this;
 
         switch(node.Type)

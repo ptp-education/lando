@@ -45,15 +45,7 @@ public class Episode : MonoBehaviour
 
     private void Visualize(EpisodeNode node, Vector3 spawnLocation)
     {
-        if (node.VisualNode != null) return;
-
-        NodeVisualizer l = Resources.Load<NodeVisualizer>("prefabs/NodeVisualizer");
-        NodeVisualizer nv = GameObject.Instantiate<NodeVisualizer>(l);
-        nv.Init(node);
-        nv.gameObject.SetActive(true);
-        nv.tag = kVisualizerTag;
-        nv.transform.SetParent(node.transform);
-        nv.transform.localPosition = spawnLocation;
+        CreateNode(node, spawnLocation);
 
         List<EpisodeNode> nextNodes = new List<EpisodeNode>();
         if (node.NextNode != null)
@@ -68,14 +60,40 @@ public class Episode : MonoBehaviour
             }
         }
 
+        List<EpisodeNode> secondPass = new List<EpisodeNode>();
         float xOffset = 0f;
         foreach(EpisodeNode n in nextNodes)
         {
+            if (n.VisualNode == null)
+            {
+                CreateNode(n, new Vector3(spawnLocation.x + xOffset, spawnLocation.y - 100f, 0f));
+                xOffset += 115f;
+
+                secondPass.Add(n);
+            }
+        }
+
+        xOffset = 0f;
+        foreach (EpisodeNode n in secondPass)
+        {
             Visualize(n, new Vector3(spawnLocation.x + xOffset, spawnLocation.y - 100f, 0f));
+            xOffset += 115f;
         }
     }
 
-    private void DrawLines(EpisodeNode node)
+    private void CreateNode(EpisodeNode node, Vector3 spawnLocation)
+    {
+        if (node.VisualNode != null) return;
+        NodeVisualizer l = Resources.Load<NodeVisualizer>("prefabs/NodeVisualizer");
+        NodeVisualizer nv = GameObject.Instantiate<NodeVisualizer>(l);
+        nv.Init(node);
+        nv.gameObject.SetActive(true);
+        nv.tag = kVisualizerTag;
+        nv.transform.SetParent(node.transform);
+        nv.transform.localPosition = spawnLocation;
+    }
+
+        private void DrawLines(EpisodeNode node)
     {
         if (node.VisualNode.LineDrawn) return;
 
@@ -83,17 +101,28 @@ public class Episode : MonoBehaviour
 
         if (node.NextNode != null)
         {
-            DrawLine(node.VisualNode.PositionForOption("Next"), node.NextNode.VisualNode.transform.position, node.transform);
+            DrawLine(node.VisualNode.PositionForOption("Next"), SlightlyRandomize(node.NextNode.VisualNode.transform.position), node.transform);
             DrawLines(node.NextNode);
         }
         foreach (EpisodeNode.Option o in node.Options)
         {
             if (o.Node != null)
             {
-                DrawLine(node.VisualNode.PositionForOption(o.Prompt), o.Node.VisualNode.transform.position, node.transform);
+                Vector3 nodePosition = o.Node.VisualNode.transform.position;
+                if (o.Node == node)
+                {
+                    Vector3 p = node.VisualNode.PositionForOption(o.Prompt);
+                    nodePosition = new Vector3(p.x, p.y - 20f, p.z);
+                }
+                DrawLine(node.VisualNode.PositionForOption(o.Prompt), SlightlyRandomize(nodePosition), node.transform);
                 DrawLines(o.Node);
             }
         }
+    }
+
+    private Vector3 SlightlyRandomize(Vector3 v)
+    {
+        return new Vector3(v.x + Random.Range(-3f, 3f), v.y, v.z);
     }
 
     private void DrawLine(Vector3 start, Vector3 end, Transform parentTransform)
@@ -110,8 +139,8 @@ public class Episode : MonoBehaviour
         LineRenderer lr = myLine.GetComponent<LineRenderer>();
         lr.startColor = Color.white;
         lr.endColor = Color.white;
-        lr.startWidth = 1f;
-        lr.endWidth = 1f;
+        lr.startWidth = 0.5f;
+        lr.endWidth = 0.5f;
         lr.SetPosition(0, start);
         lr.SetPosition(1, end);
     }
