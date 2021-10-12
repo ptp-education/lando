@@ -9,7 +9,8 @@ public class EpisodeNode : MonoBehaviour
     public enum EpisodeType
     {
         Video,
-        Prefab
+        Prefab,
+        Image
     }
 
     [Serializable]
@@ -24,6 +25,11 @@ public class EpisodeNode : MonoBehaviour
     public string VideoFilePath;
     public UnityEngine.Object VideoLoop;
     public string VideoLoopFilePath;
+
+    public UnityEngine.Object Image;
+    public string ImageFilePath;
+    public UnityEngine.Object ImageLoop;
+    public string ImageLoopFilePath;
 
     public GameObject Prefab;
     public string PrefabPath;

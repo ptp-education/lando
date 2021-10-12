@@ -129,6 +129,10 @@ public class ShareManager : GameManager
             case EpisodeNode.EpisodeType.Prefab:
                 prefabPath += "prefab_player";
                 break;
+
+            case EpisodeNode.EpisodeType.Image:
+                prefabPath += "image_player";
+                break;
         }
         EpisodeNodeObject o = Resources.Load<EpisodeNodeObject>(prefabPath);
         nodeObject = GameObject.Instantiate<EpisodeNodeObject>(o);
@@ -156,6 +160,6 @@ public class ShareManager : GameManager
 
     private string Key(EpisodeNode node)
     {
-        return node.PrefabPath + node.VideoFilePath + node.VideoLoopFilePath;
+        return node.PrefabPath + node.VideoFilePath + node.VideoLoopFilePath + node.ImageFilePath + node.ImageLoopFilePath;
     }
 }

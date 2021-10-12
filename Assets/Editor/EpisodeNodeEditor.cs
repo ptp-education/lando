@@ -7,6 +7,7 @@ using UnityEditor;
 public class EpisodeNodeEditor : Editor
 {
     const string kAssetPrefix = "Assets/StreamingAssets/";
+    const string kImageAssetPrefix = "Assets/Resources/";
     const string kEpisodeObjectPrefix = "Assets/Resources/prefabs/episode_objects/";
     const string kPrefabSuffix = ".prefab";
 
@@ -15,6 +16,8 @@ public class EpisodeNodeEditor : Editor
         serializedObject.Update();
         SerializedProperty video = serializedObject.FindProperty("Video");
         SerializedProperty videoLoop = serializedObject.FindProperty("VideoLoop");
+        SerializedProperty image = serializedObject.FindProperty("Image");
+        SerializedProperty imageLoop = serializedObject.FindProperty("ImageLoop");
         SerializedProperty prefab = serializedObject.FindProperty("Prefab");
 
         EditorGUILayout.LabelField(string.Format("Node Type"));
@@ -55,6 +58,30 @@ public class EpisodeNodeEditor : Editor
             }
             EditorGUILayout.LabelField(string.Format("Prefab ({0})", myTarget.PrefabPath));
             myTarget.Prefab = (GameObject)EditorGUILayout.ObjectField(myTarget.Prefab, typeof(GameObject), false);
+        } else if (myTarget.Type == EpisodeNode.EpisodeType.Image)
+        {
+            string imagePath = "empty";
+            if (image.objectReferenceValue != null)
+            {
+                imagePath = AssetDatabase.GetAssetPath(image.objectReferenceValue.GetInstanceID());
+                imagePath = imagePath.Substring(kImageAssetPrefix.Length);
+                imagePath = StripExtension(imagePath);
+                myTarget.ImageFilePath = imagePath;
+            }
+            string imageLoopPath = "empty";
+            if (imageLoop.objectReferenceValue != null)
+            {
+                imageLoopPath = AssetDatabase.GetAssetPath(imageLoop.objectReferenceValue.GetInstanceID());
+                imageLoopPath = imageLoopPath.Substring(kImageAssetPrefix.Length);
+                imageLoopPath = StripExtension(imageLoopPath);
+                myTarget.ImageLoopFilePath = imageLoopPath;
+            }
+
+            EditorGUILayout.LabelField(string.Format("Image ({0})", imagePath));
+            myTarget.Image = EditorGUILayout.ObjectField(myTarget.Image, typeof(Object), false);
+
+            EditorGUILayout.LabelField(string.Format("Video Loop ({0})", imageLoopPath));
+            myTarget.ImageLoop = EditorGUILayout.ObjectField(myTarget.ImageLoop, typeof(Object), false);
         }
 
         EditorGUILayout.LabelField("Prompt");
@@ -67,6 +94,12 @@ public class EpisodeNodeEditor : Editor
         EditorGUILayout.PropertyField(serializedObject.FindProperty("Options"));
 
         serializedObject.ApplyModifiedProperties();
+    }
+
+    private string StripExtension(string input)
+    {
+        string[] split = input.Split('.');
+        return split[0];
     }
 
     private GUIStyle TextAreaStyle
