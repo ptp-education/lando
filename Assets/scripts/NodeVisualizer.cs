@@ -32,6 +32,11 @@ public class NodeVisualizer : MonoBehaviour
                 type_.text = "Type: Prefab";
                 path_.text = node.PrefabPath;
                 break;
+
+            case EpisodeNode.EpisodeType.Image:
+                type_.text = "Type: Image";
+                path_.text = node.ImageFilePath + " / " + node.ImageLoopFilePath;
+                break;
         }
 
         for (int i = -1; i < node.Options.Count; i++)
