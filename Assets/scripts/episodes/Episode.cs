@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor.SceneManagement;
+#endif
 
 public class Episode : MonoBehaviour
 {
@@ -42,6 +45,7 @@ public class Episode : MonoBehaviour
             }
         } else if (Application.isEditor)
         {
+#if UNITY_EDITOR
             foreach (Transform o in StageUtility.GetCurrentStageHandle().FindComponentsOfType<Transform>())
             {
                 if (o != null)
@@ -52,6 +56,7 @@ public class Episode : MonoBehaviour
                     }
                 }
             }
+#endif
         }
     }
 
@@ -105,7 +110,7 @@ public class Episode : MonoBehaviour
         nv.transform.localPosition = spawnLocation;
     }
 
-        private void DrawLines(EpisodeNode node)
+    private void DrawLines(EpisodeNode node)
     {
         if (node.VisualNode.LineDrawn) return;
 

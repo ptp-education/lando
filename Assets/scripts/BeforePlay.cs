@@ -15,6 +15,7 @@ public class BeforePlay
 
     static private void SaveEpisodes()
     {
+#if UNITY_EDITOR
         string path = Application.dataPath + "/Resources/prefabs/episodes/";
 
         string[] fileNames = Directory.GetFiles(path)
@@ -35,5 +36,6 @@ public class BeforePlay
         File.WriteAllText(Application.dataPath + "/Resources/all_episodes.txt", fileInfoJson);
 
         AssetDatabase.Refresh();
+#endif
     }
 }
