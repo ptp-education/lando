@@ -43,17 +43,26 @@ public class GameManager : MonoBehaviour
 
     public void UpdateEpisode(string e)
     {
-        networkManager_.SendNewEpisodeMessage(e);
+        if (networkManager_ != null)
+        {
+            networkManager_.SendNewEpisodeMessage(e);
+        }
     }
 
     public void UpdateEpisodeNode(string n)
     {
-        networkManager_.SendNewEpisodeNodeMessage(n);
+        if (networkManager_ != null)
+        {
+            networkManager_.SendNewEpisodeNodeMessage(n);
+        }
     }
 
     public void UpdateNodeState(string s)
     {
-        networkManager_.SendNewNodeStateMessage(s);
+        if (networkManager_ != null)
+        {
+            networkManager_.SendNewNodeStateMessage(s);
+        }
     }
 
     public void NewEpisodeEvent(string e)
