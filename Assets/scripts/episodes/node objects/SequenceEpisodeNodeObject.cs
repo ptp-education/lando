@@ -9,8 +9,7 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
 {
     [SerializeField] private Transform contentParent_;
 
-    //<object_name, type>, <object>
-    private Dictionary<KeyValuePair<string, string>, Transform> objects = new Dictionary<KeyValuePair<string, string>, Transform>();
+    private Dictionary<string, Transform> objects = new Dictionary<string, Transform>();
 
     private SequenceData sequenceData
     {
@@ -23,6 +22,84 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
     public override void Play()
     {
         base.Play();
+
+        GoTweenFlow flow = new GoTweenFlow();
+
+        float startTime = 0f;
+        foreach (SequenceData.SequenceStep step in sequenceData.SequenceSteps)
+        {
+            AddAccompaniment(startTime, flow, step.Accompaniments);
+
+            if (string.Equals(step.SequenceType, SequenceData.SequenceStep.Type.Wait.ToString()))
+            {
+                flow.insert(startTime, new GoTween(this.transform, step.Duration, new GoTweenConfig()));
+                startTime += step.Duration;
+            }
+            else if (string.Equals(step.SequenceType, SequenceData.SequenceStep.Type.Voiceover.ToString()))
+            {
+                float audioLength = SimpleAudioPlayer.AudioLength(step.VoiceoverPath);
+                string p = step.VoiceoverPath;
+                flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                {
+                    SimpleAudioPlayer.PlayAudio(p);
+                })));
+                startTime += audioLength;
+            }
+        }
+
+        flow.setOnCompleteHandler(t =>
+        {
+
+        });
+        flow.play();
+    }
+
+    private void AddAccompaniment(float startTime, GoTweenFlow flow, List<SequenceData.SequenceStep.Accompaniment> accompaniments)
+    {
+        foreach(SequenceData.SequenceStep.Accompaniment a in accompaniments)
+        {
+            Transform character = objects[a.ObjectName];
+
+            startTime = startTime + a.RelativeTimeAfter;
+            startTime = Mathf.Max(startTime, 0f);
+
+            if (a.Animation != null && a.Animation.Length > 0)
+            {
+                SkeletonGraphic s = character.GetComponent<SkeletonGraphic>();
+
+                string animationName = a.Animation;
+
+                flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                {
+                    s.AnimationState.ClearTrack(Character.kMainTrack);
+                    s.AnimationState.SetAnimation(Character.kMainTrack, animationName, false);
+                    s.AnimationState.AddAnimation(Character.kMainTrack, Character.kIdleAnimation, true, 0.05f);
+                })));
+            }
+            if (a.SoundPath != null && a.SoundPath.Length > 0)
+            {
+                string p = a.SoundPath;
+                flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                {
+                    SimpleAudioPlayer.PlayAudio(p);
+                })));
+            }
+
+            foreach(SequenceData.SequenceStep.Accompaniment.Movement m in a.Movements)
+            {
+                float movementTime = startTime + m.RelativeTimeAfter;
+                if (string.Equals(m.MovementType, SequenceData.SequenceStep.Accompaniment.Movement.Type.Move.ToString()))
+                {
+                    flow.insert(movementTime, new GoTween(character, m.Duration, new GoTweenConfig().vector3Prop("localPosition", m.Target)));
+                } else if (string.Equals(m.MovementType, SequenceData.SequenceStep.Accompaniment.Movement.Type.Scale.ToString()))
+                {
+                    flow.insert(movementTime, new GoTween(character, m.Duration, new GoTweenConfig().vector3Prop("localScale", m.Target)));
+                } else
+                {
+                    Debug.LogError("Unhandled movement type: " + m.MovementType);
+                }
+            }
+        }
     }
 
     public override void Loop()
@@ -60,8 +137,8 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
                 if (l == null) {
                     Debug.LogError("Could not find SkeletonGraphic with path: " + obj.ModelPath);
                 }
-                SkeletonGraphic sa = GameObject.Instantiate<SkeletonGraphic>(l);
 
+                SkeletonGraphic sa = GameObject.Instantiate<SkeletonGraphic>(l);
                 createdObject = sa.GetComponent<Transform>();
             } else
             {
@@ -74,7 +151,7 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
                 createdObject.transform.localPosition = obj.StartingPosition;
                 createdObject.transform.localScale = obj.StartingScale;
 
-                objects.Add(new KeyValuePair<string, string>(obj.Name, obj.ObjectType), createdObject);
+                objects.Add(obj.Name, createdObject);
             }
         }
     }

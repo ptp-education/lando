@@ -434,5 +434,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 120c5cd62688c46b3ba5fc56fbe3f6d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingEpisode_: {fileID: 5392049212178664795, guid: 7d0d4a35cd4054dd19065dea284888fa, type: 3}
+  startingEpisode_: Save the Honbees
   startingNode_: node:a0

@@ -35,7 +35,7 @@ public class SequenceData
         public float Duration;
         public string VoiceoverPath;
         public float VoiceoverSpeed;
-        public List<Accompaniment> Accompaniments;
+        public List<Accompaniment> Accompaniments = new List<Accompaniment>();
 
         public class Accompaniment
         {
@@ -49,11 +49,12 @@ public class SequenceData
 
                 public string MovementType;
                 public Vector3 Target;
-                public string Duration;
+                public float Duration;
+                public float RelativeTimeAfter = 0f;
             }
 
             public float RelativeTimeAfter;
-            public string Character;
+            public string ObjectName;
             public string Animation;
             public string SoundPath;
             public List<Movement> Movements;
@@ -99,7 +100,6 @@ public class EpisodeNode : MonoBehaviour
     {
         get
         {
-            //new
             SequenceData d = JsonConvert.DeserializeObject<SequenceData>(SequenceData);
             return d;
         }
