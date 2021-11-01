@@ -3,6 +3,66 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using System;
+using Newtonsoft.Json;
+
+public class SequenceData
+{
+    public class Object
+    {
+        public enum Type
+        {
+            Image,
+            Video,
+            Prefab,
+            Spine
+        }
+        public string Name;
+        public string ObjectType;
+        public string ModelPath;
+        public Vector3 StartingPosition = Vector3.zero;
+        public Vector3 StartingScale = Vector3.one;
+    }
+
+    public class SequenceStep
+    {
+        public enum Type
+        {
+            Wait,
+            Voiceover
+        }
+        public string SequenceType;
+        public float RelativeTimeAfter;
+        public float Duration;
+        public string VoiceoverPath;
+        public float VoiceoverSpeed;
+        public List<Accompaniment> Accompaniments;
+
+        public class Accompaniment
+        {
+            public class Movement
+            {
+                public enum Type
+                {
+                    Move,
+                    Scale
+                }
+
+                public string MovementType;
+                public Vector3 Target;
+                public string Duration;
+            }
+
+            public float RelativeTimeAfter;
+            public string Character;
+            public string Animation;
+            public string SoundPath;
+            public List<Movement> Movements;
+        }
+    }
+
+    public List<Object> Objects = new List<Object>();
+    public List<SequenceStep> SequenceSteps = new List<SequenceStep>();
+}
 
 public class EpisodeNode : MonoBehaviour
 {
@@ -10,7 +70,8 @@ public class EpisodeNode : MonoBehaviour
     {
         Video,
         Prefab,
-        Image
+        Image,
+        Sequence
     }
 
     [Serializable]
@@ -18,6 +79,8 @@ public class EpisodeNode : MonoBehaviour
     {
         [SerializeField] public string Prompt;
         [SerializeField] public EpisodeNode Node;
+        [SerializeField] public string Test;
+        [SerializeField] public Option NewOption;
     }
 
     public EpisodeType Type;
@@ -30,6 +93,17 @@ public class EpisodeNode : MonoBehaviour
     public string ImageFilePath;
     public UnityEngine.Object ImageLoop;
     public string ImageLoopFilePath;
+
+    public string SequenceData;
+    public SequenceData ProcessedSequenceData
+    {
+        get
+        {
+            //new
+            SequenceData d = JsonConvert.DeserializeObject<SequenceData>(SequenceData);
+            return d;
+        }
+    }
 
     public GameObject Prefab;
     public string PrefabPath;

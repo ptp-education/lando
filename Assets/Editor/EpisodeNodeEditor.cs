@@ -82,6 +82,10 @@ public class EpisodeNodeEditor : Editor
 
             EditorGUILayout.LabelField(string.Format("Video Loop ({0})", imageLoopPath));
             myTarget.ImageLoop = EditorGUILayout.ObjectField(myTarget.ImageLoop, typeof(Object), false);
+        } else if (myTarget.Type == EpisodeNode.EpisodeType.Sequence)
+        {
+            EditorGUILayout.LabelField("Sequence Data");
+            myTarget.SequenceData = EditorGUILayout.TextArea(myTarget.SequenceData, TextAreaStyle, GUILayout.Width(400), GUILayout.MinHeight(100), GUILayout.MaxHeight(400));
         }
 
         EditorGUILayout.LabelField("Prompt");

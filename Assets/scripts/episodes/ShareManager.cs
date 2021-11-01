@@ -133,6 +133,10 @@ public class ShareManager : GameManager
             case EpisodeNode.EpisodeType.Image:
                 prefabPath += "image_player";
                 break;
+
+            case EpisodeNode.EpisodeType.Sequence:
+                prefabPath += "sequence_player";
+                break;
         }
         EpisodeNodeObject o = Resources.Load<EpisodeNodeObject>(prefabPath);
         nodeObject = GameObject.Instantiate<EpisodeNodeObject>(o);
