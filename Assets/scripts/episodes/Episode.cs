@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
 #if UNITY_EDITOR
 using UnityEditor.SceneManagement;
@@ -8,7 +9,29 @@ using UnityEditor.SceneManagement;
 
 public class Episode : MonoBehaviour
 {
+    public class Templates
+    {
+        public List<Template> Data = new List<Template>();
+        public class Template
+        {
+            public string Key;
+            public List<SequenceData.Object> Objects = new List<SequenceData.Object>();
+        }
+    }
+
     [SerializeField] public EpisodeNode StartingNode;
+
+    [TextArea]
+    [SerializeField] public string TemplatesData;
+
+    public Templates ProcessedTemplateData
+    {
+        get
+        {
+            Templates d = JsonConvert.DeserializeObject<Templates>(TemplatesData);
+            return d;
+        }
+    }
 
     private const string kVisualizerTag = "Visualizer";
 

@@ -61,6 +61,7 @@ public class SequenceData
         }
     }
 
+    public string TemplateId = null;
     public List<Object> Objects = new List<Object>();
     public List<SequenceStep> SequenceSteps = new List<SequenceStep>();
 }
@@ -102,6 +103,14 @@ public class EpisodeNode : MonoBehaviour
         {
             SequenceData d = JsonConvert.DeserializeObject<SequenceData>(SequenceData);
             return d;
+        }
+    }
+
+    public Episode Episode
+    {
+        get
+        {
+            return GetComponentInParent<Episode>();
         }
     }
 

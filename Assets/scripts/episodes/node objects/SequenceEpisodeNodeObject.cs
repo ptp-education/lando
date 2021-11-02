@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.UI;
 using Spine.Unity;
+using System.Linq;
 
 public class SequenceEpisodeNodeObject : EpisodeNodeObject
 {
@@ -111,7 +112,26 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
     {
         base.Preload(node);
 
-        foreach(SequenceData.Object obj in sequenceData.Objects)
+        List<SequenceData.Object> objectsToSpawn = new List<SequenceData.Object>();
+
+        if (sequenceData.TemplateId != null && sequenceData.TemplateId.Length > 0)
+        {
+            Episode.Templates.Template found = episodeNode_.Episode.ProcessedTemplateData.Data.Find(t =>
+            {
+                return string.Equals(t.Key, sequenceData.TemplateId);
+            });
+            if (found != null)
+            {
+                objectsToSpawn.AddRange(found.Objects);
+            } else
+            {
+                Debug.LogError("Could not find template: " + sequenceData.TemplateId);
+            }
+        }
+
+        objectsToSpawn.AddRange(sequenceData.Objects);
+
+        foreach(SequenceData.Object obj in objectsToSpawn)
         {
             Transform createdObject = null;
             if (string.Equals(obj.ObjectType, SequenceData.Object.Type.Image.ToString()))
