@@ -50,14 +50,14 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
 
         flow.setOnCompleteHandler(t =>
         {
-
+            startLoopCallback_();
         });
         flow.play();
     }
 
-    private void AddAccompaniment(float startTime, GoTweenFlow flow, List<SequenceData.SequenceStep.Accompaniment> accompaniments)
+    private void AddAccompaniment(float startTime, GoTweenFlow flow, List<SequenceData.Accompaniment> accompaniments)
     {
-        foreach(SequenceData.SequenceStep.Accompaniment accompaniment in accompaniments)
+        foreach(SequenceData.Accompaniment accompaniment in accompaniments)
         {
             Transform character = objects[accompaniment.ObjectName];
 
@@ -68,13 +68,12 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
             {
                 SkeletonGraphic s = character.GetComponent<SkeletonGraphic>();
 
-                List<SequenceData.SequenceStep.Accompaniment.Animation> toPlay = new List<SequenceData.SequenceStep.Accompaniment.Animation>(accompaniment.Animations);
+                List<SequenceData.Animation> toPlay = new List<SequenceData.Animation>(accompaniment.Animations);
 
                 flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
                 {
                     s.AnimationState.ClearTrack(Character.kMainTrack);
 
-                    //s.AnimationState.SetAnimation(Character.kMainTrack, toPlay[0].AnimationName, toPlay[0].LoopForever);
                     for (int i = 0; i < toPlay.Count; i++)
                     {
                         for (int ii = 0; ii < toPlay[i].LoopTimes; ii++)
@@ -95,13 +94,13 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
                 })));
             }
 
-            foreach(SequenceData.SequenceStep.Accompaniment.Movement m in accompaniment.Movements)
+            foreach(SequenceData.Movement m in accompaniment.Movements)
             {
                 float movementTime = startTime + m.RelativeTimeAfter;
-                if (string.Equals(m.MovementType, SequenceData.SequenceStep.Accompaniment.Movement.Type.Move.ToString()))
+                if (string.Equals(m.MovementType, SequenceData.Movement.Type.Move.ToString()))
                 {
                     flow.insert(movementTime, new GoTween(character, m.Duration, new GoTweenConfig().vector3Prop("localPosition", m.Target)));
-                } else if (string.Equals(m.MovementType, SequenceData.SequenceStep.Accompaniment.Movement.Type.Scale.ToString()))
+                } else if (string.Equals(m.MovementType, SequenceData.Movement.Type.Scale.ToString()))
                 {
                     flow.insert(movementTime, new GoTween(character, m.Duration, new GoTweenConfig().vector3Prop("localScale", m.Target)));
                 } else
@@ -115,6 +114,16 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
     public override void Loop()
     {
         base.Loop();
+        foreach(SequenceData.LoopInstructions loopInstruction in sequenceData.Looping)
+        {
+            Transform character = objects[loopInstruction.ObjectName];
+            if (character == null) continue;
+
+            SkeletonGraphic sg = character.GetComponent<SkeletonGraphic>();
+            if (sg == null) continue;
+
+            sg.AnimationState.SetAnimation(Character.kMainTrack, loopInstruction.Animation, true);
+        }
     }
 
     public override void Preload(EpisodeNode node)

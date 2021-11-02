@@ -23,6 +23,36 @@ public class SequenceData
         public Vector3 StartingScale = Vector3.one;
     }
 
+    public class Movement
+    {
+        public enum Type
+        {
+            Move,
+            Scale
+        }
+
+        public string MovementType;
+        public Vector3 Target;
+        public float Duration;
+        public float RelativeTimeAfter = 0f;
+    }
+
+    public class Animation
+    {
+        public string AnimationName;
+        public bool LoopForever = false;
+        public int LoopTimes = 1;
+        public float DelayTime = 0.05f;
+    }
+    public class Accompaniment
+    {
+        public float RelativeTimeAfter;
+        public string ObjectName;
+        public string SoundPath;
+        public List<Animation> Animations = new List<Animation>();
+        public List<Movement> Movements = new List<Movement>();
+    }
+
     public class SequenceStep
     {
         public enum Type
@@ -30,48 +60,25 @@ public class SequenceData
             Wait,
             Voiceover
         }
+
         public string SequenceType;
         public float RelativeTimeAfter;
         public float Duration;
         public string VoiceoverPath;
         public float VoiceoverSpeed;
         public List<Accompaniment> Accompaniments = new List<Accompaniment>();
+    }
 
-        public class Accompaniment
-        {
-            public class Movement
-            {
-                public enum Type
-                {
-                    Move,
-                    Scale
-                }
-
-                public string MovementType;
-                public Vector3 Target;
-                public float Duration;
-                public float RelativeTimeAfter = 0f;
-            }
-
-            public class Animation
-            {
-                public string AnimationName;
-                public bool LoopForever = false;
-                public int LoopTimes = 1;
-                public float DelayTime = 0.05f;
-            }
-
-            public float RelativeTimeAfter;
-            public string ObjectName;
-            public string SoundPath;
-            public List<Animation> Animations = new List<Animation>();
-            public List<Movement> Movements = new List<Movement>();
-        }
+    public class LoopInstructions
+    {
+        public string ObjectName;
+        public string Animation;
     }
 
     public string TemplateId = null;
     public List<Object> Objects = new List<Object>();
     public List<SequenceStep> SequenceSteps = new List<SequenceStep>();
+    public List<LoopInstructions> Looping = new List<LoopInstructions>();
 }
 
 public class EpisodeNode : MonoBehaviour
