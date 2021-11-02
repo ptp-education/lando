@@ -57,36 +57,45 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
 
     private void AddAccompaniment(float startTime, GoTweenFlow flow, List<SequenceData.SequenceStep.Accompaniment> accompaniments)
     {
-        foreach(SequenceData.SequenceStep.Accompaniment a in accompaniments)
+        foreach(SequenceData.SequenceStep.Accompaniment accompaniment in accompaniments)
         {
-            Transform character = objects[a.ObjectName];
+            Transform character = objects[accompaniment.ObjectName];
 
-            startTime = startTime + a.RelativeTimeAfter;
+            startTime = startTime + accompaniment.RelativeTimeAfter;
             startTime = Mathf.Max(startTime, 0f);
 
-            if (a.Animation != null && a.Animation.Length > 0)
+            if (accompaniment.Animations != null && accompaniment.Animations.Count > 0)
             {
                 SkeletonGraphic s = character.GetComponent<SkeletonGraphic>();
 
-                string animationName = a.Animation;
+                List<SequenceData.SequenceStep.Accompaniment.Animation> toPlay = new List<SequenceData.SequenceStep.Accompaniment.Animation>(accompaniment.Animations);
 
                 flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
                 {
                     s.AnimationState.ClearTrack(Character.kMainTrack);
-                    s.AnimationState.SetAnimation(Character.kMainTrack, animationName, false);
+
+                    //s.AnimationState.SetAnimation(Character.kMainTrack, toPlay[0].AnimationName, toPlay[0].LoopForever);
+                    for (int i = 0; i < toPlay.Count; i++)
+                    {
+                        for (int ii = 0; ii < toPlay[i].LoopTimes; ii++)
+                        {
+                            s.AnimationState.AddAnimation(Character.kMainTrack, toPlay[i].AnimationName, false, 0.05f);
+                            s.AnimationState.AddEmptyAnimation(Character.kMainTrack, toPlay[i].DelayTime, 0.05f);
+                        }
+                    }
                     s.AnimationState.AddAnimation(Character.kMainTrack, Character.kIdleAnimation, true, 0.05f);
                 })));
             }
-            if (a.SoundPath != null && a.SoundPath.Length > 0)
+            if (accompaniment.SoundPath != null && accompaniment.SoundPath.Length > 0)
             {
-                string p = a.SoundPath;
+                string p = accompaniment.SoundPath;
                 flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
                 {
                     SimpleAudioPlayer.PlayAudio(p);
                 })));
             }
 
-            foreach(SequenceData.SequenceStep.Accompaniment.Movement m in a.Movements)
+            foreach(SequenceData.SequenceStep.Accompaniment.Movement m in accompaniment.Movements)
             {
                 float movementTime = startTime + m.RelativeTimeAfter;
                 if (string.Equals(m.MovementType, SequenceData.SequenceStep.Accompaniment.Movement.Type.Move.ToString()))

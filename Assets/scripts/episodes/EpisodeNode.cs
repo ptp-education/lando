@@ -53,11 +53,19 @@ public class SequenceData
                 public float RelativeTimeAfter = 0f;
             }
 
+            public class Animation
+            {
+                public string AnimationName;
+                public bool LoopForever = false;
+                public int LoopTimes = 1;
+                public float DelayTime = 0.05f;
+            }
+
             public float RelativeTimeAfter;
             public string ObjectName;
-            public string Animation;
             public string SoundPath;
-            public List<Movement> Movements;
+            public List<Animation> Animations = new List<Animation>();
+            public List<Movement> Movements = new List<Movement>();
         }
     }
 
