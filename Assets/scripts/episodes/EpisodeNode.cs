@@ -19,6 +19,7 @@ public class SequenceData
         public string Name;
         public string ObjectType;
         public string ModelPath;
+        public bool FlipX = false;
         public Vector3 StartingPosition = Vector3.zero;
         public Vector3 StartingScale = Vector3.one;
     }
@@ -37,6 +38,12 @@ public class SequenceData
         public float RelativeTimeAfter = 0f;
     }
 
+    public class SortingOrder
+    {
+        public string SortAbove;
+        public string SortBelow;
+    }
+
     public class Animation
     {
         public string AnimationName;
@@ -44,11 +51,15 @@ public class SequenceData
         public int LoopTimes = 1;
         public float DelayTime = 0.05f;
     }
+
     public class Accompaniment
     {
-        public float RelativeTimeAfter;
         public string ObjectName;
+        public float RelativeTimeAfter;
+
+        //potential actions
         public string SoundPath;
+        public SortingOrder SortingOrder;
         public List<Animation> Animations = new List<Animation>();
         public List<Movement> Movements = new List<Movement>();
     }

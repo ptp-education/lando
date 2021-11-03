@@ -48,10 +48,10 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
             }
         }
 
-        flow.setOnCompleteHandler(t =>
+        flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
         {
             startLoopCallback_();
-        });
+        })));
         flow.play();
     }
 
@@ -94,6 +94,25 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
                 })));
             }
 
+            if (accompaniment.SortingOrder != null)
+            {
+                int objectIndex = objects[accompaniment.ObjectName].GetSiblingIndex();
+                int newIndex = objectIndex;
+                if (accompaniment.SortingOrder.SortAbove != null && accompaniment.SortingOrder.SortAbove.Length > 0)
+                {
+                    newIndex = objects[accompaniment.SortingOrder.SortAbove].GetSiblingIndex() + 1;
+                }
+                if (accompaniment.SortingOrder.SortBelow != null && accompaniment.SortingOrder.SortBelow.Length > 0)
+                {
+                    newIndex = objects[accompaniment.SortingOrder.SortBelow].GetSiblingIndex() - 1;
+                }
+
+                flow.insert(startTime, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                {
+                    character.SetSiblingIndex(newIndex);
+                })));
+            }
+
             foreach(SequenceData.Movement m in accompaniment.Movements)
             {
                 float movementTime = startTime + m.RelativeTimeAfter;
@@ -114,6 +133,14 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
     public override void Loop()
     {
         base.Loop();
+
+        foreach(Transform t in objects.Values)
+        {
+            Character c = t.GetComponent<Character>();
+            if (c == null) continue;
+            c.StartLooping();
+        }
+        
         foreach(SequenceData.LoopInstructions loopInstruction in sequenceData.Looping)
         {
             Transform character = objects[loopInstruction.ObjectName];
@@ -177,6 +204,7 @@ public class SequenceEpisodeNodeObject : EpisodeNodeObject
                 }
 
                 SkeletonGraphic sa = GameObject.Instantiate<SkeletonGraphic>(l);
+                sa.Skeleton.ScaleX = Mathf.Abs(sa.Skeleton.ScaleX) * (obj.FlipX ? -1 : 1);
                 createdObject = sa.GetComponent<Transform>();
             } else
             {

@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1752513551893176354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6592978235596109015}
+  - component: {fileID: 3061602060271820296}
+  m_Layer: 5
+  m_Name: store_idle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6592978235596109015
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752513551893176354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4151961671109234837}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3061602060271820296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752513551893176354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  SequenceData: "{\n  \"TemplateId\": \"comic_store_behind_counter\"\n}"
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 2260004131349052327}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4767769707189432402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4151961671109234837}
+  - component: {fileID: 5389077337881326637}
+  m_Layer: 5
+  m_Name: Snowed In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4151961671109234837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4767769707189432402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6592978235596109015}
+  - {fileID: 1633433831716277224}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5389077337881326637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4767769707189432402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 3061602060271820296}
+  TemplatesData: "{\n  \"Data\": [\n    {\n      \"Key\": \"comic_store_behind_counter\",\n     
+    \"Objects\": [\n        {\n          \"Name\": \"bg\",\n          \"ObjectType\":
+    \"Image\",\n          \"ModelPath\": \"episodes/snowed_in/comic_bg\",\n         
+    \"StartingPosition\": {\n            \"x\": 0,\n            \"y\": 0,\n           
+    \"z\": 0\n          },\n          \"StartingScale\": {\n            \"x\": 1,\n           
+    \"y\": 1,\n            \"z\": 1\n          }\n        },\n        {\n         
+    \"Name\": \"Lando\",\n          \"ObjectType\": \"Spine\",\n          \"ModelPath\":
+    \"characters/spineboy\",\n          \"FlipX\": true,\n          \"StartingPosition\":
+    {\n            \"x\": 503,\n            \"y\": -445,\n            \"z\": 0\n         
+    },\n          \"StartingScale\": {\n            \"x\": 1,\n            \"y\":
+    1,\n            \"z\": 1\n          }\n        },\n        {\n          \"Name\":
+    \"Didi\",\n          \"ObjectType\": \"Spine\",\n          \"ModelPath\": \"characters/spineboy\",\n         
+    \"StartingPosition\": {\n            \"x\": -99,\n            \"y\": -445,\n           
+    \"z\": 0\n          },\n          \"StartingScale\": {\n            \"x\": 1,\n           
+    \"y\": 1,\n            \"z\": 1\n          }\n        },\n        {\n         
+    \"Name\": \"fg\",\n          \"ObjectType\": \"Image\",\n          \"ModelPath\":
+    \"episodes/snowed_in/comic_fg\",\n          \"StartingPosition\": {\n           
+    \"x\": 221,\n            \"y\": -351,\n            \"z\": 0\n          },\n         
+    \"StartingScale\": {\n            \"x\": 1,\n            \"y\": 1,\n           
+    \"z\": 1\n          }\n        }\n      ]\n    }\n  ]\n}"
+--- !u!1 &8620237912388110947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633433831716277224}
+  - component: {fileID: 2260004131349052327}
+  m_Layer: 5
+  m_Name: store_coming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1633433831716277224
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8620237912388110947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4151961671109234837}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2260004131349052327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8620237912388110947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  SequenceData: "{\n  \"TemplateId\": \"comic_store_behind_counter\",\n  \"SequenceSteps\":
+    [\n    {\n      \"SequenceType\": \"Wait\",\n      \"RelativeTimeAfter\": 0,\n     
+    \"Duration\": 3,\n      \"Accompaniments\": [\n        {\n          \"RelativeTimeAfter\":
+    0,\n          \"ObjectName\": \"Lando\",\n          \"Animations\": [\n           
+    {\n              \"AnimationName\": \"walk\",\n              \"LoopForever\":
+    true\n            }\n          ],\n          \"Movements\": [\n            {\n             
+    \"MovementType\": \"Move\",\n              \"Duration\": 0.4,\n             
+    \"Target\": {\n                \"x\": 778,\n                \"y\": -500,\n               
+    \"z\": 0\n              }\n            },\n            {\n              \"MovementType\":
+    \"Move\",\n              \"RelativeTimeAfter\": 0.4,\n              \"Duration\":
+    0.4,\n              \"Target\": {\n                \"x\": 583,\n               
+    \"y\": -531,\n                \"z\": 0\n              }\n            }\n         
+    ]\n        },\n        {\n          \"RelativeTimeAfter\": 0,\n          \"ObjectName\":
+    \"Didi\",\n          \"Animations\": [\n            {\n              \"AnimationName\":
+    \"walk\",\n              \"LoopForever\": true\n            }\n          ],\n         
+    \"Movements\": [\n            {\n              \"MovementType\": \"Move\",\n             
+    \"Duration\": 0.8,\n              \"Target\": {\n                \"x\": -586,\n               
+    \"y\": -531,\n                \"z\": 0\n              }\n            }\n         
+    ]\n        },\n        {\n          \"RelativeTimeAfter\": 0.4,\n          \"ObjectName\":
+    \"Lando\",\n          \"SortingOrder\": {\n            \"SortAbove\": \"fg\"\n         
+    }\n        }\n      ]\n    }\n  ]\n}"
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  Prompt: 
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
