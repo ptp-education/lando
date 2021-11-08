@@ -28,6 +28,7 @@ public class PrompterManager : GameManager
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
     private bool endOfClass_ = false;
+    private List<string> previousNodes_ = new List<string>();
 
     private void Start()
     {
@@ -106,6 +107,12 @@ public class PrompterManager : GameManager
 
             buttonCounter++;
         }
+        if (previousNodes_.Count >= 2)
+        {
+            PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
+            b.transform.SetParent(buttonsHome_.transform, true);
+            b.Init("Undo", "", "u", UndoButtonPressed);
+        }
     }
 
     private void HideButtons()
@@ -139,6 +146,12 @@ public class PrompterManager : GameManager
         UpdateEpisodeNode(linkedEpisode);
     }
 
+    private void UndoButtonPressed(string notNeeded)
+    {
+        previousNodes_.RemoveAt(previousNodes_.Count - 1);
+        UpdateEpisodeNode(previousNodes_[previousNodes_.Count - 1]);
+    }
+
     public void OnEpisodeLoadClick()
     {
         UpdateEpisode(episodesDropdown_.options[episodesDropdown_.value].text);
@@ -156,6 +169,7 @@ public class PrompterManager : GameManager
 
         endOfClass_ = false;
         teleprompter_.text = "";
+        previousNodes_ = new List<string>();
         HideButtons();
     }
 
@@ -176,7 +190,13 @@ public class PrompterManager : GameManager
     {
         base.NewNodeEventInternal(n);
 
+        string currentAction = GameManager.NODE_PREFIX + currentNode_.name;
+        if (previousNodes_.Count == 0 || !string.Equals(previousNodes_[previousNodes_.Count - 1], currentAction))
+        {
+            previousNodes_.Add(GameManager.NODE_PREFIX + currentNode_.name);
+        }
+
         SpawnButtons();
-        DisableButtons();
+        //DisableButtons();
     }
 }

@@ -113,7 +113,6 @@ public class GameManager : MonoBehaviour
         {
             NewActionInternal(a.Substring(ACTION_PREFIX.Length));
         }
-        
     }
 
     protected virtual void NewActionInternal(string a)

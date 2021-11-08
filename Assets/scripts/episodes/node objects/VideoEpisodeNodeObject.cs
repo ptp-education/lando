@@ -36,6 +36,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     {
         base.Play();
 
+        videoPlayerMain_.Stop();
         StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_));
     }
 
@@ -43,6 +44,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     {
         base.Loop();
 
+        videoPlayerLoop_.Stop();
         StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_));
     }
 

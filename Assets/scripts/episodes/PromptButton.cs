@@ -21,13 +21,7 @@ public class PromptButton : MonoBehaviour
         callback_ = callback;
         commandKey_ = commandKey;
 
-        if (action != null && action.Length > 0)
-        {
-            command_.text = commandKey_;
-        } else
-        {
-            command_.text = "";
-        }
+        command_.text = commandKey_;
     }
 
     public void OnClick()
