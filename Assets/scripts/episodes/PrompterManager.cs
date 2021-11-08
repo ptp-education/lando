@@ -114,6 +114,22 @@ public class PrompterManager : GameManager
         }
     }
 
+    private void DisableButtons()
+    {
+        foreach(Button b in buttonsHome_.GetComponentsInChildren<Button>())
+        {
+            b.interactable = false;
+        }
+    }
+
+    private void EnableButtons()
+    {
+        foreach (Button b in buttonsHome_.GetComponentsInChildren<Button>())
+        {
+            b.interactable = true;
+        }
+    }
+
     private void CommandButtonPressed(string linkedEpisode)
     {
         UpdateEpisodeNode(linkedEpisode);
@@ -140,6 +156,8 @@ public class PrompterManager : GameManager
         {
             teleprompter_.text = currentNode_.Prompt;
             ResetTeleprompterPosition();
+        } else if (string.Equals(s, NodeState.Looping)) {
+            EnableButtons();
         }
     }
 
@@ -148,5 +166,6 @@ public class PrompterManager : GameManager
         base.NewNodeEventInternal(n);
 
         SpawnButtons();
+        DisableButtons();
     }
 }
