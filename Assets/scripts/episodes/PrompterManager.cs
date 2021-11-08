@@ -159,7 +159,7 @@ public class PrompterManager : GameManager
 
     private string FormatText(string text)
     {
-        string r = text.Replace("TA", "<b>TA</b>");
+        string r = text.Replace("TA", "<b><color=\"yellow\">TA</color></b>");
         return r;
     }
 
