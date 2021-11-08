@@ -27,6 +27,8 @@ public class PrompterManager : GameManager
 
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
+    private bool endOfClass_ = false;
+
     private void Start()
     {
         TextAsset fileNamesAsset = Resources.Load<TextAsset>("all_episodes");
@@ -74,15 +76,15 @@ public class PrompterManager : GameManager
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
             b.transform.SetParent(buttonsHome_.transform, true);
-            b.Init("Next", GameManager.NODE_PREFIX + currentNode_.NextNode.name, buttonCounter, CommandButtonPressed);
-
-            buttonCounter++;
+            b.Init("Next", GameManager.NODE_PREFIX + currentNode_.NextNode.name, "n", CommandButtonPressed);
         } else if (currentNode_.NextNode == null && currentNode_.Options.Count == 0)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
             b.transform.SetParent(buttonsHome_.transform, true);
-            b.Init("End of class", "", -1, CommandButtonPressed);
+            b.Init("End of class", "", "1", CommandButtonPressed);
             b.GetComponent<Button>().interactable = false;
+
+            endOfClass_ = true;
 
             return;
         }
@@ -100,7 +102,7 @@ public class PrompterManager : GameManager
                 action = GameManager.ACTION_PREFIX + currentNode_.Options[i].Prompt;
             }
 
-            b.Init(currentNode_.Options[i].Prompt, action, buttonCounter, CommandButtonPressed);
+            b.Init(currentNode_.Options[i].Prompt, action, buttonCounter.ToString(), CommandButtonPressed);
 
             buttonCounter++;
         }
@@ -124,6 +126,8 @@ public class PrompterManager : GameManager
 
     private void EnableButtons()
     {
+        if (endOfClass_) return;
+
         foreach (Button b in buttonsHome_.GetComponentsInChildren<Button>())
         {
             b.interactable = true;
@@ -150,6 +154,7 @@ public class PrompterManager : GameManager
     {
         base.NewEpisodeEventInternal(e);
 
+        endOfClass_ = false;
         teleprompter_.text = "";
         HideButtons();
     }

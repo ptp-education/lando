@@ -12,18 +12,18 @@ public class PromptButton : MonoBehaviour
 
     private string action_;
     private ActionDetected callback_;
-    private int index_;
+    private string commandKey_;
 
-    public void Init(string prompt, string action, int index, ActionDetected callback)
+    public void Init(string prompt, string action, string commandKey, ActionDetected callback)
     {
         prompt_.text = prompt;
         action_ = action;
         callback_ = callback;
-        index_ = index;
+        commandKey_ = commandKey;
 
         if (action != null && action.Length > 0)
         {
-            command_.text = (index_).ToString();
+            command_.text = commandKey_;
         } else
         {
             command_.text = "";
@@ -38,7 +38,7 @@ public class PromptButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown((index_).ToString()))
+        if (Input.GetKeyDown(commandKey_))
         {
             callback_.Invoke(action_);
         }
