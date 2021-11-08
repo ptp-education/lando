@@ -140,6 +140,12 @@ public class PrompterManager : GameManager
         UpdateEpisode(episodesDropdown_.options[episodesDropdown_.value].text);
     }
 
+    private string FormatText(string text)
+    {
+        string r = text.Replace("TA", "<b>TA</b>");
+        return r;
+    }
+
     protected override void NewEpisodeEventInternal(Episode e)
     {
         base.NewEpisodeEventInternal(e);
@@ -154,7 +160,7 @@ public class PrompterManager : GameManager
 
         if (string.Equals(s, NodeState.Playing))
         {
-            teleprompter_.text = currentNode_.Prompt;
+            teleprompter_.text = FormatText(currentNode_.Prompt);
             ResetTeleprompterPosition();
         } else if (string.Equals(s, NodeState.Looping)) {
             EnableButtons();
