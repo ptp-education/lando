@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
         Sharer
     }
 
+    public static bool PromptActive = false;
+
     protected Episode episode_;
     protected EpisodeNode currentNode_;
     protected string currentNodeState_;

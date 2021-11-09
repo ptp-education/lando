@@ -75,6 +75,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     {
         RenderTexture rt1 = new RenderTexture(1920, 1080, 0);
         player.GetComponent<VideoPlayer>().targetTexture = rt1;
+        player.SetDirectAudioMute(0, GameManager.PromptActive);
 
         RawImage ri = player.GetComponentInChildren<RawImage>();
         ri.texture = rt1;

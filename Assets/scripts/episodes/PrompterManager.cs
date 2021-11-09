@@ -32,6 +32,8 @@ public class PrompterManager : GameManager
 
     private void Start()
     {
+        GameManager.PromptActive = true;
+
         TextAsset fileNamesAsset = Resources.Load<TextAsset>("all_episodes");
         EpisodesFileInfo efi = JsonUtility.FromJson<EpisodesFileInfo>(fileNamesAsset.text);
         foreach (string fileName in efi.episodeNames)
