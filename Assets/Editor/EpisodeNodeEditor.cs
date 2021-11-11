@@ -42,10 +42,10 @@ public class EpisodeNodeEditor : Editor
                 myTarget.VideoLoopFilePath = videoLoopPath;
             }
 
-            EditorGUILayout.LabelField(string.Format("Video ({0})", videoPath));
+            EditorGUILayout.LabelField(string.Format("Video ({0})", myTarget.VideoFilePath));
             myTarget.Video = EditorGUILayout.ObjectField(myTarget.Video, typeof(Object), false);
 
-            EditorGUILayout.LabelField(string.Format("Video Loop ({0})", videoLoopPath));
+            EditorGUILayout.LabelField(string.Format("Video Loop ({0})", myTarget.VideoLoopFilePath));
             myTarget.VideoLoop = EditorGUILayout.ObjectField(myTarget.VideoLoop, typeof(Object), false);
         } else if (myTarget.Type == EpisodeNode.EpisodeType.Prefab)
         {

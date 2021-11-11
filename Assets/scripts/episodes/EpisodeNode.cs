@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using System;
+using System.Linq;
 using Newtonsoft.Json;
 
 public class EpisodeNode : MonoBehaviour
@@ -20,8 +21,6 @@ public class EpisodeNode : MonoBehaviour
     {
         [SerializeField] public string Prompt;
         [SerializeField] public EpisodeNode Node;
-        [SerializeField] public string Test;
-        [SerializeField] public Option NewOption;
     }
 
     public EpisodeType Type;
@@ -69,4 +68,31 @@ public class EpisodeNode : MonoBehaviour
     }
 
     public NodeVisualizer VisualNode;
+
+    public static EpisodeNode CreateNewNode(Transform parent, string videoFile, string loopFile, string script, List<EpisodeSpawnData.NodeOption> options)
+    {
+        GameObject obj = new GameObject();
+        obj.AddComponent<EpisodeNode>();
+        EpisodeNode newNode = obj.GetComponent<EpisodeNode>();
+
+        newNode.transform.SetParent(parent);
+
+        string[] split = videoFile.Split('/');
+        newNode.name = split[split.Length - 1];
+
+        newNode.VideoFilePath = videoFile;
+        newNode.VideoLoopFilePath = loopFile;
+        newNode.Prompt = script;
+
+        if (options != null)
+        {
+            foreach(EpisodeSpawnData.NodeOption o in options) {
+                Option newOption = new Option();
+                newOption.Prompt = o.Name;
+                newOption.Node = CreateNewNode(parent, o.Node.VideoFile, o.Node.LoopVideoFile, o.Node.Script, null);
+                newNode.Options.Add(newOption);
+            }
+        }
+        return newNode;
+    }
 }
