@@ -80,6 +80,11 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         RawImage ri = player.GetComponentInChildren<RawImage>();
         ri.texture = rt1;
 
+        if(GameManager.PromptActive)
+        {
+            ri.transform.localScale = new Vector3(-1, 1, 1);
+        }
+
         string[] split = path.Split('/');
         player.gameObject.name = split[split.Length - 1];
         player.playOnAwake = false;
