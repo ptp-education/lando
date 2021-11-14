@@ -18,7 +18,7 @@ public class EpisodeSpawnEditor : EditorWindow
     void OnGUI()
     {
         // The actual window code goes here
-        GUILayout.Label("Episode JSON");
+        GUILayout.Label("Input Episode Code");
         NodeData = GUILayout.TextArea(NodeData, TextAreaStyle, GUILayout.Width(400), GUILayout.MinHeight(100), GUILayout.MaxHeight(400));
         if (GUILayout.Button("Generate"))
         {
@@ -38,10 +38,13 @@ public class EpisodeSpawnEditor : EditorWindow
 
         List<EpisodeNode> newNodes = new List<EpisodeNode>();
 
+        //create nodes
         foreach (EpisodeSpawnData.Node n in d.Nodes)
         {
             newNodes.Add(EpisodeNode.CreateNewNode(episode.transform, d.VideoRoot + n.VideoFile + ".mp4", d.VideoRoot + n.LoopVideoFile + ".mp4", n.Script, n.Options));
         }
+
+        //link nodes
         for (int i = 0; i < newNodes.Count; i++)
         {
             EpisodeNode nextNode = null;
@@ -64,6 +67,33 @@ public class EpisodeSpawnEditor : EditorWindow
         }
 
         episode.StartingNode = newNodes[0];
+
+        //rename duplicates
+        List<EpisodeNode> expandedNewNodes = new List<EpisodeNode>();
+        foreach(EpisodeNode n in newNodes)
+        {
+            expandedNewNodes.Add(n);
+            if (n.Options.Count > 0)
+            {
+                foreach(EpisodeNode.Option o in n.Options)
+                {
+                    expandedNewNodes.Add(o.Node);
+                }
+            }
+        }
+
+        Dictionary<string, int> nameIds = new Dictionary<string, int>();
+        foreach(EpisodeNode n in expandedNewNodes)
+        {
+            if (nameIds.ContainsKey(n.name))
+            {
+                nameIds[n.name]++;
+                n.name = n.name + "-" + nameIds[n.name];
+            } else
+            {
+                nameIds[n.name] = 0;
+            }
+        }
     }
 
     static EpisodeSpawnData ConvertData(string input)
