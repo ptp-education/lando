@@ -16,6 +16,8 @@ public class PromptButton : MonoBehaviour
 
     public void Init(string prompt, string action, string commandKey, ActionDetected callback)
     {
+        transform.localScale = Vector3.one;
+
         prompt_.text = prompt;
         action_ = action;
         callback_ = callback;
