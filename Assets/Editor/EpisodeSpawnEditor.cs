@@ -123,6 +123,8 @@ public class EpisodeSpawnEditor : EditorWindow
         return data;
     }
 
+
+
     static List<string> BreakMainSections(string input)
     {
         var list = new List<string>();
@@ -138,7 +140,8 @@ public class EpisodeSpawnEditor : EditorWindow
             //r2 matches the second header
             Match secondMatch = Regex.Match(value, r2, RegexOptions.RightToLeft);
             //remove the second header from value
-            value = value.Replace(secondMatch.Value, "");
+            //value = value.Replace(secondMatch.Value, "");
+            value = value.Substring(0, value.LastIndexOf(secondMatch.Value));
             //add the second header back to input text start
             input = secondMatch.Value + input;
             list.Add(value);
@@ -213,6 +216,7 @@ public class EpisodeSpawnEditor : EditorWindow
                     n.Options.Add(optionNode);
                 }
             }
+
 
             //cleaning script \t and \n
             n.Script = n.Script.Replace("\t", "");
