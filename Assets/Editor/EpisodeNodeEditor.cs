@@ -29,9 +29,12 @@ public class EpisodeNodeEditor : Editor
             audioPath = AssetDatabase.GetAssetPath(backgroundLoop.objectReferenceValue.GetInstanceID());
             audioPath = audioPath.Substring(kResourcesPrefix.Length).StripFileExtension();
             myTarget.BgLoopPath = audioPath;
+        } else
+        {
+            myTarget.BgLoopPath = null;
         }
 
-        EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", audioPath));
+        EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", myTarget.BgLoopPath == null ? "null" : myTarget.BgLoopPath));
         myTarget.BgLoop = (Object)EditorGUILayout.ObjectField(myTarget.BgLoop, typeof(Object), false);
 
         EditorGUILayout.BeginHorizontal();
