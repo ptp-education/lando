@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 
     public const string ACTION_PREFIX = "action:";
     public const string NODE_PREFIX = "node:";
+    public const string RADIO_COMMAND = "radio";
 
     public enum Type
     {
@@ -79,16 +80,20 @@ public class GameManager : MonoBehaviour
         {
             Destroy(episode_.gameObject);
         }
-        Episode o = Resources.Load<Episode>("prefabs/episodes/" + e);
+        Episode o = Resources.Load<Episode>(e);
         episode_ = Instantiate<Episode>(o);
 
         NewEpisodeEventInternal(episode_);
+
+        AudioPlayer.StopRadio();
     }
 
     protected virtual void NewEpisodeEventInternal(Episode e)
     {
         episode_ = e;
         UpdateEpisodeNode(NODE_PREFIX + e.StartingNode.gameObject.name);
+
+        AudioPlayer.StopRadio();
     }
 
     public void NewNodeAction(string a)
@@ -113,7 +118,14 @@ public class GameManager : MonoBehaviour
             }
         } else if (a.Contains(ACTION_PREFIX))
         {
-            NewActionInternal(a.Substring(ACTION_PREFIX.Length));
+            string command = a.Substring(ACTION_PREFIX.Length);
+            if (string.Equals(RADIO_COMMAND, command))
+            {
+                AudioPlayer.StartRadio();
+            } else
+            {
+                NewActionInternal(a.Substring(ACTION_PREFIX.Length));
+            }
         }
     }
 

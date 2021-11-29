@@ -11,29 +11,49 @@ public class BeforePlay
     static private void OnBeforeSceneLoadRuntimeMethod()
     {
         SaveEpisodes();
+        SaveSongs();
     }
 
-    static private void SaveEpisodes()
+    private static void SaveEpisodes()
     {
 #if UNITY_EDITOR
-        string path = Application.dataPath + "/Resources/prefabs/episodes/";
+        string prefix = "prefabs/episodes/";
+        string path = Application.dataPath + "/Resources/" + prefix;
 
         string[] fileNames = Directory.GetFiles(path)
             .Where(x => Path.GetExtension(x) != ".meta").ToArray();
 
         for (int i = 0; i < fileNames.Length; i++)
         {
-            string[] split = fileNames[i].Split('/');
-            string fn = split[split.Length - 1];
-
-            string[] split2 = fn.Split('.');
-            fileNames[i] = split2[0];
+            fileNames[i] = prefix + fileNames[i].StripExtensions();
         }
-
-        EpisodesFileInfo fileInfo = new EpisodesFileInfo(fileNames);
+        StringsFile fileInfo = new StringsFile(fileNames);
         string fileInfoJson = JsonUtility.ToJson(fileInfo);
 
         File.WriteAllText(Application.dataPath + "/Resources/all_episodes.txt", fileInfoJson);
+
+        AssetDatabase.Refresh();
+#endif
+    }
+
+    private static void SaveSongs()
+    {
+#if UNITY_EDITOR
+        string prefix = "audio/songs/";
+        string path = Application.dataPath + "/Resources/" + prefix;
+
+        string[] fileNames = Directory.GetFiles(path)
+            .Where(x => Path.GetExtension(x) != ".meta").ToArray();
+
+        for (int i = 0; i < fileNames.Length; i++)
+        {
+            fileNames[i] = prefix + fileNames[i].StripExtensions();
+        }
+
+        StringsFile fileInfo = new StringsFile(fileNames);
+        string fileInfoJson = JsonUtility.ToJson(fileInfo);
+
+        File.WriteAllText(Application.dataPath + "/Resources/all_songs.txt", fileInfoJson);
 
         AssetDatabase.Refresh();
 #endif

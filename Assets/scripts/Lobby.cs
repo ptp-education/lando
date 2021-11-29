@@ -53,12 +53,6 @@ public class Lobby : MonoBehaviourPunCallbacks
         }
     }
 
-    public void OnClick()
-    {
-        Episode o = Resources.Load<Episode>("prefabs/episodes/" + "test_episode");
-        Instantiate<Episode>(o);
-    }
-
     #region callbacks
 
     public override void OnConnectedToMaster()

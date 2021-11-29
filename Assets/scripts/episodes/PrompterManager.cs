@@ -4,18 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-using ExitGames.Client.Photon;
-using Photon.Realtime;
-using Photon.Pun;
-using Photon;
-
-public class EpisodesFileInfo
+public class StringsFile
 {
-    public string[] episodeNames;
+    public string[] FileNames;
 
-    public EpisodesFileInfo(string[] fileNames)
+    public StringsFile(string[] fileNames)
     {
-        this.episodeNames = fileNames;
+        this.FileNames = fileNames;
     }
 }
 
@@ -29,19 +24,22 @@ public class PrompterManager : GameManager
 
     private bool endOfClass_ = false;
     private List<string> previousNodes_ = new List<string>();
+    private List<string> episodePaths = new List<string>();
 
     private void Start()
     {
         GameManager.PromptActive = true;
 
         TextAsset fileNamesAsset = Resources.Load<TextAsset>("all_episodes");
-        EpisodesFileInfo efi = JsonUtility.FromJson<EpisodesFileInfo>(fileNamesAsset.text);
-        foreach (string fileName in efi.episodeNames)
+        StringsFile sf = JsonUtility.FromJson<StringsFile>(fileNamesAsset.text);
+        foreach (string fileName in sf.FileNames)
         {
             Dropdown.OptionData od = new Dropdown.OptionData();
-            od.text = fileName;
+            od.text = fileName.StripExtensions();
             episodesDropdown_.options.Add(od);
         }
+
+        episodePaths = new List<string>(sf.FileNames);
     }
 
     private void Update()
@@ -156,7 +154,7 @@ public class PrompterManager : GameManager
 
     public void OnEpisodeLoadClick()
     {
-        UpdateEpisode(episodesDropdown_.options[episodesDropdown_.value].text);
+        UpdateEpisode(episodePaths[episodesDropdown_.value]);
     }
 
     private string FormatText(string text)

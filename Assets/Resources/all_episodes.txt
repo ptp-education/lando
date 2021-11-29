@@ -1,1 +1,1 @@
-{"episodeNames":["Coding Dance","Save the Honbees","Snowed In","template","test"]}
+{"FileNames":["prefabs/episodes/Coding Dance","prefabs/episodes/Save the Honbees","prefabs/episodes/Snowed In","prefabs/episodes/template","prefabs/episodes/test"]}
