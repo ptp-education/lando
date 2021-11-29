@@ -17,4 +17,15 @@ public static class StringExtensions
     {
         return text.Substring("Resources/".Length);
     }
+
+    public static string StripFileExtension(this string text)
+    {
+        string[] split = text.Split('.');
+        string ret = "";
+        for(int i = 0; i < split.Length - 1; i++)
+        {
+            ret += split[i];
+        }
+        return ret;
+    }
 }

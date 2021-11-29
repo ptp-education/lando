@@ -23,6 +23,11 @@ public class EpisodeNode : MonoBehaviour
         [SerializeField] public EpisodeNode Node;
     }
 
+    public string BgLoopPath;
+    public UnityEngine.Object BgLoop;
+    public bool StopBgLoopAtSequence = false;   //generally expecting a new Bg Loop to appear and play after loop
+    public bool StartBgLoopAfterSequence = false; //used when we want to change a loop after sequence ends
+
     public EpisodeType Type;
     public UnityEngine.Object Video;
     public string VideoFilePath;

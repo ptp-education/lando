@@ -119,13 +119,7 @@ public class GameManager : MonoBehaviour
         } else if (a.Contains(ACTION_PREFIX))
         {
             string command = a.Substring(ACTION_PREFIX.Length);
-            if (string.Equals(RADIO_COMMAND, command))
-            {
-                AudioPlayer.StartRadio();
-            } else
-            {
-                NewActionInternal(a.Substring(ACTION_PREFIX.Length));
-            }
+            NewActionInternal(command);
         }
     }
 

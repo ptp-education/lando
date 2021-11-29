@@ -60,24 +60,25 @@ public class AudioPlayer : MonoBehaviour
         audioSource.loop = true;
         audioSource.volume = 1f;
 
-        loopingSources_[layer] = new KeyValuePair<string, AudioSource>(path, audioSource);
-
         if (loopingSources_.ContainsKey(layer) && loopingSources_[layer].Value != null)
         {
             audioSource.volume = 0f;
 
-            AudioSource previousClip = loopingSources_[layer].Value;
+            AudioSource previousSource = loopingSources_[layer].Value;
 
             GoTweenFlow f = new GoTweenFlow();
-            f.insert(0f, new GoTween(Instance, 0.2f, new GoTweenConfig().floatProp("volume", 0f)));
-            f.insert(0.1f, new GoTween(Instance, 0.2f, new GoTweenConfig().floatProp("volume", 1f)));
-            f.insert(1f, new GoTween(Instance, 0.01f, new GoTweenConfig().onComplete(t =>
+            f.insert(0f, new GoTween(previousSource, 0.2f, new GoTweenConfig().floatProp("volume", 0f)));
+            f.insert(0.1f, new GoTween(audioSource, 0.2f, new GoTweenConfig().floatProp("volume", 1f)));
+            f.insert(0f, new GoTween(Instance, 1f, new GoTweenConfig().onComplete(t =>
             {
-                Destroy(previousClip.gameObject);
+                Destroy(previousSource.gameObject);
             })));
 
             f.play();
         }
+
+        loopingSources_[layer] = new KeyValuePair<string, AudioSource>(path, audioSource);
+
         return audioSource;
     }
 
@@ -89,7 +90,8 @@ public class AudioPlayer : MonoBehaviour
 
         if (s != null)
         {
-            Go.to(Instance, 0.2f, new GoTweenConfig().floatProp("volume", 0f).onComplete(t =>
+            Go.to(s, 0.2f, new GoTweenConfig().floatProp("volume", 0f));
+            Go.to(Instance, 0.25f, new GoTweenConfig().onComplete(t =>
             {
                 Destroy(s.gameObject);
             }));

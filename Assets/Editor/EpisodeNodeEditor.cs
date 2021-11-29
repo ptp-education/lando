@@ -7,21 +7,44 @@ using UnityEditor;
 public class EpisodeNodeEditor : Editor
 {
     const string kAssetPrefix = "Assets/StreamingAssets/";
-    const string kImageAssetPrefix = "Assets/Resources/";
+    const string kResourcesPrefix = "Assets/Resources/";
     const string kEpisodeObjectPrefix = "Assets/Resources/prefabs/episode_objects/";
     const string kPrefabSuffix = ".prefab";
 
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+        SerializedProperty backgroundLoop = serializedObject.FindProperty("BgLoop");
         SerializedProperty video = serializedObject.FindProperty("Video");
         SerializedProperty videoLoop = serializedObject.FindProperty("VideoLoop");
         SerializedProperty image = serializedObject.FindProperty("Image");
         SerializedProperty imageLoop = serializedObject.FindProperty("ImageLoop");
         SerializedProperty prefab = serializedObject.FindProperty("Prefab");
 
-        EditorGUILayout.LabelField(string.Format("Node Type"));
         EpisodeNode myTarget = (EpisodeNode)target;
+
+        string audioPath = "null";
+        if (backgroundLoop.objectReferenceValue != null)
+        {
+            audioPath = AssetDatabase.GetAssetPath(backgroundLoop.objectReferenceValue.GetInstanceID());
+            audioPath = audioPath.Substring(kResourcesPrefix.Length).StripFileExtension();
+            myTarget.BgLoopPath = audioPath;
+        }
+
+        EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", audioPath));
+        myTarget.BgLoop = (Object)EditorGUILayout.ObjectField(myTarget.BgLoop, typeof(Object), false);
+
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField(string.Format("Stop Background Loop at Sequence"));
+        myTarget.StopBgLoopAtSequence = EditorGUILayout.Toggle(myTarget.StopBgLoopAtSequence);
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField(string.Format("Start Loop after Sequence"));
+        myTarget.StartBgLoopAfterSequence = EditorGUILayout.Toggle(myTarget.StartBgLoopAfterSequence);
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.LabelField(string.Format("Node Type"));
 
         myTarget.Type = (EpisodeNode.EpisodeType)EditorGUILayout.EnumPopup(myTarget.Type);
 
@@ -64,7 +87,7 @@ public class EpisodeNodeEditor : Editor
             if (image.objectReferenceValue != null)
             {
                 imagePath = AssetDatabase.GetAssetPath(image.objectReferenceValue.GetInstanceID());
-                imagePath = imagePath.Substring(kImageAssetPrefix.Length);
+                imagePath = imagePath.Substring(kResourcesPrefix.Length);
                 imagePath = StripExtension(imagePath);
                 myTarget.ImageFilePath = imagePath;
             }
@@ -72,7 +95,7 @@ public class EpisodeNodeEditor : Editor
             if (imageLoop.objectReferenceValue != null)
             {
                 imageLoopPath = AssetDatabase.GetAssetPath(imageLoop.objectReferenceValue.GetInstanceID());
-                imageLoopPath = imageLoopPath.Substring(kImageAssetPrefix.Length);
+                imageLoopPath = imageLoopPath.Substring(kResourcesPrefix.Length);
                 imageLoopPath = StripExtension(imageLoopPath);
                 myTarget.ImageLoopFilePath = imageLoopPath;
             }

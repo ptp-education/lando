@@ -22,6 +22,7 @@ public class ShareManager : GameManager
         UpdateNodeState(NodeState.Playing);
 
         StartCoroutine(UpdateEpisodeNode(internalState_, currentNode_));
+        HandleBackgroundLoop(internalState_, currentNode_);
     }
 
     protected override void NewEpisodeEventInternal(Episode e)
@@ -39,7 +40,34 @@ public class ShareManager : GameManager
     {
         base.NewActionInternal(a);
 
+        if (string.Equals(RADIO_COMMAND, a))
+        {
+            AudioPlayer.StartRadio();
+        }
+
         cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
+    }
+
+    private void HandleBackgroundLoop(string nodeState, EpisodeNode node)
+    {
+        if (node.BgLoopPath != null && node.BgLoopPath.Length > 0)
+        {
+            if (node.StartBgLoopAfterSequence)
+            {
+                if (string.Equals(nodeState, NodeState.Looping) && node.StartBgLoopAfterSequence)
+                {
+                    AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
+                }
+            }
+            else
+            {
+                AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
+            }
+        }
+        if (string.Equals(nodeState, NodeState.Playing) && node.StopBgLoopAtSequence)
+        {
+            AudioPlayer.StopLoop(AudioPlayer.kMain);
+        }
     }
 
     private IEnumerator UpdateEpisodeNode(string nodeState, EpisodeNode currentNode)
@@ -159,6 +187,7 @@ public class ShareManager : GameManager
             UpdateNodeState(NodeState.Looping);
 
             StartCoroutine(UpdateEpisodeNode(internalState_, currentNode_));
+            HandleBackgroundLoop(internalState_, currentNode_);
         }
     }
 
