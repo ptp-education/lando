@@ -12,8 +12,7 @@ public class EpisodeNode : MonoBehaviour
     {
         Video,
         Prefab,
-        Image,
-        Sequence
+        Image
     }
 
     [Serializable]
