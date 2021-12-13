@@ -623,7 +623,7 @@ GameObject:
   - component: {fileID: 6933808759946708494}
   - component: {fileID: 1400254693298102966}
   m_Layer: 5
-  m_Name: Save the Honbees
+  m_Name: Lego 1 - Save the Honbees
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
