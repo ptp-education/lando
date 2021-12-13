@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 namespace Lando.Networking
 {
+	[RequireComponent(typeof(LanNetworkDiscovery))]
 	public class NetworkingMediator : MonoBehaviour
 	{
 		public enum eCurrentNetworkingBackend
@@ -32,13 +33,24 @@ namespace Lando.Networking
 		private AppSettings m_localServerSettings = default;
 		private eCurrentConnectionStatus m_currentConnectionStatus = eCurrentConnectionStatus.None;
 		private eCurrentNetworkingBackend m_currentNetworkingBackend = eCurrentNetworkingBackend.NotSet;
+		private LanNetworkDiscovery m_lanDiscovery = default;
 		[SerializeField]
 		private Toggle m_toggleManualBackend = default;
 		#endregion
 
 		#region PUBLIC_API
+		/// <summary>
+		/// Event callback for when the <see cref="eCurrentNetworkingBackend"/> is actually changed
+		/// </summary>
 		public event UnityAction<eCurrentNetworkingBackend> OnNetworkingBackendChanging = default;
+		/// <summary>
+		/// Event callback for when the <see cref="eCurrentConnectionStatus"/> is changed, which should be during switching of <see cref="CurrentNetworkingBackend"/>
+		/// </summary>
 		public event UnityAction<eCurrentConnectionStatus> OnNetworkingBackendStatusChanged = default;
+		
+		/// <summary>
+		/// Get the current <see cref="eCurrentConnectionStatus"/> for the active <see cref="CurrentNetworkingBackend"/>
+		/// </summary>
 		public eCurrentConnectionStatus CurrentConnectionStatus
 		{
 			private set
@@ -55,6 +67,9 @@ namespace Lando.Networking
 			}
 		}
 
+		/// <summary>
+		/// Get the current <see cref="eCurrentNetworkingBackend"/> that is active.
+		/// </summary>
 		public eCurrentNetworkingBackend CurrentNetworkingBackend
 		{
 			private set
@@ -71,6 +86,9 @@ namespace Lando.Networking
 			}
 		}
 
+		/// <summary>
+		/// Singleton Accessor
+		/// </summary>
 		public static NetworkingMediator Instance
 		{
 			get
@@ -93,32 +111,62 @@ namespace Lando.Networking
 				Destroy(gameObject);
 			}
 			Instance = this;
-			m_localServerSettings = new AppSettings
-			{
-				Server = "ws://192.168.0.18",
-				Port = 9090,
-				Protocol = ExitGames.Client.Photon.ConnectionProtocol.WebSocket,
-				UseNameServer = false,
-				AuthMode = AuthModeOption.Auth,
-				FixedRegion = null,
-				AppVersion = "local"
-			};
+
+			m_lanDiscovery = GetComponent<LanNetworkDiscovery>();
+			m_lanDiscovery.OnNetworkDiscovered += Discovery_OnNetworkDiscovered;
 
 			SwitchConnection(m_toggleManualBackend.isOn);
 			m_toggleManualBackend.onValueChanged.AddListener(SwitchConnection);
+			m_toggleManualBackend.interactable = false;
 			StartCoroutine(HeartBeat());
 
 			DontDestroyOnLoad(gameObject);
 		}
 
+		private void OnDestroy()
+		{
+			m_lanDiscovery.OnNetworkDiscovered -= Discovery_OnNetworkDiscovered;
+			m_toggleManualBackend.onValueChanged.RemoveAllListeners();
+		}
+
+		/// <summary>
+		/// Callback received when the <see cref="LanNetworkDiscovery"/> component detects the Photon server.
+		/// </summary>
+		private void Discovery_OnNetworkDiscovered()
+		{
+			m_localServerSettings = new AppSettings
+			{
+				Server = $"{m_lanDiscovery.ServerAddress}",
+				Port = 5055,
+				Protocol = ExitGames.Client.Photon.ConnectionProtocol.Udp,
+				EnableProtocolFallback = true,
+				UseNameServer = false,
+				AuthMode = AuthModeOption.Auth,
+				FixedRegion = null,
+				AppVersion = "local"
+			};
+			m_toggleManualBackend.interactable = true;
+		}
+
+		/// <summary>
+		/// Toggles the connection between the different <see cref="eCurrentNetworkingBackend"/>
+		/// </summary>
+		/// <param name="isOn"></param>
 		public void SwitchConnection(bool isOn)
 		{
 			m_backend = m_toggleManualBackend.isOn ? eCurrentNetworkingBackend.CloudHosted : eCurrentNetworkingBackend.SelfHosted;
 			m_toggleManualBackend.GetComponentInChildren<Text>().text = m_backend == eCurrentNetworkingBackend.SelfHosted ? "LAN" : "WAN";
 			CurrentConnectionStatus = eCurrentConnectionStatus.Disconnecting;
+			Debug.Log("SwitchConnection " + isOn);
 		}
 
 
+		/// <summary>
+		/// Checks every <see cref="HEART_BEAT_DELAY"/> seconds for a change in the requested <see cref="eCurrentNetworkingBackend"/>.
+		/// If a change was requested, it attempts to connect to that backend using either default connection settings or the <see cref="m_localServerSettings"/>
+		/// if they have been set by the <see cref="LanNetworkDiscovery"/>
+		/// </summary>
+		/// <returns></returns>
 		private IEnumerator HeartBeat()
 		{
 			CurrentConnectionStatus = eCurrentConnectionStatus.Connecting;
@@ -164,7 +212,8 @@ namespace Lando.Networking
 							}
 							break;
 						case eCurrentNetworkingBackend.SelfHosted:
-							if (!PhotonNetwork.ConnectToMaster(m_localServerSettings.Server, m_localServerSettings.Port, m_localServerSettings.AppIdRealtime))
+							if (string.IsNullOrEmpty(m_lanDiscovery.ServerAddress) || 
+								!PhotonNetwork.ConnectToMaster(m_localServerSettings.Server, m_localServerSettings.Port, m_localServerSettings.AppIdRealtime))
 							{
 								LogAssert($"Cloud hosting was not accessible and we failed to connect to the local server");
 							} else

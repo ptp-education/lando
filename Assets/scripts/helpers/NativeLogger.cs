@@ -1,9 +1,8 @@
-#if !UNITY_EDITOR
+#if UNITY_WEBGL && !UNITY_EDITOR
 #define USE_NATIVE
-#endif
 using System.Runtime.InteropServices;
+#endif
 using UnityEngine;
-
 namespace Lando.Logger
 {
 	public class NativeLogger : MonoBehaviour
