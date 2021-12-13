@@ -12,7 +12,8 @@ public class EpisodeNode : MonoBehaviour
     {
         Video,
         Prefab,
-        Image
+        Image,
+        LoopWithOptions
     }
 
     [Serializable]
@@ -22,21 +23,52 @@ public class EpisodeNode : MonoBehaviour
         [SerializeField] public EpisodeNode Node;
     }
 
+    [Serializable]
+    public class VideoOption
+    {
+        [SerializeField] public string Key;
+        [SerializeField] public List<Video> Videos = new List<Video>();
+
+        [Serializable]
+        public class Video
+        {
+            [SerializeField] public UnityEngine.Object VideoObject;
+            [SerializeField] public string VideoPath;
+        }
+    }
+
+    //BG AUDIO OPTIONS
     public string BgLoopPath;
     public UnityEngine.Object BgLoop;
     public bool StopBgLoopAtSequence = false;   //generally expecting a new Bg Loop to appear and play after loop
     public bool StartBgLoopAfterSequence = false; //used when we want to change a loop after sequence ends
 
     public EpisodeType Type;
+
+    //VIDEO OPTIONS
     public UnityEngine.Object Video;
     public string VideoFilePath;
     public UnityEngine.Object VideoLoop;
     public string VideoLoopFilePath;
 
+    //IMAGE OPTIONS
     public UnityEngine.Object Image;
     public string ImageFilePath;
     public UnityEngine.Object ImageLoop;
     public string ImageLoopFilePath;
+
+    //PREFAB OPTIONS
+    public GameObject Prefab;
+    public string PrefabPath;
+
+    //LOOPWITHOPTIONS OPTIONS
+    //uses VideoLoop and VideoLoopFilePath
+    public List<VideoOption> VideoOptions = new List<VideoOption>();
+
+    //ALL OPTIONS
+    public string Prompt;
+    public EpisodeNode NextNode;
+    public List<Option> Options = new List<Option>();
 
     public Episode Episode
     {
@@ -45,15 +77,6 @@ public class EpisodeNode : MonoBehaviour
             return GetComponentInParent<Episode>();
         }
     }
-
-    public GameObject Prefab;
-    public string PrefabPath;
-
-    public string Prompt;
-
-    public EpisodeNode NextNode;
-
-    public List<Option> Options = new List<Option>();
 
     public override string ToString()
     {
@@ -65,6 +88,12 @@ public class EpisodeNode : MonoBehaviour
                 break;
             case EpisodeType.Prefab:
                 contentName = PrefabPath;
+                break;
+            case EpisodeType.Image:
+                contentName = ImageFilePath;
+                break;
+            case EpisodeType.LoopWithOptions:
+                contentName = VideoLoopFilePath;
                 break;
         }
 

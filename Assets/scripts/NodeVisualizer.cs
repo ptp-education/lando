@@ -37,6 +37,10 @@ public class NodeVisualizer : MonoBehaviour
                 type_.text = "Type: Image";
                 path_.text = node.ImageFilePath + " / " + node.ImageLoopFilePath;
                 break;
+            case EpisodeNode.EpisodeType.LoopWithOptions:
+                type_.text = "Type: LoopWithOptions";
+                path_.text = node.VideoLoopFilePath;
+                break;
         }
 
         for (int i = -1; i < node.Options.Count; i++)
