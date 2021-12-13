@@ -24,6 +24,16 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
+    public class PrefabSpawnObject
+    {
+        [SerializeField] public float TimeStamp;
+        [SerializeField] public Vector3 Position;
+        [SerializeField] public UnityEngine.Object Object;
+        [SerializeField] public string Path;
+        public bool Spawned = false;
+    }
+
+    [Serializable]
     public class VideoOption
     {
         [SerializeField] public string Key;
@@ -67,6 +77,7 @@ public class EpisodeNode : MonoBehaviour
 
     //ALL OPTIONS
     public string Prompt;
+    public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public EpisodeNode NextNode;
     public List<Option> Options = new List<Option>();
 

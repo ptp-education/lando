@@ -142,6 +142,17 @@ public class EpisodeNodeEditor : Editor
         EditorGUILayout.LabelField("Prompt");
         myTarget.Prompt = EditorGUILayout.TextArea(myTarget.Prompt, TextAreaStyle, GUILayout.Width(400), GUILayout.MinHeight(100), GUILayout.MaxHeight(400));
 
+        EditorGUILayout.LabelField("Spawn Prefabs");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("PrefabSpawnObjects"));
+        foreach (EpisodeNode.PrefabSpawnObject o in myTarget.PrefabSpawnObjects)
+        {
+            if (o.Object != null)
+            {
+                o.Path = AssetDatabase.GetAssetPath(o.Object);
+                o.Path = o.Path.Substring(kEpisodeObjectPrefix.Length, o.Path.Length - (kEpisodeObjectPrefix.Length + kPrefabSuffix.Length));
+            }
+        }
+
         EditorGUILayout.LabelField("Next Node - leave empty if last episode");
         myTarget.NextNode = (EpisodeNode)EditorGUILayout.ObjectField(myTarget.NextNode, typeof(EpisodeNode), true);
 
