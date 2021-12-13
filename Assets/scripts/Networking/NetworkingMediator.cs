@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 namespace Lando.Networking
 {
+	[RequireComponent(typeof(LanNetworkDiscovery))]
 	public class NetworkingMediator : MonoBehaviour
 	{
 		public enum eCurrentNetworkingBackend
@@ -32,6 +33,7 @@ namespace Lando.Networking
 		private AppSettings m_localServerSettings = default;
 		private eCurrentConnectionStatus m_currentConnectionStatus = eCurrentConnectionStatus.None;
 		private eCurrentNetworkingBackend m_currentNetworkingBackend = eCurrentNetworkingBackend.NotSet;
+		private LanNetworkDiscovery m_lanDiscovery = default;
 		[SerializeField]
 		private Toggle m_toggleManualBackend = default;
 		#endregion
@@ -93,22 +95,37 @@ namespace Lando.Networking
 				Destroy(gameObject);
 			}
 			Instance = this;
+
+			m_lanDiscovery = GetComponent<LanNetworkDiscovery>();
+			m_lanDiscovery.OnNetworkDiscovered += Discovery_OnNetworkDiscovered;
+
+			SwitchConnection(m_toggleManualBackend.isOn);
+			m_toggleManualBackend.onValueChanged.AddListener(SwitchConnection);
+			m_toggleManualBackend.interactable = false;
+			StartCoroutine(HeartBeat());
+
+			DontDestroyOnLoad(gameObject);
+		}
+
+		private void OnDestroy()
+		{
+			m_lanDiscovery.OnNetworkDiscovered -= Discovery_OnNetworkDiscovered;
+		}
+
+		private void Discovery_OnNetworkDiscovered()
+		{
 			m_localServerSettings = new AppSettings
 			{
-				Server = "ws://192.168.0.18",
-				Port = 9090,
-				Protocol = ExitGames.Client.Photon.ConnectionProtocol.WebSocket,
+				Server = $"{m_lanDiscovery.ServerAddress}",
+				Port = 5055,
+				Protocol = ExitGames.Client.Photon.ConnectionProtocol.Udp,
+				EnableProtocolFallback = true,
 				UseNameServer = false,
 				AuthMode = AuthModeOption.Auth,
 				FixedRegion = null,
 				AppVersion = "local"
 			};
-
-			SwitchConnection(m_toggleManualBackend.isOn);
-			m_toggleManualBackend.onValueChanged.AddListener(SwitchConnection);
-			StartCoroutine(HeartBeat());
-
-			DontDestroyOnLoad(gameObject);
+			m_toggleManualBackend.interactable = true;
 		}
 
 		public void SwitchConnection(bool isOn)
@@ -164,7 +181,8 @@ namespace Lando.Networking
 							}
 							break;
 						case eCurrentNetworkingBackend.SelfHosted:
-							if (!PhotonNetwork.ConnectToMaster(m_localServerSettings.Server, m_localServerSettings.Port, m_localServerSettings.AppIdRealtime))
+							if (string.IsNullOrEmpty(m_lanDiscovery.ServerAddress) == false && 
+								!PhotonNetwork.ConnectToMaster(m_localServerSettings.Server, m_localServerSettings.Port, m_localServerSettings.AppIdRealtime))
 							{
 								LogAssert($"Cloud hosting was not accessible and we failed to connect to the local server");
 							} else
