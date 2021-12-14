@@ -193,6 +193,6 @@ public class ShareManager : GameManager
 
     private string Key(EpisodeNode node)
     {
-        return node.PrefabPath + node.VideoFilePath + node.VideoLoopFilePath + node.ImageFilePath + node.ImageLoopFilePath;
+        return node.ToString();
     }
 }
