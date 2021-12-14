@@ -14,9 +14,6 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
     {
         base.Init(gameManager, node, callback);
 
-        //go immediately to loop as the base video
-        startLoopCallback_.Invoke();
-
         videoPlayerLoop_.isLooping = true;
     }
 
@@ -40,6 +37,8 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
     public override void Play()
     {
         base.Play();
+
+        Loop();
 
         //Play is handled separately through actions. We go immediately to loop.
     }
