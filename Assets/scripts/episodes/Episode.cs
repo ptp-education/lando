@@ -129,10 +129,10 @@ public class Episode : MonoBehaviour
                 Vector3 nodePosition = o.Node.VisualNode.transform.position;
                 if (o.Node == node)
                 {
-                    Vector3 p = node.VisualNode.PositionForOption(o.Prompt);
+                    Vector3 p = node.VisualNode.PositionForOption(o.Action);
                     nodePosition = new Vector3(p.x, p.y - 20f, p.z);
                 }
-                DrawLine(node.VisualNode.PositionForOption(o.Prompt), SlightlyRandomize(nodePosition), node.transform);
+                DrawLine(node.VisualNode.PositionForOption(o.Action), SlightlyRandomize(nodePosition), node.transform);
                 DrawLines(o.Node);
             }
         }
