@@ -1,11 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using ExitGames.Client.Photon;
-using Photon.Realtime;
-using Photon.Pun;
-using Photon;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +32,7 @@ public class GameManager : MonoBehaviour
     private string cachedEpisode_ = "";
     private string cachedNode_ = "";
     private string cachedState_ = "";
+    private string cachedAction_ = "";
 
     private NetworkManager networkManager_;
 
@@ -68,11 +65,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void SendNewAction(string a)
+    {
+        if (networkManager_ != null)
+        {
+            networkManager_.SendNewEpisodeNodeMessage(ACTION_PREFIX + a);
+        }
+    }
+
     public void NewEpisodeEvent(string e)
     {
         cachedEpisode_ = e;
         cachedNode_ = "";
         cachedState_ = "";
+        cachedAction_ = "";
 
         Storage.ResetStorage();
 
@@ -107,6 +113,7 @@ public class GameManager : MonoBehaviour
 
             cachedNode_ = node;
             cachedState_ = "";
+            cachedAction_ = "";
 
             foreach (EpisodeNode n in episode_.AllNodes)
             {
@@ -119,7 +126,14 @@ public class GameManager : MonoBehaviour
         } else if (a.Contains(ACTION_PREFIX))
         {
             string command = a.Substring(ACTION_PREFIX.Length);
-            NewActionInternal(command);
+
+            if (!string.Equals(command, cachedAction_))
+            {
+                string strippedActions = StripAndRunActions(command);
+                NewActionInternal(strippedActions);
+            }
+
+            cachedAction_ = command;
         }
     }
 
@@ -148,5 +162,33 @@ public class GameManager : MonoBehaviour
     {
         currentNodeState_ = s;
         //stub
+    }
+
+    private string StripAndRunActions(string action)
+    {
+        const string kRunCommand = "-run";
+
+        string ret = action;
+
+        while (ret.IndexOf(kRunCommand) != -1)
+        {
+            int runStart = ret.IndexOf(kRunCommand);
+            int firstQuote = ret.IndexOf('\"', runStart);
+            if (firstQuote == -1)
+            {
+                Debug.LogWarning("No matching action for argument -run: " + action);
+                return ret;
+            }
+            int secondQuote = ret.IndexOf('\"', firstQuote + 1);
+            if (secondQuote == -1)
+            {
+                Debug.LogWarning("Did not close quotations for " + action);
+                return ret;
+            }
+
+            SendNewAction(ret.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
+            ret = ret.Remove(runStart, secondQuote - runStart + 1);
+        }
+        return ret;
     }
 }
