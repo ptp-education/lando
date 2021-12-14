@@ -113,7 +113,7 @@ public class EpisodeNode : MonoBehaviour
 
     public NodeVisualizer VisualNode;
 
-    public static EpisodeNode CreateNewNode(Transform parent, string videoFile, string loopFile, string script, List<EpisodeSpawnData.NodeOption> options)
+    public static EpisodeNode CreateNewNode(Transform parent, string videoRoot, string videoExtension, string videoFile, string loopFile, string script, List<EpisodeSpawnData.NodeOption> options)
     {
         GameObject obj = new GameObject();
         obj.AddComponent<EpisodeNode>();
@@ -124,8 +124,8 @@ public class EpisodeNode : MonoBehaviour
         string[] split = videoFile.Split('/');
         newNode.name = split[split.Length - 1];
 
-        newNode.VideoFilePath = videoFile;
-        newNode.VideoLoopFilePath = loopFile;
+        newNode.VideoFilePath = videoRoot + videoFile + videoExtension;
+        newNode.VideoLoopFilePath = videoRoot + loopFile + videoExtension;
         newNode.Prompt = script;
 
         if (options != null)
@@ -133,7 +133,7 @@ public class EpisodeNode : MonoBehaviour
             foreach(EpisodeSpawnData.NodeOption o in options) {
                 Option newOption = new Option();
                 newOption.Prompt = o.Name;
-                newOption.Node = CreateNewNode(parent, o.Node.VideoFile, o.Node.LoopVideoFile, o.Node.Script, null);
+                newOption.Node = CreateNewNode(parent, videoRoot, videoExtension, o.Node.VideoFile, o.Node.LoopVideoFile, o.Node.Script, null);
                 newNode.Options.Add(newOption);
             }
         }
