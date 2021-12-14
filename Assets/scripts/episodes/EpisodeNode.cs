@@ -19,7 +19,8 @@ public class EpisodeNode : MonoBehaviour
     [Serializable]
     public class Option
     {
-        [SerializeField] public string Prompt;
+        [SerializeField] public string Name;
+        [SerializeField] public string Action;
         [SerializeField] public EpisodeNode Node;
     }
 
@@ -30,7 +31,7 @@ public class EpisodeNode : MonoBehaviour
         [SerializeField] public Vector3 Position;
         [SerializeField] public UnityEngine.Object Object;
         [SerializeField] public string Path;
-        public bool Spawned = false;
+        [HideInInspector] public bool Spawned = false;
     }
 
     [Serializable]
@@ -132,7 +133,7 @@ public class EpisodeNode : MonoBehaviour
         {
             foreach(EpisodeSpawnData.NodeOption o in options) {
                 Option newOption = new Option();
-                newOption.Prompt = o.Name;
+                newOption.Action = o.Name;
                 newOption.Node = CreateNewNode(parent, videoRoot, videoExtension, o.Node.VideoFile, o.Node.LoopVideoFile, o.Node.Script, null);
                 newNode.Options.Add(newOption);
             }

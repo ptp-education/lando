@@ -51,7 +51,7 @@ public class NodeVisualizer : MonoBehaviour
                 optionText = "Next";
             } else
             {
-                optionText = node.Options[i].Prompt;
+                optionText = node.Options[i].Action;
             }
             TextMeshPro tm = GameObject.Instantiate<TextMeshPro>(optionCopy_);
             tm.gameObject.SetActive(true);

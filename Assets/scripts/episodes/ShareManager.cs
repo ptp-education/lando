@@ -100,6 +100,7 @@ public class ShareManager : GameManager
         yield return 0;
 
         bool isLooping = string.Equals(nodeState, GameManager.NodeState.Looping);
+        
         if (isLooping)
         {
             cachedNodeObjects_[Key(currentNode)].Loop();
