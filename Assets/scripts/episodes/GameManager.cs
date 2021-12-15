@@ -127,11 +127,9 @@ public class GameManager : MonoBehaviour
         {
             string command = a.Substring(ACTION_PREFIX.Length);
 
-            if (!string.Equals(command, cachedAction_))
-            {
-                string strippedActions = StripAndRunActions(command);
-                NewActionInternal(strippedActions);
-            }
+            //currently not checking for cached action so that action can repeat
+            string strippedActions = StripAndRunActions(command);
+            NewActionInternal(strippedActions);
 
             cachedAction_ = command;
         }
@@ -186,7 +184,9 @@ public class GameManager : MonoBehaviour
                 return ret;
             }
 
-            SendNewAction(ret.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
+            bool isPromptManager = this.GetComponent<PrompterManager>() == null ? false : true;
+
+            NewActionInternal(ret.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
             ret = ret.Remove(runStart, secondQuote - runStart + 1);
         }
         return ret;
