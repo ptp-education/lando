@@ -45,7 +45,10 @@ public class ShareManager : GameManager
             AudioPlayer.StartRadio();
         }
 
-        cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
+        if (!cachedNodeObjects_[Key(currentNode_)].Hidden)
+        {
+            cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
+        }
     }
 
     private void HandleBackgroundLoop(string nodeState, EpisodeNode node)

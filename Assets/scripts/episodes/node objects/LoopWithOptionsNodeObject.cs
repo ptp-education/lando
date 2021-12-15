@@ -9,6 +9,7 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
     [SerializeField] private VideoPlayer videoPlayerLoop_;
 
     private List<VideoPlayer> listOfVideos_ = new List<VideoPlayer>();
+    private Dictionary<string, int> lastRandomIndex_ = new Dictionary<string, int>();
 
     public override void Init(GameManager gameManager, EpisodeNode node, ReadyToStartLoop callback)
     {
@@ -156,6 +157,16 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
             if (random)
             {
                 index = Random.Range(0, vo.Videos.Count);
+
+                if (lastRandomIndex_.ContainsKey(videoKey))
+                {
+                    int previousIndex = lastRandomIndex_[videoKey];
+                    while (previousIndex != index && vo.Videos.Count > 1)
+                    {
+                        index = Random.Range(0, vo.Videos.Count);
+                    }
+                }
+                
             }
             videoPath = vo.Videos[index].VideoPath;
 

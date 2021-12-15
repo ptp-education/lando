@@ -14,6 +14,17 @@ public class EpisodeNodeObject : MonoBehaviour
     private List<SpawnedObject> spawnedPrefabs_ = new List<SpawnedObject>();
     private float timer_ = 0f;
 
+    private RectTransform spawnedObjectParent_;
+
+    private void Start()
+    {
+        GameObject o = new GameObject("spawned prefab parent");
+        o.AddComponent<RectTransform>();
+        o.transform.SetParent(transform);
+        spawnedObjectParent_ = o.GetComponent<RectTransform>();
+        spawnedObjectParent_.localScale = Vector3.one;
+    }
+
     public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
     {
         gameManager_ = manager;
@@ -31,13 +42,16 @@ public class EpisodeNodeObject : MonoBehaviour
         transform.localScale = Vector3.zero;
     }
 
+    public virtual bool Hidden
+    {
+        get
+        {
+            return transform.localScale == Vector3.zero;
+        }
+    }
+
     public virtual void Play()
     {
-        foreach (SpawnedObject o in spawnedPrefabs_)
-        {
-            o.Reset();
-        }
-
         transform.localScale = Vector3.one;
     }
 
@@ -61,7 +75,12 @@ public class EpisodeNodeObject : MonoBehaviour
 
     private void Update()
     {
-        timer_ += Time.deltaTime;
+        spawnedObjectParent_.SetAsLastSibling();
+
+        if (!Hidden)
+        {
+            timer_ += Time.deltaTime;
+        }
         //dont forget to remove objects and reset timer
 
         foreach(EpisodeNode.PrefabSpawnObject o in episodeNode_.PrefabSpawnObjects)
@@ -78,11 +97,10 @@ public class EpisodeNodeObject : MonoBehaviour
 
     private void SpawnObject(EpisodeNode.PrefabSpawnObject prefabSpawnObject)
     {
-        RawImage ri = GetComponentInChildren<RawImage>();
-
         SpawnedObject o = Resources.Load<SpawnedObject>(ShareManager.PREFAB_PATH + prefabSpawnObject.Path);
-        SpawnedObject spawnedObject = GameObject.Instantiate<SpawnedObject>(o, ri.transform);
+        SpawnedObject spawnedObject = GameObject.Instantiate<SpawnedObject>(o, spawnedObjectParent_);
         spawnedObject.transform.localPosition = prefabSpawnObject.Position;
+        spawnedObject.Init(gameManager_);
 
         spawnedPrefabs_.Add(spawnedObject);
 

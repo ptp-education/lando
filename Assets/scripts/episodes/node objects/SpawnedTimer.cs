@@ -14,9 +14,9 @@ public class SpawnedTimer : SpawnedObject
     {
         base.ReceivedAction(action);
 
-        if (action.Contains("minute timer"))
+        if (action.Contains("-minute-timer"))
         {
-            string[] split = action.Split(' ');
+            string[] split = action.Split('-');
 
             int minutes = -1;
             int.TryParse(split[0], out minutes);
@@ -49,7 +49,7 @@ public class SpawnedTimer : SpawnedObject
             int minutes = 0;
 
             int timeLeft = (int)limit_ - (int)timer_;
-            while (timeLeft > 60f)
+            while (timeLeft > 59f)
             {
                 minutes++;
                 timeLeft -= 60;
