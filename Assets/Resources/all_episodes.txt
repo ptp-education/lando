@@ -1,1 +1,1 @@
-{"FileNames":["prefabs/episodes/Coding Dance","prefabs/episodes/Icebreaker - Categories","prefabs/episodes/Lego 1 - Save the Honbees","prefabs/episodes/Snowed In","prefabs/episodes/bookworm_1","prefabs/episodes/template"]}
+{"FileNames":["prefabs/episodes/Coding Dance","prefabs/episodes/Icebreaker - Categories","prefabs/episodes/Lego 1","prefabs/episodes/bookworm_1","prefabs/episodes/template","prefabs/episodes/tester"]}
