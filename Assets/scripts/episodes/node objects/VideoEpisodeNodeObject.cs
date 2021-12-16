@@ -71,7 +71,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         PreloadVideo(videoPlayerLoop_, node.VideoLoopFilePath);
     }
 
-    private void PreloadVideo(VideoPlayer player, string path)
+    static public void PreloadVideo(VideoPlayer player, string path)
     {
         RenderTexture rt1 = new RenderTexture(1920, 1080, 0);
         player.GetComponent<VideoPlayer>().targetTexture = rt1;

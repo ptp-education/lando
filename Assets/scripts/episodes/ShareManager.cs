@@ -45,7 +45,10 @@ public class ShareManager : GameManager
             AudioPlayer.StartRadio();
         }
 
-        cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
+        if (!cachedNodeObjects_[Key(currentNode_)].Hidden)
+        {
+            cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
+        }
     }
 
     private void HandleBackgroundLoop(string nodeState, EpisodeNode node)
@@ -100,6 +103,7 @@ public class ShareManager : GameManager
         yield return 0;
 
         bool isLooping = string.Equals(nodeState, GameManager.NodeState.Looping);
+        
         if (isLooping)
         {
             cachedNodeObjects_[Key(currentNode)].Loop();
@@ -162,8 +166,8 @@ public class ShareManager : GameManager
                 prefabPath += "image_player";
                 break;
 
-            case EpisodeNode.EpisodeType.Sequence:
-                prefabPath += "sequence_player";
+            case EpisodeNode.EpisodeType.LoopWithOptions:
+                prefabPath += "loopwithoptions_player";
                 break;
         }
         EpisodeNodeObject o = Resources.Load<EpisodeNodeObject>(prefabPath);
@@ -193,6 +197,6 @@ public class ShareManager : GameManager
 
     private string Key(EpisodeNode node)
     {
-        return node.PrefabPath + node.VideoFilePath + node.VideoLoopFilePath + node.ImageFilePath + node.ImageLoopFilePath;
+        return node.ToString();
     }
 }

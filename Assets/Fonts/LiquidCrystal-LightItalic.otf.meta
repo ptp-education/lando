@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: a6896d35987dc4a06a470a5a95be090d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Liquid Crystal
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 56db9e21a220f413d9a70ebb2a3cb983, type: 3}
+  - {fileID: 12800000, guid: 028365562e72144a588dbf04640b2f6c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

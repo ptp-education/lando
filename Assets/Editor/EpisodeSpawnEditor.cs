@@ -41,7 +41,7 @@ public class EpisodeSpawnEditor : EditorWindow
         //create nodes
         foreach (EpisodeSpawnData.Node n in d.Nodes)
         {
-            newNodes.Add(EpisodeNode.CreateNewNode(episode.transform, d.VideoRoot + n.VideoFile + ".mp4", d.VideoRoot + n.LoopVideoFile + ".mp4", n.Script, n.Options));
+            newNodes.Add(EpisodeNode.CreateNewNode(episode.transform, d.VideoRoot, ".mp4", n.VideoFile, n.LoopVideoFile, n.Script, n.Options));
         }
 
         //link nodes
@@ -129,8 +129,10 @@ public class EpisodeSpawnEditor : EditorWindow
     {
         var list = new List<string>();
 
-        var r1 = @"(([A-Z]+\d+\-\d+\.\d+).*\n){2}((.|\n)*?)(([A-Z]+\d+\-\d+\.\d+).*\n){2}";
-        var r2 = @"(([A-Z]+\d+\-\d+\.\d+).*\n){2}";
+        //var r1 = @"(([A-Z]+\d+\-\d+\.\d+).*\n){2}((.|\n)*?)(([A-Z]+\d+\-\d+\.\d+).*\n){2}";
+        //var r2 = @"(([A-Z]+\d+\-\d+\.\d+).*\n){2}";
+        var r1 = @"(([A-Z]+\d+\-[A-Z0-9]+).*\n){2}((.|\n)*?)(([A-Z]+\d+\-[A-Z0-9]+).*\n){2}";
+        var r2 = @"(([A-Z]+\d+\-[A-Z0-9]+).*\n){2}";
 
         while (Regex.Match(input, r1).Success)
         {
@@ -157,7 +159,8 @@ public class EpisodeSpawnEditor : EditorWindow
     {
         var list = new List<EpisodeSpawnData.Node>();
         var mainSections = BreakMainSections(input);
-        var r1 = @"(([A-Z]+\d+\-\d+\.\d+).*\n){2}";
+        //var r1 = @"(([A-Z]+\d+\-\d+\.\d+).*\n){2}";
+        var r1 = @"(([A-Z]+\d+\-[A-Z0-9]+).*\n){2}";
 
         foreach (var section in mainSections)
         {
@@ -184,36 +187,54 @@ public class EpisodeSpawnEditor : EditorWindow
             var r1 = @"\t{2,}.*\n((\t{2,}[A-Z]+\d+\-\d+\.\d+\n).*)(.|\n)*?<\/i>";
             var r2 = @"\t{2,}.*\n((\t{2,}[A-Z]+\d+\-\d+\.\d+\n).*)(.|\n)*?";
 
-            if (Regex.IsMatch(n.Script, r1))
+            var r3 = @"(\t{2,}.*\n(\t{3}(([A-Z]+\d+\-[A-Za-z0-9]+).*\n)){2}(\t{4}.*\n){2})";
+            var r4 = @"\t{2,}.*\n(\t{3}(([A-Z]+\d+\-[A-Za-z0-9]+).*\n)){2}";
+
+
+            if (CreateOptions(r1, r2) == false)
             {
-                foreach (Match m in Regex.Matches(n.Script, r1))
+                CreateOptions(r3, r4);
+            }
+
+            bool CreateOptions(string rr1, string rr2)
+            {
+                if (Regex.IsMatch(n.Script, rr1))
                 {
-                    var optionNode = new EpisodeSpawnData.NodeOption();
+                    foreach (Match m in Regex.Matches(n.Script, rr1))
+                    {
+                        var optionNode = new EpisodeSpawnData.NodeOption();
 
-                    //store matched value into <value>
-                    var value = m.Value;
-                    //remove matched content from node script
-                    n.Script = n.Script.Replace(value, "");
-                    //identify header
-                    var header = Regex.Match(value, r2).Value;
-                    //remove header from value
-                    value = value.Replace(header, "");
-                    //split header to get VideoFile and LoopVideoFile values
-                    var headerSplit = header.Split('\n');
-                    optionNode.Name = headerSplit[0].Replace("\t", "");
-                    optionNode.Node = new EpisodeSpawnData.Node();
-                    optionNode.Node.VideoFile = headerSplit[1].Replace("\t", "");
-                    optionNode.Node.LoopVideoFile = headerSplit[2].Replace("\t", "");
-                    //set the option node script to remaining text value and cleaning script
-                    optionNode.Node.Script = value.Replace("\t", "");
+                        //store matched value into <value>
+                        var value = m.Value;
+                        //remove matched content from node script
+                        n.Script = n.Script.Replace(value, "");
+                        //identify header
+                        var header = Regex.Match(value, rr2).Value;
+                        //remove header from value
+                        value = value.Replace(header, "");
+                        //split header to get VideoFile and LoopVideoFile values
+                        var headerSplit = header.Split('\n');
+                        optionNode.Name = headerSplit[0].Replace("\t", "");
+                        optionNode.Node = new EpisodeSpawnData.Node();
+                        optionNode.Node.VideoFile = headerSplit[1].Replace("\t", "");
+                        optionNode.Node.LoopVideoFile = headerSplit[2].Replace("\t", "");
+                        //set the option node script to remaining text value and cleaning script
+                        optionNode.Node.Script = value.Replace("\t", "");
 
-                    if (optionNode.Node.Script.StartsWith("\n"))
-                        optionNode.Node.Script = optionNode.Node.Script.Remove(0, 1);
+                        if (optionNode.Node.Script.StartsWith("\n"))
+                            optionNode.Node.Script = optionNode.Node.Script.Remove(0, 1);
 
-                    if (optionNode.Node.Script.EndsWith("\n"))
-                        optionNode.Node.Script = optionNode.Node.Script.Remove(optionNode.Node.Script.Length - 1);
+                        if (optionNode.Node.Script.EndsWith("\n"))
+                            optionNode.Node.Script = optionNode.Node.Script.Remove(optionNode.Node.Script.Length - 1);
 
-                    n.Options.Add(optionNode);
+                        n.Options.Add(optionNode);
+                    }
+
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
 

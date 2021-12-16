@@ -100,10 +100,16 @@ public class PrompterManager : GameManager
                 action = GameManager.NODE_PREFIX + currentNode_.Options[i].Node.name;
             } else
             {
-                action = GameManager.ACTION_PREFIX + currentNode_.Options[i].Prompt;
+                action = GameManager.ACTION_PREFIX + currentNode_.Options[i].Action;
             }
 
-            b.Init(currentNode_.Options[i].Prompt, action, buttonCounter.ToString(), CommandButtonPressed);
+            string name = currentNode_.Options[i].Name;
+            if (name == null || name.Length == 0)
+            {
+                name = currentNode_.Options[i].Action;
+            }
+
+            b.Init(name, action, buttonCounter.ToString(), CommandButtonPressed);
 
             buttonCounter++;
         }

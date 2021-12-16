@@ -29,9 +29,12 @@ public class EpisodeNodeEditor : Editor
             audioPath = AssetDatabase.GetAssetPath(backgroundLoop.objectReferenceValue.GetInstanceID());
             audioPath = audioPath.Substring(kResourcesPrefix.Length).StripFileExtension();
             myTarget.BgLoopPath = audioPath;
+        } else
+        {
+            myTarget.BgLoopPath = null;
         }
 
-        EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", audioPath));
+        EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", myTarget.BgLoopPath == null ? "null" : myTarget.BgLoopPath));
         myTarget.BgLoop = (Object)EditorGUILayout.ObjectField(myTarget.BgLoop, typeof(Object), false);
 
         EditorGUILayout.BeginHorizontal();
@@ -70,7 +73,8 @@ public class EpisodeNodeEditor : Editor
 
             EditorGUILayout.LabelField(string.Format("Video Loop ({0})", myTarget.VideoLoopFilePath));
             myTarget.VideoLoop = EditorGUILayout.ObjectField(myTarget.VideoLoop, typeof(Object), false);
-        } else if (myTarget.Type == EpisodeNode.EpisodeType.Prefab)
+        }
+        else if (myTarget.Type == EpisodeNode.EpisodeType.Prefab)
         {
             string prefabPath = "empty";
             if (prefab.objectReferenceValue != null)
@@ -81,7 +85,8 @@ public class EpisodeNodeEditor : Editor
             }
             EditorGUILayout.LabelField(string.Format("Prefab ({0})", myTarget.PrefabPath));
             myTarget.Prefab = (GameObject)EditorGUILayout.ObjectField(myTarget.Prefab, typeof(GameObject), false);
-        } else if (myTarget.Type == EpisodeNode.EpisodeType.Image)
+        }
+        else if (myTarget.Type == EpisodeNode.EpisodeType.Image)
         {
             string imagePath = "empty";
             if (image.objectReferenceValue != null)
@@ -106,9 +111,47 @@ public class EpisodeNodeEditor : Editor
             EditorGUILayout.LabelField(string.Format("Video Loop ({0})", imageLoopPath));
             myTarget.ImageLoop = EditorGUILayout.ObjectField(myTarget.ImageLoop, typeof(Object), false);
         }
+        else if (myTarget.Type == EpisodeNode.EpisodeType.LoopWithOptions)
+        {
+            string videoLoopPath = "empty";
+            if (videoLoop.objectReferenceValue != null)
+            {
+                videoLoopPath = AssetDatabase.GetAssetPath(videoLoop.objectReferenceValue.GetInstanceID());
+                videoLoopPath = videoLoopPath.Substring(kAssetPrefix.Length);
+                myTarget.VideoLoopFilePath = videoLoopPath;
+            }
+
+            EditorGUILayout.LabelField(string.Format("Video Loop ({0})", myTarget.VideoLoopFilePath));
+            myTarget.VideoLoop = EditorGUILayout.ObjectField(myTarget.VideoLoop, typeof(Object), false);
+
+            EditorGUILayout.LabelField("Video options");
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("VideoOptions"));
+
+            foreach(EpisodeNode.VideoOption o in myTarget.VideoOptions)
+            {
+                foreach(EpisodeNode.VideoOption.Video v in o.Videos)
+                {
+                    if (v.VideoObject != null)
+                    {
+                        v.VideoPath = AssetDatabase.GetAssetPath(v.VideoObject).Substring(kAssetPrefix.Length);
+                    }
+                }
+            }
+        }
 
         EditorGUILayout.LabelField("Prompt");
         myTarget.Prompt = EditorGUILayout.TextArea(myTarget.Prompt, TextAreaStyle, GUILayout.Width(400), GUILayout.MinHeight(100), GUILayout.MaxHeight(400));
+
+        EditorGUILayout.LabelField("Spawn Prefabs");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("PrefabSpawnObjects"));
+        foreach (EpisodeNode.PrefabSpawnObject o in myTarget.PrefabSpawnObjects)
+        {
+            if (o.Object != null)
+            {
+                o.Path = AssetDatabase.GetAssetPath(o.Object);
+                o.Path = o.Path.Substring(kEpisodeObjectPrefix.Length, o.Path.Length - (kEpisodeObjectPrefix.Length + kPrefabSuffix.Length));
+            }
+        }
 
         EditorGUILayout.LabelField("Next Node - leave empty if last episode");
         myTarget.NextNode = (EpisodeNode)EditorGUILayout.ObjectField(myTarget.NextNode, typeof(EpisodeNode), true);

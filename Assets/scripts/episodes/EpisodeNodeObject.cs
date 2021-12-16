@@ -11,6 +11,20 @@ public class EpisodeNodeObject : MonoBehaviour
     protected EpisodeNode episodeNode_;
     protected GameManager gameManager_;
 
+    private List<SpawnedObject> spawnedPrefabs_ = new List<SpawnedObject>();
+    private float timer_ = 0f;
+
+    private RectTransform spawnedObjectParent_;
+
+    private void Start()
+    {
+        GameObject o = new GameObject("spawned prefab parent");
+        o.AddComponent<RectTransform>();
+        o.transform.SetParent(transform);
+        spawnedObjectParent_ = o.GetComponent<RectTransform>();
+        spawnedObjectParent_.localScale = Vector3.one;
+    }
+
     public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
     {
         gameManager_ = manager;
@@ -28,6 +42,14 @@ public class EpisodeNodeObject : MonoBehaviour
         transform.localScale = Vector3.zero;
     }
 
+    public virtual bool Hidden
+    {
+        get
+        {
+            return transform.localScale == Vector3.zero;
+        }
+    }
+
     public virtual void Play()
     {
         transform.localScale = Vector3.one;
@@ -40,11 +62,63 @@ public class EpisodeNodeObject : MonoBehaviour
 
     public virtual void ReceiveAction(string action)
     {
-
+        foreach(SpawnedObject o in spawnedPrefabs_)
+        {
+            o.ReceivedAction(action);
+        }
     }
 
     public virtual void OnExit() 
     {
 
+    }
+
+    private void Update()
+    {
+        spawnedObjectParent_.SetAsLastSibling();
+
+        if (!Hidden)
+        {
+            timer_ += Time.deltaTime;
+        }
+        //dont forget to remove objects and reset timer
+
+        foreach(EpisodeNode.PrefabSpawnObject o in episodeNode_.PrefabSpawnObjects)
+        {
+            if (timer_ > o.TimeStamp)
+            {
+                if (!o.Spawned)
+                {
+                    SpawnObject(o);
+                }
+            }
+        }
+    }
+
+    private void SpawnObject(EpisodeNode.PrefabSpawnObject prefabSpawnObject)
+    {
+        SpawnedObject o = Resources.Load<SpawnedObject>(ShareManager.PREFAB_PATH + prefabSpawnObject.Path);
+        SpawnedObject spawnedObject = GameObject.Instantiate<SpawnedObject>(o, spawnedObjectParent_);
+        spawnedObject.transform.localPosition = prefabSpawnObject.Position;
+        spawnedObject.Init(gameManager_);
+
+        spawnedPrefabs_.Add(spawnedObject);
+
+        prefabSpawnObject.Spawned = true;
+    }
+
+    private void ResetSpawnedObjects()
+    {
+        timer_ = 0f;
+        foreach (EpisodeNode.PrefabSpawnObject o in episodeNode_.PrefabSpawnObjects)
+        {
+            o.Spawned = false;
+        }
+        for (int i = 0; i < spawnedPrefabs_.Count; i++)
+        {
+            SpawnedObject o = spawnedPrefabs_[i];
+            Destroy(o.gameObject);
+        }
+        spawnedPrefabs_ = new List<SpawnedObject>();
     }
 }
