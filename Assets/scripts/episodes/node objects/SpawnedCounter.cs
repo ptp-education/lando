@@ -6,6 +6,8 @@ using System;
 
 public class SpawnedCounter : SpawnedObject
 {
+    private GoTweenFlow flow_;
+
     public class Integer
     {
         public int value = 0;
@@ -26,6 +28,7 @@ public class SpawnedCounter : SpawnedObject
 
         if (string.Equals(action, "increase-counter"))
         {
+            AudioPlayer.PlayAudio("episodes/icebreakers/ding03");
             counter_.value++;
             gameManager_.Storage.Add<Integer>(GameStorage.Key.Counter, counter_);
 
@@ -48,10 +51,28 @@ public class SpawnedCounter : SpawnedObject
 
     private void RefreshCounter()
     {
-        if (counter_ != null)
+        counterText_.transform.localScale = Vector3.one;
+
+        if (flow_ != null)
         {
-            counterText_.text = counter_.value.ToString();
-        } else
+            flow_.destroy();
+        }
+
+        flow_ = new GoTweenFlow();
+
+        flow_.insert(0f, new GoTween(counterText_.transform, 0.15f, new GoTweenConfig().scale(1.25f)));
+        flow_.insert(0.15f, new GoTween(counterText_.transform, 0.15f, new GoTweenConfig().scale(1f)));
+        flow_.insert(0.15f, new GoTween(counterText_.transform, 0.15f, new GoTweenConfig().onComplete(t =>
+        {
+            if (counter_ != null)
+            {
+                counterText_.text = counter_.value.ToString();
+            }
+        })));
+
+        flow_.play();
+
+        if (counter_ == null)
         {
             counterText_.text = "";
         }

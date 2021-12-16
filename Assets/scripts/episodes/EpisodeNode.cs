@@ -133,7 +133,7 @@ public class EpisodeNode : MonoBehaviour
         {
             foreach(EpisodeSpawnData.NodeOption o in options) {
                 Option newOption = new Option();
-                newOption.Action = o.Name;
+                newOption.Name = o.Name;
                 newOption.Node = CreateNewNode(parent, videoRoot, videoExtension, o.Node.VideoFile, o.Node.LoopVideoFile, o.Node.Script, null);
                 newNode.Options.Add(newOption);
             }
