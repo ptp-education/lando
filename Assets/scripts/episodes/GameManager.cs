@@ -184,8 +184,6 @@ public class GameManager : MonoBehaviour
                 return ret;
             }
 
-            bool isPromptManager = this.GetComponent<PrompterManager>() == null ? false : true;
-
             NewActionInternal(ret.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
             ret = ret.Remove(runStart, secondQuote - runStart + 1);
         }

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4724712760071459485}
   - component: {fileID: 9121053062641491181}
   - component: {fileID: 3281344666096146112}
-  - component: {fileID: 2854505167288230460}
+  - component: {fileID: 5960662524945715072}
   m_Layer: 5
-  m_Name: counter
+  m_Name: animal_sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9882353, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.003921569, g: 0.003921569, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -79,8 +79,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
---- !u!114 &2854505167288230460
+  m_Text: Animals
+--- !u!114 &5960662524945715072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +89,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 153039495174195224}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0ce8f6a076734d1e807419cce99e4f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b02e19bbd3bf4f31bf65bdbd59328e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counterText_: {fileID: 3281344666096146112}
