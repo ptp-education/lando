@@ -18,7 +18,7 @@ public class PrompterManager : GameManager
 {
     [SerializeField] private Dropdown episodesDropdown_;
     [SerializeField] private TextMeshProUGUI teleprompter_;
-    [SerializeField] private GameObject buttonsHome_;
+    [SerializeField] private GameObject taPanel_;
 
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
@@ -46,21 +46,21 @@ public class PrompterManager : GameManager
     {
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            AdjustTeleprompterPosition(100);
+            AdjustPanelPosition(100);
         } else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            AdjustTeleprompterPosition(-100);
+            AdjustPanelPosition(-100);
         }
     }
 
-    private void AdjustTeleprompterPosition(int position)
+    private void AdjustPanelPosition(int position)
     {
-        teleprompter_.transform.position = new Vector3(teleprompter_.transform.position.x, teleprompter_.transform.position.y + position, teleprompter_.transform.position.z);
+        taPanel_.transform.position = new Vector3(taPanel_.transform.position.x, taPanel_.transform.position.y + position, taPanel_.transform.position.z);
     }
 
-    private void ResetTeleprompterPosition()
+    private void ResetTaPanelPosition()
     {
-        teleprompter_.transform.localPosition = new Vector3(0, -100, teleprompter_.transform.position.z);
+        taPanel_.transform.localPosition = new Vector3(0, -100, taPanel_.transform.position.z);
     }
 
     private void SpawnButtons()
@@ -76,12 +76,12 @@ public class PrompterManager : GameManager
         if (currentNode_.NextNode != null)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsHome_.transform, true);
+            b.transform.SetParent(taPanel_.transform, true);
             b.Init("Next", GameManager.NODE_PREFIX + currentNode_.NextNode.name, "n", CommandButtonPressed);
         } else if (currentNode_.NextNode == null && currentNode_.Options.Count == 0)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsHome_.transform, true);
+            b.transform.SetParent(taPanel_.transform, true);
             b.Init("End of class", "", "1", CommandButtonPressed);
             b.GetComponent<Button>().interactable = false;
 
@@ -92,7 +92,7 @@ public class PrompterManager : GameManager
         for(int i = 0; i < currentNode_.Options.Count; i++)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsHome_.transform, true);
+            b.transform.SetParent(taPanel_.transform, true);
 
             string action = "";
             if (currentNode_.Options[i].Node != null)
@@ -116,24 +116,24 @@ public class PrompterManager : GameManager
         if (previousNodes_.Count >= 2)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsHome_.transform, true);
+            b.transform.SetParent(taPanel_.transform, true);
             b.Init("Undo", "", "u", UndoButtonPressed);
         }
     }
 
     private void HideButtons()
     {
-        foreach(Transform child in buttonsHome_.transform)
+        foreach(PromptButton b in taPanel_.GetComponentsInChildren<PromptButton>())
         {
-            GameObject.Destroy(child.gameObject);
+            GameObject.Destroy(b.gameObject);
         }
     }
 
     private void DisableButtons()
     {
-        foreach(Button b in buttonsHome_.GetComponentsInChildren<Button>())
+        foreach(PromptButton b in taPanel_.GetComponentsInChildren<PromptButton>())
         {
-            b.interactable = false;
+            b.Interactable = false;
         }
     }
 
@@ -141,9 +141,9 @@ public class PrompterManager : GameManager
     {
         if (endOfClass_) return;
 
-        foreach (Button b in buttonsHome_.GetComponentsInChildren<Button>())
+        foreach (PromptButton b in taPanel_.GetComponentsInChildren<PromptButton>())
         {
-            b.interactable = true;
+            b.Interactable = true;
         }
     }
 
@@ -186,7 +186,7 @@ public class PrompterManager : GameManager
         if (string.Equals(s, NodeState.Playing))
         {
             teleprompter_.text = FormatText(currentNode_.Prompt);
-            ResetTeleprompterPosition();
+            ResetTaPanelPosition();
         } else if (string.Equals(s, NodeState.Looping)) {
             EnableButtons();
         }

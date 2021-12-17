@@ -26,6 +26,15 @@ public class PromptButton : MonoBehaviour
         command_.text = commandKey_;
     }
 
+    public bool Interactable
+    {
+        set
+        {
+            Button b = GetComponent<Button>();
+            b.interactable = value;
+        }
+    }
+
     public void OnClick()
     {
         callback_.Invoke(action_);
