@@ -1,0 +1,3786 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &76446436738010214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8415069800095152600}
+  - component: {fileID: 1777629812352072352}
+  m_Layer: 0
+  m_Name: A1-0.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8415069800095152600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76446436738010214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1777629812352072352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76446436738010214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/A1-0.4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/A1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\nIt stands for \u201CMilitary Intelligence 6\u201D \u2013 it\u2019s
+    the British equivalent of the CIA. So a government organization that is full
+    of agents and spies... \n\nTA\nOoohhh\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6346620030777043707}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &134774991352474551
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1020221821018378567}
+  - component: {fileID: 2443807301634742104}
+  m_Layer: 0
+  m_Name: A0-0.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1020221821018378567
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134774991352474551}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2443807301634742104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134774991352474551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene A BG Loop
+  BgLoop: {fileID: 8300000, guid: f30c983ceac2847739fda28cb81476de, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/A0-0.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nHi everyone! How are you doing today, you all good?\n\nSTUDENTS RESPOND\n\nTA\nGreat!
+    Hey, who here likes comic books? Hands up\u2026\n\nSTUDENTS RESPOND\n\nTA\nOh,
+    a lot of you I see. I like comic books too \u2013 it\u2019s so exciting to follow
+    the stories of all those interesting characters! And you know, even if you don\u2019t
+    like comics, maybe you like the superhero movies that are based on them? Yeah?
+    Who likes the Marvel movies? \n\nSTUDENTS RESPOND\n\nTA\nHey, why don\u2019t
+    we play a very quick game to get to know each other? We\u2019ll go around and
+    you tell me your name and which superhero you would most like to be. Real quick,
+    like this: \u201CI\u2019m [name], and I\u2019d like to be [superhero]!\u201D
+    Your turn \u2013 \n\nSTUDENTS RESPOND\n\nTA\nCool! Well it looks like we\u2019ve
+    got a room full of heroes all right. Which is handy, cos we\u2019ve got some
+    fun, hero-sized challenges for you all over the next half hour. And guess where
+    I\u2019m headed right now! See that store? \n\n<i>Indicate to comic book store</i>\n\nTA\nThat\u2019s
+    the best comic book store in town, and my friend Lando runs it. Let\u2019s meet
+    him, shall we, and see what new comics he has today?\n\n<i>Look at Lando</i>\nHey
+    Lando!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7391059191737463313}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &279650300655963426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046424309475091271}
+  - component: {fileID: 1943566046451262831}
+  m_Layer: 0
+  m_Name: B2-1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1046424309475091271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279650300655963426}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1943566046451262831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279650300655963426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-1.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\n[Laughs] I bet your porta-bridges will be stronger than that!\n\nTA\nYeah,
+    why don\u2019t we go around and have everyone test their bridges!\n\n\n\n\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 327745586077380530}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 1010451235019956281}
+  - Name: Good point
+    Action: 
+    Node: {fileID: 8632454366726111481}
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 1340099187645528400}
+  VisualNode: {fileID: 0}
+--- !u!1 &742025394701506249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7354327551955726343}
+  - component: {fileID: 7825929132711358363}
+  m_Layer: 0
+  m_Name: B1-0.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7354327551955726343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742025394701506249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7825929132711358363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742025394701506249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.5.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    I bet the ambassador will be hungry!
+
+
+    TA
+
+    <i>Encourage
+    more answers</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8624853247656974722}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &839673103347405667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3357748409671814609}
+  - component: {fileID: 6293500325179596923}
+  m_Layer: 0
+  m_Name: D1-1.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3357748409671814609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839673103347405667}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6293500325179596923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839673103347405667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-1.4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Ahhh, using those special pieces.'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5973235881112148193}
+  Options:
+  - Name: Interlocking bricks
+    Action: 
+    Node: {fileID: 3534737369693313423}
+  - Name: Barrier on the top
+    Action: 
+    Node: {fileID: 5899350696924663632}
+  - Name: Colorful
+    Action: 
+    Node: {fileID: 1821571702996976616}
+  - Name: Special pieces
+    Action: 
+    Node: {fileID: 6293500325179596923}
+  - Name: Brilliant
+    Action: 
+    Node: {fileID: 7416045240612614468}
+  VisualNode: {fileID: 0}
+--- !u!1 &897653991794413506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3428391618521345335}
+  - component: {fileID: 1100103194260322105}
+  m_Layer: 0
+  m_Name: E1-0.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3428391618521345335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897653991794413506}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1100103194260322105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897653991794413506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene E BG Loop
+  BgLoop: {fileID: 8300000, guid: 908010db284474e8e8e472c41d6f1a95, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: e075cc55e2b444c1282b7119c3f4df8f, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/D1-2.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/E1-0.1LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Woah! That was epic!
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5283330569265878710}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1226551885305143066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7736343822497409063}
+  - component: {fileID: 1340099187645528400}
+  m_Layer: 0
+  m_Name: B2-1.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7736343822497409063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226551885305143066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1340099187645528400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226551885305143066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-1.6.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Hahaha, well at least your bridge didn''t break as easily as
+    mine.'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 231062480605416686}
+  Options:
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 327745586077380530}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 1010451235019956281}
+  - Name: Good point
+    Action: 
+    Node: {fileID: 8632454366726111481}
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 1340099187645528400}
+  VisualNode: {fileID: 0}
+--- !u!1 &1230176514483960773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2257919870614330714}
+  - component: {fileID: 6829166991276871222}
+  m_Layer: 0
+  m_Name: D1-0.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2257919870614330714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230176514483960773}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6829166991276871222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230176514483960773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene D BG Loop
+  BgLoop: {fileID: 8300000, guid: e2c4f273a98744c839c42ccc9e045ce0, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-0.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nThe Ambassador! We\u2019ve found her.\n\nDidi\nYou\u2019re Ace
+    Trousers!? Gosh, thank you for coming to rescue me!\n\nDidi\nOh no! It\u2019s
+    another avalanche! The roof barely held last time; it\u2019ll definitely collapse
+    this time!\n\nTA\nOh, oh, it\u2019s okay \u2013 Ace! We can build some secure
+    walls then you can use the Porta-Bridge as a roof!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5954927303058864799}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1271746658327987664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9148479625819002600}
+  - component: {fileID: 1316180908360396874}
+  m_Layer: 0
+  m_Name: A1-0.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9148479625819002600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271746658327987664}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316180908360396874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271746658327987664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene B BG Loop 1
+  BgLoop: {fileID: 8300000, guid: 31d5b9b39700540d2a7f516290f152dc, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 1
+  Type: 0
+  Video: {fileID: 102900000, guid: 15209360b19024bdb945128b02d58437, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/A1-0.6.mp4
+  VideoLoop: {fileID: 102900000, guid: 9d850f614e80540c9aa5a0a00ac279f4, type: 3}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    I think we''re in Lando''s imagination. Wild!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1466042570213742845}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1718810344294372800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4499856711574653210}
+  - component: {fileID: 5954927303058864799}
+  m_Layer: 0
+  m_Name: D1-0.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4499856711574653210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718810344294372800}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5954927303058864799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718810344294372800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-0.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-0.3LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nOh, yes, yes. Now, where did I\u2026 \n\nUhh...\n\nTA\n(Overtop
+    Lando\u2019s extended Uhh)\nUhh?!\n\nLANDO\n(Embarrassed)\nUhh...\n\nTA\n(Overtop
+    Lando\u2019s extended Uhh)\nAce?!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5099533246236201900}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2133698943383630106
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3437222822726759518}
+  - component: {fileID: 6624347355468421278}
+  m_Layer: 0
+  m_Name: B1-0.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3437222822726759518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133698943383630106}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6624347355468421278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133698943383630106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Skis could come in handy, yes
+
+
+    TA
+
+    <i>Encourage more
+    answers</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8624853247656974722}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &2227674853203283615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3949894431953780685}
+  - component: {fileID: 3404009868882722036}
+  m_Layer: 0
+  m_Name: D1-1.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3949894431953780685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227674853203283615}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3404009868882722036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227674853203283615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-1.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nMarvelous, what\u2019s the plan?\n\nTA\n<i>Comment on each child's
+    creation</i>\n\n\n\n\n\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Interlocking bricks
+    Action: 
+    Node: {fileID: 3534737369693313423}
+  - Name: Barrier on the top
+    Action: 
+    Node: {fileID: 5899350696924663632}
+  - Name: Colorful
+    Action: 
+    Node: {fileID: 1821571702996976616}
+  - Name: Special pieces
+    Action: 
+    Node: {fileID: 6293500325179596923}
+  - Name: Brilliant
+    Action: 
+    Node: {fileID: 7416045240612614468}
+  VisualNode: {fileID: 0}
+--- !u!1 &2314207693819361655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3234921804322364505}
+  - component: {fileID: 327745586077380530}
+  m_Layer: 0
+  m_Name: B2-1.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3234921804322364505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314207693819361655}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327745586077380530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314207693819361655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-1.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    You really didn''t need to use very many pieces. Good job!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 231062480605416686}
+  Options:
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 327745586077380530}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 1010451235019956281}
+  - Name: Good point
+    Action: 
+    Node: {fileID: 8632454366726111481}
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 1340099187645528400}
+  VisualNode: {fileID: 0}
+--- !u!1 &2816257706574816834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469589299419495726}
+  - component: {fileID: 5501041591436797914}
+  m_Layer: 0
+  m_Name: D1-0.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469589299419495726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816257706574816834}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 35
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5501041591436797914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816257706574816834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-0.5.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-0.5LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'Didi
+
+    Shall we have a cup of tea while we wait?
+
+
+    LANDO
+
+    Of
+    course!
+
+
+    TA
+
+    <i>Set 10 minute timer, help kids build a stable structure</i>
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4557161076579258523}
+  Options:
+  - Name: 
+    Action: 
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &2851149637312458442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492583511157835323}
+  - component: {fileID: 2752002978791679320}
+  m_Layer: 0
+  m_Name: B1-0.6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1492583511157835323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851149637312458442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2752002978791679320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851149637312458442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.6.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Yes, I would look very dashing in that
+
+
+    <i>Encourage more
+    answers</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8624853247656974722}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &2952920588164924729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8889396301260316296}
+  - component: {fileID: 7849618102771489392}
+  m_Layer: 0
+  m_Name: B2-0.5LOOP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8889396301260316296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952920588164924729}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7849618102771489392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952920588164924729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.5LOOP.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.5LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nAlright, I think we\u2019re ready!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4380680263040538776}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3200652230428122723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6023337539146656474}
+  - component: {fileID: 5525802039089566359}
+  m_Layer: 0
+  m_Name: B1-0.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6023337539146656474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200652230428122723}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5525802039089566359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200652230428122723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Snowshoes, sure.
+
+
+    TA
+
+    <i>Encourage more answers</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8624853247656974722}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &3388364090371950356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7614333611854361625}
+  - component: {fileID: 4671556540280186895}
+  m_Layer: 0
+  m_Name: Lego 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7614333611854361625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388364090371950356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1020221821018378567}
+  - {fileID: 4831740962642693610}
+  - {fileID: 6646008896421497415}
+  - {fileID: 6825534570669642936}
+  - {fileID: 8415069800095152600}
+  - {fileID: 3057854007799919705}
+  - {fileID: 9148479625819002600}
+  - {fileID: 968638019100048979}
+  - {fileID: 3601664967200861644}
+  - {fileID: 3437222822726759518}
+  - {fileID: 6023337539146656474}
+  - {fileID: 7354327551955726343}
+  - {fileID: 1492583511157835323}
+  - {fileID: 2975949634015828530}
+  - {fileID: 7508064141380258488}
+  - {fileID: 1278243328876268443}
+  - {fileID: 7349184385400598972}
+  - {fileID: 1793051229386194568}
+  - {fileID: 3538032548898196396}
+  - {fileID: 6279693951013050457}
+  - {fileID: 1473770677592075997}
+  - {fileID: 1486446621058624678}
+  - {fileID: 3116859722394256577}
+  - {fileID: 8889396301260316296}
+  - {fileID: 1943582689267190807}
+  - {fileID: 1046424309475091271}
+  - {fileID: 3234921804322364505}
+  - {fileID: 1589863873899056896}
+  - {fileID: 1833937464229180829}
+  - {fileID: 7736343822497409063}
+  - {fileID: 8357562720849104671}
+  - {fileID: 2257919870614330714}
+  - {fileID: 4499856711574653210}
+  - {fileID: 4516793219631301634}
+  - {fileID: 2173305696586721300}
+  - {fileID: 469589299419495726}
+  - {fileID: 5457922808994218480}
+  - {fileID: 3949894431953780685}
+  - {fileID: 7511734309595824747}
+  - {fileID: 8442056569795550137}
+  - {fileID: 5334655314338945770}
+  - {fileID: 3357748409671814609}
+  - {fileID: 1092681635890800580}
+  - {fileID: 4418728745852949847}
+  - {fileID: 5487846394741669062}
+  - {fileID: 3428391618521345335}
+  - {fileID: 8112843993970180094}
+  - {fileID: 8391381660115385789}
+  - {fileID: 2122108624114239090}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4671556540280186895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3388364090371950356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 2443807301634742104}
+--- !u!1 &3436868871229194574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3601664967200861644}
+  - component: {fileID: 2371236054823819336}
+  m_Layer: 0
+  m_Name: B1-0.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3601664967200861644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436868871229194574}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2371236054823819336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436868871229194574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI (ZED)\nThis is the MI6 tech workshop. You, and the rest of this team
+    of new agents, have been training here!\n\nLando walks in wearing classic secret
+    agent gear \u2013 black combat pants and turtleneck.\n\nDIDI\nAnd you must be
+    Agent Trousers?\n\nLANDO (ACE)\n(Attempting an awful British accent, trying to
+    be smooth)\n\u2018ello. You can call me Ace\u2026 \n\nDIDI\nI\u2019ll stick to
+    calling you Trousers...\n\nAnd maybe you should stick to your American accent...\n\nLando\nHeh,
+    heh.\n\nDIDI\nTeam, your mission is to rescue the British Ambassador to Canada.
+    Earlier today, she was hiking when she got caught in an avalanche. \n\nLuckily,
+    she\u2019s found safety in a nearby cave, but we need to get her out of this
+    very silly mess.\n\nLANDO\nSo-oo, we\u2019re headed into snow for this rescue
+    mission?\n\nTeam, what sort of equipment do you think we should take with us?\n\nTA\n<i>Facilitate
+    answers. Can look around room for inspiration. Skis, snowshoes, tuxedo</i>\n\n\n\n\n\n\n\n\n\n\n\n\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &3726542864204979938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5457922808994218480}
+  - component: {fileID: 4557161076579258523}
+  m_Layer: 0
+  m_Name: D1-0.5LOOP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5457922808994218480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726542864204979938}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4557161076579258523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726542864204979938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-0.5LOOP.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-0.5LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nOkay, I think we\u2019ve got some great ideas here. \n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 3404009868882722036}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3750033158845726771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278243328876268443}
+  - component: {fileID: 8624853247656974722}
+  m_Layer: 0
+  m_Name: B1-1.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1278243328876268443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750033158845726771}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8624853247656974722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750033158845726771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 057761ccf74c34d82b6d1b4a9fed5933, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/B1-1.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\nOn top of those ideas, let me show you some of what I\u2019ve been
+    inventing in the lab. \n\nThese sandals have a built-in transmitter that will
+    play the raddest surf tunes in every speaker within a 10-mile radius.\n\nLANDO\nUm\u2026
+    okay\u2026\n\nDIDI\nNow this may look like an ordinary surfboard, but it has
+    a hidden rocket booster. Just set it to autopilot and you\u2019ll be back at
+    base in no time. \n\nTA\nThese are very interesting... I just think maybe...\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4176483467670208577}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4763412638005571366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3057854007799919705}
+  - component: {fileID: 6346620030777043707}
+  m_Layer: 0
+  m_Name: A1-0.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3057854007799919705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763412638005571366}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6346620030777043707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763412638005571366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/A1-0.5.mp4
+  VideoLoop: {fileID: 102900000, guid: 2831cd72b5b124297a58c419d6f18ff4, type: 3}
+  VideoLoopFilePath: Lego 1 - Snowed In/A1-0.6LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nAnd the MI6\u2019s top spy \u2013 Ace Trousers \u2013 he\u2019s
+    super smart, highly-skilled\u2026\n\nDIDI\n\u2026and devilishly charming!\n\nLANDO\nAgent
+    Ace Trousers\u2026 always on a mission on behalf of his government, his country,
+    and Her Majesty The Queen\u2026\n\nTA\nWait... where are you guys going?"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1316180908360396874}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4915962340748193492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5334655314338945770}
+  - component: {fileID: 1821571702996976616}
+  m_Layer: 0
+  m_Name: D1-1.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5334655314338945770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915962340748193492}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 40
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821571702996976616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915962340748193492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-1.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Color, why not!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5973235881112148193}
+  Options:
+  - Name: Interlocking bricks
+    Action: 
+    Node: {fileID: 3534737369693313423}
+  - Name: Barrier on the top
+    Action: 
+    Node: {fileID: 5899350696924663632}
+  - Name: Colorful
+    Action: 
+    Node: {fileID: 1821571702996976616}
+  - Name: Special pieces
+    Action: 
+    Node: {fileID: 6293500325179596923}
+  - Name: Brilliant
+    Action: 
+    Node: {fileID: 7416045240612614468}
+  VisualNode: {fileID: 0}
+--- !u!1 &4952564972137856753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3538032548898196396}
+  - component: {fileID: 3138518197663844112}
+  m_Layer: 0
+  m_Name: B2-0.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3538032548898196396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952564972137856753}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3138518197663844112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952564972137856753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\nWhy don\u2019t we each trying making a portable, but strong bridge
+    ourselves to understand!\n\nLando\nGreat idea! We can all build our own versions...\n\nTA\nAnd
+    test them out afterwards! I\u2019ve got a bottle of water here and two books
+    to lift up my bridge.\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1378966151418077700}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5071661214463843388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3116859722394256577}
+  - component: {fileID: 1790443304954629410}
+  m_Layer: 0
+  m_Name: B2-0.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3116859722394256577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5071661214463843388}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790443304954629410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5071661214463843388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 44e21863bfe004f6f8aed44bc5e0788b, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.5.mp4
+  VideoLoop: {fileID: 102900000, guid: eeb6f8d0c5ce24584b70ba76bf68a440, type: 3}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.5LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Trousers we should help too
+
+
+    TA
+
+    \Okay everyone, ready
+    to get building? Maybe we spend 10 minutes on this experiment?'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7849618102771489392}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5121816881654329928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8391381660115385789}
+  - component: {fileID: 7201557463581665237}
+  m_Layer: 0
+  m_Name: E1-0.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8391381660115385789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121816881654329928}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 47
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7201557463581665237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121816881654329928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/E1-0.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/E1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\nYes, I rather think that was largely my contribution\u2026\n\nLANDO\nSure
+    was Didi, you\u2019re super smart. We learned uh\u2026\n\nDIDI\nThat bricks are
+    pretty useless lumps until you interlock them, at which point they become immensely
+    strong and stable! \n\nLANDO\nWe also learned\u2026 that I look great in a turtleneck!\n\nTA\n(to
+    students)\nWell, I hope you all had fun today. \n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7441371481529142321}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5268491330660457164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943582689267190807}
+  - component: {fileID: 4380680263040538776}
+  m_Layer: 0
+  m_Name: B2-1.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1943582689267190807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268491330660457164}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4380680263040538776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268491330660457164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene B BG Loop 3
+  BgLoop: {fileID: 8300000, guid: f5adca151b85e42c8a569a5708b168a8, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-1.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nWait! Before we try your bridges, let\u2019s test mine!\n\nTA\nSo
+    it looks like you stacked a bunch of bricks on top of each other...\n\nLet\u2019s
+    put this on its side and give that a try.\n\n<i>TA puts a heavy object on the
+    bridge, and it collapses</i>\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1943566046451262831}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5419029296396493430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6825534570669642936}
+  - component: {fileID: 2344722197816333141}
+  m_Layer: 0
+  m_Name: A1-0.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6825534570669642936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419029296396493430}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2344722197816333141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419029296396493430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/A1-0.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/A1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nHey!\n\nDIDI\nAbsolutely delighted to meet you!\n\nLANDO\nYour
+    timing is perfect. We\u2019ve just been reading the new issue of \u201CAgent
+    Ace!\u201D. It\u2019s about a dashing British secret agent who works for MI6\u2026\n\nTA\nMI6?\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1777629812352072352}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5438295502152977804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486446621058624678}
+  - component: {fileID: 1169568189070576190}
+  m_Layer: 0
+  m_Name: B2-0.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486446621058624678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438295502152977804}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1169568189070576190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5438295502152977804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: cbcffd115204e476f92e075b31c5f7e1, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Those are good points. It also makes the wall stronger, right?
+
+
+    <i>Go
+    next when kids agree that overlapping bricks makes the wall stronger.</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1790443304954629410}
+  Options:
+  - Name: No response
+    Action: 
+    Node: {fileID: 8298636498274181594}
+  - Name: Good points
+    Action: 
+    Node: {fileID: 1169568189070576190}
+  VisualNode: {fileID: 0}
+--- !u!1 &5493525166222096749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2122108624114239090}
+  - component: {fileID: 7441371481529142321}
+  m_Layer: 0
+  m_Name: E1-0.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2122108624114239090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493525166222096749}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7441371481529142321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493525166222096749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/E1-0.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/E1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nThanks for visiting, buds!\n\nDIDI\nIt was simply delightful to
+    meet you all. \n\nALL\nBye Bye!"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5837577090678772755
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2173305696586721300}
+  - component: {fileID: 7993714827205201600}
+  m_Layer: 0
+  m_Name: D1-0.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2173305696586721300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837577090678772755}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7993714827205201600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837577090678772755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-0.4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-0.4LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nGood! Because I wasn\u2019t really paying attention\u2026 \n\nCould
+    you each build something to protect us, on both the top and sides, from the falling
+    snow and rubble?\n\nDidi\nIt needs to be strong and stable, so that it holds
+    together and protects us until the avalanche is over!\n\nLando\nAnd I\u2019ll
+    take inspiration from your ideas for what I build!\n\nRumble sounds\n\nDidi\nPlease
+    hurry!\n\nTA\nOkay team, everyone clear on what we need to do?\n\nLet\u2019s
+    get to it!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5501041591436797914}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6146792675596015129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2975949634015828530}
+  - component: {fileID: 7563237685921954761}
+  m_Layer: 0
+  m_Name: B1-0.7
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2975949634015828530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146792675596015129}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7563237685921954761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6146792675596015129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.7.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Essential gear, naturally
+
+
+    TA
+
+    <i>Encourage more answers</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8624853247656974722}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &6259538001173600726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8112843993970180094}
+  - component: {fileID: 5283330569265878710}
+  m_Layer: 0
+  m_Name: E1-0.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8112843993970180094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259538001173600726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 46
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5283330569265878710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6259538001173600726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/E1-0.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/E1-0.1LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nYep. That\u2019s Agent Ace! Thrills every time. \n\nTA\nWow. Hey,
+    I feel like we learned a lot on your imaginary adventure. \n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7201557463581665237}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6686747365855253936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4831740962642693610}
+  - component: {fileID: 7391059191737463313}
+  m_Layer: 0
+  m_Name: A1-0.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4831740962642693610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686747365855253936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7391059191737463313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686747365855253936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 7d9b099ccbfbb4f5a9aee3ae9753ba91, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/A1-0.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/A1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nOh, hey bud, great to see you!\n\nDIDI\nHello-oo, old chum! I see
+    you\u2019re in fine fettle!\n\nTA\n<i>laughing at Didi\u2019s eccentricities</i>\nDidi,
+    so good to see you here today too!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 3034737108759309000}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6686945060984479027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5487846394741669062}
+  - component: {fileID: 8164793116314830273}
+  m_Layer: 0
+  m_Name: D1-2.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5487846394741669062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686945060984479027}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8164793116314830273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686945060984479027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-2.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-2.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nDon\u2019t worry, it\u2019s only a mine\u2014er problem.\n\n<i>No-one
+    gets it.</i>\n\nLANDO\nBecause we\u2019re in a mine\u2026 so like minor? Never
+    mind...\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1100103194260322105}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6805901469785682644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4516793219631301634}
+  - component: {fileID: 5099533246236201900}
+  m_Layer: 0
+  m_Name: D1-0.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4516793219631301634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805901469785682644}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5099533246236201900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805901469785682644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-0.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-0.3LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nI maaay have forgotten it at the airport. \n\nDidi\nWHAT are we
+    going to do? We\u2019re going to look so SILLY! \n\nLANDO\nEverybody stay calm.
+    \n\n(To students)\nYou all remember what we learned about building strong structures,
+    don\u2019t you?\n\nSTUDENTS RESPOND\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7993714827205201600}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6811417952837279848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7508064141380258488}
+  - component: {fileID: 5816903621897954451}
+  m_Layer: 0
+  m_Name: B1-0.8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7508064141380258488
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811417952837279848}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5816903621897954451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6811417952837279848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.8.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "LANDO\nWe\u2019ve got to stay warm!\n\nTA\n<i>Encourage more answers</i>"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8624853247656974722}
+  Options:
+  - Name: Skis
+    Action: 
+    Node: {fileID: 6624347355468421278}
+  - Name: Snowshoes
+    Action: 
+    Node: {fileID: 5525802039089566359}
+  - Name: Food
+    Action: 
+    Node: {fileID: 7825929132711358363}
+  - Name: Clothing
+    Action: 
+    Node: {fileID: 2752002978791679320}
+  - Name: Essential gear
+    Action: 
+    Node: {fileID: 7563237685921954761}
+  - Name: Warm Clothes
+    Action: 
+    Node: {fileID: 5816903621897954451}
+  VisualNode: {fileID: 0}
+--- !u!1 &6852887256856848898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1589863873899056896}
+  - component: {fileID: 1010451235019956281}
+  m_Layer: 0
+  m_Name: B2-1.4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1589863873899056896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852887256856848898}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010451235019956281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6852887256856848898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-1.4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    I agree'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 231062480605416686}
+  Options:
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 327745586077380530}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 1010451235019956281}
+  - Name: Good point
+    Action: 
+    Node: {fileID: 8632454366726111481}
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 1340099187645528400}
+  VisualNode: {fileID: 0}
+--- !u!1 &6863184098840138313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6646008896421497415}
+  - component: {fileID: 3034737108759309000}
+  m_Layer: 0
+  m_Name: A1-0.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6646008896421497415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863184098840138313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3034737108759309000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863184098840138313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/A1-0.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/A1-0.2LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\nAnd who are all these other lovely chums you\u2019ve brought with
+    you?\n\nTA\nOh, yeah, these are my friends! Everyone \u2013 say hello to Lando
+    and Didi!\n\nSTUDENTS RESPOND\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2344722197816333141}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6998803678331973033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7511734309595824747}
+  - component: {fileID: 3534737369693313423}
+  m_Layer: 0
+  m_Name: D1-1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7511734309595824747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998803678331973033}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3534737369693313423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6998803678331973033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-1.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Interlocking bricks! Yes that is exactly what Didi suggested.'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5973235881112148193}
+  Options:
+  - Name: Interlocking bricks
+    Action: 
+    Node: {fileID: 3534737369693313423}
+  - Name: Barrier on the top
+    Action: 
+    Node: {fileID: 5899350696924663632}
+  - Name: Colorful
+    Action: 
+    Node: {fileID: 1821571702996976616}
+  - Name: Special pieces
+    Action: 
+    Node: {fileID: 6293500325179596923}
+  - Name: Brilliant
+    Action: 
+    Node: {fileID: 7416045240612614468}
+  VisualNode: {fileID: 0}
+--- !u!1 &7071399831656170021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968638019100048979}
+  - component: {fileID: 1466042570213742845}
+  m_Layer: 0
+  m_Name: B1-0.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968638019100048979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071399831656170021}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1466042570213742845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7071399831656170021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene B BG Loop 1
+  BgLoop: {fileID: 8300000, guid: 31d5b9b39700540d2a7f516290f152dc, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-0.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-0.1LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'Didi walks in dressed in a lab coat.
+
+
+    TA
+
+    What is this place?
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2371236054823819336}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7097108265756117813
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1793051229386194568}
+  - component: {fileID: 5551565522340499088}
+  m_Layer: 0
+  m_Name: B2-0.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1793051229386194568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097108265756117813}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5551565522340499088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097108265756117813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/snowed_in/Scene B BG Loop 2
+  BgLoop: {fileID: 8300000, guid: 5f15e6c692eec42758929d594cc54932, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 1
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Hmm... I also built this. It packs up small but, if you press
+    this button...
+
+
+    Lando and TA
+
+    Oh wow!
+
+
+    DIDI
+
+    I call this the
+    porta-bridge! It can help you across icy canyons...
+
+
+    LANDO
+
+    Or we could
+    hide under it to avoid falling rocks and snow...
+
+
+    TA
+
+    This could be
+    very useful. But how can something so small also be so strong?
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 3138518197663844112}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7568571827917779488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8442056569795550137}
+  - component: {fileID: 5899350696924663632}
+  m_Layer: 0
+  m_Name: D1-1.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8442056569795550137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568571827917779488}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 39
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5899350696924663632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568571827917779488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-1.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    A barrier along the top, just what we needed!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5973235881112148193}
+  Options:
+  - Name: Interlocking bricks
+    Action: 
+    Node: {fileID: 3534737369693313423}
+  - Name: Barrier on the top
+    Action: 
+    Node: {fileID: 5899350696924663632}
+  - Name: Colorful
+    Action: 
+    Node: {fileID: 1821571702996976616}
+  - Name: Special pieces
+    Action: 
+    Node: {fileID: 6293500325179596923}
+  - Name: Brilliant
+    Action: 
+    Node: {fileID: 7416045240612614468}
+  VisualNode: {fileID: 0}
+--- !u!1 &7770169597038447271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4418728745852949847}
+  - component: {fileID: 5973235881112148193}
+  m_Layer: 0
+  m_Name: D1-2.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4418728745852949847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770169597038447271}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5973235881112148193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7770169597038447271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-2.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-2.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: '<i>Wait for avalanche sequence to end</i>
+
+
+    TA
+
+    Uh, did you remember
+    to build a door?
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8164793116314830273}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7905863662512608878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833937464229180829}
+  - component: {fileID: 8632454366726111481}
+  m_Layer: 0
+  m_Name: B2-1.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1833937464229180829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905863662512608878}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8632454366726111481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905863662512608878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-1.5.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'LANDO
+
+    Ooooh good point!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 231062480605416686}
+  Options:
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 327745586077380530}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 1010451235019956281}
+  - Name: Good point
+    Action: 
+    Node: {fileID: 8632454366726111481}
+  - Name: Not many pieces
+    Action: 
+    Node: {fileID: 1340099187645528400}
+  VisualNode: {fileID: 0}
+--- !u!1 &8348584484113064931
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1473770677592075997}
+  - component: {fileID: 8298636498274181594}
+  m_Layer: 0
+  m_Name: B2-0.3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1473770677592075997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8348584484113064931}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8298636498274181594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8348584484113064931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: ce6a82819b82344b28e75496708a846b, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'Lando
+
+    Is it because that makes the wall stronger?
+
+
+    DIDI
+
+    Exactly!
+
+
+    TA
+
+    Ah,
+    so we should try something similar.
+
+
+    Okay everyone, ready to get building?
+    Maybe we spend 10 minutes on this experiment?'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1790443304954629410}
+  Options:
+  - Name: No response
+    Action: 
+    Node: {fileID: 8298636498274181594}
+  - Name: Good points
+    Action: 
+    Node: {fileID: 1169568189070576190}
+  VisualNode: {fileID: 0}
+--- !u!1 &9008184146429052734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092681635890800580}
+  - component: {fileID: 7416045240612614468}
+  m_Layer: 0
+  m_Name: D1-1.5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1092681635890800580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9008184146429052734}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7416045240612614468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9008184146429052734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/D1-1.5.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/D1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Brilliant!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5973235881112148193}
+  Options:
+  - Name: Interlocking bricks
+    Action: 
+    Node: {fileID: 3534737369693313423}
+  - Name: Barrier on the top
+    Action: 
+    Node: {fileID: 5899350696924663632}
+  - Name: Colorful
+    Action: 
+    Node: {fileID: 1821571702996976616}
+  - Name: Special pieces
+    Action: 
+    Node: {fileID: 6293500325179596923}
+  - Name: Brilliant
+    Action: 
+    Node: {fileID: 7416045240612614468}
+  VisualNode: {fileID: 0}
+--- !u!1 &9026176192063575622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7349184385400598972}
+  - component: {fileID: 4176483467670208577}
+  m_Layer: 0
+  m_Name: B1-1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7349184385400598972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026176192063575622}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4176483467670208577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026176192063575622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B1-1.1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B1-1.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    What?
+
+
+    LANDO
+
+    They''re better suited to a warm... beach
+    mission?
+
+
+    DIDI
+
+    Oh, yes. I guess I''ve been daydreaming of finally getting
+    a vacation.
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5551565522340499088}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &9114535021239265165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6279693951013050457}
+  - component: {fileID: 1378966151418077700}
+  m_Layer: 0
+  m_Name: B2-0.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6279693951013050457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114535021239265165}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378966151418077700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9114535021239265165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 7f1d6b4a4980047eaaa927df472f5522, type: 3}
+  VideoFilePath: Lego 1 - Snowed In/B2-0.2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-0.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "Lando\nAny guidance before we start?\n\nDidi\nHmm... let me ask you this,
+    team...\n\nDoes anyone know why the bricks on a brick wall overlap each other,
+    so that the edges don\u2019t all line up?\n\nSTUDENTS RESPOND\n\n<i>Correct answer:
+    makes wall stronger</i>"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: No response
+    Action: 
+    Node: {fileID: 8298636498274181594}
+  - Name: Good points
+    Action: 
+    Node: {fileID: 1169568189070576190}
+  VisualNode: {fileID: 0}
+--- !u!1 &9189856080009940582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8357562720849104671}
+  - component: {fileID: 231062480605416686}
+  m_Layer: 0
+  m_Name: B2-2.0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8357562720849104671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189856080009940582}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7614333611854361625}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &231062480605416686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189856080009940582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 1 - Snowed In/B2-2.0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 1 - Snowed In/B2-2.0LOOP.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Well here you are trousers. And please don''t do anything silly
+    with it. Good luck team.
+
+
+    LANDO
+
+    Let''s go! Uh oops, I''ll fix that
+    when I get back?
+
+
+    DIDI
+
+    Ugh, I really need that beach holiday.
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6829166991276871222}
+  Options: []
+  VisualNode: {fileID: 0}
