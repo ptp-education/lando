@@ -22,7 +22,7 @@ public class EpisodeNodeObject : MonoBehaviour
         o.AddComponent<RectTransform>();
         o.transform.SetParent(transform);
         spawnedObjectParent_ = o.GetComponent<RectTransform>();
-        spawnedObjectParent_.localScale = Vector3.one;
+        spawnedObjectParent_.localScale = new Vector3(-1, 1, 1);
     }
 
     public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
@@ -53,6 +53,7 @@ public class EpisodeNodeObject : MonoBehaviour
     public virtual void Play()
     {
         transform.localScale = Vector3.one;
+        ResetSpawnedObjects();
     }
 
     public virtual void Loop()
