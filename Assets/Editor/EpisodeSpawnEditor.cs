@@ -224,7 +224,7 @@ public class EpisodeSpawnEditor : EditorWindow
                         if (optionNode.Node.Script.StartsWith("\n"))
                             optionNode.Node.Script = optionNode.Node.Script.Remove(0, 1);
 
-                        if (optionNode.Node.Script.EndsWith("\n"))
+                        while (optionNode.Node.Script.EndsWith("\n"))
                             optionNode.Node.Script = optionNode.Node.Script.Remove(optionNode.Node.Script.Length - 1);
 
                         n.Options.Add(optionNode);
