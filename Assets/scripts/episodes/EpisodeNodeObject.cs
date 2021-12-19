@@ -73,6 +73,14 @@ public class EpisodeNodeObject : MonoBehaviour
 
     }
 
+    public virtual float ProgressPercentage
+    {
+        get
+        {
+            return -1f;
+        }
+    }
+
     private void Update()
     {
         spawnedObjectParent_.SetAsLastSibling();
