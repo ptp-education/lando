@@ -199,4 +199,17 @@ public class ShareManager : GameManager
     {
         return node.ToString();
     }
+
+    public float ProgressPercentage
+    {
+        get
+        {
+            if (currentNode_ == null || !cachedNodeObjects_.ContainsKey(Key(currentNode_)))
+            {
+                return 0f;
+            }
+            EpisodeNodeObject eno = cachedNodeObjects_[Key(currentNode_)];
+            return eno.ProgressPercentage;
+        }
+    }
 }
