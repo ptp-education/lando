@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     }
 
     public static bool PromptActive = false;
+    public static bool MuteAll = false;
 
     protected Episode episode_;
     protected EpisodeNode currentNode_;

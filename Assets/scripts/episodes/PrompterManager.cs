@@ -30,6 +30,15 @@ public class PrompterManager : GameManager
     {
         GameManager.PromptActive = true;
 
+#if !UNITY_EDITOR
+        GameManager.MuteAll = true;
+#endif
+
+        if (GameManager.MuteAll)
+        {
+            AudioListener.volume = 0;
+        }
+
         TextAsset fileNamesAsset = Resources.Load<TextAsset>("all_episodes");
         StringsFile sf = JsonUtility.FromJson<StringsFile>(fileNamesAsset.text);
         foreach (string fileName in sf.FileNames)
@@ -166,6 +175,8 @@ public class PrompterManager : GameManager
     private string FormatText(string text)
     {
         string r = text.Replace("TA", "<b><color=\"yellow\">TA</color></b>");
+        r = r.Replace("[", "<i>");
+        r = r.Replace("]", "</i>");
         return r;
     }
 
