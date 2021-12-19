@@ -9,6 +9,8 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     [SerializeField] private VideoPlayer videoPlayerMain_;
     [SerializeField] private VideoPlayer videoPlayerLoop_;
 
+    private bool started_ = false;
+
     public override void Init(GameManager gameManager, EpisodeNode node, ReadyToStartLoop callback)
     {
         base.Init(gameManager, node, callback);
@@ -35,6 +37,8 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     public override void Play()
     {
         base.Play();
+
+        started_ = true;
 
         videoPlayerMain_.Stop();
         StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_));
@@ -71,12 +75,30 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         PreloadVideo(videoPlayerLoop_, node.VideoLoopFilePath);
     }
 
+    public override float ProgressPercentage
+    {
+        get
+        {
+            if (!started_) return 0f;
+
+            double percentage = (float)videoPlayerMain_.time / (float)videoPlayerMain_.length;
+            if (percentage > 0.97)
+            {
+                return 1f;
+            }
+            else
+            {
+                return (float)videoPlayerMain_.time / (float)videoPlayerMain_.length;
+            }
+        }
+    }
+
     static public void PreloadVideo(VideoPlayer player, string path)
     {
         RenderTexture rt1 = new RenderTexture(1920, 1080, 0);
         player.GetComponent<VideoPlayer>().targetTexture = rt1;
 
-        //player.SetDirectAudioMute(0, GameManager.PromptActive);
+        player.SetDirectAudioMute(0, GameManager.MuteAll);
 
         RawImage ri = player.GetComponentInChildren<RawImage>();
         ri.texture = rt1;
