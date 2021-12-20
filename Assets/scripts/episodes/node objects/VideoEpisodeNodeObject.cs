@@ -10,6 +10,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     [SerializeField] private VideoPlayer videoPlayerLoop_;
 
     private bool started_ = false;
+    private bool completed_ = false;
 
     public override void Init(GameManager gameManager, EpisodeNode node, ReadyToStartLoop callback)
     {
@@ -24,6 +25,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     private void VideoFinished(VideoPlayer vp)
     {
         startLoopCallback_.Invoke();
+        completed_ = true;
     }
 
     public override void Hide()
@@ -39,6 +41,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         base.Play();
 
         started_ = true;
+        completed_ = false;
 
         videoPlayerMain_.Stop();
         StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_));
@@ -93,16 +96,9 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         get
         {
             if (!started_) return 0f;
+            if (completed_) return 1f;
 
-            double percentage = (float)videoPlayerMain_.time / (float)videoPlayerMain_.length;
-            if (percentage > 0.97)
-            {
-                return 1f;
-            }
-            else
-            {
-                return (float)videoPlayerMain_.time / (float)videoPlayerMain_.length;
-            }
+            return (float)videoPlayerMain_.time / (float)videoPlayerMain_.length;
         }
     }
 
