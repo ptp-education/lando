@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &58451366220036327
+--- !u!1 &139671940015476612
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 167718227540920363}
-  - component: {fileID: 9192668657369600596}
+  - component: {fileID: 5668600233192968413}
+  - component: {fileID: 8520302051255418886}
   m_Layer: 0
-  m_Name: B1-2b
+  m_Name: A1-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &167718227540920363
+--- !u!4 &5668600233192968413
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58451366220036327}
+  m_GameObject: {fileID: 139671940015476612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 21
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9192668657369600596
+--- !u!114 &8520302051255418886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58451366220036327}
+  m_GameObject: {fileID: 139671940015476612}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -49,150 +49,8 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-2b.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Next when ready majority of students have responded</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5815428255783849891}
-  Options:
-  - Name: Boil water
-    Action: 
-    Node: {fileID: 5360848168823307434}
-  - Name: Tablets
-    Action: 
-    Node: {fileID: 9192668657369600596}
-  - Name: Great ideas
-    Action: 
-    Node: {fileID: 6237551914155108217}
-  - Name: Never heard of that
-    Action: 
-    Node: {fileID: 2567932877791539494}
-  VisualNode: {fileID: 0}
---- !u!1 &157267878285686050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5527351447790476474}
-  - component: {fileID: 7045816599869200272}
-  m_Layer: 0
-  m_Name: A1-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5527351447790476474
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157267878285686050}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7045816599869200272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157267878285686050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A1-0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A1-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "TA\nHey Lando! \n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5484993128280125310}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &292913235136838472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8545199435026090206}
-  - component: {fileID: 5050373556050044477}
-  m_Layer: 0
-  m_Name: A1-2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8545199435026090206
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292913235136838472}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5050373556050044477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 292913235136838472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A1-2.mp4
-  VideoLoop: {fileID: 0}
+  VideoFilePath: Lego 2/A1-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 388728c5789494420a6df63b63a7345f, type: 3}
   VideoLoopFilePath: Lego 2/A1-L2.mp4
   Image: {fileID: 0}
   ImageFilePath: 
@@ -201,16 +59,80 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
+  Prompt: "TA\nEveryone \u2013 say hi to Lando!\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8950387899000899909}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1108077474034387791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7340772437327001680}
+  - component: {fileID: 7679799055278465243}
+  m_Layer: 0
+  m_Name: B1-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7340772437327001680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108077474034387791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7679799055278465243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108077474034387791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
   Prompt: 'TA
 
-    Oh hey, Didi!
+    What kind of car should we drive in the rainforest?
 
 '
   PrefabSpawnObjects: []
-  NextNode: {fileID: 7127898903317951030}
+  NextNode: {fileID: 1793174916581805987}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &906984180504987849
+--- !u!1 &1185904200889228053
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -218,1436 +140,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5426737026437402324}
-  - component: {fileID: 3235350147531550645}
-  m_Layer: 0
-  m_Name: A0-L0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5426737026437402324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906984180504987849}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3235350147531550645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 906984180504987849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: episodes/lego_series/comic book store
-  BgLoop: {fileID: 8300000, guid: 4fcff46d044ab4d968655394e1f51f74, type: 3}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-L0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "TA\nHi everyone! How are you doing today, you all good?\n\nStudents respond\n\nTA\nFantastic.
-    Well, let me introduce myself, I\u2019m [name], and I\u2019m here visiting my
-    friend Lando, who runs the best comic book store in town.\n\nStudents respond\n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 6224240997079127974}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &1233021248955248230
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2339834948776979193}
-  - component: {fileID: 222950819130890940}
-  m_Layer: 0
-  m_Name: A0-L1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2339834948776979193
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233021248955248230}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &222950819130890940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233021248955248230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-L1.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "TA\nWow, we\u2019ve got quite a bunch of botanists with us today\n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 7045816599869200272}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &1277613012496651069
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2479377955412418709}
-  - component: {fileID: 2504580512324722907}
-  m_Layer: 0
-  m_Name: B1-4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2479377955412418709
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277613012496651069}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2504580512324722907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277613012496651069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-4.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    Okay, before we get working on these prototypes, anything we should
-    keep in mind?
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 1996760628171427684}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &1352839537478966513
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4519753048178413181}
-  - component: {fileID: 2434863476628045507}
-  m_Layer: 0
-  m_Name: A0-1c
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4519753048178413181
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352839537478966513}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2434863476628045507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352839537478966513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-1c.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'Lisa
-
-    I agree!'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 222950819130890940}
-  Options:
-  - Name: I've heard of that
-    Action: 
-    Node: {fileID: 2908705609303918244}
-  - Name: Oh I love that one
-    Action: 
-    Node: {fileID: 9212985330578866031}
-  - Name: I agree
-    Action: 
-    Node: {fileID: 2434863476628045507}
-  - Name: Colorful description
-    Action: 
-    Node: {fileID: 1413282851456308318}
-  VisualNode: {fileID: 0}
---- !u!1 &1368788465555385640
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1822245173322120148}
-  - component: {fileID: 2367581401599204626}
-  m_Layer: 0
-  m_Name: B2-2c
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1822245173322120148
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368788465555385640}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 31
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2367581401599204626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368788465555385640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-2c.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i> Press next after every kid has presented</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 1776320312943218020}
-  Options:
-  - Name: This design will be an advantage in the jungle terrain
-    Action: 
-    Node: {fileID: 7677073903727630534}
-  - Name: Perfect use of colors, this vehicle will be well-hidden
-    Action: 
-    Node: {fileID: 6024706422605641093}
-  - Name: I agree (in response to TA's comment)
-    Action: 
-    Node: {fileID: 2367581401599204626}
-  - Name: Good point! (in response to TA's comment)
-    Action: 
-    Node: {fileID: 6647267268311555275}
-  - Name: A very stylish car
-    Action: 
-    Node: {fileID: 8470493018340125135}
-  VisualNode: {fileID: 0}
---- !u!1 &1693011786276665922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9214012604390897608}
-  - component: {fileID: 7881515276759789335}
-  m_Layer: 0
-  m_Name: D1-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9214012604390897608
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693011786276665922}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 45
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7881515276759789335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693011786276665922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/D1-0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/D1-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: End of class
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 0}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &1862370703986122837
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3893753224103277532}
-  - component: {fileID: 7202147104222600371}
-  m_Layer: 0
-  m_Name: A0-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3893753224103277532
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862370703986122837}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7202147104222600371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862370703986122837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-1.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "TA\nI\u2019m [name] and my favorite is the [plant]! Let\u2019s hear yours\u2026\n\n\n\n\n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 0}
-  Options:
-  - Name: I've heard of that
-    Action: 
-    Node: {fileID: 2908705609303918244}
-  - Name: Oh I love that one
-    Action: 
-    Node: {fileID: 9212985330578866031}
-  - Name: I agree
-    Action: 
-    Node: {fileID: 2434863476628045507}
-  - Name: Colorful description
-    Action: 
-    Node: {fileID: 1413282851456308318}
-  VisualNode: {fileID: 0}
---- !u!1 &1862974129433362636
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3610740928646686090}
-  - component: {fileID: 7677073903727630534}
-  m_Layer: 0
-  m_Name: B2-2a
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3610740928646686090
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862974129433362636}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 29
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7677073903727630534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862974129433362636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-2a.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i> Press next after every kid has presented</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 1776320312943218020}
-  Options:
-  - Name: This design will be an advantage in the jungle terrain
-    Action: 
-    Node: {fileID: 7677073903727630534}
-  - Name: Perfect use of colors, this vehicle will be well-hidden
-    Action: 
-    Node: {fileID: 6024706422605641093}
-  - Name: I agree (in response to TA's comment)
-    Action: 
-    Node: {fileID: 2367581401599204626}
-  - Name: Good point! (in response to TA's comment)
-    Action: 
-    Node: {fileID: 6647267268311555275}
-  - Name: A very stylish car
-    Action: 
-    Node: {fileID: 8470493018340125135}
-  VisualNode: {fileID: 0}
---- !u!1 &2242261155758595737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3008192202610766699}
-  - component: {fileID: 8585008606685484493}
-  m_Layer: 0
-  m_Name: B1-1c
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3008192202610766699
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2242261155758595737}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8585008606685484493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2242261155758595737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-1c.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Next when ready majority of students have responded</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 892908088824286618}
-  Options:
-  - Name: Very handy
-    Action: 
-    Node: {fileID: 4871784939473114622}
-  - Name: Insect repellant
-    Action: 
-    Node: {fileID: 543273303787682369}
-  - Name: Great ideas
-    Action: 
-    Node: {fileID: 8585008606685484493}
-  - Name: Clothes
-    Action: 
-    Node: {fileID: 8215858893721470547}
-  VisualNode: {fileID: 0}
---- !u!1 &2313849352805911982
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1089572826454647383}
-  - component: {fileID: 7127898903317951030}
-  m_Layer: 0
-  m_Name: A1-3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1089572826454647383
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2313849352805911982}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7127898903317951030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2313849352805911982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A1-3.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    Yeah! Everyone, this is Didi.
-
-
-    Students respond
-
-
-    TA
-
-    Didi,
-    this is everyone!
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 2298065815697333786}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &2318346080810671574
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6061568409060519869}
-  - component: {fileID: 2628654915270979762}
-  m_Layer: 0
-  m_Name: C1-2b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6061568409060519869
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2318346080810671574}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 40
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2628654915270979762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2318346080810671574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-2b.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/C1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Have each student present</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 2502252174522143679}
-  Options:
-  - Name: Balloon is attached to car
-    Action: 
-    Node: {fileID: 5728102900329191186}
-  - Name: Very big prototype
-    Action: 
-    Node: {fileID: 2628654915270979762}
-  - Name: Nicely camoflaged
-    Action: 
-    Node: {fileID: 7779914192600898312}
-  - Name: Built something so complex so quickly
-    Action: 
-    Node: {fileID: 8891283571346389354}
-  - Name: Very chic car
-    Action: 
-    Node: {fileID: 4103120069371453126}
-  VisualNode: {fileID: 0}
---- !u!1 &2412599906729891633
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7752569247826473110}
-  - component: {fileID: 6224240997079127974}
-  m_Layer: 0
-  m_Name: A0-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7752569247826473110
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2412599906729891633}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6224240997079127974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2412599906729891633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "TA\nOh hi Lisa! Great to see you. Hey everyone, this is Lisa, she\u2019s
-    another good friend and comic book fan. Say, why don\u2019t you all introduce
-    yourselves?\n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 7202147104222600371}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &2420123203261334196
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5955011182248978108}
-  - component: {fileID: 5360848168823307434}
-  m_Layer: 0
-  m_Name: B1-2a
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5955011182248978108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2420123203261334196}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5360848168823307434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2420123203261334196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-2a.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Next when ready majority of students have responded</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5815428255783849891}
-  Options:
-  - Name: Boil water
-    Action: 
-    Node: {fileID: 5360848168823307434}
-  - Name: Tablets
-    Action: 
-    Node: {fileID: 9192668657369600596}
-  - Name: Great ideas
-    Action: 
-    Node: {fileID: 6237551914155108217}
-  - Name: Never heard of that
-    Action: 
-    Node: {fileID: 2567932877791539494}
-  VisualNode: {fileID: 0}
---- !u!1 &2435503420162724925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2118291602380952456}
-  - component: {fileID: 2502252174522143679}
-  m_Layer: 0
-  m_Name: C1-3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2118291602380952456
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2435503420162724925}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 44
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2502252174522143679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2435503420162724925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-3.mp4
-  VideoLoop: {fileID: 102900000, guid: d0c4991f5debc497f8025ea1b8316226, type: 3}
-  VideoLoopFilePath: Lego 2/D1-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    We made some pretty cool cars today, right everyone?
-
-
-    <i>Students
-    respond</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 7881515276759789335}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &2490720876652708599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3122363653034699905}
-  - component: {fileID: 8502823331925818617}
-  m_Layer: 0
-  m_Name: C1-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3122363653034699905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2490720876652708599}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 37
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8502823331925818617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2490720876652708599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-1.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/C1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: '<i>TA and students build for 10 minutes</i>
-
-
-    TA
-
-    Okay I think
-    our prototypes are ready!
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 4222683736575250350}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &2629555546061355795
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7206512289527803497}
-  - component: {fileID: 6237551914155108217}
-  m_Layer: 0
-  m_Name: B1-2c
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7206512289527803497
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2629555546061355795}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6237551914155108217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2629555546061355795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-2c.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Next when ready majority of students have responded</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5815428255783849891}
-  Options:
-  - Name: Boil water
-    Action: 
-    Node: {fileID: 5360848168823307434}
-  - Name: Tablets
-    Action: 
-    Node: {fileID: 9192668657369600596}
-  - Name: Great ideas
-    Action: 
-    Node: {fileID: 6237551914155108217}
-  - Name: Never heard of that
-    Action: 
-    Node: {fileID: 2567932877791539494}
-  VisualNode: {fileID: 0}
---- !u!1 &2764149083091080742
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8195052992288028121}
-  - component: {fileID: 7142273780459781563}
-  m_Layer: 0
-  m_Name: Lego 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8195052992288028121
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764149083091080742}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5426737026437402324}
-  - {fileID: 7752569247826473110}
-  - {fileID: 3893753224103277532}
-  - {fileID: 7839130702218807240}
-  - {fileID: 7695321693222238436}
-  - {fileID: 4519753048178413181}
-  - {fileID: 4463380988557736438}
-  - {fileID: 2339834948776979193}
-  - {fileID: 5527351447790476474}
-  - {fileID: 8397599506244124581}
-  - {fileID: 8545199435026090206}
-  - {fileID: 1089572826454647383}
-  - {fileID: 1797034610549026606}
-  - {fileID: 2979744549240082573}
-  - {fileID: 5466437330818879991}
-  - {fileID: 7952595002983303508}
-  - {fileID: 7585562763415026150}
-  - {fileID: 3008192202610766699}
-  - {fileID: 1140337680780492527}
-  - {fileID: 846576780599691091}
-  - {fileID: 5955011182248978108}
-  - {fileID: 167718227540920363}
-  - {fileID: 7206512289527803497}
-  - {fileID: 185782173388495250}
-  - {fileID: 6917251958115817256}
-  - {fileID: 2479377955412418709}
-  - {fileID: 3290673911533657499}
-  - {fileID: 7360741749658564769}
-  - {fileID: 1857711014528411576}
-  - {fileID: 3610740928646686090}
-  - {fileID: 346536163193589387}
-  - {fileID: 1822245173322120148}
-  - {fileID: 118302292099782100}
-  - {fileID: 6478715136421816660}
-  - {fileID: 7730049242223242643}
-  - {fileID: 1538330563989028460}
-  - {fileID: 2534042939869506760}
-  - {fileID: 3122363653034699905}
-  - {fileID: 5881210376925466786}
-  - {fileID: 587994197989660222}
-  - {fileID: 6061568409060519869}
-  - {fileID: 2960393318651829960}
-  - {fileID: 2516381275312163855}
-  - {fileID: 5684061996589757163}
-  - {fileID: 2118291602380952456}
-  - {fileID: 9214012604390897608}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7142273780459781563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2764149083091080742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingNode: {fileID: 3235350147531550645}
---- !u!1 &2861888072641439053
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1140337680780492527}
-  - component: {fileID: 8215858893721470547}
-  m_Layer: 0
-  m_Name: B1-1d
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1140337680780492527
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2861888072641439053}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8215858893721470547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2861888072641439053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-1d.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Next when ready majority of students have responded</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 892908088824286618}
-  Options:
-  - Name: Very handy
-    Action: 
-    Node: {fileID: 4871784939473114622}
-  - Name: Insect repellant
-    Action: 
-    Node: {fileID: 543273303787682369}
-  - Name: Great ideas
-    Action: 
-    Node: {fileID: 8585008606685484493}
-  - Name: Clothes
-    Action: 
-    Node: {fileID: 8215858893721470547}
-  VisualNode: {fileID: 0}
---- !u!1 &3021677695050625049
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 118302292099782100}
-  - component: {fileID: 6647267268311555275}
-  m_Layer: 0
-  m_Name: B2-2d
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &118302292099782100
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3021677695050625049}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6647267268311555275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3021677695050625049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-2d.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i> Press next after every kid has presented</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 1776320312943218020}
-  Options:
-  - Name: This design will be an advantage in the jungle terrain
-    Action: 
-    Node: {fileID: 7677073903727630534}
-  - Name: Perfect use of colors, this vehicle will be well-hidden
-    Action: 
-    Node: {fileID: 6024706422605641093}
-  - Name: I agree (in response to TA's comment)
-    Action: 
-    Node: {fileID: 2367581401599204626}
-  - Name: Good point! (in response to TA's comment)
-    Action: 
-    Node: {fileID: 6647267268311555275}
-  - Name: A very stylish car
-    Action: 
-    Node: {fileID: 8470493018340125135}
-  VisualNode: {fileID: 0}
---- !u!1 &3050485286143374445
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 587994197989660222}
-  - component: {fileID: 5728102900329191186}
+  - component: {fileID: 3605224106903927110}
+  - component: {fileID: 8457446326895212650}
   m_Layer: 0
   m_Name: C1-2a
   m_TagString: Untagged
@@ -1655,27 +149,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &587994197989660222
+--- !u!4 &3605224106903927110
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3050485286143374445}
+  m_GameObject: {fileID: 1185904200889228053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5728102900329191186
+--- !u!114 &8457446326895212650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3050485286143374445}
+  m_GameObject: {fileID: 1185904200889228053}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1701,25 +195,25 @@ MonoBehaviour:
 
     <i>Have each student present</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 2502252174522143679}
+  NextNode: {fileID: 1772558681164201159}
   Options:
   - Name: Balloon is attached to car
     Action: 
-    Node: {fileID: 5728102900329191186}
+    Node: {fileID: 8457446326895212650}
   - Name: Very big prototype
     Action: 
-    Node: {fileID: 2628654915270979762}
+    Node: {fileID: 2187190402066112458}
   - Name: Nicely camoflaged
     Action: 
-    Node: {fileID: 7779914192600898312}
+    Node: {fileID: 5897291225324319856}
   - Name: Built something so complex so quickly
     Action: 
-    Node: {fileID: 8891283571346389354}
+    Node: {fileID: 4703027869962130962}
   - Name: Very chic car
     Action: 
-    Node: {fileID: 4103120069371453126}
+    Node: {fileID: 203110946819649982}
   VisualNode: {fileID: 0}
---- !u!1 &3155976154854636050
+--- !u!1 &1291664709643294058
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1727,8 +221,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1797034610549026606}
-  - component: {fileID: 2298065815697333786}
+  - component: {fileID: 2508774200129323094}
+  - component: {fileID: 2721567315247198562}
   m_Layer: 0
   m_Name: A1-4
   m_TagString: Untagged
@@ -1736,27 +230,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1797034610549026606
+--- !u!4 &2508774200129323094
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155976154854636050}
+  m_GameObject: {fileID: 1291664709643294058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2298065815697333786
+--- !u!114 &2721567315247198562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3155976154854636050}
+  m_GameObject: {fileID: 1291664709643294058}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1781,10 +275,10 @@ MonoBehaviour:
   Prompt: "TA\nOh\u2026. I think Lando\u2019s taken us into his imagination \u2013
     cool!\n"
   PrefabSpawnObjects: []
-  NextNode: {fileID: 1441317107161401479}
+  NextNode: {fileID: 3323722388382181375}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &3213553346177324853
+--- !u!1 &1427511856539524961
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1792,8 +286,155 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 846576780599691091}
-  - component: {fileID: 892908088824286618}
+  - component: {fileID: 4288806646823271084}
+  - component: {fileID: 7358736648480125875}
+  m_Layer: 0
+  m_Name: B2-2d
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4288806646823271084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427511856539524961}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7358736648480125875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427511856539524961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B2-2d.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i> Press next after every kid has presented</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2487794913728422428}
+  Options:
+  - Name: This design will be an advantage in the jungle terrain
+    Action: 
+    Node: {fileID: 5812704184484476862}
+  - Name: Perfect use of colors, this vehicle will be well-hidden
+    Action: 
+    Node: {fileID: 7619144100283456253}
+  - Name: I agree (in response to TA's comment)
+    Action: 
+    Node: {fileID: 1944423776408089194}
+  - Name: Good point! (in response to TA's comment)
+    Action: 
+    Node: {fileID: 7358736648480125875}
+  - Name: A very stylish car
+    Action: 
+    Node: {fileID: 5741404697731925687}
+  VisualNode: {fileID: 0}
+--- !u!1 &1582136806165919081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804279900119942064}
+  - component: {fileID: 6275789088051905955}
+  m_Layer: 0
+  m_Name: C1-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1804279900119942064
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582136806165919081}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 36
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6275789088051905955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582136806165919081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/C1-0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/C1-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nOkay, I think we could use a balloon to boost the car\u2026 are you
+    all down to spend 5 minutes to improve your prototype car so that the balloon
+    stays attached? Oh and make it tough enough to survive a landing?\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 5485583804314915713}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1637190529545287757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3575586226196572203}
+  - component: {fileID: 3910411522797806306}
   m_Layer: 0
   m_Name: B1-2
   m_TagString: Untagged
@@ -1801,27 +442,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &846576780599691091
+--- !u!4 &3575586226196572203
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3213553346177324853}
+  m_GameObject: {fileID: 1637190529545287757}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &892908088824286618
+--- !u!114 &3910411522797806306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3213553346177324853}
+  m_GameObject: {fileID: 1637190529545287757}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1857,18 +498,18 @@ MonoBehaviour:
   Options:
   - Name: Boil water
     Action: 
-    Node: {fileID: 5360848168823307434}
+    Node: {fileID: 8089910390911194066}
   - Name: Tablets
     Action: 
-    Node: {fileID: 9192668657369600596}
+    Node: {fileID: 5022154404961533228}
   - Name: Great ideas
     Action: 
-    Node: {fileID: 6237551914155108217}
+    Node: {fileID: 7831920041145731073}
   - Name: Never heard of that
     Action: 
-    Node: {fileID: 2567932877791539494}
+    Node: {fileID: 1838468078490050142}
   VisualNode: {fileID: 0}
---- !u!1 &3267499204964423063
+--- !u!1 &1691331001688685295
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1876,8 +517,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2960393318651829960}
-  - component: {fileID: 7779914192600898312}
+  - component: {fileID: 1384227600215994800}
+  - component: {fileID: 5897291225324319856}
   m_Layer: 0
   m_Name: C1-2c
   m_TagString: Untagged
@@ -1885,27 +526,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2960393318651829960
+--- !u!4 &1384227600215994800
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3267499204964423063}
+  m_GameObject: {fileID: 1691331001688685295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7779914192600898312
+--- !u!114 &5897291225324319856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3267499204964423063}
+  m_GameObject: {fileID: 1691331001688685295}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1931,25 +572,25 @@ MonoBehaviour:
 
     <i>Have each student present</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 2502252174522143679}
+  NextNode: {fileID: 1772558681164201159}
   Options:
   - Name: Balloon is attached to car
     Action: 
-    Node: {fileID: 5728102900329191186}
+    Node: {fileID: 8457446326895212650}
   - Name: Very big prototype
     Action: 
-    Node: {fileID: 2628654915270979762}
+    Node: {fileID: 2187190402066112458}
   - Name: Nicely camoflaged
     Action: 
-    Node: {fileID: 7779914192600898312}
+    Node: {fileID: 5897291225324319856}
   - Name: Built something so complex so quickly
     Action: 
-    Node: {fileID: 8891283571346389354}
+    Node: {fileID: 4703027869962130962}
   - Name: Very chic car
     Action: 
-    Node: {fileID: 4103120069371453126}
+    Node: {fileID: 203110946819649982}
   VisualNode: {fileID: 0}
---- !u!1 &3446463900006210065
+--- !u!1 &1779059094616550799
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1957,36 +598,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2534042939869506760}
-  - component: {fileID: 7870244093624822491}
+  - component: {fileID: 1257753967375254521}
+  - component: {fileID: 5485583804314915713}
   m_Layer: 0
-  m_Name: C1-0
+  m_Name: C1-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2534042939869506760
+--- !u!4 &1257753967375254521
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3446463900006210065}
+  m_GameObject: {fileID: 1779059094616550799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 36
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7870244093624822491
+--- !u!114 &5485583804314915713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3446463900006210065}
+  m_GameObject: {fileID: 1779059094616550799}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1998,9 +639,9 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-0.mp4
+  VideoFilePath: Lego 2/C1-1.mp4
   VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/C1-L1.mp4
+  VideoLoopFilePath: Lego 2/C1-L2.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -2008,82 +649,20 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: "TA\nOkay, I think we could use a balloon to boost the car\u2026 are you
-    all down to spend 5 minutes to improve your prototype car so that the balloon
-    stays attached? Oh and make it tough enough to survive a landing?\n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 8502823331925818617}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &3837070411806958647
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6917251958115817256}
-  - component: {fileID: 5815428255783849891}
-  m_Layer: 0
-  m_Name: B1-3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6917251958115817256
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837070411806958647}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5815428255783849891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3837070411806958647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-3.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
+  Prompt: '<i>TA and students build for 10 minutes</i>
 
-    What kind of car should we drive in the rainforest?
+
+    TA
+
+    Okay I think
+    our prototypes are ready!
 
 '
   PrefabSpawnObjects: []
-  NextNode: {fileID: 2504580512324722907}
+  NextNode: {fileID: 52162887097508054}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &4310115548868550908
+--- !u!1 &1877093779809727150
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2091,36 +670,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8397599506244124581}
-  - component: {fileID: 5484993128280125310}
+  - component: {fileID: 7944255154571493573}
+  - component: {fileID: 2187190402066112458}
   m_Layer: 0
-  m_Name: A1-1
+  m_Name: C1-2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8397599506244124581
+--- !u!4 &7944255154571493573
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4310115548868550908}
+  m_GameObject: {fileID: 1877093779809727150}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 9
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5484993128280125310
+--- !u!114 &2187190402066112458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4310115548868550908}
+  m_GameObject: {fileID: 1877093779809727150}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -2132,444 +711,7 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/A1-1.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A1-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "TA\nEveryone \u2013 say hi to Lando!\n"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5050373556050044477}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &5458567281883083153
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7730049242223242643}
-  - component: {fileID: 1776320312943218020}
-  m_Layer: 0
-  m_Name: B2-3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7730049242223242643
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5458567281883083153}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 34
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1776320312943218020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5458567281883083153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-3.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L3.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    Oh Lando...
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 6476652699229881159}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &5684349279088946246
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1538330563989028460}
-  - component: {fileID: 6476652699229881159}
-  m_Layer: 0
-  m_Name: B2-4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1538330563989028460
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684349279088946246}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 35
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6476652699229881159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684349279088946246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: episodes/lego_series/comic book store 2
-  BgLoop: {fileID: 8300000, guid: 3b6abfc1b4c6945b6a3774d742f28640, type: 3}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 1
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-4.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/C1-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    Well, here we are on the jungle island, everyone!
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 7870244093624822491}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &5885597673346903801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4463380988557736438}
-  - component: {fileID: 1413282851456308318}
-  m_Layer: 0
-  m_Name: A0-1d
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4463380988557736438
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5885597673346903801}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1413282851456308318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5885597673346903801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-1d.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'Lisa
-
-    What a colorful description, I can totally imagine it!'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 222950819130890940}
-  Options:
-  - Name: I've heard of that
-    Action: 
-    Node: {fileID: 2908705609303918244}
-  - Name: Oh I love that one
-    Action: 
-    Node: {fileID: 9212985330578866031}
-  - Name: I agree
-    Action: 
-    Node: {fileID: 2434863476628045507}
-  - Name: Colorful description
-    Action: 
-    Node: {fileID: 1413282851456308318}
-  VisualNode: {fileID: 0}
---- !u!1 &5968954789318768229
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 185782173388495250}
-  - component: {fileID: 2567932877791539494}
-  m_Layer: 0
-  m_Name: B1-2d
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &185782173388495250
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5968954789318768229}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 23
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2567932877791539494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5968954789318768229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-2d.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i>Next when ready majority of students have responded</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5815428255783849891}
-  Options:
-  - Name: Boil water
-    Action: 
-    Node: {fileID: 5360848168823307434}
-  - Name: Tablets
-    Action: 
-    Node: {fileID: 9192668657369600596}
-  - Name: Great ideas
-    Action: 
-    Node: {fileID: 6237551914155108217}
-  - Name: Never heard of that
-    Action: 
-    Node: {fileID: 2567932877791539494}
-  VisualNode: {fileID: 0}
---- !u!1 &6018498589325143914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 346536163193589387}
-  - component: {fileID: 6024706422605641093}
-  m_Layer: 0
-  m_Name: B2-2b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &346536163193589387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6018498589325143914}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 30
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6024706422605641093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6018498589325143914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-2b.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L2.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    <i> Press next after every kid has presented</i>'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 1776320312943218020}
-  Options:
-  - Name: This design will be an advantage in the jungle terrain
-    Action: 
-    Node: {fileID: 7677073903727630534}
-  - Name: Perfect use of colors, this vehicle will be well-hidden
-    Action: 
-    Node: {fileID: 6024706422605641093}
-  - Name: I agree (in response to TA's comment)
-    Action: 
-    Node: {fileID: 2367581401599204626}
-  - Name: Good point! (in response to TA's comment)
-    Action: 
-    Node: {fileID: 6647267268311555275}
-  - Name: A very stylish car
-    Action: 
-    Node: {fileID: 8470493018340125135}
-  VisualNode: {fileID: 0}
---- !u!1 &6205510080188278062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2516381275312163855}
-  - component: {fileID: 8891283571346389354}
-  m_Layer: 0
-  m_Name: C1-2d
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2516381275312163855
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6205510080188278062}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 42
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8891283571346389354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6205510080188278062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-2d.mp4
+  VideoFilePath: Lego 2/C1-2b.mp4
   VideoLoop: {fileID: 0}
   VideoLoopFilePath: Lego 2/C1-L2.mp4
   Image: {fileID: 0}
@@ -2583,25 +725,25 @@ MonoBehaviour:
 
     <i>Have each student present</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 2502252174522143679}
+  NextNode: {fileID: 1772558681164201159}
   Options:
   - Name: Balloon is attached to car
     Action: 
-    Node: {fileID: 5728102900329191186}
+    Node: {fileID: 8457446326895212650}
   - Name: Very big prototype
     Action: 
-    Node: {fileID: 2628654915270979762}
+    Node: {fileID: 2187190402066112458}
   - Name: Nicely camoflaged
     Action: 
-    Node: {fileID: 7779914192600898312}
+    Node: {fileID: 5897291225324319856}
   - Name: Built something so complex so quickly
     Action: 
-    Node: {fileID: 8891283571346389354}
+    Node: {fileID: 4703027869962130962}
   - Name: Very chic car
     Action: 
-    Node: {fileID: 4103120069371453126}
+    Node: {fileID: 203110946819649982}
   VisualNode: {fileID: 0}
---- !u!1 &6207895488361962932
+--- !u!1 &1890627943106306774
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2609,36 +751,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7839130702218807240}
-  - component: {fileID: 2908705609303918244}
+  - component: {fileID: 3836606276188212527}
+  - component: {fileID: 6398436305070284110}
   m_Layer: 0
-  m_Name: A0-1a
+  m_Name: A1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7839130702218807240
+--- !u!4 &3836606276188212527
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207895488361962932}
+  m_GameObject: {fileID: 1890627943106306774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 3
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2908705609303918244
+--- !u!114 &6398436305070284110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207895488361962932}
+  m_GameObject: {fileID: 1890627943106306774}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -2650,9 +792,9 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-1a.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  VideoFilePath: Lego 2/A1-3.mp4
+  VideoLoop: {fileID: 102900000, guid: 2594aeb16f5214b09a5ebeff7cd4fc61, type: 3}
+  VideoLoopFilePath: Lego 2/A1-L3.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -2660,102 +802,25 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: "Lisa\nOh wow, I\u2019ve heard of that\u2014when did you learn about that?"
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 222950819130890940}
-  Options:
-  - Name: I've heard of that
-    Action: 
-    Node: {fileID: 2908705609303918244}
-  - Name: Oh I love that one
-    Action: 
-    Node: {fileID: 9212985330578866031}
-  - Name: I agree
-    Action: 
-    Node: {fileID: 2434863476628045507}
-  - Name: Colorful description
-    Action: 
-    Node: {fileID: 1413282851456308318}
-  VisualNode: {fileID: 0}
---- !u!1 &6318581619468025033
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7695321693222238436}
-  - component: {fileID: 9212985330578866031}
-  m_Layer: 0
-  m_Name: A0-1b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7695321693222238436
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318581619468025033}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9212985330578866031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6318581619468025033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/A0-1b.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'Lisa
+  Prompt: 'TA
 
-    Oh I love that one too!'
+    Yeah! Everyone, this is Didi.
+
+
+    Students respond
+
+
+    TA
+
+    Didi,
+    this is everyone!
+
+'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 222950819130890940}
-  Options:
-  - Name: I've heard of that
-    Action: 
-    Node: {fileID: 2908705609303918244}
-  - Name: Oh I love that one
-    Action: 
-    Node: {fileID: 9212985330578866031}
-  - Name: I agree
-    Action: 
-    Node: {fileID: 2434863476628045507}
-  - Name: Colorful description
-    Action: 
-    Node: {fileID: 1413282851456308318}
+  NextNode: {fileID: 2721567315247198562}
+  Options: []
   VisualNode: {fileID: 0}
---- !u!1 &6593519929329645038
+--- !u!1 &1971428162252470345
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2763,36 +828,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7952595002983303508}
-  - component: {fileID: 4871784939473114622}
+  - component: {fileID: 5887899082803159022}
+  - component: {fileID: 7800339658324834526}
   m_Layer: 0
-  m_Name: B1-1a
+  m_Name: A0-0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7952595002983303508
+--- !u!4 &5887899082803159022
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6593519929329645038}
+  m_GameObject: {fileID: 1971428162252470345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 15
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4871784939473114622
+--- !u!114 &7800339658324834526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6593519929329645038}
+  m_GameObject: {fileID: 1971428162252470345}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -2804,7 +869,73 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-1a.mp4
+  VideoFilePath: Lego 2/A0-0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nOh hi Lisa! Great to see you. Hey everyone, this is Lisa, she\u2019s
+    another good friend and comic book fan. Say, why don\u2019t you all introduce
+    yourselves?\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6472665537251849163}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1996973261767208396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7531389377011321284}
+  - component: {fileID: 8089910390911194066}
+  m_Layer: 0
+  m_Name: B1-2a
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7531389377011321284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996973261767208396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8089910390911194066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996973261767208396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-2a.mp4
   VideoLoop: {fileID: 0}
   VideoLoopFilePath: Lego 2/B1-L2.mp4
   Image: {fileID: 0}
@@ -2818,22 +949,22 @@ MonoBehaviour:
 
     <i>Next when ready majority of students have responded</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 892908088824286618}
+  NextNode: {fileID: 7679799055278465243}
   Options:
-  - Name: Very handy
+  - Name: Boil water
     Action: 
-    Node: {fileID: 4871784939473114622}
-  - Name: Insect repellant
+    Node: {fileID: 8089910390911194066}
+  - Name: Tablets
     Action: 
-    Node: {fileID: 543273303787682369}
+    Node: {fileID: 5022154404961533228}
   - Name: Great ideas
     Action: 
-    Node: {fileID: 8585008606685484493}
-  - Name: Clothes
+    Node: {fileID: 7831920041145731073}
+  - Name: Never heard of that
     Action: 
-    Node: {fileID: 8215858893721470547}
+    Node: {fileID: 1838468078490050142}
   VisualNode: {fileID: 0}
---- !u!1 &6944818272977552015
+--- !u!1 &2011992849658723141
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2841,8 +972,1655 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7360741749658564769}
-  - component: {fileID: 7841722521121517835}
+  - component: {fileID: 2829671651658497264}
+  - component: {fileID: 1772558681164201159}
+  m_Layer: 0
+  m_Name: C1-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2829671651658497264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011992849658723141}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 44
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1772558681164201159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011992849658723141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/C1-3.mp4
+  VideoLoop: {fileID: 102900000, guid: d0c4991f5debc497f8025ea1b8316226, type: 3}
+  VideoLoopFilePath: Lego 2/D1-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    We made some pretty cool cars today, right everyone?
+
+
+    <i>Students
+    respond</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6287141353659826287}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2052681904009345374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5447667679556049569}
+  - component: {fileID: 6430816511948018371}
+  m_Layer: 0
+  m_Name: Lego 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5447667679556049569
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052681904009345374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8173761950611022252}
+  - {fileID: 5887899082803159022}
+  - {fileID: 876458443935964324}
+  - {fileID: 6262961674376489136}
+  - {fileID: 5831013542250846108}
+  - {fileID: 331523447243743493}
+  - {fileID: 563426036431443598}
+  - {fileID: 1898389150959240577}
+  - {fileID: 8544935401663378370}
+  - {fileID: 5668600233192968413}
+  - {fileID: 5527614656587081638}
+  - {fileID: 3836606276188212527}
+  - {fileID: 2508774200129323094}
+  - {fileID: 1403575261619322869}
+  - {fileID: 8213442470359350927}
+  - {fileID: 6088275878454306348}
+  - {fileID: 6009482533954950814}
+  - {fileID: 1414010968839691283}
+  - {fileID: 3887704576810094999}
+  - {fileID: 3575586226196572203}
+  - {fileID: 7531389377011321284}
+  - {fileID: 4067726228955309907}
+  - {fileID: 6782985208951882001}
+  - {fileID: 4086077978565359338}
+  - {fileID: 7340772437327001680}
+  - {fileID: 1749693260312236013}
+  - {fileID: 1696308801757459171}
+  - {fileID: 6631047139408336857}
+  - {fileID: 2587115615568201920}
+  - {fileID: 593138268111358706}
+  - {fileID: 4534994460332777971}
+  - {fileID: 2551649787364250796}
+  - {fileID: 4288806646823271084}
+  - {fileID: 7190463777661945388}
+  - {fileID: 5865388167413793515}
+  - {fileID: 3420926872454025492}
+  - {fileID: 1804279900119942064}
+  - {fileID: 1257753967375254521}
+  - {fileID: 7763902357934391258}
+  - {fileID: 3605224106903927110}
+  - {fileID: 7944255154571493573}
+  - {fileID: 1384227600215994800}
+  - {fileID: 1786617140429316983}
+  - {fileID: 8413135218105605523}
+  - {fileID: 2829671651658497264}
+  - {fileID: 5043488456495601840}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6430816511948018371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052681904009345374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 1641254697210003661}
+--- !u!1 &2132407869373188661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3887704576810094999}
+  - component: {fileID: 5198338696507844907}
+  m_Layer: 0
+  m_Name: B1-1d
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3887704576810094999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132407869373188661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5198338696507844907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132407869373188661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-1d.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i>Next when ready majority of students have responded</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 3910411522797806306}
+  Options:
+  - Name: Very handy
+    Action: 
+    Node: {fileID: 8772065626364607110}
+  - Name: Insect repellant
+    Action: 
+    Node: {fileID: 4443563628652877113}
+  - Name: Great ideas
+    Action: 
+    Node: {fileID: 5549770052387748533}
+  - Name: Clothes
+    Action: 
+    Node: {fileID: 5198338696507844907}
+  VisualNode: {fileID: 0}
+--- !u!1 &2188366190087361643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6782985208951882001}
+  - component: {fileID: 7831920041145731073}
+  m_Layer: 0
+  m_Name: B1-2c
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6782985208951882001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188366190087361643}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7831920041145731073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2188366190087361643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-2c.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i>Next when ready majority of students have responded</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7679799055278465243}
+  Options:
+  - Name: Boil water
+    Action: 
+    Node: {fileID: 8089910390911194066}
+  - Name: Tablets
+    Action: 
+    Node: {fileID: 5022154404961533228}
+  - Name: Great ideas
+    Action: 
+    Node: {fileID: 7831920041145731073}
+  - Name: Never heard of that
+    Action: 
+    Node: {fileID: 1838468078490050142}
+  VisualNode: {fileID: 0}
+--- !u!1 &2592056792954113837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 876458443935964324}
+  - component: {fileID: 6472665537251849163}
+  m_Layer: 0
+  m_Name: A0-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &876458443935964324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592056792954113837}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6472665537251849163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592056792954113837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A0-1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nI\u2019m [name] and my favorite is the [plant]! Let\u2019s hear yours\u2026\n\n\n\n\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: I've heard of that
+    Action: 
+    Node: {fileID: 1332328773696874972}
+  - Name: Oh I love that one
+    Action: 
+    Node: {fileID: 5042823196702494743}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 2011687144757154235}
+  - Name: Colorful description
+    Action: 
+    Node: {fileID: 3007367579526282022}
+  VisualNode: {fileID: 0}
+--- !u!1 &2592438117035847604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 593138268111358706}
+  - component: {fileID: 5812704184484476862}
+  m_Layer: 0
+  m_Name: B2-2a
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &593138268111358706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592438117035847604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5812704184484476862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2592438117035847604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B2-2a.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i> Press next after every kid has presented</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2487794913728422428}
+  Options:
+  - Name: This design will be an advantage in the jungle terrain
+    Action: 
+    Node: {fileID: 5812704184484476862}
+  - Name: Perfect use of colors, this vehicle will be well-hidden
+    Action: 
+    Node: {fileID: 7619144100283456253}
+  - Name: I agree (in response to TA's comment)
+    Action: 
+    Node: {fileID: 1944423776408089194}
+  - Name: Good point! (in response to TA's comment)
+    Action: 
+    Node: {fileID: 7358736648480125875}
+  - Name: A very stylish car
+    Action: 
+    Node: {fileID: 5741404697731925687}
+  VisualNode: {fileID: 0}
+--- !u!1 &2683777071114695137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1414010968839691283}
+  - component: {fileID: 5549770052387748533}
+  m_Layer: 0
+  m_Name: B1-1c
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1414010968839691283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683777071114695137}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5549770052387748533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683777071114695137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-1c.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i>Next when ready majority of students have responded</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 3910411522797806306}
+  Options:
+  - Name: Very handy
+    Action: 
+    Node: {fileID: 8772065626364607110}
+  - Name: Insect repellant
+    Action: 
+    Node: {fileID: 4443563628652877113}
+  - Name: Great ideas
+    Action: 
+    Node: {fileID: 5549770052387748533}
+  - Name: Clothes
+    Action: 
+    Node: {fileID: 5198338696507844907}
+  VisualNode: {fileID: 0}
+--- !u!1 &2944866495790858832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2551649787364250796}
+  - component: {fileID: 1944423776408089194}
+  m_Layer: 0
+  m_Name: B2-2c
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2551649787364250796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944866495790858832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944423776408089194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2944866495790858832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B2-2c.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i> Press next after every kid has presented</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2487794913728422428}
+  Options:
+  - Name: This design will be an advantage in the jungle terrain
+    Action: 
+    Node: {fileID: 5812704184484476862}
+  - Name: Perfect use of colors, this vehicle will be well-hidden
+    Action: 
+    Node: {fileID: 7619144100283456253}
+  - Name: I agree (in response to TA's comment)
+    Action: 
+    Node: {fileID: 1944423776408089194}
+  - Name: Good point! (in response to TA's comment)
+    Action: 
+    Node: {fileID: 7358736648480125875}
+  - Name: A very stylish car
+    Action: 
+    Node: {fileID: 5741404697731925687}
+  VisualNode: {fileID: 0}
+--- !u!1 &2947304443018572681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331523447243743493}
+  - component: {fileID: 2011687144757154235}
+  m_Layer: 0
+  m_Name: A0-1c
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &331523447243743493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947304443018572681}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011687144757154235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947304443018572681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A0-1c.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'Lisa
+
+    I agree!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4123249093963756996}
+  Options:
+  - Name: I've heard of that
+    Action: 
+    Node: {fileID: 1332328773696874972}
+  - Name: Oh I love that one
+    Action: 
+    Node: {fileID: 5042823196702494743}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 2011687144757154235}
+  - Name: Colorful description
+    Action: 
+    Node: {fileID: 3007367579526282022}
+  VisualNode: {fileID: 0}
+--- !u!1 &3115435315665862942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1898389150959240577}
+  - component: {fileID: 4123249093963756996}
+  m_Layer: 0
+  m_Name: A0-L1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1898389150959240577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115435315665862942}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4123249093963756996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3115435315665862942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A0-L1.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nWow, we\u2019ve got quite a bunch of botanists with us today\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6622377761678162152}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3141915940787289157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749693260312236013}
+  - component: {fileID: 1793174916581805987}
+  m_Layer: 0
+  m_Name: B1-4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749693260312236013
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141915940787289157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1793174916581805987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3141915940787289157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-4.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Okay, before we get working on these prototypes, anything we should
+    keep in mind?
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2419917978416979996}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3269161005780112698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5043488456495601840}
+  - component: {fileID: 6287141353659826287}
+  m_Layer: 0
+  m_Name: D1-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5043488456495601840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269161005780112698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 45
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6287141353659826287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3269161005780112698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/D1-0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/D1-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: End of class
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3942599023262885809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8173761950611022252}
+  - component: {fileID: 1641254697210003661}
+  m_Layer: 0
+  m_Name: A0-L0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8173761950611022252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3942599023262885809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641254697210003661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3942599023262885809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_series/comic book store
+  BgLoop: {fileID: 8300000, guid: 4fcff46d044ab4d968655394e1f51f74, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A0-L0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nHi everyone! How are you doing today, you all good?\n\nStudents respond\n\nTA\nFantastic.
+    Well, let me introduce myself, I\u2019m [name], and I\u2019m here visiting my
+    friend Lando, who runs the best comic book store in town.\n\nStudents respond\n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7800339658324834526}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4039192233567115866
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8544935401663378370}
+  - component: {fileID: 6622377761678162152}
+  m_Layer: 0
+  m_Name: A1-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8544935401663378370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039192233567115866}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6622377761678162152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039192233567115866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A1-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 388728c5789494420a6df63b63a7345f, type: 3}
+  VideoLoopFilePath: Lego 2/A1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nHey Lando! \n"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 8520302051255418886}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4246618024492832671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4067726228955309907}
+  - component: {fileID: 5022154404961533228}
+  m_Layer: 0
+  m_Name: B1-2b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4067726228955309907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246618024492832671}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5022154404961533228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246618024492832671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-2b.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i>Next when ready majority of students have responded</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7679799055278465243}
+  Options:
+  - Name: Boil water
+    Action: 
+    Node: {fileID: 8089910390911194066}
+  - Name: Tablets
+    Action: 
+    Node: {fileID: 5022154404961533228}
+  - Name: Great ideas
+    Action: 
+    Node: {fileID: 7831920041145731073}
+  - Name: Never heard of that
+    Action: 
+    Node: {fileID: 1838468078490050142}
+  VisualNode: {fileID: 0}
+--- !u!1 &4481097760406475824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5527614656587081638}
+  - component: {fileID: 8950387899000899909}
+  m_Layer: 0
+  m_Name: A1-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5527614656587081638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481097760406475824}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8950387899000899909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4481097760406475824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A1-2.mp4
+  VideoLoop: {fileID: 102900000, guid: 2594aeb16f5214b09a5ebeff7cd4fc61, type: 3}
+  VideoLoopFilePath: Lego 2/A1-L3.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Oh hey, Didi!
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6398436305070284110}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4970715273375847385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696308801757459171}
+  - component: {fileID: 2419917978416979996}
+  m_Layer: 0
+  m_Name: B2-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1696308801757459171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970715273375847385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2419917978416979996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970715273375847385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B2-0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nLet's start building a vehicle that can take us around the jungle
+    island. \n\n[Press next to start building]"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 6265572195781844595}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5057230890993261064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2587115615568201920}
+  - component: {fileID: 6099551688554423951}
+  m_Layer: 0
+  m_Name: B2-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2587115615568201920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057230890993261064}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6099551688554423951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057230890993261064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B2-2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: '<i>Have each kid come to the front of the class and show their car</i>
+
+
+
+
+
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: This design will be an advantage in the jungle terrain
+    Action: 
+    Node: {fileID: 5812704184484476862}
+  - Name: Perfect use of colors, this vehicle will be well-hidden
+    Action: 
+    Node: {fileID: 7619144100283456253}
+  - Name: I agree (in response to TA's comment)
+    Action: 
+    Node: {fileID: 1944423776408089194}
+  - Name: Good point! (in response to TA's comment)
+    Action: 
+    Node: {fileID: 7358736648480125875}
+  - Name: A very stylish car
+    Action: 
+    Node: {fileID: 5741404697731925687}
+  VisualNode: {fileID: 0}
+--- !u!1 &5239368733476475032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8413135218105605523}
+  - component: {fileID: 203110946819649982}
+  m_Layer: 0
+  m_Name: C1-2e
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8413135218105605523
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239368733476475032}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 43
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &203110946819649982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5239368733476475032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/C1-2e.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/C1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i>Have each student present</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 1772558681164201159}
+  Options:
+  - Name: Balloon is attached to car
+    Action: 
+    Node: {fileID: 8457446326895212650}
+  - Name: Very big prototype
+    Action: 
+    Node: {fileID: 2187190402066112458}
+  - Name: Nicely camoflaged
+    Action: 
+    Node: {fileID: 5897291225324319856}
+  - Name: Built something so complex so quickly
+    Action: 
+    Node: {fileID: 4703027869962130962}
+  - Name: Very chic car
+    Action: 
+    Node: {fileID: 203110946819649982}
+  VisualNode: {fileID: 0}
+--- !u!1 &5891666969979836686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6009482533954950814}
+  - component: {fileID: 4443563628652877113}
+  m_Layer: 0
+  m_Name: B1-1b
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6009482533954950814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891666969979836686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4443563628652877113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5891666969979836686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-1b.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i>Next when ready majority of students have responded</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 3910411522797806306}
+  Options:
+  - Name: Very handy
+    Action: 
+    Node: {fileID: 8772065626364607110}
+  - Name: Insect repellant
+    Action: 
+    Node: {fileID: 4443563628652877113}
+  - Name: Great ideas
+    Action: 
+    Node: {fileID: 5549770052387748533}
+  - Name: Clothes
+    Action: 
+    Node: {fileID: 5198338696507844907}
+  VisualNode: {fileID: 0}
+--- !u!1 &6052501931788849172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403575261619322869}
+  - component: {fileID: 3323722388382181375}
+  m_Layer: 0
+  m_Name: B1-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403575261619322869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052501931788849172}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3323722388382181375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052501931788849172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_series/lab-b
+  BgLoop: {fileID: 8300000, guid: 2f68d7afce9754b7cad51fe8f4e80f53, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B1-0.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B1-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Hello Agent Zed!
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 9929435831495599}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6107181764926273767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7763902357934391258}
+  - component: {fileID: 52162887097508054}
+  m_Layer: 0
+  m_Name: C1-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7763902357934391258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107181764926273767}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 38
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &52162887097508054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107181764926273767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/C1-2.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/C1-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: '<i>Lead group in highlighting modifications</i>
+
+
+
+
+
+
+'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Balloon is attached to car
+    Action: 
+    Node: {fileID: 8457446326895212650}
+  - Name: Very big prototype
+    Action: 
+    Node: {fileID: 2187190402066112458}
+  - Name: Nicely camoflaged
+    Action: 
+    Node: {fileID: 5897291225324319856}
+  - Name: Built something so complex so quickly
+    Action: 
+    Node: {fileID: 4703027869962130962}
+  - Name: Very chic car
+    Action: 
+    Node: {fileID: 203110946819649982}
+  VisualNode: {fileID: 0}
+--- !u!1 &6503302102003805687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6631047139408336857}
+  - component: {fileID: 6265572195781844595}
   m_Layer: 0
   m_Name: B2-1
   m_TagString: Untagged
@@ -2850,27 +2628,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7360741749658564769
+--- !u!4 &6631047139408336857
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6944818272977552015}
+  m_GameObject: {fileID: 6503302102003805687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7841722521121517835
+--- !u!114 &6265572195781844595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6944818272977552015}
+  m_GameObject: {fileID: 6503302102003805687}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -2904,10 +2682,10 @@ MonoBehaviour:
 
 '
   PrefabSpawnObjects: []
-  NextNode: {fileID: 7963868631256746487}
+  NextNode: {fileID: 6099551688554423951}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &6994501256777602343
+--- !u!1 &6571271338563238495
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2915,8 +2693,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6478715136421816660}
-  - component: {fileID: 8470493018340125135}
+  - component: {fileID: 7190463777661945388}
+  - component: {fileID: 5741404697731925687}
   m_Layer: 0
   m_Name: B2-2e
   m_TagString: Untagged
@@ -2924,27 +2702,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6478715136421816660
+--- !u!4 &7190463777661945388
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6994501256777602343}
+  m_GameObject: {fileID: 6571271338563238495}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8470493018340125135
+--- !u!114 &5741404697731925687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6994501256777602343}
+  m_GameObject: {fileID: 6571271338563238495}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -2970,25 +2748,25 @@ MonoBehaviour:
 
     <i> Press next after every kid has presented</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 1776320312943218020}
+  NextNode: {fileID: 2487794913728422428}
   Options:
   - Name: This design will be an advantage in the jungle terrain
     Action: 
-    Node: {fileID: 7677073903727630534}
+    Node: {fileID: 5812704184484476862}
   - Name: Perfect use of colors, this vehicle will be well-hidden
     Action: 
-    Node: {fileID: 6024706422605641093}
+    Node: {fileID: 7619144100283456253}
   - Name: I agree (in response to TA's comment)
     Action: 
-    Node: {fileID: 2367581401599204626}
+    Node: {fileID: 1944423776408089194}
   - Name: Good point! (in response to TA's comment)
     Action: 
-    Node: {fileID: 6647267268311555275}
+    Node: {fileID: 7358736648480125875}
   - Name: A very stylish car
     Action: 
-    Node: {fileID: 8470493018340125135}
+    Node: {fileID: 5741404697731925687}
   VisualNode: {fileID: 0}
---- !u!1 &7045810494635543660
+--- !u!1 &6622282608770048788
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2996,8 +2774,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5466437330818879991}
-  - component: {fileID: 4180443703137699031}
+  - component: {fileID: 8213442470359350927}
+  - component: {fileID: 9929435831495599}
   m_Layer: 0
   m_Name: B1-1
   m_TagString: Untagged
@@ -3005,27 +2783,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5466437330818879991
+--- !u!4 &8213442470359350927
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7045810494635543660}
+  m_GameObject: {fileID: 6622282608770048788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
+  m_Father: {fileID: 5447667679556049569}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4180443703137699031
+--- !u!114 &9929435831495599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7045810494635543660}
+  m_GameObject: {fileID: 6622282608770048788}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -3062,18 +2840,18 @@ MonoBehaviour:
   Options:
   - Name: Very handy
     Action: 
-    Node: {fileID: 4871784939473114622}
+    Node: {fileID: 8772065626364607110}
   - Name: Insect repellant
     Action: 
-    Node: {fileID: 543273303787682369}
+    Node: {fileID: 4443563628652877113}
   - Name: Great ideas
     Action: 
-    Node: {fileID: 8585008606685484493}
+    Node: {fileID: 5549770052387748533}
   - Name: Clothes
     Action: 
-    Node: {fileID: 8215858893721470547}
+    Node: {fileID: 5198338696507844907}
   VisualNode: {fileID: 0}
---- !u!1 &7628644575496060780
+--- !u!1 &7034709289614842518
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3081,104 +2859,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2979744549240082573}
-  - component: {fileID: 1441317107161401479}
+  - component: {fileID: 6088275878454306348}
+  - component: {fileID: 8772065626364607110}
   m_Layer: 0
-  m_Name: B1-0
+  m_Name: B1-1a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2979744549240082573
+--- !u!4 &6088275878454306348
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7628644575496060780}
+  m_GameObject: {fileID: 7034709289614842518}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 13
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1441317107161401479
+--- !u!114 &8772065626364607110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7628644575496060780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: episodes/lego_series/lab-b
-  BgLoop: {fileID: 8300000, guid: 2f68d7afce9754b7cad51fe8f4e80f53, type: 3}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-0.mp4
-  VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B1-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    Hello Agent Zed!
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 4180443703137699031}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &7774279784137766518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7585562763415026150}
-  - component: {fileID: 543273303787682369}
-  m_Layer: 0
-  m_Name: B1-1b
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7585562763415026150
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7774279784137766518}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &543273303787682369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7774279784137766518}
+  m_GameObject: {fileID: 7034709289614842518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -3190,7 +2900,7 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/B1-1b.mp4
+  VideoFilePath: Lego 2/B1-1a.mp4
   VideoLoop: {fileID: 0}
   VideoLoopFilePath: Lego 2/B1-L2.mp4
   Image: {fileID: 0}
@@ -3204,22 +2914,22 @@ MonoBehaviour:
 
     <i>Next when ready majority of students have responded</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 892908088824286618}
+  NextNode: {fileID: 3910411522797806306}
   Options:
   - Name: Very handy
     Action: 
-    Node: {fileID: 4871784939473114622}
+    Node: {fileID: 8772065626364607110}
   - Name: Insect repellant
     Action: 
-    Node: {fileID: 543273303787682369}
+    Node: {fileID: 4443563628652877113}
   - Name: Great ideas
     Action: 
-    Node: {fileID: 8585008606685484493}
+    Node: {fileID: 5549770052387748533}
   - Name: Clothes
     Action: 
-    Node: {fileID: 8215858893721470547}
+    Node: {fileID: 5198338696507844907}
   VisualNode: {fileID: 0}
---- !u!1 &7989874849758091167
+--- !u!1 &7563040636210960669
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3227,36 +2937,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5881210376925466786}
-  - component: {fileID: 4222683736575250350}
+  - component: {fileID: 4086077978565359338}
+  - component: {fileID: 1838468078490050142}
   m_Layer: 0
-  m_Name: C1-2
+  m_Name: B1-2d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5881210376925466786
+--- !u!4 &4086077978565359338
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7989874849758091167}
+  m_GameObject: {fileID: 7563040636210960669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 38
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4222683736575250350
+--- !u!114 &1838468078490050142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7989874849758091167}
+  m_GameObject: {fileID: 7563040636210960669}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -3268,9 +2978,9 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-2.mp4
+  VideoFilePath: Lego 2/B1-2d.mp4
   VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/C1-L2.mp4
+  VideoLoopFilePath: Lego 2/B1-L2.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -3278,34 +2988,26 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: '<i>Lead group in highlighting modifications</i>
+  Prompt: 'TA
 
-
-
-
-
-
-'
+    <i>Next when ready majority of students have responded</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 7679799055278465243}
   Options:
-  - Name: Balloon is attached to car
+  - Name: Boil water
     Action: 
-    Node: {fileID: 5728102900329191186}
-  - Name: Very big prototype
+    Node: {fileID: 8089910390911194066}
+  - Name: Tablets
     Action: 
-    Node: {fileID: 2628654915270979762}
-  - Name: Nicely camoflaged
+    Node: {fileID: 5022154404961533228}
+  - Name: Great ideas
     Action: 
-    Node: {fileID: 7779914192600898312}
-  - Name: Built something so complex so quickly
+    Node: {fileID: 7831920041145731073}
+  - Name: Never heard of that
     Action: 
-    Node: {fileID: 8891283571346389354}
-  - Name: Very chic car
-    Action: 
-    Node: {fileID: 4103120069371453126}
+    Node: {fileID: 1838468078490050142}
   VisualNode: {fileID: 0}
---- !u!1 &8256601940857962464
+--- !u!1 &7612962670365294610
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3313,36 +3015,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5684061996589757163}
-  - component: {fileID: 4103120069371453126}
+  - component: {fileID: 4534994460332777971}
+  - component: {fileID: 7619144100283456253}
   m_Layer: 0
-  m_Name: C1-2e
+  m_Name: B2-2b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5684061996589757163
+--- !u!4 &4534994460332777971
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8256601940857962464}
+  m_GameObject: {fileID: 7612962670365294610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 43
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4103120069371453126
+--- !u!114 &7619144100283456253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8256601940857962464}
+  m_GameObject: {fileID: 7612962670365294610}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -3354,7 +3056,242 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/C1-2e.mp4
+  VideoFilePath: Lego 2/B2-2b.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    <i> Press next after every kid has presented</i>'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 2487794913728422428}
+  Options:
+  - Name: This design will be an advantage in the jungle terrain
+    Action: 
+    Node: {fileID: 5812704184484476862}
+  - Name: Perfect use of colors, this vehicle will be well-hidden
+    Action: 
+    Node: {fileID: 7619144100283456253}
+  - Name: I agree (in response to TA's comment)
+    Action: 
+    Node: {fileID: 1944423776408089194}
+  - Name: Good point! (in response to TA's comment)
+    Action: 
+    Node: {fileID: 7358736648480125875}
+  - Name: A very stylish car
+    Action: 
+    Node: {fileID: 5741404697731925687}
+  VisualNode: {fileID: 0}
+--- !u!1 &7749984967663403393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 563426036431443598}
+  - component: {fileID: 3007367579526282022}
+  m_Layer: 0
+  m_Name: A0-1d
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &563426036431443598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749984967663403393}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3007367579526282022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749984967663403393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A0-1d.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'Lisa
+
+    What a colorful description, I can totally imagine it!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4123249093963756996}
+  Options:
+  - Name: I've heard of that
+    Action: 
+    Node: {fileID: 1332328773696874972}
+  - Name: Oh I love that one
+    Action: 
+    Node: {fileID: 5042823196702494743}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 2011687144757154235}
+  - Name: Colorful description
+    Action: 
+    Node: {fileID: 3007367579526282022}
+  VisualNode: {fileID: 0}
+--- !u!1 &7783994409436345036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6262961674376489136}
+  - component: {fileID: 1332328773696874972}
+  m_Layer: 0
+  m_Name: A0-1a
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6262961674376489136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7783994409436345036}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1332328773696874972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7783994409436345036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/A0-1a.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "Lisa\nOh wow, I\u2019ve heard of that\u2014when did you learn about that?"
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4123249093963756996}
+  Options:
+  - Name: I've heard of that
+    Action: 
+    Node: {fileID: 1332328773696874972}
+  - Name: Oh I love that one
+    Action: 
+    Node: {fileID: 5042823196702494743}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 2011687144757154235}
+  - Name: Colorful description
+    Action: 
+    Node: {fileID: 3007367579526282022}
+  VisualNode: {fileID: 0}
+--- !u!1 &7799894981291706966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1786617140429316983}
+  - component: {fileID: 4703027869962130962}
+  m_Layer: 0
+  m_Name: C1-2d
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1786617140429316983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799894981291706966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4703027869962130962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7799894981291706966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/C1-2d.mp4
   VideoLoop: {fileID: 0}
   VideoLoopFilePath: Lego 2/C1-L2.mp4
   Image: {fileID: 0}
@@ -3368,25 +3305,25 @@ MonoBehaviour:
 
     <i>Have each student present</i>'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 2502252174522143679}
+  NextNode: {fileID: 1772558681164201159}
   Options:
   - Name: Balloon is attached to car
     Action: 
-    Node: {fileID: 5728102900329191186}
+    Node: {fileID: 8457446326895212650}
   - Name: Very big prototype
     Action: 
-    Node: {fileID: 2628654915270979762}
+    Node: {fileID: 2187190402066112458}
   - Name: Nicely camoflaged
     Action: 
-    Node: {fileID: 7779914192600898312}
+    Node: {fileID: 5897291225324319856}
   - Name: Built something so complex so quickly
     Action: 
-    Node: {fileID: 8891283571346389354}
+    Node: {fileID: 4703027869962130962}
   - Name: Very chic car
     Action: 
-    Node: {fileID: 4103120069371453126}
+    Node: {fileID: 203110946819649982}
   VisualNode: {fileID: 0}
---- !u!1 &8939162650731738480
+--- !u!1 &7895004913719104433
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3394,36 +3331,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1857711014528411576}
-  - component: {fileID: 7963868631256746487}
+  - component: {fileID: 5831013542250846108}
+  - component: {fileID: 5042823196702494743}
   m_Layer: 0
-  m_Name: B2-2
+  m_Name: A0-1b
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1857711014528411576
+--- !u!4 &5831013542250846108
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8939162650731738480}
+  m_GameObject: {fileID: 7895004913719104433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 28
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7963868631256746487
+--- !u!114 &5042823196702494743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8939162650731738480}
+  m_GameObject: {fileID: 7895004913719104433}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -3435,9 +3372,9 @@ MonoBehaviour:
   StartBgLoopAfterSequence: 0
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-2.mp4
+  VideoFilePath: Lego 2/A0-1b.mp4
   VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L2.mp4
+  VideoLoopFilePath: Lego 2/A0-L1.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -3445,34 +3382,94 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: '<i>Have each kid come to the front of the class and show their car</i>
+  Prompt: 'Lisa
 
+    Oh I love that one too!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 4123249093963756996}
+  Options:
+  - Name: I've heard of that
+    Action: 
+    Node: {fileID: 1332328773696874972}
+  - Name: Oh I love that one
+    Action: 
+    Node: {fileID: 5042823196702494743}
+  - Name: I agree
+    Action: 
+    Node: {fileID: 2011687144757154235}
+  - Name: Colorful description
+    Action: 
+    Node: {fileID: 3007367579526282022}
+  VisualNode: {fileID: 0}
+--- !u!1 &8205584528936345321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5865388167413793515}
+  - component: {fileID: 2487794913728422428}
+  m_Layer: 0
+  m_Name: B2-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5865388167413793515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205584528936345321}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2487794913728422428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8205584528936345321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 0}
+  VideoFilePath: Lego 2/B2-3.mp4
+  VideoLoop: {fileID: 0}
+  VideoLoopFilePath: Lego 2/B2-L3.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
 
-
-
-
+    Oh Lando...
 
 '
   PrefabSpawnObjects: []
-  NextNode: {fileID: 0}
-  Options:
-  - Name: This design will be an advantage in the jungle terrain
-    Action: 
-    Node: {fileID: 7677073903727630534}
-  - Name: Perfect use of colors, this vehicle will be well-hidden
-    Action: 
-    Node: {fileID: 6024706422605641093}
-  - Name: I agree (in response to TA's comment)
-    Action: 
-    Node: {fileID: 2367581401599204626}
-  - Name: Good point! (in response to TA's comment)
-    Action: 
-    Node: {fileID: 6647267268311555275}
-  - Name: A very stylish car
-    Action: 
-    Node: {fileID: 8470493018340125135}
+  NextNode: {fileID: 7188058307740363839}
+  Options: []
   VisualNode: {fileID: 0}
---- !u!1 &9140946693547228321
+--- !u!1 &8413410403762881342
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3480,50 +3477,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3290673911533657499}
-  - component: {fileID: 1996760628171427684}
+  - component: {fileID: 3420926872454025492}
+  - component: {fileID: 7188058307740363839}
   m_Layer: 0
-  m_Name: B2-0
+  m_Name: B2-4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3290673911533657499
+--- !u!4 &3420926872454025492
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9140946693547228321}
+  m_GameObject: {fileID: 8413410403762881342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8195052992288028121}
-  m_RootOrder: 26
+  m_Father: {fileID: 5447667679556049569}
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1996760628171427684
+--- !u!114 &7188058307740363839
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9140946693547228321}
+  m_GameObject: {fileID: 8413410403762881342}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
+  BgLoopPath: episodes/lego_series/comic book store 2
+  BgLoop: {fileID: 8300000, guid: 3b6abfc1b4c6945b6a3774d742f28640, type: 3}
   StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
+  StartBgLoopAfterSequence: 1
   Type: 0
   Video: {fileID: 0}
-  VideoFilePath: Lego 2/B2-0.mp4
+  VideoFilePath: Lego 2/B2-4.mp4
   VideoLoop: {fileID: 0}
-  VideoLoopFilePath: Lego 2/B2-L0.mp4
+  VideoLoopFilePath: Lego 2/C1-L0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -3531,9 +3528,12 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: "TA\nLet's start building a vehicle that can take us around the jungle
-    island. \n\n[Press next to start building]"
+  Prompt: 'TA
+
+    Well, here we are on the jungle island, everyone!
+
+'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 7841722521121517835}
+  NextNode: {fileID: 6275789088051905955}
   Options: []
   VisualNode: {fileID: 0}
