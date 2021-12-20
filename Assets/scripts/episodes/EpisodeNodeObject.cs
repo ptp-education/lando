@@ -39,11 +39,21 @@ public class EpisodeNodeObject : MonoBehaviour
 
     public virtual void Hide()
     {
-        transform.localScale = Vector3.zero;
+        Hidden = true;
     }
 
     public virtual bool Hidden
     {
+        set
+        {
+            if (value)
+            {
+                transform.localScale = Vector3.zero;
+            } else
+            {
+                transform.localScale = Vector3.one;
+            }
+        }
         get
         {
             return transform.localScale == Vector3.zero;
@@ -52,13 +62,13 @@ public class EpisodeNodeObject : MonoBehaviour
 
     public virtual void Play()
     {
-        transform.localScale = Vector3.one;
+        Hidden = false;
         ResetSpawnedObjects();
     }
 
     public virtual void Loop()
     {
-        transform.localScale = Vector3.one;
+        Hidden = false;
     }
 
     public virtual void ReceiveAction(string action)

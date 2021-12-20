@@ -54,17 +54,30 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
 
     private IEnumerator SwapPlayer(VideoPlayer play, VideoPlayer stop)
     {
-        play.Play();
-
-        for (int i = 0; i < 12; i++)
+        play.Prepare();
+        while (!play.isPrepared)
         {
             yield return 0;
         }
 
-        stop.Pause();
+        yield return 0;
+        yield return 0;
+
+        play.Play();
+
+        yield return 0;
+        yield return 0;
+
+        stop.Stop();
 
         play.transform.localScale = Vector3.one;
         stop.transform.localScale = Vector3.zero;
+
+        if (Hidden)
+        {
+            Debug.LogWarning("Node is hidden but playing video. Forcing node to show...");
+            Hidden = false;
+        }
     }
 
     public override void Preload(EpisodeNode node)
@@ -112,6 +125,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         player.gameObject.name = split[split.Length - 1];
         player.playOnAwake = false;
         player.url = System.IO.Path.Combine(Application.streamingAssetsPath, path);
+        player.Prepare();
     }
 
     public override void ReceiveAction(string action)
