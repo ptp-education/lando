@@ -91,8 +91,8 @@ public class PrompterManager : GameManager
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
             b.transform.SetParent(taPanel_.transform, true);
-            b.Init("End of class", "", "1", CommandButtonPressed);
-            b.GetComponent<Button>().interactable = false;
+            b.Init("End of class", "", "-", CommandButtonPressed);
+            b.Interactable = false;
 
             endOfClass_ = true;
 
@@ -138,24 +138,6 @@ public class PrompterManager : GameManager
         }
     }
 
-    private void DisableButtons()
-    {
-        foreach(PromptButton b in taPanel_.GetComponentsInChildren<PromptButton>())
-        {
-            b.Interactable = false;
-        }
-    }
-
-    private void EnableButtons()
-    {
-        if (endOfClass_) return;
-
-        foreach (PromptButton b in taPanel_.GetComponentsInChildren<PromptButton>())
-        {
-            b.Interactable = true;
-        }
-    }
-
     private void CommandButtonPressed(string linkedEpisode)
     {
         UpdateEpisodeNode(linkedEpisode);
@@ -177,6 +159,12 @@ public class PrompterManager : GameManager
         string r = text.Replace("TA", "<b><color=\"yellow\">TA</color></b>");
         r = r.Replace("[", "<i>");
         r = r.Replace("]", "</i>");
+
+        while (r.EndsWith("\n"))
+        {
+            r = r.Remove(r.Length - 1);
+        }
+
         return r;
     }
 
@@ -193,19 +181,14 @@ public class PrompterManager : GameManager
     protected override void NewStateEventInternal(string s)
     {
         base.NewStateEventInternal(s);
-
-        if (string.Equals(s, NodeState.Playing))
-        {
-            teleprompter_.text = FormatText(currentNode_.Prompt);
-            ResetTaPanelPosition();
-        } else if (string.Equals(s, NodeState.Looping)) {
-            EnableButtons();
-        }
     }
 
     protected override void NewNodeEventInternal(EpisodeNode n)
     {
         base.NewNodeEventInternal(n);
+
+        teleprompter_.text = FormatText(currentNode_.Prompt);
+        ResetTaPanelPosition();
 
         string currentAction = GameManager.NODE_PREFIX + currentNode_.name;
         if (previousNodes_.Count == 0 || !string.Equals(previousNodes_[previousNodes_.Count - 1], currentAction))
@@ -214,6 +197,5 @@ public class PrompterManager : GameManager
         }
 
         SpawnButtons();
-        //DisableButtons();
     }
 }
