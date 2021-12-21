@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 using Photon.Realtime;
 using Photon.Pun;
-using Photon;
-using ExitGames.Client.Photon;
+using Lando.Networking;
 
 public class Lobby : MonoBehaviourPunCallbacks
 {
@@ -19,13 +16,36 @@ public class Lobby : MonoBehaviourPunCallbacks
 
     private void Start()
     {
-        PhotonNetwork.ConnectUsingSettings();
-        status_.text = "Connecting";
-        inputField_.interactable = false;
-        UpdatePlaceholderText("Waiting for server");
-    }
+		NetworkingMediator.Instance.OnNetworkingBackendStatusChanged += OnNetworkingBackendStatusChanged;
+		OnNetworkingBackendStatusChanged(NetworkingMediator.Instance.CurrentConnectionStatus);
+	}
+	private void OnDestroy()
+	{
+		NetworkingMediator.Instance.OnNetworkingBackendStatusChanged -= OnNetworkingBackendStatusChanged;
+	}
 
-    private void Update()
+	private void OnNetworkingBackendStatusChanged(NetworkingMediator.eCurrentConnectionStatus status)
+	{
+		switch (status)
+		{
+			case NetworkingMediator.eCurrentConnectionStatus.None:
+				UpdatePlaceholderText("Nothing happening");
+				break;
+			case NetworkingMediator.eCurrentConnectionStatus.Connecting:
+			case NetworkingMediator.eCurrentConnectionStatus.Disconnecting:
+				inputField_.interactable = false;
+				UpdatePlaceholderText("Waiting for server");
+				status_.text = "Connecting";
+				break;
+			case NetworkingMediator.eCurrentConnectionStatus.Connected:
+				inputField_.interactable = true;
+				UpdatePlaceholderText("Enter code");
+				break;
+
+		}
+	}
+
+	private void Update()
     {
         if (inputField_.text.Length > 0 && Input.GetKeyUp(KeyCode.Return))
         {
