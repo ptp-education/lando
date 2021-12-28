@@ -14,6 +14,14 @@ public class ShareManager : GameManager
     private Dictionary<string, EpisodeNodeObject> cachedNodeObjects_ = new Dictionary<string, EpisodeNodeObject>();
     private EpisodeNode previousNode_;
 
+    private void Start()
+    {
+        if (GameManager.PromptActive)
+        {
+            nodeObjectParent_.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+    }
+
     protected override void NewNodeEventInternal(EpisodeNode node)
     {
         base.NewNodeEventInternal(node);

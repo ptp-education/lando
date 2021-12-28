@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &714774387518113492
+--- !u!1 &511433791050111818
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,124 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1652772416760982598}
-  - component: {fileID: 605162896929868461}
-  m_Layer: 5
-  m_Name: C1-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1652772416760982598
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714774387518113492}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6849701041860130056}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &605162896929868461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714774387518113492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 102900000, guid: 2f8a25c9ab1f04455a2ce47c799d58f0, type: 3}
-  VideoFilePath: Icebreaker 1 - Categories/C1-0.mp4
-  VideoLoop: {fileID: 102900000, guid: e640b8bbbe9c94d48bde5b3313a8f7bc, type: 3}
-  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 1240322592583039757, guid: cc2801b31fc564681b61d27d38ad1899, type: 3}
-  PrefabPath: image_player
-  VideoOptions:
-  - Key: Lando-Guess
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: bf6a1c8abc7ab4de0b8f54b39150c57c, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1a.mp4
-    - VideoObject: {fileID: 102900000, guid: 076c924b9f1854667a55c76b3ed5bf16, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1b.mp4
-    - VideoObject: {fileID: 102900000, guid: 7725d84b0f30243f0adf404263e17c78, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1c.mp4
-    - VideoObject: {fileID: 102900000, guid: 854e2a207be0e41a9a70f7c0ebdaec42, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1d.mp4
-    - VideoObject: {fileID: 102900000, guid: c40bb73afc20347b59f4be92ba856ecd, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1e.mp4
-  - Key: Lando-Repeated
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: f08f050665cb344fe9d163833636e3b1, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1a.mp4
-    - VideoObject: {fileID: 102900000, guid: 78636ccfa885c42f9a194993ed227974, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1b.mp4
-    - VideoObject: {fileID: 102900000, guid: 58799c80232184a4594296b148fa4660, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1c.mp4
-    - VideoObject: {fileID: 102900000, guid: ed0fbfd727b354202af004a0eda4c8d2, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1d.mp4
-    - VideoObject: {fileID: 102900000, guid: 8dfb316ded42d4d35b88a40125746dcb, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1e.mp4
-    - VideoObject: {fileID: 102900000, guid: 98c281cf16fa6414cb9b6739411daf57, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1f.mp4
-  - Key: Lando-Right
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: d3434f270a6d54aa0bbf667d60c33338, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-2a.mp4
-    - VideoObject: {fileID: 102900000, guid: 1518a8e9c341e4a99a99da2426efc959, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-2b.mp4
-    - VideoObject: {fileID: 102900000, guid: 88fc13816aec3450c823b2e91115b731, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-2c.mp4
-  - Key: Student-Right
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: 6e7bb295479134e948d6e065cad139ca, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-3a.mp4
-    - VideoObject: {fileID: 102900000, guid: e9cc91938ae5f46768edb6034b0bf07e, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-3b.mp4
-    - VideoObject: {fileID: 102900000, guid: 3b52f9d7ed34941508e1b30d8e954d27, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-3d.mp4
-  Prompt: 'SPEAKER
-
-    Congratulations Lando and team. For every participant, you
-    are rewarded 20 Lando bucks for your efforts!
-
-'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 2549944101820082576}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &2646771481187849679
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6849701041860130056}
-  - component: {fileID: 3195414588501053872}
+  - component: {fileID: 8983771132528720781}
+  - component: {fileID: 1151697001676447541}
   m_Layer: 5
   m_Name: Icebreaker - Categories
   m_TagString: Untagged
@@ -133,25 +17,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6849701041860130056
+--- !u!224 &8983771132528720781
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2646771481187849679}
+  m_GameObject: {fileID: 511433791050111818}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4462868408477978954}
-  - {fileID: 4021596944126505964}
-  - {fileID: 7291033571070582610}
-  - {fileID: 8274972008354385807}
-  - {fileID: 7304885707146684181}
-  - {fileID: 1652772416760982598}
-  - {fileID: 1078421707559652056}
-  - {fileID: 5654709499075127312}
+  - {fileID: 2183271502837637071}
+  - {fileID: 1471647850777460073}
+  - {fileID: 5083779572536070615}
+  - {fileID: 5869696386558705930}
+  - {fileID: 5099174463005796752}
+  - {fileID: 3840463483516773059}
+  - {fileID: 3266394118830654557}
+  - {fileID: 7915730163816212117}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -160,20 +44,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3195414588501053872
+--- !u!114 &1151697001676447541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2646771481187849679}
+  m_GameObject: {fileID: 511433791050111818}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 5543160591548021653}
---- !u!1 &2990627563529553756
+  StartingNode: {fileID: 8020490653267113232}
+--- !u!1 &730450782550329817
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,8 +65,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1078421707559652056}
-  - component: {fileID: 2549944101820082576}
+  - component: {fileID: 3266394118830654557}
+  - component: {fileID: 54318450627897109}
   m_Layer: 5
   m_Name: C1-1
   m_TagString: Untagged
@@ -190,18 +74,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1078421707559652056
+--- !u!224 &3266394118830654557
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2990627563529553756}
+  m_GameObject: {fileID: 730450782550329817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6849701041860130056}
+  m_Father: {fileID: 8983771132528720781}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -209,13 +93,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2549944101820082576
+--- !u!114 &54318450627897109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2990627563529553756}
+  m_GameObject: {fileID: 730450782550329817}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -279,24 +163,14 @@ MonoBehaviour:
       VideoPath: Icebreaker 1 - Categories/B1-3b.mp4
     - VideoObject: {fileID: 102900000, guid: 3b52f9d7ed34941508e1b30d8e954d27, type: 3}
       VideoPath: Icebreaker 1 - Categories/B1-3d.mp4
-  Prompt: 'LANDO
+  Prompt: 'TA
 
-    Incredible! I can''t wait to spend this on more conditioner
-    for my fur!
-
-
-    TA
-
-    And everyone else also gets 20 Lando bucks!
-
-
-    HAND
-    OUT TO EVERY STUDENT'
+    Good job everyone, we really helped out Lando today.'
   PrefabSpawnObjects: []
-  NextNode: {fileID: 4777555642026055433}
+  NextNode: {fileID: 7056731024014317964}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &3888533816976552474
+--- !u!1 &1609221124342774943
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,8 +178,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4021596944126505964}
-  - component: {fileID: 5088031723319911407}
+  - component: {fileID: 1471647850777460073}
+  - component: {fileID: 7295711636581297514}
   m_Layer: 5
   m_Name: A1-0
   m_TagString: Untagged
@@ -313,18 +187,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4021596944126505964
+--- !u!224 &1471647850777460073
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3888533816976552474}
+  m_GameObject: {fileID: 1609221124342774943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6849701041860130056}
+  m_Father: {fileID: 8983771132528720781}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -332,13 +206,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5088031723319911407
+--- !u!114 &7295711636581297514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3888533816976552474}
+  m_GameObject: {fileID: 1609221124342774943}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -380,22 +254,9 @@ MonoBehaviour:
       VideoPath: Icebreaker 1 - Categories/A0-1c.mp4
     - VideoObject: {fileID: 102900000, guid: c1402a9de4e744ca68169270abd0553f, type: 3}
       VideoPath: Icebreaker 1 - Categories/A0-1d.mp4
-  Prompt: 'SPEAKER
+  Prompt: 'TA
 
-    Lando, we have an important mission for you. We''re building
-    a zoo, and need a list of 20 different animals!
-
-
-    LANDO
-
-    Oh boy here
-    we go again. Can you give me a hand? I don''t know that many animals!
-
-
-    TA
-
-    Let''s
-    help Lando out, what''s an animal that you know?'
+    Let''s help Lando out, what''s an animal that you know?'
   PrefabSpawnObjects:
   - TimeStamp: 12
     Position: {x: -508, y: -283, z: 0}
@@ -412,10 +273,10 @@ MonoBehaviour:
     Object: {fileID: 153039495174195224, guid: ad2594da19b224a1aab12e38ba0f943c, type: 3}
     Path: animal_sign
     Spawned: 0
-  NextNode: {fileID: 3759227880026303275}
+  NextNode: {fileID: 1695806640567887278}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &4710396803977172460
+--- !u!1 &3046862675673532497
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,8 +284,409 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7291033571070582610}
-  - component: {fileID: 3759227880026303275}
+  - component: {fileID: 3840463483516773059}
+  - component: {fileID: 3154272925997728808}
+  m_Layer: 5
+  m_Name: C1-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3840463483516773059
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046862675673532497}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8983771132528720781}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3154272925997728808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3046862675673532497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 2f8a25c9ab1f04455a2ce47c799d58f0, type: 3}
+  VideoFilePath: Icebreaker 1 - Categories/C1-0.mp4
+  VideoLoop: {fileID: 102900000, guid: e640b8bbbe9c94d48bde5b3313a8f7bc, type: 3}
+  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 1240322592583039757, guid: cc2801b31fc564681b61d27d38ad1899, type: 3}
+  PrefabPath: image_player
+  VideoOptions:
+  - Key: Lando-Guess
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: bf6a1c8abc7ab4de0b8f54b39150c57c, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1a.mp4
+    - VideoObject: {fileID: 102900000, guid: 076c924b9f1854667a55c76b3ed5bf16, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1b.mp4
+    - VideoObject: {fileID: 102900000, guid: 7725d84b0f30243f0adf404263e17c78, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1c.mp4
+    - VideoObject: {fileID: 102900000, guid: 854e2a207be0e41a9a70f7c0ebdaec42, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1d.mp4
+    - VideoObject: {fileID: 102900000, guid: c40bb73afc20347b59f4be92ba856ecd, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1e.mp4
+  - Key: Lando-Repeated
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: f08f050665cb344fe9d163833636e3b1, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1a.mp4
+    - VideoObject: {fileID: 102900000, guid: 78636ccfa885c42f9a194993ed227974, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1b.mp4
+    - VideoObject: {fileID: 102900000, guid: 58799c80232184a4594296b148fa4660, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1c.mp4
+    - VideoObject: {fileID: 102900000, guid: ed0fbfd727b354202af004a0eda4c8d2, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1d.mp4
+    - VideoObject: {fileID: 102900000, guid: 8dfb316ded42d4d35b88a40125746dcb, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1e.mp4
+    - VideoObject: {fileID: 102900000, guid: 98c281cf16fa6414cb9b6739411daf57, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1f.mp4
+  - Key: Lando-Right
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: d3434f270a6d54aa0bbf667d60c33338, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-2a.mp4
+    - VideoObject: {fileID: 102900000, guid: 1518a8e9c341e4a99a99da2426efc959, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-2b.mp4
+    - VideoObject: {fileID: 102900000, guid: 88fc13816aec3450c823b2e91115b731, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-2c.mp4
+  - Key: Student-Right
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: 6e7bb295479134e948d6e065cad139ca, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-3a.mp4
+    - VideoObject: {fileID: 102900000, guid: e9cc91938ae5f46768edb6034b0bf07e, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-3b.mp4
+    - VideoObject: {fileID: 102900000, guid: 3b52f9d7ed34941508e1b30d8e954d27, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-3d.mp4
+  Prompt: 'TA
+
+    Wow, 20 Lando bucks!'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 54318450627897109}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6239193119479158809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7915730163816212117}
+  - component: {fileID: 7056731024014317964}
+  m_Layer: 5
+  m_Name: C1-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7915730163816212117
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239193119479158809}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8983771132528720781}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7056731024014317964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6239193119479158809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 17cabddd29166488f95067036a5908da, type: 3}
+  VideoFilePath: Icebreaker 1 - Categories/C2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: e640b8bbbe9c94d48bde5b3313a8f7bc, type: 3}
+  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 1240322592583039757, guid: cc2801b31fc564681b61d27d38ad1899, type: 3}
+  PrefabPath: image_player
+  VideoOptions:
+  - Key: Lando-Guess
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: bf6a1c8abc7ab4de0b8f54b39150c57c, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1a.mp4
+    - VideoObject: {fileID: 102900000, guid: 076c924b9f1854667a55c76b3ed5bf16, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1b.mp4
+    - VideoObject: {fileID: 102900000, guid: 7725d84b0f30243f0adf404263e17c78, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1c.mp4
+    - VideoObject: {fileID: 102900000, guid: 854e2a207be0e41a9a70f7c0ebdaec42, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1d.mp4
+    - VideoObject: {fileID: 102900000, guid: c40bb73afc20347b59f4be92ba856ecd, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1a-1e.mp4
+  - Key: Lando-Repeated
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: f08f050665cb344fe9d163833636e3b1, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1a.mp4
+    - VideoObject: {fileID: 102900000, guid: 78636ccfa885c42f9a194993ed227974, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1b.mp4
+    - VideoObject: {fileID: 102900000, guid: 58799c80232184a4594296b148fa4660, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1c.mp4
+    - VideoObject: {fileID: 102900000, guid: ed0fbfd727b354202af004a0eda4c8d2, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1d.mp4
+    - VideoObject: {fileID: 102900000, guid: 8dfb316ded42d4d35b88a40125746dcb, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1e.mp4
+    - VideoObject: {fileID: 102900000, guid: 98c281cf16fa6414cb9b6739411daf57, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-1f.mp4
+  - Key: Lando-Right
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: d3434f270a6d54aa0bbf667d60c33338, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-2a.mp4
+    - VideoObject: {fileID: 102900000, guid: 1518a8e9c341e4a99a99da2426efc959, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-2b.mp4
+    - VideoObject: {fileID: 102900000, guid: 88fc13816aec3450c823b2e91115b731, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-2c.mp4
+  - Key: Student-Right
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: 6e7bb295479134e948d6e065cad139ca, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-3a.mp4
+    - VideoObject: {fileID: 102900000, guid: e9cc91938ae5f46768edb6034b0bf07e, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-3b.mp4
+    - VideoObject: {fileID: 102900000, guid: 3b52f9d7ed34941508e1b30d8e954d27, type: 3}
+      VideoPath: Icebreaker 1 - Categories/B1-3d.mp4
+  Prompt: 
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6728468901881842490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2183271502837637071}
+  - component: {fileID: 8020490653267113232}
+  m_Layer: 5
+  m_Name: A0-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2183271502837637071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728468901881842490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8983771132528720781}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8020490653267113232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728468901881842490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/icebreakers/Podington Bear - Kid Is Frangin
+  BgLoop: {fileID: 8300000, guid: d220cb53038954718bdc05b1514343a7, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 3
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: e640b8bbbe9c94d48bde5b3313a8f7bc, type: 3}
+  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 1240322592583039757, guid: cc2801b31fc564681b61d27d38ad1899, type: 3}
+  PrefabPath: image_player
+  VideoOptions:
+  - Key: Greeting
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: e5af2d966240d450a9bd931aca8bd3e2, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A1-0a.mp4
+    - VideoObject: {fileID: 102900000, guid: 4c0b5165cde7c4b9d8e091fbe897d242, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A1-0b.mp4
+    - VideoObject: {fileID: 102900000, guid: f842cc50d1f694ec78faf904cd561ad4, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A1-0c.mp4
+    - VideoObject: {fileID: 102900000, guid: daa34258047604758b2e84dbb2382bc0, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A1-0d.mp4
+  - Key: Respond-to-Student
+    Videos:
+    - VideoObject: {fileID: 102900000, guid: ec23681c367f24321b23ee7bb6423b7d, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A0-1a.mp4
+    - VideoObject: {fileID: 102900000, guid: 7ad0ea41e669f4172ab8b27e0445c281, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A0-1b.mp4
+    - VideoObject: {fileID: 102900000, guid: c1402a9de4e744ca68169270abd0553f, type: 3}
+      VideoPath: Icebreaker 1 - Categories/A0-1d.mp4
+  Prompt: '[Play greeting and respond to students
+
+
+    Repeat until enough kids
+    have trickled in]'
+  PrefabSpawnObjects: []
+  NextNode: {fileID: 7295711636581297514}
+  Options:
+  - Name: Greet Student
+    Action: Greeting -random
+    Node: {fileID: 0}
+  - Name: Respond to Student
+    Action: Respond-to-Student -random
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &6819558325027371756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5869696386558705930}
+  - component: {fileID: 8119827453950561054}
+  m_Layer: 0
+  m_Name: B2-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5869696386558705930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819558325027371756}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 36.42617, y: -11.035619, z: -8.700446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8983771132528720781}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8119827453950561054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819558325027371756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 55dcfd2910ad442879b10a328f11ccb4, type: 3}
+  VideoFilePath: Icebreaker 1 - Categories/B2a-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 1dc15e283180c4823ad3a9059f4b5539, type: 3}
+  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\nOkay guys, we only have 2 minutes to guess the rest of the 20 animals.
+    \n\n[PRESS NEXT]"
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: -508, y: -283, z: 0}
+    Object: {fileID: 153039495174195224, guid: 53a9e4350fcbd429ba55b31472f7ad7b, type: 3}
+    Path: timer
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 103, y: 315, z: 0}
+    Object: {fileID: 153039495174195224, guid: 150143b8120ac43ce8f3914a48d95331, type: 3}
+    Path: counter
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: -164, y: 315, z: 0}
+    Object: {fileID: 153039495174195224, guid: ad2594da19b224a1aab12e38ba0f943c, type: 3}
+    Path: animal_sign
+    Spawned: 0
+  NextNode: {fileID: 4147063727049633962}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7132982861963697001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5083779572536070615}
+  - component: {fileID: 1695806640567887278}
   m_Layer: 5
   m_Name: B1-1
   m_TagString: Untagged
@@ -432,18 +694,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7291033571070582610
+--- !u!224 &5083779572536070615
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710396803977172460}
+  m_GameObject: {fileID: 7132982861963697001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6849701041860130056}
+  m_Father: {fileID: 8983771132528720781}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -451,13 +713,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3759227880026303275
+--- !u!114 &1695806640567887278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710396803977172460}
+  m_GameObject: {fileID: 7132982861963697001}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -521,18 +783,7 @@ MonoBehaviour:
       VideoPath: Icebreaker 1 - Categories/B1-3b.mp4
     - VideoObject: {fileID: 102900000, guid: 3b52f9d7ed34941508e1b30d8e954d27, type: 3}
       VideoPath: Icebreaker 1 - Categories/B1-3d.mp4
-  Prompt: 'Play Lando-Guess when the students are stuck
-
-
-    Play Lando-Repeated
-    if he said something that kids already said
-
-
-    Play Lando-Right if Lando guessed
-    something that was not repeated
-
-
-    Play Student-Right if student is right'
+  Prompt: 
   PrefabSpawnObjects:
   - TimeStamp: 0
     Position: {x: -508, y: -283, z: 0}
@@ -549,22 +800,25 @@ MonoBehaviour:
     Object: {fileID: 153039495174195224, guid: ad2594da19b224a1aab12e38ba0f943c, type: 3}
     Path: animal_sign
     Spawned: 0
-  NextNode: {fileID: 5984350407160907163}
+  NextNode: {fileID: 8119827453950561054}
   Options:
-  - Name: Lando takes a guess
+  - Name: Students are stuck, Lando takes a guess
     Action: Lando-Guess -random -pop
     Node: {fileID: 0}
-  - Name: Lando is right
+  - Name: Lando guessed right (wasn't something already said)
     Action: Lando-Right -random -run "increase-counter"
     Node: {fileID: 0}
-  - Name: Lando repeated (is wrong)
+  - Name: Lando guessed wrong (someone already said this)
     Action: Lando-Repeated -random
     Node: {fileID: 0}
-  - Name: Student is right
+  - Name: Student guessed an animal correctly
     Action: Student-Right -random -run "increase-counter"
     Node: {fileID: 0}
+  - Name: Students guessed all 20
+    Action: 
+    Node: {fileID: 3154272925997728808}
   VisualNode: {fileID: 0}
---- !u!1 &5738404036692946913
+--- !u!1 &7782548773585707364
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,8 +826,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7304885707146684181}
-  - component: {fileID: 1886610828527484463}
+  - component: {fileID: 5099174463005796752}
+  - component: {fileID: 4147063727049633962}
   m_Layer: 5
   m_Name: B2-1
   m_TagString: Untagged
@@ -581,18 +835,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7304885707146684181
+--- !u!224 &5099174463005796752
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738404036692946913}
+  m_GameObject: {fileID: 7782548773585707364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6849701041860130056}
+  m_Father: {fileID: 8983771132528720781}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -600,13 +854,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1886610828527484463
+--- !u!114 &4147063727049633962
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5738404036692946913}
+  m_GameObject: {fileID: 7782548773585707364}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -675,26 +929,11 @@ MonoBehaviour:
     Are you ready? I''m going to start the timer!
 
 
-    PRESS TIMER
-    BUTTON
+    [Press start
+    timer button]
 
 
-    PRESS NEXT IF THE COUNTER IS OVER 20
-
-
-    Play Lando-Guess when
-    the students are stuck
-
-
-    Play Lando-Repeated if he said something that kids
-    already said
-
-
-    Play Lando-Right if Lando guessed something that was not repeated
-
-
-    Play
-    Student-Right if student is right'
+    [Press next when the number reaches 20]'
   PrefabSpawnObjects:
   - TimeStamp: 0
     Position: {x: -508, y: -283, z: 0}
@@ -711,317 +950,21 @@ MonoBehaviour:
     Object: {fileID: 153039495174195224, guid: ad2594da19b224a1aab12e38ba0f943c, type: 3}
     Path: animal_sign
     Spawned: 0
-  NextNode: {fileID: 605162896929868461}
+  NextNode: {fileID: 3154272925997728808}
   Options:
-  - Name: Lando makes a guess
+  - Name: Students are stuck, Lando takes a guess
     Action: Lando-Guess -random -pop
     Node: {fileID: 0}
-  - Name: Lando is right
+  - Name: Lando guessed right (wasn't something already said)
     Action: Lando-Right -random -run "increase-counter"
     Node: {fileID: 0}
-  - Name: Lando repeated (is wrong)
+  - Name: Lando guessed wrong (someone already said this)
     Action: Lando-Repeated -random
     Node: {fileID: 0}
-  - Name: Student is right
+  - Name: Student guessed an animal correctly
     Action: Student-Right -random -run "increase-counter"
     Node: {fileID: 0}
   - Name: Start Timer
     Action: 2-minute-timer
-    Node: {fileID: 0}
-  VisualNode: {fileID: 0}
---- !u!1 &8445889655427536540
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5654709499075127312}
-  - component: {fileID: 4777555642026055433}
-  m_Layer: 5
-  m_Name: C1-2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5654709499075127312
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445889655427536540}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6849701041860130056}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4777555642026055433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445889655427536540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 102900000, guid: 17cabddd29166488f95067036a5908da, type: 3}
-  VideoFilePath: Icebreaker 1 - Categories/C2-0.mp4
-  VideoLoop: {fileID: 102900000, guid: e640b8bbbe9c94d48bde5b3313a8f7bc, type: 3}
-  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 1240322592583039757, guid: cc2801b31fc564681b61d27d38ad1899, type: 3}
-  PrefabPath: image_player
-  VideoOptions:
-  - Key: Lando-Guess
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: bf6a1c8abc7ab4de0b8f54b39150c57c, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1a.mp4
-    - VideoObject: {fileID: 102900000, guid: 076c924b9f1854667a55c76b3ed5bf16, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1b.mp4
-    - VideoObject: {fileID: 102900000, guid: 7725d84b0f30243f0adf404263e17c78, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1c.mp4
-    - VideoObject: {fileID: 102900000, guid: 854e2a207be0e41a9a70f7c0ebdaec42, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1d.mp4
-    - VideoObject: {fileID: 102900000, guid: c40bb73afc20347b59f4be92ba856ecd, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1a-1e.mp4
-  - Key: Lando-Repeated
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: f08f050665cb344fe9d163833636e3b1, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1a.mp4
-    - VideoObject: {fileID: 102900000, guid: 78636ccfa885c42f9a194993ed227974, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1b.mp4
-    - VideoObject: {fileID: 102900000, guid: 58799c80232184a4594296b148fa4660, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1c.mp4
-    - VideoObject: {fileID: 102900000, guid: ed0fbfd727b354202af004a0eda4c8d2, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1d.mp4
-    - VideoObject: {fileID: 102900000, guid: 8dfb316ded42d4d35b88a40125746dcb, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1e.mp4
-    - VideoObject: {fileID: 102900000, guid: 98c281cf16fa6414cb9b6739411daf57, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-1f.mp4
-  - Key: Lando-Right
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: d3434f270a6d54aa0bbf667d60c33338, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-2a.mp4
-    - VideoObject: {fileID: 102900000, guid: 1518a8e9c341e4a99a99da2426efc959, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-2b.mp4
-    - VideoObject: {fileID: 102900000, guid: 88fc13816aec3450c823b2e91115b731, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-2c.mp4
-  - Key: Student-Right
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: 6e7bb295479134e948d6e065cad139ca, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-3a.mp4
-    - VideoObject: {fileID: 102900000, guid: e9cc91938ae5f46768edb6034b0bf07e, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-3b.mp4
-    - VideoObject: {fileID: 102900000, guid: 3b52f9d7ed34941508e1b30d8e954d27, type: 3}
-      VideoPath: Icebreaker 1 - Categories/B1-3d.mp4
-  Prompt: 'LANDO
-
-    That was a lot of fun everyone. Thank you so much for giving
-    me a hand!'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 0}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &9007255171191420009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8274972008354385807}
-  - component: {fileID: 5984350407160907163}
-  m_Layer: 0
-  m_Name: B2-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8274972008354385807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9007255171191420009}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.42617, y: -11.035619, z: -8.700446}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6849701041860130056}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5984350407160907163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9007255171191420009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 102900000, guid: 55dcfd2910ad442879b10a328f11ccb4, type: 3}
-  VideoFilePath: Icebreaker 1 - Categories/B2a-0.mp4
-  VideoLoop: {fileID: 102900000, guid: 1dc15e283180c4823ad3a9059f4b5539, type: 3}
-  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L1.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: "SPEAKER\nLando, we have to hurry. Our investors in the zoo need this as
-    soon as possible.\n\nLANDO\nAlright it's crunch time. We only have 2 minutes
-    to do this!\n\nTA\nOkay guys, we only have 2 minutes to guess the rest of the
-    20 animals. \n\nPRESS NEXT"
-  PrefabSpawnObjects:
-  - TimeStamp: 0
-    Position: {x: -508, y: -283, z: 0}
-    Object: {fileID: 153039495174195224, guid: 53a9e4350fcbd429ba55b31472f7ad7b, type: 3}
-    Path: timer
-    Spawned: 0
-  - TimeStamp: 0
-    Position: {x: 103, y: 315, z: 0}
-    Object: {fileID: 153039495174195224, guid: 150143b8120ac43ce8f3914a48d95331, type: 3}
-    Path: counter
-    Spawned: 0
-  - TimeStamp: 0
-    Position: {x: -164, y: 315, z: 0}
-    Object: {fileID: 153039495174195224, guid: ad2594da19b224a1aab12e38ba0f943c, type: 3}
-    Path: animal_sign
-    Spawned: 0
-  NextNode: {fileID: 1886610828527484463}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &9134302938138953151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4462868408477978954}
-  - component: {fileID: 5543160591548021653}
-  m_Layer: 5
-  m_Name: A0-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4462868408477978954
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134302938138953151}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6849701041860130056}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5543160591548021653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9134302938138953151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: episodes/icebreakers/Podington Bear - Kid Is Frangin
-  BgLoop: {fileID: 8300000, guid: d220cb53038954718bdc05b1514343a7, type: 3}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 3
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: e640b8bbbe9c94d48bde5b3313a8f7bc, type: 3}
-  VideoLoopFilePath: Icebreaker 1 - Categories/A0-L0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 1240322592583039757, guid: cc2801b31fc564681b61d27d38ad1899, type: 3}
-  PrefabPath: image_player
-  VideoOptions:
-  - Key: Greeting
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: e5af2d966240d450a9bd931aca8bd3e2, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A1-0a.mp4
-    - VideoObject: {fileID: 102900000, guid: 4c0b5165cde7c4b9d8e091fbe897d242, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A1-0b.mp4
-    - VideoObject: {fileID: 102900000, guid: f842cc50d1f694ec78faf904cd561ad4, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A1-0c.mp4
-    - VideoObject: {fileID: 102900000, guid: daa34258047604758b2e84dbb2382bc0, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A1-0d.mp4
-  - Key: Respond-to-Student
-    Videos:
-    - VideoObject: {fileID: 102900000, guid: ec23681c367f24321b23ee7bb6423b7d, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A0-1a.mp4
-    - VideoObject: {fileID: 102900000, guid: 7ad0ea41e669f4172ab8b27e0445c281, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A0-1b.mp4
-    - VideoObject: {fileID: 102900000, guid: 00974cefff426406d8fc76323dbb5765, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A0-1c.mp4
-    - VideoObject: {fileID: 102900000, guid: c1402a9de4e744ca68169270abd0553f, type: 3}
-      VideoPath: Icebreaker 1 - Categories/A0-1d.mp4
-  Prompt: '[Play Greeting when a student comes in, have the student introduce themselves,
-    and play Respond to Student afterwards]
-
-
-    Press Next once enough students
-    have come in.'
-  PrefabSpawnObjects: []
-  NextNode: {fileID: 5088031723319911407}
-  Options:
-  - Name: Greet Student
-    Action: Greeting -random
-    Node: {fileID: 0}
-  - Name: Respond to Student
-    Action: Respond-to-Student -random
     Node: {fileID: 0}
   VisualNode: {fileID: 0}

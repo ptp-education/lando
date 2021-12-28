@@ -161,13 +161,14 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
                 if (lastRandomIndex_.ContainsKey(videoKey))
                 {
                     int previousIndex = lastRandomIndex_[videoKey];
-                    while (previousIndex != index && vo.Videos.Count > 1)
+                    while (previousIndex == index && vo.Videos.Count > 1)
                     {
                         index = Random.Range(0, vo.Videos.Count);
                     }
                 }
                 
             }
+            lastRandomIndex_[videoKey] = index;
             videoPath = vo.Videos[index].VideoPath;
 
             if (pop)

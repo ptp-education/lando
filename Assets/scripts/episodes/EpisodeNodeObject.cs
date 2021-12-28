@@ -22,7 +22,7 @@ public class EpisodeNodeObject : MonoBehaviour
         o.AddComponent<RectTransform>();
         o.transform.SetParent(transform);
         spawnedObjectParent_ = o.GetComponent<RectTransform>();
-        spawnedObjectParent_.localScale = new Vector3(-1, 1, 1);
+        spawnedObjectParent_.transform.localScale = Vector3.one;
     }
 
     public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
