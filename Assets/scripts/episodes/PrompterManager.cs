@@ -20,8 +20,11 @@ public class PrompterManager : GameManager
     [SerializeField] private TextMeshProUGUI teleprompter_;
     [SerializeField] private GameObject taPanel_;
 
+    [SerializeField] private Image adminModeBg_;
+
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
+    private bool adminMode_ = false;
     private bool endOfClass_ = false;
     private List<string> previousNodes_ = new List<string>();
     private List<string> episodePaths = new List<string>();
@@ -49,6 +52,8 @@ public class PrompterManager : GameManager
         }
 
         episodePaths = new List<string>(sf.FileNames);
+
+        RefreshAdminMode();
     }
 
     private void Update()
@@ -74,7 +79,7 @@ public class PrompterManager : GameManager
 
     private void SpawnButtons()
     {
-        if (currentNode_ == null)
+        if (currentNode_ == null || !adminMode_)
         {
             return;
         }
@@ -152,6 +157,18 @@ public class PrompterManager : GameManager
     public void OnEpisodeLoadClick()
     {
         UpdateEpisode(episodePaths[episodesDropdown_.value]);
+    }
+
+    public void OnAdminModeClick()
+    {
+        adminMode_ = !adminMode_;
+        RefreshAdminMode();
+    }
+
+    private void RefreshAdminMode()
+    {
+        adminModeBg_.color = adminMode_ ? Color.green : Color.red;
+
     }
 
     private string FormatText(string text)
