@@ -11,7 +11,7 @@ using ExitGames.Client.Photon;
 public class Lobby : MonoBehaviourPunCallbacks
 {
     public const string kShareMode = "share";
-    public const string kPromptMode= "prompt";
+    public const string kPromptMode= "prompt_2";
 
     [SerializeField] Text status_;
     [SerializeField] InputField inputField_;
@@ -71,10 +71,10 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         inputField_.interactable = false;
 
-        if (string.Equals(buttonToggle_.Selected, kShareMode))
+        if (string.Equals(buttonToggle_.Selected, "share"))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(kShareMode);
-        } else if (string.Equals(buttonToggle_.Selected, kPromptMode))
+        } else if (string.Equals(buttonToggle_.Selected, "prompt"))
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene(kPromptMode);
         }

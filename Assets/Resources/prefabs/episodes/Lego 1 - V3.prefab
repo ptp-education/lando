@@ -1,0 +1,1578 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &56849800329891595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7594532894257887036}
+  - component: {fileID: 667799480879118011}
+  m_Layer: 5
+  m_Name: P6-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7594532894257887036
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56849800329891595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &667799480879118011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56849800329891595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    This time we want the bridge to be wide. This is going to be
+    a popular destination, and we need a two lane road.
+
+
+    Annnnd we have boulders
+    again. Alright architects, you know what to do.
+
+
+    TA
+
+    [Hand out paper
+    with 2 potatos]
+
+
+    DIDI
+
+    Oh wait, I just heard from the mayor. They''re
+    so happy with work, that they want you to choose the color of this bridge! So
+    whoever has the strongest bridge, will get to choose the color!
+
+
+    As always,
+    I''ll be here if you need a hint!
+
+
+    [Build bridge]'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: 
+    Ran: 0
+  - TimeStamp: 0
+    Command: 
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: 'Hint: Build a wide platform'
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: How to reinforce platform'
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: How to build legs'
+    Action: 
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &703832787300955840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5618429950706294155}
+  - component: {fileID: 5858920343427918980}
+  m_Layer: 5
+  m_Name: P8-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5618429950706294155
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703832787300955840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5858920343427918980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703832787300955840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Architects, thanks to your bridge, the farmhouse looks incredible!
+
+
+    Now
+    the farm just looks a little empty... architects, what can we build to fill in
+    this farm?
+
+
+    PROMPT KIDS TO BUILD THINGS
+
+    [Prompt animal fence]
+
+    [Prompt
+    farm plots]
+
+    [Prompt vehicles]
+
+    [Prompt animal fence]
+
+    [Prompt arch
+    bridge, nice spot on island. Must build an arch bridge for aesthetic reasons.
+    Ask if they know what an arch bridge is]
+
+
+    [at end of class]
+
+    DIDI
+
+    Alright,
+    this looks great everyone. I think we''re done for the day!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Corn Plant
+    Action: 
+    Node: {fileID: 0}
+  - Name: Cotton Plant
+    Action: 
+    Node: {fileID: 0}
+  - Name: Rice Plant
+    Action: 
+    Node: {fileID: 0}
+  - Name: Apple Tree
+    Action: 
+    Node: {fileID: 0}
+  - Name: Pear Tree
+    Action: 
+    Node: {fileID: 0}
+  - Name: Pig
+    Action: 
+    Node: {fileID: 0}
+  - Name: Chicken
+    Action: 
+    Node: {fileID: 0}
+  - Name: Cow
+    Action: 
+    Node: {fileID: 0}
+  - Name: Tractor
+    Action: 
+    Node: {fileID: 0}
+  - Name: Arch Bridge
+    Action: 
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &1077662913275823494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4522629464244044894}
+  - component: {fileID: 4820473286357108703}
+  m_Layer: 5
+  m_Name: P7-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4522629464244044894
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077662913275823494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4820473286357108703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077662913275823494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: '[TA tests bridges]
+
+
+    DIDI
+
+    Incredible work everyone.
+
+
+    Now...your
+    bridge supported 8 pounds! That''s some solid engineering. Architect! What color
+    do you want this new bridge to be?'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: 
+    Ran: 0
+  - TimeStamp: 0
+    Command: 
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Color 1
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 2
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 3
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 4
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 5
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 6
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 7
+    Action: 
+    Node: {fileID: 0}
+  - Name: Color 8
+    Action: 
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &1472822703522182848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3940239836989711823}
+  - component: {fileID: 8457247841448550791}
+  m_Layer: 5
+  m_Name: P2-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3940239836989711823
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472822703522182848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8457247841448550791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472822703522182848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    My name is Didi! I moved to Scooterville a few months ago to
+    help the community here develop their town!'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/door-open"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2866819656578797660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6664416108408778907}
+  - component: {fileID: 3398987678973056035}
+  m_Layer: 5
+  m_Name: Lego 1 - V3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6664416108408778907
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866819656578797660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4511637909485262041}
+  - {fileID: 6027731301934441022}
+  - {fileID: 428881542287633040}
+  - {fileID: 589713784407525007}
+  - {fileID: 1656196149169867895}
+  - {fileID: 3940239836989711823}
+  - {fileID: 2316645228830893380}
+  - {fileID: 461511103455246092}
+  - {fileID: 7767085461733709286}
+  - {fileID: 2273869297660421467}
+  - {fileID: 2389833902144064892}
+  - {fileID: 7676611255246197473}
+  - {fileID: 7594532894257887036}
+  - {fileID: 4522629464244044894}
+  - {fileID: 8934405785340104898}
+  - {fileID: 5618429950706294155}
+  - {fileID: 4732804132491880105}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3398987678973056035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2866819656578797660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 5737171246588853766}
+--- !u!1 &3701688939721563622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8934405785340104898}
+  - component: {fileID: 2515235632648902837}
+  m_Layer: 5
+  m_Name: P7-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8934405785340104898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701688939721563622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2515235632648902837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3701688939721563622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Wow, look that farmhouse growing!'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: 
+    Ran: 0
+  - TimeStamp: 0
+    Command: 
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4251681162261666743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2316645228830893380}
+  - component: {fileID: 876039405098528035}
+  m_Layer: 5
+  m_Name: P2-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2316645228830893380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251681162261666743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &876039405098528035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4251681162261666743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    I''m a real estate developer! I help build useful things in
+    empty plots of land. Whether that''s a new farm, a new restaurant, or a new house!'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/door-open"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4987584819916900508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2389833902144064892}
+  - component: {fileID: 1466404622402892058}
+  m_Layer: 5
+  m_Name: P4-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2389833902144064892
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987584819916900508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1466404622402892058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4987584819916900508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "TA\n[Build crappy bridge that can support a bit of weight.]\nDidi, sending
+    one bridge your way.\n[PRESS Bridge Formed]\n\nDIDI \nHow many trucks can your
+    bridge carry?\n[TA puts a 2 lb on it, succeeds]\n[+1 lb x2]\n\nDIDI\nTwo trucks!\n[TA
+    puts a 5lb on it, fails]\n\nDIDI\nToo bad! Let's see what your young architects
+    can do. Let me know if you want a hint."
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Bridge Formed
+    Action: 
+    Node: {fileID: 0}
+  - Name: +1 lb
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: Build a Platform'
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: Reinforce a Platform'
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: Legs to Connect'
+    Action: 
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &5796257803235091279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7767085461733709286}
+  - component: {fileID: 5680433097185750297}
+  m_Layer: 5
+  m_Name: P3-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7767085461733709286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5796257803235091279}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5680433097185750297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5796257803235091279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    That island! What a beautiful spot for a farm.
+
+
+    [Talk with
+    kids, how to build a farm on that island (build a bridge)]
+
+    [How to build
+    a farmhouse? (wood)]
+
+    [How to get wood? (trees in the corner)]
+
+
+    Let''s
+    go! First step, build a bridge to the forest. '
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6543614675678594740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 461511103455246092}
+  - component: {fileID: 7171931631374271923}
+  m_Layer: 5
+  m_Name: P2-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &461511103455246092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543614675678594740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7171931631374271923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543614675678594740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    There''s so much to build!! We want to build a brand new farm
+    on an island! It''s going to be sooo beautiful, we''re going to attract a lot
+    of people here. Come come let me show you!'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/door-open"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6593858739944213712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2273869297660421467}
+  - component: {fileID: 2343704871398357116}
+  m_Layer: 5
+  m_Name: P4-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2273869297660421467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593858739944213712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2343704871398357116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593858739944213712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    There''s rocks in the way! We''ll have to build over these rocks.
+
+
+    [TA
+    hand out paper and one potato]
+
+
+    TA
+
+    Will these bridges have to be strong
+    Didi?
+
+
+    DIDI
+
+    Make them as strong as possible!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6966591534438536962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7676611255246197473}
+  - component: {fileID: 8232391156256188792}
+  m_Layer: 5
+  m_Name: P5-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7676611255246197473
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6966591534438536962}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8232391156256188792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6966591534438536962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Good job everyone, we got so much lumber! Didi, can you zoom in
+    on the river near the island?
+
+
+    DIDI
+
+    Sure can!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7143604322883879077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4732804132491880105}
+  - component: {fileID: 5603231443688904419}
+  m_Layer: 5
+  m_Name: P9-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4732804132491880105
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143604322883879077}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5603231443688904419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7143604322883879077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Bridges, check! Farm, check!
+
+
+    TA
+
+    This is great everyone.
+    What do you want to build in the next architecture adventure?'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Corn Plant
+    Action: 
+    Node: {fileID: 0}
+  - Name: Cotton Plant
+    Action: 
+    Node: {fileID: 0}
+  - Name: Rice Plant
+    Action: 
+    Node: {fileID: 0}
+  - Name: Apple Tree
+    Action: 
+    Node: {fileID: 0}
+  - Name: Pear Tree
+    Action: 
+    Node: {fileID: 0}
+  - Name: Pig
+    Action: 
+    Node: {fileID: 0}
+  - Name: Chicken
+    Action: 
+    Node: {fileID: 0}
+  - Name: Cow
+    Action: 
+    Node: {fileID: 0}
+  - Name: Tractor
+    Action: 
+    Node: {fileID: 0}
+  - Name: Arch Bridge
+    Action: 
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &7144181541086773002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 428881542287633040}
+  - component: {fileID: 267706841648335934}
+  m_Layer: 5
+  m_Name: P1-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &428881542287633040
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7144181541086773002}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &267706841648335934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7144181541086773002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    What do you think everyone, what should we do?'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/airdrop"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7418913655207214066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656196149169867895}
+  - component: {fileID: 7127919692581935468}
+  m_Layer: 5
+  m_Name: P2-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1656196149169867895
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418913655207214066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7127919692581935468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7418913655207214066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Hello! You must be George!
+
+
+    TA
+
+    Umm, no I''m Felix.
+    I''m here with a group of young architects.'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/door-open"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &8209336229722861715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589713784407525007}
+  - component: {fileID: 2823418141446077648}
+  m_Layer: 5
+  m_Name: P1-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &589713784407525007
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8209336229722861715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2823418141446077648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8209336229722861715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    This is....kind of boring..'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/crickets"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &9056833177154142252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4511637909485262041}
+  - component: {fileID: 5737171246588853766}
+  m_Layer: 5
+  m_Name: P0-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4511637909485262041
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056833177154142252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5737171246588853766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9056833177154142252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    [Give everyone name tags to fill out]
+
+
+    Welcome! So we''re
+    here to learn how to become architects. And what best way to do this, than to
+    start in a town that hasn''t fully developed yet.
+
+
+    Does anyone know what
+    an undeveloped town is?
+
+
+    Let''s go to one! I know one not too far from here....called
+    Scooterville.
+
+    [Take out phone, and pretend to press a button]'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &9202924576450644265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6027731301934441022}
+  - component: {fileID: 5449730058874730456}
+  m_Layer: 5
+  m_Name: P1-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6027731301934441022
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202924576450644265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6664416108408778907}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5449730058874730456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9202924576450644265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Here we are, in Scooterville! I don''t really see anything....
+
+
+    Oh
+    there''s a sign, can anyone read that to us?
+
+
+    [Wait for a kid to read out
+    the sign]
+
+    [Talk about what Property Developer means]'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "sfx/car-starting"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}

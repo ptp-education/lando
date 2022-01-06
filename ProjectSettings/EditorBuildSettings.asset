@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/share.unity
     guid: f9bc55a0209de43f88847faf4489bc69
+  - enabled: 1
+    path: Assets/scenes/prompt_2.unity
+    guid: 1153000ef27a646ea9a35112c9cfae23
   m_configObjects: {}
