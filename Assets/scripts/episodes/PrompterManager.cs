@@ -18,7 +18,8 @@ public class PrompterManager : GameManager
 {
     [SerializeField] private Dropdown episodesDropdown_;
     [SerializeField] private TextMeshProUGUI teleprompter_;
-    [SerializeField] private GameObject taPanel_;
+    [SerializeField] private GameObject buttonsPanel_;
+    [SerializeField] private GameObject prompterPanel_;
 
     [SerializeField] private Image adminModeBg_;
 
@@ -69,12 +70,12 @@ public class PrompterManager : GameManager
 
     private void AdjustPanelPosition(int position)
     {
-        taPanel_.transform.position = new Vector3(taPanel_.transform.position.x, taPanel_.transform.position.y + position, taPanel_.transform.position.z);
+        prompterPanel_.transform.position = new Vector3(prompterPanel_.transform.position.x, prompterPanel_.transform.position.y + position, prompterPanel_.transform.position.z);
     }
 
     private void ResetTaPanelPosition()
     {
-        taPanel_.transform.localPosition = new Vector3(0, -100, taPanel_.transform.position.z);
+        prompterPanel_.transform.localPosition = new Vector3(0, -100, prompterPanel_.transform.position.z);
     }
 
     private void SpawnButtons()
@@ -90,12 +91,12 @@ public class PrompterManager : GameManager
         if (currentNode_.NextNode != null)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(taPanel_.transform, true);
+            b.transform.SetParent(buttonsPanel_.transform, true);
             b.Init("Next", GameManager.NODE_PREFIX + currentNode_.NextNode.name, "n", CommandButtonPressed);
         } else if (currentNode_.NextNode == null && currentNode_.Options.Count == 0)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(taPanel_.transform, true);
+            b.transform.SetParent(buttonsPanel_.transform, true);
             b.Init("End of class", "", "-", CommandButtonPressed);
             b.Interactable = false;
 
@@ -106,7 +107,7 @@ public class PrompterManager : GameManager
         for(int i = 0; i < currentNode_.Options.Count; i++)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(taPanel_.transform, true);
+            b.transform.SetParent(buttonsPanel_.transform, true);
 
             string action = "";
             if (currentNode_.Options[i].Node != null)
@@ -130,14 +131,18 @@ public class PrompterManager : GameManager
         if (previousNodes_.Count >= 2)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(taPanel_.transform, true);
+            b.transform.SetParent(buttonsPanel_.transform, true);
             b.Init("Undo", "", "u", UndoButtonPressed);
         }
     }
 
     private void HideButtons()
     {
-        foreach(PromptButton b in taPanel_.GetComponentsInChildren<PromptButton>())
+        foreach(PromptButton b in buttonsPanel_.GetComponentsInChildren<PromptButton>())
+        {
+            GameObject.Destroy(b.gameObject);
+        }
+        foreach (PromptButton b in prompterPanel_.GetComponentsInChildren<PromptButton>())
         {
             GameObject.Destroy(b.gameObject);
         }
@@ -169,6 +174,7 @@ public class PrompterManager : GameManager
     {
         adminModeBg_.color = adminMode_ ? Color.green : Color.red;
 
+        buttonsPanel_.gameObject.SetActive(adminMode_);
     }
 
     private string FormatText(string text)
