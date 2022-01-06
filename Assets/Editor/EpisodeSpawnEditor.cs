@@ -187,7 +187,7 @@ public class EpisodeSpawnEditor : EditorWindow
             var r1 = @"\t{2,}.*\n((\t{2,}[A-Z]+\d+\-\d+\.\d+\n).*)(.|\n)*?<\/i>";
             var r2 = @"\t{2,}.*\n((\t{2,}[A-Z]+\d+\-\d+\.\d+\n).*)(.|\n)*?";
 
-            var r3 = @"(\t{2,}.*\n(\t{3}(([A-Z]+\d+\-[A-Za-z0-9]+).*\n)){2}(\t{4}.*\n){2})";
+            var r3 = @"(\t{2,}.*\n(\t{3}(([A-Z]+\d+\-[A-Za-z0-9]+).*\n)){2}(\t{4}.*\n(\n)?)+)";
             var r4 = @"\t{2,}.*\n(\t{3}(([A-Z]+\d+\-[A-Za-z0-9]+).*\n)){2}";
 
 
@@ -224,7 +224,7 @@ public class EpisodeSpawnEditor : EditorWindow
                         if (optionNode.Node.Script.StartsWith("\n"))
                             optionNode.Node.Script = optionNode.Node.Script.Remove(0, 1);
 
-                        while (optionNode.Node.Script.EndsWith("\n"))
+                        if (optionNode.Node.Script.EndsWith("\n"))
                             optionNode.Node.Script = optionNode.Node.Script.Remove(optionNode.Node.Script.Length - 1);
 
                         n.Options.Add(optionNode);
@@ -242,11 +242,15 @@ public class EpisodeSpawnEditor : EditorWindow
             //cleaning script \t and \n
             n.Script = n.Script.Replace("\t", "");
 
-            if (n.Script.StartsWith("\n"))
+            while (n.Script.StartsWith("\n"))
+            {
                 n.Script = n.Script.Remove(0, 1);
+            }
 
-            if (n.Script.EndsWith("\n"))
+            while (n.Script.EndsWith("\n"))
+            {
                 n.Script = n.Script.Remove(n.Script.Length - 1);
+            }
         }
     }
 

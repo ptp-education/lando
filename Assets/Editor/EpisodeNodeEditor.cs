@@ -153,6 +153,9 @@ public class EpisodeNodeEditor : Editor
             }
         }
 
+        EditorGUILayout.LabelField("Command Line");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("CommandLines"));
+
         EditorGUILayout.LabelField("Next Node - leave empty if last episode");
         myTarget.NextNode = (EpisodeNode)EditorGUILayout.ObjectField(myTarget.NextNode, typeof(EpisodeNode), true);
 

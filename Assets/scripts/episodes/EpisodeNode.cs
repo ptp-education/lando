@@ -35,6 +35,14 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
+    public class CommandLine
+    {
+        [SerializeField] public float TimeStamp;
+        [SerializeField] public string Command;
+        [HideInInspector] public bool Ran = false;
+    }
+
+    [Serializable]
     public class VideoOption
     {
         [SerializeField] public string Key;
@@ -79,8 +87,10 @@ public class EpisodeNode : MonoBehaviour
     //ALL OPTIONS
     public string Prompt;
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
+    public List<CommandLine> CommandLines = new List<CommandLine>();
     public EpisodeNode NextNode;
     public List<Option> Options = new List<Option>();
+
 
     public Episode Episode
     {

@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
 
             //currently not checking for cached action so that action can repeat
             string strippedActions = StripAndRunActions(command);
+            strippedActions = StripAndRunSfxActions(command);
             NewActionInternal(strippedActions);
 
             cachedAction_ = command;
@@ -186,6 +187,36 @@ public class GameManager : MonoBehaviour
             }
 
             NewActionInternal(ret.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
+            ret = ret.Remove(runStart, secondQuote - runStart + 1);
+        }
+        return ret;
+    }
+
+    //TODO: condense logic
+    private string StripAndRunSfxActions(string action)
+    {
+        const string kRunCommand = "-sfx";
+
+        string ret = action;
+
+        while (ret.IndexOf(kRunCommand) != -1)
+        {
+            int runStart = ret.IndexOf(kRunCommand);
+            int firstQuote = ret.IndexOf('\"', runStart);
+            if (firstQuote == -1)
+            {
+                Debug.LogWarning("No matching action for argument -run: " + action);
+                return ret;
+            }
+            int secondQuote = ret.IndexOf('\"', firstQuote + 1);
+            if (secondQuote == -1)
+            {
+                Debug.LogWarning("Did not close quotations for " + action);
+                return ret;
+            }
+
+            AudioPlayer.PlayAudio(ret.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
+
             ret = ret.Remove(runStart, secondQuote - runStart + 1);
         }
         return ret;

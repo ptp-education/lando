@@ -64,6 +64,7 @@ public class EpisodeNodeObject : MonoBehaviour
     {
         Hidden = false;
         ResetSpawnedObjects();
+        ResetCommandLines();
     }
 
     public virtual void Loop()
@@ -112,6 +113,18 @@ public class EpisodeNodeObject : MonoBehaviour
                 }
             }
         }
+
+        foreach (EpisodeNode.CommandLine c in episodeNode_.CommandLines)
+        {
+            if (timer_ > c.TimeStamp)
+            {
+                if (!c.Ran)
+                {
+                    gameManager_.NewNodeAction(GameManager.ACTION_PREFIX + c.Command);
+                    c.Ran = true;
+                }
+            }
+        }
     }
 
     private void SpawnObject(EpisodeNode.PrefabSpawnObject prefabSpawnObject)
@@ -139,5 +152,14 @@ public class EpisodeNodeObject : MonoBehaviour
             Destroy(o.gameObject);
         }
         spawnedPrefabs_ = new List<SpawnedObject>();
+    }
+
+    private void ResetCommandLines()
+    {
+        timer_ = 0f;
+        foreach(EpisodeNode.CommandLine c in episodeNode_.CommandLines)
+        {
+            c.Ran = false;
+        }
     }
 }
