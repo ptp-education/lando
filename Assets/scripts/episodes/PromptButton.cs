@@ -43,9 +43,12 @@ public class PromptButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(commandKey_))
+        if (commandKey_ != null && commandKey_.Length > 0)
         {
-            callback_.Invoke(action_);
+            if (Input.GetKeyDown(commandKey_))
+            {
+                callback_.Invoke(action_);
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &56849800329891595
+--- !u!1 &13218959914552991
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7594532894257887036}
-  - component: {fileID: 667799480879118011}
+  - component: {fileID: 7602706652561962664}
+  - component: {fileID: 694554982464861999}
   m_Layer: 5
   m_Name: P6-0
   m_TagString: Untagged
@@ -17,32 +17,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7594532894257887036
+--- !u!224 &7602706652561962664
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56849800329891595}
+  m_GameObject: {fileID: 13218959914552991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 12
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &667799480879118011
+--- !u!114 &694554982464861999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56849800329891595}
+  m_GameObject: {fileID: 13218959914552991}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -53,10 +53,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -66,12 +66,12 @@ MonoBehaviour:
   VideoOptions: []
   Prompt: 'DIDI
 
-    This time we want the bridge to be wide. This is going to be
-    a popular destination, and we need a two lane road.
+    Okay so this time we want the bridge to be wide. This is going
+    to be a popular destination, and we need a two lane road.
 
 
-    Annnnd we have boulders
-    again. Alright architects, you know what to do.
+    Annnnd we have
+    boulders again. Architects, you know what to do.
 
 
     TA
@@ -83,36 +83,14 @@ MonoBehaviour:
     DIDI
 
     Oh wait, I just heard from the mayor. They''re
-    so happy with work, that they want you to choose the color of this bridge! So
-    whoever has the strongest bridge, will get to choose the color!
-
-
-    As always,
-    I''ll be here if you need a hint!
-
-
-    [Build bridge]'
+    so happy with work, that they want YOU to choose the color of this bridge! So
+    whoever has the strongest bridge can choose the color!'
   PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: 
-    Ran: 0
-  - TimeStamp: 0
-    Command: 
-    Ran: 0
-  NextNode: {fileID: 0}
-  Options:
-  - Name: 'Hint: Build a wide platform'
-    Action: 
-    Node: {fileID: 0}
-  - Name: 'Hint: How to reinforce platform'
-    Action: 
-    Node: {fileID: 0}
-  - Name: 'Hint: How to build legs'
-    Action: 
-    Node: {fileID: 0}
+  CommandLines: []
+  NextNode: {fileID: 8191780561323609574}
+  Options: []
   VisualNode: {fileID: 0}
---- !u!1 &703832787300955840
+--- !u!1 &658521933120173908
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,8 +98,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5618429950706294155}
-  - component: {fileID: 5858920343427918980}
+  - component: {fileID: 5557338864574880799}
+  - component: {fileID: 5883987031396347152}
   m_Layer: 5
   m_Name: P8-0
   m_TagString: Untagged
@@ -129,32 +107,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5618429950706294155
+--- !u!224 &5557338864574880799
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703832787300955840}
+  m_GameObject: {fileID: 658521933120173908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 15
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5858920343427918980
+--- !u!114 &5883987031396347152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703832787300955840}
+  m_GameObject: {fileID: 658521933120173908}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -165,10 +143,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 4ec095645f30c40a58c8f1f822f99e05, type: 3}
+  VideoFilePath: Lego 1 - v3/P8-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 4ec095645f30c40a58c8f1f822f99e05, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P8-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -208,42 +186,55 @@ MonoBehaviour:
 
     Alright,
     this looks great everyone. I think we''re done for the day!'
-  PrefabSpawnObjects: []
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: -156, y: 184, z: 0}
+    Object: {fileID: 363232926905923021, guid: 1f3f30d55d70546aebf0b3b662fc6326, type: 3}
+    Path: farmhouse
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 4106041531412420710, guid: c85ba762af991415c8dd284eb0a211f0, type: 3}
+    Path: farm
+    Spawned: 0
   CommandLines: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 5559028857498408823}
   Options:
-  - Name: Corn Plant
-    Action: 
-    Node: {fileID: 0}
-  - Name: Cotton Plant
-    Action: 
-    Node: {fileID: 0}
-  - Name: Rice Plant
-    Action: 
-    Node: {fileID: 0}
   - Name: Apple Tree
-    Action: 
+    Action: add-farm-appletree
     Node: {fileID: 0}
   - Name: Pear Tree
-    Action: 
+    Action: add-farm-peartree
+    Node: {fileID: 0}
+  - Name: Orange Tree
+    Action: add-farm-orangetree
     Node: {fileID: 0}
   - Name: Pig
-    Action: 
+    Action: add-farm-pig
     Node: {fileID: 0}
   - Name: Chicken
-    Action: 
+    Action: add-farm-chicken
     Node: {fileID: 0}
   - Name: Cow
-    Action: 
+    Action: add-farm-cow
     Node: {fileID: 0}
   - Name: Tractor
-    Action: 
+    Action: add-farm-tractor
     Node: {fileID: 0}
   - Name: Arch Bridge
-    Action: 
+    Action: add-farm-archbridge
+    Node: {fileID: 0}
+  - Name: Corn
+    Action: add-farm-corn
+    Node: {fileID: 0}
+  - Name: Cotton
+    Action: add-farm-cotton
+    Node: {fileID: 0}
+  - Name: Wheat
+    Action: add-farm-wheat
     Node: {fileID: 0}
   VisualNode: {fileID: 0}
---- !u!1 &1077662913275823494
+--- !u!1 &1014346415605662738
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,41 +242,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4522629464244044894}
-  - component: {fileID: 4820473286357108703}
+  - component: {fileID: 4477868359161841098}
+  - component: {fileID: 4756589472901334603}
   m_Layer: 5
-  m_Name: P7-0
+  m_Name: P6-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4522629464244044894
+--- !u!224 &4477868359161841098
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077662913275823494}
+  m_GameObject: {fileID: 1014346415605662738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 13
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4820473286357108703
+--- !u!114 &4756589472901334603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077662913275823494}
+  m_GameObject: {fileID: 1014346415605662738}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -296,10 +287,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -307,53 +298,49 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: '[TA tests bridges]
-
-
-    DIDI
+  Prompt: 'DIDI
 
     Incredible work everyone.
 
 
-    Now...your
-    bridge supported 8 pounds! That''s some solid engineering. Architect! What color
-    do you want this new bridge to be?'
-  PrefabSpawnObjects: []
-  CommandLines:
+    Now...your bridge supported
+    X pounds! That''s some solid engineering. Architect! What color do you want this
+    new bridge to be?'
+  PrefabSpawnObjects:
   - TimeStamp: 0
-    Command: 
-    Ran: 0
-  - TimeStamp: 0
-    Command: 
-    Ran: 0
-  NextNode: {fileID: 0}
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 363232926905923021, guid: 09bdd2d06c1cc49159f125cbc51562ff, type: 3}
+    Path: color_bridge
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 2450212726216562977}
   Options:
-  - Name: Color 1
-    Action: 
+  - Name: Blue
+    Action: bridge-color-0
     Node: {fileID: 0}
-  - Name: Color 2
-    Action: 
+  - Name: Dark Blue
+    Action: bridge-color-1
     Node: {fileID: 0}
-  - Name: Color 3
-    Action: 
+  - Name: Green
+    Action: bridge-color-2
     Node: {fileID: 0}
-  - Name: Color 4
-    Action: 
+  - Name: Lilac
+    Action: bridge-color-3
     Node: {fileID: 0}
-  - Name: Color 5
-    Action: 
+  - Name: Orange
+    Action: bridge-color-4
     Node: {fileID: 0}
-  - Name: Color 6
-    Action: 
+  - Name: Pink
+    Action: bridge-color-5
     Node: {fileID: 0}
-  - Name: Color 7
-    Action: 
+  - Name: Red
+    Action: bridge-color-6
     Node: {fileID: 0}
-  - Name: Color 8
-    Action: 
+  - Name: Yellow
+    Action: bridge-color-7
     Node: {fileID: 0}
   VisualNode: {fileID: 0}
---- !u!1 &1472822703522182848
+--- !u!1 &1483806847636289364
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361,41 +348,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3940239836989711823}
-  - component: {fileID: 8457247841448550791}
+  - component: {fileID: 3911804278681609307}
+  - component: {fileID: 8482846691161808915}
   m_Layer: 5
-  m_Name: P2-1
+  m_Name: P2-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3940239836989711823
+--- !u!224 &3911804278681609307
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472822703522182848}
+  m_GameObject: {fileID: 1483806847636289364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 5
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8457247841448550791
+--- !u!114 &8482846691161808915
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472822703522182848}
+  m_GameObject: {fileID: 1483806847636289364}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -406,10 +393,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -422,14 +409,11 @@ MonoBehaviour:
     My name is Didi! I moved to Scooterville a few months ago to
     help the community here develop their town!'
   PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: -sfx "sfx/door-open"
-    Ran: 0
-  NextNode: {fileID: 0}
+  CommandLines: []
+  NextNode: {fileID: 5351992175466489232}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &2866819656578797660
+--- !u!1 &1628065931780898122
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,107 +421,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6664416108408778907}
-  - component: {fileID: 3398987678973056035}
+  - component: {fileID: 7037818330456800587}
+  - component: {fileID: 5351992175466489232}
   m_Layer: 5
-  m_Name: Lego 1 - V3
+  m_Name: P2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6664416108408778907
+--- !u!224 &7037818330456800587
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2866819656578797660}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4511637909485262041}
-  - {fileID: 6027731301934441022}
-  - {fileID: 428881542287633040}
-  - {fileID: 589713784407525007}
-  - {fileID: 1656196149169867895}
-  - {fileID: 3940239836989711823}
-  - {fileID: 2316645228830893380}
-  - {fileID: 461511103455246092}
-  - {fileID: 7767085461733709286}
-  - {fileID: 2273869297660421467}
-  - {fileID: 2389833902144064892}
-  - {fileID: 7676611255246197473}
-  - {fileID: 7594532894257887036}
-  - {fileID: 4522629464244044894}
-  - {fileID: 8934405785340104898}
-  - {fileID: 5618429950706294155}
-  - {fileID: 4732804132491880105}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3398987678973056035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2866819656578797660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingNode: {fileID: 5737171246588853766}
---- !u!1 &3701688939721563622
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8934405785340104898}
-  - component: {fileID: 2515235632648902837}
-  m_Layer: 5
-  m_Name: P7-1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8934405785340104898
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701688939721563622}
+  m_GameObject: {fileID: 1628065931780898122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 14
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2515235632648902837
+--- !u!114 &5351992175466489232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3701688939721563622}
+  m_GameObject: {fileID: 1628065931780898122}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -548,10 +466,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 44d622628e9ad47b29e590307bf02d6a, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 44d622628e9ad47b29e590307bf02d6a, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-1.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -561,19 +479,25 @@ MonoBehaviour:
   VideoOptions: []
   Prompt: 'TA
 
-    Wow, look that farmhouse growing!'
+    What should we ask her?'
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
-    Command: 
-    Ran: 0
-  - TimeStamp: 0
-    Command: 
+    Command: -sfx "audio/sfx/new-option"
     Ran: 0
   NextNode: {fileID: 0}
-  Options: []
+  Options:
+  - Name: Who are you?
+    Action: 
+    Node: {fileID: 8482846691161808915}
+  - Name: What do you do?
+    Action: 
+    Node: {fileID: 923061142322064567}
+  - Name: How can I help?
+    Action: 
+    Node: {fileID: 7160969511582385191}
   VisualNode: {fileID: 0}
---- !u!1 &4251681162261666743
+--- !u!1 &1629990416059016623
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -581,41 +505,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2316645228830893380}
-  - component: {fileID: 876039405098528035}
+  - component: {fileID: 3320661046155028903}
+  - component: {fileID: 2408782092157588905}
   m_Layer: 5
-  m_Name: P2-2
+  m_Name: P5-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2316645228830893380
+--- !u!224 &3320661046155028903
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251681162261666743}
+  m_GameObject: {fileID: 1629990416059016623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 6
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &876039405098528035
+--- !u!114 &2408782092157588905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251681162261666743}
+  m_GameObject: {fileID: 1629990416059016623}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -626,10 +550,329 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Zooming into the island bridge now.'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 8164016910345386814, guid: eb68343cacaf4462d9e04973638896a6, type: 3}
+    Path: lumber_trucks_map
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 694554982464861999}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2823743001431003592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6673152816396005647}
+  - component: {fileID: 3444320558016665015}
+  m_Layer: 5
+  m_Name: Lego 1 - V3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6673152816396005647
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2823743001431003592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4502333827732526413}
+  - {fileID: 5999291320617198506}
+  - {fileID: 366127995648240388}
+  - {fileID: 632786029697681179}
+  - {fileID: 1593416211026480611}
+  - {fileID: 7037818330456800587}
+  - {fileID: 3911804278681609307}
+  - {fileID: 2360289222313075920}
+  - {fileID: 468536960880735896}
+  - {fileID: 7722887305530954866}
+  - {fileID: 2263452512013100239}
+  - {fileID: 2435720899342453992}
+  - {fileID: 4743101103596682412}
+  - {fileID: 7669563399264654197}
+  - {fileID: 3428263549611114703}
+  - {fileID: 3320661046155028903}
+  - {fileID: 5359226595995099230}
+  - {fileID: 7602706652561962664}
+  - {fileID: 4223589822980372726}
+  - {fileID: 4477868359161841098}
+  - {fileID: 8870521974029455702}
+  - {fileID: 4635292470166805868}
+  - {fileID: 5557338864574880799}
+  - {fileID: 4704364184725038909}
+  - {fileID: 4406703573779550498}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3444320558016665015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2823743001431003592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 5726758894428340114}
+--- !u!1 &3726733635578911858
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8870521974029455702}
+  - component: {fileID: 2450212726216562977}
+  m_Layer: 5
+  m_Name: P6-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8870521974029455702
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726733635578911858}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2450212726216562977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726733635578911858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: bc55661e093924c5aa690d43f05446c9, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-3.mp4
+  VideoLoop: {fileID: 102900000, guid: bc55661e093924c5aa690d43f05446c9, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-3.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI\nOkay, purple it is! \n\n"
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 6245678998043897779, guid: 09bdd2d06c1cc49159f125cbc51562ff, type: 3}
+    Path: color_bridge
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/bridge-thud"
+    Ran: 0
+  NextNode: {fileID: 622434603632249192}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4165662741923966095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4743101103596682412}
+  - component: {fileID: 7271917008758635073}
+  m_Layer: 5
+  m_Name: P4-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4743101103596682412
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165662741923966095}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7271917008758635073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4165662741923966095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    I''m here if you need a hint.
+
+    [Kids build, potentially
+    ask for hint]'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Start Weighing
+    Action: 
+    Node: {fileID: 1494835782935277710}
+  - Name: 'Hint: Build a platform'
+    Action: 
+    Node: {fileID: 1494835782935277710}
+  - Name: 'Hint: Strengthen a platform'
+    Action: 
+    Node: {fileID: 1494835782935277710}
+  - Name: 'Hint: Build ramp'
+    Action: 
+    Node: {fileID: 1494835782935277710}
+  VisualNode: {fileID: 0}
+--- !u!1 &4316154305093917219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2360289222313075920}
+  - component: {fileID: 923061142322064567}
+  m_Layer: 5
+  m_Name: P2-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2360289222313075920
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316154305093917219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &923061142322064567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316154305093917219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -642,14 +885,11 @@ MonoBehaviour:
     I''m a real estate developer! I help build useful things in
     empty plots of land. Whether that''s a new farm, a new restaurant, or a new house!'
   PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: -sfx "sfx/door-open"
-    Ran: 0
-  NextNode: {fileID: 0}
+  CommandLines: []
+  NextNode: {fileID: 5351992175466489232}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &4987584819916900508
+--- !u!1 &4795094699037020076
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -657,41 +897,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2389833902144064892}
-  - component: {fileID: 1466404622402892058}
+  - component: {fileID: 5359226595995099230}
+  - component: {fileID: 3477598740901061200}
   m_Layer: 5
-  m_Name: P4-1
+  m_Name: P5-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2389833902144064892
+--- !u!224 &5359226595995099230
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4987584819916900508}
+  m_GameObject: {fileID: 4795094699037020076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 10
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1466404622402892058
+--- !u!114 &3477598740901061200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4987584819916900508}
+  m_GameObject: {fileID: 4795094699037020076}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -702,10 +942,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -713,32 +953,21 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: "TA\n[Build crappy bridge that can support a bit of weight.]\nDidi, sending
-    one bridge your way.\n[PRESS Bridge Formed]\n\nDIDI \nHow many trucks can your
-    bridge carry?\n[TA puts a 2 lb on it, succeeds]\n[+1 lb x2]\n\nDIDI\nTwo trucks!\n[TA
-    puts a 5lb on it, fails]\n\nDIDI\nToo bad! Let's see what your young architects
-    can do. Let me know if you want a hint."
-  PrefabSpawnObjects: []
-  CommandLines: []
-  NextNode: {fileID: 0}
-  Options:
-  - Name: Bridge Formed
-    Action: 
-    Node: {fileID: 0}
-  - Name: +1 lb
-    Action: 
-    Node: {fileID: 0}
-  - Name: 'Hint: Build a Platform'
-    Action: 
-    Node: {fileID: 0}
-  - Name: 'Hint: Reinforce a Platform'
-    Action: 
-    Node: {fileID: 0}
-  - Name: 'Hint: Legs to Connect'
-    Action: 
-    Node: {fileID: 0}
+  Prompt: '[DIDI ad libs about trucks]'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 8164016910345386814, guid: eb68343cacaf4462d9e04973638896a6, type: 3}
+    Path: lumber_trucks_map
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/car-starting"
+    Ran: 0
+  NextNode: {fileID: 2497874059489345686}
+  Options: []
   VisualNode: {fileID: 0}
---- !u!1 &5796257803235091279
+--- !u!1 &5030657065474967816
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -746,41 +975,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7767085461733709286}
-  - component: {fileID: 5680433097185750297}
+  - component: {fileID: 2435720899342453992}
+  - component: {fileID: 1494835782935277710}
   m_Layer: 5
-  m_Name: P3-0
+  m_Name: P4-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7767085461733709286
+--- !u!224 &2435720899342453992
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5796257803235091279}
+  m_GameObject: {fileID: 5030657065474967816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 8
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5680433097185750297
+--- !u!114 &1494835782935277710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5796257803235091279}
+  m_GameObject: {fileID: 5030657065474967816}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -791,10 +1020,207 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 2381bdd762fcf44e2a75f482140e3fd9, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 2381bdd762fcf44e2a75f482140e3fd9, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: "DIDI \nGot it! Now let's see how many trucks can your bridge carry?\n[TA
+    puts a 2 lb on it, succeeds]\n[PRESS +1 lb twice]\n\nDIDI\nTwo trucks!\n[TA puts
+    a 5lb on it, fails]\n\nDIDI\nToo bad! Let's see what your young architects can
+    do. "
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: -816, y: 482, z: 0}
+    Object: {fileID: 153039495174195224, guid: 2fad7541e249c4ffbb477023be826c3d, type: 3}
+    Path: lumber_counter
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 363232926905923021, guid: 1678b35439a8343a48f4bc120f427c2e, type: 3}
+    Path: lumber_trucks_bridge
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: +1 lb
+    Action: new-truck
+    Node: {fileID: 0}
+  - Name: Show Hint Screen
+    Action: 
+    Node: {fileID: 7271917008758635073}
+  - Name: All Bridges Weighed
+    Action: 
+    Node: {fileID: 8275463438046685420}
+  VisualNode: {fileID: 0}
+--- !u!1 &5795911123354033522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4635292470166805868}
+  - component: {fileID: 622434603632249192}
+  m_Layer: 5
+  m_Name: P7-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4635292470166805868
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795911123354033522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &622434603632249192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5795911123354033522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    [To the construction crew]
+
+    Team, we''re ready to start
+    construction
+
+
+    [PRESS Start Construction]
+
+
+    TA
+
+    [ad lib about farmhouse
+    growing]'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 3061780961825085286, guid: b7e023c32cc6f4e3a9311b6cd75fbddc, type: 3}
+    Path: color_bridge_small
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 8164016910345386814, guid: eb68343cacaf4462d9e04973638896a6, type: 3}
+    Path: lumber_trucks_map
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: -285, y: 150, z: 0}
+    Object: {fileID: 363232926905923021, guid: 1f3f30d55d70546aebf0b3b662fc6326, type: 3}
+    Path: farmhouse
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/radio-wave"
+    Ran: 0
+  NextNode: {fileID: 5883987031396347152}
+  Options:
+  - Name: Start Construction
+    Action: start-construction
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &5807250734850187995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7722887305530954866}
+  - component: {fileID: 5635126607763352717}
+  m_Layer: 5
+  m_Name: P3-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7722887305530954866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807250734850187995}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5635126607763352717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5807250734850187995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 6e48af0974da9446bb47cd5e92fae493, type: 3}
+  VideoFilePath: Lego 1 - v3/P3-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 6e48af0974da9446bb47cd5e92fae493, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P3-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -820,10 +1246,10 @@ MonoBehaviour:
     go! First step, build a bridge to the forest. '
   PrefabSpawnObjects: []
   CommandLines: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 2333301305666959848}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &6543614675678594740
+--- !u!1 &6145798507706936990
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -831,41 +1257,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 461511103455246092}
-  - component: {fileID: 7171931631374271923}
+  - component: {fileID: 3428263549611114703}
+  - component: {fileID: 2497874059489345686}
   m_Layer: 5
-  m_Name: P2-3
+  m_Name: P5-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &461511103455246092
+--- !u!224 &3428263549611114703
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6543614675678594740}
+  m_GameObject: {fileID: 6145798507706936990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 7
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7171931631374271923
+--- !u!114 &2497874059489345686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6543614675678594740}
+  m_GameObject: {fileID: 6145798507706936990}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -876,10 +1302,96 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: bd3c1d04ae0664bca8c1655db125a02a, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-1.mp4
+  VideoLoop: {fileID: 102900000, guid: bd3c1d04ae0664bca8c1655db125a02a, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-1.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    Architects, what should we do?'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 8164016910345386814, guid: eb68343cacaf4462d9e04973638896a6, type: 3}
+    Path: lumber_trucks_map
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Connect the island
+    Action: 
+    Node: {fileID: 2408782092157588905}
+  - Name: Look at the trucks
+    Action: 
+    Node: {fileID: 3477598740901061200}
+  VisualNode: {fileID: 0}
+--- !u!1 &6496610574664582944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468536960880735896}
+  - component: {fileID: 7160969511582385191}
+  m_Layer: 5
+  m_Name: P2-4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &468536960880735896
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496610574664582944}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7160969511582385191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496610574664582944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -893,14 +1405,11 @@ MonoBehaviour:
     on an island! It''s going to be sooo beautiful, we''re going to attract a lot
     of people here. Come come let me show you!'
   PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: -sfx "sfx/door-open"
-    Ran: 0
-  NextNode: {fileID: 0}
+  CommandLines: []
+  NextNode: {fileID: 5635126607763352717}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &6593858739944213712
+--- !u!1 &6585698153499725124
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -908,8 +1417,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2273869297660421467}
-  - component: {fileID: 2343704871398357116}
+  - component: {fileID: 2263452512013100239}
+  - component: {fileID: 2333301305666959848}
   m_Layer: 5
   m_Name: P4-0
   m_TagString: Untagged
@@ -917,32 +1426,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2273869297660421467
+--- !u!224 &2263452512013100239
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6593858739944213712}
+  m_GameObject: {fileID: 6585698153499725124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 9
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2343704871398357116
+--- !u!114 &2333301305666959848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6593858739944213712}
+  m_GameObject: {fileID: 6585698153499725124}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -953,10 +1462,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 57bf79373a475423391449eff9f6e3a3, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 57bf79373a475423391449eff9f6e3a3, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -981,13 +1490,24 @@ MonoBehaviour:
 
     DIDI
 
-    Make them as strong as possible!'
+    Yup, we want as many lumber trucks to cross them as possible.
+
+
+    TA
+
+    [Everyone
+    starts building a bridge]
+
+    [TA builds crappy bridge that can support a bit
+    of weight.]
+
+    Didi, sending one bridge your way.'
   PrefabSpawnObjects: []
   CommandLines: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 1494835782935277710}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &6966591534438536962
+--- !u!1 &6938147148626466454
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -995,8 +1515,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7676611255246197473}
-  - component: {fileID: 8232391156256188792}
+  - component: {fileID: 7669563399264654197}
+  - component: {fileID: 8275463438046685420}
   m_Layer: 5
   m_Name: P5-0
   m_TagString: Untagged
@@ -1004,32 +1524,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7676611255246197473
+--- !u!224 &7669563399264654197
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6966591534438536962}
+  m_GameObject: {fileID: 6938147148626466454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 11
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8232391156256188792
+--- !u!114 &8275463438046685420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6966591534438536962}
+  m_GameObject: {fileID: 6938147148626466454}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1040,10 +1560,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -1051,21 +1571,23 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   PrefabPath: 
   VideoOptions: []
-  Prompt: 'TA
-
-    Good job everyone, we got so much lumber! Didi, can you zoom in
-    on the river near the island?
-
-
-    DIDI
-
-    Sure can!'
-  PrefabSpawnObjects: []
+  Prompt: "TA\nGood job everyone, look at all those lumber trucks! \n\nDIDI\n[Play
+    crowd cheer]\nThe people in Scooterville are absolutely delighted! They're so
+    excited to see the farm."
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Object: {fileID: 8164016910345386814, guid: eb68343cacaf4462d9e04973638896a6, type: 3}
+    Path: lumber_trucks_map
+    Spawned: 0
   CommandLines: []
-  NextNode: {fileID: 0}
-  Options: []
+  NextNode: {fileID: 2497874059489345686}
+  Options:
+  - Name: Crowd Cheer
+    Action: -sfx "audio/sfx/airhorn"
+    Node: {fileID: 0}
   VisualNode: {fileID: 0}
---- !u!1 &7143604322883879077
+--- !u!1 &7188366538579639966
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1073,41 +1595,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4732804132491880105}
-  - component: {fileID: 5603231443688904419}
+  - component: {fileID: 366127995648240388}
+  - component: {fileID: 238721502828219818}
   m_Layer: 5
-  m_Name: P9-0
+  m_Name: P1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4732804132491880105
+--- !u!224 &366127995648240388
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7143604322883879077}
+  m_GameObject: {fileID: 7188366538579639966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 16
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5603231443688904419
+--- !u!114 &238721502828219818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7143604322883879077}
+  m_GameObject: {fileID: 7188366538579639966}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1118,10 +1640,89 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: c8de246df0d714723a315c4f1f59782b, type: 3}
+  VideoFilePath: Lego 1 - v3/P1-2.mp4
+  VideoLoop: {fileID: 102900000, guid: c8de246df0d714723a315c4f1f59782b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P1-2.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: '[Wait for response]'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Go inside
+    Action: 
+    Node: {fileID: 7065157380986460408}
+  - Name: Stay outside
+    Action: 
+    Node: {fileID: 2867040144697834820}
+  VisualNode: {fileID: 0}
+--- !u!1 &7188906424188436785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4704364184725038909}
+  - component: {fileID: 5559028857498408823}
+  m_Layer: 5
+  m_Name: P9-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4704364184725038909
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7188906424188436785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5559028857498408823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7188906424188436785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_series/empty track
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: 38598e3452aff43ed888adc9c397f97d, type: 3}
+  VideoFilePath: Lego 1 - v3/P9-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 38598e3452aff43ed888adc9c397f97d, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P9-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -1134,10 +1735,171 @@ MonoBehaviour:
     Bridges, check! Farm, check!
 
 
+    Thank you for all your help.
+    What do you want to build next?
+
+
+    Great! I will see you next time!
+
+
     TA
 
-    This is great everyone.
-    What do you want to build in the next architecture adventure?'
+    Thanks
+    Didi, and great job everyone.'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 1778633527481413776}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7355021048877513318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593416211026480611}
+  - component: {fileID: 7065157380986460408}
+  m_Layer: 5
+  m_Name: P2-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1593416211026480611
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355021048877513318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7065157380986460408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7355021048877513318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_series/empty track
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'DIDI
+
+    Hello! You must be George!
+
+
+    TA
+
+    Umm, no I''m Felix.
+    I''m here with a group of young architects.'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/door-open"
+    Ran: 0
+  NextNode: {fileID: 5351992175466489232}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7367769565817359558
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4406703573779550498}
+  - component: {fileID: 1778633527481413776}
+  m_Layer: 5
+  m_Name: P10-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4406703573779550498
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367769565817359558}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1778633527481413776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367769565817359558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  StopBgLoopAtSequence: 0
+  StartBgLoopAfterSequence: 0
+  Type: 0
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 0}
+  ImageFilePath: 
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  Prefab: {fileID: 0}
+  PrefabPath: 
+  VideoOptions: []
+  Prompt: 'TA
+
+    We have handouts to give everyone, and you can scan the QR code
+    to see the farm we built today!'
   PrefabSpawnObjects: []
   CommandLines: []
   NextNode: {fileID: 0}
@@ -1173,7 +1935,7 @@ MonoBehaviour:
     Action: 
     Node: {fileID: 0}
   VisualNode: {fileID: 0}
---- !u!1 &7144181541086773002
+--- !u!1 &7695661461422121452
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,41 +1943,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 428881542287633040}
-  - component: {fileID: 267706841648335934}
+  - component: {fileID: 4223589822980372726}
+  - component: {fileID: 8191780561323609574}
   m_Layer: 5
-  m_Name: P1-2
+  m_Name: P6-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &428881542287633040
+--- !u!224 &4223589822980372726
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7144181541086773002}
+  m_GameObject: {fileID: 7695661461422121452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 2
+  m_Father: {fileID: 6673152816396005647}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &267706841648335934
+--- !u!114 &8191780561323609574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7144181541086773002}
+  m_GameObject: {fileID: 7695661461422121452}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1226,85 +1988,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 0}
-  ImageFilePath: 
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  VideoOptions: []
-  Prompt: 'TA
-
-    What do you think everyone, what should we do?'
-  PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: -sfx "sfx/airdrop"
-    Ran: 0
-  NextNode: {fileID: 0}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &7418913655207214066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1656196149169867895}
-  - component: {fileID: 7127919692581935468}
-  m_Layer: 5
-  m_Name: P2-0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1656196149169867895
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418913655207214066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6664416108408778907}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7127919692581935468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7418913655207214066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  StopBgLoopAtSequence: 0
-  StartBgLoopAfterSequence: 0
-  Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 14dcd0ba1c8384e509c40490b3609fd8, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 14dcd0ba1c8384e509c40490b3609fd8, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-1.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -1314,22 +2001,32 @@ MonoBehaviour:
   VideoOptions: []
   Prompt: 'DIDI
 
-    Hello! You must be George!
+    As always, I''m here to help!
 
 
-    TA
+    [Class build bridge]
 
-    Umm, no I''m Felix.
-    I''m here with a group of young architects.'
+
+    [TA
+    tests bridges]'
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
-    Command: -sfx "sfx/door-open"
+    Command: -sfx "audio/sfx/new-option"
     Ran: 0
-  NextNode: {fileID: 0}
-  Options: []
+  NextNode: {fileID: 4756589472901334603}
+  Options:
+  - Name: 'Hint: Build a wide platform'
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: How to reinforce platform'
+    Action: 
+    Node: {fileID: 0}
+  - Name: 'Hint: How to build legs'
+    Action: 
+    Node: {fileID: 0}
   VisualNode: {fileID: 0}
---- !u!1 &8209336229722861715
+--- !u!1 &8145434799651614983
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1337,8 +2034,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 589713784407525007}
-  - component: {fileID: 2823418141446077648}
+  - component: {fileID: 632786029697681179}
+  - component: {fileID: 2867040144697834820}
   m_Layer: 5
   m_Name: P1-3
   m_TagString: Untagged
@@ -1346,18 +2043,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &589713784407525007
+--- !u!224 &632786029697681179
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209336229722861715}
+  m_GameObject: {fileID: 8145434799651614983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
+  m_Father: {fileID: 6673152816396005647}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1365,13 +2062,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2823418141446077648
+--- !u!114 &2867040144697834820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209336229722861715}
+  m_GameObject: {fileID: 8145434799651614983}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1382,10 +2079,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoFilePath: Lego 1 - v3/P1-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -1399,12 +2096,12 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
-    Command: -sfx "sfx/crickets"
+    Command: -sfx "audio/sfx/crickets"
     Ran: 0
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 238721502828219818}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &9056833177154142252
+--- !u!1 &9031788524244304312
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1412,8 +2109,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4511637909485262041}
-  - component: {fileID: 5737171246588853766}
+  - component: {fileID: 4502333827732526413}
+  - component: {fileID: 5726758894428340114}
   m_Layer: 5
   m_Name: P0-0
   m_TagString: Untagged
@@ -1421,18 +2118,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4511637909485262041
+--- !u!224 &4502333827732526413
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9056833177154142252}
+  m_GameObject: {fileID: 9031788524244304312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
+  m_Father: {fileID: 6673152816396005647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1440,13 +2137,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5737171246588853766
+--- !u!114 &5726758894428340114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9056833177154142252}
+  m_GameObject: {fileID: 9031788524244304312}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -1457,10 +2154,10 @@ MonoBehaviour:
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -1474,24 +2171,29 @@ MonoBehaviour:
 
 
     Welcome! So we''re
-    here to learn how to become architects. And what best way to do this, than to
-    start in a town that hasn''t fully developed yet.
+    here to learn how to become architects. Does anyone know what an architect is?
 
 
-    Does anyone know what
-    an undeveloped town is?
+    The
+    best architects in the world build great spaces in big cities like New York and
+    Chicago, but because we''re all just starting out, we''ll start our work in an
+    undeveloped town.
 
 
-    Let''s go to one! I know one not too far from here....called
-    Scooterville.
+    Does anyone know what an undeveloped town is?
 
-    [Take out phone, and pretend to press a button]'
+
+    Let''s
+    go to one! I know one not too far from here....called Scooterville.
+
+    [Take
+    out phone, and pretend to press a button]'
   PrefabSpawnObjects: []
   CommandLines: []
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 5424122410914412108}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &9202924576450644265
+--- !u!1 &9173926044568864957
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1499,8 +2201,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6027731301934441022}
-  - component: {fileID: 5449730058874730456}
+  - component: {fileID: 5999291320617198506}
+  - component: {fileID: 5424122410914412108}
   m_Layer: 5
   m_Name: P1-1
   m_TagString: Untagged
@@ -1508,18 +2210,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6027731301934441022
+--- !u!224 &5999291320617198506
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9202924576450644265}
+  m_GameObject: {fileID: 9173926044568864957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6664416108408778907}
+  m_Father: {fileID: 6673152816396005647}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1527,27 +2229,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5449730058874730456
+--- !u!114 &5424122410914412108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9202924576450644265}
+  m_GameObject: {fileID: 9173926044568864957}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
   StopBgLoopAtSequence: 0
   StartBgLoopAfterSequence: 0
   Type: 0
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoFilePath: Lego 1 - v3/P1-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
   Image: {fileID: 0}
   ImageFilePath: 
   ImageLoop: {fileID: 0}
@@ -1557,22 +2259,16 @@ MonoBehaviour:
   VideoOptions: []
   Prompt: 'TA
 
-    Here we are, in Scooterville! I don''t really see anything....
+    Here we are, in Scooterville!
 
 
-    Oh
-    there''s a sign, can anyone read that to us?
-
-
-    [Wait for a kid to read out
-    the sign]
-
-    [Talk about what Property Developer means]'
+    We''re in front of a building
+    that reads... "property developer". What should we do?'
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
-    Command: -sfx "sfx/car-starting"
+    Command: -sfx "audio/sfx/car-starting"
     Ran: 0
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 238721502828219818}
   Options: []
   VisualNode: {fileID: 0}

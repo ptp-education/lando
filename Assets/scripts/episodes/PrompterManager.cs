@@ -22,6 +22,7 @@ public class PrompterManager : GameManager
     [SerializeField] private GameObject prompterPanel_;
 
     [SerializeField] private Image adminModeBg_;
+    [SerializeField] private Image muteAllBg_;
 
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
@@ -33,15 +34,6 @@ public class PrompterManager : GameManager
     private void Start()
     {
         GameManager.PromptActive = true;
-
-#if !UNITY_EDITOR
-        GameManager.MuteAll = true;
-#endif
-
-        if (GameManager.MuteAll)
-        {
-            AudioListener.volume = 0;
-        }
 
         TextAsset fileNamesAsset = Resources.Load<TextAsset>("all_episodes");
         StringsFile sf = JsonUtility.FromJson<StringsFile>(fileNamesAsset.text);
@@ -55,6 +47,7 @@ public class PrompterManager : GameManager
         episodePaths = new List<string>(sf.FileNames);
 
         RefreshAdminMode();
+        RefreshMuteMode();
     }
 
     private void Update()
@@ -124,7 +117,7 @@ public class PrompterManager : GameManager
                 name = currentNode_.Options[i].Action;
             }
 
-            b.Init(name, action, buttonCounter.ToString(), CommandButtonPressed);
+            b.Init(name, action, buttonCounter > 9 ? "" : buttonCounter.ToString(), CommandButtonPressed);
 
             buttonCounter++;
         }
@@ -168,6 +161,22 @@ public class PrompterManager : GameManager
     {
         adminMode_ = !adminMode_;
         RefreshAdminMode();
+    }
+
+    public void OnMuteAllClick()
+    {
+        GameManager.MuteAll = !GameManager.MuteAll;
+        RefreshMuteMode();
+    }
+
+    private void RefreshMuteMode()
+    {
+        muteAllBg_.color = !GameManager.MuteAll ? Color.green : Color.red;
+
+        if (GameManager.MuteAll)
+        {
+            AudioListener.volume = 0;
+        }
     }
 
     private void RefreshAdminMode()

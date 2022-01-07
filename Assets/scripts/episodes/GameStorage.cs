@@ -8,8 +8,22 @@ public class GameStorage
     {
         DanceCode,
         SelectedCharacter,
-        Counter
+        Counter,
+        ChosenColor,
+        HouseLevel,
+        FarmObjects
     }
+
+    public class Integer
+    {
+        public int value = 0;
+
+        public Integer(int v)
+        {
+            value = v;
+        }
+    }
+
     private Dictionary<string, object> dict_ = new Dictionary<string, object>();
 
     public void Add<T>(Key key, T value) where T : class
