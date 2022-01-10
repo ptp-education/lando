@@ -11,7 +11,6 @@ public class EpisodeNode : MonoBehaviour
     public enum EpisodeType
     {
         Video,
-        Prefab,
         Image,
         LoopWithOptions
     }
@@ -76,10 +75,6 @@ public class EpisodeNode : MonoBehaviour
     public UnityEngine.Object ImageLoop;
     public string ImageLoopFilePath;
 
-    //PREFAB OPTIONS
-    public GameObject Prefab;
-    public string PrefabPath;
-
     //LOOPWITHOPTIONS OPTIONS
     //uses VideoLoop and VideoLoopFilePath
     public List<VideoOption> VideoOptions = new List<VideoOption>();
@@ -107,9 +102,6 @@ public class EpisodeNode : MonoBehaviour
         {
             case EpisodeType.Video:
                 contentName = VideoFilePath;
-                break;
-            case EpisodeType.Prefab:
-                contentName = PrefabPath;
                 break;
             case EpisodeType.Image:
                 contentName = ImageFilePath;

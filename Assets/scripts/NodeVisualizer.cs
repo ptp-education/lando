@@ -28,11 +28,6 @@ public class NodeVisualizer : MonoBehaviour
                 type_.text = "Type: Video";
                 path_.text = node.VideoFilePath + " / " + node.VideoLoopFilePath;
                 break;
-            case EpisodeNode.EpisodeType.Prefab:
-                type_.text = "Type: Prefab";
-                path_.text = node.PrefabPath;
-                break;
-
             case EpisodeNode.EpisodeType.Image:
                 type_.text = "Type: Image";
                 path_.text = node.ImageFilePath + " / " + node.ImageLoopFilePath;
