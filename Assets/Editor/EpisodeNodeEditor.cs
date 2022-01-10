@@ -37,16 +37,6 @@ public class EpisodeNodeEditor : Editor
         EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", myTarget.BgLoopPath == null ? "null" : myTarget.BgLoopPath));
         myTarget.BgLoop = (Object)EditorGUILayout.ObjectField(myTarget.BgLoop, typeof(Object), false);
 
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.LabelField(string.Format("Stop Background Loop at Sequence"));
-        myTarget.StopBgLoopAtSequence = EditorGUILayout.Toggle(myTarget.StopBgLoopAtSequence);
-        EditorGUILayout.EndHorizontal();
-
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.LabelField(string.Format("Start Loop after Sequence"));
-        myTarget.StartBgLoopAfterSequence = EditorGUILayout.Toggle(myTarget.StartBgLoopAfterSequence);
-        EditorGUILayout.EndHorizontal();
-
         EditorGUILayout.LabelField(string.Format("Node Type"));
 
         myTarget.Type = (EpisodeNode.EpisodeType)EditorGUILayout.EnumPopup(myTarget.Type);
@@ -73,18 +63,6 @@ public class EpisodeNodeEditor : Editor
 
             EditorGUILayout.LabelField(string.Format("Video Loop ({0})", myTarget.VideoLoopFilePath));
             myTarget.VideoLoop = EditorGUILayout.ObjectField(myTarget.VideoLoop, typeof(Object), false);
-        }
-        else if (myTarget.Type == EpisodeNode.EpisodeType.Prefab)
-        {
-            string prefabPath = "empty";
-            if (prefab.objectReferenceValue != null)
-            {
-                prefabPath = AssetDatabase.GetAssetPath(prefab.objectReferenceValue.GetInstanceID());
-                prefabPath = prefabPath.Substring(kEpisodeObjectPrefix.Length, prefabPath.Length - (kEpisodeObjectPrefix.Length + kPrefabSuffix.Length));
-                myTarget.PrefabPath = prefabPath;
-            }
-            EditorGUILayout.LabelField(string.Format("Prefab ({0})", myTarget.PrefabPath));
-            myTarget.Prefab = (GameObject)EditorGUILayout.ObjectField(myTarget.Prefab, typeof(GameObject), false);
         }
         else if (myTarget.Type == EpisodeNode.EpisodeType.Image)
         {

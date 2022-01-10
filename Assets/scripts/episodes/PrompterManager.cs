@@ -210,11 +210,6 @@ public class PrompterManager : GameManager
         HideButtons();
     }
 
-    protected override void NewStateEventInternal(string s)
-    {
-        base.NewStateEventInternal(s);
-    }
-
     protected override void NewNodeEventInternal(EpisodeNode n)
     {
         base.NewNodeEventInternal(n);

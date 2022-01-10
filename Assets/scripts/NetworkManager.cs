@@ -38,7 +38,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
         RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All };
         PhotonNetwork.RaiseEvent(kNewEpisodeCode, content, raiseEventOptions, SendOptions.SendReliable);
 
-        UpdateRoomState(episode: e, node: "", state:GameManager.NodeState.Playing);
+        UpdateRoomState(episode: e, node: "");
     }
 
     public void SendNewEpisodeNodeMessage(string n)
@@ -50,16 +50,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
         UpdateRoomState(node: n);
     }
 
-    public void SendNewNodeStateMessage(string s)
-    {
-        object[] content = new object[] { s };
-        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All };
-        PhotonNetwork.RaiseEvent(NetworkManager.kNewEpisodeNodeStateCode, content, raiseEventOptions, SendOptions.SendReliable);
-
-        UpdateRoomState(state: s);
-    }
-
-    private void UpdateRoomState(string episode = null, string node = null, string state = null)
+    private void UpdateRoomState(string episode = null, string node = null)
     {
         ExitGames.Client.Photon.Hashtable h = PhotonNetwork.CurrentRoom.CustomProperties;
         if (episode != null)
@@ -69,10 +60,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
         if (node != null)
         {
             h[kEpisodeNodeKey] = node;
-        }
-        if (state != null)
-        {
-            h[kNodeStateKey] = state;
         }
 
         PhotonNetwork.CurrentRoom.SetCustomProperties(h);
@@ -115,13 +102,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
             foreach (GameManager gm in gameManagers_)
             {
                 gm.NewNodeAction(node);
-            }
-        } else if (eventCode == kNewEpisodeNodeStateCode)
-        {
-            string state = (string)data[0];
-            foreach (GameManager gm in gameManagers_)
-            {
-                gm.NewStateEvent(state);
             }
         }
     }

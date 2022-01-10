@@ -9,31 +9,25 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     [SerializeField] private VideoPlayer videoPlayerMain_;
     [SerializeField] private VideoPlayer videoPlayerLoop_;
 
+    private VideoPlayer activePlayer_;
     private bool started_ = false;
     private bool completed_ = false;
 
-    public override void Init(GameManager gameManager, EpisodeNode node, ReadyToStartLoop callback)
+    public override void Init(GameManager gameManager, EpisodeNode node)
     {
-        base.Init(gameManager, node, callback);
+        base.Init(gameManager, node);
 
         videoPlayerMain_.loopPointReached += VideoFinished;
 
         videoPlayerMain_.isLooping = false;
         videoPlayerLoop_.isLooping = true;
+
+        Preload();
     }
 
     private void VideoFinished(VideoPlayer vp)
     {
-        startLoopCallback_.Invoke();
         completed_ = true;
-    }
-
-    public override void Hide()
-    {
-        base.Hide();
-
-        videoPlayerMain_.Pause();
-        videoPlayerLoop_.Pause();
     }
 
     public override void Play()
@@ -44,7 +38,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         completed_ = false;
 
         videoPlayerMain_.Stop();
-        StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_));
+        StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_, pauseBetweenSwitch: false));
     }
 
     public override void Loop()
@@ -52,43 +46,51 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         base.Loop();
 
         videoPlayerLoop_.Stop();
-        StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_));
+        StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_, pauseBetweenSwitch: true));
     }
 
-    private IEnumerator SwapPlayer(VideoPlayer play, VideoPlayer stop)
+    private IEnumerator SwapPlayer(VideoPlayer play, VideoPlayer stop, bool pauseBetweenSwitch = false)
     {
+        activePlayer_ = play;
         play.Prepare();
+
         while (!play.isPrepared)
         {
             yield return 0;
         }
 
-        yield return 0;
-        yield return 0;
+        if (pauseBetweenSwitch)
+        {
+            yield return 0;
+            yield return 0;
+        }
 
         play.Play();
 
-        yield return 0;
-        yield return 0;
+        if (pauseBetweenSwitch)
+        {
+            yield return 0;
+            yield return 0;
+        }
 
         stop.Stop();
 
         play.transform.localScale = Vector3.one;
         stop.transform.localScale = Vector3.zero;
-
-        if (Hidden)
-        {
-            Debug.LogWarning("Node is hidden but playing video. Forcing node to show...");
-            Hidden = false;
-        }
     }
 
-    public override void Preload(EpisodeNode node)
+    public void Preload()
     {
-        base.Preload(node);
+        PreloadVideo(videoPlayerMain_, episodeNode_.VideoFilePath);
+        PreloadVideo(videoPlayerLoop_, episodeNode_.VideoLoopFilePath);
+    }
 
-        PreloadVideo(videoPlayerMain_, node.VideoFilePath);
-        PreloadVideo(videoPlayerLoop_, node.VideoLoopFilePath);
+    public override bool IsPlaying
+    {
+        get
+        {
+            return activePlayer_ == null ? false : activePlayer_.isPlaying;
+        }
     }
 
     public override float ProgressPercentage
@@ -116,7 +118,6 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         player.gameObject.name = split[split.Length - 1];
         player.playOnAwake = false;
         player.url = System.IO.Path.Combine(Application.streamingAssetsPath, path);
-        player.Prepare();
     }
 
     public override void ReceiveAction(string action)

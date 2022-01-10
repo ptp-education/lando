@@ -7,7 +7,6 @@ public class EpisodeNodeObject : MonoBehaviour
 {
     public delegate void ReadyToStartLoop();
 
-    protected ReadyToStartLoop startLoopCallback_;
     protected EpisodeNode episodeNode_;
     protected GameManager gameManager_;
 
@@ -23,53 +22,31 @@ public class EpisodeNodeObject : MonoBehaviour
         o.transform.SetParent(transform);
         spawnedObjectParent_ = o.GetComponent<RectTransform>();
         spawnedObjectParent_.transform.localScale = Vector3.one;
+        spawnedObjectParent_.transform.localPosition = Vector3.zero;
     }
 
-    public virtual void Init(GameManager manager, EpisodeNode node, ReadyToStartLoop callback)
+    public virtual void Init(GameManager manager, EpisodeNode node)
     {
         gameManager_ = manager;
-        startLoopCallback_ = callback;
         episodeNode_ = node;
     }
 
-    public virtual void Preload(EpisodeNode node)
+    public virtual bool IsPlaying
     {
-        Hide();
-    }
-
-    public virtual void Hide()
-    {
-        Hidden = true;
-    }
-
-    public virtual bool Hidden
-    {
-        set
-        {
-            if (value)
-            {
-                transform.localScale = Vector3.zero;
-            } else
-            {
-                transform.localScale = Vector3.one;
-            }
-        }
         get
         {
-            return transform.localScale == Vector3.zero;
+            return true;
         }
     }
 
     public virtual void Play()
     {
-        Hidden = false;
         ResetSpawnedObjects();
         ResetCommandLines();
     }
 
     public virtual void Loop()
     {
-        Hidden = false;
     }
 
     public virtual void ReceiveAction(string action)
@@ -78,11 +55,6 @@ public class EpisodeNodeObject : MonoBehaviour
         {
             o.ReceivedAction(action);
         }
-    }
-
-    public virtual void OnExit() 
-    {
-
     }
 
     public virtual float ProgressPercentage
@@ -97,11 +69,9 @@ public class EpisodeNodeObject : MonoBehaviour
     {
         spawnedObjectParent_.SetAsLastSibling();
 
-        if (!Hidden)
-        {
-            timer_ += Time.deltaTime;
-        }
         //dont forget to remove objects and reset timer
+
+        timer_ += Time.deltaTime;
 
         foreach(EpisodeNode.PrefabSpawnObject o in episodeNode_.PrefabSpawnObjects)
         {

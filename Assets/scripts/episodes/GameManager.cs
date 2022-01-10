@@ -5,12 +5,6 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
-    public class NodeState
-    {
-        public const string Playing = "playing";
-        public const string Looping = "looping";
-    }
-
     public const string ACTION_PREFIX = "action:";
     public const string NODE_PREFIX = "node:";
     public const string RADIO_COMMAND = "radio";
@@ -30,10 +24,7 @@ public class GameManager : MonoBehaviour
 
     public GameStorage Storage = new GameStorage();
 
-    private string cachedEpisode_ = "";
     private string cachedNode_ = "";
-    private string cachedState_ = "";
-    private string cachedAction_ = "";
 
     private NetworkManager networkManager_;
 
@@ -58,14 +49,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void UpdateNodeState(string s)
-    {
-        if (networkManager_ != null)
-        {
-            networkManager_.SendNewNodeStateMessage(s);
-        }
-    }
-
     public void SendNewAction(string a)
     {
         if (networkManager_ != null)
@@ -76,10 +59,7 @@ public class GameManager : MonoBehaviour
 
     public void NewEpisodeEvent(string e)
     {
-        cachedEpisode_ = e;
         cachedNode_ = "";
-        cachedState_ = "";
-        cachedAction_ = "";
 
         Storage.ResetStorage();
 
@@ -113,8 +93,6 @@ public class GameManager : MonoBehaviour
                 return;
 
             cachedNode_ = node;
-            cachedState_ = "";
-            cachedAction_ = "";
 
             foreach (EpisodeNode n in episode_.AllNodes)
             {
@@ -132,8 +110,6 @@ public class GameManager : MonoBehaviour
             string strippedActions = StripAndRunActions(command);
             strippedActions = StripAndRunSfxActions(command);
             NewActionInternal(strippedActions);
-
-            cachedAction_ = command;
         }
     }
 
@@ -145,22 +121,6 @@ public class GameManager : MonoBehaviour
     protected virtual void NewNodeEventInternal(EpisodeNode n)
     {
         currentNode_ = n;
-        //stub
-    }
-
-    public void NewStateEvent(string s)
-    {
-        if (string.Equals(s, cachedState_))
-            return;
-
-        cachedState_ = s;
-
-        NewStateEventInternal(s);
-    }
-
-    protected virtual void NewStateEventInternal(string s)
-    {
-        currentNodeState_ = s;
         //stub
     }
 

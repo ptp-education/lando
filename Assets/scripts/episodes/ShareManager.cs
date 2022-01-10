@@ -10,9 +10,10 @@ public class ShareManager : GameManager
 
     [SerializeField] private Transform nodeObjectParent_;
 
-    private string internalState_ = "";
-    private Dictionary<string, EpisodeNodeObject> cachedNodeObjects_ = new Dictionary<string, EpisodeNodeObject>();
-    private EpisodeNode previousNode_;
+    private EpisodeNodeObject activeNode_;
+
+    private Image fadeOverlay_;
+    private GoTweenFlow fadeFlow_;
 
     private void Start()
     {
@@ -20,28 +21,35 @@ public class ShareManager : GameManager
         {
             nodeObjectParent_.transform.localScale = new Vector3(-1f, 1f, 1f);
         }
+
+        GameObject overlay = new GameObject("Fade Overlay");
+        fadeOverlay_ = overlay.AddComponent<Image>();
+        fadeOverlay_.color = Color.black;
+        fadeOverlay_.color = new Color(0, 0, 0, 0);
+        fadeOverlay_.transform.SetParent(transform, false);
+        fadeOverlay_.transform.localPosition = Vector3.zero;
+        fadeOverlay_.rectTransform.sizeDelta = new Vector2(1920, 1080);
+    }
+
+    private void Update()
+    {
+        if (fadeOverlay_ != null)
+        {
+            fadeOverlay_.transform.SetAsLastSibling();
+        }
     }
 
     protected override void NewNodeEventInternal(EpisodeNode node)
     {
         base.NewNodeEventInternal(node);
 
-        internalState_ = NodeState.Playing;
-        UpdateNodeState(NodeState.Playing);
-
-        StartCoroutine(UpdateEpisodeNode(internalState_, currentNode_));
-        HandleBackgroundLoop(internalState_, currentNode_);
+        StartCoroutine(UpdateEpisodeNode(currentNode_));
+        HandleBackgroundLoop(currentNode_);
     }
 
     protected override void NewEpisodeEventInternal(Episode e)
     {
         base.NewEpisodeEventInternal(e);
-
-        foreach(EpisodeNodeObject o in cachedNodeObjects_.Values)
-        {
-            GameObject.Destroy(o.gameObject);
-        }
-        cachedNodeObjects_ = new Dictionary<string, EpisodeNodeObject>();
     }
 
     protected override void NewActionInternal(string a)
@@ -53,111 +61,46 @@ public class ShareManager : GameManager
             AudioPlayer.StartRadio();
         }
 
-        if (!cachedNodeObjects_[Key(currentNode_)].Hidden)
+        if (activeNode_ != null)
         {
-            cachedNodeObjects_[Key(currentNode_)].ReceiveAction(a);
+            activeNode_.ReceiveAction(a);
         }
     }
 
-    private void HandleBackgroundLoop(string nodeState, EpisodeNode node)
+    private void HandleBackgroundLoop(EpisodeNode node)
     {
         if (node.BgLoopPath != null && node.BgLoopPath.Length > 0)
         {
-            if (node.StartBgLoopAfterSequence)
-            {
-                if (string.Equals(nodeState, NodeState.Looping) && node.StartBgLoopAfterSequence)
-                {
-                    AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
-                }
-            }
-            else
-            {
-                AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
-            }
-        }
-        if (string.Equals(nodeState, NodeState.Playing) && node.StopBgLoopAtSequence)
-        {
-            AudioPlayer.StopLoop(AudioPlayer.kMain);
+            AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
         }
     }
 
-    private IEnumerator UpdateEpisodeNode(string nodeState, EpisodeNode currentNode)
+    private IEnumerator UpdateEpisodeNode(EpisodeNode currentNode)
     {
-        if (previousNode_ != null && previousNode_ != currentNode)
-        {
-            cachedNodeObjects_[Key(previousNode_)].OnExit();
-        }
+        EpisodeNodeObject newObject = LoadEpisodeNodeObject(currentNode);
+        newObject.Play();
 
-        List<string> preloadedAssets = new List<string>();
-
-        PreloadObject(currentNode);
-        preloadedAssets.Add(Key(currentNode));
-
-        if (currentNode.NextNode != null)
-        {
-            PreloadObject(currentNode.NextNode);
-            preloadedAssets.Add(Key(currentNode.NextNode));
-        }
-
-        foreach (EpisodeNode.Option o in currentNode_.Options)
-        {
-            if (o.Node != null)
-            {
-                PreloadObject(o.Node);
-                preloadedAssets.Add(Key(o.Node));
-            }
-        }
-
-        yield return 0;
-
-        bool isLooping = string.Equals(nodeState, GameManager.NodeState.Looping);
-        
-        if (isLooping)
-        {
-            cachedNodeObjects_[Key(currentNode)].Loop();
-        } else
-        {
-            cachedNodeObjects_[Key(currentNode)].Play();
-        }
-
-        if (currentNode.Type == EpisodeNode.EpisodeType.Prefab)
-        {
-            if (previousNode_ != null)
-            {
-                cachedNodeObjects_[Key(previousNode_)].Hide();
-            }
-        }
-
-        for (int i = 0; i < 12; i ++)
+        while (!newObject.IsPlaying)
         {
             yield return 0;
         }
 
-        cachedNodeObjects_[Key(currentNode)].transform.SetAsLastSibling();
-
-        yield return 0;
-
-        List<string> allKeys = new List<string>(cachedNodeObjects_.Keys);
-        foreach (string k in allKeys)
+        for (int i = 0; i < 8; i++)
         {
-            if (!string.Equals(k, Key(currentNode)))
-            {
-                cachedNodeObjects_[k].Hide();
-            }
-            if (!preloadedAssets.Any(p => string.Equals(p, k)))
-            {
-                GameObject.Destroy(cachedNodeObjects_[k].gameObject);
-                cachedNodeObjects_.Remove(k);
-            }
+            yield return 0;
         }
 
-        previousNode_ = currentNode;
+
+        if (activeNode_ != null)
+        {
+            Destroy(activeNode_.gameObject);
+        }
+
+        activeNode_ = newObject;
     }
 
-    private void PreloadObject(EpisodeNode node)
+    private EpisodeNodeObject LoadEpisodeNodeObject(EpisodeNode node)
     {
-        if (cachedNodeObjects_.ContainsKey(Key(node))) return;
-
         EpisodeNodeObject nodeObject = null;
         string prefabPath = PREFAB_PATH;
         switch (node.Type)
@@ -165,15 +108,9 @@ public class ShareManager : GameManager
             case EpisodeNode.EpisodeType.Video:
                 prefabPath += "video_player";
                 break;
-
-            case EpisodeNode.EpisodeType.Prefab:
-                prefabPath += "prefab_player";
-                break;
-
             case EpisodeNode.EpisodeType.Image:
                 prefabPath += "image_player";
                 break;
-
             case EpisodeNode.EpisodeType.LoopWithOptions:
                 prefabPath += "loopwithoptions_player";
                 break;
@@ -184,23 +121,12 @@ public class ShareManager : GameManager
         nodeObject.gameObject.name = node.gameObject.name;
         nodeObject.transform.SetParent(nodeObjectParent_);
         nodeObject.transform.localPosition = Vector3.zero;
+        nodeObject.transform.localScale = Vector3.one;
+        nodeObject.transform.SetAsFirstSibling();
 
-        nodeObject.Init(this, node, EpisodeNodeFinished);
-        nodeObject.Preload(node);
-        nodeObject.Hide();
-        cachedNodeObjects_[Key(node)] = nodeObject;
-    }
+        nodeObject.Init(this, node);
 
-    private void EpisodeNodeFinished()
-    {
-        if (string.Equals(internalState_, NodeState.Playing))
-        {
-            internalState_ = NodeState.Looping;
-            UpdateNodeState(NodeState.Looping);
-
-            StartCoroutine(UpdateEpisodeNode(internalState_, currentNode_));
-            HandleBackgroundLoop(internalState_, currentNode_);
-        }
+        return nodeObject;
     }
 
     private string Key(EpisodeNode node)
@@ -212,12 +138,7 @@ public class ShareManager : GameManager
     {
         get
         {
-            if (currentNode_ == null || !cachedNodeObjects_.ContainsKey(Key(currentNode_)))
-            {
-                return 0f;
-            }
-            EpisodeNodeObject eno = cachedNodeObjects_[Key(currentNode_)];
-            return eno.ProgressPercentage;
+            return activeNode_ == null ? 0f : activeNode_.ProgressPercentage;
         }
     }
 }

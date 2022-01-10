@@ -25,18 +25,18 @@ public class ImageEpisodeNodeObject : EpisodeNodeObject
         loopImage_.transform.localScale = Vector3.one;
     }
 
-    public override void Preload(EpisodeNode node)
-    {
-        base.Preload(node);
+    //public override void Preload(EpisodeNode node)
+    //{
+    //    base.Preload(node);
 
-        mainImage_.sprite = Resources.Load<Sprite>(node.ImageFilePath);
+    //    mainImage_.sprite = Resources.Load<Sprite>(node.ImageFilePath);
 
-        if (node.ImageLoopFilePath == null || node.ImageLoopFilePath.Length == 0)
-        {
-            loopImage_.sprite = Resources.Load<Sprite>(node.ImageFilePath);
-        } else
-        {
-            loopImage_.sprite = Resources.Load<Sprite>(node.ImageLoopFilePath);
-        }
-    }
+    //    if (node.ImageLoopFilePath == null || node.ImageLoopFilePath.Length == 0)
+    //    {
+    //        loopImage_.sprite = Resources.Load<Sprite>(node.ImageFilePath);
+    //    } else
+    //    {
+    //        loopImage_.sprite = Resources.Load<Sprite>(node.ImageLoopFilePath);
+    //    }
+    //}
 }
