@@ -74,20 +74,9 @@ public class EpisodeNodeEditor : Editor
                 imagePath = StripExtension(imagePath);
                 myTarget.ImageFilePath = imagePath;
             }
-            string imageLoopPath = "empty";
-            if (imageLoop.objectReferenceValue != null)
-            {
-                imageLoopPath = AssetDatabase.GetAssetPath(imageLoop.objectReferenceValue.GetInstanceID());
-                imageLoopPath = imageLoopPath.Substring(kResourcesPrefix.Length);
-                imageLoopPath = StripExtension(imageLoopPath);
-                myTarget.ImageLoopFilePath = imageLoopPath;
-            }
 
             EditorGUILayout.LabelField(string.Format("Image ({0})", imagePath));
             myTarget.Image = EditorGUILayout.ObjectField(myTarget.Image, typeof(Object), false);
-
-            EditorGUILayout.LabelField(string.Format("Video Loop ({0})", imageLoopPath));
-            myTarget.ImageLoop = EditorGUILayout.ObjectField(myTarget.ImageLoop, typeof(Object), false);
         }
         else if (myTarget.Type == EpisodeNode.EpisodeType.LoopWithOptions)
         {

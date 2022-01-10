@@ -71,8 +71,6 @@ public class EpisodeNode : MonoBehaviour
     //IMAGE OPTIONS
     public UnityEngine.Object Image;
     public string ImageFilePath;
-    public UnityEngine.Object ImageLoop;
-    public string ImageLoopFilePath;
 
     //LOOPWITHOPTIONS OPTIONS
     //uses VideoLoop and VideoLoopFilePath

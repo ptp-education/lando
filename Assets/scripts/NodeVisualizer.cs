@@ -30,7 +30,7 @@ public class NodeVisualizer : MonoBehaviour
                 break;
             case EpisodeNode.EpisodeType.Image:
                 type_.text = "Type: Image";
-                path_.text = node.ImageFilePath + " / " + node.ImageLoopFilePath;
+                path_.text = node.ImageFilePath;
                 break;
             case EpisodeNode.EpisodeType.LoopWithOptions:
                 type_.text = "Type: LoopWithOptions";
