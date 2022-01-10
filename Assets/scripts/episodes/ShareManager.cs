@@ -114,6 +114,9 @@ public class ShareManager : GameManager
             case EpisodeNode.EpisodeType.LoopWithOptions:
                 prefabPath += "loopwithoptions_player";
                 break;
+            case EpisodeNode.EpisodeType.PREFAB_DEPRECATED:
+                Debug.LogWarning("Prefab objects have been deprecated");
+                return null;
         }
         EpisodeNodeObject o = Resources.Load<EpisodeNodeObject>(prefabPath);
         nodeObject = GameObject.Instantiate<EpisodeNodeObject>(o);

@@ -17,14 +17,6 @@ public class ImageEpisodeNodeObject : EpisodeNodeObject
         loopImage_.transform.localScale = Vector3.zero;
     }
 
-    public override void Loop()
-    {
-        base.Loop();
-
-        mainImage_.transform.localScale = Vector3.zero;
-        loopImage_.transform.localScale = Vector3.one;
-    }
-
     //public override void Preload(EpisodeNode node)
     //{
     //    base.Preload(node);

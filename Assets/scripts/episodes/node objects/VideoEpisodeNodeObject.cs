@@ -17,7 +17,7 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
     {
         base.Init(gameManager, node);
 
-        videoPlayerMain_.loopPointReached += VideoFinished;
+        videoPlayerMain_.loopPointReached += MainVideoFinished;
 
         videoPlayerMain_.isLooping = false;
         videoPlayerLoop_.isLooping = true;
@@ -25,9 +25,12 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         Preload();
     }
 
-    private void VideoFinished(VideoPlayer vp)
+    private void MainVideoFinished(VideoPlayer vp)
     {
         completed_ = true;
+
+        videoPlayerLoop_.Stop();
+        StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_, pauseBetweenSwitch: true));
     }
 
     public override void Play()
@@ -39,14 +42,6 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
 
         videoPlayerMain_.Stop();
         StartCoroutine(SwapPlayer(videoPlayerMain_, videoPlayerLoop_, pauseBetweenSwitch: false));
-    }
-
-    public override void Loop()
-    {
-        base.Loop();
-
-        videoPlayerLoop_.Stop();
-        StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_, pauseBetweenSwitch: true));
     }
 
     private IEnumerator SwapPlayer(VideoPlayer play, VideoPlayer stop, bool pauseBetweenSwitch = false)

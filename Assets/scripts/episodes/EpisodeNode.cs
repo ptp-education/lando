@@ -12,6 +12,7 @@ public class EpisodeNode : MonoBehaviour
     {
         Video,
         Image,
+        PREFAB_DEPRECATED,
         LoopWithOptions
     }
 

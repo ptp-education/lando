@@ -35,7 +35,7 @@ public class EpisodeNodeObject : MonoBehaviour
     {
         get
         {
-            return true;
+            return false;
         }
     }
 
@@ -43,10 +43,6 @@ public class EpisodeNodeObject : MonoBehaviour
     {
         ResetSpawnedObjects();
         ResetCommandLines();
-    }
-
-    public virtual void Loop()
-    {
     }
 
     public virtual void ReceiveAction(string action)

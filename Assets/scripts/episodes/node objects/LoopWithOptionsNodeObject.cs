@@ -8,7 +8,7 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
 {
     [SerializeField] private VideoPlayer videoPlayerLoop_;
 
-    private List<VideoPlayer> listOfVideos_ = new List<VideoPlayer>();
+    private VideoPlayer activePlayer_;
     private Dictionary<string, int> lastRandomIndex_ = new Dictionary<string, int>();
 
     public override void Init(GameManager gameManager, EpisodeNode node)
@@ -16,96 +16,69 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
         base.Init(gameManager, node);
 
         videoPlayerLoop_.isLooping = true;
+        VideoEpisodeNodeObject.PreloadVideo(videoPlayerLoop_, node.VideoLoopFilePath);
     }
 
     private void VideoFinished(VideoPlayer vp)
     {
-        StartCoroutine(PlayVideo(videoPlayerLoop_));
+        videoPlayerLoop_.transform.localScale = Vector3.one;
+        Destroy(activePlayer_.gameObject);
+        activePlayer_ = null;
     }
 
     public override void Play()
     {
         base.Play();
 
-        Loop();
-
-        //Play is handled separately through actions. We go immediately to loop.
-    }
-
-    public override void Loop()
-    {
-        base.Loop();
-
         videoPlayerLoop_.Play();
-        StartCoroutine(PlayVideo(videoPlayerLoop_));
     }
 
-    private void PlayVideo(string path)
+    public override bool IsPlaying
     {
-        List<VideoPlayer> players = new List<VideoPlayer>(listOfVideos_);
-        players.Add(videoPlayerLoop_);
-
-        foreach(VideoPlayer vp in players)
+        get
         {
-            if (vp.url.Contains(path))
-            {
-                StartCoroutine(PlayVideo(vp));
-                return;
-            }
+            return (activePlayer_ != null && activePlayer_.isPlaying) || (videoPlayerLoop_.isPlaying);
         }
     }
 
-    private IEnumerator PlayVideo(VideoPlayer play)
+    private IEnumerator PlayVideo(string path)
     {
-        play.Play();
+        activePlayer_ = Instantiate<VideoPlayer>(videoPlayerLoop_, videoPlayerLoop_.transform.parent);
+        activePlayer_.transform.localPosition = videoPlayerLoop_.transform.localPosition;
+        activePlayer_.transform.localScale = Vector3.zero;
+        activePlayer_.isLooping = false;
 
-        for (int i = 0; i < 12; i++)
+        activePlayer_.loopPointReached += VideoFinished;
+
+        VideoEpisodeNodeObject.PreloadVideo(activePlayer_, path);
+
+        activePlayer_.Prepare();
+
+        while (!activePlayer_.isPrepared)
         {
             yield return 0;
         }
 
-        List<VideoPlayer> videos = new List<VideoPlayer>(listOfVideos_);
-        videos.Add(videoPlayerLoop_);
+        activePlayer_.Play();
 
-        foreach (VideoPlayer vp in videos)
+        for (int i = 0; i < 3; i++)
         {
-            if (vp != play)
-            {
-                vp.Stop();
-                vp.transform.localScale = Vector3.zero;
-            }
+            yield return 0;
         }
 
-        play.transform.localScale = Vector3.one;
+        activePlayer_.transform.localScale = Vector3.one;
+
+        videoPlayerLoop_.transform.localScale = Vector3.zero;
     }
-
-    //public override void Preload(EpisodeNode node)
-    //{
-    //    base.Preload(node);
-
-    //    VideoEpisodeNodeObject.PreloadVideo(videoPlayerLoop_, node.VideoLoopFilePath);
-
-    //    foreach (EpisodeNode.VideoOption vo in node.VideoOptions)
-    //    {
-    //        foreach(EpisodeNode.VideoOption.Video v in vo.Videos)
-    //        {
-    //            VideoPlayer vp = Instantiate<VideoPlayer>(videoPlayerLoop_, videoPlayerLoop_.transform.parent);
-    //            vp.transform.localPosition = videoPlayerLoop_.transform.localPosition;
-    //            vp.transform.localScale = Vector3.zero;
-    //            vp.isLooping = false;
-
-    //            vp.loopPointReached += VideoFinished;
-
-    //            VideoEpisodeNodeObject.PreloadVideo(vp, v.VideoPath);
-
-    //            listOfVideos_.Add(vp);
-    //        }
-    //    }
-    //}
 
     public override void ReceiveAction(string action)
     {
         base.ReceiveAction(action);
+
+        if (activePlayer_ != null)
+        {
+            return;
+        }
 
         //args: VideoOption.key
         //-pop, pop each video played
@@ -167,7 +140,7 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
 
         if (videoPath != null)
         {
-            PlayVideo(videoPath);
+            StartCoroutine(PlayVideo(videoPath));
         }
     }
 }
