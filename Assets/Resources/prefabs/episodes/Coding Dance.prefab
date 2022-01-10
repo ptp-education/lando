@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &213324267156895201
+--- !u!1 &538275287565440328
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,62 +8,65 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6635117275129534598}
-  - component: {fileID: 3359098447948137732}
+  - component: {fileID: 1208170658145273245}
+  - component: {fileID: 18169883730841820}
   m_Layer: 5
-  m_Name: studio opponent
+  m_Name: city
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6635117275129534598
+--- !u!224 &1208170658145273245
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213324267156895201}
+  m_GameObject: {fileID: 538275287565440328}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 6
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3359098447948137732
+--- !u!114 &18169883730841820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 213324267156895201}
+  m_GameObject: {fileID: 538275287565440328}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
   VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: c45ad8f83bc4b46d68ffdaa41c8ae80e, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-07
+  Image: {fileID: 2800000, guid: 37e3240f17f534d8ab63ff17abc37b75, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-06
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: How did she remember all those moves?
-  NextNode: {fileID: 8578295740162697027}
+  VideoOptions: []
+  Prompt: I'm okay with either. What do you guys want to do?
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 8962721141054639564}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &1498520610335150831
+--- !u!1 &1211687025265261288
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,8 +74,488 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8854127160477071693}
-  - component: {fileID: 7940601286098165049}
+  - component: {fileID: 3444390562367599299}
+  - component: {fileID: 2733733211402481547}
+  m_Layer: 5
+  m_Name: studio opponent 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3444390562367599299
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211687025265261288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2733733211402481547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211687025265261288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: e8372afd7ad874802b7eb5e6f537c154, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-08
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: 'Everyone, let''s take the left arm sticker and put it down in your book
+    like Lando did.
+
+
+    For every new code, ask class to put in a sticker.'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 5009641721816748125}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &1752276119022565023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6387015228031481690}
+  - component: {fileID: 4376208540755668445}
+  m_Layer: 5
+  m_Name: airport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6387015228031481690
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752276119022565023}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4376208540755668445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752276119022565023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: 9409806eea7e74469b6c75c2a109e772, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-03
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: 'Thanks Lando for offering $500!
+
+
+    Did anyone bring money with you?
+    It would be great if we could all go to Vancouver and try to win that double
+    prize.'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 1220332876136123654}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2544655725321865692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6952631941837987113}
+  - component: {fileID: 1260653811677329398}
+  m_Layer: 5
+  m_Name: advertisement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6952631941837987113
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544655725321865692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1260653811677329398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544655725321865692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: a60cb88a87b5d4413bac650904bd2ddc, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-01
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: This is exciting! Let's go!
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 896766659312446810}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2917429706766371576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1404642519338108888}
+  - component: {fileID: 1220332876136123654}
+  m_Layer: 5
+  m_Name: airport 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1404642519338108888
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917429706766371576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1220332876136123654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917429706766371576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: 4993722f323e1463891f6e5c36cff6dd, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-04
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: It would be... what is double of $500?
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 454620179798035840}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3026720875101155968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6324444134417566891}
+  - component: {fileID: 896766659312446810}
+  m_Layer: 5
+  m_Name: advertisement 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6324444134417566891
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026720875101155968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &896766659312446810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026720875101155968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: 23ca28cbd5abc4d9caf1c8970e9426cf, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-02
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: Then we better head over to SFO. This competition is happening today!
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 4376208540755668445}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4199485749480235139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917902663856280122}
+  - component: {fileID: 2638358983865939924}
+  m_Layer: 5
+  m_Name: code practice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1917902663856280122
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199485749480235139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2638358983865939924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4199485749480235139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 2
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: 90296ce154b02494a9a99edd54525830, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-13
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: 'Ready, let''s practice our code.
+
+
+    3, 2, 1
+
+
+    <press start>'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 7471062489605600227}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4377511330148935877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7751220701709108998}
+  - component: {fileID: 4251803196501092455}
+  m_Layer: 5
+  m_Name: studio opponent 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7751220701709108998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4377511330148935877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4251803196501092455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4377511330148935877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 2
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: 092765a3b6fff433c83baece551b6e23, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-12
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: 'Ready, 3, 2, 1.
+
+
+    <press Start>'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 8363657626619139649}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5059725838376835623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2890252012269498757}
+  - component: {fileID: 4381650137942185457}
   m_Layer: 5
   m_Name: prize
   m_TagString: Untagged
@@ -80,18 +563,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8854127160477071693
+--- !u!224 &2890252012269498757
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498520610335150831}
+  m_GameObject: {fileID: 5059725838376835623}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
+  m_Father: {fileID: 188297999370107243}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -99,18 +582,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7940601286098165049
+--- !u!114 &4381650137942185457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498520610335150831}
+  m_GameObject: {fileID: 5059725838376835623}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
   Type: 2
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
@@ -120,17 +605,18 @@ MonoBehaviour:
   ImageFilePath: sprites/Coding Dance/coding-dance-16
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
+  VideoOptions: []
   Prompt: 'Thank you! We''d love to come back some time.
 
 
     This is a lot of money.
     Everyone come by, and collect your piece of the reward!'
+  PrefabSpawnObjects: []
+  CommandLines: []
   NextNode: {fileID: 0}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &3158385891639742820
+--- !u!1 &5767404766500666665
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,129 +624,65 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5791885659038740899}
-  - component: {fileID: 2537650009133290779}
+  - component: {fileID: 1074316698692522062}
+  - component: {fileID: 8962721141054639564}
   m_Layer: 5
-  m_Name: Coding Dance
+  m_Name: studio opponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5791885659038740899
+--- !u!224 &1074316698692522062
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3158385891639742820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3639089589932021217}
-  - {fileID: 376298195278546019}
-  - {fileID: 747366481840471954}
-  - {fileID: 4720436190027648784}
-  - {fileID: 2259055641740276225}
-  - {fileID: 4771662307727854933}
-  - {fileID: 6635117275129534598}
-  - {fileID: 9020991177273457163}
-  - {fileID: 9161257855627697323}
-  - {fileID: 4138191714847772622}
-  - {fileID: 2539776727898255841}
-  - {fileID: 6677017215034226698}
-  - {fileID: 5215681935486753522}
-  - {fileID: 8553612698832075912}
-  - {fileID: 4623978522622433876}
-  - {fileID: 8854127160477071693}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2537650009133290779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3158385891639742820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingNode: {fileID: 4864640419280273214}
---- !u!1 &3239278043885143801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2539776727898255841}
-  - component: {fileID: 2805108240162954889}
-  m_Layer: 5
-  m_Name: character picker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2539776727898255841
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3239278043885143801}
+  m_GameObject: {fileID: 5767404766500666665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 10
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2805108240162954889
+--- !u!114 &8962721141054639564
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3239278043885143801}
+  m_GameObject: {fileID: 5767404766500666665}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
   VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: a7178ae5b73cf428eaa99688222e9138, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-10
+  Image: {fileID: 2800000, guid: c45ad8f83bc4b46d68ffdaa41c8ae80e, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-07
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: "Everyone, who do you want to use? \n\nIf we want to use one of the locked
-    characters, someone in the class needs to have beaten them before. \n\nShow us
-    your badge!"
-  NextNode: {fileID: 7401303465602148720}
+  VideoOptions: []
+  Prompt: How did she remember all those moves?
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 2733733211402481547}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &3248561398297149090
+--- !u!1 &7481271190646951186
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,71 +690,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2259055641740276225}
-  - component: {fileID: 6103279079696876872}
-  m_Layer: 5
-  m_Name: plane ride
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2259055641740276225
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3248561398297149090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6103279079696876872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3248561398297149090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 2a243fd5826a241e0942abc08771aac9, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-05
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 
-  NextNode: {fileID: 5961811737435101204}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &3832213480221558234
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9161257855627697323}
-  - component: {fileID: 1691598377376864405}
+  - component: {fileID: 3305433368103212131}
+  - component: {fileID: 5009641721816748125}
   m_Layer: 5
   m_Name: studio opponent 3
   m_TagString: Untagged
@@ -340,18 +699,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &9161257855627697323
+--- !u!224 &3305433368103212131
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3832213480221558234}
+  m_GameObject: {fileID: 7481271190646951186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
+  m_Father: {fileID: 188297999370107243}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -359,18 +718,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1691598377376864405
+--- !u!114 &5009641721816748125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3832213480221558234}
+  m_GameObject: {fileID: 7481271190646951186}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
   Type: 2
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
@@ -380,14 +741,15 @@ MonoBehaviour:
   ImageFilePath: sprites/Coding Dance/coding-dance-09
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
+  VideoOptions: []
   Prompt: "Let's do the first move. \n<do the first command, and have kids follow>\n\nPress
     \"Next Step\"\n\nand repeat!\n"
-  NextNode: {fileID: 7637367348132880559}
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 4251803196501092455}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &4146768754855421077
+--- !u!1 &7547423073885102675
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -395,8 +757,147 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6677017215034226698}
-  - component: {fileID: 7401303465602148720}
+  - component: {fileID: 1357759070152675996}
+  - component: {fileID: 3437358596423156617}
+  m_Layer: 5
+  m_Name: scoring
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1357759070152675996
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547423073885102675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3437358596423156617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547423073885102675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 2
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: 8dbc21607ea6440fdbce790fd5b543d9, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-15
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: 'We did it guys! That means we won the $500 cash prize. '
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 4381650137942185457}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7612847664228600653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2614506948612469824}
+  - component: {fileID: 7471062489605600227}
+  m_Layer: 5
+  m_Name: code performance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2614506948612469824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612847664228600653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7471062489605600227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612847664228600653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 2
+  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
+  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
+  Image: {fileID: 2800000, guid: ee96da7e67d5a400c805107b38058d1f, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-14
+  ImageLoop: {fileID: 0}
+  ImageLoopFilePath: 
+  VideoOptions: []
+  Prompt: 'Alright, everyone ready?
+
+
+    Let''s go!
+
+
+    <hit start performance
+    button>'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 3437358596423156617}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7741786096285609053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032897296237965506}
+  - component: {fileID: 3768007726834426296}
   m_Layer: 5
   m_Name: code picker
   m_TagString: Untagged
@@ -404,18 +905,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6677017215034226698
+--- !u!224 &1032897296237965506
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146768754855421077}
+  m_GameObject: {fileID: 7741786096285609053}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
+  m_Father: {fileID: 188297999370107243}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -423,18 +924,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7401303465602148720
+--- !u!114 &3768007726834426296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4146768754855421077}
+  m_GameObject: {fileID: 7741786096285609053}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
   Type: 2
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
@@ -444,8 +947,7 @@ MonoBehaviour:
   ImageFilePath: sprites/Coding Dance/coding-dance-11
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
+  VideoOptions: []
   Prompt: 'We can try out a command if you want.
 
 
@@ -457,10 +959,12 @@ MonoBehaviour:
 
 
     Do you want to see what the dance looks like?'
-  NextNode: {fileID: 8530174889317629724}
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 2638358983865939924}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &4197851925019093659
+--- !u!1 &8730446017372821932
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,493 +972,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4623978522622433876}
-  - component: {fileID: 9029684507703364417}
+  - component: {fileID: 188297999370107243}
+  - component: {fileID: 8199817306958323155}
   m_Layer: 5
-  m_Name: scoring
+  m_Name: Coding Dance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4623978522622433876
+--- !u!224 &188297999370107243
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4197851925019093659}
+  m_GameObject: {fileID: 8730446017372821932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9029684507703364417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4197851925019093659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 8dbc21607ea6440fdbce790fd5b543d9, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-15
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 'We did it guys! That means we won the $500 cash prize. '
-  NextNode: {fileID: 7940601286098165049}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &4276825097004893061
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8553612698832075912}
-  - component: {fileID: 3842303416862653227}
-  m_Layer: 5
-  m_Name: code performance
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8553612698832075912
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4276825097004893061}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3842303416862653227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4276825097004893061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: ee96da7e67d5a400c805107b38058d1f, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-14
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 'Alright, everyone ready?
-
-
-    Let''s go!
-
-
-    <hit start performance
-    button>'
-  NextNode: {fileID: 9029684507703364417}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &4768423275402588704
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9020991177273457163}
-  - component: {fileID: 8578295740162697027}
-  m_Layer: 5
-  m_Name: studio opponent 2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &9020991177273457163
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4768423275402588704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8578295740162697027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4768423275402588704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: e8372afd7ad874802b7eb5e6f537c154, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-08
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 'Everyone, let''s take the left arm sticker and put it down in your book
-    like Lando did.
-
-
-    For every new code, ask class to put in a sticker.'
-  NextNode: {fileID: 1691598377376864405}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &5381032451496525399
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 747366481840471954}
-  - component: {fileID: 7946455457172055317}
-  m_Layer: 5
-  m_Name: airport
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &747366481840471954
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5381032451496525399}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7946455457172055317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5381032451496525399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 9409806eea7e74469b6c75c2a109e772, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-03
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 'Thanks Lando for offering $500!
-
-
-    Did anyone bring money with you?
-    It would be great if we could all go to Vancouver and try to win that double
-    prize.'
-  NextNode: {fileID: 4761271348106544590}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &6162129201312062848
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4771662307727854933}
-  - component: {fileID: 5961811737435101204}
-  m_Layer: 5
-  m_Name: city
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4771662307727854933
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6162129201312062848}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5961811737435101204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6162129201312062848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 37e3240f17f534d8ab63ff17abc37b75, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-06
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: I'm okay with either. What do you guys want to do?
-  NextNode: {fileID: 3359098447948137732}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &7546769995307706443
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5215681935486753522}
-  - component: {fileID: 8530174889317629724}
-  m_Layer: 5
-  m_Name: code practice
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5215681935486753522
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546769995307706443}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8530174889317629724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7546769995307706443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 90296ce154b02494a9a99edd54525830, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-13
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 'Ready, let''s practice our code.
-
-
-    3, 2, 1
-
-
-    <press start>'
-  NextNode: {fileID: 3842303416862653227}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &7943252451740065805
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4138191714847772622}
-  - component: {fileID: 7637367348132880559}
-  m_Layer: 5
-  m_Name: studio opponent 4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4138191714847772622
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7943252451740065805}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7637367348132880559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7943252451740065805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 092765a3b6fff433c83baece551b6e23, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-12
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: 'Ready, 3, 2, 1.
-
-
-    <press Start>'
-  NextNode: {fileID: 2805108240162954889}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &8191062284714934548
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3639089589932021217}
-  - component: {fileID: 4864640419280273214}
-  m_Layer: 5
-  m_Name: advertisement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3639089589932021217
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8191062284714934548}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5791885659038740899}
+  m_Children:
+  - {fileID: 6952631941837987113}
+  - {fileID: 6324444134417566891}
+  - {fileID: 6387015228031481690}
+  - {fileID: 1404642519338108888}
+  - {fileID: 5595113933954661065}
+  - {fileID: 1208170658145273245}
+  - {fileID: 1074316698692522062}
+  - {fileID: 3444390562367599299}
+  - {fileID: 3305433368103212131}
+  - {fileID: 7751220701709108998}
+  - {fileID: 8197404696816400681}
+  - {fileID: 1032897296237965506}
+  - {fileID: 1917902663856280122}
+  - {fileID: 2614506948612469824}
+  - {fileID: 1357759070152675996}
+  - {fileID: 2890252012269498757}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -962,34 +1016,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4864640419280273214
+--- !u!114 &8199817306958323155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8191062284714934548}
+  m_GameObject: {fileID: 8730446017372821932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
-  Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
-  VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: a60cb88a87b5d4413bac650904bd2ddc, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-01
-  ImageLoop: {fileID: 0}
-  ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: This is exciting! Let's go!
-  NextNode: {fileID: 6813354561186211218}
-  Options: []
-  VisualNode: {fileID: 0}
---- !u!1 &8718128577101969992
+  StartingNode: {fileID: 1260653811677329398}
+--- !u!1 &9081556402128735793
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -997,62 +1037,67 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 376298195278546019}
-  - component: {fileID: 6813354561186211218}
+  - component: {fileID: 8197404696816400681}
+  - component: {fileID: 8363657626619139649}
   m_Layer: 5
-  m_Name: advertisement 2
+  m_Name: character picker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &376298195278546019
+--- !u!224 &8197404696816400681
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8718128577101969992}
+  m_GameObject: {fileID: 9081556402128735793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 1
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6813354561186211218
+--- !u!114 &8363657626619139649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8718128577101969992}
+  m_GameObject: {fileID: 9081556402128735793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
   Type: 2
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
   VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 23ca28cbd5abc4d9caf1c8970e9426cf, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-02
+  Image: {fileID: 2800000, guid: a7178ae5b73cf428eaa99688222e9138, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-10
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: Then we better head over to SFO. This competition is happening today!
-  NextNode: {fileID: 7946455457172055317}
+  VideoOptions: []
+  Prompt: "Everyone, who do you want to use? \n\nIf we want to use one of the locked
+    characters, someone in the class needs to have beaten them before. \n\nShow us
+    your badge!"
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 3768007726834426296}
   Options: []
   VisualNode: {fileID: 0}
---- !u!1 &8827296637715644976
+--- !u!1 &9216937938590234218
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1060,58 +1105,61 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4720436190027648784}
-  - component: {fileID: 4761271348106544590}
+  - component: {fileID: 5595113933954661065}
+  - component: {fileID: 454620179798035840}
   m_Layer: 5
-  m_Name: airport 2
+  m_Name: plane ride
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4720436190027648784
+--- !u!224 &5595113933954661065
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827296637715644976}
+  m_GameObject: {fileID: 9216937938590234218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5791885659038740899}
-  m_RootOrder: 3
+  m_Father: {fileID: 188297999370107243}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4761271348106544590
+--- !u!114 &454620179798035840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8827296637715644976}
+  m_GameObject: {fileID: 9216937938590234218}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
   Video: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
   VideoLoop: {fileID: 102900000, guid: 0d90376dc45ed40199dd23f91d7d963d, type: 3}
   VideoLoopFilePath: Dance 1 - Save the Honbees/A0-0.0.mp4
-  Image: {fileID: 2800000, guid: 4993722f323e1463891f6e5c36cff6dd, type: 3}
-  ImageFilePath: sprites/Coding Dance/coding-dance-04
+  Image: {fileID: 2800000, guid: 2a243fd5826a241e0942abc08771aac9, type: 3}
+  ImageFilePath: sprites/Coding Dance/coding-dance-05
   ImageLoop: {fileID: 0}
   ImageLoopFilePath: 
-  Prefab: {fileID: 0}
-  PrefabPath: 
-  Prompt: It would be... what is double of $500?
-  NextNode: {fileID: 6103279079696876872}
+  VideoOptions: []
+  Prompt: 
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 18169883730841820}
   Options: []
   VisualNode: {fileID: 0}

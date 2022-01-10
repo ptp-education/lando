@@ -7,28 +7,19 @@ using UnityEngine.UI;
 public class ImageEpisodeNodeObject : EpisodeNodeObject
 {
     [SerializeField] private Image mainImage_;
-    [SerializeField] private Image loopImage_;
 
-    public override void Play()
+    public override bool IsPlaying
     {
-        base.Play();
-
-        mainImage_.transform.localScale = Vector3.one;
-        loopImage_.transform.localScale = Vector3.zero;
+        get
+        {
+            return true;
+        }
     }
 
-    //public override void Preload(EpisodeNode node)
-    //{
-    //    base.Preload(node);
+    public override void Init(GameManager gameManager, EpisodeNode node)
+    {
+        base.Init(gameManager, node);
 
-    //    mainImage_.sprite = Resources.Load<Sprite>(node.ImageFilePath);
-
-    //    if (node.ImageLoopFilePath == null || node.ImageLoopFilePath.Length == 0)
-    //    {
-    //        loopImage_.sprite = Resources.Load<Sprite>(node.ImageFilePath);
-    //    } else
-    //    {
-    //        loopImage_.sprite = Resources.Load<Sprite>(node.ImageLoopFilePath);
-    //    }
-    //}
+        mainImage_.sprite = Resources.Load<Sprite>(episodeNode_.ImageFilePath);
+    }
 }
