@@ -7,7 +7,7 @@ public class EpisodeNodeObject : MonoBehaviour
 {
     public delegate void ReadyToStartLoop();
 
-    protected EpisodeNode episodeNode_;
+    public EpisodeNode Node;
     protected GameManager gameManager_;
 
     private List<SpawnedObject> spawnedPrefabs_ = new List<SpawnedObject>();
@@ -28,7 +28,7 @@ public class EpisodeNodeObject : MonoBehaviour
     public virtual void Init(GameManager manager, EpisodeNode node)
     {
         gameManager_ = manager;
-        episodeNode_ = node;
+        Node = node;
     }
 
     public virtual bool IsPlaying
@@ -64,12 +64,13 @@ public class EpisodeNodeObject : MonoBehaviour
     private void Update()
     {
         spawnedObjectParent_.SetAsLastSibling();
+           
+        if (IsPlaying)
+        {
+            timer_ += Time.deltaTime;
+        }
 
-        //dont forget to remove objects and reset timer
-
-        timer_ += Time.deltaTime;
-
-        foreach(EpisodeNode.PrefabSpawnObject o in episodeNode_.PrefabSpawnObjects)
+        foreach(EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
         {
             if (timer_ > o.TimeStamp)
             {
@@ -80,7 +81,7 @@ public class EpisodeNodeObject : MonoBehaviour
             }
         }
 
-        foreach (EpisodeNode.CommandLine c in episodeNode_.CommandLines)
+        foreach (EpisodeNode.CommandLine c in Node.CommandLines)
         {
             if (timer_ > c.TimeStamp)
             {
@@ -108,7 +109,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private void ResetSpawnedObjects()
     {
         timer_ = 0f;
-        foreach (EpisodeNode.PrefabSpawnObject o in episodeNode_.PrefabSpawnObjects)
+        foreach (EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
         {
             o.Spawned = false;
         }
@@ -123,7 +124,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private void ResetCommandLines()
     {
         timer_ = 0f;
-        foreach(EpisodeNode.CommandLine c in episodeNode_.CommandLines)
+        foreach(EpisodeNode.CommandLine c in Node.CommandLines)
         {
             c.Ran = false;
         }

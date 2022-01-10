@@ -77,6 +77,21 @@ public class ShareManager : GameManager
 
     private IEnumerator UpdateEpisodeNode(EpisodeNode currentNode)
     {
+        if (activeNode_ != null && activeNode_.Node.FadeToNextScene)
+        {
+            if (fadeFlow_ != null)
+            {
+                fadeFlow_.complete();
+                fadeFlow_ = null;
+            }
+            fadeFlow_ = new GoTweenFlow();
+            fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
+            fadeFlow_.insert(1.3f, new GoTween(fadeOverlay_, 0.7f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
+            fadeFlow_.play();
+
+            yield return new WaitForSeconds(0.8f);
+        }
+
         EpisodeNodeObject newObject = LoadEpisodeNodeObject(currentNode);
         newObject.Play();
 
@@ -89,7 +104,6 @@ public class ShareManager : GameManager
         {
             yield return 0;
         }
-
 
         if (activeNode_ != null)
         {

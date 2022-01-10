@@ -102,7 +102,7 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
         if (videoKey != null)
         {
             EpisodeNode.VideoOption vo = null;
-            foreach(EpisodeNode.VideoOption n in episodeNode_.VideoOptions)
+            foreach(EpisodeNode.VideoOption n in Node.VideoOptions)
             {
                 if (string.Equals(videoKey, n.Key))
                 {

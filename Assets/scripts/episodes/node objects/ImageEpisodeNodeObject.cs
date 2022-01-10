@@ -20,6 +20,6 @@ public class ImageEpisodeNodeObject : EpisodeNodeObject
     {
         base.Init(gameManager, node);
 
-        mainImage_.sprite = Resources.Load<Sprite>(episodeNode_.ImageFilePath);
+        mainImage_.sprite = Resources.Load<Sprite>(Node.ImageFilePath);
     }
 }

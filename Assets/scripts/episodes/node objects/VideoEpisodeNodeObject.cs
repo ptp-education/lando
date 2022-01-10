@@ -54,30 +54,27 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
             yield return 0;
         }
 
-        if (pauseBetweenSwitch)
-        {
-            yield return 0;
-            yield return 0;
-        }
-
         play.Play();
 
         if (pauseBetweenSwitch)
         {
-            yield return 0;
-            yield return 0;
+            for (int i = 0; i < 8; i++)
+            {
+                yield return 0;
+            }
         }
 
         stop.Stop();
 
         play.transform.localScale = Vector3.one;
+        yield return 0;
         stop.transform.localScale = Vector3.zero;
     }
 
     public void Preload()
     {
-        PreloadVideo(videoPlayerMain_, episodeNode_.VideoFilePath);
-        PreloadVideo(videoPlayerLoop_, episodeNode_.VideoLoopFilePath);
+        PreloadVideo(videoPlayerMain_, Node.VideoFilePath);
+        PreloadVideo(videoPlayerLoop_, Node.VideoLoopFilePath);
     }
 
     public override bool IsPlaying
