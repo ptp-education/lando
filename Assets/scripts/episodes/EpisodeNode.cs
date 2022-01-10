@@ -77,7 +77,7 @@ public class EpisodeNode : MonoBehaviour
     public List<VideoOption> VideoOptions = new List<VideoOption>();
 
     //ALL OPTIONS
-    public bool FadeToNextScene;
+    public bool FadeInFromPreviousScene;
     public string Prompt;
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();

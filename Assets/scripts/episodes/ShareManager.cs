@@ -77,7 +77,7 @@ public class ShareManager : GameManager
 
     private IEnumerator UpdateEpisodeNode(EpisodeNode currentNode)
     {
-        if (activeNode_ != null && activeNode_.Node.FadeToNextScene)
+        if (currentNode.FadeInFromPreviousScene)
         {
             if (fadeFlow_ != null)
             {
