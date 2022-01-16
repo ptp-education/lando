@@ -2,10 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class SpawnedColorBridge : SpawnedObject
 {
-    [SerializeField] private List<Image> bridges_;
+    [SerializeField] private List<Image> blueSplats_;
+    [SerializeField] private List<Image> goldSplats_;
+    [SerializeField] private List<Image> greenSplats_;
+    [SerializeField] private List<Image> orangeSplats_;
+    [SerializeField] private List<Image> pinkSplats_;
+    [SerializeField] private List<Image> purpleSplats_;
+    [SerializeField] private List<Image> redSplats_;
+    [SerializeField] private List<Image> silverSplats_;
+    [SerializeField] private List<Image> yellowSplats_;
+
     private GoTweenFlow flow_;
 
     public override void ReceivedAction(string action)
@@ -16,13 +26,19 @@ public class SpawnedColorBridge : SpawnedObject
         {
             string[] split = action.Split('-');
 
-            int color = -1;
-            int.TryParse(split[split.Length - 1], out color);
-            if (color > 0)
+            string color = split[split.Length - 1];
+
+            List<string> colors = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.BridgeColors);
+            if (colors == null)
             {
-                GameStorage.Integer chosenColor = new GameStorage.Integer(color);
-                gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.ChosenColor, chosenColor);
+                colors = new List<string>();
             }
+            colors.Add(color);
+            gameManager_.Storage.Add<List<string>>(GameStorage.Key.BridgeColors, colors);
+
+            AudioPlayer.PlayAudio("audio/sfx/splat");
+
+            RefreshColors();
         }
     }
 
@@ -30,50 +46,33 @@ public class SpawnedColorBridge : SpawnedObject
     {
         base.Reset();
 
-        GameStorage.Integer chosenColor = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.ChosenColor);
-
-        if (chosenColor == null)
-        {
-            if (flow_ != null)
-            {
-                flow_.destroy();
-                flow_ = null;
-            }
-
-            flow_ = new GoTweenFlow(new GoTweenCollectionConfig().setIterations(-1));
-
-            float start = 0f;
-            for (int i = 0; i < bridges_.Count; i++)
-            {
-                for (int ii = 0; ii < bridges_.Count; ii++)
-                {
-                    float adjustedStartTime = start;
-                    if (ii == i) adjustedStartTime -= 0.05f;
-   
-                    flow_.insert(adjustedStartTime, new GoTween(
-                        bridges_[ii].transform,
-                        0.01f,
-                        new GoTweenConfig().vector3Prop("localScale", ii == i ? Vector3.one : Vector3.zero))
-                    );
-                }
-                start += 1f;
-            }
-            flow_.play();
-        } else
-        {
-            for (int i = 0; i < bridges_.Count; i++)
-            {
-                bridges_[i].transform.localScale = i == chosenColor.value ? Vector3.one : Vector3.zero;
-            }
-        }
+        RefreshColors();
     }
 
-    private void OnDestroy()
+    public void RefreshColors()
     {
-        if (flow_ != null)
-        {
-            flow_.destroy();
-            flow_ = null;
-        }
+        List<string> colors = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.BridgeColors);
+        if (colors == null || colors.Count == 0) return;
+
+        int blues = colors.FindAll(s => string.Equals("blue", s)).Count;
+        int golds = colors.FindAll(s => string.Equals("gold", s)).Count;
+        int greens = colors.FindAll(s => string.Equals("green", s)).Count;
+        int oranges = colors.FindAll(s => string.Equals("orange", s)).Count;
+        int pinks = colors.FindAll(s => string.Equals("pink", s)).Count;
+        int purples = colors.FindAll(s => string.Equals("purple", s)).Count;
+        int reds = colors.FindAll(s => string.Equals("red", s)).Count;
+        int silvers = colors.FindAll(s => string.Equals("silver", s)).Count;
+        int yellows = colors.FindAll(s => string.Equals("yellow", s)).Count;
+
+        for (int i = 0; i < blueSplats_.Count; i++) blueSplats_[i].gameObject.SetActive(i < blues);
+        for (int i = 0; i < goldSplats_.Count; i++) goldSplats_[i].gameObject.SetActive(i < golds);
+        for (int i = 0; i < greenSplats_.Count; i++) greenSplats_[i].gameObject.SetActive(i < greens);
+        for (int i = 0; i < orangeSplats_.Count; i++) orangeSplats_[i].gameObject.SetActive(i < oranges);
+        for (int i = 0; i < pinkSplats_.Count; i++) pinkSplats_[i].gameObject.SetActive(i < pinks);
+        for (int i = 0; i < purpleSplats_.Count; i++) purpleSplats_[i].gameObject.SetActive(i < purples);
+        for (int i = 0; i < redSplats_.Count; i++) redSplats_[i].gameObject.SetActive(i < reds);
+        for (int i = 0; i < silverSplats_.Count; i++) silverSplats_[i].gameObject.SetActive(i < silvers);
+        for (int i = 0; i < yellowSplats_.Count; i++) yellowSplats_[i].gameObject.SetActive(i < yellows);
+
     }
 }

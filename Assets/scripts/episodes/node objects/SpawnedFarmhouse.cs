@@ -49,13 +49,16 @@ public class SpawnedFarmhouse : SpawnedObject
         farmhouse_.sprite = farmhouseOptions_[Mathf.Min(newHouseImageLevel, farmhouseOptions_.Count - 1)];
         farmhouse_.SetNativeSize();
 
-        if (newHouseImageLevel > houseImageLevel_)
+        if (playSound)
         {
-            houseImageLevel_ = newHouseImageLevel;
-            AudioPlayer.PlayAudio("audio/sfx/new-building");
-        } else
-        {
-            AudioPlayer.PlayAudio("audio/sfx/new-level");
+            if (newHouseImageLevel > houseImageLevel_)
+            {
+                houseImageLevel_ = newHouseImageLevel;
+                AudioPlayer.PlayAudio("audio/sfx/new-building");
+            } else
+            {
+                AudioPlayer.PlayAudio("audio/sfx/new-level");
+            }
         }
     }
 

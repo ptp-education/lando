@@ -11,7 +11,8 @@ public class GameStorage
         Counter,
         ChosenColor,
         HouseLevel,
-        FarmObjects
+        FarmObjects,
+        BridgeColors
     }
 
     public class Integer

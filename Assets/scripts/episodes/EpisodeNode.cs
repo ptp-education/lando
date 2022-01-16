@@ -17,6 +17,31 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
+    public class CharacterVoiceBubble
+    {
+        public enum BubbleType
+        {
+            CharacterOnScreen,
+            CharacterOffScreen
+        }
+        public enum CharacterOption
+        {
+            Didi
+        }
+        [SerializeField] public BubbleType Type;
+        [SerializeField] public Vector3 BubblePosition;
+        [SerializeField] public CharacterOption ChosenCharacter;
+
+        public string Character
+        {
+            get
+            {
+                return ChosenCharacter.ToString();
+            }
+        }
+    }
+
+    [Serializable]
     public class Option
     {
         [SerializeField] public string Name;
@@ -29,6 +54,7 @@ public class EpisodeNode : MonoBehaviour
     {
         [SerializeField] public float TimeStamp;
         [SerializeField] public Vector3 Position;
+        [SerializeField] public Vector3 Scale = Vector3.one;
         [SerializeField] public UnityEngine.Object Object;
         [SerializeField] public string Path;
         [HideInInspector] public bool Spawned = false;
@@ -61,6 +87,9 @@ public class EpisodeNode : MonoBehaviour
     public UnityEngine.Object BgLoop;
 
     public EpisodeType Type;
+
+    //CHARACTER ON SCREEN
+    public List<CharacterVoiceBubble> CharacterBubbles = new List<CharacterVoiceBubble>();
 
     //VIDEO OPTIONS
     public UnityEngine.Object Video;

@@ -8,8 +8,6 @@ public class EpisodeNodeEditor : Editor
 {
     const string kAssetPrefix = "Assets/StreamingAssets/";
     const string kResourcesPrefix = "Assets/Resources/";
-    const string kEpisodeObjectPrefix = "Assets/Resources/prefabs/episode_objects/";
-    const string kPrefabSuffix = ".prefab";
 
     public override void OnInspectorGUI()
     {
@@ -18,10 +16,13 @@ public class EpisodeNodeEditor : Editor
         SerializedProperty video = serializedObject.FindProperty("Video");
         SerializedProperty videoLoop = serializedObject.FindProperty("VideoLoop");
         SerializedProperty image = serializedObject.FindProperty("Image");
-        SerializedProperty imageLoop = serializedObject.FindProperty("ImageLoop");
-        SerializedProperty prefab = serializedObject.FindProperty("Prefab");
 
         EpisodeNode myTarget = (EpisodeNode)target;
+
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("Fade from previous node");
+        myTarget.FadeInFromPreviousScene = EditorGUILayout.Toggle(myTarget.FadeInFromPreviousScene);
+        EditorGUILayout.EndHorizontal();
 
         string audioPath = "null";
         if (backgroundLoop.objectReferenceValue != null)
@@ -36,6 +37,9 @@ public class EpisodeNodeEditor : Editor
 
         EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", myTarget.BgLoopPath == null ? "null" : myTarget.BgLoopPath));
         myTarget.BgLoop = (Object)EditorGUILayout.ObjectField(myTarget.BgLoop, typeof(Object), false);
+
+        EditorGUILayout.LabelField("Character VO Bubbles");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("CharacterBubbles"));
 
         EditorGUILayout.LabelField(string.Format("Node Type"));
 
@@ -115,8 +119,7 @@ public class EpisodeNodeEditor : Editor
         {
             if (o.Object != null)
             {
-                o.Path = AssetDatabase.GetAssetPath(o.Object);
-                o.Path = o.Path.Substring(kEpisodeObjectPrefix.Length, o.Path.Length - (kEpisodeObjectPrefix.Length + kPrefabSuffix.Length));
+                o.Path = AssetDatabase.GetAssetPath(o.Object).Substring(kResourcesPrefix.Length).StripFileExtension();
             }
         }
 

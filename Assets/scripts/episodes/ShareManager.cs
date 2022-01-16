@@ -14,13 +14,12 @@ public class ShareManager : GameManager
 
     private Image fadeOverlay_;
     private GoTweenFlow fadeFlow_;
+    private ChoicesHolder choicesHolder_;
+    private Dictionary<string, KeyValuePair<Image, Image>> characterBubbles_ = new Dictionary<string, KeyValuePair<Image, Image>> ();
 
     private void Start()
     {
-        if (GameManager.PromptActive)
-        {
-            nodeObjectParent_.transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
+        nodeObjectParent_.transform.localScale = new Vector3(-1f, 1f, 1f);
 
         GameObject overlay = new GameObject("Fade Overlay");
         fadeOverlay_ = overlay.AddComponent<Image>();
@@ -29,6 +28,9 @@ public class ShareManager : GameManager
         fadeOverlay_.transform.SetParent(transform, false);
         fadeOverlay_.transform.localPosition = Vector3.zero;
         fadeOverlay_.rectTransform.sizeDelta = new Vector2(1920, 1080);
+
+        ChoicesHolder choicesPrefab = Resources.Load<ChoicesHolder>("prefabs/episode_objects/choices_parent");
+        choicesHolder_ = GameObject.Instantiate<ChoicesHolder>(choicesPrefab, transform);
     }
 
     private void Update()
@@ -50,6 +52,8 @@ public class ShareManager : GameManager
     protected override void NewEpisodeEventInternal(Episode e)
     {
         base.NewEpisodeEventInternal(e);
+
+        AudioPlayer.StopLoop(AudioPlayer.kMain);
     }
 
     protected override void NewActionInternal(string a)
@@ -75,8 +79,63 @@ public class ShareManager : GameManager
         }
     }
 
+    private void HandleChoices(EpisodeNode n)
+    {
+        choicesHolder_.DeleteOptions();
+        foreach(EpisodeNode.Option o in n.Options)
+        {
+            if (o.Action.Contains("-spawnoption"))
+            {
+                choicesHolder_.AddOption(o.Name);
+            }
+        }
+    }
+
+    private void HandleCharacterBubbles(EpisodeNode n)
+    {
+        foreach(KeyValuePair <Image, Image> i in characterBubbles_.Values)
+        {
+            Destroy(i.Key.gameObject);
+            Destroy(i.Value.gameObject);
+        }
+
+        characterBubbles_ = new Dictionary<string, KeyValuePair<Image, Image>> ();
+        foreach(EpisodeNode.CharacterVoiceBubble b in n.CharacterBubbles)
+        {
+            Sprite notTalkingSprite = null; Sprite talkingSprite = null;
+
+            if (string.Equals(b.Character, "didi")) {
+                if (b.Type == EpisodeNode.CharacterVoiceBubble.BubbleType.CharacterOnScreen)
+                {
+                    talkingSprite = Resources.Load<Sprite>("sprites/character_bubbles/didi-speaking");
+                }
+                else if (b.Type == EpisodeNode.CharacterVoiceBubble.BubbleType.CharacterOffScreen)
+                {
+                    notTalkingSprite = Resources.Load<Sprite>("sprites/character_bubbles/didi");
+                    talkingSprite = Resources.Load<Sprite>("sprites/character_bubbles/didi-speaking");
+                }
+            }
+
+            Image talkingImage = new GameObject(b.Character + " talking").AddComponent<Image>();
+            talkingImage.sprite = talkingSprite;
+            talkingImage.transform.SetParent(transform);
+            talkingImage.transform.localPosition = b.BubblePosition;
+            talkingImage.gameObject.SetActive(false);
+
+            Image notTalkingImage = new GameObject("talking").AddComponent<Image>();
+            notTalkingImage.sprite = notTalkingSprite;
+            notTalkingImage.transform.SetParent(transform);
+            notTalkingImage.transform.localPosition = b.BubblePosition;
+
+            characterBubbles_.Add(b.Character, new KeyValuePair<Image, Image>(notTalkingImage, talkingImage));
+        }
+    }
+
     private IEnumerator UpdateEpisodeNode(EpisodeNode currentNode)
     {
+        EpisodeNodeObject previousNode = activeNode_;
+        activeNode_ = LoadEpisodeNodeObject(currentNode);
+
         if (currentNode.FadeInFromPreviousScene)
         {
             if (fadeFlow_ != null)
@@ -86,31 +145,31 @@ public class ShareManager : GameManager
             }
             fadeFlow_ = new GoTweenFlow();
             fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
-            fadeFlow_.insert(1.3f, new GoTween(fadeOverlay_, 0.7f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
+            fadeFlow_.insert(0.9f, new GoTween(fadeOverlay_, 0.7f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
             fadeFlow_.play();
 
             yield return new WaitForSeconds(0.8f);
         }
 
-        EpisodeNodeObject newObject = LoadEpisodeNodeObject(currentNode);
-        newObject.Play();
+        activeNode_.Play();
 
-        while (!newObject.IsPlaying)
+        while (!activeNode_.IsPlaying)
         {
             yield return 0;
         }
+
+        HandleChoices(currentNode);
+        //HandleCharacterBubbles(currentNode);
 
         for (int i = 0; i < 8; i++)
         {
             yield return 0;
         }
 
-        if (activeNode_ != null)
+        if (previousNode != null)
         {
-            Destroy(activeNode_.gameObject);
+            Destroy(previousNode.gameObject);
         }
-
-        activeNode_ = newObject;
     }
 
     private EpisodeNodeObject LoadEpisodeNodeObject(EpisodeNode node)
@@ -144,11 +203,6 @@ public class ShareManager : GameManager
         nodeObject.Init(this, node);
 
         return nodeObject;
-    }
-
-    private string Key(EpisodeNode node)
-    {
-        return node.ToString();
     }
 
     public float ProgressPercentage

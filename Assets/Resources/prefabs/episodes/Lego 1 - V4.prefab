@@ -1,0 +1,2459 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &183955499985382990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5094031840306562309}
+  - component: {fileID: 6486907219514733578}
+  m_Layer: 5
+  m_Name: P8-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5094031840306562309
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183955499985382990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6486907219514733578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183955499985382990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 4ec095645f30c40a58c8f1f822f99e05, type: 3}
+  VideoFilePath: Lego 1 - v3/P8-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 4ec095645f30c40a58c8f1f822f99e05, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P8-0.mp4
+  Image: {fileID: 2800000, guid: 2369943188ddf4d16b3be51d531f918b, type: 3}
+  ImageFilePath: episodes/lego_v4/farm-no-farmhouse
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    Architects, thanks to your bridge, the farmhouse is on the island!
+
+
+    Now
+    the farm just looks a little empty... architects, what can we build to fill in
+    this farm?
+
+
+    PROMPT KIDS TO BUILD THINGS
+
+    [Prompt animal fence]
+
+    [Prompt
+    farm plots]
+
+    [Prompt vehicles]
+
+    [Prompt animal fence]
+
+    [Prompt arch
+    bridge, nice spot on island. Must build an arch bridge for aesthetic reasons.
+    Ask if they know what an arch bridge is]
+
+
+    [at end of class]
+
+    DIDI
+
+    Alright,
+    this looks great everyone. I think we''re done for the day!'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: -156, y: 184, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 1f3f30d55d70546aebf0b3b662fc6326, type: 3}
+    Path: episodes/lego_new/farmhouse
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 4875390486311538617, guid: c85ba762af991415c8dd284eb0a211f0, type: 3}
+    Path: episodes/lego_new/farm
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/bridge-thud"
+    Ran: 0
+  NextNode: {fileID: 5083336864197463661}
+  Options:
+  - Name: Apple Tree
+    Action: add-farm-appletree
+    Node: {fileID: 0}
+  - Name: Pear Tree
+    Action: add-farm-peartree
+    Node: {fileID: 0}
+  - Name: Orange Tree
+    Action: add-farm-orangetree
+    Node: {fileID: 0}
+  - Name: Pig
+    Action: add-farm-pig
+    Node: {fileID: 0}
+  - Name: Chicken
+    Action: add-farm-chicken
+    Node: {fileID: 0}
+  - Name: Cow
+    Action: add-farm-cow
+    Node: {fileID: 0}
+  - Name: Tractor
+    Action: add-farm-tractor
+    Node: {fileID: 0}
+  - Name: Arch Bridge
+    Action: add-farm-archbridge
+    Node: {fileID: 0}
+  - Name: Corn
+    Action: add-farm-corn
+    Node: {fileID: 0}
+  - Name: Cotton
+    Action: add-farm-cotton
+    Node: {fileID: 0}
+  - Name: Wheat
+    Action: add-farm-wheat
+    Node: {fileID: 0}
+  - Name: Horse
+    Action: add-farm-horse
+    Node: {fileID: 0}
+  - Name: Duck
+    Action: add-farm-duck
+    Node: {fileID: 0}
+  - Name: Water Tower
+    Action: add-farm-watertower
+    Node: {fileID: 0}
+  - Name: Goat
+    Action: add-farm-goat
+    Node: {fileID: 0}
+  - Name: Well
+    Action: add-farm-well
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &413678090945305864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3858060084482956496}
+  - component: {fileID: 5308842723687554897}
+  m_Layer: 5
+  m_Name: P6-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3858060084482956496
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413678090945305864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5308842723687554897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413678090945305864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-0.mp4
+  Image: {fileID: 2800000, guid: 1d6fd541d55f44956b75b1f45276acca, type: 3}
+  ImageFilePath: episodes/lego_v4/wide-collaborative-bridge-constructed
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    Incredible work everyone.
+
+
+    [PRESS Cellphone Ring]
+
+
+    Hi
+    this is Didi.
+
+    The mayor!
+
+    Wow, okay. Are you sure? Okay I''ll let them
+    know.
+
+
+    Guys, the people of Scooterville are so happy with this bridge, that
+    they are giving us the honor to decorate it!
+
+
+    What colors should we put
+    on the bridge?'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: -119, y: -54, z: 0}
+    Scale: {x: 1.6, y: 1.6, z: 1}
+    Object: {fileID: 6266758589124905494, guid: 09bdd2d06c1cc49159f125cbc51562ff, type: 3}
+    Path: episodes/lego_new/color_bridge
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 830, y: -474, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 858ae2f8599d148d3a173e9e90d292e9, type: 3}
+    Path: episodes/lego_new/farmhouse-no-indicator
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/bridge-thud"
+    Ran: 0
+  NextNode: {fileID: 6486907219514733578}
+  Options:
+  - Name: Blue
+    Action: bridge-color-blue
+    Node: {fileID: 0}
+  - Name: Gold
+    Action: bridge-color-gold
+    Node: {fileID: 0}
+  - Name: Green
+    Action: bridge-color-green
+    Node: {fileID: 0}
+  - Name: Orange
+    Action: bridge-color-orange
+    Node: {fileID: 0}
+  - Name: Pink
+    Action: bridge-color-pink
+    Node: {fileID: 0}
+  - Name: Purple
+    Action: bridge-color-purple
+    Node: {fileID: 0}
+  - Name: Red
+    Action: bridge-color-red
+    Node: {fileID: 0}
+  - Name: Silver
+    Action: bridge-color-silver
+    Node: {fileID: 0}
+  - Name: Yellow
+    Action: bridge-color-yellow
+    Node: {fileID: 0}
+  - Name: Cellphone Ring
+    Action: -sfx -"audio/sfx/ring-tone"
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &828932991843833733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7074097093656293298}
+  - component: {fileID: 147931229570625077}
+  m_Layer: 5
+  m_Name: P6-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7074097093656293298
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828932991843833733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &147931229570625077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828932991843833733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 599991e2ae04a4c4190361053fcfe59f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-0.mp4
+  Image: {fileID: 2800000, guid: 94c3727753add43b09c5b127a7538898, type: 3}
+  ImageFilePath: episodes/lego_v4/wide-collaborative-bridge-unconstructed
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    This is going to be a suuuuper wide bridge everyone.
+
+
+    To
+    save time, let''s put everyone''s bridge together, and see if we can support
+    the weight of the farmhouse with everyone''s bridges
+
+
+    TA
+
+    [Handout giant
+    piece of paper for everyone to put their bridge on]
+
+'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 830, y: -474, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 858ae2f8599d148d3a173e9e90d292e9, type: 3}
+    Path: episodes/lego_new/farmhouse-no-indicator
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 8791323049662158076}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2104885192597627984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7639612137407112273}
+  - component: {fileID: 4749072469953641610}
+  m_Layer: 5
+  m_Name: P2-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7639612137407112273
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104885192597627984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4749072469953641610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104885192597627984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 44d622628e9ad47b29e590307bf02d6a, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 44d622628e9ad47b29e590307bf02d6a, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-1.mp4
+  Image: {fileID: 2800000, guid: 17b7280685c23444391b4306470e341f, type: 3}
+  ImageFilePath: episodes/lego_v4/inside-developer-building_unchecked
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'TA
+
+    What should we ask her?'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Who are you?
+    Action: -spawnoption
+    Node: {fileID: 9085766678729062665}
+  - Name: What do you do?
+    Action: -spawnoption
+    Node: {fileID: 531811299284710829}
+  - Name: How can I help?
+    Action: -spawnoption
+    Node: {fileID: 7552219281877933373}
+  VisualNode: {fileID: 0}
+--- !u!1 &2249982113192537678
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4460681277453794625}
+  - component: {fileID: 9085766678729062665}
+  m_Layer: 5
+  m_Name: P2-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4460681277453794625
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2249982113192537678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9085766678729062665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2249982113192537678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 17b7280685c23444391b4306470e341f, type: 3}
+  ImageFilePath: episodes/lego_v4/inside-developer-building_unchecked
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    My name is Didi! I moved to Scooterville a few months ago to
+    help the community here develop their town!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 4749072469953641610}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &2964015990882133301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4178515630020699915}
+  - component: {fileID: 4210060820495000858}
+  m_Layer: 5
+  m_Name: P4-2-legs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4178515630020699915
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964015990882133301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4210060820495000858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2964015990882133301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 2800000, guid: 5f80692e4235b4bc6a8ade95b7a3e064, type: 3}
+  ImageFilePath: episodes/lego_v4/activity1-legs
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    Build two legs, and connect your platform with the legs!
+
+
+    Sending
+    you instructions on how to build legs!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 8017824904707056475}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3207112640878840018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6284154914400348181}
+  - component: {fileID: 2621851397777083565}
+  m_Layer: 5
+  m_Name: Lego 1 - V4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6284154914400348181
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207112640878840018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3879147923934350423}
+  - {fileID: 6408555282721225392}
+  - {fileID: 1061371493981991454}
+  - {fileID: 244913133137698305}
+  - {fileID: 2140040104584991993}
+  - {fileID: 7639612137407112273}
+  - {fileID: 4460681277453794625}
+  - {fileID: 3129841427816824266}
+  - {fileID: 949858589770133378}
+  - {fileID: 6954461274486738280}
+  - {fileID: 5203405688678674222}
+  - {fileID: 1497278280312847829}
+  - {fileID: 3054403686160176626}
+  - {fileID: 5367413251708642742}
+  - {fileID: 6332101288275504367}
+  - {fileID: 4178515630020699915}
+  - {fileID: 3926079344386688914}
+  - {fileID: 8528040814644670937}
+  - {fileID: 3291117358310156132}
+  - {fileID: 7044126788694575727}
+  - {fileID: 2611422786128206293}
+  - {fileID: 4751803971413801284}
+  - {fileID: 7074097093656293298}
+  - {fileID: 3545234686542799340}
+  - {fileID: 6724806494787306633}
+  - {fileID: 3858060084482956496}
+  - {fileID: 5094031840306562309}
+  - {fileID: 5397356302352449063}
+  - {fileID: 3929884585431058488}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2621851397777083565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3207112640878840018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 4960583492879541896}
+--- !u!1 &3213026829668163480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6724806494787306633}
+  - component: {fileID: 2084296244442061459}
+  m_Layer: 5
+  m_Name: P6-1-connector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6724806494787306633
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213026829668163480}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2084296244442061459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213026829668163480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 14dcd0ba1c8384e509c40490b3609fd8, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 14dcd0ba1c8384e509c40490b3609fd8, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-1.mp4
+  Image: {fileID: 2800000, guid: a881b473b16ea4b1ba7bcd6f7fa3fbc3, type: 3}
+  ImageFilePath: episodes/lego_v4/activity2-connectors
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    Make sure all your bridges are the same height, and connect
+    them with blocks!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 8791323049662158076}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3479048029679420217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3129841427816824266}
+  - component: {fileID: 531811299284710829}
+  m_Layer: 5
+  m_Name: P2-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3129841427816824266
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479048029679420217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &531811299284710829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479048029679420217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 17b7280685c23444391b4306470e341f, type: 3}
+  ImageFilePath: episodes/lego_v4/inside-developer-building_unchecked
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    I''m a real estate developer! I help build useful things in
+    empty plots of land. Whether that''s a new farm, a new restaurant, or a new house!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 4749072469953641610}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &3630297714555680149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5367413251708642742}
+  - component: {fileID: 8017824904707056475}
+  m_Layer: 5
+  m_Name: P4-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5367413251708642742
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630297714555680149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8017824904707056475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3630297714555680149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 2800000, guid: 8ab920fada92048f7b7c6ba0382eab64, type: 3}
+  ImageFilePath: episodes/lego_v4/first-bridge-mission
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    I''m here if you need a hint.'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: WEIGH BRIDGE
+    Action: 
+    Node: {fileID: 2238492980720937364}
+  - Name: How do I get started?
+    Action: -spawnoption
+    Node: {fileID: 7433847399708857785}
+  - Name: How do I build legs?
+    Action: -spawnoption
+    Node: {fileID: 4210060820495000858}
+  - Name: How do I build a strong bridge?
+    Action: -spawnoption
+    Node: {fileID: 8180072019845044094}
+  VisualNode: {fileID: 0}
+--- !u!1 &4717351269803854841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8528040814644670937}
+  - component: {fileID: 2742934236543490290}
+  m_Layer: 5
+  m_Name: P4-2-reinforce
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8528040814644670937
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717351269803854841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2742934236543490290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717351269803854841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 2800000, guid: d8394293644574f90a9afab96cdee1b5, type: 3}
+  ImageFilePath: episodes/lego_v4/activity1-strenthen
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    You can make your bridge even stronger by adding more blocks
+    to your platform. Make sure to add blocks so they overlap with other bricks!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 8017824904707056475}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &4732026243471928297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3926079344386688914}
+  - component: {fileID: 8180072019845044094}
+  m_Layer: 5
+  m_Name: P4-2-piers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3926079344386688914
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4732026243471928297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8180072019845044094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4732026243471928297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 2800000, guid: 1e49ec6eb920c4b23bd897e4889c7250, type: 3}
+  ImageFilePath: episodes/lego_v4/activity1-piers
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    Add two piers, as close to the boulder as possible. These piers
+    will make your bridge really strong!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 3396122682901329271}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5270787721776862902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4751803971413801284}
+  - component: {fileID: 4318082439776123722}
+  m_Layer: 5
+  m_Name: P5-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4751803971413801284
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5270787721776862902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4318082439776123722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5270787721776862902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-0.mp4
+  Image: {fileID: 2800000, guid: 34657c30014c7492bafbb3ddee80277d, type: 3}
+  ImageFilePath: episodes/lego_v4/map-second-island-developing
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: "DIDI\nThe farmhouse is going to be a tourist attraction. We're going to
+    have fruit trees, farm animals, tractors, and anything visitors will want! \n\nI'm
+    so excited, but how do you guys think we can get this giant farmhouse onto the
+    island?"
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 351, y: -164, z: 0}
+    Scale: {x: 0.5, y: 0.5, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 858ae2f8599d148d3a173e9e90d292e9, type: 3}
+    Path: episodes/lego_new/farmhouse-no-indicator
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 2955552684774742412}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5656093741744918546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3054403686160176626}
+  - component: {fileID: 2238492980720937364}
+  m_Layer: 5
+  m_Name: P4-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3054403686160176626
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656093741744918546}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2238492980720937364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5656093741744918546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 2381bdd762fcf44e2a75f482140e3fd9, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 2381bdd762fcf44e2a75f482140e3fd9, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-1.mp4
+  Image: {fileID: 2800000, guid: 12674b71edbc649ec98471b3e8ce1732, type: 3}
+  ImageFilePath: episodes/lego_v4/first-bridge-mission_complete
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: "DIDI \nGot it! Now let's see how many trucks can your bridge carry?\n[TA
+    puts a 2 lb on it, succeeds]\n[PRESS +1 lb twice]\n\nDIDI\nTwo trucks!\n[TA puts
+    a 5lb on it, fails]\n\nDIDI\nToo bad! Let's see what your young architects can
+    do. "
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: -284, y: 63, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 1f3f30d55d70546aebf0b3b662fc6326, type: 3}
+    Path: episodes/lego_new/farmhouse
+    Spawned: 0
+  - TimeStamp: 0
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 4357054515475331665, guid: 1678b35439a8343a48f4bc120f427c2e, type: 3}
+    Path: episodes/lego_new/lumber_trucks_bridge
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options:
+  - Name: +1 lb
+    Action: new-truck
+    Node: {fileID: 0}
+  - Name: Show Hint Screen
+    Action: 
+    Node: {fileID: 8017824904707056475}
+  - Name: Activity Complete
+    Action: 
+    Node: {fileID: 8752282561229926902}
+  VisualNode: {fileID: 0}
+--- !u!1 &5821774615885239390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497278280312847829}
+  - component: {fileID: 3156897531364778226}
+  m_Layer: 5
+  m_Name: P4-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1497278280312847829
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821774615885239390}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3156897531364778226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821774615885239390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 57bf79373a475423391449eff9f6e3a3, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 57bf79373a475423391449eff9f6e3a3, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-0.mp4
+  Image: {fileID: 2800000, guid: 8ab920fada92048f7b7c6ba0382eab64, type: 3}
+  ImageFilePath: episodes/lego_v4/first-bridge-mission
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    There''s rocks in the way! We''ll have to build over these rocks.
+
+
+    [TA
+    hand out paper and one potato]
+
+
+    TA
+
+    Will these bridges have to be strong
+    Didi?
+
+
+    DIDI
+
+    Yup, we want as many lumber trucks to cross them as possible.
+
+
+    TA
+
+    [Everyone
+    starts building a bridge]
+
+    [TA builds crappy bridge that can support a bit
+    of weight.]
+
+    Didi, sending one bridge your way.'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 2238492980720937364}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &5874550290519694906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 949858589770133378}
+  - component: {fileID: 7552219281877933373}
+  m_Layer: 5
+  m_Name: P2-4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &949858589770133378
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874550290519694906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7552219281877933373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874550290519694906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 17b7280685c23444391b4306470e341f, type: 3}
+  ImageFilePath: episodes/lego_v4/inside-developer-building_unchecked
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    There''s so much to build!! We want to build a brand new farm
+    on an island! It''s going to be sooo beautiful, we''re going to attract a lot
+    of people here. Come come let me show you!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 5016444233870210455}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6573425312668515265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6954461274486738280}
+  - component: {fileID: 5016444233870210455}
+  m_Layer: 5
+  m_Name: P3-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6954461274486738280
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573425312668515265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5016444233870210455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573425312668515265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 6e48af0974da9446bb47cd5e92fae493, type: 3}
+  VideoFilePath: Lego 1 - v3/P3-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 6e48af0974da9446bb47cd5e92fae493, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P3-0.mp4
+  Image: {fileID: 2800000, guid: 3422cc14d83c6413484815bfe0882c97, type: 3}
+  ImageFilePath: episodes/lego_v4/map-undeveloped
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    That island! What a beautiful spot for a farm.
+
+
+    What do
+    we need to build a farm on the island?'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 18374065043279893}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &6837664448657405828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2611422786128206293}
+  - component: {fileID: 2955552684774742412}
+  m_Layer: 5
+  m_Name: P5-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2611422786128206293
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837664448657405828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2955552684774742412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837664448657405828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: bd3c1d04ae0664bca8c1655db125a02a, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-1.mp4
+  VideoLoop: {fileID: 102900000, guid: bd3c1d04ae0664bca8c1655db125a02a, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-1.mp4
+  Image: {fileID: 2800000, guid: 34657c30014c7492bafbb3ddee80277d, type: 3}
+  ImageFilePath: episodes/lego_v4/map-second-island-developing
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: '[Talk to kids and eventually prompt them to build a wide bridge to transport
+    the farmhouse across]
+
+
+    [After solution is reached]
+
+
+    DIDI
+
+    Zooming
+    into the island bridge now.'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 354, y: -164, z: 0}
+    Scale: {x: 0.5, y: 0.5, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 858ae2f8599d148d3a173e9e90d292e9, type: 3}
+    Path: episodes/lego_new/farmhouse-no-indicator
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 147931229570625077}
+  Options:
+  - Name: Help Didi
+    Action: -spawnoption
+    Node: {fileID: 0}
+  - Name: What will the farmhouse do?
+    Action: -spawnoption
+    Node: {fileID: 4318082439776123722}
+  VisualNode: {fileID: 0}
+--- !u!1 &7017307421275027702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3545234686542799340}
+  - component: {fileID: 8791323049662158076}
+  m_Layer: 5
+  m_Name: P6-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3545234686542799340
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017307421275027702}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8791323049662158076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017307421275027702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 14dcd0ba1c8384e509c40490b3609fd8, type: 3}
+  VideoFilePath: Lego 1 - v3/P6-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 14dcd0ba1c8384e509c40490b3609fd8, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P6-1.mp4
+  Image: {fileID: 2800000, guid: 94c3727753add43b09c5b127a7538898, type: 3}
+  ImageFilePath: episodes/lego_v4/wide-collaborative-bridge-unconstructed
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    As always, I''m here to help!
+
+
+    [Class build bridge]
+
+
+    [TA
+    tests bridges]'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 830, y: -474, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 858ae2f8599d148d3a173e9e90d292e9, type: 3}
+    Path: episodes/lego_new/farmhouse-no-indicator
+    Spawned: 0
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 5308842723687554897}
+  Options:
+  - Name: How do we connect bridges?
+    Action: -spawnoptions
+    Node: {fileID: 2084296244442061459}
+  VisualNode: {fileID: 0}
+--- !u!1 &7327561288147766622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6332101288275504367}
+  - component: {fileID: 7433847399708857785}
+  m_Layer: 5
+  m_Name: P4-2-firststep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6332101288275504367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7327561288147766622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7433847399708857785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7327561288147766622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 2800000, guid: 904ae978ae7ff4a4989ea5fa130230b4, type: 3}
+  ImageFilePath: episodes/lego_v4/activity1-platform
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    First step is to build a platform. We can build legs after and
+    connect them.
+
+
+    Sending you instructions on how to build platforms!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 8017824904707056475}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7523862364420266027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5397356302352449063}
+  - component: {fileID: 5083336864197463661}
+  m_Layer: 5
+  m_Name: P9-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5397356302352449063
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523862364420266027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5083336864197463661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7523862364420266027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_series/empty track
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 38598e3452aff43ed888adc9c397f97d, type: 3}
+  VideoFilePath: Lego 1 - v3/P9-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 38598e3452aff43ed888adc9c397f97d, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P9-0.mp4
+  Image: {fileID: 2800000, guid: 71abeeb595e9e4f0b9c418db22590b4d, type: 3}
+  ImageFilePath: episodes/lego_v4/inside-developer-building
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    Bridges, check! Farm, check!
+
+
+    Thank you for all your help.
+    What do you want to build next?
+
+
+    Great! I will see you next time!
+
+
+    TA
+
+    Thanks
+    Didi, and great job everyone.'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 1369368606220282250}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7524448446831536004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061371493981991454}
+  - component: {fileID: 647985400277046448}
+  m_Layer: 5
+  m_Name: P1-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1061371493981991454
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524448446831536004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &647985400277046448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524448446831536004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: c8de246df0d714723a315c4f1f59782b, type: 3}
+  VideoFilePath: Lego 1 - v3/P1-2.mp4
+  VideoLoop: {fileID: 102900000, guid: c8de246df0d714723a315c4f1f59782b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P1-2.mp4
+  Image: {fileID: 2800000, guid: dc7937d6398a24eaa8b26ac73d2dd921, type: 3}
+  ImageFilePath: episodes/lego_v4/outside-developer-building
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: What do you guys think? What should we do?
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: Go inside
+    Action: -spawnoption
+    Node: {fileID: 7611782163525566946}
+  - Name: Stay outside
+    Action: -spawnoption
+    Node: {fileID: 3199743122515584094}
+  VisualNode: {fileID: 0}
+--- !u!1 &7775254383153958796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7044126788694575727}
+  - component: {fileID: 8752282561229926902}
+  m_Layer: 5
+  m_Name: P5-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7044126788694575727
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7775254383153958796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8752282561229926902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7775254383153958796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoFilePath: Lego 1 - v3/P5-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 7a7cb8c9a7d2144978e03f1194394369, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P5-0.mp4
+  Image: {fileID: 2800000, guid: 34657c30014c7492bafbb3ddee80277d, type: 3}
+  ImageFilePath: episodes/lego_v4/map-second-island-developing
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'TA
+
+    Good job everyone, look at that farmhouse!
+
+
+    DIDI
+
+    [Play
+    crowd cheer]
+
+    The people in Scooterville are absolutely delighted! They''re
+    so excited to see the farm.
+
+
+    Architects! How do you think we can move the
+    farmhouse onto the island?'
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    Position: {x: 351, y: -164, z: 0}
+    Scale: {x: 0.5, y: 0.5, z: 1}
+    Object: {fileID: 8352654415532416844, guid: 858ae2f8599d148d3a173e9e90d292e9, type: 3}
+    Path: episodes/lego_new/farmhouse-no-indicator
+    Spawned: 0
+  CommandLines: []
+  NextNode: {fileID: 2955552684774742412}
+  Options:
+  - Name: Crowd Cheer
+    Action: -sfx "audio/sfx/airhorn"
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &7895254189323818460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3929884585431058488}
+  - component: {fileID: 1369368606220282250}
+  m_Layer: 5
+  m_Name: P10-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3929884585431058488
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895254189323818460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1369368606220282250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7895254189323818460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 45e2fc800ad8a405991b4a5b6e78b6ab, type: 3}
+  ImageFilePath: episodes/lego_v4/splash-screen
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'TA
+
+    We have handouts to give everyone, and you can scan the QR code
+    to see the farm we built today!'
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 0}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &7907274297006662524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140040104584991993}
+  - component: {fileID: 7611782163525566946}
+  m_Layer: 5
+  m_Name: P2-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2140040104584991993
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907274297006662524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7611782163525566946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907274297006662524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_series/empty track
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 17b7280685c23444391b4306470e341f, type: 3}
+  ImageFilePath: episodes/lego_v4/inside-developer-building_unchecked
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'DIDI
+
+    Hello! You must be George!
+
+
+    TA
+
+    Umm, no I''m Felix.
+    I''m here with a group of young architects.'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/door-open"
+    Ran: 0
+  NextNode: {fileID: 4749072469953641610}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &8074270310241158356
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3291117358310156132}
+  - component: {fileID: 3396122682901329271}
+  m_Layer: 5
+  m_Name: P4-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3291117358310156132
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074270310241158356}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3396122682901329271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074270310241158356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoFilePath: Lego 1 - v3/P4-2.mp4
+  VideoLoop: {fileID: 102900000, guid: f9dfedf8bd43a42ac8c9a36289afe65f, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P4-2.mp4
+  Image: {fileID: 2800000, guid: 8ab920fada92048f7b7c6ba0382eab64, type: 3}
+  ImageFilePath: episodes/lego_v4/first-bridge-mission
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: '[Wait for questions or go back to weighing]'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 0}
+  Options:
+  - Name: WEIGH BRIDGE
+    Action: 
+    Node: {fileID: 2238492980720937364}
+  - Name: How do I build a STRONGER bridge?
+    Action: -spawnoption
+    Node: {fileID: 2742934236543490290}
+  VisualNode: {fileID: 0}
+--- !u!1 &8390511631626872208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5203405688678674222}
+  - component: {fileID: 18374065043279893}
+  m_Layer: 5
+  m_Name: P3-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5203405688678674222
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390511631626872208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &18374065043279893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8390511631626872208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 6e48af0974da9446bb47cd5e92fae493, type: 3}
+  VideoFilePath: Lego 1 - v3/P3-0.mp4
+  VideoLoop: {fileID: 102900000, guid: 6e48af0974da9446bb47cd5e92fae493, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P3-0.mp4
+  Image: {fileID: 2800000, guid: 3422cc14d83c6413484815bfe0882c97, type: 3}
+  ImageFilePath: episodes/lego_v4/map-undeveloped
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'DIDI
+
+    [Talk with kids, how to build a farm on that island (build a
+    bridge)]
+
+    [How to build a farmhouse? (wood)]
+
+    [How to get wood? (trees
+    in the corner)]
+
+
+    Let''s go! First step, build a bridge to the forest. '
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-option"
+    Ran: 0
+  NextNode: {fileID: 3156897531364778226}
+  Options:
+  - Name: Help Didi
+    Action: -spawnoption
+    Node: {fileID: 0}
+  - Name: Tell a joke
+    Action: -spawnoption
+    Node: {fileID: 0}
+  VisualNode: {fileID: 0}
+--- !u!1 &8430269668929737127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6408555282721225392}
+  - component: {fileID: 4677087309927821142}
+  m_Layer: 5
+  m_Name: P1-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6408555282721225392
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8430269668929737127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4677087309927821142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8430269668929737127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoFilePath: Lego 1 - v3/P1-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
+  Image: {fileID: 2800000, guid: dc7937d6398a24eaa8b26ac73d2dd921, type: 3}
+  ImageFilePath: episodes/lego_v4/outside-developer-building
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 'TA
+
+    Here we are, in Scooterville!
+
+
+    We''re in front of a building
+    that reads... "property developer".'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/car-starting"
+    Ran: 0
+  NextNode: {fileID: 647985400277046448}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &8572983934642411682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3879147923934350423}
+  - component: {fileID: 4960583492879541896}
+  m_Layer: 5
+  m_Name: P0-0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3879147923934350423
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572983934642411682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4960583492879541896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572983934642411682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 45e2fc800ad8a405991b4a5b6e78b6ab, type: 3}
+  ImageFilePath: episodes/lego_v4/splash-screen
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: "TA\n[Give everyone name tags to fill out]\n\nWelcome! So we're here to
+    learn how to become architects. \n\nI know a town called Scooterville. It's not
+    too far from here, and they're just starting to build their new town! Let's go
+    there and see if we can help!\n\n[Take out phone, and pretend to press a button]"
+  PrefabSpawnObjects: []
+  CommandLines: []
+  NextNode: {fileID: 4677087309927821142}
+  Options: []
+  VisualNode: {fileID: 0}
+--- !u!1 &8837299916710815773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244913133137698305}
+  - component: {fileID: 3199743122515584094}
+  m_Layer: 5
+  m_Name: P1-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &244913133137698305
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837299916710815773}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6284154914400348181}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3199743122515584094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837299916710815773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  CharacterBubbles: []
+  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoFilePath: Lego 1 - v3/P1-1.mp4
+  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
+  Image: {fileID: 2800000, guid: dc7937d6398a24eaa8b26ac73d2dd921, type: 3}
+  ImageFilePath: episodes/lego_v4/outside-developer-building
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 'TA
+
+    This is....kind of boring..'
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/crickets"
+    Ran: 0
+  NextNode: {fileID: 647985400277046448}
+  Options: []
+  VisualNode: {fileID: 0}

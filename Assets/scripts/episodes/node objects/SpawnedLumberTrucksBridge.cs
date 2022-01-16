@@ -15,12 +15,16 @@ public class SpawnedLumberTrucksBridge : SpawnedObject
         if (action.Contains("new-truck"))
         {
             Image spawnedTruck = GameObject.Instantiate<Image>(lumberTruckPrefab_, truckParent_);
-            spawnedTruck.transform.localPosition = new Vector3(1109f, -699f, 0f);
+            spawnedTruck.transform.localPosition = new Vector3(1159f, -655f, 0f);
             AudioPlayer.PlayAudio("audio/sfx/car-starting");
-            Go.addTween(new GoTween(spawnedTruck.transform, 2f, new GoTweenConfig().vector3Prop("localPosition", new Vector3(-469f, 694f, 0f)).onComplete(t =>
+
+            GoTweenFlow flow = new GoTweenFlow();
+            flow.insert(0f, new GoTween(spawnedTruck.transform, 1.5f, new GoTweenConfig().vector3Prop("localPosition", new Vector3(-468f, 306f, 0f))));
+            flow.insert(1.5f, new GoTween(spawnedTruck.transform, 0.35f, new GoTweenConfig().vector3Prop("localScale", Vector3.zero).onComplete(t =>
             {
-                gameManager_.NewNodeAction(GameManager.ACTION_PREFIX + "increase-counter");
+                gameManager_.NewNodeAction(GameManager.ACTION_PREFIX + "improve-house");
             })));
+            flow.play();
         }
     }
 
