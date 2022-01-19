@@ -15,7 +15,8 @@ public class ShareManager : GameManager
     private Image fadeOverlay_;
     private GoTweenFlow fadeFlow_;
     private ChoicesHolder choicesHolder_;
-    private Dictionary<string, KeyValuePair<Image, Image>> characterBubbles_ = new Dictionary<string, KeyValuePair<Image, Image>> ();
+    private Dictionary<string, OnscreenCharacter> characters_ = new Dictionary<string, OnscreenCharacter> ();
+    private bool spaceBarDown_ = false;
 
     private void Start()
     {
@@ -39,6 +40,14 @@ public class ShareManager : GameManager
         {
             fadeOverlay_.transform.SetAsLastSibling();
         }
+
+        bool spaceBarDown = Input.GetKey("t");
+        if (spaceBarDown != spaceBarDown_)
+        {
+            spaceBarDown_ = spaceBarDown;
+
+            SendNewAction((spaceBarDown_ ? SPACEBAR_DOWN : SPACEBAR_UP) + " " + GameManager.SelectedCharacter, masterOnly: false);
+        }
     }
 
     protected override void NewNodeEventInternal(EpisodeNode node)
@@ -47,7 +56,7 @@ public class ShareManager : GameManager
 
         StartCoroutine(UpdateEpisodeNode(currentNode_));
         HandleBackgroundLoop(currentNode_);
-    }
+}
 
     protected override void NewEpisodeEventInternal(Episode e)
     {
@@ -65,9 +74,73 @@ public class ShareManager : GameManager
             AudioPlayer.StartRadio();
         }
 
+        if (a.Contains(FADE_COMMAND))
+        {
+            HandleFade(a);
+        }
+
         if (activeNode_ != null)
         {
             activeNode_.ReceiveAction(a);
+        }
+
+        if (a.Contains(SPACEBAR_DOWN) || a.Contains(SPACEBAR_UP))
+        {
+            HandleCharacterBubbles(a);
+        }
+
+        if (a.Contains(ZONE_ACTIVE) || a.Contains(ZONE_INACTIVE))
+        {
+            HandleZoneUpdate(a.Contains(ZONE_ACTIVE));
+        }
+
+        if (a.Contains(TERMINAL_COMMAND))
+        {
+            HandleTerminalCommand(a);
+        }
+
+        if (a.Contains(PRINT_COMMAND))
+        {
+            HandlePrintCommand(a);
+        }
+    }
+
+    private void HandleFade(string action)
+    {
+        string[] split = action.Split(' ');
+
+        string lengthText = null;
+        for (int i = 0; i < split.Length; i++)
+        {
+            if (string.Equals(FADE_COMMAND, split[i]))
+            {
+                if (i < split.Length - 1)
+                {
+                    lengthText = split[i + 1];
+                    break;
+                }
+            }
+        }
+
+        if (lengthText != null)
+        {
+            float length = -1f;
+            float.TryParse(lengthText, out length);
+            if (length != -1f)
+            {
+                if (fadeFlow_ != null)
+                {
+                    fadeFlow_.complete();
+                    fadeFlow_ = null;
+                }
+
+                fadeOverlay_.color = Color.black;
+
+                fadeFlow_ = new GoTweenFlow();
+                fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.01f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
+                fadeFlow_.insert(length - 0.3f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
+                fadeFlow_.play();
+            }
         }
     }
 
@@ -82,52 +155,144 @@ public class ShareManager : GameManager
     private void HandleChoices(EpisodeNode n)
     {
         choicesHolder_.DeleteOptions();
+
+        bool containsChoice = false;
+
         foreach(EpisodeNode.Option o in n.Options)
         {
             if (o.Action.Contains("-spawnoption"))
             {
                 choicesHolder_.AddOption(o.Name);
+                containsChoice = true;
+            }
+        }
+
+        if (containsChoice)
+        {
+            AudioPlayer.PlayAudio("audio/sfx/new-option");
+        }
+    }
+
+    private void HandleCharacterBubbles(string action)
+    {
+        if (!action.Contains(SPACEBAR_DOWN) && !action.Contains(SPACEBAR_UP))
+        {
+            return;
+        }
+        string[] split = action.Split(' ');
+
+        if (split.Length < 2)
+        {
+            Debug.LogWarning("Insufficient arguments for character bubbles in: " + action);
+            return;
+        }
+
+        string target = split[split.Length - 1];
+
+        if (!characters_.ContainsKey(target))
+        {
+            Debug.LogWarning("Trying to toggle voice bubbles on a character that does not exist!");
+            return;
+        }
+
+        characters_[target].ToggleVoiceBubble(string.Equals(split[split.Length - 2], SPACEBAR_DOWN));
+    }
+
+    private void RefreshCharacters(EpisodeNode nextNode)
+    {
+        foreach(EpisodeNode.Character nextCharacter in nextNode.Characters)
+        {
+            if (!characters_.ContainsKey(nextCharacter.Name))
+            {
+                OnscreenCharacter characterPrefab = Resources.Load<OnscreenCharacter>("characters/" + nextCharacter.Name);
+                OnscreenCharacter newCharacter = Instantiate<OnscreenCharacter>(characterPrefab, transform);
+                characters_[nextCharacter.Name] = newCharacter;
+            }
+
+            characters_[nextCharacter.Name].Init(nextCharacter.TalkingPosition, this);
+            characters_[nextCharacter.Name].transform.localScale = nextCharacter.Scale;
+
+            if (GameManager.ZoneActive)
+            {
+                characters_[nextCharacter.Name].MoveOnscreen(playSound: false);
+            } else
+            {
+                characters_[nextCharacter.Name].MoveOffscreen(null, false);
+            }
+        }
+
+        foreach(string characterKey in characters_.Keys)
+        {
+            if (!nextNode.Characters.Exists(c => string.Equals(characterKey, c.Name)))
+            {
+                characters_[characterKey].MoveOffscreen(() =>
+                {
+                    Destroy(characters_[characterKey].gameObject);
+                    characters_.Remove(characterKey);
+                }, false);
             }
         }
     }
 
-    private void HandleCharacterBubbles(EpisodeNode n)
+
+    private void HandleTerminalCommand(string a)
     {
-        foreach(KeyValuePair <Image, Image> i in characterBubbles_.Values)
+        string[] split = a.Split(' ');
+
+        int start = a.IndexOf(TERMINAL_COMMAND);
+        int firstQuote = a.IndexOf('\"', start);
+        int secondQuote = a.IndexOf('\"', firstQuote + 1);
+        if (firstQuote == -1 || secondQuote == -1)
         {
-            Destroy(i.Key.gameObject);
-            Destroy(i.Value.gameObject);
+            Debug.LogWarning("Could not find matching quotes for argument " + TERMINAL_COMMAND + ": " + a);
+            return;
         }
 
-        characterBubbles_ = new Dictionary<string, KeyValuePair<Image, Image>> ();
-        foreach(EpisodeNode.CharacterVoiceBubble b in n.CharacterBubbles)
-        {
-            Sprite notTalkingSprite = null; Sprite talkingSprite = null;
+        string cmd = a.Substring(firstQuote + 1, secondQuote - firstQuote - 1);
 
-            if (string.Equals(b.Character, "didi")) {
-                if (b.Type == EpisodeNode.CharacterVoiceBubble.BubbleType.CharacterOnScreen)
+        CommandLineHelper.ExecuteProcessTerminal(a.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
+    }
+
+    private void HandlePrintCommand(string a)
+    {
+        string[] split = a.Split(' ');
+
+        string print = null;
+        for (int i = 0; i < split.Length; i++)
+        {
+            if (string.Equals(split[i], PRINT_COMMAND))
+            {
+                if (i + 1 < split.Length)
                 {
-                    talkingSprite = Resources.Load<Sprite>("sprites/character_bubbles/didi-speaking");
-                }
-                else if (b.Type == EpisodeNode.CharacterVoiceBubble.BubbleType.CharacterOffScreen)
-                {
-                    notTalkingSprite = Resources.Load<Sprite>("sprites/character_bubbles/didi");
-                    talkingSprite = Resources.Load<Sprite>("sprites/character_bubbles/didi-speaking");
+                    print = split[i + 1];
+                    break;
                 }
             }
+        }
+        if (print != null)
+        {
+            CommandLineHelper.PrintPdf(print);
+        }
+        else
+        {
+            Debug.LogWarning("Could not find enough arguments to print. " + a);
+        }
+    }
 
-            Image talkingImage = new GameObject(b.Character + " talking").AddComponent<Image>();
-            talkingImage.sprite = talkingSprite;
-            talkingImage.transform.SetParent(transform);
-            talkingImage.transform.localPosition = b.BubblePosition;
-            talkingImage.gameObject.SetActive(false);
-
-            Image notTalkingImage = new GameObject("talking").AddComponent<Image>();
-            notTalkingImage.sprite = notTalkingSprite;
-            notTalkingImage.transform.SetParent(transform);
-            notTalkingImage.transform.localPosition = b.BubblePosition;
-
-            characterBubbles_.Add(b.Character, new KeyValuePair<Image, Image>(notTalkingImage, talkingImage));
+    private void HandleZoneUpdate(bool zoneActive)
+    {
+        GameManager.ZoneActive = zoneActive;
+        
+        foreach (OnscreenCharacter c in characters_.Values)
+        {
+            if (zoneActive)
+            {
+                c.MoveOnscreen();
+            } else
+            {
+                c.MoveOffscreen(null, true);
+            }
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/Desktop/legov5/press-12-lightkey.scpt\"");
         }
     }
 
@@ -135,14 +300,18 @@ public class ShareManager : GameManager
     {
         EpisodeNodeObject previousNode = activeNode_;
         activeNode_ = LoadEpisodeNodeObject(currentNode);
+        spaceBarDown_ = false;
+
+        activeNode_.Reset();
+
+        if (fadeFlow_ != null)
+        {
+            fadeFlow_.complete();
+            fadeFlow_ = null;
+        }
 
         if (currentNode.FadeInFromPreviousScene)
         {
-            if (fadeFlow_ != null)
-            {
-                fadeFlow_.complete();
-                fadeFlow_ = null;
-            }
             fadeFlow_ = new GoTweenFlow();
             fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
             fadeFlow_.insert(0.9f, new GoTween(fadeOverlay_, 0.7f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
@@ -151,7 +320,6 @@ public class ShareManager : GameManager
             yield return new WaitForSeconds(0.8f);
         }
 
-        activeNode_.Play();
 
         while (!activeNode_.IsPlaying)
         {
@@ -159,7 +327,7 @@ public class ShareManager : GameManager
         }
 
         HandleChoices(currentNode);
-        //HandleCharacterBubbles(currentNode);
+        RefreshCharacters(currentNode);
 
         for (int i = 0; i < 8; i++)
         {

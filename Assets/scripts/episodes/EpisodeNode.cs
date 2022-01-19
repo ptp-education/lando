@@ -17,26 +17,21 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
-    public class CharacterVoiceBubble
+    public class Character
     {
-        public enum BubbleType
+        public enum Option
         {
-            CharacterOnScreen,
-            CharacterOffScreen
+            Cat
         }
-        public enum CharacterOption
-        {
-            Didi
-        }
-        [SerializeField] public BubbleType Type;
-        [SerializeField] public Vector3 BubblePosition;
-        [SerializeField] public CharacterOption ChosenCharacter;
+        [SerializeField] public Vector3 TalkingPosition;
+        [SerializeField] public Vector3 Scale;
+        [SerializeField] public Option SelectedCharacter;
 
-        public string Character
+        public string Name
         {
             get
             {
-                return ChosenCharacter.ToString();
+                return SelectedCharacter.ToString();
             }
         }
     }
@@ -89,7 +84,7 @@ public class EpisodeNode : MonoBehaviour
     public EpisodeType Type;
 
     //CHARACTER ON SCREEN
-    public List<CharacterVoiceBubble> CharacterBubbles = new List<CharacterVoiceBubble>();
+    public List<Character> Characters = new List<Character>();
 
     //VIDEO OPTIONS
     public UnityEngine.Object Video;

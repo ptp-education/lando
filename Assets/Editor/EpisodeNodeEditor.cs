@@ -38,8 +38,7 @@ public class EpisodeNodeEditor : Editor
         EditorGUILayout.LabelField(string.Format("New BG Loop ({0})", myTarget.BgLoopPath == null ? "null" : myTarget.BgLoopPath));
         myTarget.BgLoop = (Object)EditorGUILayout.ObjectField(myTarget.BgLoop, typeof(Object), false);
 
-        EditorGUILayout.LabelField("Character VO Bubbles");
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("CharacterBubbles"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("Characters"));
 
         EditorGUILayout.LabelField(string.Format("Node Type"));
 

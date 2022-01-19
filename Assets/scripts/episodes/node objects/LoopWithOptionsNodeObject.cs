@@ -26,9 +26,9 @@ public class LoopWithOptionsNodeObject : EpisodeNodeObject
         activePlayer_ = null;
     }
 
-    public override void Play()
+    public override void Reset()
     {
-        base.Play();
+        base.Reset();
 
         videoPlayerLoop_.Play();
     }

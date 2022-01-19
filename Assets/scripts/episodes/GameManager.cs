@@ -8,6 +8,13 @@ public class GameManager : MonoBehaviour
     public const string ACTION_PREFIX = "action:";
     public const string NODE_PREFIX = "node:";
     public const string RADIO_COMMAND = "radio";
+    public const string FADE_COMMAND = "-fade";
+    public const string SPACEBAR_DOWN = "-spacebardown";
+    public const string SPACEBAR_UP = "-spacebarup";
+    public const string ZONE_ACTIVE = "-zoneactive";
+    public const string ZONE_INACTIVE = "-zoneinactive";
+    public const string TERMINAL_COMMAND = "-terminal";
+    public const string PRINT_COMMAND = "-print";
 
     public enum Type
     {
@@ -16,7 +23,10 @@ public class GameManager : MonoBehaviour
     }
 
     public static bool PromptActive = false;
+    public static string SelectedCharacter;
     public static bool MuteAll = false;
+    public static bool Master = false;
+    public static bool ZoneActive = false;
 
     protected Episode episode_;
     protected EpisodeNode currentNode_;
@@ -49,8 +59,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SendNewAction(string a)
+    public void SendNewAction(string a, bool masterOnly = true)
     {
+        if (masterOnly && !GameManager.Master)
+        {
+            return;
+        }
         if (networkManager_ != null)
         {
             networkManager_.SendNewEpisodeNodeMessage(ACTION_PREFIX + a);

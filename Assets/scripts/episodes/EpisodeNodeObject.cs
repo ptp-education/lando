@@ -39,7 +39,7 @@ public class EpisodeNodeObject : MonoBehaviour
         }
     }
 
-    public virtual void Play()
+    public virtual void Reset()
     {
         ResetSpawnedObjects();
         ResetCommandLines();
@@ -87,7 +87,7 @@ public class EpisodeNodeObject : MonoBehaviour
             {
                 if (!c.Ran)
                 {
-                    gameManager_.NewNodeAction(GameManager.ACTION_PREFIX + c.Command);
+                    gameManager_.SendNewAction(c.Command);
                     c.Ran = true;
                 }
             }

@@ -22,7 +22,7 @@ public class SpawnedLumberTrucksBridge : SpawnedObject
             flow.insert(0f, new GoTween(spawnedTruck.transform, 1.5f, new GoTweenConfig().vector3Prop("localPosition", new Vector3(-468f, 306f, 0f))));
             flow.insert(1.5f, new GoTween(spawnedTruck.transform, 0.35f, new GoTweenConfig().vector3Prop("localScale", Vector3.zero).onComplete(t =>
             {
-                gameManager_.NewNodeAction(GameManager.ACTION_PREFIX + "improve-house");
+                gameManager_.SendNewAction("improve-house");
             })));
             flow.play();
         }

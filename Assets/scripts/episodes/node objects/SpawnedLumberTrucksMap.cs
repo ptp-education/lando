@@ -51,7 +51,7 @@ public class SpawnedLumberTrucksMap : SpawnedObject
                     2f,
                     new GoTweenConfig().vector3Prop("localPosition", secondDestination).onComplete(t =>
                     {
-                        gameManager_.NewNodeAction(GameManager.ACTION_PREFIX + "improve-house");
+                        gameManager_.SendNewAction("improve-house");
                     }
                 )));
                 flow_.insert(

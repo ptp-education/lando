@@ -17,16 +17,17 @@ public class StringsFile
 public class PrompterManager : GameManager
 {
     [SerializeField] private Dropdown episodesDropdown_;
+    [SerializeField] private Dropdown characterDropdown_;
     [SerializeField] private TextMeshProUGUI teleprompter_;
     [SerializeField] private GameObject buttonsPanel_;
     [SerializeField] private GameObject prompterPanel_;
 
-    [SerializeField] private Image adminModeBg_;
     [SerializeField] private Image muteAllBg_;
+    [SerializeField] private Image masterBg_;
+    [SerializeField] private Image zoneBg_;
 
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
-    private bool adminMode_ = false;
     private bool endOfClass_ = false;
     private List<string> previousNodes_ = new List<string>();
     private List<string> episodePaths = new List<string>();
@@ -44,10 +45,19 @@ public class PrompterManager : GameManager
             episodesDropdown_.options.Add(od);
         }
 
+        foreach(string c in System.Enum.GetNames(typeof(EpisodeNode.Character.Option)))
+        {
+            Dropdown.OptionData od = new Dropdown.OptionData();
+            od.text = c;
+            characterDropdown_.options.Add(od);
+        }
+
         episodePaths = new List<string>(sf.FileNames);
 
-        RefreshAdminMode();
         RefreshMuteMode();
+        RefreshMasterMode();
+        RefreshZoneMode();
+        OnCharacterChange();
     }
 
     private void Update()
@@ -58,6 +68,10 @@ public class PrompterManager : GameManager
         } else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             AdjustPanelPosition(-100);
+        }
+        if (Input.GetKeyUp("z"))
+        {
+            OnZoneActiveClick();
         }
     }
 
@@ -73,7 +87,7 @@ public class PrompterManager : GameManager
 
     private void SpawnButtons()
     {
-        if (currentNode_ == null || !adminMode_)
+        if (currentNode_ == null)
         {
             return;
         }
@@ -157,16 +171,34 @@ public class PrompterManager : GameManager
         UpdateEpisode(episodePaths[episodesDropdown_.value]);
     }
 
-    public void OnAdminModeClick()
+    public void OnCharacterChange()
     {
-        adminMode_ = !adminMode_;
-        RefreshAdminMode();
+        GameManager.SelectedCharacter = System.Enum.GetNames(typeof(EpisodeNode.Character.Option))[characterDropdown_.value];
     }
 
     public void OnMuteAllClick()
     {
         GameManager.MuteAll = !GameManager.MuteAll;
         RefreshMuteMode();
+    }
+
+    public void OnMasterClick()
+    {
+        GameManager.Master = !GameManager.Master;
+        RefreshMasterMode();
+    }
+
+    public void OnZoneActiveClick()
+    {
+        GameManager.ZoneActive = !GameManager.ZoneActive;
+        SendNewAction(GameManager.ZoneActive ? ZONE_ACTIVE : ZONE_INACTIVE, masterOnly: false);
+
+        RefreshZoneMode();
+    }
+
+    private void RefreshZoneMode()
+    {
+        zoneBg_.color = GameManager.ZoneActive ? Color.green : Color.red;
     }
 
     private void RefreshMuteMode()
@@ -179,11 +211,9 @@ public class PrompterManager : GameManager
         }
     }
 
-    private void RefreshAdminMode()
+    private void RefreshMasterMode()
     {
-        adminModeBg_.color = adminMode_ ? Color.green : Color.red;
-
-        buttonsPanel_.gameObject.SetActive(adminMode_);
+        masterBg_.color = GameManager.Master ? Color.green : Color.red;
     }
 
     private string FormatText(string text)
@@ -224,5 +254,21 @@ public class PrompterManager : GameManager
         }
 
         SpawnButtons();
+    }
+
+    protected override void NewActionInternal(string a)
+    {
+        base.NewActionInternal(a);
+
+        if (a.Contains(ZONE_ACTIVE) || a.Contains(ZONE_INACTIVE))
+        {
+            HandleZoneUpdate(a.Contains(ZONE_ACTIVE));
+        }
+    }
+
+    private void HandleZoneUpdate(bool zoneActive)
+    {
+        GameManager.ZoneActive = zoneActive;
+        RefreshZoneMode();
     }
 }

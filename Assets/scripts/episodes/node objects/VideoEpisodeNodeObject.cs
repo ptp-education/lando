@@ -33,9 +33,9 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
         StartCoroutine(SwapPlayer(videoPlayerLoop_, videoPlayerMain_, pauseBetweenSwitch: true));
     }
 
-    public override void Play()
+    public override void Reset()
     {
-        base.Play();
+        base.Reset();
 
         started_ = true;
         completed_ = false;
