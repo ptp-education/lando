@@ -16,7 +16,6 @@ public class ShareManager : GameManager
     private GoTweenFlow fadeFlow_;
     private ChoicesHolder choicesHolder_;
     private Dictionary<string, OnscreenCharacter> characters_ = new Dictionary<string, OnscreenCharacter> ();
-    private bool spaceBarDown_ = false;
 
     private void Start()
     {
@@ -39,14 +38,6 @@ public class ShareManager : GameManager
         if (fadeOverlay_ != null)
         {
             fadeOverlay_.transform.SetAsLastSibling();
-        }
-
-        bool spaceBarDown = Input.GetKey("t");
-        if (spaceBarDown != spaceBarDown_)
-        {
-            spaceBarDown_ = spaceBarDown;
-
-            SendNewAction((spaceBarDown_ ? SPACEBAR_DOWN : SPACEBAR_UP) + " " + GameManager.SelectedCharacter, masterOnly: false);
         }
     }
 
@@ -79,19 +70,19 @@ public class ShareManager : GameManager
             HandleFade(a);
         }
 
+        if (a.Contains(FADEOUT_COMMAND))
+        {
+            HandleFadeOut(a);
+        }
+
         if (activeNode_ != null)
         {
             activeNode_.ReceiveAction(a);
         }
 
-        if (a.Contains(SPACEBAR_DOWN) || a.Contains(SPACEBAR_UP))
+        if (a.Contains(ZONE_ACTIVE))
         {
-            HandleCharacterBubbles(a);
-        }
-
-        if (a.Contains(ZONE_ACTIVE) || a.Contains(ZONE_INACTIVE))
-        {
-            HandleZoneUpdate(a.Contains(ZONE_ACTIVE));
+            HandleZoneUpdated();
         }
 
         if (a.Contains(TERMINAL_COMMAND))
@@ -103,99 +94,11 @@ public class ShareManager : GameManager
         {
             HandlePrintCommand(a);
         }
-    }
 
-    private void HandleFade(string action)
-    {
-        string[] split = action.Split(' ');
-
-        string lengthText = null;
-        for (int i = 0; i < split.Length; i++)
+        if (a.Contains(CHARACTER_COMMAND))
         {
-            if (string.Equals(FADE_COMMAND, split[i]))
-            {
-                if (i < split.Length - 1)
-                {
-                    lengthText = split[i + 1];
-                    break;
-                }
-            }
+            HandleCharacterCommand(a);
         }
-
-        if (lengthText != null)
-        {
-            float length = -1f;
-            float.TryParse(lengthText, out length);
-            if (length != -1f)
-            {
-                if (fadeFlow_ != null)
-                {
-                    fadeFlow_.complete();
-                    fadeFlow_ = null;
-                }
-
-                fadeOverlay_.color = Color.black;
-
-                fadeFlow_ = new GoTweenFlow();
-                fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.01f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
-                fadeFlow_.insert(length - 0.3f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
-                fadeFlow_.play();
-            }
-        }
-    }
-
-    private void HandleBackgroundLoop(EpisodeNode node)
-    {
-        if (node.BgLoopPath != null && node.BgLoopPath.Length > 0)
-        {
-            AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
-        }
-    }
-
-    private void HandleChoices(EpisodeNode n)
-    {
-        choicesHolder_.DeleteOptions();
-
-        bool containsChoice = false;
-
-        foreach(EpisodeNode.Option o in n.Options)
-        {
-            if (o.Action.Contains("-spawnoption"))
-            {
-                choicesHolder_.AddOption(o.Name);
-                containsChoice = true;
-            }
-        }
-
-        if (containsChoice)
-        {
-            AudioPlayer.PlayAudio("audio/sfx/new-option");
-        }
-    }
-
-    private void HandleCharacterBubbles(string action)
-    {
-        if (!action.Contains(SPACEBAR_DOWN) && !action.Contains(SPACEBAR_UP))
-        {
-            return;
-        }
-        string[] split = action.Split(' ');
-
-        if (split.Length < 2)
-        {
-            Debug.LogWarning("Insufficient arguments for character bubbles in: " + action);
-            return;
-        }
-
-        string target = split[split.Length - 1];
-
-        if (!characters_.ContainsKey(target))
-        {
-            Debug.LogWarning("Trying to toggle voice bubbles on a character that does not exist!");
-            return;
-        }
-
-        characters_[target].ToggleVoiceBubble(string.Equals(split[split.Length - 2], SPACEBAR_DOWN));
     }
 
     private void RefreshCharacters(EpisodeNode nextNode)
@@ -209,90 +112,19 @@ public class ShareManager : GameManager
                 characters_[nextCharacter.Name] = newCharacter;
             }
 
-            characters_[nextCharacter.Name].Init(nextCharacter.TalkingPosition, this);
+            characters_[nextCharacter.Name].transform.localPosition = nextCharacter.TalkingPosition;
             characters_[nextCharacter.Name].transform.localScale = nextCharacter.Scale;
-
-            if (GameManager.ZoneActive)
-            {
-                characters_[nextCharacter.Name].MoveOnscreen(playSound: false);
-            } else
-            {
-                characters_[nextCharacter.Name].MoveOffscreen(null, false);
-            }
+            characters_[nextCharacter.Name].transform.SetSiblingIndex(fadeOverlay_.transform.GetSiblingIndex() - 1);
         }
 
-        foreach(string characterKey in characters_.Keys)
+        for (int i = 0; i < characters_.Keys.Count; i++)
         {
+            string characterKey = characters_.Keys.ToList<string>()[i];
             if (!nextNode.Characters.Exists(c => string.Equals(characterKey, c.Name)))
             {
-                characters_[characterKey].MoveOffscreen(() =>
-                {
-                    Destroy(characters_[characterKey].gameObject);
-                    characters_.Remove(characterKey);
-                }, false);
+                Destroy(characters_[characterKey].gameObject);
+                characters_.Remove(characterKey);
             }
-        }
-    }
-
-
-    private void HandleTerminalCommand(string a)
-    {
-        string[] split = a.Split(' ');
-
-        int start = a.IndexOf(TERMINAL_COMMAND);
-        int firstQuote = a.IndexOf('\"', start);
-        int secondQuote = a.IndexOf('\"', firstQuote + 1);
-        if (firstQuote == -1 || secondQuote == -1)
-        {
-            Debug.LogWarning("Could not find matching quotes for argument " + TERMINAL_COMMAND + ": " + a);
-            return;
-        }
-
-        string cmd = a.Substring(firstQuote + 1, secondQuote - firstQuote - 1);
-
-        CommandLineHelper.ExecuteProcessTerminal(a.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
-    }
-
-    private void HandlePrintCommand(string a)
-    {
-        string[] split = a.Split(' ');
-
-        string print = null;
-        for (int i = 0; i < split.Length; i++)
-        {
-            if (string.Equals(split[i], PRINT_COMMAND))
-            {
-                if (i + 1 < split.Length)
-                {
-                    print = split[i + 1];
-                    break;
-                }
-            }
-        }
-        if (print != null)
-        {
-            CommandLineHelper.PrintPdf(print);
-        }
-        else
-        {
-            Debug.LogWarning("Could not find enough arguments to print. " + a);
-        }
-    }
-
-    private void HandleZoneUpdate(bool zoneActive)
-    {
-        GameManager.ZoneActive = zoneActive;
-        
-        foreach (OnscreenCharacter c in characters_.Values)
-        {
-            if (zoneActive)
-            {
-                c.MoveOnscreen();
-            } else
-            {
-                c.MoveOffscreen(null, true);
-            }
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/Desktop/legov5/press-12-lightkey.scpt\"");
         }
     }
 
@@ -300,7 +132,6 @@ public class ShareManager : GameManager
     {
         EpisodeNodeObject previousNode = activeNode_;
         activeNode_ = LoadEpisodeNodeObject(currentNode);
-        spaceBarDown_ = false;
 
         activeNode_.Reset();
 
@@ -380,4 +211,216 @@ public class ShareManager : GameManager
             return activeNode_ == null ? 0f : activeNode_.ProgressPercentage;
         }
     }
+
+    #region HANDLERS
+
+    private void HandleFade(string action)
+    {
+        string[] split = action.Split(' ');
+
+        string lengthText = null;
+        for (int i = 0; i < split.Length; i++)
+        {
+            if (string.Equals(FADE_COMMAND, split[i]))
+            {
+                if (i < split.Length - 1)
+                {
+                    lengthText = split[i + 1];
+                    break;
+                }
+            }
+        }
+
+        if (lengthText != null)
+        {
+            float length = -1f;
+            float.TryParse(lengthText, out length);
+            if (length != -1f)
+            {
+                if (fadeFlow_ != null)
+                {
+                    fadeFlow_.complete();
+                    fadeFlow_ = null;
+                }
+
+                fadeOverlay_.color = Color.black;
+
+                fadeFlow_ = new GoTweenFlow();
+                fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.01f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
+                fadeFlow_.insert(length - 0.3f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
+                fadeFlow_.play();
+            }
+        }
+    }
+
+    private void HandleFadeOut(string action)
+    {
+        string[] split = action.Split(' ');
+
+        string lengthText = null;
+        for (int i = 0; i < split.Length; i++)
+        {
+            if (string.Equals(FADEOUT_COMMAND, split[i]))
+            {
+                if (i < split.Length - 1)
+                {
+                    lengthText = split[i + 1];
+                    break;
+                }
+            }
+        }
+
+        if (lengthText != null)
+        {
+            float length = -1f;
+            float.TryParse(lengthText, out length);
+            if (length != -1f)
+            {
+                if (fadeFlow_ != null)
+                {
+                    fadeFlow_.complete();
+                    fadeFlow_ = null;
+                }
+
+                fadeFlow_ = new GoTweenFlow();
+                fadeFlow_.insert(0f, new GoTween(fadeOverlay_, length, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
+                fadeFlow_.play();
+            }
+        }
+    }
+
+    private void HandleBackgroundLoop(EpisodeNode node)
+    {
+        if (node.BgLoopPath != null && node.BgLoopPath.Length > 0)
+        {
+            AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
+        }
+    }
+
+    private void HandleChoices(EpisodeNode n)
+    {
+        choicesHolder_.DeleteOptions();
+
+        bool containsChoice = false;
+
+        foreach (EpisodeNode.Option o in n.Options)
+        {
+            if (o.Action.Contains("-spawnoption"))
+            {
+                choicesHolder_.AddOption(o.Name);
+                containsChoice = true;
+            }
+        }
+
+        if (containsChoice)
+        {
+            AudioPlayer.PlayAudio("audio/sfx/new-option");
+        }
+    }
+
+    private void HandleTerminalCommand(string a)
+    {
+        string[] split = a.Split(' ');
+
+        int start = a.IndexOf(TERMINAL_COMMAND);
+        int firstQuote = a.IndexOf('\"', start);
+        int secondQuote = a.IndexOf('\"', firstQuote + 1);
+        if (firstQuote == -1 || secondQuote == -1)
+        {
+            Debug.LogWarning("Could not find matching quotes for argument " + TERMINAL_COMMAND + ": " + a);
+            return;
+        }
+
+        string cmd = a.Substring(firstQuote + 1, secondQuote - firstQuote - 1);
+
+        CommandLineHelper.ExecuteProcessTerminal(a.Substring(firstQuote + 1, secondQuote - firstQuote - 1));
+    }
+
+    private void HandlePrintCommand(string a)
+    {
+        string[] split = a.Split(' ');
+
+        string print = null;
+        for (int i = 0; i < split.Length; i++)
+        {
+            if (string.Equals(split[i], PRINT_COMMAND))
+            {
+                if (i + 1 < split.Length)
+                {
+                    print = split[i + 1];
+                    break;
+                }
+            }
+        }
+        if (print != null)
+        {
+            CommandLineHelper.PrintPdf(print);
+        }
+        else
+        {
+            Debug.LogWarning("Could not find enough arguments to print. " + a);
+        }
+    }
+
+    private void HandleZoneUpdated()
+    {
+        foreach (OnscreenCharacter c in characters_.Values)
+        {
+            c.Wave();
+        }
+        CommandLineHelper.ExecuteProcessTerminal("osascript \"~/Desktop/legov5/press-12-lightkey.scpt\"");
+    }
+
+    private void HandleCharacterCommand(string a)
+    {
+        List<string> args = ArgumentsFromCommand(CHARACTER_COMMAND, a.Split(' '));
+
+        List<OnscreenCharacter> characters = characters_.Values.ToList<OnscreenCharacter>();
+
+        switch (args[0])
+        {
+            case "print":
+                characters.ForEach(c => c.TalkAndPrint(args.GetRange(2, args.Count - 2), args[1], episode_.VORoot));
+                break;
+            case "talk":
+                characters.ForEach(c => c.Talk(args.GetRange(1, args.Count - 1), episode_.VORoot));
+                break;
+            case "cheer":
+                characters.ForEach(c => c.Cheer(args.GetRange(1, args.Count - 1), episode_.VORoot));
+                break;
+            case "wave":
+                characters.ForEach(c => c.Wave());
+                break;
+
+        }
+    }
+
+    private List<string> ArgumentsFromCommand(string command, string[] commands)
+    {
+        List<string> args = new List<string>();
+
+        for (int i = 0; i < commands.Length; i++)
+        {
+            if (string.Equals(commands[i], command))
+            {
+                for (int ii = 0; ii < commands.Length - i; ii++)
+                {
+                    int indexToCheck = i + 1 + ii;
+
+                    if (indexToCheck < commands.Length && !commands[indexToCheck].StartsWith("-"))
+                    {
+                        args.Add(commands[indexToCheck]);
+                    }
+                    else
+                    {
+                        return args;
+                    }
+                }
+            }
+        }
+
+        return args;
+    }
+
+    #endregion
 }

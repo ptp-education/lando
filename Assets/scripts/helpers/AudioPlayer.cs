@@ -31,9 +31,16 @@ public class AudioPlayer : MonoBehaviour
         AudioSource audioSource = GameObject.Instantiate(a);
 
         AudioClip clip = Resources.Load<AudioClip>(path);
+
+        if (clip == null)
+        {
+            Debug.LogWarning("Could not find audio file for path: " + path);
+            return -1f;
+        }
+
         audioSource.PlayOneShot(clip);
 
-        Go.to(audioSource.transform, clip.length, new GoTweenConfig().onComplete(t =>
+        Go.to(audioSource.transform, clip.length * 2f, new GoTweenConfig().onComplete(t =>
         {
             Destroy(audioSource.gameObject);
         }));

@@ -10,6 +10,7 @@ public class SpawnedFarmhouse : SpawnedObject
     [SerializeField] private int totalExpectedLumber_;
     [SerializeField] private Image levelProgress_;
     [SerializeField] private Image levelHolder_;
+    [SerializeField] private Text levelText_;
 
     private int houseImageLevel_ = 0;
 
@@ -39,6 +40,8 @@ public class SpawnedFarmhouse : SpawnedObject
         {
             houseLevel = houseLevelStorage.value;
         }
+
+        levelText_.text = houseLevel.ToString();
 
         int increments = totalExpectedLumber_ / farmhouseOptions_.Count;
         float targetWidth = (float)(houseLevel % increments) / (float)increments * levelHolder_.rectTransform.sizeDelta.x;

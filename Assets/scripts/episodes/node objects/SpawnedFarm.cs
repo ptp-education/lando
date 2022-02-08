@@ -6,15 +6,15 @@ using System.Linq;
 
 public class SpawnedFarm : SpawnedObject
 {
-    [SerializeField] GameObject cows_;
-    [SerializeField] GameObject chickens_;
-    [SerializeField] GameObject pigs_;
-    [SerializeField] GameObject goats_;
-    [SerializeField] GameObject horses_;
-    [SerializeField] GameObject ducks_;
-    [SerializeField] GameObject appleTrees_;
-    [SerializeField] GameObject pearTrees_;
-    [SerializeField] GameObject orangeTrees_;
+    [SerializeField] List<Image> cows_;
+    [SerializeField] List<Image> chickens_;
+    [SerializeField] List<Image> pigs_;
+    [SerializeField] List<Image> goats_;
+    [SerializeField] List<Image> horses_;
+    [SerializeField] List<Image> ducks_;
+    [SerializeField] List<Image> appleTrees_;
+    [SerializeField] List<Image> pearTrees_;
+    [SerializeField] List<Image> orangeTrees_;
     [SerializeField] Image cornCrops_;
     [SerializeField] Image wheatCrops_;
     [SerializeField] Image cottonCrops_;
@@ -125,23 +125,23 @@ public class SpawnedFarm : SpawnedObject
         int well = farmObjects.FindAll(s => string.Equals("well", s)).Count;
         int goats = farmObjects.FindAll(s => string.Equals("goat", s)).Count;
 
-        cornCrops_.gameObject.SetActive(corn > 0);
-        wheatCrops_.gameObject.SetActive(wheat > 0);
-        cottonCrops_.gameObject.SetActive(cotton > 0);
-        tractor_.gameObject.SetActive(tractor > 0);
-        archBridge_.gameObject.SetActive(archBridge > 0);
-        orangeTrees_.gameObject.SetActive(orangeTrees > 0);
-        appleTrees_.gameObject.SetActive(appleTrees > 0);
-        pearTrees_.gameObject.SetActive(pearTrees > 0);
-        pigs_.gameObject.SetActive(pigs > 0);
-        cows_.gameObject.SetActive(cows > 0);
-        chickens_.gameObject.SetActive(chickens > 0);
-        horses_.gameObject.SetActive(horses > 0);
-        ducks_.gameObject.SetActive(ducks > 0);
-        waterTower_.gameObject.SetActive(waterTower > 0);
-        well_.gameObject.SetActive(well > 0);
-        goats_.gameObject.SetActive(goats > 0);
+        cornCrops_.color = corn > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        wheatCrops_.color = wheat > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        cottonCrops_.color = cotton > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        tractor_.color = tractor > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        archBridge_.color = archBridge > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        waterTower_.color = waterTower > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        well_.color = well > 0 ? Color.white : new Color(0, 0, 0, .75f);
 
+        for (int i = 0; i < orangeTrees_.Count; i++) orangeTrees_[i].color = orangeTrees > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < appleTrees_.Count; i++) appleTrees_[i].color = appleTrees > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < pearTrees_.Count; i++) pearTrees_[i].color = pearTrees > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < pigs_.Count; i++) pigs_[i].color = pigs > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < cows_.Count; i++) cows_[i].color = cows > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < chickens_.Count; i++) chickens_[i].color = chickens > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < horses_.Count; i++) horses_[i].color = horses > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < ducks_.Count; i++) ducks_[i].color = ducks > 0 ? Color.white : new Color(0, 0, 0, .75f);
+        for (int i = 0; i < goats_.Count; i++) goats_[i].color = goats > 0 ? Color.white : new Color(0, 0, 0, .75f);
     }
 
     public override void Reset()

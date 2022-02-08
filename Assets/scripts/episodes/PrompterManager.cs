@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class StringsFile
 {
@@ -28,7 +29,6 @@ public class PrompterManager : GameManager
 
     [SerializeField] private PromptButton commandsButtonPrefab_;
 
-    private bool endOfClass_ = false;
     private List<string> previousNodes_ = new List<string>();
     private List<string> episodePaths = new List<string>();
 
@@ -56,7 +56,6 @@ public class PrompterManager : GameManager
 
         RefreshMuteMode();
         RefreshMasterMode();
-        RefreshZoneMode();
         OnCharacterChange();
     }
 
@@ -71,7 +70,7 @@ public class PrompterManager : GameManager
         }
         if (Input.GetKeyUp("z"))
         {
-            OnZoneActiveClick();
+            SendNewAction(ZONE_ACTIVE);
         }
     }
 
@@ -106,8 +105,6 @@ public class PrompterManager : GameManager
             b.transform.SetParent(buttonsPanel_.transform, true);
             b.Init("End of class", "", "-", CommandButtonPressed);
             b.Interactable = false;
-
-            endOfClass_ = true;
 
             return;
         }
@@ -188,19 +185,6 @@ public class PrompterManager : GameManager
         RefreshMasterMode();
     }
 
-    public void OnZoneActiveClick()
-    {
-        GameManager.ZoneActive = !GameManager.ZoneActive;
-        SendNewAction(GameManager.ZoneActive ? ZONE_ACTIVE : ZONE_INACTIVE, masterOnly: false);
-
-        RefreshZoneMode();
-    }
-
-    private void RefreshZoneMode()
-    {
-        zoneBg_.color = GameManager.ZoneActive ? Color.green : Color.red;
-    }
-
     private void RefreshMuteMode()
     {
         muteAllBg_.color = !GameManager.MuteAll ? Color.green : Color.red;
@@ -234,7 +218,6 @@ public class PrompterManager : GameManager
     {
         base.NewEpisodeEventInternal(e);
 
-        endOfClass_ = false;
         teleprompter_.text = "";
         previousNodes_ = new List<string>();
         HideButtons();
@@ -254,21 +237,5 @@ public class PrompterManager : GameManager
         }
 
         SpawnButtons();
-    }
-
-    protected override void NewActionInternal(string a)
-    {
-        base.NewActionInternal(a);
-
-        if (a.Contains(ZONE_ACTIVE) || a.Contains(ZONE_INACTIVE))
-        {
-            HandleZoneUpdate(a.Contains(ZONE_ACTIVE));
-        }
-    }
-
-    private void HandleZoneUpdate(bool zoneActive)
-    {
-        GameManager.ZoneActive = zoneActive;
-        RefreshZoneMode();
     }
 }

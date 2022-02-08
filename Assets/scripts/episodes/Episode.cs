@@ -10,6 +10,7 @@ using UnityEditor.SceneManagement;
 public class Episode : MonoBehaviour
 {
     [SerializeField] public EpisodeNode StartingNode;
+    [SerializeField] public string VORoot;
 
     private const string kVisualizerTag = "Visualizer";
 
