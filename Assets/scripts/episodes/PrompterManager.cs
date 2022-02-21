@@ -72,6 +72,10 @@ public class PrompterManager : GameManager
         {
             SendNewAction(ZONE_ACTIVE);
         }
+        if (Input.GetKeyUp("s"))
+        {
+            SendNewAction("-guide-show-stops -sfx \"audio/sfx/noentry\"");
+        }
     }
 
     private void AdjustPanelPosition(int position)

@@ -48,6 +48,7 @@ public class EpisodeNode : MonoBehaviour
     public class PrefabSpawnObject
     {
         [SerializeField] public float TimeStamp;
+        [SerializeField] public string Command;
         [SerializeField] public Vector3 Position;
         [SerializeField] public Vector3 Scale = Vector3.one;
         [SerializeField] public UnityEngine.Object Object;

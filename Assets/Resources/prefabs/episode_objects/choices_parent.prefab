@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3071743507676291507
+--- !u!1 &979961264506338987
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 440310264953533576}
-  - component: {fileID: 5166610484222081120}
-  - component: {fileID: 7528735146617499145}
+  - component: {fileID: 5208325568414217136}
+  - component: {fileID: 3647165019982764573}
+  - component: {fileID: 7564915522671997002}
   m_Layer: 5
   m_Name: choices_parent
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &440310264953533576
+--- !u!224 &5208325568414217136
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3071743507676291507}
+  m_GameObject: {fileID: 979961264506338987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,16 +34,16 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -431}
+  m_AnchoredPosition: {x: -663, y: 455}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5166610484222081120
+--- !u!114 &3647165019982764573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3071743507676291507}
+  m_GameObject: {fileID: 979961264506338987}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
@@ -55,23 +55,23 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_StartCorner: 3
+  m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 470, y: 160}
-  m_Spacing: {x: 0, y: 25}
+  m_CellSize: {x: 561, y: 128}
+  m_Spacing: {x: 0, y: -35}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &7528735146617499145
+--- !u!114 &7564915522671997002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3071743507676291507}
+  m_GameObject: {fileID: 979961264506338987}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1837314616b140f8aa67818fbff2942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   choicePrefab_: {fileID: 2616906868850860906, guid: 1c5b74e31d1e74bb9a41236ae3d73298, type: 3}
-  choicesParent_: {fileID: 440310264953533576}
+  choicesParent_: {fileID: 5208325568414217136}

@@ -12,7 +12,9 @@ public class GameStorage
         ChosenColor,
         HouseLevel,
         FarmObjects,
-        BridgeColors
+        BridgeColors,
+        SpawnedTruck,
+        ShowAnimalOutlines
     }
 
     public class Integer
@@ -41,6 +43,17 @@ public class GameStorage
         {
             return null;
         }
+    }
+
+    public void AddObjectToList<T>(Key key, T obj)
+    {
+        List<T> list = GetValue<List<T>>(key);
+        if (list == null)
+        {
+            list = new List<T>();
+        }
+        list.Add(obj);
+        Add<List<T>>(key, list);
     }
 
     public void ResetStorage()

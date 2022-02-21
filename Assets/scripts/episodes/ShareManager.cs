@@ -10,6 +10,8 @@ public class ShareManager : GameManager
 
     [SerializeField] private Transform nodeObjectParent_;
 
+    public Transform OverlayParent;
+
     private EpisodeNodeObject activeNode_;
 
     private Image fadeOverlay_;
@@ -21,13 +23,17 @@ public class ShareManager : GameManager
     {
         nodeObjectParent_.transform.localScale = new Vector3(-1f, 1f, 1f);
 
-        GameObject overlay = new GameObject("Fade Overlay");
-        fadeOverlay_ = overlay.AddComponent<Image>();
+        GameObject fadeOverlayObject = new GameObject("Fade Overlay");
+        fadeOverlay_ = fadeOverlayObject.AddComponent<Image>();
         fadeOverlay_.color = Color.black;
         fadeOverlay_.color = new Color(0, 0, 0, 0);
         fadeOverlay_.transform.SetParent(transform, false);
         fadeOverlay_.transform.localPosition = Vector3.zero;
         fadeOverlay_.rectTransform.sizeDelta = new Vector2(1920, 1080);
+
+        OverlayParent = new GameObject("Overlay Parent").GetComponent<Transform>();
+        OverlayParent.transform.SetParent(transform, false);
+        OverlayParent.transform.localPosition = Vector3.zero;
 
         ChoicesHolder choicesPrefab = Resources.Load<ChoicesHolder>("prefabs/episode_objects/choices_parent");
         choicesHolder_ = GameObject.Instantiate<ChoicesHolder>(choicesPrefab, transform);
@@ -39,6 +45,11 @@ public class ShareManager : GameManager
         {
             fadeOverlay_.transform.SetAsLastSibling();
         }
+        if (choicesHolder_ != null)
+        {
+            choicesHolder_.transform.SetSiblingIndex(transform.childCount - 2);
+        }
+        OverlayParent.transform.SetSiblingIndex(transform.childCount - 3);
     }
 
     protected override void NewNodeEventInternal(EpisodeNode node)
@@ -167,6 +178,7 @@ public class ShareManager : GameManager
 
         if (previousNode != null)
         {
+            previousNode.Reset();
             Destroy(previousNode.gameObject);
         }
     }
@@ -391,7 +403,12 @@ public class ShareManager : GameManager
             case "wave":
                 characters.ForEach(c => c.Wave());
                 break;
-
+            case "phone":
+                characters.ForEach(c => c.Phone());
+                break;
+            case "idle":
+                characters.ForEach(c => c.Idle());
+                break;
         }
     }
 

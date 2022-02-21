@@ -6,10 +6,11 @@ public class OnscreenCharacter : MonoBehaviour
 {
     [SerializeField] private GameObject voiceBubble_;
     [SerializeField] private Animator anim_;
+    [SerializeField] private float speed_ = 250f;
 
     private bool canReceiveAction_ = true;
-
     private bool firstWave_ = true;
+    private GoTweenFlow walkFlow_;
 
     public float Talk(List<string> audio, string root)
     {
@@ -41,15 +42,7 @@ public class OnscreenCharacter : MonoBehaviour
         float duration = Talk(audio, root);
         if (duration == -1f) return -1f;
 
-        Go.to(transform, 0.01f, new GoTweenConfig().onComplete(t =>
-        {
-            anim_.Play("didi-phone");
-        }));
-        Go.to(transform, 1.8f, new GoTweenConfig().onComplete(t =>
-        {
-            AudioPlayer.PlayAudio("audio/sfx/beep");
-        }));
-        Go.to(transform, 2.0f, new GoTweenConfig().onComplete(t =>
+        Go.to(transform, duration + 0.3f, new GoTweenConfig().onComplete(t =>
         {
             CommandLineHelper.PrintPdf(print);
         }));
@@ -76,5 +69,37 @@ public class OnscreenCharacter : MonoBehaviour
                 AudioPlayer.PlayAudio("audio/didi_hi/" + hiFiles[Random.Range(0, hiFiles.Count)]);
             }));
         }
+    }
+
+    public void Walk(int xPosition)
+    {
+        if (walkFlow_ != null)
+        {
+            walkFlow_.destroy();
+            walkFlow_ = null;
+        }
+
+        walkFlow_ = new GoTweenFlow();
+
+        anim_.Play("didi-walk");
+        float duration = Mathf.Abs(transform.localPosition.x - xPosition) / speed_;
+
+        walkFlow_.insert(0f, new GoTween(transform, duration, new GoTweenConfig().localPosition(new Vector3(xPosition, transform.localPosition.y, transform.localPosition.z)).onComplete(t =>
+        {
+            anim_.Play("didi-idle");
+        })));
+
+        walkFlow_.play();
+    }
+
+    public void Phone()
+    {
+        anim_.Play("didi-onphone");
+    }
+
+    public void Idle()
+    {
+        anim_.Play("didi-idle");
+
     }
 }

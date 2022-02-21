@@ -27,22 +27,21 @@ public class SpawnedFarm : SpawnedObject
     {
         base.ReceivedAction(action);
 
-        if (action.Contains("add-farm-"))
+        string[] actions = action.Split(' ');
+
+        foreach(string a in actions)
         {
-            string[] split = action.Split('-');
-
-            string newObject = split[split.Length - 1];
-            if (newObject.Length > 0)
+            if (a.Contains("add-farm-"))
             {
-                List<string> farmObjects = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.FarmObjects);
-                if (farmObjects == null)
-                {
-                    farmObjects = new List<string>();
-                }
-                farmObjects.Add(newObject);
-                gameManager_.Storage.Add<List<string>>(GameStorage.Key.FarmObjects, farmObjects);
+                string[] split = a.Split('-');
 
-                RefreshFarm(newObject);
+                string newObject = split[split.Length - 1];
+                if (newObject.Length > 0)
+                {
+                    gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.FarmObjects, newObject);
+
+                    RefreshFarm(newObject);
+                }
             }
         }
     }

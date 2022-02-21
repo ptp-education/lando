@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class EpisodeNodeObject : MonoBehaviour
 {
+    public static string kSpawnCommand = "-spawn-";
     public delegate void ReadyToStartLoop();
 
     public EpisodeNode Node;
@@ -14,6 +15,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private float timer_ = 0f;
 
     private RectTransform spawnedObjectParent_;
+    public Transform OverlayParent;
 
     private void Start()
     {
@@ -51,6 +53,11 @@ public class EpisodeNodeObject : MonoBehaviour
         {
             o.ReceivedAction(action);
         }
+
+        if (action.StartsWith(kSpawnCommand))
+        {
+            SpawnObject(action.Substring(kSpawnCommand.Length).Trim());
+        }
     }
 
     public virtual float ProgressPercentage
@@ -58,6 +65,17 @@ public class EpisodeNodeObject : MonoBehaviour
         get
         {
             return -1f;
+        }
+    }
+
+    private void SpawnObject(string command)
+    {
+        foreach (EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
+        {
+            if (string.Equals(o.Command, command))
+            {
+                SpawnObject(o);
+            }
         }
     }
 
@@ -72,7 +90,7 @@ public class EpisodeNodeObject : MonoBehaviour
 
         foreach(EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
         {
-            if (timer_ > o.TimeStamp)
+            if (timer_ > o.TimeStamp && o.TimeStamp != -1f)
             {
                 if (!o.Spawned)
                 {

@@ -7,7 +7,7 @@ public class CommandLineHelper : MonoBehaviour
 {
     static public void PrintPdf(string pdf)
     {
-        ExecuteProcessTerminal("lpr -P Star_TSP143__STR_T_001_ \"" + "~/Desktop/legov5/" + pdf + "\"");
+        ExecuteProcessTerminal("lpr -P Star_TSP143__STR_T_001_ \"" + "/Users/felixhu/legov5/" + pdf + "\"");
     }
 
     static public string ExecuteProcessTerminal(string argument)
