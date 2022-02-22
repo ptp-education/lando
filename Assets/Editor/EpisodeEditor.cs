@@ -12,16 +12,6 @@ public class EpisodeEditor : Editor
         DrawDefaultInspector();
         Episode myTarget = (Episode)target;
 
-        if (GUILayout.Button("Visualize"))
-        {
-            myTarget.Visualize();
-        }
-
-        if (GUILayout.Button("Remove Visualize"))
-        {
-            myTarget.RemoveVisualize();
-        }
-
         List<string> allNodes = new List<string>();
         foreach(EpisodeNode n in myTarget.AllNodes)
         {

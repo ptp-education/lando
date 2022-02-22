@@ -110,6 +110,11 @@ public class ShareManager : GameManager
         {
             HandleCharacterCommand(a);
         }
+
+        if (a.Contains(SPAWN_OPTIONS_COMMAND))
+        {
+            HandleChoices(a);
+        }
     }
 
     private void RefreshCharacters(EpisodeNode nextNode)
@@ -162,13 +167,11 @@ public class ShareManager : GameManager
             yield return new WaitForSeconds(0.8f);
         }
 
-
         while (!activeNode_.IsPlaying)
         {
             yield return 0;
         }
 
-        HandleChoices(currentNode);
         RefreshCharacters(currentNode);
 
         for (int i = 0; i < 8; i++)
@@ -309,25 +312,18 @@ public class ShareManager : GameManager
         }
     }
 
-    private void HandleChoices(EpisodeNode n)
+    private void HandleChoices(string a)
     {
         choicesHolder_.DeleteOptions();
 
-        bool containsChoice = false;
+        List<string> args = ArgumentsFromCommand(CHARACTER_COMMAND, a);
 
-        foreach (EpisodeNode.Option o in n.Options)
+        foreach(string o in args)
         {
-            if (o.Action.Contains("-spawnoption"))
-            {
-                choicesHolder_.AddOption(o.Name);
-                containsChoice = true;
-            }
+            choicesHolder_.AddOption(o);
         }
 
-        if (containsChoice)
-        {
-            AudioPlayer.PlayAudio("audio/sfx/new-option");
-        }
+        AudioPlayer.PlayAudio("audio/sfx/new-option");
     }
 
     private void HandleTerminalCommand(string a)
@@ -385,7 +381,7 @@ public class ShareManager : GameManager
 
     private void HandleCharacterCommand(string a)
     {
-        List<string> args = ArgumentsFromCommand(CHARACTER_COMMAND, a.Split(' '));
+        List<string> args = ArgumentsFromCommand(CHARACTER_COMMAND, a);
 
         List<OnscreenCharacter> characters = characters_.Values.ToList<OnscreenCharacter>();
 
@@ -412,13 +408,15 @@ public class ShareManager : GameManager
         }
     }
 
-    private List<string> ArgumentsFromCommand(string command, string[] commands)
+    private List<string> ArgumentsFromCommand(string commandName, string entireArgument)
     {
+        string[] commands = entireArgument.Split(' ');
+
         List<string> args = new List<string>();
 
         for (int i = 0; i < commands.Length; i++)
         {
-            if (string.Equals(commands[i], command))
+            if (string.Equals(commands[i], commandName))
             {
                 for (int ii = 0; ii < commands.Length - i; ii++)
                 {

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public const string TERMINAL_COMMAND = "-terminal";
     public const string PRINT_COMMAND = "-print";
     public const string CHARACTER_COMMAND = "-character";
+    public const string SPAWN_OPTIONS_COMMAND = "-spawnoption";
 
     public enum Type
     {
@@ -24,7 +25,7 @@ public class GameManager : MonoBehaviour
     public static bool PromptActive = false;
     public static string SelectedCharacter;
     public static bool MuteAll = false;
-    public static bool Master = false;
+    public static bool Master = true;
 
     protected Episode episode_;
     protected EpisodeNode currentNode_;

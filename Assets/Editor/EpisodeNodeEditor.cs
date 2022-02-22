@@ -110,7 +110,7 @@ public class EpisodeNodeEditor : Editor
         }
 
         EditorGUILayout.LabelField("Prompt");
-        myTarget.Prompt = EditorGUILayout.TextArea(myTarget.Prompt, TextAreaStyle, GUILayout.Width(400), GUILayout.MinHeight(100), GUILayout.MaxHeight(400));
+        myTarget.Prompt = EditorGUILayout.TextField(myTarget.Prompt);
 
         EditorGUILayout.LabelField("Spawn Prefabs");
         EditorGUILayout.PropertyField(serializedObject.FindProperty("PrefabSpawnObjects"));

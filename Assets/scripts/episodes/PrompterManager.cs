@@ -28,6 +28,7 @@ public class PrompterManager : GameManager
     [SerializeField] private Image zoneBg_;
 
     [SerializeField] private PromptButton commandsButtonPrefab_;
+    [SerializeField] private PromptButtonHolder commandButtonsHolderPrefab_;
 
     private List<string> previousNodes_ = new List<string>();
     private List<string> episodePaths = new List<string>();
@@ -45,11 +46,14 @@ public class PrompterManager : GameManager
             episodesDropdown_.options.Add(od);
         }
 
-        foreach(string c in System.Enum.GetNames(typeof(EpisodeNode.Character.Option)))
+        if (characterDropdown_ != null)
         {
-            Dropdown.OptionData od = new Dropdown.OptionData();
-            od.text = c;
-            characterDropdown_.options.Add(od);
+            foreach(string c in System.Enum.GetNames(typeof(EpisodeNode.Character.Option)))
+            {
+                Dropdown.OptionData od = new Dropdown.OptionData();
+                od.text = c;
+                characterDropdown_.options.Add(od);
+            }
         }
 
         episodePaths = new List<string>(sf.FileNames);
@@ -97,49 +101,59 @@ public class PrompterManager : GameManager
 
         HideButtons();
 
-        int buttonCounter = 1;
+        PromptButtonHolder defaultHolder = Instantiate<PromptButtonHolder>(commandButtonsHolderPrefab_);
+        defaultHolder.transform.SetParent(buttonsPanel_.transform, true);
+        defaultHolder.Header.text = "Default";
+
         if (currentNode_.NextNode != null)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsPanel_.transform, true);
+            b.transform.SetParent(defaultHolder.transform, true);
             b.Init("Next", GameManager.NODE_PREFIX + currentNode_.NextNode.name, "n", CommandButtonPressed);
         } else if (currentNode_.NextNode == null && currentNode_.Options.Count == 0)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsPanel_.transform, true);
+            b.transform.SetParent(defaultHolder.transform, true);
             b.Init("End of class", "", "-", CommandButtonPressed);
             b.Interactable = false;
 
             return;
         }
-        for(int i = 0; i < currentNode_.Options.Count; i++)
+        foreach(EpisodeNode.OptionHolders holder in currentNode_.Options)
         {
-            PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsPanel_.transform, true);
+            PromptButtonHolder h = Instantiate<PromptButtonHolder>(commandButtonsHolderPrefab_);
+            h.transform.SetParent(buttonsPanel_.transform, true);
 
-            string action = "";
-            if (currentNode_.Options[i].Node != null)
+            h.Header.text = holder.Name;
+
+            for (int i = 0; i < holder.Options.Count; i++)
             {
-                action = GameManager.NODE_PREFIX + currentNode_.Options[i].Node.name;
-            } else
-            {
-                action = GameManager.ACTION_PREFIX + currentNode_.Options[i].Action;
+                PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
+                b.transform.SetParent(h.transform, true);
+
+                string action = "";
+                if (holder.Options[i].Node != null)
+                {
+                    action = GameManager.NODE_PREFIX + holder.Options[i].Node.name;
+                } else
+                {
+                    action = GameManager.ACTION_PREFIX + holder.Options[i].Action;
+                }
+
+                string name = holder.Options[i].Name;
+                if (name == null || name.Length == 0)
+                {
+                    name = holder.Options[i].Action;
+                }
+
+                b.Init(name, action, "", CommandButtonPressed);
             }
-
-            string name = currentNode_.Options[i].Name;
-            if (name == null || name.Length == 0)
-            {
-                name = currentNode_.Options[i].Action;
-            }
-
-            b.Init(name, action, buttonCounter > 9 ? "" : buttonCounter.ToString(), CommandButtonPressed);
-
-            buttonCounter++;
         }
+
         if (previousNodes_.Count >= 2)
         {
             PromptButton b = Instantiate<PromptButton>(commandsButtonPrefab_);
-            b.transform.SetParent(buttonsPanel_.transform, true);
+            b.transform.SetParent(defaultHolder.transform, true);
             b.Init("Undo", "", "u", UndoButtonPressed);
         }
     }
@@ -191,7 +205,10 @@ public class PrompterManager : GameManager
 
     private void RefreshMuteMode()
     {
-        muteAllBg_.color = !GameManager.MuteAll ? Color.green : Color.red;
+        if (muteAllBg_ != null)
+        {
+            muteAllBg_.color = !GameManager.MuteAll ? Color.green : Color.red;
+        }
 
         if (GameManager.MuteAll)
         {
@@ -201,7 +218,10 @@ public class PrompterManager : GameManager
 
     private void RefreshMasterMode()
     {
-        masterBg_.color = GameManager.Master ? Color.green : Color.red;
+        if (masterBg_ != null)
+        {
+            masterBg_.color = GameManager.Master ? Color.green : Color.red;
+        }
     }
 
     private string FormatText(string text)

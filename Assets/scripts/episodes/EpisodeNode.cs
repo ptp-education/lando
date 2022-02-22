@@ -37,6 +37,13 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
+    public class OptionHolders
+    {
+        [SerializeField] public string Name;
+        [SerializeField] public List<Option> Options = new List<Option>();
+    }
+
+    [Serializable]
     public class Option
     {
         [SerializeField] public string Name;
@@ -107,7 +114,7 @@ public class EpisodeNode : MonoBehaviour
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public EpisodeNode NextNode;
-    public List<Option> Options = new List<Option>();
+    public List<OptionHolders> Options = new List<OptionHolders>();
 
 
     public Episode Episode
@@ -135,34 +142,5 @@ public class EpisodeNode : MonoBehaviour
         }
 
         return string.Format("{0} - {1} - {2}", gameObject.name, Type.ToString(), contentName);
-    }
-
-    public NodeVisualizer VisualNode;
-
-    public static EpisodeNode CreateNewNode(Transform parent, string videoRoot, string videoExtension, string videoFile, string loopFile, string script, List<EpisodeSpawnData.NodeOption> options)
-    {
-        GameObject obj = new GameObject();
-        obj.AddComponent<EpisodeNode>();
-        EpisodeNode newNode = obj.GetComponent<EpisodeNode>();
-
-        newNode.transform.SetParent(parent);
-
-        string[] split = videoFile.Split('/');
-        newNode.name = split[split.Length - 1];
-
-        newNode.VideoFilePath = videoRoot + videoFile + videoExtension;
-        newNode.VideoLoopFilePath = videoRoot + loopFile + videoExtension;
-        newNode.Prompt = script;
-
-        if (options != null)
-        {
-            foreach(EpisodeSpawnData.NodeOption o in options) {
-                Option newOption = new Option();
-                newOption.Name = o.Name;
-                newOption.Node = CreateNewNode(parent, videoRoot, videoExtension, o.Node.VideoFile, o.Node.LoopVideoFile, o.Node.Script, null);
-                newNode.Options.Add(newOption);
-            }
-        }
-        return newNode;
     }
 }
