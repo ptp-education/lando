@@ -38,24 +38,24 @@ public class BeforePlay
 
     private static void SaveSongs()
     {
-#if UNITY_EDITOR
-        string prefix = "audio/songs/";
-        string path = Application.dataPath + "/Resources/" + prefix;
+//#if UNITY_EDITOR
+//        string prefix = "audio/songs/";
+//        string path = Application.dataPath + "/Resources/" + prefix;
 
-        string[] fileNames = Directory.GetFiles(path)
-            .Where(x => Path.GetExtension(x) != ".meta").ToArray();
+//        string[] fileNames = Directory.GetFiles(path)
+//            .Where(x => Path.GetExtension(x) != ".meta").ToArray();
 
-        for (int i = 0; i < fileNames.Length; i++)
-        {
-            fileNames[i] = prefix + fileNames[i].StripExtensions();
-        }
+//        for (int i = 0; i < fileNames.Length; i++)
+//        {
+//            fileNames[i] = prefix + fileNames[i].StripExtensions();
+//        }
 
-        StringsFile fileInfo = new StringsFile(fileNames);
-        string fileInfoJson = JsonUtility.ToJson(fileInfo);
+//        StringsFile fileInfo = new StringsFile(fileNames);
+//        string fileInfoJson = JsonUtility.ToJson(fileInfo);
 
-        File.WriteAllText(Application.dataPath + "/Resources/all_songs.txt", fileInfoJson);
+//        File.WriteAllText(Application.dataPath + "/Resources/all_songs.txt", fileInfoJson);
 
-        AssetDatabase.Refresh();
-#endif
+//        AssetDatabase.Refresh();
+//#endif
     }
 }

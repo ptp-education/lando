@@ -128,8 +128,7 @@ public class EpisodeNodeEditor : Editor
         EditorGUILayout.LabelField("Next Node - leave empty if last episode");
         myTarget.NextNode = (EpisodeNode)EditorGUILayout.ObjectField(myTarget.NextNode, typeof(EpisodeNode), true);
 
-        EditorGUILayout.LabelField("Additional options");
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("Options"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("OptionHolders"));
 
         serializedObject.ApplyModifiedProperties();
     }

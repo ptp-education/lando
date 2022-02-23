@@ -11,7 +11,7 @@ using ExitGames.Client.Photon;
 public class Lobby : MonoBehaviourPunCallbacks
 {
     public const string kShareMode = "share";
-    public const string kPromptMode= "prompt_2";
+    public const string kPromptMode= "prompt_3";
 
     [SerializeField] Text status_;
     [SerializeField] InputField inputField_;
