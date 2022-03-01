@@ -17,6 +17,8 @@ public class Lobby : MonoBehaviourPunCallbacks
     [SerializeField] InputField inputField_;
     [SerializeField] ButtonToggle buttonToggle_;
 
+    private string test_ = "";
+
     private void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
@@ -41,6 +43,19 @@ public class Lobby : MonoBehaviourPunCallbacks
 
             PhotonNetwork.JoinOrCreateRoom(inputField_.text, roomOptions, typedLobby);
             status_.text = "Joining room...";
+        }
+
+        foreach (char c in Input.inputString)
+        {
+            if ((c == '\n') || (c == '\r')) // enter/return
+            {
+                Debug.Log("CODE: " + test_);
+                test_ = "";
+            }
+            else
+            {
+                test_ += c;
+            }
         }
     }
 

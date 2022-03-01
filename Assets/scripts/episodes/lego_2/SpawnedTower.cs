@@ -9,6 +9,7 @@ namespace Lando.Class.Lego2
     {
         [SerializeField] private Transform towerParent_;
         [SerializeField] private Transform map_;
+        [SerializeField] private Text levelText_;
 
         [SerializeField] private Image woodPrefab_;
         [SerializeField] private Image bronzePrefab_;
@@ -72,6 +73,70 @@ namespace Lando.Class.Lego2
                 return;
             }
 
+            levelText_.transform.localScale = tower.Count == 0 ? Vector3.zero : Vector3.one;
+
+            Vector3 targetPosition = new Vector3(0f, 1830);
+            Vector3 targetScale = new Vector3(1f, 1f);
+            Vector3 zoomPosition = new Vector3(0, 2826);
+            Vector3 zoomScale = new Vector3(2f, 2f);
+
+            if (tower.Count > 2 && tower.Count <= 4)
+            {
+                targetPosition = new Vector3(0f, 1532f);
+                targetScale = new Vector3(0.85f, 0.85f);
+                zoomPosition = new Vector3(0, 2335);
+                zoomScale = new Vector3(2f, 2f);
+            }
+            else if (tower.Count > 4 && tower.Count <= 6)
+            {
+                targetPosition = new Vector3(0f, 1320f);
+                targetScale = new Vector3(0.75f, 0.75f);
+                zoomPosition = new Vector3(0, 1960);
+                zoomScale = new Vector3(2f, 2f);
+            }
+            else if (tower.Count > 6 && tower.Count <= 10)
+            {
+                targetPosition = new Vector3(0f, 813f);
+                targetScale = new Vector3(0.5f, 0.5f);
+                zoomPosition = new Vector3(0, 990);
+                zoomScale = new Vector3(1.5f, 1.5f);
+            }
+            else if (tower.Count > 10 && tower.Count <= 14)
+            {
+                targetPosition = new Vector3(0f, 813f);
+                targetScale = new Vector3(0.5f, 0.5f);
+                zoomPosition = new Vector3(0, 658);
+                zoomScale = new Vector3(1.5f, 1.5f);
+            }
+            else if (tower.Count > 14 && tower.Count <= 20)
+            {
+                targetPosition = new Vector3(0f, 525f);
+                targetScale = new Vector3(0.5f, 0.5f);
+                zoomPosition = new Vector3(0, 71);
+                zoomScale = new Vector3(1.5f, 1.5f);
+            }
+            else if (tower.Count > 20 && tower.Count <= 25)
+            {
+                targetPosition = new Vector3(0f, 125f);
+                targetScale = new Vector3(0.5f, 0.5f);
+                zoomPosition = new Vector3(0, -773);
+                zoomScale = new Vector3(1.5f, 1.5f);
+            }
+            else if (tower.Count > 25 && tower.Count <= 30)
+            {
+                targetPosition = new Vector3(0f, 125f);
+                targetScale = new Vector3(0.5f, 0.5f);
+                zoomPosition = new Vector3(0, -1337);
+                zoomScale = new Vector3(1.5f, 1.5f);
+            }
+            else if (tower.Count > 30)
+            {
+                targetPosition = new Vector3(0f, -136f);
+                targetScale = new Vector3(0.5f, 0.5f);
+                zoomPosition = new Vector3(0, -136f);
+                zoomScale = new Vector3(0.5f, 0.5f);
+            }
+
             for (int i = 0; i < tower.Count; i++)
             {
                 string t = tower[i];
@@ -97,49 +162,50 @@ namespace Lando.Class.Lego2
                 if (newTower != null)
                 {
                     newTower.transform.SetParent(towerParent_);
+                    newTower.transform.SetAsFirstSibling();
                     newTower.transform.localPosition = new Vector3(0f, 350f + i * 350f, 0f);
-                    newTower.transform.localScale = Vector3.one;
+                    newTower.transform.localScale = new Vector3(1f, 1f);
+
+                    if (animate && i == tower.Count - 1)
+                    {
+                        newTower.transform.localPosition = new Vector3(0f, 350f + (i-1) * 350f, 0f);
+                        newTower.transform.localScale = new Vector3(0.5f, 0.5f);
+
+                        flow_.insert(2f, new GoTween(map_.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                        {
+                            AudioPlayer.PlayAudio("audio/sfx/wind-whoosh");
+                        })));
+                        flow_.insert(2f, new GoTween(map_.transform, 1f, new GoTweenConfig().localPosition(zoomPosition)));
+                        flow_.insert(2f, new GoTween(map_.transform, 1f, new GoTweenConfig().scale(zoomScale)));
+                        flow_.insert(3f, new GoTween(newTower.transform, 1.5f, new GoTweenConfig().scale(Vector3.one)));
+                        flow_.insert(3f, new GoTween(newTower.transform, 1.5f, new GoTweenConfig().localPosition(new Vector3(0f, 350f + i * 350f, 0f))));
+                        flow_.insert(3f, new GoTween(map_.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                        {
+                            AudioPlayer.PlayAudio("audio/sfx/drum-cheer");
+                        })));
+                        flow_.insert(3f, new GoTween(levelText_.transform, 1.5f, new GoTweenConfig().localPosition(new Vector3(0f, 800f + i * 350f, 0f))));
+                        flow_.insert(5.5f, new GoTween(map_.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                        {
+                            AudioPlayer.PlayAudio("audio/sfx/ding");
+                            levelText_.text = "Level " + tower.Count.ToString();
+                        })));
+                        flow_.insert(7.5f, new GoTween(levelText_.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+                        {
+                            AudioPlayer.PlayAudio("audio/sfx/wind-whoosh");
+                        })));
+                        flow_.insert(7.5f, new GoTween(map_.transform, 1f, new GoTweenConfig().localPosition(targetPosition)));
+                        flow_.insert(7.5f, new GoTween(map_.transform, 1f, new GoTweenConfig().scale(targetScale)));
+
+                        flow_.play();
+                    } else
+                    {
+                        levelText_.transform.localPosition = new Vector3(0f, 800f + i * 350f, 0f);
+                        levelText_.text = "Level " + tower.Count.ToString();
+                    }
                 }
             }
 
-            Vector3 targetPosition = new Vector3(0f, 1183);
-            Vector3 targetScale = new Vector3(1f, 1f);
-
-            if (tower.Count > 5 && tower.Count <= 9)
-            {
-                targetPosition = new Vector3(0f, 836f);
-                targetScale = new Vector3(0.75f, 0.75f);
-            }
-            else if (tower.Count > 9 && tower.Count <= 16)
-            {
-                targetPosition = new Vector3(0f, 478f);
-                targetScale = new Vector3(0.5f, 0.5f);
-            }
-            else if (tower.Count > 16 && tower.Count <= 24)
-            {
-                targetPosition = new Vector3(0f, 175f);
-                targetScale = new Vector3(0.5f, 0.5f);
-            }
-            else if (tower.Count > 24 && tower.Count <= 36)
-            {
-                targetPosition = new Vector3(0f, -282f);
-                targetScale = new Vector3(0.5f, 0.5f);
-            }
-            else if (tower.Count > 36)
-            {
-                targetPosition = new Vector3(0f, -471f);
-                targetScale = new Vector3(0.5f, 0.5f);
-            }
-
-            if (animate)
-            {
-                if (map_.transform.localPosition.y != targetPosition.y)
-                {
-                    flow_.insert(0f, new GoTween(map_.transform, 1.5f, new GoTweenConfig().localPosition(targetPosition)));
-                    flow_.insert(0f, new GoTween(map_.transform, 1.5f, new GoTweenConfig().scale(targetScale)));
-                    flow_.play();
-                }
-            } else
+            if (!animate)
             {
                 map_.transform.localPosition = targetPosition;
                 map_.transform.localScale = targetScale;

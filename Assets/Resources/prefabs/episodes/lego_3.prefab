@@ -52,7 +52,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 0, y: -93, z: 0}
+  - TalkingPosition: {x: -725, y: -354, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -62,9 +62,16 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: a8cb6c50c2898413fa5f2c4f6ebb70f5, type: 3}
   ImageFilePath: episodes/lego_3_screens/art-museum
   VideoOptions: []
-  FadeInFromPreviousScene: 1
+  FadeInFromPreviousScene: 0
   Prompt: 
-  PrefabSpawnObjects: []
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: aeb120e3368c34695b29b5b0d0891a99, type: 3}
+    Path: episodes/lego_3_assets/prefabs/art_holder
+    Spawned: 0
   CommandLines:
   - TimeStamp: 0
     Command: -character talk map-intro2-0
@@ -74,13 +81,13 @@ MonoBehaviour:
   - Name: Art Holder
     Options:
     - Name: Show Level 1
-      Action: -art-holder show 1
+      Action: -art-holder show 1 500
       Node: {fileID: 0}
     - Name: Show Level 2
-      Action: -art-holder show 2
+      Action: -art-holder show 2 500
       Node: {fileID: 0}
     - Name: Show Level 3
-      Action: -art-holder show 3
+      Action: -art-holder show 3 500
       Node: {fileID: 0}
 --- !u!1 &1094492594998306152
 GameObject:
@@ -134,7 +141,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 0, y: -93, z: 0}
+  - TalkingPosition: {x: -725, y: -354, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -144,9 +151,30 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: a8cb6c50c2898413fa5f2c4f6ebb70f5, type: 3}
   ImageFilePath: episodes/lego_3_screens/art-museum
   VideoOptions: []
-  FadeInFromPreviousScene: 1
+  FadeInFromPreviousScene: 0
   Prompt: 
-  PrefabSpawnObjects: []
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 3542844012294076493, guid: 0c262294ed42d4641bac214f7e3c362f, type: 3}
+    Path: episodes/lego_3_assets/prefabs/guide
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: cec6c6a2214794718a7f36b8f3c00e3f, type: 3}
+    Path: episodes/lego_3_assets/prefabs/setup
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: aeb120e3368c34695b29b5b0d0891a99, type: 3}
+    Path: episodes/lego_3_assets/prefabs/art_holder
+    Spawned: 0
   CommandLines: []
   NextNode: {fileID: 0}
   OptionHolders:
@@ -156,14 +184,8 @@ MonoBehaviour:
       Action: -spawnoption "I want to test my bridge" "I want a hint" "I want more
         pieces"
       Node: {fileID: 0}
-    - Name: Hide Options
-      Action: -hidespawnoption
-      Node: {fileID: 0}
-    - Name: Allow Legos
-      Action: -legos-green-light
-      Node: {fileID: 0}
-    - Name: Hide Legos
-      Action: -legos-red-light
+    - Name: Toggle light
+      Action: -togglelight
       Node: {fileID: 0}
   - Name: Testing
     Options:
@@ -231,31 +253,31 @@ MonoBehaviour:
   - Name: Show Holder
     Options:
     - Name: Level 1, 100g
-      Action: -art-holder show 1 100
+      Action: -art-holder show 1 100 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 1, 200g
-      Action: -art-holder show 1 200
+      Action: -art-holder show 1 200 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 1, 500g
-      Action: -art-holder show 1 500
+      Action: -art-holder show 1 500 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 2, 100g
-      Action: -art-holder show 2 100
+      Action: -art-holder show 2 100 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 2, 200g
-      Action: -art-holder show 2 200
+      Action: -art-holder show 2 200 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 2, 500g
-      Action: -art-holder show 2 500
+      Action: -art-holder show 2 500 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 3, 100g
-      Action: -art-holder show 3 100
+      Action: -art-holder show 3 100 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 3, 200g
-      Action: -art-holder show 3 200
+      Action: -art-holder show 3 200 -hidespawnoption
       Node: {fileID: 0}
     - Name: Level 3, 500g
-      Action: -art-holder show 3 500
+      Action: -art-holder show 3 500 -hidespawnoption
       Node: {fileID: 0}
   - Name: Hints
     Options:
@@ -304,6 +326,15 @@ MonoBehaviour:
       Node: {fileID: 0}
     - Name: One more bridge
       Action: -character talk map-timeout-2
+      Node: {fileID: 0}
+    - Name: Add Option 1
+      Action: -add-art-1
+      Node: {fileID: 0}
+    - Name: Add Option 2
+      Action: -add-art-2
+      Node: {fileID: 0}
+    - Name: Add Option 3
+      Action: -add-art-3
       Node: {fileID: 0}
 --- !u!1 &3004156783415422279
 GameObject:
@@ -357,7 +388,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 0, y: -93, z: 0}
+  - TalkingPosition: {x: -725, y: -354, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -367,9 +398,30 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: a8cb6c50c2898413fa5f2c4f6ebb70f5, type: 3}
   ImageFilePath: episodes/lego_3_screens/art-museum
   VideoOptions: []
-  FadeInFromPreviousScene: 1
+  FadeInFromPreviousScene: 0
   Prompt: 
-  PrefabSpawnObjects: []
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 3542844012294076493, guid: 0c262294ed42d4641bac214f7e3c362f, type: 3}
+    Path: episodes/lego_3_assets/prefabs/guide
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: cec6c6a2214794718a7f36b8f3c00e3f, type: 3}
+    Path: episodes/lego_3_assets/prefabs/setup
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: aeb120e3368c34695b29b5b0d0891a99, type: 3}
+    Path: episodes/lego_3_assets/prefabs/art_holder
+    Spawned: 0
   CommandLines: []
   NextNode: {fileID: 8411122799822765501}
   OptionHolders:
@@ -378,8 +430,14 @@ MonoBehaviour:
     - Name: '1: Table and blocks'
       Action: -character talk map-setup-0 -guide-setup-table-and-blocks
       Node: {fileID: 0}
+    - Name: Complete Table
+      Action: -guide-complete-setup-table
+      Node: {fileID: 0}
+    - Name: Complete Legos
+      Action: -guide-complete-setup-legos
+      Node: {fileID: 0}
     - Name: '2: First level'
-      Action: -character talk map-setup-1 -highlightLevel1 -guideCraneOverlay
+      Action: -character talk map-setup-1 -guideCraneOverlay
       Node: {fileID: 0}
     - Name: '3: Art piece'
       Action: -character talk map-setup-2 -guideCraneOverlayWeight
@@ -391,6 +449,9 @@ MonoBehaviour:
       Node: {fileID: 0}
     - Name: '2: Show checklist'
       Action: -character talk map-setup-4 -guideChecklist
+      Node: {fileID: 0}
+    - Name: Toggle light
+      Action: -togglelight
       Node: {fileID: 0}
 --- !u!1 &3136676816732023250
 GameObject:
@@ -449,7 +510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingNode: {fileID: 6772154580588574450}
-  VORoot: audio/lego_1/
+  VORoot: audio/lego_3/
 --- !u!1 &5669592958663745180
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,8 +563,8 @@ MonoBehaviour:
   BgLoop: {fileID: 0}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 562, y: -118, z: 0}
-    Scale: {x: 0.3, y: 0.3, z: 1}
+  - TalkingPosition: {x: -87, y: -912, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
   VideoFilePath: Lego 1 - v3/P1-1.mp4
@@ -646,8 +707,8 @@ MonoBehaviour:
   BgLoop: {fileID: 0}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 562, y: -118, z: 0}
-    Scale: {x: 0.3, y: 0.3, z: 1}
+  - TalkingPosition: {x: 0.87, y: -92, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
   VideoFilePath: Lego 1 - v3/P1-1.mp4
@@ -799,7 +860,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 0, y: -93, z: 0}
+  - TalkingPosition: {x: -725, y: -354, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -826,7 +887,7 @@ MonoBehaviour:
   - Name: 
     Options:
     - Name: Show Options
-      Action: -spawnoptions "Use an elevator!" "Take the stairs!" "Build a crane!"
+      Action: -spawnoption "Use an elevator!" "Take the stairs!" "Build a crane!"
       Node: {fileID: 0}
   - Name: Response
     Options:

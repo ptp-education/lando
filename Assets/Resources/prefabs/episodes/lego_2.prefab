@@ -182,11 +182,8 @@ MonoBehaviour:
     - Name: Hide Options
       Action: -hidespawnoption
       Node: {fileID: 0}
-    - Name: Allow Legos
-      Action: -legos-green-light
-      Node: {fileID: 0}
-    - Name: Hide Legos
-      Action: -legos-red-light
+    - Name: Toggle Light
+      Action: -togglelight
       Node: {fileID: 0}
     - Name: Hide Hints
       Action: -guideHideGuides
@@ -278,9 +275,6 @@ MonoBehaviour:
     Options:
     - Name: Use a baseplate
       Action: -character talk map-hint-baseplate -guideHintBaseplate
-      Node: {fileID: 0}
-    - Name: Print baseplate
-      Action: -character print lego2-baseplate.pdf map-hint-printing
       Node: {fileID: 0}
     - Name: Build a table
       Action: -character talk map-hint-table -guideHintTable
@@ -390,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 7407597450163387014}
+  StartingNode: {fileID: 5732197807084286409}
   VORoot: audio/lego_2/
 --- !u!1 &4307611201107552892
 GameObject:
@@ -490,6 +484,9 @@ MonoBehaviour:
   OptionHolders:
   - Name: '1: Intro'
     Options:
+    - Name: '0: Show volunteers'
+      Action: -showVolunteers
+      Node: {fileID: 0}
     - Name: '1: Volunteer showed up'
       Action: -character talk map-setup-0
       Node: {fileID: 0}
@@ -546,6 +543,9 @@ MonoBehaviour:
       Node: {fileID: 0}
     - Name: '2: Checklist'
       Action: -character talk map-setup-8 -guideChecklist
+      Node: {fileID: 0}
+    - Name: Toggle Light
+      Action: -togglelight
       Node: {fileID: 0}
 --- !u!1 &5120956017361235227
 GameObject:
@@ -944,7 +944,7 @@ MonoBehaviour:
     Command: -sfx "audio/sfx/door-open"
     Ran: 0
   - TimeStamp: 5.75
-    Command: -character talk office-1
+    Command: -character talk office-0
     Ran: 0
   NextNode: {fileID: 7131775890833331875}
   OptionHolders:

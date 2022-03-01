@@ -11,6 +11,7 @@ public class ShareManager : GameManager
     [SerializeField] private Transform nodeObjectParent_;
 
     public Transform OverlayParent;
+    public static int SilenceCounter = 0;
 
     private EpisodeNodeObject activeNode_;
 
@@ -91,9 +92,14 @@ public class ShareManager : GameManager
             activeNode_.ReceiveAction(a);
         }
 
-        if (ArgumentHelper.ContainsCommand(ZONE_ACTIVE, a))
+        if (ArgumentHelper.ContainsCommand(TOGGLE_LIGHT, a))
         {
-            HandleZoneUpdated();
+            HandleToggleLight();
+        }
+
+        if (ArgumentHelper.ContainsCommand(HIDE_ALL, a))
+        {
+            HandleHideAll();
         }
 
         if (ArgumentHelper.ContainsCommand(TERMINAL_COMMAND, a))
@@ -114,6 +120,16 @@ public class ShareManager : GameManager
         if (ArgumentHelper.ContainsCommand(SPAWN_OPTIONS_COMMAND, a))
         {
             HandleChoices(a);
+        }
+
+        if (ArgumentHelper.ContainsCommand(SILENCE_COUNTER, a))
+        {
+            SilenceCounter++;
+        }
+
+        if (ArgumentHelper.ContainsCommand(RESET_SILENCE_COUNTER, a))
+        {
+            SilenceCounter = 0;
         }
 
         if (ArgumentHelper.ContainsCommand(HIDE_SPAWN_OPTIONS_COMMAND, a))
@@ -376,13 +392,15 @@ public class ShareManager : GameManager
         }
     }
 
-    private void HandleZoneUpdated()
+    private void HandleToggleLight()
     {
-        foreach (OnscreenCharacter c in characters_.Values)
-        {
-            c.Wave();
-        }
-        CommandLineHelper.ExecuteProcessTerminal("osascript \"~/Desktop/legov5/press-12-lightkey.scpt\"");
+        AudioPlayer.PlayAudio("audio/sfx/turn-off");
+        CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/press-12-lightkey.scpt\"");
+    }
+
+    private void HandleHideAll()
+    {
+        SendNewAction("-art-holder hide -guideHideGuides -hidespawnoption");
     }
 
     private void HandleCharacterCommand(string a)

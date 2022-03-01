@@ -15,7 +15,8 @@ public class GameStorage
         BridgeColors,
         SpawnedTruck,
         ShowAnimalOutlines,
-        Lego2Tower
+        Lego2Tower,
+        Lego3Art
     }
 
     public class Integer

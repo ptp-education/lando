@@ -27,6 +27,12 @@ public class AudioPlayer : MonoBehaviour
 
     public static float PlayAudio(string path)
     {
+        if (ShareManager.SilenceCounter > 0)
+        {
+            ShareManager.SilenceCounter--;
+            return -1f;
+        }
+
         AudioSource a = Resources.Load<AudioSource>("prefabs/episode_objects/audio_player");
         AudioSource audioSource = GameObject.Instantiate(a);
 

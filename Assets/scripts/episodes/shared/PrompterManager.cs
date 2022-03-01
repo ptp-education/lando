@@ -74,11 +74,19 @@ public class PrompterManager : GameManager
         }
         if (Input.GetKeyUp("z"))
         {
-            SendNewAction(ZONE_ACTIVE);
+            SendNewAction(TOGGLE_LIGHT);
+        }
+        if (Input.GetKeyUp("h"))
+        {
+            SendNewAction(HIDE_ALL);
         }
         if (Input.GetKeyUp("s"))
         {
-            SendNewAction("-guide-show-stops -sfx \"audio/sfx/noentry\"");
+            SendNewAction(SILENCE_COUNTER);
+        }
+        if (Input.GetKeyUp("0"))
+        {
+            SendNewAction(RESET_SILENCE_COUNTER);
         }
     }
 
