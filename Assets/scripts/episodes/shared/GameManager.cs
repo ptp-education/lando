@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public const string PRINT_COMMAND = "-print";
     public const string CHARACTER_COMMAND = "-character";
     public const string SPAWN_OPTIONS_COMMAND = "-spawnoption";
+    public const string RFID_COMMAND = "-rfid-storage";
     public const string HIDE_SPAWN_OPTIONS_COMMAND = "-hidespawnoption";
 
     public enum Type
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
     protected string currentNodeState_;
 
     public GameStorage Storage = new GameStorage();
+    public Dictionary<string, GameStorage> RfidStorage = new Dictionary<string, GameStorage>();
 
     private string cachedNode_ = "";
 
@@ -44,6 +46,16 @@ public class GameManager : MonoBehaviour
     public void Init(NetworkManager nm)
     {
         networkManager_ = nm;
+    }
+
+    public GameStorage GameStorageForRfid(string rfidId)
+    {
+        if (RfidStorage.ContainsKey(rfidId))
+        {
+            return RfidStorage[rfidId];
+        }
+        RfidStorage[rfidId] = new GameStorage();
+        return RfidStorage[rfidId];
     }
 
     public void UpdateEpisode(string e)

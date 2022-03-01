@@ -33,6 +33,8 @@ public class PrompterManager : GameManager
     private List<string> previousNodes_ = new List<string>();
     private List<string> episodePaths = new List<string>();
 
+    private string rfidCode_ = "";
+
     private void Start()
     {
         GameManager.PromptActive = true;
@@ -71,22 +73,32 @@ public class PrompterManager : GameManager
         } else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             AdjustPanelPosition(-100);
-        }
-        if (Input.GetKeyUp("z"))
+        } else if (Input.GetKeyUp("z"))
         {
             SendNewAction(TOGGLE_LIGHT);
-        }
-        if (Input.GetKeyUp("h"))
+        } else if (Input.GetKeyUp("h"))
         {
             SendNewAction(HIDE_ALL);
-        }
-        if (Input.GetKeyUp("s"))
+        } else if (Input.GetKeyUp("s"))
         {
             SendNewAction(SILENCE_COUNTER);
-        }
-        if (Input.GetKeyUp("0"))
+        } else if (Input.GetKeyUp("r"))
         {
             SendNewAction(RESET_SILENCE_COUNTER);
+        } else
+        {
+            foreach (char c in Input.inputString)
+            {
+                if ((c == '\n') || (c == '\r'))
+                {
+                    SendNewAction(RFID_COMMAND + " " + rfidCode_);
+                    rfidCode_ = "";
+                }
+                else
+                {
+                    rfidCode_ += c;
+                }
+            }
         }
     }
 

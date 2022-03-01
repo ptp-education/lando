@@ -16,7 +16,8 @@ public class GameStorage
         SpawnedTruck,
         ShowAnimalOutlines,
         Lego2Tower,
-        Lego3Art
+        Lego3Art,
+        RfidStorage
     }
 
     public class Integer
