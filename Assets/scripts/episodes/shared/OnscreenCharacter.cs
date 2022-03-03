@@ -8,6 +8,8 @@ public class OnscreenCharacter : MonoBehaviour
     [SerializeField] private Animator anim_;
     [SerializeField] private float speed_ = 250f;
 
+    private static string kSharedVoRoot = "audio/shared/";
+
     private bool canReceiveAction_ = true;
     private bool firstWave_ = true;
     private GoTweenFlow walkFlow_;
@@ -18,7 +20,15 @@ public class OnscreenCharacter : MonoBehaviour
 
         canReceiveAction_ = false;
 
-        float duration = AudioPlayer.PlayAudio(root + audio[Random.Range(0, audio.Count)]);
+        string vo = audio[Random.Range(0, audio.Count)];
+
+        float duration = AudioPlayer.PlayAudio(root + vo);
+
+        if (duration == -1f)
+        {
+            duration = AudioPlayer.PlayAudio(kSharedVoRoot + vo);
+        }
+
         voiceBubble_.gameObject.SetActive(true);
         Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
         {

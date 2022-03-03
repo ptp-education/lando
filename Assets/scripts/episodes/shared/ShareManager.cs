@@ -401,6 +401,11 @@ public class ShareManager : GameManager
     private void HandleHideAll()
     {
         SendNewAction("-art-holder hide -guideHideGuides -hidespawnoption");
+
+        if (activeNode_ != null)
+        {
+            activeNode_.Hide();
+        }
     }
 
     private void HandleCharacterCommand(string a)

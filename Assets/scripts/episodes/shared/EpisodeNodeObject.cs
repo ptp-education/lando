@@ -60,6 +60,14 @@ public class EpisodeNodeObject : MonoBehaviour
         }
     }
 
+    public virtual void Hide()
+    {
+        foreach(SpawnedObject o in spawnedPrefabs_)
+        {
+            o.Hide();
+        }
+    }
+
     public virtual float ProgressPercentage
     {
         get

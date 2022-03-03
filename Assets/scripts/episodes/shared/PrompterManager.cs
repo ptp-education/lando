@@ -94,7 +94,7 @@ public class PrompterManager : GameManager
                     SendNewAction(RFID_COMMAND + " " + rfidCode_);
                     rfidCode_ = "";
                 }
-                else
+                else if (char.IsNumber(c))
                 {
                     rfidCode_ += c;
                 }

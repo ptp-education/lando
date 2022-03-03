@@ -17,7 +17,9 @@ public class GameStorage
         ShowAnimalOutlines,
         Lego2Tower,
         Lego3Art,
-        RfidStorage
+        MomoStarter,
+        MomoTeenCustomization,
+        MomoAdultCustomization
     }
 
     public class Integer

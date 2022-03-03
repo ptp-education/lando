@@ -22,4 +22,9 @@ public class SpawnedObject : MonoBehaviour
     {
 
     }
+
+    public virtual void Hide()
+    {
+        //implement this if you want this SpawnedObject to listen to "-hideall")
+    }
 }
