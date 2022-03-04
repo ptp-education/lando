@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public const string HIDE_ALL = "-hideall";
     public const string SILENCE_COUNTER = "-add-silence-life";
     public const string RESET_SILENCE_COUNTER = "-reset-silence-life";
+    public const string DIDI_LIGHT = "-didi-light";
     public const string TERMINAL_COMMAND = "-terminal";
     public const string PRINT_COMMAND = "-print";
     public const string CHARACTER_COMMAND = "-character";

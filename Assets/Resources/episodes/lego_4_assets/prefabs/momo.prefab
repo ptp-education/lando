@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a17dd92d334646afa3d92b2ccf72d9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e6cfc0186d2514eceb8831b0f17724e4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a17dd92d334646afa3d92b2ccf72d9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f39a5a658b58e45beb6a61faf880712b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -311,26 +311,26 @@ MonoBehaviour:
   childGreenEvolving_: {fileID: 21300000, guid: b86d15d88f5514908b73af7e703ad0ad, type: 3}
   childGreenSuccess_: {fileID: 21300000, guid: 4fba458e9d35e44369ba4a24bfb08af1, type: 3}
   childGreenFail_: {fileID: 21300000, guid: 4cdb6f41222f348c79d43627d14c0bdb, type: 3}
-  teenGreen_: {fileID: 0}
+  teenGreen_: {fileID: 21300000, guid: f0385f22b6885489abd54a39d34ca793, type: 3}
   childBlue_: {fileID: 21300000, guid: e6cfc0186d2514eceb8831b0f17724e4, type: 3}
   childBlueEvolving_: {fileID: 21300000, guid: 0374269c475dc46d5ab5cc517079b522, type: 3}
   childBlueSuccess_: {fileID: 21300000, guid: 83db02c2a6a9a425e8c0c4cfe6776437, type: 3}
   childBlueFail_: {fileID: 21300000, guid: 8c369f8eb4bc74a7d9570a49cccf5aab, type: 3}
-  teenBlue_: {fileID: 0}
+  teenBlue_: {fileID: 21300000, guid: f39a5a658b58e45beb6a61faf880712b, type: 3}
   childRed_: {fileID: 21300000, guid: a8ae7fa1d6f474b2a9ca0e4354486c71, type: 3}
   childRedEvolving_: {fileID: 21300000, guid: 2765fb3b23f0c446a86ab9899419a8be, type: 3}
   childRedSuccess_: {fileID: 21300000, guid: a2a0ada33b8f343f08f303726d858a78, type: 3}
   childRedFail_: {fileID: 21300000, guid: abd575831bddc496c9f3b363d0be18e3, type: 3}
-  teenRed_: {fileID: 0}
-  teenGreenTailEvolving_: {fileID: 0}
-  teenGreenSpotsEvolving_: {fileID: 0}
-  teenGreenAntennaEvolving_: {fileID: 0}
-  teenRedTailEvolving_: {fileID: 0}
-  teenRedSpotsEvolving_: {fileID: 0}
-  teenRedAntennaEvolving_: {fileID: 0}
-  teenBlueTailEvolving_: {fileID: 0}
-  teenBlueSpotsEvolving_: {fileID: 0}
-  teenBlueAntennaEvolving_: {fileID: 0}
+  teenRed_: {fileID: 21300000, guid: 10d0150074bd948b08128618718a00f9, type: 3}
+  teenGreenTailEvolving_: {fileID: 21300000, guid: 41fde70e74c494c3eac5574765ee3d82, type: 3}
+  teenGreenSpotsEvolving_: {fileID: 21300000, guid: e6b7c55cea7c9453fa12367738691e30, type: 3}
+  teenGreenAntennaEvolving_: {fileID: 21300000, guid: cd92ae5d2ec274dc4b4f0c2653510f25, type: 3}
+  teenRedTailEvolving_: {fileID: 21300000, guid: 24a546fd8607c48d89f7a58d2b077978, type: 3}
+  teenRedSpotsEvolving_: {fileID: 21300000, guid: d300f058267c94f01a180622db6c53e6, type: 3}
+  teenRedAntennaEvolving_: {fileID: 21300000, guid: 577903f6331f848adb84e9e8dcefe8c8, type: 3}
+  teenBlueTailEvolving_: {fileID: 21300000, guid: 5be9ca8813d594dfcb3cb5191f831605, type: 3}
+  teenBlueSpotsEvolving_: {fileID: 21300000, guid: 4cb37205ff85f492db1fd090ccc19f54, type: 3}
+  teenBlueAntennaEvolving_: {fileID: 21300000, guid: e5e3415f74a924086aed854d5c9ccc26, type: 3}
   teenGreenAntenna_: {fileID: 21300000, guid: 4f80c2b4693bd481bae94944eb4e5979, type: 3}
   teenGreenAntennaSuccess_: {fileID: 21300000, guid: 06438db7086884a948f2e587e57112e3, type: 3}
   teenGreenAntennaFail_: {fileID: 21300000, guid: 06438db7086884a948f2e587e57112e3, type: 3}
@@ -401,7 +401,7 @@ MonoBehaviour:
   adultBlueAntennaMohawkSuccess_: {fileID: 21300000, guid: 00684950b8c044b20a8d88be9ebe50b2, type: 3}
   adultBlueAntennaMohawkFailure_: {fileID: 21300000, guid: d55407ad86d204a2f958e1ff555d186a, type: 3}
   adultBlueAntennaStripes_: {fileID: 21300000, guid: caf62635b44ba4f3d924b9c8eca27ed6, type: 3}
-  adultBlueAntennaStripesSuccess_: {fileID: 0}
+  adultBlueAntennaStripesSuccess_: {fileID: 21300000, guid: 99b45716c8d6e48a1af7a0be248dc225, type: 3}
   adultBlueAntennaStripesFailure_: {fileID: 21300000, guid: 334f54bbe225344fc8acbb6f6dd1a569, type: 3}
   adultBlueSpotsWhiskers_: {fileID: 21300000, guid: 1ffb6c998fce54cf7a6fd8173b1278e2, type: 3}
   adultBlueSpotsWhiskersSuccess_: {fileID: 21300000, guid: fbb1347803be540fa96cf05b841ae959, type: 3}
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a17dd92d334646afa3d92b2ccf72d9c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0374269c475dc46d5ab5cc517079b522, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1119,7 +1119,7 @@ RectTransform:
   m_GameObject: {fileID: 5695266513235399320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6920295003038694094}
   m_RootOrder: 1

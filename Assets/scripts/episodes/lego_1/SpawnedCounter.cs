@@ -16,7 +16,7 @@ public class SpawnedCounter : SpawnedObject
     {
         base.ReceivedAction(action);
 
-        if (string.Equals(action, "increase-counter"))
+        if (string.Equals(action, "-increase-counter"))
         {
             AudioPlayer.PlayAudio("episodes/icebreakers/ding03");
             counter_.value++;

@@ -112,6 +112,11 @@ public class ShareManager : GameManager
             HandlePrintCommand(a);
         }
 
+        if (ArgumentHelper.ContainsCommand(DIDI_LIGHT, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/didi-ding");
+        }
+
         if (ArgumentHelper.ContainsCommand(CHARACTER_COMMAND, a))
         {
             HandleCharacterCommand(a);

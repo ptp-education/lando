@@ -70,22 +70,32 @@ public class PrompterManager : GameManager
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             AdjustPanelPosition(100);
-        } else if (Input.GetKeyUp(KeyCode.UpArrow))
+        }
+        else if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             AdjustPanelPosition(-100);
-        } else if (Input.GetKeyUp("z"))
+        }
+        else if (Input.GetKeyUp("z"))
         {
             SendNewAction(TOGGLE_LIGHT);
-        } else if (Input.GetKeyUp("h"))
+        }
+        else if (Input.GetKeyUp("h"))
         {
             SendNewAction(HIDE_ALL);
-        } else if (Input.GetKeyUp("s"))
+        }
+        else if (Input.GetKeyUp("s"))
         {
             SendNewAction(SILENCE_COUNTER);
-        } else if (Input.GetKeyUp("r"))
+        }
+        else if (Input.GetKeyUp("r"))
         {
             SendNewAction(RESET_SILENCE_COUNTER);
-        } else
+        }
+        else if (Input.GetKeyUp("a"))
+        {
+            SendNewAction(DIDI_LIGHT);
+        }
+        else
         {
             foreach (char c in Input.inputString)
             {

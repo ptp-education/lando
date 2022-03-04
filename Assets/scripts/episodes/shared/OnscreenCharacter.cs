@@ -8,7 +8,7 @@ public class OnscreenCharacter : MonoBehaviour
     [SerializeField] private Animator anim_;
     [SerializeField] private float speed_ = 250f;
 
-    private static string kSharedVoRoot = "audio/shared/";
+    private static string kSharedVoRoot = "audio/shared_vo/";
 
     private bool canReceiveAction_ = true;
     private bool firstWave_ = true;

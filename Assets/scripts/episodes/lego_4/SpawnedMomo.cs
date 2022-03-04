@@ -228,8 +228,10 @@ public class SpawnedMomo : SpawnedObject
                 } else if (LevelOfMomo(currentRfid_) == 1 && !inTesting_)
                 {
                     HandleStarterPicker();
-                } else {
-                    RefreshScreen();
+                }
+                if (inTesting_ && LevelOfMomo(currentRfid_) > 0)
+                {
+                    HandleTesting();
                 }
             }
         }
@@ -252,9 +254,6 @@ public class SpawnedMomo : SpawnedObject
                         break;
                     case "customize-select":
                         if (args.Count > 1) HandleCustomizeSelection(args[1]);
-                        break;
-                    case "evolve":
-                        HandleEvolve();
                         break;
                     case "testing":
                         HandleTesting();
@@ -298,6 +297,8 @@ public class SpawnedMomo : SpawnedObject
         HideAllScenes();
         starterBackground_.gameObject.SetActive(true);
         starterSelected_.gameObject.SetActive(false);
+
+        AudioPlayer.PlayAudio("audio/sfx/new-option");
     }
 
     private void HandleStarterPickerSelection(string choice)
@@ -331,13 +332,27 @@ public class SpawnedMomo : SpawnedObject
             SetSprite(starterMomo_, currentRfid_, Status.Neutral);
         }
 
+        AudioPlayer.PlayAudio("audio/sfx/arch");
+        AudioPlayer.PlayAudio("audio/sfx/whoosh");
+
+        starterMomo_.transform.localPosition = new Vector3(0, 1200, 0);
+        Go.to(starterMomo_.transform, 1f, new GoTweenConfig().localPosition(Vector3.zero).setEaseType(GoEaseType.SineIn).onComplete(t =>
+        {
+            AudioPlayer.PlayAudio("audio/sfx/momo-grunt");
+        }));
+
+        GoTweenFlow flow = new GoTweenFlow();
+        flow.insert(1f, new GoTween(starterMomo_.transform, 0.25f, new GoTweenConfig().scale(1.1f)));
+        flow.insert(1.25f, new GoTween(starterMomo_.transform, 0.25f, new GoTweenConfig().scale(1f)));
+        flow.play();
+
         if (dismissingFlow_ != null)
         {
             dismissingFlow_.destroy();
             dismissingFlow_ = null;
         }
         dismissingFlow_ = new GoTweenFlow();
-        dismissingFlow_.insert(0.5f, new GoTween(this, 1f, new GoTweenConfig().onComplete(t =>
+        dismissingFlow_.insert(0.5f, new GoTween(this, 2f, new GoTweenConfig().onComplete(t =>
         {
             starterBackground_.gameObject.SetActive(false);
             starterSelected_.gameObject.SetActive(false);
@@ -351,17 +366,25 @@ public class SpawnedMomo : SpawnedObject
 
         HideAllScenes();
 
+        AudioPlayer.PlayAudio("audio/sfx/new-option");
+
         int level = LevelOfMomo(currentRfid_);
         GameStorage gs = gameManager_.GameStorageForRfid(currentRfid_);
         string teenCustomization = gs.GetValue<string>(GameStorage.Key.MomoTeenCustomization);
         string adultCustomization = gs.GetValue<string>(GameStorage.Key.MomoAdultCustomization);
 
+        List<Sprite> sprites = SpritesEvolveForRfid(currentRfid_);
+
         if (level == 2)
         {
+            customizeAdultMomo_.sprite = sprites[2];
+            customizeAdultMomo_.SetNativeSize();
             customizeAdultBackground_.gameObject.SetActive(true);
         }
         if (level == 1)
         {
+            customizeTeenMomo_.sprite = sprites[2];
+            customizeTeenMomo_.SetNativeSize();
             customizeTeenBackground_.gameObject.SetActive(true);
         }
     }
@@ -422,12 +445,30 @@ public class SpawnedMomo : SpawnedObject
             gs.Add<string>(GameStorage.Key.MomoAdultCustomization, selection);
         }
 
+        AudioPlayer.PlayAudio("audio/sfx/customization-selection");
+        Go.to(this, 0.5f, new GoTweenConfig().onComplete(t =>
+        {
+            AudioPlayer.PlayAudio("audio/sfx/momo-happy");
+        }));
+
+        AudioPlayer.PlayAudio("audio/sfx/pop");
+
         if (teenActive)
         {
             SetSprite(customizeTeenMomo_, currentRfid_, Status.Neutral);
+
+            GoTweenFlow flow = new GoTweenFlow();
+            flow.insert(0f, new GoTween(customizeTeenMomo_.transform, 0.25f, new GoTweenConfig().scale(0.55f)));
+            flow.insert(0.25f, new GoTween(customizeTeenMomo_.transform, 0.25f, new GoTweenConfig().scale(0.5f)));
+            flow.play();
         } else
         {
             SetSprite(customizeAdultMomo_, currentRfid_, Status.Neutral);
+
+            GoTweenFlow flow = new GoTweenFlow();
+            flow.insert(0f, new GoTween(customizeAdultMomo_.transform, 0f, new GoTweenConfig().scale(0.35f)));
+            flow.insert(0.25f, new GoTween(customizeAdultMomo_.transform, 0.25f, new GoTweenConfig().scale(0.3f)));
+            flow.play();
         }
 
         if (dismissingFlow_ != null)
@@ -436,7 +477,7 @@ public class SpawnedMomo : SpawnedObject
             dismissingFlow_ = null;
         }
         dismissingFlow_ = new GoTweenFlow();
-        dismissingFlow_.insert(0.5f, new GoTween(this, 1f, new GoTweenConfig().onComplete(t =>
+        dismissingFlow_.insert(2f, new GoTween(this, 1f, new GoTweenConfig().onComplete(t =>
         {
             customizeTeenBackground_.gameObject.SetActive(false);
             customizeAdultBackground_.gameObject.SetActive(false);
@@ -444,37 +485,13 @@ public class SpawnedMomo : SpawnedObject
         dismissingFlow_.play();
     }
 
-    private void HandleEvolve()
-    {
-        if (currentRfid_ == null || currentRfid_.Length == 0) return;
-
-        HideAllScenes();
-
-        evolveBackground_.gameObject.SetActive(true);
-
-        List<Sprite> sprites = SpritesEvolveForRfid(currentRfid_);
-        if (sprites != null && sprites.Count == 3)
-        {
-            evolvingMomos_[0].sprite = sprites[0];
-            evolvingMomos_[1].sprite = sprites[1];
-            evolvingMomos_[2].sprite = sprites[2];
-        }
-
-        int level = LevelOfMomo(currentRfid_);
-        if (level == 1)
-        {
-            gameManager_.SendNewAction("-character talk map-success-teen");
-        } else if (level == 2)
-        {
-            gameManager_.SendNewAction("-character talk map-success-adult");
-        }
-    }
-
     private void HandleTesting()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
         HideAllScenes();
+
+        AudioPlayer.PlayAudio("audio/sfx/momo-grunt");
 
         neutralBackground_.gameObject.SetActive(true);
         SetSprite(neutralMomo_, currentRfid_, Status.Neutral);
@@ -486,8 +503,10 @@ public class SpawnedMomo : SpawnedObject
 
         HideAllScenes();
 
+        AudioPlayer.PlayAudio("audio/sfx/momo-grunt");
+
         successBackground_.gameObject.SetActive(true);
-        SetSprite(successMomo_, currentRfid_, Status.Neutral);
+        SetSprite(successMomo_, currentRfid_, Status.Success);
     }
 
     private void HandleFailure()
@@ -496,8 +515,10 @@ public class SpawnedMomo : SpawnedObject
 
         HideAllScenes();
 
+        AudioPlayer.PlayAudio("audio/sfx/wall-crash");
+
         failureBackground_.gameObject.SetActive(true);
-        SetSprite(failureMomo_, currentRfid_, Status.Neutral);
+        SetSprite(failureMomo_, currentRfid_, Status.Failure);
     }
 
     private void RefreshScreen()
