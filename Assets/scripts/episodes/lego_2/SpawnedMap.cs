@@ -15,28 +15,43 @@ namespace Lando.Class.Lego2
 
         public override void ReceivedAction(string action)
         {
-            if (ArgumentHelper.ContainsCommand("-highlightWood", action))
+            if (ArgumentHelper.ContainsCommand("-highlightMap", action))
             {
+                List<string> args = ArgumentHelper.ArgumentsFromCommand("-highlightMap", action);
+
                 HideAll();
-                highlightWood_.gameObject.SetActive(true);
-            } else if (ArgumentHelper.ContainsCommand("-highlightBronze", action))
-            {
-                HideAll();
-                highlightBronze_.gameObject.SetActive(true);
-            } else if (ArgumentHelper.ContainsCommand("-highlightSilver", action))
-            {
-                HideAll();
-                highlightSilver_.gameObject.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-highlightGold", action))
-            {
-                HideAll();
-                highlightGold_.gameObject.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-highlightObsidian", action))
-            {
-                HideAll();
-                highlightObsidian_.gameObject.SetActive(true);
+
+                Image setActive = null;
+                switch(args[0])
+                {
+                    case "wood":
+                        setActive = highlightWood_;
+                        break;
+                    case "bronze":
+                        setActive = highlightBronze_;
+                        break;
+                    case "silver":
+                        setActive = highlightSilver_;
+                        break;
+                    case "gold":
+                        setActive = highlightGold_;
+                        break;
+                    case "obsidian":
+                        setActive = highlightObsidian_;
+                        break;
+                }
+
+                if (args.Count > 1)
+                {
+                    float delay = float.Parse(args[1]);
+                    Go.to(this, delay, new GoTweenConfig().onComplete(t =>
+                    {
+                        setActive.gameObject.SetActive(true);
+                    }));
+                } else
+                {
+                    setActive.gameObject.SetActive(true);
+                }
             }
         }
 

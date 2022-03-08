@@ -424,6 +424,9 @@ public class ShareManager : GameManager
             case "print":
                 characters.ForEach(c => c.TalkAndPrint(args.GetRange(2, args.Count - 2), args[1], episode_.VORoot));
                 break;
+            case "delayed-talk":
+                characters.ForEach(c => c.DelayedTalk(args[1], args.GetRange(2, args.Count - 2), episode_.VORoot));
+                break;
             case "talk":
                 characters.ForEach(c => c.Talk(args.GetRange(1, args.Count - 1), episode_.VORoot));
                 break;

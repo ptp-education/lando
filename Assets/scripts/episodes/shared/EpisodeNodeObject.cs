@@ -58,6 +58,14 @@ public class EpisodeNodeObject : MonoBehaviour
         {
             SpawnObject(action.Substring(kSpawnCommand.Length).Trim());
         }
+
+        foreach(EpisodeNode.CommandContainer c in Node.CommandLineContainers)
+        {
+            if (ArgumentHelper.ContainsCommand(c.CommandToCall, action))
+            {
+                RunCommandContainer(c);
+            }
+        }
     }
 
     public virtual void Hide()
@@ -74,6 +82,19 @@ public class EpisodeNodeObject : MonoBehaviour
         {
             return -1f;
         }
+    }
+
+    private void RunCommandContainer(EpisodeNode.CommandContainer commandContainer)
+    {
+        GoTweenFlow flow = new GoTweenFlow();
+        foreach(EpisodeNode.CommandLine c in commandContainer.StoredCommands)
+        {
+            flow.insert(c.TimeStamp, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+            {
+                gameManager_.SendNewAction(c.Command);
+            })));
+        }
+        flow.play();
     }
 
     private void SpawnObject(string command)

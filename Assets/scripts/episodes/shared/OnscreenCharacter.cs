@@ -39,6 +39,15 @@ public class OnscreenCharacter : MonoBehaviour
         return duration;
     }
 
+    public void DelayedTalk(string delay, List<string> audio, string root)
+    {
+        float d = float.Parse(delay);
+        Go.to(transform, d, new GoTweenConfig().onComplete(t =>
+        {
+            Talk(audio, root);
+        }));
+    }
+
     public void Cheer(List<string> audio, string root)
     {
         if (Talk(audio, root) > 0f)

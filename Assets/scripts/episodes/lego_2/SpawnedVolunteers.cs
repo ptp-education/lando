@@ -14,14 +14,17 @@ namespace Lando.Class.Lego2
             {
                 GoTweenFlow flow = new GoTweenFlow();
 
-                float time = 0.25f;
+                float time = 0f;
                 foreach (GameObject v in volunteers_)
                 {
                     GameObject volunteer = v;
-                    flow.insert(time, new GoTween(this, 0.01f, new GoTweenConfig().onComplete(t =>
+                    float timeCopy = time;
+                    Debug.LogWarning(timeCopy.ToString());
+                    flow.insert(time, new GoTween(this, 0.1f, new GoTweenConfig().onComplete(t =>
                     {
                         v.gameObject.SetActive(true);
                         AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
+                        Debug.LogWarning(timeCopy.ToString());
                     })));
 
                     time += 0.25f;

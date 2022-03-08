@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &767632460953605055
+--- !u!1 &5290694333383256
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8838761293633201210}
-  - component: {fileID: 1060912445754896673}
+  - component: {fileID: 8078455995410626013}
+  - component: {fileID: 291881045310791878}
   m_Layer: 5
   m_Name: map intro
   m_TagString: Untagged
@@ -17,18 +17,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &8838761293633201210
+--- !u!224 &8078455995410626013
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767632460953605055}
+  m_GameObject: {fileID: 5290694333383256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -36,13 +36,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1060912445754896673
+--- !u!114 &291881045310791878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767632460953605055}
+  m_GameObject: {fileID: 5290694333383256}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -65,19 +65,25 @@ MonoBehaviour:
   FadeInFromPreviousScene: 1
   Prompt: 
   PrefabSpawnObjects: []
-  CommandLines: []
-  NextNode: {fileID: 7173294335464457342}
+  CommandLines:
+  - TimeStamp: 1.5
+    Command: -character talk map-intro-0
+    Ran: 0
+  CommandLineContainers:
+  - CommandToCall: "-what\xC7anWeDo"
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk map-intro-1
+      Ran: 0
+    - TimeStamp: 5
+      Command: -spawnoption "Momo should jump!" "Momo should shake the wall!"
+      Ran: 0
+  NextNode: {fileID: 7582178639849444761}
   OptionHolders:
   - Name: Say
     Options:
-    - Name: Intro
-      Action: -character talk map-intro-0
-      Node: {fileID: 0}
     - Name: Ask what we can do
-      Action: -character talk map-intro-1
-      Node: {fileID: 0}
-    - Name: Show Options
-      Action: -spawnoption "Momo should jump!" "Momo should shake the wall!"
+      Action: "-what\xC7anWeDo"
       Node: {fileID: 0}
     - Name: Transition to next scene
       Action: -character talk map-intro-2
@@ -86,11 +92,11 @@ MonoBehaviour:
     Options:
     - Name: Momo should jump
       Action: -character talk map-intro-jump
-      Node: {fileID: 5276433120621727672}
+      Node: {fileID: 4867337365064654431}
     - Name: Momo should shake the wall
       Action: -character talk map-intro-shake
-      Node: {fileID: 4923346661487477345}
---- !u!1 &1288661456776570977
+      Node: {fileID: 5685473232136213382}
+--- !u!1 &1824193517895643267
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,73 +104,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5966959203784817812}
-  - component: {fileID: 2579698183183144523}
-  m_Layer: 5
-  m_Name: splash
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &5966959203784817812
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288661456776570977}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3471897262932744406}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2579698183183144523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288661456776570977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  Type: 1
-  Characters: []
-  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
-  VideoFilePath: Lego 1 - v3/P0-0.mp4
-  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
-  Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
-  ImageFilePath: episodes/lego_1_screens/splash-screen
-  VideoOptions: []
-  FadeInFromPreviousScene: 0
-  Prompt: 
-  PrefabSpawnObjects: []
-  CommandLines: []
-  NextNode: {fileID: 2878714488153333653}
-  OptionHolders: []
---- !u!1 &1433605016938406244
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4608491527945538163}
-  - component: {fileID: 2878714488153333653}
+  - component: {fileID: 3837419673364650900}
+  - component: {fileID: 3262534600887357042}
   m_Layer: 5
   m_Name: office
   m_TagString: Untagged
@@ -172,18 +113,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4608491527945538163
+--- !u!224 &3837419673364650900
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433605016938406244}
+  m_GameObject: {fileID: 1824193517895643267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -191,13 +132,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2878714488153333653
+--- !u!114 &3262534600887357042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433605016938406244}
+  m_GameObject: {fileID: 1824193517895643267}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -230,17 +171,18 @@ MonoBehaviour:
   - TimeStamp: 5
     Command: -sfx "audio/sfx/door-open"
     Ran: 0
-  NextNode: {fileID: 1060912445754896673}
+  - TimeStamp: 6
+    Command: -character talk office-0
+    Ran: 0
+  CommandLineContainers: []
+  NextNode: {fileID: 291881045310791878}
   OptionHolders:
   - Name: Talk
     Options:
-    - Name: Greet engineers
-      Action: -character talk office-0
-      Node: {fileID: 0}
     - Name: Transition to next scene
       Action: -character talk office-1
       Node: {fileID: 0}
---- !u!1 &3121412361301592729
+--- !u!1 &1970281648185293190
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,41 +190,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5441126178038439311}
-  - component: {fileID: 9165427271723917959}
+  - component: {fileID: 6375693769903107443}
+  - component: {fileID: 2988432645281777580}
   m_Layer: 5
-  m_Name: splash-end
+  m_Name: splash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5441126178038439311
+--- !u!224 &6375693769903107443
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3121412361301592729}
+  m_GameObject: {fileID: 1970281648185293190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
-  m_RootOrder: 9
+  m_Father: {fileID: 4223055208217332017}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9165427271723917959
+--- !u!114 &2988432645281777580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3121412361301592729}
+  m_GameObject: {fileID: 1970281648185293190}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -303,9 +245,10 @@ MonoBehaviour:
   Prompt: 
   PrefabSpawnObjects: []
   CommandLines: []
-  NextNode: {fileID: 2878714488153333653}
+  CommandLineContainers: []
+  NextNode: {fileID: 3262534600887357042}
   OptionHolders: []
---- !u!1 &3501860560648764965
+--- !u!1 &2442246759830559614
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -313,8 +256,74 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9020887048687911982}
-  - component: {fileID: 1449599407052092898}
+  - component: {fileID: 4699265495447555176}
+  - component: {fileID: 8468955289824113504}
+  m_Layer: 5
+  m_Name: splash-end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4699265495447555176
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442246759830559614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4223055208217332017}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8468955289824113504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442246759830559614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters: []
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
+  ImageFilePath: episodes/lego_1_screens/splash-screen
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 
+  PrefabSpawnObjects: []
+  CommandLines: []
+  CommandLineContainers: []
+  NextNode: {fileID: 3262534600887357042}
+  OptionHolders: []
+--- !u!1 &4192004476372185026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8612367403262580169}
+  - component: {fileID: 2210111309664314373}
   m_Layer: 5
   m_Name: office-end
   m_TagString: Untagged
@@ -322,18 +331,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &9020887048687911982
+--- !u!224 &8612367403262580169
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501860560648764965}
+  m_GameObject: {fileID: 4192004476372185026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -341,13 +350,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1449599407052092898
+--- !u!114 &2210111309664314373
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3501860560648764965}
+  m_GameObject: {fileID: 4192004476372185026}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -371,7 +380,8 @@ MonoBehaviour:
   Prompt: 
   PrefabSpawnObjects: []
   CommandLines: []
-  NextNode: {fileID: 9165427271723917959}
+  CommandLineContainers: []
+  NextNode: {fileID: 8468955289824113504}
   OptionHolders:
   - Name: Talk
     Options:
@@ -384,7 +394,7 @@ MonoBehaviour:
     - Name: Fade
       Action: -fadeout 5
       Node: {fileID: 0}
---- !u!1 &6174678715455097195
+--- !u!1 &6715541801894796313
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -392,68 +402,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3471897262932744406}
-  - component: {fileID: 1221200390509585142}
-  m_Layer: 5
-  m_Name: lego_4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &3471897262932744406
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6174678715455097195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 5966959203784817812}
-  - {fileID: 4608491527945538163}
-  - {fileID: 8838761293633201210}
-  - {fileID: 1307112005826682802}
-  - {fileID: 1684253760089520904}
-  - {fileID: 336605421508031254}
-  - {fileID: 2688545590690858320}
-  - {fileID: 6662090212641971900}
-  - {fileID: 9020887048687911982}
-  - {fileID: 5441126178038439311}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1221200390509585142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6174678715455097195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingNode: {fileID: 2579698183183144523}
-  VORoot: audio/lego_4/
---- !u!1 &6307154715441384958
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 336605421508031254}
-  - component: {fileID: 7173294335464457342}
+  - component: {fileID: 1017315045356167921}
+  - component: {fileID: 7582178639849444761}
   m_Layer: 5
   m_Name: map setup
   m_TagString: Untagged
@@ -461,18 +411,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &336605421508031254
+--- !u!224 &1017315045356167921
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6307154715441384958}
+  m_GameObject: {fileID: 6715541801894796313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -480,13 +430,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7173294335464457342
+--- !u!114 &7582178639849444761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6307154715441384958}
+  m_GameObject: {fileID: 6715541801894796313}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -534,7 +484,8 @@ MonoBehaviour:
   - TimeStamp: 0
     Command: 
     Ran: 0
-  NextNode: {fileID: 8904701210392509179}
+  CommandLineContainers: []
+  NextNode: {fileID: 8153271169928538908}
   OptionHolders:
   - Name: '1: Guide'
     Options:
@@ -579,7 +530,7 @@ MonoBehaviour:
     - Name: Select Right
       Action: -momo starter-select right
       Node: {fileID: 0}
---- !u!1 &7193003847332129450
+--- !u!1 &6846944708614445196
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -587,8 +538,68 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1684253760089520904}
-  - component: {fileID: 4923346661487477345}
+  - component: {fileID: 4223055208217332017}
+  - component: {fileID: 1893611037996741393}
+  m_Layer: 5
+  m_Name: lego_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4223055208217332017
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846944708614445196}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6375693769903107443}
+  - {fileID: 3837419673364650900}
+  - {fileID: 8078455995410626013}
+  - {fileID: 1771653039851769429}
+  - {fileID: 2155620735008762607}
+  - {fileID: 1017315045356167921}
+  - {fileID: 3457154297882203319}
+  - {fileID: 6251446792501071707}
+  - {fileID: 8612367403262580169}
+  - {fileID: 4699265495447555176}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1893611037996741393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846944708614445196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 2988432645281777580}
+  VORoot: audio/lego_4/
+--- !u!1 &7595119147161647949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2155620735008762607}
+  - component: {fileID: 5685473232136213382}
   m_Layer: 5
   m_Name: map intro-shake
   m_TagString: Untagged
@@ -596,18 +607,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1684253760089520904
+--- !u!224 &2155620735008762607
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7193003847332129450}
+  m_GameObject: {fileID: 7595119147161647949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -615,13 +626,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4923346661487477345
+--- !u!114 &5685473232136213382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7193003847332129450}
+  m_GameObject: {fileID: 7595119147161647949}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -654,9 +665,10 @@ MonoBehaviour:
   - TimeStamp: 0.6
     Command: -sfx "audio/sfx/momo-grunt"
     Ran: 0
-  NextNode: {fileID: 1060912445754896673}
+  CommandLineContainers: []
+  NextNode: {fileID: 291881045310791878}
   OptionHolders: []
---- !u!1 &8144478824222246353
+--- !u!1 &8913439684392965174
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -664,8 +676,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6662090212641971900}
-  - component: {fileID: 760304589022027012}
+  - component: {fileID: 6251446792501071707}
+  - component: {fileID: 15976466200677603}
   m_Layer: 5
   m_Name: map home
   m_TagString: Untagged
@@ -673,18 +685,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6662090212641971900
+--- !u!224 &6251446792501071707
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8144478824222246353}
+  m_GameObject: {fileID: 8913439684392965174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -692,13 +704,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &760304589022027012
+--- !u!114 &15976466200677603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8144478824222246353}
+  m_GameObject: {fileID: 8913439684392965174}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -755,7 +767,8 @@ MonoBehaviour:
   - TimeStamp: 1
     Command: -momo set-in-testing
     Ran: 0
-  NextNode: {fileID: 1449599407052092898}
+  CommandLineContainers: []
+  NextNode: {fileID: 2210111309664314373}
   OptionHolders:
   - Name: Controls
     Options:
@@ -879,7 +892,7 @@ MonoBehaviour:
     - Name: One more wall
       Action: -character talk map-timeout-2
       Node: {fileID: 0}
---- !u!1 &8389474377626634059
+--- !u!1 &9079744292568214354
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -887,8 +900,83 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2688545590690858320}
-  - component: {fileID: 8904701210392509179}
+  - component: {fileID: 1771653039851769429}
+  - component: {fileID: 4867337365064654431}
+  m_Layer: 5
+  m_Name: map intro-jump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1771653039851769429
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079744292568214354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4223055208217332017}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4867337365064654431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9079744292568214354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: -725, y: -354, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 13a883e08d491430e87dc0b8c6770d2a, type: 3}
+  ImageFilePath: episodes/lego_4_screens/intro-eat
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 1.5
+    Command: -character talk map-intro-jump
+    Ran: 0
+  - TimeStamp: 0.8
+    Command: -sfx "audio/sfx/momo-grunt"
+    Ran: 0
+  CommandLineContainers: []
+  NextNode: {fileID: 291881045310791878}
+  OptionHolders: []
+--- !u!1 &9140196196265285292
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3457154297882203319}
+  - component: {fileID: 8153271169928538908}
   m_Layer: 5
   m_Name: map explain
   m_TagString: Untagged
@@ -896,18 +984,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &2688545590690858320
+--- !u!224 &3457154297882203319
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8389474377626634059}
+  m_GameObject: {fileID: 9140196196265285292}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3471897262932744406}
+  m_Father: {fileID: 4223055208217332017}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -915,13 +1003,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8904701210392509179
+--- !u!114 &8153271169928538908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8389474377626634059}
+  m_GameObject: {fileID: 9140196196265285292}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -959,7 +1047,8 @@ MonoBehaviour:
     Path: episodes/lego_4_assets/prefabs/setup
     Spawned: 0
   CommandLines: []
-  NextNode: {fileID: 760304589022027012}
+  CommandLineContainers: []
+  NextNode: {fileID: 15976466200677603}
   OptionHolders:
   - Name: Hint
     Options:
@@ -972,77 +1061,3 @@ MonoBehaviour:
     - Name: '3: Give first hint'
       Action: -character talk map-hint-1 -guideHintSupports
       Node: {fileID: 0}
---- !u!1 &8409448864486079157
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1307112005826682802}
-  - component: {fileID: 5276433120621727672}
-  m_Layer: 5
-  m_Name: map intro-jump
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1307112005826682802
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8409448864486079157}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3471897262932744406}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5276433120621727672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8409448864486079157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
-  Type: 1
-  Characters:
-  - TalkingPosition: {x: -725, y: -354, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
-  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
-  VideoFilePath: Lego 1 - v3/P2-0.mp4
-  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 13a883e08d491430e87dc0b8c6770d2a, type: 3}
-  ImageFilePath: episodes/lego_4_screens/intro-eat
-  VideoOptions: []
-  FadeInFromPreviousScene: 1
-  Prompt: 
-  PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 1.5
-    Command: -character talk map-intro-jump
-    Ran: 0
-  - TimeStamp: 0.8
-    Command: -sfx "audio/sfx/momo-grunt"
-    Ran: 0
-  NextNode: {fileID: 1060912445754896673}
-  OptionHolders: []

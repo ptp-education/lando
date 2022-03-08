@@ -150,8 +150,15 @@ public class PrompterManager : GameManager
         }
         foreach(EpisodeNode.OptionHolder holder in currentNode_.OptionHolders)
         {
-            PromptButtonHolder h = Instantiate<PromptButtonHolder>(commandButtonsHolderPrefab_);
-            h.transform.SetParent(buttonsPanel_.transform, true);
+            PromptButtonHolder h = null;
+            if (string.Equals(holder.Name, "Default"))
+            {
+                h = defaultHolder;
+            } else
+            {
+                h = Instantiate<PromptButtonHolder>(commandButtonsHolderPrefab_);
+                h.transform.SetParent(buttonsPanel_.transform, true);
+            }
 
             h.Header.text = holder.Name;
 

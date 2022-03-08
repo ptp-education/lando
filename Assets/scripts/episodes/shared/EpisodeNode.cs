@@ -72,6 +72,13 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
+    public class CommandContainer
+    {
+        [SerializeField] public string CommandToCall;
+        [SerializeField] public List<CommandLine> StoredCommands = new List<CommandLine>();
+    }
+
+    [Serializable]
     public class VideoOption
     {
         [SerializeField] public string Key;
@@ -113,6 +120,7 @@ public class EpisodeNode : MonoBehaviour
     public string Prompt;
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
+    public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();
     public EpisodeNode NextNode;
     public List<OptionHolder> OptionHolders = new List<OptionHolder>();
 
