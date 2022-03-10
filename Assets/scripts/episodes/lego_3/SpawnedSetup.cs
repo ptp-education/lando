@@ -18,6 +18,10 @@ namespace Lando.Class.Lego3
         [SerializeField] private GameObject hintFurtherCounterweight_;
         [SerializeField] private GameObject hintInterlocking_;
         [SerializeField] private GameObject hintMoreLayers_;
+        [SerializeField] private GameObject crane1_;
+        [SerializeField] private GameObject crane2_;
+        [SerializeField] private GameObject crane3_;
+
 
         public override void ReceivedAction(string action)
         {
@@ -73,6 +77,21 @@ namespace Lando.Class.Lego3
             {
                 HideAll();
                 checklist_.SetActive(true);
+            }
+            else if (ArgumentHelper.ContainsCommand("-guideRealCrane", action))
+            {
+                HideAll();
+                crane1_.SetActive(true);
+            }
+            else if (ArgumentHelper.ContainsCommand("-guideCraneSculpture", action))
+            {
+                HideAll();
+                crane2_.SetActive(true);
+            }
+            else if (ArgumentHelper.ContainsCommand("-guideCraneCounterweight", action))
+            {
+                HideAll();
+                crane3_.SetActive(true);
             }
             else if (ArgumentHelper.ContainsCommand("-guideHideGuides", action))
             {

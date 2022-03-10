@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4824520685840941836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2578990030495541908}
+  - component: {fileID: 5750723246018985116}
+  m_Layer: 0
+  m_Name: lego_3_data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2578990030495541908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1217.1252, y: 657.4921, z: -199.57349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750723246018985116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHints: 7
+  FirstChallenge: 1-100
+  Challenges:
+  - Name: 1-100
+    Sprite: {fileID: 21300000, guid: b9871acc1f09043b0a80756e9839b5b2, type: 3}
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 100 -hidespawnoption
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: -character talk map-success-next-200g
+  - Name: 1-200
+    Sprite: {fileID: 21300000, guid: 3c7c4a4857c9f4bddbc652c57acff969, type: 3}
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 200 -hidespawnoption
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: -character talk map-success-next-500g
+  - Name: 1-500
+    Sprite: {fileID: 21300000, guid: d9867c1452ece4f9ba71dad734509e49, type: 3}
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 500 -hidespawnoption
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: -character talk map-success-next-level2
+  - Name: 2-100
+    Sprite: {fileID: 21300000, guid: ae5573b0810d14951b24c6424316ea71, type: 3}
+    RewardCommand: -character talk map-success-sculpture -art-holder show 2 100 -hidespawnoption
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: '-character talk map-success-next-200g '
+  - Name: 2-200
+    Sprite: {fileID: 21300000, guid: 25df4ab92a2534051bd421cd4956c71d, type: 3}
+    RewardCommand: '-character talk map-success-sculpture -art-holder show 2 200
+      -hidespawnoption '
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: '-character talk map-success-next-500g '
+  - Name: 2-500
+    Sprite: {fileID: 21300000, guid: 16601005a2cf345beacd4f769243fbc2, type: 3}
+    RewardCommand: '-character talk map-success-sculpture -art-holder show 2 500
+      -hidespawnoption '
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: '-character talk map-success-next-level3 '
+  - Name: 3-100
+    Sprite: {fileID: 21300000, guid: 2ba14b26447d6456fb77135d89572091, type: 3}
+    RewardCommand: '-character talk map-success-sculpture -art-holder show 3 100
+      -hidespawnoption '
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: '-character talk map-success-next-200g '
+  - Name: 3-200
+    Sprite: {fileID: 21300000, guid: 9e3ebf820d8934b8cba522e4044eeeda, type: 3}
+    RewardCommand: '-character talk map-success-sculpture -art-holder show 3 200
+      -hidespawnoption '
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: '-character talk map-success-next-500g '
+  - Name: 3-500
+    Sprite: {fileID: 21300000, guid: 50ad8d2261d264514a42c931862bb246, type: 3}
+    RewardCommand: '-character talk map-success-sculpture -art-holder show 3 500
+      -hidespawnoption '
+    ExtraBlocksAllowed: half
+    NextChallengeCommand: 

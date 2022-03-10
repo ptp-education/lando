@@ -19,7 +19,8 @@ public class GameStorage
         Lego3Art,
         MomoStarter,
         MomoTeenCustomization,
-        MomoAdultCustomization
+        MomoAdultCustomization,
+        RfidUserData
     }
 
     public class Integer
@@ -30,6 +31,14 @@ public class GameStorage
         {
             value = v;
         }
+    }
+
+    public class User
+    {
+        public string CurrentChallenge;
+        public List<string> CompletedChallenges = new List<string>();
+        public int HintsGiven = 0;
+        public Dictionary<string, bool> BlocksGiven = new Dictionary<string, bool>();
     }
 
     private Dictionary<string, object> dict_ = new Dictionary<string, object>();

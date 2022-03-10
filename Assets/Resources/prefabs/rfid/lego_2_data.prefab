@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4824520685840941836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2578990030495541908}
+  - component: {fileID: 5750723246018985116}
+  m_Layer: 0
+  m_Name: lego_2_data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2578990030495541908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1217.1252, y: 657.4921, z: -199.57349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750723246018985116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalHints: 6
+  FirstChallenge: 1
+  Challenges:
+  - Name: 1
+    Sprite: {fileID: 21300000, guid: faf7091bc6cf74d8193e5915d1e392d7, type: 3}
+    RewardCommand: -character talk map-success-add-wood -tower-add-wood
+    ExtraBlocksAllowed: quarter
+    NextChallengeCommand: -character talk map-nextchallenge-bronze
+  - Name: 2
+    Sprite: {fileID: 21300000, guid: 0273b14325a124e13a2c925573c0a54b, type: 3}
+    RewardCommand: -character talk map-success-add-bronze -tower-add-bronze
+    ExtraBlocksAllowed: quarter
+    NextChallengeCommand: -character talk map-nextchallenge-silver
+  - Name: 3
+    Sprite: {fileID: 21300000, guid: d6c7cea33baa94f0ab690a43af7e4ef9, type: 3}
+    RewardCommand: -character talk map-success-add-silver -tower-add-silver
+    ExtraBlocksAllowed: quarter
+    NextChallengeCommand: -character talk map-nextchallenge-gold
+  - Name: 4
+    Sprite: {fileID: 21300000, guid: 927705b475759406597012d15e5a5b04, type: 3}
+    RewardCommand: -character talk map-success-add-gold -tower-add-gold
+    ExtraBlocksAllowed: quarter
+    NextChallengeCommand: -character talk map-nextchallenge-obsidian
+  - Name: 5
+    Sprite: {fileID: 21300000, guid: 6cbfe50966928465fbf2d5480cea3ea7, type: 3}
+    RewardCommand: -character talk map-success-add-obsidian -tower-add-obsidian
+    ExtraBlocksAllowed: quarter
+    NextChallengeCommand: 

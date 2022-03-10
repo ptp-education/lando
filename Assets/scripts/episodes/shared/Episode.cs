@@ -11,7 +11,7 @@ public class Episode : MonoBehaviour
 {
     [SerializeField] public EpisodeNode StartingNode;
     [SerializeField] public string VORoot;
-
+    [SerializeField] public ChallengeData ChallengeData;
 
     public EpisodeNode[] AllNodes
     {

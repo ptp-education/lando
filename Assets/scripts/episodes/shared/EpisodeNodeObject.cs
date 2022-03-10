@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -89,9 +89,15 @@ public class EpisodeNodeObject : MonoBehaviour
         GoTweenFlow flow = new GoTweenFlow();
         foreach(EpisodeNode.CommandLine c in commandContainer.StoredCommands)
         {
-            flow.insert(c.TimeStamp, new GoTween(this.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+            string command = c.Command;
+            float timeStamp = c.TimeStamp;
+            if (timeStamp < 0.1)
             {
-                gameManager_.SendNewAction(c.Command);
+                timeStamp = 0.1f;
+            }
+            flow.insert(0, new GoTween(this.transform,  timeStamp, new GoTweenConfig().onComplete(t =>
+            {
+                gameManager_.SendNewAction(command);
             })));
         }
         flow.play();

@@ -92,7 +92,7 @@ public class ShareManager : GameManager
             activeNode_.ReceiveAction(a);
         }
 
-        if (ArgumentHelper.ContainsCommand(TOGGLE_LIGHT, a))
+        if (ArgumentHelper.ContainsCommand(TOGGLE_BLOCKS, a))
         {
             HandleToggleLight();
         }
@@ -140,6 +140,65 @@ public class ShareManager : GameManager
         if (ArgumentHelper.ContainsCommand(HIDE_SPAWN_OPTIONS_COMMAND, a))
         {
             choicesHolder_.DeleteOptions();
+        }
+
+        if (ArgumentHelper.ContainsCommand(BLOCKS_GREEN, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-1.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(BLOCKS_WHITE, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-2.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(BLOCKS_RED, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-3.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(HINTS_GREEN, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-4.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(HINTS_WHITE, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-5.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(HINTS_RED, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-6.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(CHALLENGE_GREEN, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-7.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(CHALLENGE_WHITE, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-8.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(CHALLENGE_RED, a))
+        {
+            AudioPlayer.PlayAudio("audio/sfx/turn-off");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-9.scpt\"");
+        }
+
+        if (ArgumentHelper.ContainsCommand(LIGHTS_WHITE, a))
+        {
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/lights-off.scpt\"");
         }
     }
 
