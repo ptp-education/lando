@@ -25,7 +25,7 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
-    public static float PlayAudio(string path)
+    public static float PlayAudio(string path, bool expectFailure = false)
     {
         if (ShareManager.SilenceCounter > 0)
         {
@@ -40,7 +40,10 @@ public class AudioPlayer : MonoBehaviour
 
         if (clip == null)
         {
-            Debug.LogWarning("Could not find audio file for path: " + path);
+            if (!expectFailure)
+            {
+                Debug.LogWarning("Could not find audio file for path: " + path);
+            }
             return -1f;
         }
 

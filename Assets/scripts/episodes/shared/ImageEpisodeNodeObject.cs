@@ -22,4 +22,16 @@ public class ImageEpisodeNodeObject : EpisodeNodeObject
 
         mainImage_.sprite = Resources.Load<Sprite>(Node.ImageFilePath);
     }
+
+    public override void ReceiveAction(string action)
+    {
+        base.ReceiveAction(action);
+
+        List<string> args = ArgumentHelper.ArgumentsFromCommand("-swap-image", action);
+        if (args.Count > 0)
+        {
+            Sprite s = Resources.Load<Sprite>(args[0]);
+            mainImage_.sprite = s;
+        }
+    }
 }

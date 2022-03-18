@@ -5,18 +5,19 @@ using System;
 
 public class ChallengeData : MonoBehaviour
 {
-    //<challenge-name, extra-allowance-type>
-    [SerializeField] public int TotalHints = 0;
-    [SerializeField] public string FirstChallenge;
     [SerializeField] public List<Challenge> Challenges = new List<Challenge>();
 
     [Serializable]
     public class Challenge
     {
         public string Name;
-        public Sprite Sprite;
-        public string RewardCommand;
-        public string ExtraBlocksAllowed;
-        public string NextChallengeCommand;
+        public Sprite Sprite;   //descriptor of the challenge
+        public Sprite CompletedSprite;  //completion badge
+        public string LoadCommand;      //Load before testing
+        public string FailCommand;      //Fail after testing
+        public string RewardCommand;    //Add a wood tower!
+        public string RequirementsCommand;  //Your bridge needs to support Nessy and 5 pounds!
+        public string EncourageCommand; //override a voice command like "Let's do this!"
+        public string NextChallengeCommand; //"the next challenge is 5 pounds!"
     }
 }

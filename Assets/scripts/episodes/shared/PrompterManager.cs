@@ -89,23 +89,11 @@ public class PrompterManager : GameManager
         }
         else if (Input.GetKeyUp("a"))
         {
-            SendNewAction(DIDI_LIGHT);
+            SendNewAction(DIDI_HMMM);
         }
         else if (Input.GetKeyUp("z"))
         {
-            SendNewAction(HINTS_GREEN);
-        }
-        else if (Input.GetKeyUp("q"))
-        {
-            SendNewAction("-rfid-ui select-mode BuildingBlocks");
-        }
-        else if (Input.GetKeyUp("w"))
-        {
-            SendNewAction("-rfid-ui select-mode MagicPrinter");
-        }
-        else if (Input.GetKeyUp("e"))
-        {
-            SendNewAction("-rfid-ui select-mode Challenge");
+            SendNewAction(TOGGLE_BLOCKS_LIGHT);
         }
         else
         {
@@ -113,7 +101,7 @@ public class PrompterManager : GameManager
             {
                 if ((c == '\n') || (c == '\r'))
                 {
-                    SendNewAction(RFID_COMMAND + " scanned" + " " + rfidCode_);
+                    SendNewAction(RFID_COMMAND + " new-id" + " " + rfidCode_, masterOnly:false);
                     rfidCode_ = "";
                 }
                 else if (char.IsNumber(c))

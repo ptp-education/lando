@@ -77,14 +77,14 @@ public class ShareManager : GameManager
             AudioPlayer.StartRadio();
         }
 
-        if (ArgumentHelper.ContainsCommand(FADE_COMMAND, a))
-        {
-            HandleFade(a);
-        }
-
         if (ArgumentHelper.ContainsCommand(FADEOUT_COMMAND, a))
         {
             HandleFadeOut(a);
+        }
+
+        if (ArgumentHelper.ContainsCommand(FADEIN_COMMAND, a))
+        {
+            HandleFadeIn(a);
         }
 
         if (activeNode_ != null)
@@ -112,9 +112,9 @@ public class ShareManager : GameManager
             HandlePrintCommand(a);
         }
 
-        if (ArgumentHelper.ContainsCommand(DIDI_LIGHT, a))
+        if (ArgumentHelper.ContainsCommand(DIDI_HMMM, a))
         {
-            AudioPlayer.PlayAudio("audio/sfx/didi-ding");
+            SendNewAction("-character talk hm-1 hm-2 hm-3 hm-4 hm-5 hm-6 hm-7 hm-8 hm-9 hm-10");
         }
 
         if (ArgumentHelper.ContainsCommand(CHARACTER_COMMAND, a))
@@ -142,63 +142,15 @@ public class ShareManager : GameManager
             choicesHolder_.DeleteOptions();
         }
 
-        if (ArgumentHelper.ContainsCommand(BLOCKS_GREEN, a))
+        if (ArgumentHelper.ContainsCommand(FADEIN_COMMAND, a))
         {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-1.scpt\"");
+
         }
 
-        if (ArgumentHelper.ContainsCommand(BLOCKS_WHITE, a))
+        if (ArgumentHelper.ContainsCommand(TOGGLE_BLOCKS_LIGHT, a))
         {
             AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-2.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(BLOCKS_RED, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-3.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(HINTS_GREEN, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-4.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(HINTS_WHITE, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-5.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(HINTS_RED, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-6.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(CHALLENGE_GREEN, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-7.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(CHALLENGE_WHITE, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-8.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(CHALLENGE_RED, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/double-press-9.scpt\"");
-        }
-
-        if (ArgumentHelper.ContainsCommand(LIGHTS_WHITE, a))
-        {
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/lights-off.scpt\"");
+            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/press-1-lightkey.scpt\"");
         }
     }
 
@@ -245,12 +197,9 @@ public class ShareManager : GameManager
 
         if (currentNode.FadeInFromPreviousScene)
         {
-            fadeFlow_ = new GoTweenFlow();
-            fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
-            fadeFlow_.insert(0.9f, new GoTween(fadeOverlay_, 0.7f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
-            fadeFlow_.play();
+            HandleFadeIn(GameManager.FADEIN_COMMAND + " 1.5");
 
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(0.4f);
         }
 
         while (!activeNode_.IsPlaying)
@@ -315,45 +264,6 @@ public class ShareManager : GameManager
 
     #region HANDLERS
 
-    private void HandleFade(string action)
-    {
-        string[] split = action.Split(' ');
-
-        string lengthText = null;
-        for (int i = 0; i < split.Length; i++)
-        {
-            if (string.Equals(FADE_COMMAND, split[i]))
-            {
-                if (i < split.Length - 1)
-                {
-                    lengthText = split[i + 1];
-                    break;
-                }
-            }
-        }
-
-        if (lengthText != null)
-        {
-            float length = -1f;
-            float.TryParse(lengthText, out length);
-            if (length != -1f)
-            {
-                if (fadeFlow_ != null)
-                {
-                    fadeFlow_.complete();
-                    fadeFlow_ = null;
-                }
-
-                fadeOverlay_.color = Color.black;
-
-                fadeFlow_ = new GoTweenFlow();
-                fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.01f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
-                fadeFlow_.insert(length - 0.3f, new GoTween(fadeOverlay_, 0.3f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
-                fadeFlow_.play();
-            }
-        }
-    }
-
     private void HandleFadeOut(string action)
     {
         string[] split = action.Split(' ');
@@ -410,6 +320,28 @@ public class ShareManager : GameManager
         }
 
         AudioPlayer.PlayAudio("audio/sfx/new-option");
+    }
+
+    private void HandleFadeIn(string a)
+    {
+        List<string> args = ArgumentHelper.ArgumentsFromCommand(FADEIN_COMMAND, a);
+
+        float duration = 1f;
+        if (args.Count > 0)
+        {
+            duration = float.Parse(args[0]);
+        }
+
+        if (fadeFlow_ != null && fadeFlow_.state == GoTweenState.Running)
+        {
+            fadeFlow_.destroy();
+            fadeOverlay_.color = Color.black;
+        }
+
+        fadeFlow_ = new GoTweenFlow();
+        fadeFlow_.insert(0f, new GoTween(fadeOverlay_, 0.15f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 1f))));
+        fadeFlow_.insert(duration - 0.25f, new GoTween(fadeOverlay_, 0.25f, new GoTweenConfig().colorProp("color", new Color(0, 0, 0, 0f))));
+        fadeFlow_.play();
     }
 
     private void HandleTerminalCommand(string a)
@@ -485,6 +417,9 @@ public class ShareManager : GameManager
                 break;
             case "delayed-talk":
                 characters.ForEach(c => c.DelayedTalk(args[1], args.GetRange(2, args.Count - 2), episode_.VORoot));
+                break;
+            case "suggest-printer":
+                characters.ForEach(c => c.SuggestPrinter());
                 break;
             case "talk":
                 characters.ForEach(c => c.Talk(args.GetRange(1, args.Count - 1), episode_.VORoot));

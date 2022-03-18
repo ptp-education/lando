@@ -33,7 +33,7 @@ public class GameStorage
         }
     }
 
-    public class User
+    public class UserData
     {
         public string CurrentChallenge;
         public List<string> CompletedChallenges = new List<string>();

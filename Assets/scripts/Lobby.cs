@@ -17,8 +17,6 @@ public class Lobby : MonoBehaviourPunCallbacks
     [SerializeField] InputField inputField_;
     [SerializeField] ButtonToggle buttonToggle_;
 
-    private string test_ = "";
-
     private void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
@@ -75,6 +73,7 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         if (string.Equals(buttonToggle_.Selected, "share"))
         {
+            GameManager.Master = false;
             UnityEngine.SceneManagement.SceneManager.LoadScene(kShareMode);
         } else if (string.Equals(buttonToggle_.Selected, "prompt"))
         {

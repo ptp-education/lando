@@ -327,14 +327,14 @@ RectTransform:
   m_GameObject: {fileID: 1518128776543315324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -486.4425, y: -113.83316}
+  m_AnchoredPosition: {x: -475, y: 17}
   m_SizeDelta: {x: 188, y: 396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8354117937553052484
@@ -449,33 +449,51 @@ MonoBehaviour:
   largeAnimalSeat_: {fileID: 3163831829920872550}
   successImage_: {fileID: 867933533894107594}
   failureImage_: {fileID: 6500309244064868906}
-  bird_: {fileID: 21300000, guid: 3803bbeba6b554972baa1758951c2b91, type: 3}
-  birdFailure_: {fileID: 21300000, guid: 76a99aff1aa9948fa8eafd37bde2801d, type: 3}
-  birdSuccess_: {fileID: 21300000, guid: a7f8a272925e24049be070318915a9db, type: 3}
-  bunny_: {fileID: 21300000, guid: 2a49bfd14405a46de8564dba8b199024, type: 3}
-  bunnyFailure_: {fileID: 21300000, guid: 6e3b8b24946f241c6bc4b913b5ed7e08, type: 3}
-  bunnySuccess_: {fileID: 21300000, guid: f2d3011ce45c449adb3e1d680a192f80, type: 3}
-  ferret_: {fileID: 21300000, guid: a33acac01143d4faeac14e371547aa87, type: 3}
-  ferretFailure_: {fileID: 21300000, guid: 559832d9b2b634aa299715f8fe90a795, type: 3}
-  ferretSuccess_: {fileID: 21300000, guid: 310243eb3855e42868f74ba8f07f8d95, type: 3}
-  deer_: {fileID: 21300000, guid: 8f68dfdb06c544d6e8fd7fe5c3cf167f, type: 3}
-  deerFailure_: {fileID: 21300000, guid: bd4cb908791fb439aa84f9ef4a03090b, type: 3}
-  deerSuccess_: {fileID: 21300000, guid: ded56662ad2de44b183b40c577c3b0a1, type: 3}
-  zebra_: {fileID: 21300000, guid: 26c79ebd3f1134ee5b15e929a42a3757, type: 3}
-  zebraFailure_: {fileID: 21300000, guid: fde6705b4edea4e11abd5d7e55ec0fc1, type: 3}
-  zebraSuccess_: {fileID: 21300000, guid: c9c06a6d82f63400e80911608eac6176, type: 3}
-  seal_: {fileID: 21300000, guid: d375f40e318d3402c9fcece64589bed3, type: 3}
-  sealFailure_: {fileID: 21300000, guid: c7ea3867a329e4c33bf0b1df53a4bbdc, type: 3}
-  sealSuccess_: {fileID: 21300000, guid: f0df8df191160425cb659ba79cd184ae, type: 3}
-  elephant_: {fileID: 21300000, guid: a8ceda76e487c4eab9cff78e46188915, type: 3}
-  elephantFailure_: {fileID: 21300000, guid: 06494defdc3c74153b4cfa3fea2832d3, type: 3}
-  elephantSuccess_: {fileID: 21300000, guid: 03196edcf68074945b0138ac713d4daa, type: 3}
-  giraffe_: {fileID: 21300000, guid: ba8ad2f63265e4b6aaf21cf10df84d64, type: 3}
-  giraffeFailure_: {fileID: 21300000, guid: a38b8406df6674dbd8e4564a84de76dd, type: 3}
-  giraffeSuccess_: {fileID: 21300000, guid: 3eedc3e8dced54d8c9b1cc18763be937, type: 3}
-  hippo_: {fileID: 21300000, guid: a755a0ccd1f57432a86f5de8ab8b7e48, type: 3}
-  hippoFailure_: {fileID: 21300000, guid: 4a35696ba13c64169b807ded88f33ddd, type: 3}
-  hippoSuccess_: {fileID: 21300000, guid: c82874765844c4f318e14fa4d998631f, type: 3}
+  bird_:
+    Animal: {fileID: 21300000, guid: 3803bbeba6b554972baa1758951c2b91, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: 76a99aff1aa9948fa8eafd37bde2801d, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: a7f8a272925e24049be070318915a9db, type: 3}
+    Sound: audio/sfx/bird-chirp
+  bunny_:
+    Animal: {fileID: 21300000, guid: 2a49bfd14405a46de8564dba8b199024, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: 6e3b8b24946f241c6bc4b913b5ed7e08, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: f2d3011ce45c449adb3e1d680a192f80, type: 3}
+    Sound: audio/sfx/bubble-pop
+  ferret_:
+    Animal: {fileID: 21300000, guid: a33acac01143d4faeac14e371547aa87, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: 559832d9b2b634aa299715f8fe90a795, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: 310243eb3855e42868f74ba8f07f8d95, type: 3}
+    Sound: audio/sfx/bubble-pop
+  deer_:
+    Animal: {fileID: 21300000, guid: 8f68dfdb06c544d6e8fd7fe5c3cf167f, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: bd4cb908791fb439aa84f9ef4a03090b, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: ded56662ad2de44b183b40c577c3b0a1, type: 3}
+    Sound: audio/sfx/bubble-pop
+  zebra_:
+    Animal: {fileID: 21300000, guid: 26c79ebd3f1134ee5b15e929a42a3757, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: fde6705b4edea4e11abd5d7e55ec0fc1, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: c9c06a6d82f63400e80911608eac6176, type: 3}
+    Sound: audio/sfx/bubble-pop
+  seal_:
+    Animal: {fileID: 21300000, guid: d375f40e318d3402c9fcece64589bed3, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: c7ea3867a329e4c33bf0b1df53a4bbdc, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: f0df8df191160425cb659ba79cd184ae, type: 3}
+    Sound: audio/sfx/seal
+  elephant_:
+    Animal: {fileID: 21300000, guid: a8ceda76e487c4eab9cff78e46188915, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: 06494defdc3c74153b4cfa3fea2832d3, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: 03196edcf68074945b0138ac713d4daa, type: 3}
+    Sound: audio/sfx/elephant
+  giraffe_:
+    Animal: {fileID: 21300000, guid: ba8ad2f63265e4b6aaf21cf10df84d64, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: a38b8406df6674dbd8e4564a84de76dd, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: 3eedc3e8dced54d8c9b1cc18763be937, type: 3}
+    Sound: audio/sfx/bubble-pop
+  hippo_:
+    Animal: {fileID: 21300000, guid: a755a0ccd1f57432a86f5de8ab8b7e48, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: 4a35696ba13c64169b807ded88f33ddd, type: 3}
+    AnimalSuccess: {fileID: 21300000, guid: c82874765844c4f318e14fa4d998631f, type: 3}
+    Sound: audio/sfx/bubble-pop
 --- !u!1 &3328111414061123317
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,7 +521,7 @@ RectTransform:
   m_GameObject: {fileID: 3328111414061123317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
   m_RootOrder: 6
@@ -578,14 +596,14 @@ RectTransform:
   m_GameObject: {fileID: 4645774810573817849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: -0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -458.4425, y: -42.233154}
+  m_AnchoredPosition: {x: -534, y: 21.665}
   m_SizeDelta: {x: 520, y: 475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3042982314581973243
@@ -718,7 +736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8887060835876011828
 RectTransform:
   m_ObjectHideFlags: 0

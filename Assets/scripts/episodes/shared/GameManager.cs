@@ -8,31 +8,22 @@ public class GameManager : MonoBehaviour
     public const string ACTION_PREFIX = "action:";
     public const string NODE_PREFIX = "node:";
     public const string RADIO_COMMAND = "radio";
-    public const string FADE_COMMAND = "-fade";
     public const string FADEOUT_COMMAND = "-fadeout";
+    public const string FADEIN_COMMAND = "-fadein";
     public const string TOGGLE_BLOCKS = "-toggleblocks";
     public const string TOGGLE_CHALLENGE = "-togglechallenge";
     public const string HIDE_ALL = "-hideall";
     public const string SILENCE_COUNTER = "-add-silence-life";
     public const string RESET_SILENCE_COUNTER = "-reset-silence-life";
-    public const string DIDI_LIGHT = "-didi-light";
+    public const string DIDI_HMMM = "-didi-hmm";
     public const string TERMINAL_COMMAND = "-terminal";
     public const string PRINT_COMMAND = "-print";
     public const string CHARACTER_COMMAND = "-character";
     public const string SPAWN_OPTIONS_COMMAND = "-spawnoption";
-    public const string RFID_COMMAND = "-rfid-ui";
+    public const string RFID_COMMAND = "-rfid";
     public const string HIDE_SPAWN_OPTIONS_COMMAND = "-hidespawnoption";
 
-    public const string BLOCKS_RED = "-blocks-red";
-    public const string BLOCKS_GREEN = "-blocks-green";
-    public const string BLOCKS_WHITE = "-blocks-white";
-    public const string HINTS_RED = "-hints-red";
-    public const string HINTS_GREEN = "-hints-green";
-    public const string HINTS_WHITE = "-hints-white";
-    public const string CHALLENGE_RED = "-challenge-red";
-    public const string CHALLENGE_GREEN = "-challenge-green";
-    public const string CHALLENGE_WHITE = "-challenge-white";
-    public const string LIGHTS_WHITE = "-lights-off";
+    public const string TOGGLE_BLOCKS_LIGHT = "-toggle-blocks-light";
 
     public enum Type
     {
@@ -54,6 +45,18 @@ public class GameManager : MonoBehaviour
         get
         {
             return episode_ != null ? episode_.ChallengeData : null;
+        }
+    }
+
+    public string VoRoot
+    {
+        get
+        {
+            if (episode_ != null)
+            {
+                return episode_.VORoot;
+            }
+            return null;
         }
     }
 
@@ -131,6 +134,9 @@ public class GameManager : MonoBehaviour
         UpdateEpisodeNode(NODE_PREFIX + e.StartingNode.gameObject.name);
 
         AudioPlayer.StopRadio();
+
+        Storage = new GameStorage();
+        RfidStorage = new Dictionary<string, GameStorage>();
     }
 
     public void NewNodeAction(string a)
@@ -159,6 +165,7 @@ public class GameManager : MonoBehaviour
             //currently not checking for cached action so that action can repeat
             string strippedActions = StripAndRunActions(command);
             strippedActions = StripAndRunSfxActions(command);
+            strippedActions = strippedActions.Trim();
             NewActionInternal(strippedActions);
         }
     }

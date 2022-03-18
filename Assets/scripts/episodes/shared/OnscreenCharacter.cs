@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnscreenCharacter : MonoBehaviour
 {
     [SerializeField] private GameObject voiceBubble_;
+    [SerializeField] private GameObject thoughtBubble_;
     [SerializeField] private Animator anim_;
     [SerializeField] private float speed_ = 250f;
 
@@ -22,7 +23,7 @@ public class OnscreenCharacter : MonoBehaviour
 
         string vo = audio[Random.Range(0, audio.Count)];
 
-        float duration = AudioPlayer.PlayAudio(root + vo);
+        float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true);
 
         if (duration == -1f)
         {
@@ -37,6 +38,35 @@ public class OnscreenCharacter : MonoBehaviour
         }));
 
         return duration;
+    }
+
+    public void SuggestPrinter()
+    {
+        float duration = Talk(new List<string>()
+        {
+            "testing-offer-hint1",
+            "testing-offer-hint2",
+            "testing-offer-hint3",
+            "testing-offer-hint4",
+            "testing-offer-hint5",
+            "testing-offer-hint6",
+            "testing-offer-hint7",
+            "testing-offer-hint8",
+            "testing-offer-hint9",
+            "testing-offer-hint10"
+        }, kSharedVoRoot);
+
+        thoughtBubble_.SetActive(true);
+
+        Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
+        {
+            thoughtBubble_.gameObject.SetActive(false);
+        }));
+    }
+
+    public void HideMagicPrinter()
+    {
+        thoughtBubble_.SetActive(false);
     }
 
     public void DelayedTalk(string delay, List<string> audio, string root)
@@ -61,10 +91,32 @@ public class OnscreenCharacter : MonoBehaviour
         float duration = Talk(audio, root);
         if (duration == -1f) return -1f;
 
-        Go.to(transform, duration + 0.3f, new GoTweenConfig().onComplete(t =>
+        GoTweenFlow flow = new GoTweenFlow();
+        flow.insert(duration, new GoTween(transform, 0.2f, new GoTweenConfig().onComplete(t =>
+        {
+            Talk(new List<string>()
+            {
+                "hints-print1",
+                "hints-print2",
+                "hints-print3",
+                "hints-print4",
+                "hints-print5",
+                "hints-print6",
+                "hints-print7",
+                "hints-print8",
+                "hints-print9",
+                "hints-print10",
+            }, kSharedVoRoot);
+        })));
+        flow.insert(duration + 2.5f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
         {
             CommandLineHelper.PrintPdf(print);
-        }));
+        })));
+        flow.insert(duration + 5f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
+        {
+            Debug.Log("finish printing");
+        })));
+        flow.play();
 
         return duration;
     }

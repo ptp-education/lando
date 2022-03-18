@@ -47,7 +47,6 @@ namespace Lando.Class.Lego3
         private int level_ = -1;
         private int grams_ = -1;
 
-        private bool sillyHack = false;
         public override void ReceivedAction(string action)
         {
             if (ArgumentHelper.ContainsCommand("-art-holder", action))

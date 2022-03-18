@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4824520685840941836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2578990030495541908}
+  - component: {fileID: 5750723246018985116}
+  m_Layer: 0
+  m_Name: lego_1_data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2578990030495541908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1217.1252, y: 657.4921, z: -199.57349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750723246018985116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Challenges:
+  - Name: 2 pounds
+    Sprite: {fileID: 21300000, guid: 49730f6586a264b24899dcbb9b08b117, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 2c2a82f5ff02342b080f9c02377fb30b, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk send-2-trucks -bridge send-truck 2
+    RequirementsCommand: -character talk testing-announce-2
+    EncourageCommand: 
+    NextChallengeCommand: 
+  - Name: 5 pounds
+    Sprite: {fileID: 21300000, guid: ad29165c422364ffca1940c2883219c5, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: ed676a06a49874cb981f274c585b89c8, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk send-5-trucks -bridge send-truck 5
+    RequirementsCommand: -character talk testing-announce-5
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-5
+  - Name: 10 pounds
+    Sprite: {fileID: 21300000, guid: ac32915d8922f4a1089d7d378089e86b, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 5167cb97cca2644aa8ca57650198504c, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk send-10-trucks -bridge send-truck 10
+    RequirementsCommand: -character talk testing-announce-10
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-10
+  - Name: 15 pounds
+    Sprite: {fileID: 21300000, guid: bdd6d4b746e4f46738fffe48a48c7361, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 532599e8bf77449b98d5f29477896577, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk send-15-trucks -bridge send-truck 10
+    RequirementsCommand: -character talk testing-announce-15
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-15
+  - Name: 15 pound 6 wide
+    Sprite: {fileID: 21300000, guid: 1c9e032ad1b514eeb9ba00c6d002c895, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 3bafaeda857944358bcc399ec1e03ee0, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk result-choose -farm-selector show 1
+    RequirementsCommand: -character talk testing-announce-15-6w
+    EncourageCommand: 
+    NextChallengeCommand: -character talk next-wider1
+  - Name: 20 pound 8 wide
+    Sprite: {fileID: 21300000, guid: f380f09a71d224e23ac686d081453f7b, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 0622a01cdf96947caaeda289acfc6c3b, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk result-choose -farm-selector show 2
+    RequirementsCommand: -character talk testing-announce-15-6w
+    EncourageCommand: 
+    NextChallengeCommand: -character talk next-wider2
+  - Name: 35 pound 10 wide
+    Sprite: {fileID: 21300000, guid: 74e034865000541c89a4db1fd9a78d2d, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 2be0d8a29283d415e8e1a1613c51add9, type: 3}
+    LoadCommand: 
+    FailCommand: 
+    RewardCommand: -character talk result-choose -farm-selector show 3
+    RequirementsCommand: -character talk testing-announce-35-10w
+    EncourageCommand: 
+    NextChallengeCommand: -character talk next-wider3

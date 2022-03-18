@@ -55,7 +55,7 @@ public sealed class GoTween : AbstractGoTween
 		if( duration <= 0 )
 		{
 			duration = float.Epsilon;
-			Debug.LogError( "tween duration must be greater than 0. coerced to float.Epsilon." );
+			//Debug.LogError( "tween duration must be greater than 0. coerced to float.Epsilon." );
 		}
 
 		// default to removing on complete

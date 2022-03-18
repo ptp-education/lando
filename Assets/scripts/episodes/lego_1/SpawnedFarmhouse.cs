@@ -23,80 +23,23 @@ public class SpawnedFarmhouse : SpawnedObject
     {
         base.ReceivedAction(action);
 
-        int houseLevel = 0;
-        GameStorage.Integer houseLevelStorage = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
-        if (houseLevelStorage != null)
+        if (ArgumentHelper.ContainsCommand("-next-stage", action))
         {
-            houseLevel = houseLevelStorage.value;
+            transform.localScale = new Vector3(0.6f, 0.6f);
+            transform.localPosition = new Vector3(684f, -258f);
         }
 
-        if (action.Contains("truck-add-2lb"))
+        if (ArgumentHelper.ContainsCommand("-farmhouse-increase", action))
         {
+            int houseLevel = 0;
+            GameStorage.Integer houseLevelStorage = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
+            if (houseLevelStorage != null)
+            {
+                houseLevel = houseLevelStorage.value;
+            }
+
             gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.HouseLevel, new GameStorage.Integer(houseLevel + 1));
             RefreshHouse(true);
-        } else if (action.Contains("truck-add-5lb"))
-        {
-            gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.HouseLevel, new GameStorage.Integer(houseLevel + 2));
-            RefreshHouse(true);
-        }
-        else if (action.Contains("truck-add-10lb"))
-        {
-            gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.HouseLevel, new GameStorage.Integer(houseLevel + 3));
-            RefreshHouse(true);
-        } else if (action.Contains("truck-add-15lb"))
-        {
-            gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.HouseLevel, new GameStorage.Integer(houseLevel + 4));
-            RefreshHouse(true);
-        } else if (action.Contains("show-outlines")) {
-            gameManager_.Storage.Add<string>(GameStorage.Key.ShowAnimalOutlines, "show");
-            AudioPlayer.PlayAudio("audio/sfx/arch");
-            RefreshAnimals(false);
-        } else if (action.Contains("add-dino"))
-        {
-            gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.FarmObjects, "dino");
-            RefreshAnimals(true);
-        } else if (action.Contains("add-giraffe"))
-        {
-            gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.FarmObjects, "giraffe");
-            RefreshAnimals(true);
-        } else if (action.Contains("add-elephant"))
-        {
-            gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.FarmObjects, "elephant");
-            RefreshAnimals(true);
-        }
-    }
-
-    private void Refresh(bool playSound)
-    {
-        RefreshHouse(playSound);
-        RefreshAnimals(playSound);
-    }
-
-    private void RefreshAnimals(bool playSound)
-    {
-        if (gameManager_.Storage.GetValue<string>(GameStorage.Key.ShowAnimalOutlines) != null)
-        {
-            animals_.gameObject.SetActive(true);
-        }
-
-        List<string> farmObjects = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.FarmObjects);
-        if (farmObjects != null)
-        {
-            if (farmObjects.FindAll(s => string.Equals("dino", s)).Count > 0)
-            {
-                dino_.color = Color.white;
-                if (playSound) AudioPlayer.PlayAudio("audio/sfx/dino");
-            }
-            if (farmObjects.FindAll(s => string.Equals("giraffe", s)).Count > 0)
-            {
-                giraffe_.color = Color.white;
-                if (playSound) AudioPlayer.PlayAudio("audio/sfx/giraffe");
-            }
-            if (farmObjects.FindAll(s => string.Equals("elephant", s)).Count > 0)
-            {
-                elephant_.color = Color.white;
-                if (playSound) AudioPlayer.PlayAudio("audio/sfx/elephant");
-            }
         }
     }
 
@@ -138,6 +81,6 @@ public class SpawnedFarmhouse : SpawnedObject
     {
         base.Reset();
 
-        Refresh(false);
+        RefreshHouse(false);
     }
 }
