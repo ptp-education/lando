@@ -108,17 +108,20 @@ namespace Lando.Class.Lego1
         {
             List<FarmOption> ret = new List<FarmOption>();
 
-            List<FarmOption> options = null;
+            List<FarmOption> options = new List<FarmOption>();
             switch(level)
             {
                 case 1:
-                    options = sixWideOptions_;
+                    options.AddRange(sixWideOptions_);
                     break;
                 case 2:
-                    options = eightWideOptions_;
+                    options.AddRange(eightWideOptions_);
+                    options.AddRange(sixWideOptions_);
                     break;
                 case 3:
-                    options = tenWideOptions_;
+                    options.AddRange(tenWideOptions_);
+                    options.AddRange(eightWideOptions_);
+                    options.AddRange(sixWideOptions_);
                     break;
             }
 
