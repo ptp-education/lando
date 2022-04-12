@@ -29,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -178,6 +178,9 @@ MonoBehaviour:
       Node: {fileID: 0}
   - Name: Testing result
     Options:
+    - Name: Exclaim
+      Action: -character exclaim
+      Node: {fileID: 0}
     - Name: 'Reward: Game'
       Action: -rfid reward
       Node: {fileID: 0}
@@ -215,7 +218,7 @@ MonoBehaviour:
       Action: -character talk hint-more-challenges
       Node: {fileID: 0}
     - Name: Out of hints
-      Action: -character talk hints-out
+      Action: -character talk hint-more-challenges
       Node: {fileID: 0}
   - Name: Time out
     Options:
@@ -250,95 +253,6 @@ MonoBehaviour:
     - Name: Suggest magic printer
       Action: -character suggest-printer
       Node: {fileID: 0}
---- !u!1 &4293507572950417534
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7557565165227047961}
-  - component: {fileID: 350443553326283485}
-  m_Layer: 5
-  m_Name: outside
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7557565165227047961
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4293507572950417534}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &350443553326283485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4293507572950417534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: audio/sfx/wind-blowing
-  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
-  Type: 1
-  Characters:
-  - TalkingPosition: {x: 583, y: -96, z: 0}
-    Scale: {x: 0.3, y: 0.3, z: 1}
-    SelectedCharacter: 0
-  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoFilePath: Lego 1 - v3/P1-1.mp4
-  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
-  Image: {fileID: 2800000, guid: 859b767e3db284b4f91ab5ae6d0c4170, type: 3}
-  ImageFilePath: episodes/lego_1_screens/outside-developer-building
-  VideoOptions: []
-  FadeInFromPreviousScene: 1
-  Prompt: 
-  PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: -sfx "audio/sfx/car-travel"
-    Ran: 0
-  - TimeStamp: 0
-    Command: -fadein 5
-    Ran: 0
-  - TimeStamp: 6
-    Command: -character talk outside-0
-    Ran: 0
-  - TimeStamp: 9
-    Command: -spawnoption "Yes.... I am George." "Nope, my name is ..."
-    Ran: 0
-  CommandLineContainers: []
-  NextNode: {fileID: 5614036701085102094}
-  OptionHolders:
-  - Name: Respond
-    Options:
-    - Name: Yes I am George
-      Action: -character talk outside-lie
-      Node: {fileID: 0}
-    - Name: Nope my name is
-      Action: -character talk outside-say-name
-      Node: {fileID: 0}
 --- !u!1 &4439895013326381669
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +282,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -409,7 +323,7 @@ MonoBehaviour:
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 3542844012294076493, guid: 10903cb3434994ed3b2b161041fedeaf, type: 3}
-    Path: episodes/_shared/standard_guide
+    Path: episodes/_shared/standard_setup
     Spawned: 0
   - TimeStamp: 0
     SpawnKey: 
@@ -478,7 +392,10 @@ MonoBehaviour:
       Action: -character talk setup-store-rules
       Node: {fileID: 0}
     - Name: '2: Receipt explain'
-      Action: -character talk setup-receipt-rules
+      Action: -character print "teacher-encourage.pdf" setup-receipt-rules
+      Node: {fileID: 0}
+    - Name: Prompt gold button
+      Action: -character talk setup-receipt-press
       Node: {fileID: 0}
     - Name: Print something for teacher
       Action: -print "teacher-encourage.pdf"
@@ -526,13 +443,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4095121134714868495}
-  - {fileID: 7557565165227047961}
-  - {fileID: 6192037793705747944}
+  - {fileID: 7246164174063397756}
   - {fileID: 1203509625126783905}
   - {fileID: 7976424598218235021}
   - {fileID: 3922161325700624679}
   - {fileID: 1669304702929447861}
   - {fileID: 2420944694827020820}
+  - {fileID: 6192037793705747944}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -585,7 +502,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -651,7 +568,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -731,7 +648,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -769,7 +686,7 @@ MonoBehaviour:
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
+    Position: {x: 524, y: -283, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 4509499430257062133, guid: 19e07f9f0d9d44f37aadf31cf4a2fdb6, type: 3}
     Path: episodes/lego_1_assets/prefabs/bridge_hologram
@@ -821,7 +738,99 @@ MonoBehaviour:
       Action: -character talk intro-home-depot
       Node: {fileID: 0}
     - Name: Look on map
+      Action: -character talk intro-look
+      Node: {fileID: 0}
+    - Name: Correct answer
       Action: -correctAnswer
+      Node: {fileID: 0}
+--- !u!1 &7791754371577419998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7246164174063397756}
+  - component: {fileID: 5299736328508063003}
+  m_Layer: 5
+  m_Name: office
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7246164174063397756
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791754371577419998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6499968715957303117}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5299736328508063003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7791754371577419998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters: []
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
+  ImageFilePath: episodes/lego_1_screens/splash-screen
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/car-travel"
+    Ran: 0
+  - TimeStamp: 0
+    Command: -fadein 5
+    Ran: 0
+  - TimeStamp: 6.5
+    Command: -character talk office-0
+    Ran: 0
+  - TimeStamp: 14.2
+    Command: -spawnoption "Who are you?" "We're not engineers" "We'll help you!"
+    Ran: 0
+  CommandLineContainers: []
+  NextNode: {fileID: 7251693761918033594}
+  OptionHolders:
+  - Name: Response
+    Options:
+    - Name: Who are you
+      Action: -character talk office-who
+      Node: {fileID: 0}
+    - Name: We're not engineers
+      Action: -character talk office-engineers
+      Node: {fileID: 0}
+    - Name: We'll help you!
+      Action: -character talk office-next
       Node: {fileID: 0}
 --- !u!1 &8790779200200789759
 GameObject:
@@ -852,7 +861,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -875,7 +884,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 89ab8cad054de4beb8bf3966434ccf00, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 0, y: -92, z: 0}
+  - TalkingPosition: {x: -550, y: -92, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
@@ -896,8 +905,7 @@ MonoBehaviour:
     Command: -character talk office-0
     Ran: 0
   - TimeStamp: 9
-    Command: -spawnoption "What will be on the farm?" "But we're not engineers!"
-      "We'll help you"
+    Command: -spawnoption "Who are you?" "" "We'll help you"
     Ran: 0
   CommandLineContainers: []
   NextNode: {fileID: 7251693761918033594}
@@ -977,5 +985,5 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 350443553326283485}
+  NextNode: {fileID: 5299736328508063003}
   OptionHolders: []

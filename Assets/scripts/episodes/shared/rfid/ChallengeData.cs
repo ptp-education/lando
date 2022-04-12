@@ -13,6 +13,7 @@ public class ChallengeData : MonoBehaviour
         public string Name;
         public Sprite Sprite;   //descriptor of the challenge
         public Sprite CompletedSprite;  //completion badge
+        public string ScanRfidCommand;  //Run this when RFID is scanned
         public string LoadCommand;      //Load before testing
         public string FailCommand;      //Fail after testing
         public string RewardCommand;    //Add a wood tower!

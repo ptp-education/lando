@@ -45,35 +45,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Challenges:
   - Name: 100g
-    Sprite: {fileID: 21300000, guid: 42c517396cdd14b1a9ea43d6ea818ba2, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 02230bfff5683451290ebd249245bf48, type: 3}
+    Sprite: {fileID: 21300000, guid: 0a10a0e2d207b45b18a59988cffc7253, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: af3deb3dc5ee940d7951bea465fb8477, type: 3}
+    ScanRfidCommand: 
     LoadCommand: -swing spawn 100
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: '-sfx "audio/sfx/cheer" -swing success -character talk home-success-1a
-      home-success-1b home-success-1c home-success-1d home-success-1e home-success-1f '
+    RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-100
     EncourageCommand: 
     NextChallengeCommand: 
   - Name: 200g
-    Sprite: {fileID: 21300000, guid: a9bcb5590b4404b14988561766cc9d75, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 8ea638796a0cf4533ba384de101bd499, type: 3}
+    Sprite: {fileID: 21300000, guid: bd88c012a23ff4761bdd6d818215cbea, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 14d33478682a54eb688943fb4ec0ab97, type: 3}
+    ScanRfidCommand: 
     LoadCommand: -swing spawn 200
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: '-sfx "audio/sfx/cheer" -swing success -character talk home-success-1a
-      home-success-1b home-success-1c home-success-1d home-success-1e home-success-1f '
+    RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-200
     EncourageCommand: 
-    NextChallengeCommand: -character talk home-next-200
+    NextChallengeCommand: -character talk testing-next-announce-200
   - Name: 500g
-    Sprite: {fileID: 21300000, guid: 4311e8992919e4c508ab89f5c1dbd9c5, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 4a95ed661da4e40e88537ef7b6ea93b5, type: 3}
+    Sprite: {fileID: 21300000, guid: e42ec9966a1a84388a2bad9c61bbf333, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: f1e5c1f92cf1943eb8385b014b61f910, type: 3}
+    ScanRfidCommand: 
     LoadCommand: -swing spawn 500
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: '-sfx "audio/sfx/cheer" -swing success -character talk home-success-1a
-      home-success-1b home-success-1c home-success-1d home-success-1e home-success-1f '
+    RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-500
     EncourageCommand: 
-    NextChallengeCommand: -character talk home-next-500
+    NextChallengeCommand: -character talk testing-next-announce-500
+  - Name: 800g
+    Sprite: {fileID: 21300000, guid: 6bb8658da389a4f28aced968c17af490, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 2825bb1b86910448cbd02c13f0bc8cf6, type: 3}
+    ScanRfidCommand: 
+    LoadCommand: -swing spawn 800
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success
+    RequirementsCommand: -character talk testing-announce-800
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-800

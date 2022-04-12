@@ -150,6 +150,12 @@ public class EpisodeNodeObject : MonoBehaviour
     private void SpawnObject(EpisodeNode.PrefabSpawnObject prefabSpawnObject)
     {
         SpawnedObject o = Resources.Load<SpawnedObject>(prefabSpawnObject.Path);
+
+        if (o == null)
+        {
+            Debug.LogError("Missing prefab: " + prefabSpawnObject.Path);
+            return;
+        }
         SpawnedObject spawnedObject = GameObject.Instantiate<SpawnedObject>(o, spawnedObjectParent_);
         spawnedObject.transform.localPosition = prefabSpawnObject.Position;
         spawnedObject.transform.localScale = prefabSpawnObject.Scale;

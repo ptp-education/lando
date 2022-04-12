@@ -556,8 +556,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: adc339397e4864df0a2ebfe64c2ec23c, type: 3}
   - {fileID: 21300000, guid: 5b48f4760472d48129e8211b234d7b8b, type: 3}
   - {fileID: 21300000, guid: be375e66091924e10879e4fbbb5932ea, type: 3}
+  requirements_: 05000000140000003200000078000000c8000000
   farmhouse_: {fileID: 347918210512732634}
-  totalExpectedLumber_: 120
   levelProgress_: {fileID: 3763626551863059880}
   levelHolder_: {fileID: 2164476770545242417}
   levelText_: {fileID: 3626548493278780537}

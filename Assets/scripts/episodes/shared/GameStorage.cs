@@ -20,7 +20,8 @@ public class GameStorage
         MomoStarter,
         MomoTeenCustomization,
         MomoAdultCustomization,
-        RfidUserData
+        RfidUserData,
+        HintSpeechProgression
     }
 
     public class Integer

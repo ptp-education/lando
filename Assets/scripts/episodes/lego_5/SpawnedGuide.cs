@@ -10,13 +10,18 @@ namespace Lando.Class.Lego5
         [SerializeField] private GameObject swing_;
         [SerializeField] private GameObject swingAnimal_;
         [SerializeField] private GameObject checklist_;
-        [SerializeField] private GameObject exampleSwing_;
+        [SerializeField] private GameObject exampleSwing1_;
+        [SerializeField] private GameObject exampleSwing2_;
+        [SerializeField] private GameObject exampleSwing3_;
+        [SerializeField] private GameObject exampleSwing4_;
+        [SerializeField] private GameObject exampleSwing5_;
         [SerializeField] private GameObject hintUseString_;
         [SerializeField] private GameObject hintTightString_;
         [SerializeField] private GameObject hintEachString_;
         [SerializeField] private GameObject hintMoreString_;
         [SerializeField] private GameObject hintWiderTower_;
         [SerializeField] private GameObject hintArch_;
+        [SerializeField] private GameObject hintHigherUp_;
 
         public override void ReceivedAction(string action)
         {
@@ -54,6 +59,24 @@ namespace Lando.Class.Lego5
                         break;
                     case "hint-arch":
                         hintArch_.SetActive(true);
+                        break;
+                    case "hint-higher":
+                        hintHigherUp_.SetActive(true);
+                        break;
+                    case "explainer-1":
+                        exampleSwing1_.SetActive(true);
+                        break;
+                    case "explainer-2":
+                        exampleSwing2_.SetActive(true);
+                        break;
+                    case "explainer-3":
+                        exampleSwing3_.SetActive(true);
+                        break;
+                    case "explainer-4":
+                        exampleSwing4_.SetActive(true);
+                        break;
+                    case "explainer-5":
+                        exampleSwing5_.SetActive(true);
                         break;
                 }
             }

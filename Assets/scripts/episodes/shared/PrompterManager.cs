@@ -148,7 +148,18 @@ public class PrompterManager : GameManager
 
             return;
         }
-        foreach(EpisodeNode.OptionHolder holder in currentNode_.OptionHolders)
+
+#if UNITY_EDITOR
+        PromptButton rfid1Button = Instantiate<PromptButton>(commandsButtonPrefab_);
+        rfid1Button.transform.SetParent(defaultHolder.transform, true);
+        rfid1Button.Init("RFID 1 Scan", GameManager.ACTION_PREFIX + "-rfid new-id 9999", "", CommandButtonPressed);
+
+        PromptButton rfid2Button = Instantiate<PromptButton>(commandsButtonPrefab_);
+        rfid2Button.transform.SetParent(defaultHolder.transform, true);
+        rfid2Button.Init("RFID 2 Scan", GameManager.ACTION_PREFIX + "-rfid new-id 8888", "", CommandButtonPressed);
+#endif
+
+        foreach (EpisodeNode.OptionHolder holder in currentNode_.OptionHolders)
         {
             PromptButtonHolder h = null;
             if (string.Equals(holder.Name, "Default"))
