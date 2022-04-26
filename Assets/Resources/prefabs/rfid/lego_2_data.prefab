@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Challenges:
   - Name: 1
-    Sprite: {fileID: 21300000, guid: faf7091bc6cf74d8193e5915d1e392d7, type: 3}
-    CompletedSprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: f0da0f681a78845f0b047b20b4be2869, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 96b788fbf894f4ab5b99848f28d5cbe7, type: 3}
     ScanRfidCommand: 
     LoadCommand: 
     FailCommand: 
@@ -55,8 +55,8 @@ MonoBehaviour:
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-2
   - Name: 2
-    Sprite: {fileID: 21300000, guid: 0273b14325a124e13a2c925573c0a54b, type: 3}
-    CompletedSprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: e139f1c505fe1440b941c34d9f6d64d7, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 071a7cdf75f2e4057a21917a10f0b88b, type: 3}
     ScanRfidCommand: 
     LoadCommand: 
     FailCommand: 
@@ -65,8 +65,8 @@ MonoBehaviour:
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-5
   - Name: 3
-    Sprite: {fileID: 21300000, guid: d6c7cea33baa94f0ab690a43af7e4ef9, type: 3}
-    CompletedSprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: e6cdf13f15b714d30b2535c46555e298, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 852d21e03308741b5be785675560db75, type: 3}
     ScanRfidCommand: 
     LoadCommand: 
     FailCommand: 
@@ -75,8 +75,8 @@ MonoBehaviour:
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-10
   - Name: 4
-    Sprite: {fileID: 21300000, guid: 927705b475759406597012d15e5a5b04, type: 3}
-    CompletedSprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 5fa42805f517f4008b1a37ad3d6805e9, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: f5ba1315c35a94786af0a12cc48a2c67, type: 3}
     ScanRfidCommand: 
     LoadCommand: 
     FailCommand: 
@@ -85,8 +85,8 @@ MonoBehaviour:
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-15
   - Name: 5
-    Sprite: {fileID: 21300000, guid: 6cbfe50966928465fbf2d5480cea3ea7, type: 3}
-    CompletedSprite: {fileID: 0}
+    Sprite: {fileID: 21300000, guid: 0de72eeed3da7484787e1a349cb3286b, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 85846b40b212b4aad945a80309c9b7cb, type: 3}
     ScanRfidCommand: 
     LoadCommand: 
     FailCommand: 
