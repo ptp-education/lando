@@ -61,7 +61,20 @@ public class GameManager : MonoBehaviour
     }
 
     public GameStorage Storage = new GameStorage();
-    public Dictionary<string, GameStorage> RfidStorage = new Dictionary<string, GameStorage>();
+
+    private Dictionary<string, GameStorage> rfidStorage_;
+
+    public Dictionary<string, GameStorage> RfidStorage
+    {
+        get
+        {
+            if (rfidStorage_ == null)
+            {
+                rfidStorage_ = new Dictionary<string, GameStorage>();
+            }
+            return rfidStorage_;
+        }
+    }
 
     private string cachedNode_ = "";
 
@@ -136,7 +149,7 @@ public class GameManager : MonoBehaviour
         AudioPlayer.StopRadio();
 
         Storage = new GameStorage();
-        RfidStorage = new Dictionary<string, GameStorage>();
+        rfidStorage_ = null;
     }
 
     public void NewNodeAction(string a)

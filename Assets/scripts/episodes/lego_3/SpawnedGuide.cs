@@ -69,7 +69,10 @@ namespace Lando.Class.Lego3
                         break;
                     case "layers":
                         hintLayers_.SetActive(true);
-                        break; ;
+                        break;
+                    case "checklist":
+                        checklist_.SetActive(true);
+                        break;
                 }
             }
         }

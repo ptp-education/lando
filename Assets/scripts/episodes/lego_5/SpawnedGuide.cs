@@ -104,11 +104,11 @@ namespace Lando.Class.Lego5
         {
             HideAll();
 
-            ShareManager sm = (ShareManager)gameManager_;
-            if (sm != null)
-            {
-                transform.SetParent(sm.OverlayParent);
-            }
+            //ShareManager sm = (ShareManager)gameManager_;
+            //if (sm != null)
+            //{
+            //    transform.SetParent(sm.OverlayParent);
+            //}
         }
     }
 }

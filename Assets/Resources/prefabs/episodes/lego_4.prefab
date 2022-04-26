@@ -1015,13 +1015,6 @@ MonoBehaviour:
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
-    Path: prefabs/rfid/challenge-ui
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 1950537136018021120, guid: 8f2471d7cb4894e07838889aa3d68d6b, type: 3}
     Path: episodes/lego_4_assets/prefabs/momo
     Spawned: 0
@@ -1031,6 +1024,13 @@ MonoBehaviour:
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 5537306103791201731, guid: da425202c8bdf4073964820ed3fa4374, type: 3}
     Path: episodes/lego_4_assets/prefabs/lego_4_guide
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
+    Path: prefabs/rfid/challenge-ui
     Spawned: 0
   CommandLines:
   - TimeStamp: 2

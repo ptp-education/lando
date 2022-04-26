@@ -170,6 +170,17 @@ MonoBehaviour:
     - TimeStamp: 7.5
       Command: -print "printer.pdf"
       Ran: 0
+  - CommandToCall: -get-it
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk setup-make-sense
+      Ran: 0
+    - TimeStamp: 2.5
+      Command: -hideall
+      Ran: 0
+    - TimeStamp: 3.5
+      Command: -spawnoption "We got it!" "Can you repeat?"
+      Ran: 0
   NextNode: {fileID: 5624096542046490983}
   OptionHolders:
   - Name: '1: Explain tools'
@@ -191,6 +202,14 @@ MonoBehaviour:
       Node: {fileID: 0}
     - Name: Show rules
       Action: -explain-rules
+      Node: {fileID: 0}
+  - Name: 2. Get it
+    Options:
+    - Name: Did everyone get it?
+      Action: -get-it
+      Node: {fileID: 0}
+    - Name: Repeat
+      Action: -explain-rules -hideall
       Node: {fileID: 0}
   - Name: '3: Line up'
     Options:
@@ -267,13 +286,6 @@ MonoBehaviour:
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
-    Path: episodes/lego_1_assets/prefabs/lego_1_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
     Position: {x: 237, y: -21, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 8751515784926685579, guid: 1dad04a74844e41c6a811b9996b9c9a7, type: 3}
@@ -292,6 +304,13 @@ MonoBehaviour:
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 4875390486311538617, guid: c85ba762af991415c8dd284eb0a211f0, type: 3}
     Path: episodes/lego_1_assets/prefabs/farm
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
+    Path: episodes/lego_1_assets/prefabs/lego_1_guide
     Spawned: 0
   - TimeStamp: 0
     SpawnKey: 

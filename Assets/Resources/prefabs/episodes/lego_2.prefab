@@ -380,17 +380,17 @@ MonoBehaviour:
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5537306103791201731, guid: 910f25ce2300a49049b65c4136b396dc, type: 3}
-    Path: episodes/lego_2_assets/prefabs/lego_2_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
     Position: {x: 0, y: -341, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 5537306103791201731, guid: f0fd69fb380f34ce086b398c33289c36, type: 3}
     Path: episodes/lego_2_assets/prefabs/tower
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: 910f25ce2300a49049b65c4136b396dc, type: 3}
+    Path: episodes/lego_2_assets/prefabs/lego_2_guide
     Spawned: 0
   - TimeStamp: 0
     SpawnKey: 
@@ -408,6 +408,14 @@ MonoBehaviour:
       Ran: 0
     - TimeStamp: 0
       Command: -toggle-blocks-light
+      Ran: 0
+  - CommandToCall: -remove-baseplate
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk map-nextchallenge-no-baseplate
+      Ran: 0
+    - TimeStamp: 9.5
+      Command: -guideHintFence
       Ran: 0
   NextNode: {fileID: 5120980057423264439}
   OptionHolders:
@@ -451,7 +459,7 @@ MonoBehaviour:
       Action: -rfid refresh
       Node: {fileID: 0}
     - Name: Remove baseplate
-      Action: -character talk map-nextchallenge-no-baseplate
+      Action: -remove-baseplate
       Node: {fileID: 0}
     - Name: Offer hint
       Action: -character suggest-printer
@@ -465,7 +473,7 @@ MonoBehaviour:
       Action: -character print lego2-baseplate.pdf map-hint-baseplate -guideHintBaseplate
       Node: {fileID: 0}
     - Name: Build a table
-      Action: -character varied-talk lego2-build-on-table.pdf map-hint-table -guideHintTable
+      Action: -character varied-talk map-hint-table -guideHintTable
       Node: {fileID: 0}
     - Name: Thicker bridge
       Action: -character print lego2-thicker.pdf map-hint-thicker -guideHintThicker
@@ -1083,7 +1091,7 @@ MonoBehaviour:
       Action: -get-it
       Node: {fileID: 0}
     - Name: Repeat
-      Action: -explain-rules
+      Action: -instructions -hideall
       Node: {fileID: 0}
   - Name: '3: Line up'
     Options:
