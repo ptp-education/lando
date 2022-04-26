@@ -11,7 +11,6 @@ public class OnscreenCharacter : MonoBehaviour
 
     private static string kSharedVoRoot = "audio/shared_vo/";
 
-    private bool canReceiveAction_ = true;
     private bool firstWave_ = true;
     private GoTweenFlow walkFlow_;
 
@@ -29,10 +28,6 @@ public class OnscreenCharacter : MonoBehaviour
 
     public float Talk(List<string> audio, string root)
     {
-        if (!canReceiveAction_) return -1f;
-
-        canReceiveAction_ = false;
-
         string vo = audio[Random.Range(0, audio.Count)];
 
         float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true);
@@ -45,7 +40,6 @@ public class OnscreenCharacter : MonoBehaviour
         if (duration == -1f)
         {
             //did not find audio file in shared or episode root
-            canReceiveAction_ = true;
             return duration;
         }
 
@@ -53,7 +47,6 @@ public class OnscreenCharacter : MonoBehaviour
         Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
         {
             voiceBubble_.gameObject.SetActive(false);
-            canReceiveAction_ = true;
         }));
 
         return duration;
@@ -86,7 +79,13 @@ public class OnscreenCharacter : MonoBehaviour
         {
             files.Add("testing-exclaim-" + i.ToString());
         }
-        Talk(files, kSharedVoRoot);
+
+        anim_.Play("didi-cheer");
+
+        Go.to(transform, 1f, new GoTweenConfig().onComplete(t =>
+        {
+            Talk(files, kSharedVoRoot);
+        }));
     }
 
     public void PromptHint()
@@ -146,7 +145,7 @@ public class OnscreenCharacter : MonoBehaviour
 
         GoTweenFlow flow = new GoTweenFlow();
 
-        flow.insert(duration + 0.6f, new GoTween(transform, 0.2f, new GoTweenConfig().onComplete(t =>
+        flow.insert(duration + 0.2f, new GoTween(transform, 0.2f, new GoTweenConfig().onComplete(t =>
         {
             List<string> files = new List<string>();
             for (int i = 1; i <= 10; i++)
@@ -156,7 +155,7 @@ public class OnscreenCharacter : MonoBehaviour
             Talk(files, kSharedVoRoot);
         })));
 
-        flow.insert(duration + 2f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
+        flow.insert(duration + 1f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
         {
             CommandLineHelper.PrintPdf(print);
         })));

@@ -34,7 +34,10 @@ public class PromptButton : MonoBehaviour
         set
         {
             Button b = GetComponentInChildren<Button>();
-            b.interactable = value;
+            if (b != null)
+            {
+                b.interactable = value;
+            }
         }
     }
 

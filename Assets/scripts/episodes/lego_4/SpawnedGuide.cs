@@ -15,53 +15,77 @@ namespace Lando.Class.Lego4
         [SerializeField] private GameObject hintFurtherApart_;
         [SerializeField] private GameObject baseplate_;
         [SerializeField] private GameObject taller_;
+        [SerializeField] private GameObject explainer1_;
+        [SerializeField] private GameObject explainer2_;
+        [SerializeField] private GameObject explainer3_;
+        [SerializeField] private GameObject explainer4_;
 
         public override void ReceivedAction(string action)
         {
-            if (ArgumentHelper.ContainsCommand("-guideChecklist", action))
+            List<string> args = ArgumentHelper.ArgumentsFromCommand("-guide", action);
+            if (args.Count > 0)
             {
-                HideAll();
-                checklist_.SetActive(true);
-            } else if (ArgumentHelper.ContainsCommand("-guideHintInterlocking", action))
-            {
-                HideAll();
-                hintInterlocking_.SetActive(true);
-            } else if (ArgumentHelper.ContainsCommand("-guideHintSupports", action))
-            {
-                HideAll();
-                hintSupports_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintSupportsAndWall", action))
-            {
-                HideAll();
-                hintSupportsAndWalls_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintMoreWalls", action))
-            {
-                HideAll();
-                hintMoreWalls_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintFurtherApart", action))
-            {
-                HideAll();
-                hintFurtherApart_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideBaseplate", action))
-            {
-                HideAll();
-                baseplate_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideTaller", action))
-            {
-                HideAll();
-                taller_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHideGuides", action))
-            {
-                HideAll();
+                Hide();
+                switch (args[0])
+                {
+                    case "checklist":
+                        checklist_.SetActive(true);
+                        break;
+
+                    case "hintInterlocking":
+                        hintInterlocking_.SetActive(true);
+                        break;
+
+                    case "hintSupports":
+                        hintSupports_.SetActive(true);
+                        break;
+
+                    case "hintSupportsAndWalls":
+                        hintSupportsAndWalls_.SetActive(true);
+                        break;
+
+                    case "hintMoreWalls":
+                        hintMoreWalls_.SetActive(true);
+                        break;
+
+                    case "hintFurtherApart":
+                        hintFurtherApart_.SetActive(true);
+                        break;
+
+                    case "baseplate":
+                        baseplate_.SetActive(true);
+                        break;
+
+                    case "taller":
+                        taller_.SetActive(true);
+                        break;
+
+                    case "explainer-1":
+                        explainer1_.SetActive(true);
+                        break;
+
+                    case "explainer-2":
+                        explainer2_.SetActive(true);
+                        break;
+
+                    case "explainer-3":
+                        explainer3_.SetActive(true);
+                        break;
+
+                    case "explainer-4":
+                        explainer4_.SetActive(true);
+                        break;
+
+                }
             }
         }
 
+        public override void Hide()
+        {
+            base.Hide();
+            HideAll();
+
+        }
         private void HideAll()
         {
             Transform[] objects = GetComponentsInChildren<Transform>();
@@ -78,11 +102,11 @@ namespace Lando.Class.Lego4
         {
             HideAll();
 
-            ShareManager sm = (ShareManager)gameManager_;
-            if (sm != null)
-            {
-                transform.SetParent(sm.OverlayParent);
-            }
+            //ShareManager sm = (ShareManager)gameManager_;
+            //if (sm != null)
+            //{
+            //    transform.SetParent(sm.OverlayParent);
+            //}
         }
     }
 }

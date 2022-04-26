@@ -32,7 +32,7 @@ RectTransform:
   m_Children:
   - {fileID: 1194473397394618843}
   m_Father: {fileID: 2483146930805185111}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -381,12 +381,12 @@ RectTransform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
-  m_RootOrder: 11
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 423, y: -132}
-  m_SizeDelta: {x: 1045, y: 575}
+  m_AnchoredPosition: {x: 248.5, y: -175}
+  m_SizeDelta: {x: 878, y: 654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6094394290542168597
 CanvasRenderer:
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 745c3bb24b7c94476aef68a2e6adbd59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba37052121a34461083649d58da9132e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -456,7 +456,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -687,11 +687,11 @@ RectTransform:
   - {fileID: 3192479808363162136}
   - {fileID: 3026742919414272018}
   - {fileID: 8669513851178710939}
-  - {fileID: 4780071896149206191}
-  - {fileID: 4426508610269520581}
   - {fileID: 2615536447467854843}
   - {fileID: 5841432052364150877}
   - {fileID: 5196672335568223359}
+  - {fileID: 4780071896149206191}
+  - {fileID: 4426508610269520581}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -810,7 +810,7 @@ MonoBehaviour:
     Sound: audio/sfx/dino
   dino3_:
     Animal: {fileID: 21300000, guid: 63fe78e44c49944619691d6947c3af80, type: 3}
-    AnimalFailure: {fileID: 21300000, guid: 6e3b8b24946f241c6bc4b913b5ed7e08, type: 3}
+    AnimalFailure: {fileID: 21300000, guid: 002112f9b094d4b38846ad42e6cb1fa1, type: 3}
     AnimalSuccess: {fileID: 21300000, guid: 00ea9644d130741f0bab7f07a75013cc, type: 3}
     AnimalIcon: {fileID: 21300000, guid: c5885d228a79b4fdfa5c6e1f06884ef2, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: c1683ae807065438db0c7efdc34ca837, type: 3}
@@ -845,7 +845,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2483146930805185111}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

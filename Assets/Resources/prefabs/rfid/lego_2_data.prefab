@@ -43,31 +43,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalHints: 6
-  FirstChallenge: 1
   Challenges:
   - Name: 1
     Sprite: {fileID: 21300000, guid: faf7091bc6cf74d8193e5915d1e392d7, type: 3}
+    CompletedSprite: {fileID: 0}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: 
     RewardCommand: -character talk map-success-add-wood -tower-add-wood
-    ExtraBlocksAllowed: quarter
-    NextChallengeCommand: -character talk map-nextchallenge-bronze
+    RequirementsCommand: -character talk testing-announce-2
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-2
   - Name: 2
     Sprite: {fileID: 21300000, guid: 0273b14325a124e13a2c925573c0a54b, type: 3}
+    CompletedSprite: {fileID: 0}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: 
     RewardCommand: -character talk map-success-add-bronze -tower-add-bronze
-    ExtraBlocksAllowed: quarter
-    NextChallengeCommand: -character talk map-nextchallenge-silver
+    RequirementsCommand: -character talk testing-announce-5
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-5
   - Name: 3
     Sprite: {fileID: 21300000, guid: d6c7cea33baa94f0ab690a43af7e4ef9, type: 3}
+    CompletedSprite: {fileID: 0}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: 
     RewardCommand: -character talk map-success-add-silver -tower-add-silver
-    ExtraBlocksAllowed: quarter
-    NextChallengeCommand: -character talk map-nextchallenge-gold
+    RequirementsCommand: -character talk testing-announce-10
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-10
   - Name: 4
     Sprite: {fileID: 21300000, guid: 927705b475759406597012d15e5a5b04, type: 3}
+    CompletedSprite: {fileID: 0}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: 
     RewardCommand: -character talk map-success-add-gold -tower-add-gold
-    ExtraBlocksAllowed: quarter
-    NextChallengeCommand: -character talk map-nextchallenge-obsidian
+    RequirementsCommand: -character talk testing-announce-15
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-15
   - Name: 5
     Sprite: {fileID: 21300000, guid: 6cbfe50966928465fbf2d5480cea3ea7, type: 3}
+    CompletedSprite: {fileID: 0}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: 
     RewardCommand: -character talk map-success-add-obsidian -tower-add-obsidian
-    ExtraBlocksAllowed: quarter
-    NextChallengeCommand: 
+    RequirementsCommand: -character talk testing-announce-20
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-20

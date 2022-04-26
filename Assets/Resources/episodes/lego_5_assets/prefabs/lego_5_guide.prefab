@@ -952,7 +952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8ad3d61decefb44d782a8c79031d69cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 63d767b1049864065a93271b0d9cb837, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   hintMoreString_: {fileID: 6733373311403596228}
   hintWiderTower_: {fileID: 1621731140506818462}
   hintArch_: {fileID: 6462402450071813027}
-  hintHigherUp_: {fileID: 0}
+  hintHigherUp_: {fileID: 8028606601699130991}
 --- !u!1 &7867934612590100641
 GameObject:
   m_ObjectHideFlags: 0

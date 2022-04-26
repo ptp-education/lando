@@ -7,100 +7,76 @@ namespace Lando.Class.Lego3
 {
     public class SpawnedGuide : SpawnedObject
     {
-        [SerializeField] private GameObject craneOverlay_;
-        [SerializeField] private GameObject craneOverlayWeight_;
+        [SerializeField] private GameObject craneExplainer1_;
+        [SerializeField] private GameObject craneExplainer2_;
+        [SerializeField] private GameObject craneExplainer3_;
+        [SerializeField] private GameObject craneExplainer4_;
+        [SerializeField] private GameObject craneExplainer5_;
+        [SerializeField] private GameObject craneExplainer6_;
         [SerializeField] private GameObject checklist_;
-        [SerializeField] private GameObject hint1Cup_;
+
         [SerializeField] private GameObject hintAdditionalBeam_;
         [SerializeField] private GameObject hintCounterweight_;
-        [SerializeField] private GameObject hintAdditionalCounterweight_;
-        [SerializeField] private GameObject hintNotch_;
+        [SerializeField] private GameObject hintMoreCounterweight_;
         [SerializeField] private GameObject hintFurtherCounterweight_;
+        [SerializeField] private GameObject hintNotch_;
         [SerializeField] private GameObject hintInterlocking_;
-        [SerializeField] private GameObject hintMoreLayers_;
-        [SerializeField] private GameObject crane1_;
-        [SerializeField] private GameObject crane2_;
-        [SerializeField] private GameObject crane3_;
-
+        [SerializeField] private GameObject hintLayers_;
 
         public override void ReceivedAction(string action)
         {
-            if (ArgumentHelper.ContainsCommand("-guideCraneOverlay", action))
+            List<string> args = ArgumentHelper.ArgumentsFromCommand("-guide", action);
+            if (args.Count > 0)
             {
-                HideAll();
-                craneOverlay_.SetActive(true);
-            } else if (ArgumentHelper.ContainsCommand("-guideCraneOverlayWeight", action))
-            {
-                HideAll();
-                craneOverlayWeight_.SetActive(true);
-            } else if (ArgumentHelper.ContainsCommand("-guideCrane1Cup", action))
-            {
-                HideAll();
-                hint1Cup_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintAdditionalBeam", action))
-            {
-                HideAll();
-                hintAdditionalBeam_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintCounterweight", action))
-            {
-                HideAll();
-                hintCounterweight_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintAdditionalCounterweight", action))
-            {
-                HideAll();
-                hintAdditionalCounterweight_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintNotch", action))
-            {
-                HideAll();
-                hintNotch_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintFurtherCounterweight", action))
-            {
-                HideAll();
-                hintFurtherCounterweight_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintInterlocking", action))
-            {
-                HideAll();
-                hintInterlocking_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHintMoreLayers", action))
-            {
-                HideAll();
-                hintMoreLayers_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideChecklist", action))
-            {
-                HideAll();
-                checklist_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideRealCrane", action))
-            {
-                HideAll();
-                crane1_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideCraneSculpture", action))
-            {
-                HideAll();
-                crane2_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideCraneCounterweight", action))
-            {
-                HideAll();
-                crane3_.SetActive(true);
-            }
-            else if (ArgumentHelper.ContainsCommand("-guideHideGuides", action))
-            {
-                HideAll();
+                Hide();
+                switch (args[0])
+                {
+                    case "explainer-1":
+                        craneExplainer1_.SetActive(true);
+                        break;
+                    case "explainer-2":
+                        craneExplainer2_.SetActive(true);
+                        break;
+                    case "explainer-3":
+                        craneExplainer3_.SetActive(true);
+                        break;
+                    case "explainer-4":
+                        craneExplainer4_.SetActive(true);
+                        break;
+                    case "explainer-5":
+                        craneExplainer5_.SetActive(true);
+                        break;
+                    case "explainer-6":
+                        craneExplainer6_.SetActive(true);
+                        break;
+                    case "additional-beam":
+                        hintAdditionalBeam_.SetActive(true);
+                        break;
+                    case "counterweight":
+                        hintCounterweight_.SetActive(true);
+                        break;
+                    case "more-counterweight":
+                        hintMoreCounterweight_.SetActive(true);
+                        break;
+                    case "further-counterweight":
+                        hintFurtherCounterweight_.SetActive(true);
+                        break;
+                    case "notch":
+                        hintNotch_.SetActive(true);
+                        break;
+                    case "interlocking":
+                        hintInterlocking_.SetActive(true);
+                        break;
+                    case "layers":
+                        hintLayers_.SetActive(true);
+                        break; ;
+                }
             }
         }
 
-        private void HideAll()
+        public override void Hide()
         {
+            base.Hide();
             Transform[] objects = GetComponentsInChildren<Transform>();
             for (int i = 0; i < objects.Length; i++)
             {
@@ -113,13 +89,13 @@ namespace Lando.Class.Lego3
 
         public override void Reset()
         {
-            HideAll();
+            Hide();
 
-            ShareManager sm = (ShareManager)gameManager_;
-            if (sm != null)
-            {
-                transform.SetParent(sm.OverlayParent);
-            }
+            //ShareManager sm = (ShareManager)gameManager_;
+            //if (sm != null)
+            //{
+            //    transform.SetParent(sm.OverlayParent);
+            //}
         }
     }
 }

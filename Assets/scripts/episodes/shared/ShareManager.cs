@@ -437,6 +437,9 @@ public class ShareManager : GameManager
             case "talk":
                 characters.ForEach(c => c.Talk(args.GetRange(1, args.Count - 1), episode_.VORoot));
                 break;
+            case "varied-talk":
+                characters.ForEach(c => c.TalkHint(args[1], episode_.VORoot));
+                break;
             case "cheer":
                 characters.ForEach(c => c.Cheer(args.GetRange(1, args.Count - 1), episode_.VORoot));
                 break;

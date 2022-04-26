@@ -279,8 +279,8 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 376, y: -320, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+  - TalkingPosition: {x: 571, y: -256, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -350,7 +350,7 @@ MonoBehaviour:
       Command: -character talk setup-receipt-rules
       Ran: 0
     - TimeStamp: 7.5
-      Command: -print "lando-greet.pdf"
+      Command: -print "printer.pdf"
       Ran: 0
   - CommandToCall: -get-it
     StoredCommands:
@@ -519,8 +519,8 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 376, y: -320, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+  - TalkingPosition: {x: 571, y: -256, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -575,7 +575,7 @@ MonoBehaviour:
       Command: '-character talk home-success-1a home-success-1b home-success-1c home-success-1d
         home-success-1e home-success-1f '
       Ran: 0
-    - TimeStamp: 4.5
+    - TimeStamp: 6
       Command: -swing increment
       Ran: 0
   NextNode: {fileID: 2352211162201071877}
@@ -823,6 +823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 6374387730864682865}
+  StartingNode: {fileID: 3885586092461362982}
   VORoot: audio/lego_5/
   ChallengeData: {fileID: 5750723246018985116, guid: 0f733b1a4a28f45839f7c67bcf3d47a0, type: 3}
