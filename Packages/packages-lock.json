@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.andrewk.ufrplugin": {
+      "version": "https://github.com/akillingbeck89/uFr-Unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3b620f93ef10ff3f01f8c80135dd85bf61205cdc"
+    },
     "com.unity.2d.animation": {
       "version": "6.0.5",
       "depth": 0,
