@@ -17,6 +17,7 @@ namespace uFrUnity
 		public UInt32 reader_type = 0;
 		public string ftdi_sn = "";
 		public string ftdi_description = "";
+		public DLCARDTYPE LastConnectedCardType = default;
 
 		public uFReader()
 		{
@@ -169,6 +170,21 @@ namespace uFrUnity
 
 		}
 
+		public DL_STATUS GetCardType()
+		{
+			DL_STATUS status = DL_STATUS.UFR_OK;
+			byte bDLCardType = 0;
+			unsafe
+			{
+				status = EntryPoints.GetDlogicCardType(this.hnd, &bDLCardType);
+			}
+
+			LastConnectedCardType = (DLCARDTYPE)bDLCardType;
+
+			return status;
+
+		}
+
 		public DL_STATUS GetCardIdEx(ref CARD_SAK Sak, ref byte[] Uid)
 		{
 			DL_STATUS status = DL_STATUS.UFR_OK;
@@ -182,8 +198,10 @@ namespace uFrUnity
 			{
 
 				fixed (byte* pData = baCardUID)
-
+				{
 					status = EntryPoints.GetCardIdEx(this.hnd, &bCardType, pData, &bUidSize);
+				}
+					
 			}
 
 			Sak = (CARD_SAK)bCardType;
@@ -196,8 +214,56 @@ namespace uFrUnity
 			return status;
 		}
 
-		public DL_STATUS read(int block_nr, byte[] data)
+		public DL_STATUS Read(out string data)
 		{
+			DL_STATUS status = GetCardType();
+			if (status != DL_STATUS.UFR_OK)
+			{
+				data = null;
+				return status;
+			}
+
+			switch (LastConnectedCardType)
+			{
+				case DLCARDTYPE.DL_NTAG_203:
+				case DLCARDTYPE.DL_NTAG_210:
+				case DLCARDTYPE.DL_NTAG_212:
+				case DLCARDTYPE.DL_NTAG_213:
+				case DLCARDTYPE.DL_NTAG_215:
+				case DLCARDTYPE.DL_NTAG_216:
+					ReadNDEF(out data);
+					break;
+				default:
+					ReadBlock(out data);
+					break;
+			}
+			
+
+			return status;
+		}
+
+		public DL_STATUS ReadNDEF(out string data)
+		{
+			DL_STATUS status;
+			byte[] text = new byte[1000];
+			status = EntryPoints.ReadNdefRecord_Text(this.hnd, text);
+
+			if (status == DL_STATUS.UFR_OK)
+			{
+
+				data = System.Text.Encoding.UTF8.GetString(text);
+			}
+			else
+			{
+				data = null;
+			}
+			return status;
+		}
+
+		public DL_STATUS ReadBlock(out string data)
+		{
+			byte[] text = new byte[MaxBytes()];
+			int block_nr = 1;
 			DL_STATUS status;
 			byte block_address = (byte)block_nr;
 			byte auth_mode = (byte)MIFARE_AUTHENTICATION.MIFARE_AUTHENT1B;
@@ -205,11 +271,25 @@ namespace uFrUnity
 
 			unsafe
 			{
-				fixed (byte* ptr_data = data)
-				fixed (byte* ptr_key = key)
-
-					status = EntryPoints.BlockRead_PK(hnd, ptr_data, block_address, auth_mode,
+				fixed (byte* ptr_data = text)
+				{
+					fixed (byte* ptr_key = key)
+					{
+						status = EntryPoints.BlockRead_PK(hnd, ptr_data, block_address, auth_mode,
 							ptr_key);
+					}
+				}
+
+			}
+
+			if (status == DL_STATUS.UFR_OK)
+			{
+
+				data = System.Text.Encoding.Default.GetString(text);
+			}
+			else
+			{
+				data = null;
 			}
 
 			return status;
@@ -225,10 +305,13 @@ namespace uFrUnity
 			unsafe
 			{
 				fixed (byte* ptr_data = data)
-				fixed (byte* ptr_key = key)
-
-					status = EntryPoints.BlockWrite_PK(hnd, ptr_data, block_address, auth_mode,
+				{
+					fixed (byte* ptr_key = key) 
+					{
+						status = EntryPoints.BlockWrite_PK(hnd, ptr_data, block_address, auth_mode,
 							ptr_key);
+					}
+				}	
 			}
 
 			return status;
@@ -247,6 +330,56 @@ namespace uFrUnity
 				return (status == DL_STATUS.UFR_OK ? NumberOfDevices : 0);
 			}
 		}
+
+		//max card blocks
+		public int MaxBlock()
+		{
+			int iResult = 0;
+
+			switch (LastConnectedCardType)
+			{
+
+				case DLCARDTYPE.DL_MIFARE_CLASSIC_1K:
+					iResult = MAX_SECTORS_1k * 4;
+					break;
+				case DLCARDTYPE.DL_MIFARE_CLASSIC_4K:
+					iResult = ((MAX_SECTORS_1k * 2) * 4) + ((MAX_SECTORS_1k - 8) * 16);
+					break;
+				case DLCARDTYPE.DL_MIFARE_ULTRALIGHT:
+					iResult = MAX_PAGE_ULTRALIGHT;
+					break;
+				case DLCARDTYPE.DL_MIFARE_ULTRALIGHT_C:
+					iResult = MAX_PAGE_ULTRALIGHT_C;
+					break;
+				case DLCARDTYPE.DL_NTAG_203:
+					iResult = MAX_PAGE_NTAG203;
+					break;
+			}
+
+			return iResult;
+		}
+
+		//max card bytes 
+		public int MaxBytes()
+		{
+			switch (LastConnectedCardType)
+			{
+				case DLCARDTYPE.DL_NTAG_203:
+					return MAX_BYTES_NTAG_203;
+				case DLCARDTYPE.DL_MIFARE_ULTRALIGHT:
+					return MAX_BYTES_ULTRALIGHT;
+				case DLCARDTYPE.DL_MIFARE_ULTRALIGHT_C:
+					return MAX_BYTES_ULTRALIGHT_C;
+				case DLCARDTYPE.DL_MIFARE_CLASSIC_1K:
+					return MAX_BYTES_CLASSIC_1K;
+				case DLCARDTYPE.DL_MIFARE_CLASSIC_4K:
+				case DLCARDTYPE.DL_MIFARE_PLUS_S_4K:
+					return MAX_BYTES_CLASSIC_4k;
+				default:
+					return MAX_BYTES_NTAG_203;
+			}
+		}
+
 
 	}
 

@@ -5,7 +5,6 @@ using UnityEngine;
 using static uFrUnity.uFApi;
 using System.Threading;
 using System.Collections.Concurrent;
-using System.Text;
 using System.Linq;
 
 namespace uFrUnity
@@ -25,6 +24,9 @@ namespace uFrUnity
 			public bool Connected => Reader != null && Reader.opened;
 			public bool IsReady => Data != null && Data.CardUID != null;
 			public bool CardConnected = false;
+
+			public bool HaveReadCard => IsReady && LastReadCardUID == Data.CardUID;
+			public bool isReading = false;
 
 			public void ResetCardReads()
 			{
@@ -46,8 +48,6 @@ namespace uFrUnity
 		private ConcurrentQueue<SuccessfulRead> SuccessulReads = new ConcurrentQueue<SuccessfulRead>();
 		public List<ReaderConnection> m_readers = new List<ReaderConnection>();
 
-		private bool m_isBusy = false;
-		private bool m_checkingInfo = false;
 		private CancellationTokenSource m_cancellationTokenSource = new CancellationTokenSource();
 
 
@@ -120,7 +120,7 @@ namespace uFrUnity
 										else
 										{
 											_ = Task.Run(() => UpdateCardAndConnectionInfo(newConn));
-											_ = Task.Run(() => ReadCard(newConn));
+											//_ = Task.Run(() => ReadCard(newConn));
 										}
 									}
 									else
@@ -151,49 +151,66 @@ namespace uFrUnity
 			{
 				try
 				{
-					if (!Ok(GetCardConnectionInfo(ref conn, ref m_checkingInfo), out var status)) {
-						if (status == DL_STATUS.UFR_NO_CARD || status == DL_STATUS.UFR_FT_STATUS_ERROR_5 || status == DL_STATUS.UFR_PARAMETERS_ERROR)
+					// If a card is connected (but we've already read it), keep checking connection info
+					// OR if a card was not connected
+					if (conn.CardConnected && conn.HaveReadCard || !conn.CardConnected)
+					{
+						if (!Ok(GetCardConnectionInfo(ref conn), out var status))
 						{
-							conn.CardConnected = false;
+							if (!UpdateConnectionStatus(status, conn)) {
+								Errors.Enqueue($"Failed to GetCardConnectionInfo {conn.ReaderSN} {status}");
+							}
+	
 						} else
 						{
-							Errors.Enqueue($"Failed to GetCardConnectionInfo {conn.ReaderSN} {status}");
+							conn.CardConnected = true;
 						}
-					} else
+					} else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
 					{
-						conn.CardConnected = true;
+						ReadCard(conn);
 					}
+
 				}
 				catch (Exception ex)
 				{
 					Errors.Enqueue(ex.Message);
 				}
 
-				await Task.Delay(100);
+				await Task.Yield();
 			}
 
 			Info.Enqueue($"UpdateCardAndConnectionInfo Thread Stopped {conn.ReaderSN}");
 		}
 
-		private async void ReadCard(ReaderConnection conn)
+		private bool UpdateConnectionStatus(DL_STATUS status, ReaderConnection conn)
 		{
-			Info.Enqueue($"ReadCard Thread Started {conn.ReaderSN}");
-			while (!m_cancellationTokenSource.IsCancellationRequested && conn.Connected)
+			if (status == DL_STATUS.UFR_NO_CARD || status == DL_STATUS.UFR_FT_STATUS_ERROR_5 || status == DL_STATUS.UFR_PARAMETERS_ERROR)
 			{
-				if (conn.CardConnected && conn.IsReady && conn.LastReadCardUID != conn.Data.CardUID)
-				{
-					if (!Ok(Read(ref conn, ref m_isBusy), out var status))
-					{
-						//Errors.Enqueue($"Failed to Read card info for reader: {conn.ReaderSN} {status}");
-					} else
-					{
-						SuccessulReads.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.Data });
-					}
-				}
-
-				await Task.Delay(200);
+				conn.CardConnected = false;
+				conn.ResetCardReads();
+				return true;
 			}
-			Info.Enqueue($"ReadCard Thread Stopped {conn.ReaderSN}");
+
+			return false;
+		}
+
+		private void ReadCard(ReaderConnection conn)
+		{
+			System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+			conn.isReading = true;
+			sw.Start();
+			if (!Ok(Read(ref conn), out var status))
+			{
+				Errors.Enqueue($"Failed to Read card info for reader: {conn.ReaderSN} {status}");
+				UpdateConnectionStatus(status, conn);
+			}
+			else
+			{
+				SuccessulReads.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.Data });
+			}
+			sw.Stop();
+			conn.isReading = false;
+			Info.Enqueue($"ReadCard took {sw.ElapsedMilliseconds}");
 		}
 
 		private void Update()

@@ -68,11 +68,13 @@ namespace uFrUnity
 
 		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, EntryPoint = "GetDlogicCardType")]
 		public static extern DL_STATUS GetDlogicCardType(byte* bCardType);
+
 		#endregion
 
 		#region MULTI_READERS
 
-
+		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, EntryPoint = "GetDlogicCardTypeM")]
+		public static extern DL_STATUS GetDlogicCardType(UFR_HANDLE hwnd, byte* bCardType);
 		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, EntryPoint = "ReaderList_UpdateAndGetCount")]
 		internal static extern DL_STATUS ReaderList_UpdateAndGetCount(Int32* NumberOfDevices);
 
@@ -137,6 +139,8 @@ namespace uFrUnity
 												  byte auth_mode,
 												  byte* key);
 
+		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, EntryPoint = "ReadNdefRecord_TextM")]
+		public static extern DL_STATUS ReadNdefRecord_Text(UFR_HANDLE hndUFR, byte[] text);
 		#endregion
 	}
 }

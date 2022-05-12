@@ -43,6 +43,42 @@
 			MF1ICS20 = 0x09,
 		}
 
+		public enum DLCARDTYPE
+		{
+			DL_MIFARE_ULTRALIGHT = 0x01,
+			DL_MIFARE_ULTRALIGHT_EV1_11 = 0x02,
+			DL_MIFARE_ULTRALIGHT_EV1_21 = 0x03,
+			DL_MIFARE_ULTRALIGHT_C = 0x04,
+			DL_NTAG_203 = 0x05,
+			DL_NTAG_210 = 0x06,
+			DL_NTAG_212 = 0x07,
+			DL_NTAG_213 = 0x08,
+			DL_NTAG_215 = 0x09,
+			DL_NTAG_216 = 0x0A,
+			DL_MIFARE_MINI = 0x20,
+			DL_MIFARE_CLASSIC_1K = 0x21,
+			DL_MIFARE_CLASSIC_4K = 0x22,
+			DL_MIFARE_PLUS_S_2K = 0x23,
+			DL_MIFARE_PLUS_S_4K = 0x24,
+			DL_MIFARE_PLUS_X_2K = 0x25,
+			DL_MIFARE_PLUS_X_4K = 0x26,
+			DL_MIFARE_DESFIRE = 0x27,
+			DL_MIFARE_DESFIRE_EV1_2K = 0x28,
+			DL_MIFARE_DESFIRE_EV1_4K = 0x29,
+			DL_MIFARE_DESFIRE_EV1_8K = 0x2A
+		}
+
+		//max bytes of card type     
+		public const byte MAX_BYTES_NTAG_203 = 144, MAX_BYTES_ULTRALIGHT = 48, MAX_BYTES_ULTRALIGHT_C = 144;
+		public const short MAX_BYTES_CLASSIC_1K = 752, MAX_BYTES_CLASSIC_4k = 3440;
+
+		// sectors and blocks
+		public const byte MAX_SECTORS_1k = 0x10, MAX_SECTORS_4k = 0x28;
+		//MAX_BLOCK              = 0x10;
+
+		//max page for NTAG203 and ULTRALIGHT 
+		public const byte MAX_PAGE_NTAG203 = 39, MAX_PAGE_ULTRALIGHT = 15, MAX_PAGE_ULTRALIGHT_C = 39;
+
 
 		public enum DL_STATUS
 		{
@@ -127,42 +163,11 @@
 
 		public const byte DL_OK = 0, KEY_INDEX = 0;
 
-		public const byte DL_MIFARE_ULTRALIGHT = 0x01,
-		   DL_MIFARE_ULTRALIGHT_EV1_11 = 0x02,
-		   DL_MIFARE_ULTRALIGHT_EV1_21 = 0x03,
-		   DL_MIFARE_ULTRALIGHT_C = 0x04,
-		   DL_NTAG_203 = 0x05,
-		   DL_NTAG_210 = 0x06,
-		   DL_NTAG_212 = 0x07,
-		   DL_NTAG_213 = 0x08,
-		   DL_NTAG_215 = 0x09,
-		   DL_NTAG_216 = 0x0A,
-		   DL_MIFARE_MINI = 0x20,
-		   DL_MIFARE_CLASSIC_1K = 0x21,
-		   DL_MIFARE_CLASSIC_4K = 0x22,
-		   DL_MIFARE_PLUS_S_2K = 0x23,
-		   DL_MIFARE_PLUS_S_4K = 0x24,
-		   DL_MIFARE_PLUS_X_2K = 0x25,
-		   DL_MIFARE_PLUS_X_4K = 0x26,
-		   DL_MIFARE_DESFIRE = 0x27,
-		   DL_MIFARE_DESFIRE_EV1_2K = 0x28,
-		   DL_MIFARE_DESFIRE_EV1_4K = 0x29,
-		   DL_MIFARE_DESFIRE_EV1_8K = 0x2A;
 
 		public const byte FRES_OK_LIGHT = 4,
 			 FRES_OK_SOUND = 0,
 			 FERR_LIGHT = 2,
 			 FERR_SOUND = 0;
-
-		public const byte
-			 MAX_SECTORS_1k = 16,
-			 MAX_SECTORS_4k = 40,
-			 MAX_BYTES_NTAG_203 = 144,
-			 MAX_BYTES_ULTRALIGHT = 48,
-			 MAX_BYTES_ULTRALIGHT_C = 144;
-		public const short
-		   MAX_BYTES_CLASSIC_1K = 752,
-		   MAX_BYTES_CLASSIC_4k = 3440;
 
 
 		#region API
@@ -223,58 +228,49 @@
 
 		}
 
-		public static DL_STATUS GetCardConnectionInfo(ref uFrUnityPlugin.ReaderConnection reader, ref bool CheckingInfo)
+		public static DL_STATUS GetCardConnectionInfo(ref uFrUnityPlugin.ReaderConnection reader)
 		{
-			CheckingInfo = true;
 			CARD_SAK Sak = CARD_SAK.UNKNOWN;
 			byte[] baUid = new byte[7];
 			var uFReader = reader.Reader;
 			DL_STATUS status = DL_STATUS.UFR_READING_ERROR;
+			
 			if (uFReader != null)
 			{
 				if (uFReader.opened)
 				{
-					status = uFReader.GetCardIdEx(ref Sak, ref baUid);
-					if (status != DL_STATUS.UFR_OK)
+					if (Ok(uFReader.GetCardType(), out status))
 					{
-						if (status == DL_STATUS.UFR_NO_CARD)
+						if (Ok(uFReader.GetCardIdEx(ref Sak, ref baUid), out status))
 						{
-							reader.ResetCardReads();
+							string sBuffer = null;
+							for (byte bCounter = 0; bCounter < baUid.Length; bCounter++)
+							{
+								sBuffer += baUid[bCounter].ToString("X2");
+							}
+							if (reader.Data == null)
+							{
+								reader.Data = new ConnectionInfo();
+							}
+							reader.Data.CardUID = sBuffer;
+							reader.Data.CardTypeString = reader.Reader.LastConnectedCardType.ToString();
+							reader.Data.CardType = (byte)reader.Reader.LastConnectedCardType;
 						}
-
 					}
-					else
-					{
-						string sBuffer = null;
-						for (byte bCounter = 0; bCounter < baUid.Length; bCounter++)
-						{
-							sBuffer += baUid[bCounter].ToString("X2");
-						}
-						if (reader.Data == null)
-						{
-							reader.Data = new ConnectionInfo();
-						}
-						reader.Data.CardUID = sBuffer;
-						reader.Data.CardTypeString = Sak.ToString();
-						reader.Data.CardType = (byte)Sak;
-					}
-
 				}
 			}
 
 			return status;
 		}
 
-		public static DL_STATUS Read(ref uFrUnityPlugin.ReaderConnection reader, ref bool IsBusy)
+		public static DL_STATUS Read(ref uFrUnityPlugin.ReaderConnection reader)
 		{
 			try
 			{
-				IsBusy = true;
 
-				byte[] data = new byte[16];
-				if (Ok(reader.Reader.read(1, data), out var status))
+				if (Ok(reader.Reader.Read(out string data), out var status))
 				{
-					reader.Data.Data = System.Text.Encoding.Default.GetString(data);
+					reader.Data.Data = data;
 					reader.Data.Data = Regex.Replace(reader.Data.Data, @"\p{C}+", String.Empty);
 					reader.LastReadCardUID = reader.Data.CardUID;
 					return status;
@@ -287,10 +283,6 @@
 			catch (Exception)
 			{
 				return DL_STATUS.UFR_COMMUNICATION_ERROR;
-			}
-			finally
-			{
-				IsBusy = false;
 			}
 		}
 
