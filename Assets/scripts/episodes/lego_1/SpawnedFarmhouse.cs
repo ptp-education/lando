@@ -82,12 +82,6 @@ public class SpawnedFarmhouse : SpawnedObject
         width = width * levelHolder_.rectTransform.sizeDelta.x;
 
         levelProgress_.rectTransform.sizeDelta = new Vector2(width, levelHolder_.rectTransform.sizeDelta.y);
-
-        Debug.LogWarning("house " + currentTier.ToString());
-        if (currentTier == 0)
-        {
-            Debug.Log("stop");
-        }
         farmhouse_.sprite = farmhouseOptions_[Mathf.Min(currentTier, farmhouseOptions_.Count - 1)];
         farmhouse_.SetNativeSize();
 

@@ -152,11 +152,15 @@ public class PrompterManager : GameManager
 #if UNITY_EDITOR
         PromptButton rfid1Button = Instantiate<PromptButton>(commandsButtonPrefab_);
         rfid1Button.transform.SetParent(defaultHolder.transform, true);
-        rfid1Button.Init("RFID 1 Scan", GameManager.ACTION_PREFIX + "-rfid new-id 9999", "", CommandButtonPressed);
+        rfid1Button.Init("Lego Store Scan", GameManager.ACTION_PREFIX + "-nfc-store scan 9999", "", CommandButtonPressed);
 
         PromptButton rfid2Button = Instantiate<PromptButton>(commandsButtonPrefab_);
         rfid2Button.transform.SetParent(defaultHolder.transform, true);
-        rfid2Button.Init("RFID 2 Scan", GameManager.ACTION_PREFIX + "-rfid new-id 8888", "", CommandButtonPressed);
+        rfid2Button.Init("Magic Printer Scan", GameManager.ACTION_PREFIX + "-nfc-printer scan 9999", "", CommandButtonPressed);
+
+        PromptButton rfid3Button = Instantiate<PromptButton>(commandsButtonPrefab_);
+        rfid3Button.transform.SetParent(defaultHolder.transform, true);
+        rfid3Button.Init("Magic Pad Scan", GameManager.ACTION_PREFIX + "-nfc-test scan 9999", "", CommandButtonPressed);
 #endif
 
         foreach (EpisodeNode.OptionHolder holder in currentNode_.OptionHolders)

@@ -53,11 +53,7 @@ public class SpawnedChallengeUi : SpawnedObject
                     break;
                 case "refresh":
                     HandleRefreshChallengeUi(lastRfid_);
-                    HandleLoad(lastRfid_);
-                    break;
-                case "load":
-                    //call the necessary commands to set the proper challenge
-                    HandleLoad(lastRfid_);
+                    HandleScanCommand(lastRfid_);
                     break;
                 case "fail":
                     HandleFail(lastRfid_);
@@ -121,7 +117,6 @@ public class SpawnedChallengeUi : SpawnedObject
         {
             ShowChallengeUi(rfid);
             HandleScanCommand(rfid);
-            HandleLoad(rfid);
         } else
         {
             HandleReward(rfid, groupChallenge_);
@@ -248,19 +243,6 @@ public class SpawnedChallengeUi : SpawnedObject
         if (c != null && c.ScanRfidCommand != null && c.ScanRfidCommand.Length > 0)
         {
             gameManager_.SendNewAction(c.ScanRfidCommand);
-        }
-    }
-
-    private void HandleLoad(string rfid)
-    {
-        if (rfid == null || rfid.Length == 0)
-        {
-            return;
-        }
-        ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
-        if (c != null && c.LoadCommand != null && c.LoadCommand.Length > 0)
-        {
-            gameManager_.SendNewAction(c.LoadCommand);
         }
     }
 

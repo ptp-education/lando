@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/prompt_2.unity
     guid: 1153000ef27a646ea9a35112c9cfae23
+  - enabled: 1
+    path: Assets/scenes/prompt_3.unity
+    guid: f64cb09302c31495ab0b6368e6c4da1d
   m_configObjects: {}

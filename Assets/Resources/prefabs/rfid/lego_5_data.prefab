@@ -47,44 +47,48 @@ MonoBehaviour:
   - Name: 100g
     Sprite: {fileID: 21300000, guid: 0a10a0e2d207b45b18a59988cffc7253, type: 3}
     CompletedSprite: {fileID: 21300000, guid: af3deb3dc5ee940d7951bea465fb8477, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: -swing spawn 100
+    ScanRfidCommand: -swing spawn 100
+    LoadCommand: 
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-100
     EncourageCommand: 
     NextChallengeCommand: 
+    Rewards: 
   - Name: 200g
     Sprite: {fileID: 21300000, guid: bd88c012a23ff4761bdd6d818215cbea, type: 3}
     CompletedSprite: {fileID: 21300000, guid: 14d33478682a54eb688943fb4ec0ab97, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: -swing spawn 200
+    ScanRfidCommand: -swing spawn 200
+    LoadCommand: 
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-200
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-200
+    Rewards: 
   - Name: 500g
     Sprite: {fileID: 21300000, guid: e42ec9966a1a84388a2bad9c61bbf333, type: 3}
     CompletedSprite: {fileID: 21300000, guid: f1e5c1f92cf1943eb8385b014b61f910, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: -swing spawn 500
+    ScanRfidCommand: -swing spawn 500
+    LoadCommand: 
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-500
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-500
+    Rewards: 
   - Name: 800g
     Sprite: {fileID: 21300000, guid: 6bb8658da389a4f28aced968c17af490, type: 3}
     CompletedSprite: {fileID: 21300000, guid: 2825bb1b86910448cbd02c13f0bc8cf6, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: -swing spawn 800
+    ScanRfidCommand: -swing spawn 800
+    LoadCommand: 
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsCommand: -character talk testing-announce-800
     EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-800
+    Rewards: 

@@ -81,11 +81,7 @@ public class OnscreenCharacter : MonoBehaviour
         }
 
         anim_.Play("didi-cheer");
-
-        Go.to(transform, 1f, new GoTweenConfig().onComplete(t =>
-        {
-            Talk(files, kSharedVoRoot);
-        }));
+        Talk(files, kSharedVoRoot);
     }
 
     public void PromptHint()
@@ -140,7 +136,7 @@ public class OnscreenCharacter : MonoBehaviour
 
     public float TalkAndPrint(List<string> audio, string print, string root)
     {
-        float duration = TalkHint(audio[0], root);
+        float duration = ProgressionTalk(audio[0], root);
         if (duration == -1f) return -1f;
 
         GoTweenFlow flow = new GoTweenFlow();
@@ -170,7 +166,7 @@ public class OnscreenCharacter : MonoBehaviour
         return duration;
     }
 
-    public float TalkHint(string audio, string root)
+    public float ProgressionTalk(string audio, string root)
     {
         List<string> previous = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.HintSpeechProgression);
         if (previous == null)

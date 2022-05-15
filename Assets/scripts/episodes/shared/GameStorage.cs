@@ -24,6 +24,12 @@ public class GameStorage
         HintSpeechProgression
     }
 
+    public enum InventoryType
+    {
+        CupOfLegos,
+        Hint
+    }
+
     public class Integer
     {
         public int value = 0;
@@ -40,6 +46,7 @@ public class GameStorage
         public List<string> CompletedChallenges = new List<string>();
         public int HintsGiven = 0;
         public Dictionary<string, bool> BlocksGiven = new Dictionary<string, bool>();
+        public List<GameStorage.InventoryType> Inventory = new List<GameStorage.InventoryType>();
     }
 
     private Dictionary<string, object> dict_ = new Dictionary<string, object>();
