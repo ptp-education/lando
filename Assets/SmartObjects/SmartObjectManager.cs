@@ -61,7 +61,8 @@ namespace Lando.SmartObjects
 
 		private void OnDestroy()
 		{
-			m_ufrPlugin.OnReadData -= M_ufrPlugin_OnReadData;
+			//m_ufrPlugin.OnReadData -= M_ufrPlugin_OnReadData;
+			m_ufrPlugin.OnScanCard -= M_ufrPlugin_OnReadData;
 		}
 
 		#region API
@@ -173,7 +174,8 @@ namespace Lando.SmartObjects
 				if (!m_isConfigured)
 				{
 					m_smartObjectConfigurator.gameObject.SetActive(true);
-					m_ufrPlugin.OnReadData += ReadData;
+					//m_ufrPlugin.OnReadData += ReadData;
+					m_ufrPlugin.OnScanCard += ReadData;
 
 					Text message = m_smartObjectConfigurator.GetComponentInChildren<Text>();
 					while (m_configuringSmartObjectIndex < m_smartObjectsToConfigure.Length)
@@ -200,12 +202,14 @@ namespace Lando.SmartObjects
 			}
 			finally
 			{
-				m_ufrPlugin.OnReadData -= ReadData;
+				//m_ufrPlugin.OnReadData -= ReadData;
+				m_ufrPlugin.OnScanCard -= ReadData;
 			}
 
 			if (m_isConfigured)
 			{
-				m_ufrPlugin.OnReadData += M_ufrPlugin_OnReadData;
+				//m_ufrPlugin.OnReadData += M_ufrPlugin_OnReadData;
+				m_ufrPlugin.OnScanCard += M_ufrPlugin_OnReadData;
 			}
 		}
 		#endregion // IMPLEMENTATION
