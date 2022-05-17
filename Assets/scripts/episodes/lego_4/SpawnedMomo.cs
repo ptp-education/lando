@@ -208,6 +208,15 @@ public class SpawnedMomo : SpawnedObject
 
     private GoTweenFlow dismissingFlow_;
 
+    private void Start()
+    {
+        ShareManager sm = (ShareManager)gameManager_;
+        if (sm != null)
+        {
+            starterBackground_.transform.SetParent(sm.OverlayParent);
+        }
+    }
+
     public override void Hide()
     {
         HideAllScenes();
@@ -218,9 +227,9 @@ public class SpawnedMomo : SpawnedObject
         if (ArgumentHelper.ContainsCommand(GameManager.RFID_COMMAND, action))
         {
             List<string> args = ArgumentHelper.ArgumentsFromCommand(GameManager.RFID_COMMAND, action);
-            if (args.Count > 0)
+            if (args.Count > 1)
             {
-                currentRfid_ = args[0];
+                currentRfid_ = args[1];
 
                 if (LevelOfMomo(currentRfid_) == 0)
                 {

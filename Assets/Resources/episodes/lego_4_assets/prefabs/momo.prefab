@@ -341,7 +341,7 @@ MonoBehaviour:
   teenGreenTailSuccess_: {fileID: 21300000, guid: 692d1bbb3435f4df8936bde5722b2bba, type: 3}
   teenGreenTailFail_: {fileID: 21300000, guid: e08c76ebca93f426eb99d34ba8370cf1, type: 3}
   teenBlueAntenna_: {fileID: 21300000, guid: 2a17dd92d334646afa3d92b2ccf72d9c, type: 3}
-  teenBlueAntennaSuccess_: {fileID: 21300000, guid: 2a17dd92d334646afa3d92b2ccf72d9c, type: 3}
+  teenBlueAntennaSuccess_: {fileID: 21300000, guid: 6c62c1b0454b54bc0ae84493ba4ec2a5, type: 3}
   teenBlueAntennaFail_: {fileID: 21300000, guid: 1c0dbe1c67b9e4ce1a49a100ae459913, type: 3}
   teenBlueSpots_: {fileID: 21300000, guid: 5576449dbf303469b83a010a8982ea44, type: 3}
   teenBlueSpotsSuccess_: {fileID: 21300000, guid: 4b0629c456c01428d96204d9c1ebed34, type: 3}

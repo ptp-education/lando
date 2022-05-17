@@ -186,7 +186,7 @@ namespace Lando.Class.Lego2
                         flow_.insert(3f, new GoTween(levelText_.transform, 1.5f, new GoTweenConfig().localPosition(new Vector3(0f, 800f + i * 350f, 0f))));
                         flow_.insert(5.5f, new GoTween(map_.transform, 0.01f, new GoTweenConfig().onComplete(t =>
                         {
-                            AudioPlayer.PlayAudio("audio/sfx/ding");
+                            AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
                             levelText_.text = "Level " + tower.Count.ToString();
                         })));
                         flow_.insert(7.5f, new GoTween(levelText_.transform, 0.01f, new GoTweenConfig().onComplete(t =>

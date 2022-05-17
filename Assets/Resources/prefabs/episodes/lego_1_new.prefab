@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1953769934630545994
+--- !u!1 &1238832312220845320
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,98 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3922161325700624679}
-  - component: {fileID: 6960044734518227615}
+  - component: {fileID: 8408012513583502517}
+  - component: {fileID: 6085341352638983829}
   m_Layer: 5
-  m_Name: map home
+  m_Name: lego_1_new
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &3922161325700624679
+--- !u!224 &8408012513583502517
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953769934630545994}
+  m_GameObject: {fileID: 1238832312220845320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 5
+  m_Children:
+  - {fileID: 1607520321365717239}
+  - {fileID: 5337977366642919556}
+  - {fileID: 4478966641703807065}
+  - {fileID: 4623567512818827125}
+  - {fileID: 1798507725174297311}
+  - {fileID: 1081754039099691500}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6960044734518227615
+--- !u!114 &6085341352638983829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953769934630545994}
+  m_GameObject: {fileID: 1238832312220845320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingNode: {fileID: 7443613642034305576}
+  VORoot: audio/lego_1/
+  ChallengeData: {fileID: 5750723246018985116, guid: 55b268c55f13940ca81e6323d92dcfb9, type: 3}
+--- !u!1 &1370898804542177693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4623567512818827125}
+  - component: {fileID: 2813979895028287517}
+  m_Layer: 5
+  m_Name: map setup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4623567512818827125
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370898804542177693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8408012513583502517}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2813979895028287517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370898804542177693}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -52,7 +109,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: -725, y: -354, z: 0}
+  - TalkingPosition: {x: -486, y: -291, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -69,9 +126,164 @@ MonoBehaviour:
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 3542844012294076493, guid: 10903cb3434994ed3b2b161041fedeaf, type: 3}
+    Path: episodes/_shared/standard_setup
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
     Path: episodes/lego_1_assets/prefabs/lego_1_guide
     Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
+    Path: prefabs/rfid/challenge-ui
+    Spawned: 0
+  CommandLines: []
+  CommandLineContainers:
+  - CommandToCall: -explain-rules
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk setup-rules
+      Ran: 0
+    - TimeStamp: 1
+      Command: -guide bridge
+      Ran: 0
+    - TimeStamp: 6
+      Command: -guide bridge-cross-water
+      Ran: 0
+    - TimeStamp: 9
+      Command: -guide bridge-over-boulder
+      Ran: 0
+    - TimeStamp: 11.5
+      Command: -guide bridge-2-pounds
+      Ran: 0
+  - CommandToCall: -lando-introduction
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk setup-receipt-rules
+      Ran: 0
+    - TimeStamp: 7.5
+      Command: -print "printer.pdf"
+      Ran: 0
+  - CommandToCall: -get-it
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk setup-make-sense
+      Ran: 0
+    - TimeStamp: 2.5
+      Command: -hideall
+      Ran: 0
+    - TimeStamp: 3.5
+      Command: -spawnoption "We got it!" "Can you repeat?"
+      Ran: 0
+  NextNode: {fileID: 5624096542046490983}
+  OptionHolders:
+  - Name: '1: Explain tools'
+    Options:
+    - Name: '1: Store rules'
+      Action: -character talk setup-store-rules
+      Node: {fileID: 0}
+    - Name: '2: Receipt explain'
+      Action: -lando-introduction
+      Node: {fileID: 0}
+    - Name: Prompt gold button
+      Action: -character talk setup-receipt-press
+      Node: {fileID: 0}
+    - Name: Print something for teacher
+      Action: -print "teacher-encourage.pdf"
+      Node: {fileID: 0}
+    - Name: '3: Explain pad'
+      Action: -character talk setup-pad-rules
+      Node: {fileID: 0}
+    - Name: Show rules
+      Action: -explain-rules
+      Node: {fileID: 0}
+  - Name: 2. Get it
+    Options:
+    - Name: Did everyone get it?
+      Action: -get-it
+      Node: {fileID: 0}
+    - Name: Repeat
+      Action: -explain-rules -hideall
+      Node: {fileID: 0}
+  - Name: '3: Line up'
+    Options:
+    - Name: '1: Line up'
+      Action: -character talk come-line-up
+      Node: {fileID: 0}
+    - Name: 2. Show checklist
+      Action: -character talk setup-checklist -guide checklist
+      Node: {fileID: 0}
+--- !u!1 &3857028145959635378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1798507725174297311}
+  - component: {fileID: 5624096542046490983}
+  m_Layer: 5
+  m_Name: map home
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1798507725174297311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857028145959635378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8408012513583502517}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5624096542046490983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3857028145959635378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: 535, y: -310, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 161ff6dc34d5f4f4caa01d79ae775caf, type: 3}
+  ImageFilePath: episodes/lego_1_screens/map_challenge_1
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  Prompt: 
+  PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
     Position: {x: 237, y: -21, z: 0}
@@ -92,6 +304,13 @@ MonoBehaviour:
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 4875390486311538617, guid: c85ba762af991415c8dd284eb0a211f0, type: 3}
     Path: episodes/lego_1_assets/prefabs/farm
+    Spawned: 0
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 0, y: 0, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
+    Path: episodes/lego_1_assets/prefabs/lego_1_guide
     Spawned: 0
   - TimeStamp: 0
     SpawnKey: 
@@ -140,7 +359,7 @@ MonoBehaviour:
     - TimeStamp: 0
       Command: -fadein 1
       Ran: 0
-  NextNode: {fileID: 9080433099862203001}
+  NextNode: {fileID: 0}
   OptionHolders:
   - Name: Default
     Options:
@@ -162,7 +381,7 @@ MonoBehaviour:
   - Name: Kid walking up
     Options:
     - Name: Scan card
-      Action: -character talk testing-scan-card
+      Action: -character scan-card
       Node: {fileID: 0}
     - Name: Encourage
       Action: -rfid encourage
@@ -178,11 +397,17 @@ MonoBehaviour:
       Node: {fileID: 0}
   - Name: Testing result
     Options:
+    - Name: Exclaim
+      Action: -character exclaim
+      Node: {fileID: 0}
     - Name: 'Reward: Game'
       Action: -rfid reward
       Node: {fileID: 0}
     - Name: Next challenge
       Action: -rfid next-challenge
+      Node: {fileID: 0}
+    - Name: Next challenge (deliveries)
+      Action: -character talk testing-announce-15-6w
       Node: {fileID: 0}
     - Name: 'Reward: UI'
       Action: -rfid refresh
@@ -205,7 +430,7 @@ MonoBehaviour:
     - Name: Thicker platform
       Action: -character print wide-receipt-thicker.pdf hint-thicker -guide thicker-hint
       Node: {fileID: 0}
-    - Name: 6 blocks wide example
+    - Name: 4 blocks wide example
       Action: -guide 6-blocks-wide
       Node: {fileID: 0}
     - Name: Combine bridges
@@ -215,7 +440,7 @@ MonoBehaviour:
       Action: -character talk hint-more-challenges
       Node: {fileID: 0}
     - Name: Out of hints
-      Action: -character talk hints-out
+      Action: -character talk hint-more-challenges
       Node: {fileID: 0}
   - Name: Time out
     Options:
@@ -228,6 +453,9 @@ MonoBehaviour:
     - Name: One more bridge
       Action: -character talk map-timeout-2
       Node: {fileID: 0}
+    - Name: End
+      Action: 
+      Node: {fileID: 4302003569242336996}
   - Name: Group Reward
     Options:
     - Name: Allow multiple reward
@@ -250,7 +478,7 @@ MonoBehaviour:
     - Name: Suggest magic printer
       Action: -character suggest-printer
       Node: {fileID: 0}
---- !u!1 &4293507572950417534
+--- !u!1 &4808184823315069734
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,27 +486,27 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7557565165227047961}
-  - component: {fileID: 350443553326283485}
+  - component: {fileID: 5337977366642919556}
+  - component: {fileID: 7428608223765257955}
   m_Layer: 5
-  m_Name: outside
+  m_Name: office
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7557565165227047961
+--- !u!224 &5337977366642919556
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4293507572950417534}
+  m_GameObject: {fileID: 4808184823315069734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6499968715957303117}
+  m_Father: {fileID: 8408012513583502517}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -286,31 +514,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &350443553326283485
+--- !u!114 &7428608223765257955
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4293507572950417534}
+  m_GameObject: {fileID: 4808184823315069734}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgLoopPath: audio/sfx/wind-blowing
-  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  BgLoopPath: episodes/lego_1_screens/inside-developer-building
+  BgLoop: {fileID: 2800000, guid: 7ab5df53c6d574cdaa5829cb8fc744f2, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 583, y: -96, z: 0}
-    Scale: {x: 0.3, y: 0.3, z: 1}
+  - TalkingPosition: {x: -508, y: -92, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 0}
     SelectedCharacter: 0
-  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoFilePath: Lego 1 - v3/P1-1.mp4
-  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
-  Image: {fileID: 2800000, guid: 859b767e3db284b4f91ab5ae6d0c4170, type: 3}
-  ImageFilePath: episodes/lego_1_screens/outside-developer-building
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 7ab5df53c6d574cdaa5829cb8fc744f2, type: 3}
+  ImageFilePath: episodes/lego_1_screens/inside-developer-building
   VideoOptions: []
   FadeInFromPreviousScene: 1
   Prompt: 
@@ -322,24 +550,27 @@ MonoBehaviour:
   - TimeStamp: 0
     Command: -fadein 5
     Ran: 0
-  - TimeStamp: 6
-    Command: -character talk outside-0
+  - TimeStamp: 5.75
+    Command: -character talk office-0
     Ran: 0
-  - TimeStamp: 9
-    Command: -spawnoption "Yes.... I am George." "Nope, my name is ..."
+  - TimeStamp: 13.85
+    Command: -spawnoption "Who are you?" "We're not engineers" "We'll help you!"
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 5614036701085102094}
+  NextNode: {fileID: 5348293665488649538}
   OptionHolders:
-  - Name: Respond
+  - Name: Response
     Options:
-    - Name: Yes I am George
-      Action: -character talk outside-lie
+    - Name: Who are you
+      Action: -character talk office-who
       Node: {fileID: 0}
-    - Name: Nope my name is
-      Action: -character talk outside-say-name
+    - Name: We're not engineers
+      Action: -character talk office-engineers
       Node: {fileID: 0}
---- !u!1 &4439895013326381669
+    - Name: We'll help you!
+      Action: -character talk office-next
+      Node: {fileID: 0}
+--- !u!1 &5631407569002831836
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,371 +578,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7976424598218235021}
-  - component: {fileID: 690886929799375845}
-  m_Layer: 5
-  m_Name: map setup
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &7976424598218235021
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439895013326381669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &690886929799375845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4439895013326381669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
-  Type: 1
-  Characters:
-  - TalkingPosition: {x: -725, y: -354, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
-  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
-  VideoFilePath: Lego 1 - v3/P2-0.mp4
-  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 161ff6dc34d5f4f4caa01d79ae775caf, type: 3}
-  ImageFilePath: episodes/lego_1_screens/map_challenge_1
-  VideoOptions: []
-  FadeInFromPreviousScene: 0
-  Prompt: 
-  PrefabSpawnObjects:
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3542844012294076493, guid: 10903cb3434994ed3b2b161041fedeaf, type: 3}
-    Path: episodes/_shared/standard_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
-    Path: episodes/lego_1_assets/prefabs/lego_1_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
-    Path: prefabs/rfid/challenge-ui
-    Spawned: 0
-  CommandLines: []
-  CommandLineContainers:
-  - CommandToCall: -explain-rules
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -character talk setup-rules
-      Ran: 0
-    - TimeStamp: 1
-      Command: -guide bridge
-      Ran: 0
-    - TimeStamp: 6
-      Command: -guide bridge-cross-water
-      Ran: 0
-    - TimeStamp: 9
-      Command: -guide bridge-over-boulder
-      Ran: 0
-    - TimeStamp: 11.5
-      Command: -guide bridge-2-pounds
-      Ran: 0
-  NextNode: {fileID: 6960044734518227615}
-  OptionHolders:
-  - Name: '1: Guide'
-    Options:
-    - Name: Complete Table 1
-      Action: -setup complete-table
-      Node: {fileID: 0}
-    - Name: Complete Table 2
-      Action: -setup complete-table2
-      Node: {fileID: 0}
-    - Name: '1: Building Block Store'
-      Action: -character talk setup-store -setup blocks
-      Node: {fileID: 0}
-    - Name: Complete Legos
-      Action: -setup complete-legos
-      Node: {fileID: 0}
-    - Name: 2. Magic Printer
-      Action: -character talk setup-printer -setup printer
-      Node: {fileID: 0}
-    - Name: Complete Printer
-      Action: -setup complete-printer
-      Node: {fileID: 0}
-    - Name: 3. Magic Pad
-      Action: -character talk setup-pad -setup magic-pad
-      Node: {fileID: 0}
-    - Name: Complete Magic Pad
-      Action: -setup complete-magic-pad
-      Node: {fileID: 0}
-  - Name: '2: Explain tools'
-    Options:
-    - Name: '1: Store rules'
-      Action: -character talk setup-store-rules
-      Node: {fileID: 0}
-    - Name: '2: Receipt explain'
-      Action: -character talk setup-receipt-rules
-      Node: {fileID: 0}
-    - Name: Print something for teacher
-      Action: -print "teacher-encourage.pdf"
-      Node: {fileID: 0}
-    - Name: '3: Explain pad'
-      Action: -character talk setup-pad-rules
-      Node: {fileID: 0}
-    - Name: Show rules
-      Action: -explain-rules
-      Node: {fileID: 0}
-  - Name: '3: Line up'
-    Options:
-    - Name: '1: Line up'
-      Action: -character talk come-line-up
-      Node: {fileID: 0}
-    - Name: 2. Show checklist
-      Action: -character talk setup-checklist -guide checklist
-      Node: {fileID: 0}
---- !u!1 &4587745948512642800
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6499968715957303117}
-  - component: {fileID: 8856535896240737645}
-  m_Layer: 5
-  m_Name: lego_1_new
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6499968715957303117
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4587745948512642800}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4095121134714868495}
-  - {fileID: 7557565165227047961}
-  - {fileID: 6192037793705747944}
-  - {fileID: 1203509625126783905}
-  - {fileID: 7976424598218235021}
-  - {fileID: 3922161325700624679}
-  - {fileID: 1669304702929447861}
-  - {fileID: 2420944694827020820}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8856535896240737645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4587745948512642800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingNode: {fileID: 5320654302284528080}
-  VORoot: audio/lego_1/
-  ChallengeData: {fileID: 5750723246018985116, guid: 55b268c55f13940ca81e6323d92dcfb9, type: 3}
---- !u!1 &4704945703505208578
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2420944694827020820}
-  - component: {fileID: 1524482469984767260}
-  m_Layer: 5
-  m_Name: splash-end
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2420944694827020820
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4704945703505208578}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1524482469984767260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4704945703505208578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 0}
-  Type: 1
-  Characters: []
-  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
-  VideoFilePath: Lego 1 - v3/P0-0.mp4
-  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
-  Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
-  ImageFilePath: episodes/lego_1_screens/splash-screen
-  VideoOptions: []
-  FadeInFromPreviousScene: 0
-  Prompt: 
-  PrefabSpawnObjects: []
-  CommandLines: []
-  CommandLineContainers: []
-  NextNode: {fileID: 5614036701085102094}
-  OptionHolders: []
---- !u!1 &6522114486535705022
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1669304702929447861}
-  - component: {fileID: 9080433099862203001}
-  m_Layer: 5
-  m_Name: office-end
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1669304702929447861
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6522114486535705022}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &9080433099862203001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6522114486535705022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: audio/sfx/empty
-  BgLoop: {fileID: 8300000, guid: 89ab8cad054de4beb8bf3966434ccf00, type: 3}
-  Type: 1
-  Characters:
-  - TalkingPosition: {x: 0, y: -92, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
-  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoFilePath: Lego 1 - v3/P1-1.mp4
-  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
-  Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
-  ImageFilePath: episodes/lego_4_screens/office
-  VideoOptions: []
-  FadeInFromPreviousScene: 1
-  Prompt: 
-  PrefabSpawnObjects: []
-  CommandLines: []
-  CommandLineContainers: []
-  NextNode: {fileID: 1524482469984767260}
-  OptionHolders:
-  - Name: Talk
-    Options:
-    - Name: Thank engineers
-      Action: -character talk office-end-1
-      Node: {fileID: 0}
-    - Name: Good bye
-      Action: -character talk office-end-2
-      Node: {fileID: 0}
-    - Name: Fade
-      Action: -fadeout 5
-      Node: {fileID: 0}
---- !u!1 &6970730642736315428
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1203509625126783905}
-  - component: {fileID: 7251693761918033594}
+  - component: {fileID: 4478966641703807065}
+  - component: {fileID: 5348293665488649538}
   m_Layer: 5
   m_Name: map intro
   m_TagString: Untagged
@@ -719,32 +587,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1203509625126783905
+--- !u!224 &4478966641703807065
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6970730642736315428}
+  m_GameObject: {fileID: 5631407569002831836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 3
+  m_Father: {fileID: 8408012513583502517}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7251693761918033594
+--- !u!114 &5348293665488649538
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6970730642736315428}
+  m_GameObject: {fileID: 5631407569002831836}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -754,7 +622,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: -725, y: -354, z: 0}
+  - TalkingPosition: {x: -486, y: -291, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -769,7 +637,7 @@ MonoBehaviour:
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
+    Position: {x: 524, y: -283, z: 0}
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 4509499430257062133, guid: 19e07f9f0d9d44f37aadf31cf4a2fdb6, type: 3}
     Path: episodes/lego_1_assets/prefabs/bridge_hologram
@@ -778,7 +646,7 @@ MonoBehaviour:
   - TimeStamp: 1
     Command: -character talk intro-0
     Ran: 0
-  - TimeStamp: 7
+  - TimeStamp: 11
     Command: -spawnoption "Animals!" "A barn" "Water"
     Ran: 0
   CommandLineContainers:
@@ -802,7 +670,7 @@ MonoBehaviour:
     - TimeStamp: 11
       Command: -character talk intro-correct2
       Ran: 0
-  NextNode: {fileID: 690886929799375845}
+  NextNode: {fileID: 2813979895028287517}
   OptionHolders:
   - Name: Respond
     Options:
@@ -821,9 +689,12 @@ MonoBehaviour:
       Action: -character talk intro-home-depot
       Node: {fileID: 0}
     - Name: Look on map
+      Action: -character talk intro-look
+      Node: {fileID: 0}
+    - Name: Correct answer
       Action: -correctAnswer
       Node: {fileID: 0}
---- !u!1 &8790779200200789759
+--- !u!1 &6152994867397616642
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -831,98 +702,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6192037793705747944}
-  - component: {fileID: 5614036701085102094}
-  m_Layer: 5
-  m_Name: office
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &6192037793705747944
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8790779200200789759}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6499968715957303117}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5614036701085102094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8790779200200789759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BgLoopPath: audio/sfx/empty
-  BgLoop: {fileID: 8300000, guid: 89ab8cad054de4beb8bf3966434ccf00, type: 3}
-  Type: 1
-  Characters:
-  - TalkingPosition: {x: 0, y: -92, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
-  Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoFilePath: Lego 1 - v3/P1-1.mp4
-  VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
-  VideoLoopFilePath: Lego 1 - v3/P1-1.mp4
-  Image: {fileID: 2800000, guid: 7ab5df53c6d574cdaa5829cb8fc744f2, type: 3}
-  ImageFilePath: episodes/lego_1_screens/inside-developer-building
-  VideoOptions: []
-  FadeInFromPreviousScene: 1
-  Prompt: 
-  PrefabSpawnObjects: []
-  CommandLines:
-  - TimeStamp: 0
-    Command: -sfx "audio/sfx/door-open"
-    Ran: 0
-  - TimeStamp: 1.5
-    Command: -character talk office-0
-    Ran: 0
-  - TimeStamp: 9
-    Command: -spawnoption "What will be on the farm?" "But we're not engineers!"
-      "We'll help you"
-    Ran: 0
-  CommandLineContainers: []
-  NextNode: {fileID: 7251693761918033594}
-  OptionHolders:
-  - Name: Respond
-    Options:
-    - Name: What will be on the farm?
-      Action: -character talk office-farm
-      Node: {fileID: 0}
-    - Name: But we're not engineers
-      Action: -character talk office-engineers
-      Node: {fileID: 0}
-    - Name: We'll help you
-      Action: -character talk office-help
-      Node: {fileID: 0}
---- !u!1 &8932909608594245626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4095121134714868495}
-  - component: {fileID: 5320654302284528080}
+  - component: {fileID: 1607520321365717239}
+  - component: {fileID: 7443613642034305576}
   m_Layer: 5
   m_Name: splash
   m_TagString: Untagged
@@ -930,18 +711,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4095121134714868495
+--- !u!224 &1607520321365717239
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8932909608594245626}
+  m_GameObject: {fileID: 6152994867397616642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6499968715957303117}
+  m_Father: {fileID: 8408012513583502517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -949,13 +730,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5320654302284528080
+--- !u!114 &7443613642034305576
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8932909608594245626}
+  m_GameObject: {fileID: 6152994867397616642}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
@@ -977,5 +758,71 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 350443553326283485}
+  NextNode: {fileID: 7428608223765257955}
+  OptionHolders: []
+--- !u!1 &8057105752072636154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1081754039099691500}
+  - component: {fileID: 4302003569242336996}
+  m_Layer: 5
+  m_Name: splash-end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1081754039099691500
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8057105752072636154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8408012513583502517}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4302003569242336996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8057105752072636154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters: []
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
+  ImageFilePath: episodes/lego_1_screens/splash-screen
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  Prompt: 
+  PrefabSpawnObjects: []
+  CommandLines: []
+  CommandLineContainers: []
+  NextNode: {fileID: 0}
   OptionHolders: []

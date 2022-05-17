@@ -11,16 +11,23 @@ public class OnscreenCharacter : MonoBehaviour
 
     private static string kSharedVoRoot = "audio/shared_vo/";
 
-    private bool canReceiveAction_ = true;
     private bool firstWave_ = true;
     private GoTweenFlow walkFlow_;
 
+    private GameManager gameManager_;
+
+    public void Init(GameManager gm)
+    {
+        gameManager_ = gm;
+    }
+
+    public float Talk(string audio, string root)
+    {
+        return Talk(new List<string>() { audio }, root);
+    }
+
     public float Talk(List<string> audio, string root)
     {
-        if (!canReceiveAction_) return -1f;
-
-        canReceiveAction_ = false;
-
         string vo = audio[Random.Range(0, audio.Count)];
 
         float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true);
@@ -30,31 +37,72 @@ public class OnscreenCharacter : MonoBehaviour
             duration = AudioPlayer.PlayAudio(kSharedVoRoot + vo);
         }
 
+        if (duration == -1f)
+        {
+            //did not find audio file in shared or episode root
+            return duration;
+        }
+
         voiceBubble_.gameObject.SetActive(true);
         Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
         {
             voiceBubble_.gameObject.SetActive(false);
-            canReceiveAction_ = true;
         }));
 
         return duration;
     }
 
+    public void ScanCard()
+    {
+        List<string> files = new List<string>();
+        for (int i = 1; i <= 12; i++)
+        {
+            files.Add("testing-scan-card-" + i.ToString());
+        }
+        Talk(files, kSharedVoRoot);
+    }
+
+    public void OutOfHints()
+    {
+        List<string> files = new List<string>();
+        for (int i = 1; i <= 6; i++)
+        {
+            files.Add("hints-out-" + i.ToString());
+        }
+        Talk(files, kSharedVoRoot);
+    }
+
+    public void Exclaim()
+    {
+        List<string> files = new List<string>();
+        for (int i = 1; i <= 24; i++)
+        {
+            files.Add("testing-exclaim-" + i.ToString());
+        }
+
+        anim_.Play("didi-cheer");
+        Talk(files, kSharedVoRoot);
+    }
+
+    public void PromptHint()
+    {
+        List<string> files = new List<string>();
+        for (int i = 1; i <= 9; i++)
+        {
+            files.Add("hint-prompt-" + i.ToString());
+        }
+        Talk(files, kSharedVoRoot);
+    }
+
     public void SuggestPrinter()
     {
-        float duration = Talk(new List<string>()
+        List<string> files = new List<string>();
+        for (int i = 1; i <= 11; i++)
         {
-            "testing-offer-hint1",
-            "testing-offer-hint2",
-            "testing-offer-hint3",
-            "testing-offer-hint4",
-            "testing-offer-hint5",
-            "testing-offer-hint6",
-            "testing-offer-hint7",
-            "testing-offer-hint8",
-            "testing-offer-hint9",
-            "testing-offer-hint10"
-        }, kSharedVoRoot);
+            files.Add("testing-offer-hint-" + i.ToString());
+        }
+
+        float duration = Talk(files, kSharedVoRoot);
 
         thoughtBubble_.SetActive(true);
 
@@ -88,37 +136,68 @@ public class OnscreenCharacter : MonoBehaviour
 
     public float TalkAndPrint(List<string> audio, string print, string root)
     {
-        float duration = Talk(audio, root);
+        float duration = ProgressionTalk(audio[0], root);
         if (duration == -1f) return -1f;
 
         GoTweenFlow flow = new GoTweenFlow();
-        flow.insert(duration, new GoTween(transform, 0.2f, new GoTweenConfig().onComplete(t =>
+
+        flow.insert(duration + 0.2f, new GoTween(transform, 0.2f, new GoTweenConfig().onComplete(t =>
         {
-            Talk(new List<string>()
+            List<string> files = new List<string>();
+            for (int i = 1; i <= 10; i++)
             {
-                "hints-print1",
-                "hints-print2",
-                "hints-print3",
-                "hints-print4",
-                "hints-print5",
-                "hints-print6",
-                "hints-print7",
-                "hints-print8",
-                "hints-print9",
-                "hints-print10",
-            }, kSharedVoRoot);
+                files.Add("hints-print-" + i.ToString());
+            }
+            Talk(files, kSharedVoRoot);
         })));
-        flow.insert(duration + 2.5f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
+
+        flow.insert(duration + 1f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
         {
             CommandLineHelper.PrintPdf(print);
         })));
+
         flow.insert(duration + 5f, new GoTween(transform, 0.4f, new GoTweenConfig().onComplete(t =>
         {
             Debug.Log("finish printing");
         })));
+
         flow.play();
 
         return duration;
+    }
+
+    public float ProgressionTalk(string audio, string root)
+    {
+        List<string> previous = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.HintSpeechProgression);
+        if (previous == null)
+        {
+            previous = new List<string>();
+        }
+
+        List<string> options = new List<string> { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+        for (int i = 0; i < options.Count; i++)
+        {
+            string play = audio + "-" + options[i];
+            if (previous.Contains(play)) continue;
+
+            float duration = Talk(play, root);
+            if (duration > 0f)
+            {
+                //if playing was successful, play and add to storage
+                previous.Add(play);
+                gameManager_.Storage.Add<List<string>>(GameStorage.Key.HintSpeechProgression, previous);
+                return duration;
+            } else if (i > 0)
+            {
+                //playing was unsuccessful, so play the previous version we know works
+                return Talk(audio + "-" + options[i - 1], root);
+            } else
+            {
+                //we weren't able to find a file with a suffix, so let's try playing the original
+                return Talk(audio, root);
+            }
+        }
+        return -1f;
     }
 
     public void Wave()
