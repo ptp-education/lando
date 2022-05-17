@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.andrewk.ufrplugin": "https://github.com/akillingbeck89/uFr-Unity.git",
+    "com.andrewk.ufrplugin": "file:../.uFr-Unity",
     "com.unity.2d.animation": "6.0.5",
     "com.unity.2d.pixel-perfect": "5.0.1",
     "com.unity.2d.psdimporter": "5.0.4",
