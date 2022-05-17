@@ -15,6 +15,10 @@ namespace Lando.Class.Lego5
         [SerializeField] private Image largeAnimalSeat_;
         [SerializeField] private Image successImage_;
         [SerializeField] private Image failureImage_;
+        [SerializeField] private Image animalWaiting_;
+
+        [SerializeField] private Image iconPrefab_;
+        [SerializeField] private Image rsvpHolder_;
 
         [SerializeField] private Choice bird_;
         [SerializeField] private Choice bunny_;
@@ -28,12 +32,21 @@ namespace Lando.Class.Lego5
         [SerializeField] private Choice giraffe_;
         [SerializeField] private Choice hippo_;
 
+        [SerializeField] private Choice dino1_;
+        [SerializeField] private Choice dino2_;
+        [SerializeField] private Choice dino3_;
+
+        private Image animalInSwing_;
+        private Image correctSizeSwing_;
+
         [System.Serializable]
         public class Choice
         {
             public Sprite Animal;
             public Sprite AnimalFailure;
             public Sprite AnimalSuccess;
+            public Sprite AnimalIcon;
+            public Sprite AnimalWaiting;
             public string Sound;
         }
 
@@ -47,6 +60,7 @@ namespace Lando.Class.Lego5
             smallAnimal_.gameObject.SetActive(false);
             mediumAnimal_.gameObject.SetActive(false);
             largeAnimal_.gameObject.SetActive(false);
+            animalWaiting_.gameObject.SetActive(false);
         }
 
         public override void ReceivedAction(string action)
@@ -61,11 +75,20 @@ namespace Lando.Class.Lego5
                         case "spawn":
                             if (args.Count > 1) HandleSpawnAnimal(args[1]);
                             break;
+                        case "load":
+                            HandleLoad();
+                            break;
                         case "success":
                             HandleSuccess();
                             break;
                         case "crash":
                             HandleCrash();
+                            break;
+                        case "increment":
+                            HandleIncrementCounter();
+                            break;
+                        case "hide":
+                            Hide();
                             break;
                     }
                 }
@@ -88,7 +111,7 @@ namespace Lando.Class.Lego5
                     choices.Add(bird_);
 
                     set = smallAnimal_;
-                    smallAnimalSeat_.gameObject.SetActive(true);
+                    correctSizeSwing_ = smallAnimalSeat_;
                     break;
                 case "200":
                     choices.Add(zebra_);
@@ -96,7 +119,7 @@ namespace Lando.Class.Lego5
                     choices.Add(deer_);
 
                     set = mediumAnimal_;
-                    mediumAnimalSeat_.gameObject.SetActive(true);
+                    correctSizeSwing_ = mediumAnimalSeat_;
                     break;
                 case "500":
                     choices.Add(elephant_);
@@ -104,24 +127,63 @@ namespace Lando.Class.Lego5
                     choices.Add(hippo_);
 
                     set = largeAnimal_;
-                    largeAnimalSeat_.gameObject.SetActive(true);
+                    correctSizeSwing_ = largeAnimalSeat_;
+                    break;
+                case "800":
+                    choices.Add(dino1_);
+                    choices.Add(dino2_);
+                    choices.Add(dino3_);
+
+                    set = largeAnimal_;
+                    correctSizeSwing_ = largeAnimalSeat_;
                     break;
             }
             int selection = Random.Range(0, choices.Count);
 
-            set.gameObject.SetActive(true);
+            animalWaiting_.gameObject.SetActive(true);
+            animalWaiting_.sprite = choices[selection].AnimalWaiting;
+            animalWaiting_.SetNativeSize();
+
+            animalInSwing_ = set;
+            set.gameObject.SetActive(false);
             set.sprite = choices[selection].Animal;
             set.SetNativeSize();
             successImage_.sprite = choices[selection].AnimalSuccess;
             failureImage_.sprite = choices[selection].AnimalFailure;
+
+            iconPrefab_.sprite = choices[selection].AnimalIcon;
+
             AudioPlayer.PlayAudio(choices[selection].Sound);
+        }
+
+        private void HandleLoad()
+        {
+            if (correctSizeSwing_ != null && animalInSwing_ != null)
+            {
+                animalWaiting_.gameObject.SetActive(false);
+
+                correctSizeSwing_.gameObject.SetActive(true);
+                animalInSwing_.gameObject.SetActive(true);
+                AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
+            }
         }
 
         private void HandleSuccess()
         {
             Hide();
             successImage_.gameObject.SetActive(true);
-            gameManager_.SendNewAction("-increase-counter");
+            AudioPlayer.PlayAudio("audio/sfx/applausetrumpet");
+        }
+
+        private void HandleIncrementCounter()
+        {
+            Hide();
+            Image icon = Instantiate<Image>(iconPrefab_);
+            icon.transform.localScale = Vector3.zero;
+            icon.transform.SetParent(rsvpHolder_.transform);
+            icon.transform.localScale = Vector3.one;
+            Go.addTween(new GoTween(icon, 0.5f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.BounceIn)));
+            AudioPlayer.PlayAudio("audio/sfx/ding");
         }
 
         private void HandleCrash()

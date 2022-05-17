@@ -7,8 +7,10 @@ using System.Linq;
 public class SpawnedFarmhouse : SpawnedObject
 {
     [SerializeField] private List<Sprite> farmhouseOptions_ = new List<Sprite>();
+
+    [SerializeField] private List<int> requirements_ = new List<int>();
+
     [SerializeField] private Image farmhouse_;
-    [SerializeField] private int totalExpectedLumber_;
     [SerializeField] private Image levelProgress_;
     [SerializeField] private Image levelHolder_;
     [SerializeField] private Text levelText_;
@@ -53,21 +55,41 @@ public class SpawnedFarmhouse : SpawnedObject
         }
 
         levelText_.text = houseLevel.ToString();
+        float width = 1f;
 
-        int increments = totalExpectedLumber_ / farmhouseOptions_.Count;
-        float targetWidth = (float)(houseLevel % increments) / (float)increments * levelHolder_.rectTransform.sizeDelta.x;
-        levelProgress_.rectTransform.sizeDelta = new Vector2(targetWidth, levelHolder_.rectTransform.sizeDelta.y);
+        int currentTier = 0;
+        for (int i = 0; i < requirements_.Count; i++)
+        {
+            if (houseLevel < requirements_[i])
+            {
+                if (i > 0)
+                {
+                    width = (float)(houseLevel - requirements_[i - 1]) / (float)(requirements_[i] - requirements_[i - 1]);
+                } else if (i == 0)
+                {
+                    width = (float)houseLevel / (float)requirements_[i];
+                }
+                currentTier = i + 1;
+                break;
+            }
+            if (houseLevel >= requirements_[i] && i == requirements_.Count - 1)
+            {
+                width = 1f;
+                currentTier = i + 1;
+                break;
+            }
+        }
+        width = width * levelHolder_.rectTransform.sizeDelta.x;
 
-        int newHouseImageLevel = houseLevel / increments;
-
-        farmhouse_.sprite = farmhouseOptions_[Mathf.Min(newHouseImageLevel, farmhouseOptions_.Count - 1)];
+        levelProgress_.rectTransform.sizeDelta = new Vector2(width, levelHolder_.rectTransform.sizeDelta.y);
+        farmhouse_.sprite = farmhouseOptions_[Mathf.Min(currentTier, farmhouseOptions_.Count - 1)];
         farmhouse_.SetNativeSize();
 
         if (playSound)
         {
-            if (newHouseImageLevel > houseImageLevel_)
+            if (currentTier > houseImageLevel_)
             {
-                houseImageLevel_ = newHouseImageLevel;
+                houseImageLevel_ = currentTier;
                 AudioPlayer.PlayAudio("audio/sfx/new-building");
             }
             else

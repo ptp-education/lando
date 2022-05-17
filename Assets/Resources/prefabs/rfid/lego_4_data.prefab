@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4824520685840941836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2578990030495541908}
+  - component: {fileID: 5750723246018985116}
+  m_Layer: 0
+  m_Name: lego_4_data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2578990030495541908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1217.1252, y: 657.4921, z: -199.57349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750723246018985116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Challenges:
+  - Name: 100g
+    Sprite: {fileID: 21300000, guid: 15bdf8ef6170b4db6bbda28048d4dc32, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 507fbebd37897461ba6c1ad7b3bde2a8, type: 3}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
+    RewardCommand: -game-success
+    RequirementsCommand: -character talk testing-announce-100
+    EncourageCommand: 
+    NextChallengeCommand: 
+  - Name: 200g
+    Sprite: {fileID: 21300000, guid: 8e2480759da4c44e1a259bc02e1bf53f, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: a3f891503b7c146a2b965d938cdb3182, type: 3}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
+    RewardCommand: -game-success
+    RequirementsCommand: -character talk testing-announce-200
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-200
+  - Name: 500g
+    Sprite: {fileID: 21300000, guid: 78e792aee055c4ab988f1fc39834fa8f, type: 3}
+    CompletedSprite: {fileID: 21300000, guid: 5112fdb3bf66045d28d068e3b41676ba, type: 3}
+    ScanRfidCommand: 
+    LoadCommand: 
+    FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
+    RewardCommand: -game-success-last
+    RequirementsCommand: -character talk testing-announce-500
+    EncourageCommand: 
+    NextChallengeCommand: -character talk testing-next-announce-500
