@@ -11,7 +11,6 @@ public class ShareManager : GameManager
     [SerializeField] private Transform nodeObjectParent_;
 
     public Transform OverlayParent;
-    public static int SilenceCounter = 0;
 
     private EpisodeNodeObject activeNode_;
 
@@ -92,11 +91,6 @@ public class ShareManager : GameManager
             activeNode_.ReceiveAction(a);
         }
 
-        if (ArgumentHelper.ContainsCommand(TOGGLE_BLOCKS, a))
-        {
-            HandleToggleLight();
-        }
-
         if (ArgumentHelper.ContainsCommand(HIDE_ALL, a))
         {
             HandleHideAll();
@@ -127,30 +121,14 @@ public class ShareManager : GameManager
             HandleChoices(a);
         }
 
-        if (ArgumentHelper.ContainsCommand(SILENCE_COUNTER, a))
-        {
-            SilenceCounter++;
-        }
-
-        if (ArgumentHelper.ContainsCommand(RESET_SILENCE_COUNTER, a))
-        {
-            SilenceCounter = 0;
-        }
-
         if (ArgumentHelper.ContainsCommand(HIDE_SPAWN_OPTIONS_COMMAND, a))
         {
             choicesHolder_.DeleteOptions();
         }
 
-        if (ArgumentHelper.ContainsCommand(FADEIN_COMMAND, a))
+        if (ArgumentHelper.ContainsCommand(NODE_COMMAND, a))
         {
-
-        }
-
-        if (ArgumentHelper.ContainsCommand(TOGGLE_BLOCKS_LIGHT, a))
-        {
-            AudioPlayer.PlayAudio("audio/sfx/turn-off");
-            CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/press-1-lightkey.scpt\"");
+            HandleNodeAction(a);
         }
     }
 
@@ -255,14 +233,6 @@ public class ShareManager : GameManager
         return nodeObject;
     }
 
-    public float ProgressPercentage
-    {
-        get
-        {
-            return activeNode_ == null ? 0f : activeNode_.ProgressPercentage;
-        }
-    }
-
     #region HANDLERS
 
     private void HandleFadeOut(string action)
@@ -307,6 +277,36 @@ public class ShareManager : GameManager
         {
             AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
         }
+    }
+
+    private void HandleNodeAction(string a)
+    {
+        List<string> args = ArgumentHelper.ArgumentsFromCommand(NODE_COMMAND, a);
+        if (args.Count > 0)
+        {
+            switch(args[0])
+            {
+                case "back":
+                    MoveNode(-1);
+                    break;
+
+                case "next":
+                    MoveNode(1);
+                    break;
+            }
+        }
+    }
+
+    private void MoveNode(int byAmount)
+    {
+        EpisodeNode newNode = episode_.JumpFromNode(activeNode_.name, byAmount);
+
+        if (newNode == null)
+        {
+            Debug.LogWarning(string.Format("Unsuccessfully tried to jump from node \"{0}\" by amount {1}.", activeNode_.name, byAmount));
+            return;
+        }
+        LoadNewNode(newNode.name);
     }
 
     private void HandleChoices(string a)
@@ -387,12 +387,6 @@ public class ShareManager : GameManager
         {
             Debug.LogWarning("Could not find enough arguments to print. " + a);
         }
-    }
-
-    private void HandleToggleLight()
-    {
-        AudioPlayer.PlayAudio("audio/sfx/turn-off");
-        CommandLineHelper.ExecuteProcessTerminal("osascript \"~/legov5/press-12-lightkey.scpt\"");
     }
 
     private void HandleHideAll()

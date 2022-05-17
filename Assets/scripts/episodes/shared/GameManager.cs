@@ -8,13 +8,10 @@ public class GameManager : MonoBehaviour
     public const string ACTION_PREFIX = "action:";
     public const string NODE_PREFIX = "node:";
     public const string RADIO_COMMAND = "radio";
+    public const string NODE_COMMAND = "-node";
     public const string FADEOUT_COMMAND = "-fadeout";
     public const string FADEIN_COMMAND = "-fadein";
-    public const string TOGGLE_BLOCKS = "-toggleblocks";
-    public const string TOGGLE_CHALLENGE = "-togglechallenge";
     public const string HIDE_ALL = "-hideall";
-    public const string SILENCE_COUNTER = "-add-silence-life";
-    public const string RESET_SILENCE_COUNTER = "-reset-silence-life";
     public const string DIDI_HMMM = "-didi-hmm";
     public const string TERMINAL_COMMAND = "-terminal";
     public const string PRINT_COMMAND = "-print";
@@ -23,18 +20,9 @@ public class GameManager : MonoBehaviour
     public const string RFID_COMMAND = "-rfid";
     public const string HIDE_SPAWN_OPTIONS_COMMAND = "-hidespawnoption";
 
-    public const string TOGGLE_BLOCKS_LIGHT = "-toggle-blocks-light";
-
-    public enum Type
-    {
-        Prompter,
-        Sharer
-    }
-
     public static bool PromptActive = false;
     public static string SelectedCharacter;
     public static bool MuteAll = false;
-    public static bool Master = true;
 
     protected Episode episode_;
     protected EpisodeNode currentNode_;
@@ -111,15 +99,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SendNewAction(string a, bool masterOnly = true)
+    public void SendNewAction(string a)
     {
-        if (masterOnly && !GameManager.Master)
-        {
-            return;
-        }
         if (networkManager_ != null)
         {
             networkManager_.SendNewEpisodeNodeMessage(ACTION_PREFIX + a);
+        }
+    }
+
+    public void LoadNewNode(string nodeName)
+    {
+        if (networkManager_ != null)
+        {
+            networkManager_.SendNewEpisodeNodeMessage(NODE_PREFIX + nodeName);
         }
     }
 
@@ -144,7 +136,8 @@ public class GameManager : MonoBehaviour
     protected virtual void NewEpisodeEventInternal(Episode e)
     {
         episode_ = e;
-        UpdateEpisodeNode(NODE_PREFIX + e.StartingNode.gameObject.name);
+
+        LoadNewNode(e.StartingNode.gameObject.name);
 
         AudioPlayer.StopRadio();
 

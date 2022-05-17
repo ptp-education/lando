@@ -27,9 +27,8 @@ public class AudioPlayer : MonoBehaviour
 
     public static float PlayAudio(string path, bool expectFailure = false)
     {
-        if (ShareManager.SilenceCounter > 0)
+        if (GameManager.MuteAll)
         {
-            ShareManager.SilenceCounter--;
             return -1f;
         }
 

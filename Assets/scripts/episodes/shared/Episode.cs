@@ -20,4 +20,20 @@ public class Episode : MonoBehaviour
             return GetComponentsInChildren<EpisodeNode>();
         }
     }
+
+    public EpisodeNode JumpFromNode(string jumpFrom, int byAmount)
+    {
+        for (int i = 0; i < AllNodes.Length; i++)
+        {
+            if (string.Equals(jumpFrom, AllNodes[i].name))
+            {
+                int newCounter = i + byAmount;
+                if (newCounter >= 0 && newCounter < AllNodes.Length)
+                {
+                    return AllNodes[newCounter];
+                }
+            }
+        }
+        return null;
+    }
 }

@@ -73,7 +73,6 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         if (string.Equals(buttonToggle_.Selected, "share"))
         {
-            GameManager.Master = false;
             UnityEngine.SceneManagement.SceneManager.LoadScene(kShareMode);
         } else if (string.Equals(buttonToggle_.Selected, "prompt"))
         {

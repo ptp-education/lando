@@ -14,8 +14,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
     public const string kEpisodeNodeKey = "node";
     public const string kNodeStateKey = "node-state";
 
-    [SerializeField] GameManager.Type type_;
-
     public const byte kNewEpisodeCode = 1;
     public const byte kNewEpisodeNodeCode = 2;
     public const byte kNewEpisodeNodeStateCode= 3;
