@@ -19,6 +19,7 @@ namespace uFrUnity
 		public string ftdi_description = "";
 		public DLCARDTYPE LastConnectedCardType = default;
 
+		public UFR_HANDLE Handle => hnd;
 		public uFReader()
 		{
 			// test.

@@ -42,10 +42,12 @@ namespace uFrUnity
 		}
 
 		public event System.Action<SuccessfulRead> OnReadData = default;
+		public event System.Action<SuccessfulRead> OnScanCard = default;
 		private ConcurrentDictionary<int, ReaderConnection> m_activeReaders = new ConcurrentDictionary<int, ReaderConnection>();
 		private ConcurrentQueue<string> Errors = new ConcurrentQueue<string>();
 		private ConcurrentQueue<string> Info = new ConcurrentQueue<string>();
 		private ConcurrentQueue<SuccessfulRead> SuccessulReads = new ConcurrentQueue<SuccessfulRead>();
+		private ConcurrentQueue<SuccessfulRead> SuccessulScans = new ConcurrentQueue<SuccessfulRead>();
 		public List<ReaderConnection> m_readers = new List<ReaderConnection>();
 
 		private CancellationTokenSource m_cancellationTokenSource = new CancellationTokenSource();
@@ -164,6 +166,7 @@ namespace uFrUnity
 						} else
 						{
 							conn.CardConnected = true;
+							SuccessulScans.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.CardUID });
 						}
 					} else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
 					{
@@ -220,7 +223,12 @@ namespace uFrUnity
 				OnReadData?.Invoke(readResult);
 			}
 
-			while(Errors.TryDequeue(out string error))
+			while (SuccessulScans.TryDequeue(out SuccessfulRead scanResult))
+			{
+				OnScanCard?.Invoke(scanResult);
+			}
+
+			while (Errors.TryDequeue(out string error))
 			{
 				Debug.LogWarning(error);
 			}
