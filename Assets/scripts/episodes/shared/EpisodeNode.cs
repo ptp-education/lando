@@ -117,13 +117,12 @@ public class EpisodeNode : MonoBehaviour
 
     //ALL OPTIONS
     public bool FadeInFromPreviousScene;
-    public string Prompt;
+    public bool TestingActive;
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();
     public EpisodeNode NextNode;
     public List<OptionHolder> OptionHolders = new List<OptionHolder>();
-
 
     public Episode Episode
     {

@@ -82,7 +82,7 @@ public class SpawnedLumberTrucksMap : SpawnedObject
             Destroy(i.gameObject);
         }
 
-        GameStorage.Integer totalTrucks = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.Counter);
+        GameStorage.Integer totalTrucks = GameManager.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.Counter);
 
         flow_ = new GoTweenFlow(new GoTweenCollectionConfig().setIterations(-1));
         for (int i = 0; i <= totalTrucks.value; i++)

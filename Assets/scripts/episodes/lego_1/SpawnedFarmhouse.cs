@@ -34,13 +34,13 @@ public class SpawnedFarmhouse : SpawnedObject
         if (ArgumentHelper.ContainsCommand("-farmhouse-increase", action))
         {
             int houseLevel = 0;
-            GameStorage.Integer houseLevelStorage = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
+            GameStorage.Integer houseLevelStorage = GameManager.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
             if (houseLevelStorage != null)
             {
                 houseLevel = houseLevelStorage.value;
             }
 
-            gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.HouseLevel, new GameStorage.Integer(houseLevel + 1));
+            GameManager.Storage.Add<GameStorage.Integer>(GameStorage.Key.HouseLevel, new GameStorage.Integer(houseLevel + 1));
             RefreshHouse(true);
         }
     }
@@ -48,7 +48,7 @@ public class SpawnedFarmhouse : SpawnedObject
     private void RefreshHouse(bool playSound)
     {
         int houseLevel = 0;
-        GameStorage.Integer houseLevelStorage = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
+        GameStorage.Integer houseLevelStorage = GameManager.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
         if (houseLevelStorage != null)
         {
             houseLevel = houseLevelStorage.value;

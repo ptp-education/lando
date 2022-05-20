@@ -28,7 +28,7 @@ namespace Lando.Class.Lego1
 
         public override void ReceivedAction(string action)
         {
-            List<string> farmObjects = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.FarmObjects);
+            List<string> farmObjects = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.FarmObjects);
             if (farmObjects == null)
             {
                 farmObjects = new List<string>();

@@ -24,6 +24,11 @@ public class EpisodeNodeEditor : Editor
         myTarget.FadeInFromPreviousScene = EditorGUILayout.Toggle(myTarget.FadeInFromPreviousScene);
         EditorGUILayout.EndHorizontal();
 
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.LabelField("Kids are testing their builds this turn");
+        myTarget.TestingActive = EditorGUILayout.Toggle(myTarget.TestingActive);
+        EditorGUILayout.EndHorizontal();
+
         string audioPath = "null";
         if (backgroundLoop.objectReferenceValue != null)
         {
@@ -108,9 +113,6 @@ public class EpisodeNodeEditor : Editor
                 }
             }
         }
-
-        EditorGUILayout.LabelField("Prompt");
-        myTarget.Prompt = EditorGUILayout.TextField(myTarget.Prompt);
 
         EditorGUILayout.LabelField("Spawn Prefabs");
         EditorGUILayout.PropertyField(serializedObject.FindProperty("PrefabSpawnObjects"));

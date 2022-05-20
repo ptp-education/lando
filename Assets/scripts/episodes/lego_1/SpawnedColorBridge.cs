@@ -28,13 +28,13 @@ public class SpawnedColorBridge : SpawnedObject
 
             string color = split[split.Length - 1];
 
-            List<string> colors = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.BridgeColors);
+            List<string> colors = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.BridgeColors);
             if (colors == null)
             {
                 colors = new List<string>();
             }
             colors.Add(color);
-            gameManager_.Storage.Add<List<string>>(GameStorage.Key.BridgeColors, colors);
+            GameManager.Storage.Add<List<string>>(GameStorage.Key.BridgeColors, colors);
 
             AudioPlayer.PlayAudio("audio/sfx/splat");
 
@@ -51,7 +51,7 @@ public class SpawnedColorBridge : SpawnedObject
 
     public void RefreshColors()
     {
-        List<string> colors = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.BridgeColors);
+        List<string> colors = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.BridgeColors);
         if (colors == null || colors.Count == 0) return;
 
         int blues = colors.FindAll(s => string.Equals("blue", s)).Count;

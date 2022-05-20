@@ -5,7 +5,7 @@ using System.Linq;
 
 public class NfcUi : SpawnedObject
 {
-    protected ChallengeData ChallengeData
+    protected LevelData ChallengeData
     {
         get
         {
@@ -13,30 +13,30 @@ public class NfcUi : SpawnedObject
         }
     }
 
-    protected List<GameStorage.InventoryType> InventoryForRfid(string rfid)
-    {
-        GameStorage.UserData userData = UserDataForRfid(rfid);
-        return userData.Inventory;
-    }
+    //protected List<GameStorage.InventoryType> InventoryForRfid(string rfid)
+    //{
+    //    GameStorage.UserData userData = UserDataForRfid(rfid);
+    //    return userData.Inventory;
+    //}
 
-    protected int CupsOfLegoForRfid(string rfid)
-    {
-        GameStorage.UserData userData = UserDataForRfid(rfid);
-        List<GameStorage.InventoryType> inventory = userData.Inventory;
-        return inventory.Where(i => i == GameStorage.InventoryType.CupOfLegos).Count();
-    }
+    //protected int CupsOfLegoForRfid(string rfid)
+    //{
+    //    GameStorage.UserData userData = UserDataForRfid(rfid);
+    //    List<GameStorage.InventoryType> inventory = userData.Inventory;
+    //    return inventory.Where(i => i == GameStorage.InventoryType.CupOfLegos).Count();
+    //}
 
-    protected int HintsForRfid(string rfid)
-    {
-        GameStorage.UserData userData = UserDataForRfid(rfid);
-        List<GameStorage.InventoryType> inventory = userData.Inventory;
-        return inventory.Where(i => i == GameStorage.InventoryType.Hint).Count();
-    }
+    //protected int HintsForRfid(string rfid)
+    //{
+    //    GameStorage.UserData userData = UserDataForRfid(rfid);
+    //    List<GameStorage.InventoryType> inventory = userData.Inventory;
+    //    return inventory.Where(i => i == GameStorage.InventoryType.Hint).Count();
+    //}
 
     protected GameStorage.UserData UserDataForRfid(string rfid)
     {
         GameStorage gs = gameManager_.GameStorageForRfid(rfid);
-        GameStorage.UserData userData = gs.GetValue<GameStorage.UserData>(GameStorage.Key.RfidUserData);
+        GameStorage.UserData userData = gs.GetValue<GameStorage.UserData>(GameStorage.Key.UserData);
         if (userData == null) userData = new GameStorage.UserData();
         return userData;
     }
@@ -44,15 +44,15 @@ public class NfcUi : SpawnedObject
     protected void SaveUserData(string rfid, GameStorage.UserData userData)
     {
         GameStorage gs = gameManager_.GameStorageForRfid(rfid);
-        gs.Add<GameStorage.UserData>(GameStorage.Key.RfidUserData, userData);
+        gs.Add<GameStorage.UserData>(GameStorage.Key.UserData, userData);
     }
 
-    protected ChallengeData.Challenge NextChallengeForRfid(string rfid)
+    protected LevelData.Challenge NextChallengeForRfid(string rfid)
     {
         GameStorage.UserData userData = UserDataForRfid(rfid);
         for (int i = 0; i < ChallengeData.Challenges.Count; i++)
         {
-            ChallengeData.Challenge c = ChallengeData.Challenges[i];
+            LevelData.Challenge c = ChallengeData.Challenges[i];
             if (string.Equals(c.Name, userData.CurrentChallenge))
             {
                 if (i + 1 < ChallengeData.Challenges.Count)
@@ -68,7 +68,7 @@ public class NfcUi : SpawnedObject
         return null;
     }
 
-    protected ChallengeData.Challenge CurrentChallengeForRfid(string rfid)
+    protected LevelData.Challenge CurrentChallengeForRfid(string rfid)
     {
         GameStorage.UserData userData = UserDataForRfid(rfid);
 
@@ -77,7 +77,7 @@ public class NfcUi : SpawnedObject
             userData.CurrentChallenge = ChallengeData.Challenges[0].Name;
             SaveUserData(rfid, userData);
         }
-        foreach (ChallengeData.Challenge c in ChallengeData.Challenges)
+        foreach (LevelData.Challenge c in ChallengeData.Challenges)
         {
             if (string.Equals(c.Name, userData.CurrentChallenge))
             {
@@ -85,17 +85,5 @@ public class NfcUi : SpawnedObject
             }
         }
         return null;
-    }
-
-    protected void AddInventoryForRfid(string rfid, List<GameStorage.InventoryType> inventoryToAdd)
-    {
-        GameStorage.UserData userData = UserDataForRfid(rfid);
-
-        List<GameStorage.InventoryType> inv = userData.Inventory;
-        for (int i = 0; i < inventoryToAdd.Count; i++)
-        {
-            inv.Add(inventoryToAdd[i]);
-        }
-        SaveUserData(rfid, userData);
     }
 }

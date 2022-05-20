@@ -15,11 +15,10 @@ public class SpawnedChallengeUi : SpawnedObject
     private GoTweenFlow challengeFlow_;
     private bool allowMultipleEntry_ = false;
     private string lastRfid_;
-    private ChallengeData.Challenge groupChallenge_;
-    private ChallengeData.Challenge lastRunChallenge_;
-    private bool shouldHighlightLastChallenge_;
+    private LevelData.Challenge groupChallenge_;
+    private LevelData.Challenge lastRunChallenge_;
 
-    private ChallengeData ChallengeData
+    private LevelData ChallengeData
     {
         get
         {
@@ -134,7 +133,7 @@ public class SpawnedChallengeUi : SpawnedObject
         challengeFlow_ = new GoTweenFlow();
         float time = 0f;
 
-        ChallengeData.Challenge challenge = CurrentChallengeForRfid(rfid);
+        LevelData.Challenge challenge = CurrentChallengeForRfid(rfid);
         GameStorage.UserData userData = UserDataForRfid(rfid);
 
         if (challengeUi_.transform.localPosition == challengeShownPosition_)
@@ -168,7 +167,7 @@ public class SpawnedChallengeUi : SpawnedObject
         challengeFlow_ = new GoTweenFlow();
         float time = 0f;
 
-        ChallengeData.Challenge challenge = CurrentChallengeForRfid(rfid);
+        LevelData.Challenge challenge = CurrentChallengeForRfid(rfid);
         GameStorage.UserData userData = UserDataForRfid(rfid);
 
         RefreshChallengeUi(userData, challenge);
@@ -188,7 +187,7 @@ public class SpawnedChallengeUi : SpawnedObject
         challengeFlow_.play();
     }
 
-    private void RefreshChallengeUi(GameStorage.UserData userData, ChallengeData.Challenge challenge, string challengeToHighlight = null)
+    private void RefreshChallengeUi(GameStorage.UserData userData, LevelData.Challenge challenge, string challengeToHighlight = null)
     {
         challengeImage_.sprite = challenge.Sprite;
         CompletedChallengeIcon[] icons = completedChallengeHolder_.transform.GetComponentsInChildren<CompletedChallengeIcon>();
@@ -197,27 +196,27 @@ public class SpawnedChallengeUi : SpawnedObject
             Destroy(icons[i].gameObject);
         }
 
-        foreach (string completedChallenge in userData.CompletedChallenges)
-        {
-            ChallengeData.Challenge completedChallengeData = ChallengeData.Challenges.Find(c => string.Equals(c.Name, completedChallenge));
-            if (completedChallengeData != null)
-            {
-                CompletedChallengeIcon icon = GameObject.Instantiate<CompletedChallengeIcon>(challengeIconPrefab_);
-                icon.transform.SetParent(completedChallengeHolder_);
-                icon.transform.localScale = Vector3.one;
-                icon.SetSprite(completedChallengeData.CompletedSprite);
+        //foreach (string completedChallenge in userData.CompletedChallenges)
+        //{
+        //    LevelData.Challenge completedChallengeData = ChallengeData.Challenges.Find(c => string.Equals(c.Name, completedChallenge));
+        //    if (completedChallengeData != null)
+        //    {
+        //        CompletedChallengeIcon icon = GameObject.Instantiate<CompletedChallengeIcon>(challengeIconPrefab_);
+        //        icon.transform.SetParent(completedChallengeHolder_);
+        //        icon.transform.localScale = Vector3.one;
+        //        icon.SetSprite(completedChallengeData.CompletedSprite);
 
-                if (shouldHighlightLastChallenge_ && string.Equals(completedChallenge, challengeToHighlight))
-                {
-                    shouldHighlightLastChallenge_ = false;
-                    AudioPlayer.PlayAudio("audio/sfx/ding");
-                    icon.ToggleHighlight(true);
-                } else
-                {
-                    icon.ToggleHighlight(false);
-                }
-            }
-        }
+        //        if (shouldHighlightLastChallenge_ && string.Equals(completedChallenge, challengeToHighlight))
+        //        {
+        //            shouldHighlightLastChallenge_ = false;
+        //            AudioPlayer.PlayAudio("audio/sfx/ding");
+        //            icon.ToggleHighlight(true);
+        //        } else
+        //        {
+        //            icon.ToggleHighlight(false);
+        //        }
+        //    }
+        //}
     }
 
     private void HandleFail(string rfid)
@@ -226,7 +225,7 @@ public class SpawnedChallengeUi : SpawnedObject
         {
             return;
         }
-        ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
+        LevelData.Challenge c = CurrentChallengeForRfid(rfid);
         if (c != null && c.FailCommand != null && c.FailCommand.Length > 0)
         {
             gameManager_.SendNewAction(c.FailCommand);
@@ -239,7 +238,7 @@ public class SpawnedChallengeUi : SpawnedObject
         {
             return;
         }
-        ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
+        LevelData.Challenge c = CurrentChallengeForRfid(rfid);
         if (c != null && c.ScanRfidCommand != null && c.ScanRfidCommand.Length > 0)
         {
             gameManager_.SendNewAction(c.ScanRfidCommand);
@@ -252,7 +251,7 @@ public class SpawnedChallengeUi : SpawnedObject
         {
             return;
         }
-        ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
+        LevelData.Challenge c = CurrentChallengeForRfid(rfid);
         if (c != null && c.EncourageCommand != null && c.EncourageCommand.Length > 0)
         {
             gameManager_.SendNewAction(c.EncourageCommand);
@@ -271,7 +270,7 @@ public class SpawnedChallengeUi : SpawnedObject
     {
         if (rfid != null && rfid.Length > 0)
         {
-            ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
+            LevelData.Challenge c = CurrentChallengeForRfid(rfid);
             if (c != null)
             {
                 gameManager_.SendNewAction(c.RequirementsCommand);
@@ -279,19 +278,17 @@ public class SpawnedChallengeUi : SpawnedObject
         }
     }
 
-    private void HandleReward(string rfid, ChallengeData.Challenge challengeOverride = null)
+    private void HandleReward(string rfid, LevelData.Challenge challengeOverride = null)
     {
         if (rfid != null && rfid.Length > 0)
         {
-            ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
+            LevelData.Challenge c = CurrentChallengeForRfid(rfid);
             if (challengeOverride != null)
             {
                 c = challengeOverride;
             }
             if (c != null)
             {
-                shouldHighlightLastChallenge_ = true;
-
                 GameStorage.UserData userData = UserDataForRfid(rfid);
                 gameManager_.SendNewAction(c.RewardCommand);
 
@@ -300,7 +297,7 @@ public class SpawnedChallengeUi : SpawnedObject
                 Debug.LogWarning("setting last run challenge " + lastRunChallenge_.Name);
 
 
-                ChallengeData.Challenge nextChallenge = NextChallengeForRfid(rfid);
+                LevelData.Challenge nextChallenge = NextChallengeForRfid(rfid);
                 if (nextChallenge != null)
                 {
                     userData.CurrentChallenge = nextChallenge.Name;
@@ -314,7 +311,7 @@ public class SpawnedChallengeUi : SpawnedObject
     {
         if (rfid != null && rfid.Length > 0)
         {
-            ChallengeData.Challenge c = CurrentChallengeForRfid(rfid);
+            LevelData.Challenge c = CurrentChallengeForRfid(rfid);
             if (c != null)
             {
                 gameManager_.SendNewAction(c.NextChallengeCommand);
@@ -332,7 +329,7 @@ public class SpawnedChallengeUi : SpawnedObject
         allowMultipleEntry_ = allow;
     }
 
-    private ChallengeData.Challenge CurrentChallengeForRfid(string rfid)
+    private LevelData.Challenge CurrentChallengeForRfid(string rfid)
     {
         GameStorage.UserData userData = UserDataForRfid(rfid);
 
@@ -341,7 +338,7 @@ public class SpawnedChallengeUi : SpawnedObject
             userData.CurrentChallenge = ChallengeData.Challenges[0].Name;
             SaveUserData(rfid, userData);
         }
-        foreach (ChallengeData.Challenge c in ChallengeData.Challenges)
+        foreach (LevelData.Challenge c in ChallengeData.Challenges)
         {
             if (string.Equals(c.Name, userData.CurrentChallenge))
             {
@@ -351,12 +348,12 @@ public class SpawnedChallengeUi : SpawnedObject
         return null;
     }
 
-    private ChallengeData.Challenge NextChallengeForRfid(string rfid)
+    private LevelData.Challenge NextChallengeForRfid(string rfid)
     {
         GameStorage.UserData userData = UserDataForRfid(rfid);
         for (int i = 0; i < ChallengeData.Challenges.Count; i++)
         {
-            ChallengeData.Challenge c = ChallengeData.Challenges[i];
+            LevelData.Challenge c = ChallengeData.Challenges[i];
             if (string.Equals(c.Name, userData.CurrentChallenge))
             {
                 if (i + 1 < ChallengeData.Challenges.Count)
@@ -384,7 +381,7 @@ public class SpawnedChallengeUi : SpawnedObject
     private GameStorage.UserData UserDataForRfid(string rfid)
     {
         GameStorage gs = gameManager_.GameStorageForRfid(rfid);
-        GameStorage.UserData userData = gs.GetValue<GameStorage.UserData>(GameStorage.Key.RfidUserData);
+        GameStorage.UserData userData = gs.GetValue<GameStorage.UserData>(GameStorage.Key.UserData);
         if (userData == null) userData = new GameStorage.UserData();
         return userData;
     }
@@ -392,6 +389,6 @@ public class SpawnedChallengeUi : SpawnedObject
     private void SaveUserData(string rfid, GameStorage.UserData userData)
     {
         GameStorage gs = gameManager_.GameStorageForRfid(rfid);
-        gs.Add<GameStorage.UserData>(GameStorage.Key.RfidUserData, userData);
+        gs.Add<GameStorage.UserData>(GameStorage.Key.UserData, userData);
     }
 }

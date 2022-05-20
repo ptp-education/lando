@@ -20,7 +20,7 @@ public class SpawnedCounter : SpawnedObject
         {
             AudioPlayer.PlayAudio("episodes/icebreakers/ding03");
             counter_.value++;
-            gameManager_.Storage.Add<GameStorage.Integer>(GameStorage.Key.Counter, counter_);
+            GameManager.Storage.Add<GameStorage.Integer>(GameStorage.Key.Counter, counter_);
 
             RefreshCounter();
         }
@@ -30,7 +30,7 @@ public class SpawnedCounter : SpawnedObject
     {
         base.Reset();
 
-        counter_ = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.Counter);
+        counter_ = GameManager.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.Counter);
 
         if (counter_ == null)
         {

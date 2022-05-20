@@ -20,14 +20,13 @@ public class GameStorage
         MomoStarter,
         MomoTeenCustomization,
         MomoAdultCustomization,
-        RfidUserData,
+        UserData,
         HintSpeechProgression
     }
 
-    public enum InventoryType
+    public enum ResourceType
     {
-        CupOfLegos,
-        Hint
+        CupOfLegos
     }
 
     public class Integer
@@ -44,9 +43,8 @@ public class GameStorage
     {
         public string CurrentChallenge;
         public List<string> CompletedChallenges = new List<string>();
-        public int HintsGiven = 0;
-        public Dictionary<string, bool> BlocksGiven = new Dictionary<string, bool>();
-        public List<GameStorage.InventoryType> Inventory = new List<GameStorage.InventoryType>();
+        public List<ResourceType> RedeemedResources = new List<ResourceType>();
+        public List<string> RedeemedHints = new List<string>();
     }
 
     private Dictionary<string, object> dict_ = new Dictionary<string, object>();

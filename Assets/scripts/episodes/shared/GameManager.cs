@@ -20,19 +20,17 @@ public class GameManager : MonoBehaviour
     public const string RFID_COMMAND = "-rfid";
     public const string HIDE_SPAWN_OPTIONS_COMMAND = "-hidespawnoption";
 
-    public static bool PromptActive = false;
-    public static string SelectedCharacter;
     public static bool MuteAll = false;
 
     protected Episode episode_;
     protected EpisodeNode currentNode_;
     protected string currentNodeState_;
 
-    public ChallengeData ChallengeData
+    public LevelData ChallengeData
     {
         get
         {
-            return episode_ != null ? episode_.ChallengeData : null;
+            return episode_ != null ? episode_.LevelData : null;
         }
     }
 
@@ -48,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public GameStorage Storage = new GameStorage();
+    public static GameStorage Storage = new GameStorage();
 
     private Dictionary<string, GameStorage> rfidStorage_;
 

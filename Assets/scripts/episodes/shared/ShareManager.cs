@@ -58,7 +58,7 @@ public class ShareManager : GameManager
 
         StartCoroutine(UpdateEpisodeNode(currentNode_));
         HandleBackgroundLoop(currentNode_);
-}
+    }
 
     protected override void NewEpisodeEventInternal(Episode e)
     {

@@ -10,9 +10,6 @@ using ExitGames.Client.Photon;
 
 public class Lobby : MonoBehaviourPunCallbacks
 {
-    public const string kShareMode = "share";
-    public const string kPromptMode= "prompt_3";
-
     [SerializeField] Text status_;
     [SerializeField] InputField inputField_;
     [SerializeField] ButtonToggle buttonToggle_;
@@ -29,19 +26,24 @@ public class Lobby : MonoBehaviourPunCallbacks
     {
         if (inputField_.text.Length > 0 && Input.GetKeyUp(KeyCode.Return))
         {
-            PhotonNetwork.NickName = buttonToggle_.Selected + "-" + System.Guid.NewGuid().ToString();
-
-            RoomOptions roomOptions = new RoomOptions
-            {
-                PublishUserId = true,
-                CleanupCacheOnLeave = false
-            };
-
-            TypedLobby typedLobby = new TypedLobby(null, LobbyType.Default);
-
-            PhotonNetwork.JoinOrCreateRoom(inputField_.text, roomOptions, typedLobby);
-            status_.text = "Joining room...";
+            EnterPressed(inputField_.text);
         }
+    }
+
+    private void EnterPressed(string roomName)
+    {
+        PhotonNetwork.NickName = buttonToggle_.Selected + "-" + System.Guid.NewGuid().ToString();
+
+        RoomOptions roomOptions = new RoomOptions
+        {
+            PublishUserId = true,
+            CleanupCacheOnLeave = false
+        };
+
+        TypedLobby typedLobby = new TypedLobby(null, LobbyType.Default);
+
+        PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, typedLobby);
+        status_.text = "Joining room...";
     }
 
     private void UpdatePlaceholderText(string s)
@@ -62,6 +64,10 @@ public class Lobby : MonoBehaviourPunCallbacks
         inputField_.interactable = true;
 
         Debug.Log(string.Format("Connected to server. Region: {0}, AppVersion: {1}", PhotonNetwork.CloudRegion, PhotonNetwork.AppVersion));
+
+#if UNITY_EDITOR
+        EnterPressed("editor-test");
+#endif
     }
 
     public override void OnJoinedRoom()
@@ -71,13 +77,7 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         inputField_.interactable = false;
 
-        if (string.Equals(buttonToggle_.Selected, "share"))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(kShareMode);
-        } else if (string.Equals(buttonToggle_.Selected, "prompt"))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(kPromptMode);
-        }
+        UnityEngine.SceneManagement.SceneManager.LoadScene(buttonToggle_.Selected);
 
         Debug.Log(string.Format("Joined room {0}, there are {1} players", PhotonNetwork.CurrentRoom.Name, PhotonNetwork.CurrentRoom.PlayerCount));
     }

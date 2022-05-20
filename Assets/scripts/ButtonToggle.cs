@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ButtonToggle : MonoBehaviour
 {
-
     [SerializeField] Sprite selectedSprite_;
     [SerializeField] Sprite deselectedSprite_;
     [SerializeField] List<Button> buttons_;
