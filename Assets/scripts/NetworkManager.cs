@@ -25,9 +25,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks, IOnEventCallback
     {
         foreach (GameManager gm in FindObjectsOfType<GameManager>())
         {
-            gm.Init(this);
-            gameManagers_.Add(gm);
+            AddNewGameManager(gm);
         }
+    }
+
+    public void AddNewGameManager(GameManager gm)
+    {
+        gm.Init(this);
+        gameManagers_.Add(gm);
     }
 
     public void SendNewEpisodeMessage(string e)

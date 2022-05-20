@@ -64,9 +64,9 @@ public class GameManager : MonoBehaviour
 
     private string cachedNode_ = "";
 
-    private NetworkManager networkManager_;
+    protected NetworkManager networkManager_;
 
-    public void Init(NetworkManager nm)
+    public virtual void Init(NetworkManager nm)
     {
         networkManager_ = nm;
     }

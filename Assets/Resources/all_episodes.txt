@@ -1,1 +1,1 @@
-{"FileNames":["prefabs/episodes/lego_1","prefabs/episodes/lego_2","prefabs/episodes/lego_3","prefabs/episodes/lego_4","prefabs/episodes/lego_5"]}
+{"FileNames":["prefabs/episodes/lego_1","prefabs/episodes/lego_1_data","prefabs/episodes/lego_2","prefabs/episodes/lego_2_data","prefabs/episodes/lego_3","prefabs/episodes/lego_3_data","prefabs/episodes/lego_4","prefabs/episodes/lego_4_data","prefabs/episodes/lego_5","prefabs/episodes/lego_5_data"]}

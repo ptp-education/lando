@@ -23,9 +23,14 @@ public class ControllerManager : GameManager
     [SerializeField] Image muteButton_;
     [SerializeField] Transform uiHolder_;
 
+    [SerializeField] Transform stationHolder_;
+    [SerializeField] List<StationManager> stationManagerPrefabs_;
+
     private List<string> episodePaths = new List<string>();
     private CommandDispatch dispatch_ = new CommandDispatch();
     private int testNfcId_ = 9999;
+
+    private List<StationManager> loadedStationManagers_ = new List<StationManager>();
 
     private void Start()
     {
@@ -36,6 +41,30 @@ public class ControllerManager : GameManager
 
         RefreshEpisodeList();
         RefreshMuteButton();
+    }
+
+    public override void Init(NetworkManager nm)
+    {
+        base.Init(nm);
+
+        LoadStationManagers();
+    }
+
+    private void LoadStationManagers()
+    {
+        //debug only - should not need station managers in controller in production
+        if (!Application.isEditor) return;
+
+        foreach(StationManager p in stationManagerPrefabs_)
+        {
+            StationManager station = Instantiate(p);
+            station.transform.SetParent(stationHolder_);
+            station.transform.localPosition = Vector3.zero;
+            station.transform.localScale = Vector3.zero;
+            loadedStationManagers_.Add(station);
+
+            networkManager_.AddNewGameManager(station);
+        }
     }
 
     private void RefreshEpisodeList()
@@ -153,15 +182,15 @@ public class ControllerManager : GameManager
         }
         else if (Input.GetKeyUp("1"))
         {
-            SendActionFromButton("select-1");
+            RefreshStation(0);
         }
         else if (Input.GetKeyUp("2"))
         {
-            SendActionFromButton("select-2");
+            RefreshStation(1);
         }
         else if (Input.GetKeyUp("3"))
         {
-            SendActionFromButton("select-3");
+            RefreshStation(2);
         }
         else if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
@@ -197,6 +226,23 @@ public class ControllerManager : GameManager
     private void RefreshMuteButton()
     {
         muteButton_.color = GameManager.MuteAll ? Color.red : Color.green;
+    }
+
+    private void RefreshStation(int counter)
+    {
+        if (counter >= loadedStationManagers_.Count) return;
+
+        StationManager m = loadedStationManagers_[counter];
+        if (m.transform.localScale == Vector3.one)
+        {
+            m.transform.localScale = Vector3.zero;
+        } else
+        {
+            foreach(StationManager sm in loadedStationManagers_)
+            {
+                sm.transform.localScale = sm == m ? Vector3.one : Vector3.zero;
+            }
+        }
     }
 
     private void SendActionFromButton(string buttonCommand)
