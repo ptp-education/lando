@@ -56,7 +56,7 @@ public class ControllerManager : GameManager
     {
         base.NewEpisodeEventInternal(e);
 
-        dispatch_.Init(ChallengeData, this);
+        dispatch_.Init(this);
     }
 
     protected override void NewNodeEventInternal(EpisodeNode node)

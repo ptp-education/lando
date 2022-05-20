@@ -318,7 +318,7 @@ public class SpawnedMomo : SpawnedObject
         starterBackground_.gameObject.SetActive(true);
         starterSelected_.gameObject.SetActive(true);
 
-        GameStorage gs = gameManager_.GameStorageForRfid(currentRfid_);
+        GameStorage gs = gameManager_.GameStorageForUserId(currentRfid_);
 
         string selection = null;
         switch(choice)
@@ -378,7 +378,7 @@ public class SpawnedMomo : SpawnedObject
         AudioPlayer.PlayAudio("audio/sfx/new-option");
 
         int level = LevelOfMomo(currentRfid_);
-        GameStorage gs = gameManager_.GameStorageForRfid(currentRfid_);
+        GameStorage gs = gameManager_.GameStorageForUserId(currentRfid_);
         string teenCustomization = gs.GetValue<string>(GameStorage.Key.MomoTeenCustomization);
         string adultCustomization = gs.GetValue<string>(GameStorage.Key.MomoAdultCustomization);
 
@@ -405,7 +405,7 @@ public class SpawnedMomo : SpawnedObject
         bool teenActive = customizeTeenBackground_.gameObject.activeSelf;
         bool adultActive = customizeAdultBackground_.gameObject.activeSelf;
 
-        GameStorage gs = gameManager_.GameStorageForRfid(currentRfid_);
+        GameStorage gs = gameManager_.GameStorageForUserId(currentRfid_);
 
         List<Sprite> sprites = SpritesEvolveForRfid(currentRfid_);
 
@@ -551,7 +551,7 @@ public class SpawnedMomo : SpawnedObject
 
     private int LevelOfMomo(string rfid)
     {
-        GameStorage gs = gameManager_.GameStorageForRfid(rfid);
+        GameStorage gs = gameManager_.GameStorageForUserId(rfid);
         string starter = gs.GetValue<string>(GameStorage.Key.MomoStarter);
         string teenCustomization = gs.GetValue<string>(GameStorage.Key.MomoTeenCustomization);
         string adultCustomization = gs.GetValue<string>(GameStorage.Key.MomoAdultCustomization);
@@ -574,7 +574,7 @@ public class SpawnedMomo : SpawnedObject
 
     private List<Sprite> SpritesEvolveForRfid(string rfid)
     {
-        GameStorage gs = gameManager_.GameStorageForRfid(rfid);
+        GameStorage gs = gameManager_.GameStorageForUserId(rfid);
         string starter = gs.GetValue<string>(GameStorage.Key.MomoStarter);
         string teenCustomization = gs.GetValue<string>(GameStorage.Key.MomoTeenCustomization);
 
@@ -700,7 +700,7 @@ public class SpawnedMomo : SpawnedObject
 
     private Sprite MomoForRfid(string rfid, Status status)
     {
-        GameStorage gs = gameManager_.GameStorageForRfid(rfid);
+        GameStorage gs = gameManager_.GameStorageForUserId(rfid);
         string starter = gs.GetValue<string>(GameStorage.Key.MomoStarter);
         string teenCustomization = gs.GetValue<string>(GameStorage.Key.MomoTeenCustomization);
         string adultCustomization = gs.GetValue<string>(GameStorage.Key.MomoAdultCustomization);

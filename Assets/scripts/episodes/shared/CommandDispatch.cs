@@ -6,7 +6,6 @@ using Lando.SmartObjects;
 
 public class CommandDispatch
 {
-    private LevelData levelData_;
     private GameManager gameManager_;
     private Dictionary<string, string> nfcAtStation_ = new Dictionary<string, string>();
 
@@ -17,9 +16,8 @@ public class CommandDispatch
         BeforeTest
     }
 
-    public void Init(LevelData levelData, GameManager gameManager)
+    public void Init(GameManager gameManager)
     {
-        levelData_ = levelData;
         gameManager_ = gameManager;
     }
 
@@ -42,7 +40,7 @@ public class CommandDispatch
 
     private void OnTestStationScan(string id, string station)
     {
-        LevelData.Challenge c = CurrentChallengeForId(id);
+        LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
         gameManager_.SendNewAction(string.Format("-station {0} load {1}", station, c.Name));
     }
 
@@ -63,6 +61,7 @@ public class CommandDispatch
                 OnValidatorSuccess(station, nfcAtStation_[station]);
                 break;
             case ValidatorResponse.Failure:
+                OnValidatorFailed(station, nfcAtStation_[station]);
                 break;
             case ValidatorResponse.BeforeTest:
                 break;
@@ -71,97 +70,29 @@ public class CommandDispatch
 
     private void OnValidatorSuccess(string station, string id)
     {
-        LevelData.Challenge c = CurrentChallengeForId(id);
+        LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
 
         gameManager_.SendNewAction(string.Format("-station {0} completed-challenge {1}", station, c.Name)); //expecting screen to read out VO, show new inventory
 
-        GameStorage.UserData userData = UserDataForId(id);
+        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
 
         userData.CompletedChallenges.Add(c.Name);
 
-        LevelData.Challenge nextChallenge = NextChallengeForRfid(id);
+        LevelData.Challenge nextChallenge = gameManager_.NextChallengeForUserId(id);
         if (nextChallenge != null)
         {
             userData.CurrentChallenge = nextChallenge.Name;
         }
-
-        SaveUserData(id, userData);
+        
+        gameManager_.SaveUserData(userData, id);
     }
 
     private void OnValidatorFailed(string station, string id)
     {
-        //based on whether user has hints, dispatch show hint screen, or just dispatch failed
+        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
+
+        bool haveRedeemableHints = gameManager_.AllHintsForUserId(id).Count > userData.RedeemedHints.Count;
+
+        gameManager_.SendNewAction(string.Format("-station {0} failed-challenge {1}", station, haveRedeemableHints ? "show-hint" : "dont-show-hints"));
     }
-
-    #region QUERIES
-
-    protected GameStorage.UserData UserDataForId(string id)
-    {
-        GameStorage gs = gameManager_.GameStorageForRfid(id);
-        GameStorage.UserData userData = gs.GetValue<GameStorage.UserData>(GameStorage.Key.UserData);
-        if (userData == null) userData = new GameStorage.UserData();
-        return userData;
-    }
-
-    protected void SaveUserData(string id, GameStorage.UserData userData)
-    {
-        GameStorage gs = gameManager_.GameStorageForRfid(id);
-        gs.Add<GameStorage.UserData>(GameStorage.Key.UserData, userData);
-    }
-
-    protected List<string> RedeemableHints(string id)
-    {
-        List<string> ret = new List<string>();
-
-        GameStorage.UserData userData = UserDataForId(id);
-
-        for (int i = 0; i < levelData_.Challenges.Count; i++)
-        {
-            
-        }
-
-        return ret;
-    }
-
-    protected LevelData.Challenge NextChallengeForRfid(string id)
-    {
-        GameStorage.UserData userData = UserDataForId(id);
-        for (int i = 0; i < levelData_.Challenges.Count; i++)
-        {
-            LevelData.Challenge c = levelData_.Challenges[i];
-            if (string.Equals(c.Name, userData.CurrentChallenge))
-            {
-                if (i + 1 < levelData_.Challenges.Count)
-                {
-                    return levelData_.Challenges[i + 1];
-                }
-                else
-                {
-                    return null;
-                }
-            }
-        }
-        return null;
-    }
-
-    protected LevelData.Challenge CurrentChallengeForId(string id)
-    {
-        GameStorage.UserData userData = UserDataForId(id);
-
-        if (userData.CurrentChallenge == null || userData.CurrentChallenge.Length == 0)
-        {
-            userData.CurrentChallenge = levelData_.Challenges[0].Name;
-            SaveUserData(id, userData);
-        }
-        foreach (LevelData.Challenge c in levelData_.Challenges)
-        {
-            if (string.Equals(c.Name, userData.CurrentChallenge))
-            {
-                return c;
-            }
-        }
-        return null;
-    }
-
-    #endregion
 }

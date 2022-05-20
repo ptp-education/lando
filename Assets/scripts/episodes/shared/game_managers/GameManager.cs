@@ -71,16 +71,6 @@ public class GameManager : MonoBehaviour
         networkManager_ = nm;
     }
 
-    public GameStorage GameStorageForRfid(string rfidId)
-    {
-        if (RfidStorage.ContainsKey(rfidId))
-        {
-            return RfidStorage[rfidId];
-        }
-        RfidStorage[rfidId] = new GameStorage();
-        return RfidStorage[rfidId];
-    }
-
     public void UpdateEpisode(string e)
     {
         if (networkManager_ != null)
@@ -242,4 +232,114 @@ public class GameManager : MonoBehaviour
         }
         return ret;
     }
+
+    #region USER_DATA
+
+    public GameStorage GameStorageForUserId(string id)
+    {
+        if (RfidStorage.ContainsKey(id))
+        {
+            return RfidStorage[id];
+        }
+        RfidStorage[id] = new GameStorage();
+        return RfidStorage[id];
+    }
+
+    public GameStorage.UserData UserDataForUserId(string id)
+    {
+        return GameStorageForUserId(id).GetUserData();
+    }
+
+    public void SaveUserData(GameStorage.UserData data, string id)
+    {
+        GameStorageForUserId(id).SaveUserData(data);
+    }
+
+    public List<LevelData.Hint> AllHintsForUserId(string id)
+    {
+        List<LevelData.Challenge> completedChallenges = new List<LevelData.Challenge>();
+
+        foreach(string c in UserDataForUserId(id).CompletedChallenges)
+        {
+            LevelData.Challenge challenge = FindChallenge(c);
+            if (challenge != null)
+            {
+                completedChallenges.Add(challenge);
+            }
+        }
+
+        List<LevelData.Hint> ret = new List<LevelData.Hint>();
+        foreach(LevelData.Challenge c in completedChallenges)
+        {
+            foreach(string h in c.HintRewards)
+            {
+                LevelData.Hint hint = FindHint(h);
+                if (hint != null)
+                {
+                    ret.Add(hint);
+                }
+            }
+        }
+
+        return ret;
+    }
+
+    public LevelData.Challenge NextChallengeForUserId(string id)
+    {
+        GameStorage.UserData userData = UserDataForUserId(id);
+        for (int i = 0; i < ChallengeData.Challenges.Count; i++)
+        {
+            LevelData.Challenge c = ChallengeData.Challenges[i];
+            if (string.Equals(c.Name, userData.CurrentChallenge))
+            {
+                if (i + 1 < ChallengeData.Challenges.Count)
+                {
+                    return ChallengeData.Challenges[i + 1];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+        return null;
+    }
+
+    public LevelData.Challenge FindChallenge(string name)
+    {
+        foreach (LevelData.Challenge c in ChallengeData.Challenges)
+        {
+            if (string.Equals(c.Name, name))
+            {
+                return c;
+            }
+        }
+        return null;
+    }
+
+    public LevelData.Hint FindHint(string name)
+    {
+        foreach(LevelData.Hint h in ChallengeData.Hints)
+        {
+            if (string.Equals(h.Name, name))
+            {
+                return h;
+            }
+        }
+        return null;
+    }
+
+    public LevelData.Challenge CurrentChallengeForUserId(string id)
+    {
+        GameStorage.UserData userData = GameStorageForUserId(id).GetUserData();
+
+        if (userData.CurrentChallenge == null || userData.CurrentChallenge.Length == 0)
+        {
+            userData.CurrentChallenge = ChallengeData.Challenges[0].Name;
+            GameStorageForUserId(id).SaveUserData(userData);
+        }
+        return FindChallenge(userData.CurrentChallenge);
+    }
+
+    #endregion
 }

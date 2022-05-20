@@ -65,9 +65,13 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         Debug.Log(string.Format("Connected to server. Region: {0}, AppVersion: {1}", PhotonNetwork.CloudRegion, PhotonNetwork.AppVersion));
 
-#if UNITY_EDITOR
-        EnterPressed("editor-test");
-#endif
+        if (Application.isEditor)
+        {
+            EnterPressed("editor-test");
+        } else
+        {
+            EnterPressed("prod");
+        }
     }
 
     public override void OnJoinedRoom()

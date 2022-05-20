@@ -76,6 +76,22 @@ public class GameStorage
         Add<List<T>>(key, list);
     }
 
+    public UserData GetUserData()
+    {
+        GameStorage.UserData userData = GetValue<GameStorage.UserData>(GameStorage.Key.UserData);
+        if (userData == null)
+        {
+            userData = new GameStorage.UserData();
+            Add<GameStorage.UserData>(GameStorage.Key.UserData, userData);
+        }
+        return userData;
+    }
+
+    public void SaveUserData(UserData data)
+    {
+        Add<GameStorage.UserData>(GameStorage.Key.UserData, data);
+    }
+
     public void ResetStorage()
     {
         dict_ = new Dictionary<string, object>();

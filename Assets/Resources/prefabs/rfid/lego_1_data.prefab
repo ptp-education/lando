@@ -43,75 +43,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints: []
+  HowToPlay:
+    Name: 
+    Thumbnail: {fileID: 0}
+    Command: 
   Challenges:
   - Name: 2 pounds
     Sprite: {fileID: 21300000, guid: 49730f6586a264b24899dcbb9b08b117, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 2c2a82f5ff02342b080f9c02377fb30b, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - 
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-2-trucks -bridge send-truck 2
     RequirementsCommand: -character talk testing-announce-2
-    EncourageCommand: 
     NextChallengeCommand: 
-    Rewards: 0000000001000000
+    EncourageCommand: 
   - Name: 5 pounds
     Sprite: {fileID: 21300000, guid: ad29165c422364ffca1940c2883219c5, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: ed676a06a49874cb981f274c585b89c8, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - test
+    - test
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-5-trucks -bridge send-truck 5
     RequirementsCommand: -character talk testing-announce-5
-    EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-5
-    Rewards: 01000000
+    EncourageCommand: 
   - Name: 10 pounds
     Sprite: {fileID: 21300000, guid: ac32915d8922f4a1089d7d378089e86b, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 5167cb97cca2644aa8ca57650198504c, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-10-trucks -bridge send-truck 10
     RequirementsCommand: -character talk testing-announce-10
-    EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-10
-    Rewards: 
+    EncourageCommand: 
   - Name: 15 pounds
     Sprite: {fileID: 21300000, guid: bdd6d4b746e4f46738fffe48a48c7361, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 532599e8bf77449b98d5f29477896577, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-15-trucks -bridge send-truck 10
     RequirementsCommand: -character talk testing-announce-15
-    EncourageCommand: 
     NextChallengeCommand: -character talk testing-next-announce-15
-    Rewards: 0000000001000000
+    EncourageCommand: 
   - Name: 15 pound 6 wide
     Sprite: {fileID: 21300000, guid: 1c9e032ad1b514eeb9ba00c6d002c895, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 3bafaeda857944358bcc399ec1e03ee0, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk result-choose -farm-selector show 1
     RequirementsCommand: -character talk testing-announce-15-6w-3
-    EncourageCommand: 
     NextChallengeCommand: -character progression-talk testing-announce-15-6w
-    Rewards: 
+    EncourageCommand: 
   - Name: 20 pound 8 wide
     Sprite: {fileID: 21300000, guid: f380f09a71d224e23ac686d081453f7b, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 0622a01cdf96947caaeda289acfc6c3b, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk result-choose -farm-selector show 2
     RequirementsCommand: -character talk testing-announce-20-8w
-    EncourageCommand: 
     NextChallengeCommand: -character talk next-wider2
-    Rewards: 
+    EncourageCommand: 
   - Name: 35 pound 10 wide
     Sprite: {fileID: 21300000, guid: 74e034865000541c89a4db1fd9a78d2d, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 2be0d8a29283d415e8e1a1613c51add9, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk result-choose -farm-selector show 3
     RequirementsCommand: -character talk testing-announce-35-10w
-    EncourageCommand: 
     NextChallengeCommand: -character talk next-wider3
-    Rewards: 
-  Hints: []
+    EncourageCommand: 
+  Hints:
+  - Name: test
+    Thumbnail: {fileID: 0}
+    Command: 
+  - Name: test2
+    Thumbnail: {fileID: 0}
+    Command: 
+  WaysToFail: []

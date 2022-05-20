@@ -380,7 +380,7 @@ public class SpawnedChallengeUi : SpawnedObject
 
     private GameStorage.UserData UserDataForRfid(string rfid)
     {
-        GameStorage gs = gameManager_.GameStorageForRfid(rfid);
+        GameStorage gs = gameManager_.GameStorageForUserId(rfid);
         GameStorage.UserData userData = gs.GetValue<GameStorage.UserData>(GameStorage.Key.UserData);
         if (userData == null) userData = new GameStorage.UserData();
         return userData;
@@ -388,7 +388,7 @@ public class SpawnedChallengeUi : SpawnedObject
 
     private void SaveUserData(string rfid, GameStorage.UserData userData)
     {
-        GameStorage gs = gameManager_.GameStorageForRfid(rfid);
+        GameStorage gs = gameManager_.GameStorageForUserId(rfid);
         gs.Add<GameStorage.UserData>(GameStorage.Key.UserData, userData);
     }
 }
