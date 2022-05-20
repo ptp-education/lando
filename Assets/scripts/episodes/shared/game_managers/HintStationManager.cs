@@ -8,31 +8,6 @@ public class HintStationManager : StationManager
     {
         base.NewRelevantAction(arguments);
 
-        if (string.Equals("completed-challenge", arguments[0]))
-        {
-            if (arguments.Count > 0)
-            {
-                HandleChallengeCompleted(arguments[1]);
-            }
-        }
-
-        if (string.Equals("failed-challenge", arguments[0]))
-        {
-            if (arguments.Count > 0)
-            {
-                bool showHint = string.Equals(arguments[1], "show-hint");
-                HandleChallengeFailed(showHint);
-            }
-        }
-    }
-
-    private void HandleChallengeCompleted(string challengeName)
-    {
-
-    }
-
-    private void HandleChallengeFailed(bool showHint)
-    {
-
+        
     }
 }

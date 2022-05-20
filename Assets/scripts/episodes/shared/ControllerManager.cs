@@ -17,8 +17,6 @@ public class StringsFile
 public class ControllerManager : GameManager
 {
     [SerializeField] Transform shareManager_;
-    [SerializeField] Transform testingButtonHolder_;
-    [SerializeField] Button testingButtonPrefab_;
     [SerializeField] private Dropdown episodesDropdown_;
     [SerializeField] Image muteButton_;
     [SerializeField] Transform uiHolder_;
@@ -88,18 +86,6 @@ public class ControllerManager : GameManager
         dispatch_.Init(this);
     }
 
-    protected override void NewNodeEventInternal(EpisodeNode node)
-    {
-        base.NewNodeEventInternal(node);
-
-        RemoveTestingButtons();
-
-        if (currentNode_.TestingActive)
-        {
-            AddTestingButtons();
-        }
-    }
-
     protected override void NewActionInternal(string a)
     {
         base.NewActionInternal(a);
@@ -115,58 +101,6 @@ public class ControllerManager : GameManager
         {
             List<string> additionalArgs = new List<string>(validatorArgs.GetRange(2, validatorArgs.Count - 2));
             dispatch_.NewValidatorAction(validatorArgs[0], validatorArgs[1], additionalArgs);
-        }
-    }
-
-    private void AddTestingButtons()
-    {
-        if (ChallengeData == null)
-        {
-            return;
-        }
-
-        List<KeyValuePair<string, string>> buttons = new List<KeyValuePair<string, string>>();
-
-        buttons.Add(new KeyValuePair<string, string>(
-            "Tested successfully",
-            string.Format(
-                "-validator {0} {1}",
-                SmartObjectType.TestingStation.ToString(),
-                CommandDispatch.ValidatorResponse.Success.ToString()
-            )
-        ));
-        buttons.Add(new KeyValuePair<string, string>(
-            "Tested and failed",
-            string.Format(
-                "-validator {0} {1}",
-                SmartObjectType.TestingStation.ToString(),
-                CommandDispatch.ValidatorResponse.Failure.ToString()
-            )
-        ));
-
-        foreach(LevelData.BeforeTestFail failOption in ChallengeData.WaysToFail)
-        {
-            buttons.Add(new KeyValuePair<string, string>(failOption.ButtonName, failOption.Command));
-        }
-
-        foreach(KeyValuePair<string, string> b in buttons)
-        {
-            Button newButton = GameObject.Instantiate<Button>(testingButtonPrefab_);
-            newButton.GetComponentInChildren<Text>().text = b.Key;
-            newButton.onClick.AddListener(() =>
-            {
-                SendNewAction(b.Value);
-            });
-            newButton.transform.SetParent(testingButtonHolder_);
-        }
-    }
-
-    private void RemoveTestingButtons()
-    {
-        Button[] buttons = testingButtonHolder_.GetComponentsInChildren<Button>();
-        for (int i = 0; i < buttons.Length; i++)
-        {
-            Destroy(buttons[i].gameObject);
         }
     }
 
