@@ -21,17 +21,16 @@ public class CommandDispatch
         gameManager_ = gameManager;
     }
 
-    public void NewNfc(string station, string id)
+    public void NewNfcScan(string id, SmartObjectType stationType)
     {
-        nfcAtStation_[station] = id;
+        nfcAtStation_[stationType.ToString()] = id;
 
-        SmartObjectType stationType = (SmartObjectType)Enum.Parse(typeof(SmartObjectType), station);
         switch(stationType)
         {
             case SmartObjectType.ResourceStation:
                 break;
             case SmartObjectType.TestingStation:
-                OnTestStationScan(id, station);
+                OnTestStationScan(id, stationType.ToString());
                 break;
             case SmartObjectType.HintStation:
                 break;

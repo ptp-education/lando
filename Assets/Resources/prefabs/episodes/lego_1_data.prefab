@@ -50,7 +50,7 @@ MonoBehaviour:
     Thumbnail: {fileID: 0}
     Command: 
   Challenges:
-  - Name: 2 pounds
+  - Name: 2-pounds
     Sprite: {fileID: 21300000, guid: 49730f6586a264b24899dcbb9b08b117, type: 3}
     ResourceRewards: 
     HintRewards:
@@ -61,7 +61,7 @@ MonoBehaviour:
     RequirementsCommand: -character talk testing-announce-2
     NextChallengeCommand: 
     EncourageCommand: 
-  - Name: 5 pounds
+  - Name: 5-pounds
     Sprite: {fileID: 21300000, guid: ad29165c422364ffca1940c2883219c5, type: 3}
     ResourceRewards: 
     HintRewards:
@@ -73,7 +73,7 @@ MonoBehaviour:
     RequirementsCommand: -character talk testing-announce-5
     NextChallengeCommand: -character talk testing-next-announce-5
     EncourageCommand: 
-  - Name: 10 pounds
+  - Name: 10-pounds
     Sprite: {fileID: 21300000, guid: ac32915d8922f4a1089d7d378089e86b, type: 3}
     ResourceRewards: 
     HintRewards: []
@@ -83,7 +83,7 @@ MonoBehaviour:
     RequirementsCommand: -character talk testing-announce-10
     NextChallengeCommand: -character talk testing-next-announce-10
     EncourageCommand: 
-  - Name: 15 pounds
+  - Name: 15-pounds
     Sprite: {fileID: 21300000, guid: bdd6d4b746e4f46738fffe48a48c7361, type: 3}
     ResourceRewards: 
     HintRewards: []
@@ -93,7 +93,7 @@ MonoBehaviour:
     RequirementsCommand: -character talk testing-announce-15
     NextChallengeCommand: -character talk testing-next-announce-15
     EncourageCommand: 
-  - Name: 15 pound 6 wide
+  - Name: 15-pound-6-wide
     Sprite: {fileID: 21300000, guid: 1c9e032ad1b514eeb9ba00c6d002c895, type: 3}
     ResourceRewards: 
     HintRewards: []
@@ -103,7 +103,7 @@ MonoBehaviour:
     RequirementsCommand: -character talk testing-announce-15-6w-3
     NextChallengeCommand: -character progression-talk testing-announce-15-6w
     EncourageCommand: 
-  - Name: 20 pound 8 wide
+  - Name: 20-pound-8-wide
     Sprite: {fileID: 21300000, guid: f380f09a71d224e23ac686d081453f7b, type: 3}
     ResourceRewards: 
     HintRewards: []
@@ -113,7 +113,7 @@ MonoBehaviour:
     RequirementsCommand: -character talk testing-announce-20-8w
     NextChallengeCommand: -character talk next-wider2
     EncourageCommand: 
-  - Name: 35 pound 10 wide
+  - Name: 35-pound-10-wide
     Sprite: {fileID: 21300000, guid: 74e034865000541c89a4db1fd9a78d2d, type: 3}
     ResourceRewards: 
     HintRewards: []
@@ -130,4 +130,13 @@ MonoBehaviour:
   - Name: test2
     Thumbnail: {fileID: 0}
     Command: 
-  WaysToFail: []
+  WaysToFail:
+  - Name: needs-taller
+    ButtonName: Bridge touching potato
+    Command: 
+  - Name: touching-sand
+    ButtonName: Bridge touching sand
+    Command: 
+  - Name: not-wide-enough
+    ButtonName: Bridge not wide enough
+    Command: 

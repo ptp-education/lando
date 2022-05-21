@@ -11,28 +11,23 @@ using ExitGames.Client.Photon;
 public class Lobby : MonoBehaviourPunCallbacks
 {
     [SerializeField] Text status_;
-    [SerializeField] InputField inputField_;
     [SerializeField] ButtonToggle buttonToggle_;
+
+    private string selectedButton_;
 
     private void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
         status_.text = "Connecting";
-        inputField_.interactable = false;
-        UpdatePlaceholderText("Waiting for server");
+
+        buttonToggle_.Init(ButtonPressed);
+        buttonToggle_.DisableAllButtons();
     }
 
-    private void Update()
+    private void ButtonPressed(string buttonName)
     {
-        if (inputField_.text.Length > 0 && Input.GetKeyUp(KeyCode.Return))
-        {
-            EnterPressed(inputField_.text);
-        }
-    }
-
-    private void EnterPressed(string roomName)
-    {
-        PhotonNetwork.NickName = buttonToggle_.Selected + "-" + System.Guid.NewGuid().ToString();
+        selectedButton_ = buttonName;
+        PhotonNetwork.NickName = buttonName + "-" + System.Guid.NewGuid().ToString();
 
         RoomOptions roomOptions = new RoomOptions
         {
@@ -42,17 +37,8 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         TypedLobby typedLobby = new TypedLobby(null, LobbyType.Default);
 
-        PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, typedLobby);
+        PhotonNetwork.JoinOrCreateRoom(Application.isEditor ? "editor" : "prod", roomOptions, typedLobby);
         status_.text = "Joining room...";
-    }
-
-    private void UpdatePlaceholderText(string s)
-    {
-        Text placeholderText = inputField_.placeholder.GetComponent<Text>();
-        if (placeholderText)
-        {
-            placeholderText.text = s;
-        }
     }
 
     #region callbacks
@@ -60,18 +46,10 @@ public class Lobby : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         status_.text = "Connected to server!";
-        UpdatePlaceholderText("Enter code");
-        inputField_.interactable = true;
+
+        buttonToggle_.EnableAllButtons();
 
         Debug.Log(string.Format("Connected to server. Region: {0}, AppVersion: {1}", PhotonNetwork.CloudRegion, PhotonNetwork.AppVersion));
-
-        if (Application.isEditor)
-        {
-            EnterPressed("editor-test");
-        } else
-        {
-            EnterPressed("prod");
-        }
     }
 
     public override void OnJoinedRoom()
@@ -79,9 +57,7 @@ public class Lobby : MonoBehaviourPunCallbacks
         base.OnJoinedRoom();
         status_.text = "Successfully joined room!";
 
-        inputField_.interactable = false;
-
-        UnityEngine.SceneManagement.SceneManager.LoadScene(buttonToggle_.Selected);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(selectedButton_);
 
         Debug.Log(string.Format("Joined room {0}, there are {1} players", PhotonNetwork.CurrentRoom.Name, PhotonNetwork.CurrentRoom.PlayerCount));
     }

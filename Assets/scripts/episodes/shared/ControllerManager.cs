@@ -39,6 +39,8 @@ public class ControllerManager : GameManager
 
         RefreshEpisodeList();
         RefreshMuteButton();
+
+        //GetConnectors();
     }
 
     public override void Init(NetworkManager nm)
@@ -46,6 +48,26 @@ public class ControllerManager : GameManager
         base.Init(nm);
 
         LoadStationManagers();
+    }
+
+    private async void GetConnectors()
+    {
+        SmartObjectManager manager = SmartObjectManager.Instance;
+        if (manager != null)
+        {
+            SmartObjectConnector legoStoreConnector = await manager.GetSmartConnector(SmartObjectType.ResourceStation);
+            SmartObjectConnector magicPadConnector = await manager.GetSmartConnector(SmartObjectType.HintStation);
+            SmartObjectConnector magicPrinterConnector = await manager.GetSmartConnector(SmartObjectType.TestingStation);
+
+            legoStoreConnector.Connect(this.NewNfcScan);
+            magicPadConnector.Connect(this.NewNfcScan);
+            magicPrinterConnector.Connect(this.NewNfcScan);
+        }
+    }
+
+    private void NewNfcScan(string nfcId, SmartObjectType stationType)
+    {
+        Debug.LogWarning(nfcId + " " + stationType.ToString());
     }
 
     private void LoadStationManagers()
@@ -90,13 +112,8 @@ public class ControllerManager : GameManager
     {
         base.NewActionInternal(a);
 
-        List<string> nfcArgs = ArgumentHelper.ArgumentsFromCommand("-nfc", a);
         List<string> validatorArgs = ArgumentHelper.ArgumentsFromCommand("-validator", a);
 
-        if (nfcArgs.Count > 1)
-        {
-            dispatch_.NewNfc(nfcArgs[0], nfcArgs[1]);
-        }
         if (validatorArgs.Count > 1)
         {
             List<string> additionalArgs = new List<string>(validatorArgs.GetRange(2, validatorArgs.Count - 2));

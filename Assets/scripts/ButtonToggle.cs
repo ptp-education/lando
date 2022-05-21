@@ -5,41 +5,33 @@ using UnityEngine.UI;
 
 public class ButtonToggle : MonoBehaviour
 {
-    [SerializeField] Sprite selectedSprite_;
-    [SerializeField] Sprite deselectedSprite_;
     [SerializeField] List<Button> buttons_;
 
-    private Button selectedButton_;
+    private System.Action<string> onButtonPress_;
 
-    public string Selected
+    public void Init(System.Action<string> onButtonPress)
     {
-        get
-        {
-            return selectedButton_.name;
-        }
-    }
-
-    private void Start()
-    {
-        EnableButton(buttons_[0]);
+        onButtonPress_ = onButtonPress;
     }
 
     public void ButtonUpdated(Button updatedButton)
     {
-        EnableButton(updatedButton);
+        onButtonPress_(updatedButton.name);
     }
 
-    private void EnableButton(Button enabledButton)
+    public void DisableAllButtons()
     {
-        selectedButton_ = enabledButton;
-        enabledButton.GetComponent<Image>().sprite = selectedSprite_;
-
         foreach(Button b in buttons_)
         {
-            if (b != enabledButton)
-            {
-                b.GetComponent<Image>().sprite = deselectedSprite_;
-            }
+            b.interactable = false;
+        }
+    }
+
+    public void EnableAllButtons()
+    {
+        foreach (Button b in buttons_)
+        {
+            b.interactable = true;
         }
     }
 }
