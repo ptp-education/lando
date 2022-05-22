@@ -63,6 +63,10 @@ public class CommandDispatch
                 OnValidatorFailed(station, nfcAtStation_[station]);
                 break;
             case ValidatorResponse.BeforeTest:
+                if (arguments.Count > 0)
+                {
+                    OnValidatorProblem(station, nfcAtStation_[station], arguments[0]);
+                }
                 break;
         }
     }
@@ -71,7 +75,12 @@ public class CommandDispatch
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
 
-        gameManager_.SendNewAction(string.Format("-station {0} completed-challenge {1}", station, c.Name)); //expecting screen to read out VO, show new inventory
+        gameManager_.SendNewAction(
+            string.Format(
+                "-station {0} {1} {2}",
+                station,
+                CommandDispatch.ValidatorResponse.Success.ToString(),
+                c.Name));
 
         GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
 
@@ -92,6 +101,21 @@ public class CommandDispatch
 
         bool haveRedeemableHints = gameManager_.AllHintsForUserId(id).Count > userData.RedeemedHints.Count;
 
-        gameManager_.SendNewAction(string.Format("-station {0} failed-challenge {1}", station, haveRedeemableHints ? "show-hint" : "dont-show-hints"));
+        gameManager_.SendNewAction(
+            string.Format(
+                "-station {0} {1} {2}",
+                station,
+                CommandDispatch.ValidatorResponse.Failure.ToString(),
+                haveRedeemableHints ? "show-hint" : "dont-show-hints"));
+    }
+
+    private void OnValidatorProblem(string station, string id, string problem)
+    {
+        gameManager_.SendNewAction(
+            string.Format(
+                "-station {0} {1} {2}",
+                station,
+                CommandDispatch.ValidatorResponse.BeforeTest.ToString(),
+                problem));
     }
 }

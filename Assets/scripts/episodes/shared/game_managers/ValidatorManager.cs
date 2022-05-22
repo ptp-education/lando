@@ -65,7 +65,13 @@ public class ValidatorManager : GameManager
 
         foreach (LevelData.BeforeTestFail failOption in ChallengeData.WaysToFail)
         {
-            buttons.Add(new KeyValuePair<string, string>(failOption.ButtonName, failOption.Command));
+            buttons.Add(new KeyValuePair<string, string>(
+                failOption.ButtonName,
+                string.Format(
+                    "-validator {0} {1} {2}",
+                    SmartObjectType.TestingStation.ToString(),
+                    CommandDispatch.ValidatorResponse.BeforeTest.ToString(),
+                    failOption.Command)));
         }
 
         foreach (KeyValuePair<string, string> b in buttons)

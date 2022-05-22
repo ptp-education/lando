@@ -133,10 +133,10 @@ MonoBehaviour:
   WaysToFail:
   - Name: needs-taller
     ButtonName: Bridge touching potato
-    Command: 
+    Command: touching-potato
   - Name: touching-sand
     ButtonName: Bridge touching sand
-    Command: 
+    Command: touching-sand
   - Name: not-wide-enough
     ButtonName: Bridge not wide enough
-    Command: 
+    Command: not-wide-enough

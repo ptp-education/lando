@@ -67,7 +67,7 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
-        Debug.LogWarning(nfcId + " " + stationType.ToString());
+        dispatch_.NewNfcScan(nfcId, stationType);
     }
 
     private void LoadStationManagers()
@@ -201,13 +201,13 @@ public class ControllerManager : GameManager
         switch(buttonCommand)
         {
             case "scan-store":
-                SendNewAction(string.Format("-nfc {0} {1}", SmartObjectType.ResourceStation.ToString(), testNfcId_));
+                NewNfcScan(testNfcId_.ToString(), SmartObjectType.ResourceStation);
                 break;
             case "scan-hint":
-                SendNewAction(string.Format("-nfc {0} {1}", SmartObjectType.HintStation.ToString(), testNfcId_));
+                NewNfcScan(testNfcId_.ToString(), SmartObjectType.HintStation);
                 break;
             case "scan-test":
-                SendNewAction(string.Format("-nfc {0} {1}", SmartObjectType.TestingStation.ToString(), testNfcId_));
+                NewNfcScan(testNfcId_.ToString(), SmartObjectType.TestingStation);
                 break;
             case "back":
                 SendNewAction(NODE_COMMAND + " back");

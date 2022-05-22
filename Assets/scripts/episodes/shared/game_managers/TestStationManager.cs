@@ -8,7 +8,7 @@ public class TestStationManager : StationManager
     {
         base.NewRelevantAction(arguments);
 
-        if (string.Equals("completed-challenge", arguments[0]))
+        if (string.Equals(CommandDispatch.ValidatorResponse.Success.ToString(), arguments[0]))
         {
             if (arguments.Count > 0)
             {
@@ -16,7 +16,7 @@ public class TestStationManager : StationManager
             }
         }
 
-        if (string.Equals("failed-challenge", arguments[0]))
+        if (string.Equals(CommandDispatch.ValidatorResponse.Failure.ToString(), arguments[0]))
         {
             if (arguments.Count > 0)
             {
@@ -32,6 +32,14 @@ public class TestStationManager : StationManager
                 HandleChallengeFailed(showHint);
             }
         }
+
+        if (string.Equals(CommandDispatch.ValidatorResponse.BeforeTest.ToString(), arguments[0]))
+        {
+            if (arguments.Count > 0)
+            {
+                HandleTestingProblem(arguments[1]);
+            }
+        }
     }
 
     private void HandleChallengeCompleted(string challengeName)
@@ -42,6 +50,11 @@ public class TestStationManager : StationManager
     private void HandleChallengeFailed(bool showHint)
     {
         Debug.Log("challenge failed show hint: " + showHint);
+    }
+
+    private void HandleTestingProblem(string problem)
+    {
+        Debug.Log("cannot test challenge because of reason: " + problem);
     }
 }
 
