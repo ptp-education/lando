@@ -47,6 +47,14 @@ public class ValidatorManager : GameManager
         List<KeyValuePair<string, string>> buttons = new List<KeyValuePair<string, string>>();
 
         buttons.Add(new KeyValuePair<string, string>(
+            "Scan your wristband",
+            string.Format(
+                "-validator {0} {1}",
+                SmartObjectType.TestingStation.ToString(),
+                CommandDispatch.ValidatorResponse.ScanWristband.ToString()
+            )
+        ));
+        buttons.Add(new KeyValuePair<string, string>(
             "Tested successfully",
             string.Format(
                 "-validator {0} {1}",

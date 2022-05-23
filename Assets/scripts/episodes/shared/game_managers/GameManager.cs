@@ -329,7 +329,6 @@ public class GameManager : MonoBehaviour
 
     public LevelData.Challenge NextChallengeWithResourcesForUserId(string id)
     {
-        bool reachedCurrentChallenge = false;
         GameStorage.UserData userData = UserDataForUserId(id);
 
         foreach (LevelData.Challenge c in ChallengeData.Challenges)

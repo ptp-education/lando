@@ -14,7 +14,8 @@ public class CommandDispatch
     {
         Success,
         Failure,
-        BeforeTest
+        BeforeTest,
+        ScanWristband
     }
 
     public void Init(GameManager gameManager)
@@ -113,13 +114,20 @@ public class CommandDispatch
     {
         //dispatch series of VO, show inventory
         //set state, give inventory
+        ValidatorResponse parsedResponse = (ValidatorResponse)Enum.Parse(typeof(ValidatorResponse), command);
+
+        if (parsedResponse == ValidatorResponse.ScanWristband)
+        {
+            gameManager_.SendNewAction(string.Format("-station {0} {1}", station, ValidatorResponse.ScanWristband.ToString()));
+            return;
+        }
+
         if (!nfcAtStation_.ContainsKey(station))
         {
             Debug.LogWarning("Cannot find id for station: " + station);
             return;
         }
 
-        ValidatorResponse parsedResponse = (ValidatorResponse)Enum.Parse(typeof(ValidatorResponse), command);
         switch(parsedResponse)
         {
             case ValidatorResponse.Success:

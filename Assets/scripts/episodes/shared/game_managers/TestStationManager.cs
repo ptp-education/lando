@@ -40,6 +40,11 @@ public class TestStationManager : StationManager
                 HandleTestingProblem(arguments[1]);
             }
         }
+
+        if (string.Equals(CommandDispatch.ValidatorResponse.ScanWristband.ToString(), arguments[0]))
+        {
+            HandleScanWristband();
+        }
     }
 
     private void HandleChallengeCompleted(string challengeName)
@@ -55,6 +60,11 @@ public class TestStationManager : StationManager
     private void HandleTestingProblem(string problem)
     {
         Debug.Log("cannot test challenge because of reason: " + problem);
+    }
+
+    private void HandleScanWristband()
+    {
+        Debug.Log("player needs to scan wristband");
     }
 }
 
