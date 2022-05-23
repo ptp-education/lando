@@ -180,7 +180,7 @@ namespace uFrUnity
 					Errors.Enqueue(ex.Message);
 				}
 
-				await Task.Yield();
+				await Task.Delay(500);
 			}
 
 		}

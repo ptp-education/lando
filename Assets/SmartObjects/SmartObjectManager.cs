@@ -9,6 +9,12 @@ namespace Lando.SmartObjects
 	[RequireComponent(typeof(uFrUnity.uFrUnityPlugin))]
 	public class SmartObjectManager : MonoBehaviour
 	{
+
+		[System.Serializable]
+		public class SaveData
+		{
+			public List<SmartObjectConnector> Connectors;
+		}
 		private uFrUnity.uFrUnityPlugin m_ufrPlugin = default;
 		/// <summary>
 		/// Collection of "smart object type" -> "SmartConnector" pairs. Each smart object has a dedicated SmartConnector, which is the entry point to this API.
@@ -34,6 +40,8 @@ namespace Lando.SmartObjects
 		[SerializeField]
 		private bool m_configureOnAwake = true;
 		const string KEY = "SmartObjectReaders";
+
+		private SaveData m_saveData;
 
 		private void Awake()
 		{
@@ -139,7 +147,8 @@ namespace Lando.SmartObjects
 			{
 				if (PlayerPrefs.HasKey(KEY))
 				{
-					var readers = JsonUtility.FromJson<List<SmartObjectConnector>>(PlayerPrefs.GetString(KEY));
+					SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(KEY));
+					var readers = data.Connectors;
 					if (readers.Count == m_smartObjectsToConfigure.Length)
 					{
 						m_smartObjectReaders.Clear();
@@ -148,6 +157,7 @@ namespace Lando.SmartObjects
 							m_smartObjectReaders.Add(reader.UID, reader);
 						}
 						m_isConfigured = true;
+						m_smartObjectConfigurator.gameObject.SetActive(false);
 					}
 
 				}
@@ -171,7 +181,7 @@ namespace Lando.SmartObjects
 						connectorsToSave.Add(pair.Value);
 					}
 
-					PlayerPrefs.SetString(KEY, JsonUtility.ToJson(connectorsToSave));
+					PlayerPrefs.SetString(KEY, JsonUtility.ToJson(new SaveData() { Connectors = connectorsToSave }));
 
 					m_smartObjectConfigurator.gameObject.SetActive(false);
 					m_isConfigured = true;

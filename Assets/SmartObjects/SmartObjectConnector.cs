@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace Lando.SmartObjects
 {
@@ -9,8 +10,10 @@ namespace Lando.SmartObjects
 	public class SmartObjectConnector
 	{
 		
+		[SerializeField]
 		private string m_readerUid = default; // NFC/RFID Reader Unique Id
 		private Action<string, SmartObjectType> m_onTagRead = default;
+		[SerializeField]
 		private SmartObjectType m_smartObjectType = default;
 
 		public SmartObjectConnector(string readerUid, SmartObjectType smartObjectType)
