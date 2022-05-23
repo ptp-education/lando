@@ -46,6 +46,8 @@ namespace Lando.SmartObjects
 				return;
 			}
 
+			DontDestroyOnLoad(this);
+
 			Instance = this;
 			m_ufrPlugin = GetComponent<uFrUnity.uFrUnityPlugin>();
 			if (m_configureOnAwake)
@@ -119,12 +121,7 @@ namespace Lando.SmartObjects
 
 		private void M_ufrPlugin_OnReadData(uFrUnity.SuccessfulRead obj)
 		{
-			if (m_isConfigured)
-			{
-				return;
-			}
-
-			if (m_smartObjectReaders.TryGetValue(obj.ReaderId, out SmartObjectConnector value))
+			if (m_isConfigured && m_smartObjectReaders.TryGetValue(obj.ReaderId, out SmartObjectConnector value))
 			{
 				value.Trigger(obj.ReaderData);
 			}

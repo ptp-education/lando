@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Lando.SmartObjects;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class StringsFile
 {
@@ -40,7 +42,7 @@ public class ControllerManager : GameManager
         RefreshEpisodeList();
         RefreshMuteButton();
 
-        //GetConnectors();
+        GetConnectors();
     }
 
     public override void Init(NetworkManager nm)
@@ -53,15 +55,27 @@ public class ControllerManager : GameManager
     private async void GetConnectors()
     {
         SmartObjectManager manager = SmartObjectManager.Instance;
+
+		if (manager == null)
+		{
+			var asyncOp = SceneManager.LoadSceneAsync("smart_object_manager", LoadSceneMode.Additive);
+			while(!asyncOp.isDone)
+			{
+				await Task.Yield();
+			}
+
+			manager = SmartObjectManager.Instance;
+		}
+
         if (manager != null)
         {
             SmartObjectConnector legoStoreConnector = await manager.GetSmartConnector(SmartObjectType.ResourceStation);
             SmartObjectConnector magicPadConnector = await manager.GetSmartConnector(SmartObjectType.HintStation);
             SmartObjectConnector magicPrinterConnector = await manager.GetSmartConnector(SmartObjectType.TestingStation);
 
-            legoStoreConnector.Connect(this.NewNfcScan);
-            magicPadConnector.Connect(this.NewNfcScan);
-            magicPrinterConnector.Connect(this.NewNfcScan);
+            legoStoreConnector?.Connect(this.NewNfcScan);
+            magicPadConnector?.Connect(this.NewNfcScan);
+            magicPrinterConnector?.Connect(this.NewNfcScan);
         }
     }
 

@@ -56,8 +56,10 @@ namespace uFrUnity
 
 		private void Awake()
 		{
-			Task.Run(Discover, m_cancellationTokenSource.Token);
-			Task.Run(HandleDisconnects, m_cancellationTokenSource.Token);
+			//Task.Run(Discover, m_cancellationTokenSource.Token);
+			Discover();
+			HandleDisconnects();
+			//Task.Run(HandleDisconnects, m_cancellationTokenSource.Token);
 		}
 
 		private async void HandleDisconnects()
@@ -86,6 +88,7 @@ namespace uFrUnity
 							{
 								Errors.Enqueue($"Failed to call ReaderStillConnected {i} from active readers {status}");
 							}
+
 						}
 					}
 				}
@@ -95,7 +98,6 @@ namespace uFrUnity
 		}
 		private async void Discover()
 		{
-			Info.Enqueue("Discovery Thread Started");
 			while (!m_cancellationTokenSource.IsCancellationRequested)
 			{
 				try
@@ -121,7 +123,7 @@ namespace uFrUnity
 										}
 										else
 										{
-											_ = Task.Run(() => UpdateCardAndConnectionInfo(newConn));
+											UpdateCardAndConnectionInfo(newConn);
 											//_ = Task.Run(() => ReadCard(newConn));
 										}
 									}
@@ -129,7 +131,6 @@ namespace uFrUnity
 									{
 										Errors.Enqueue($"Failed to add new connected reader {i} to active readers {status}");
 									}
-
 								}
 							}
 						}
@@ -143,12 +144,10 @@ namespace uFrUnity
 
 				await Task.Delay(500);
 			}
-			Info.Enqueue("Discovery Thread Stopped");
 		}
 
 		private async void UpdateCardAndConnectionInfo(ReaderConnection conn)
 		{
-			Info.Enqueue($"UpdateCardAndConnectionInfo Thread Started {conn.ReaderSN}");
 			while (!m_cancellationTokenSource.IsCancellationRequested && conn.Connected)
 			{
 				try
@@ -163,15 +162,17 @@ namespace uFrUnity
 								Errors.Enqueue($"Failed to GetCardConnectionInfo {conn.ReaderSN} {status}");
 							}
 	
-						} else
+						} else if(!conn.HaveReadCard)
 						{
 							conn.CardConnected = true;
+							conn.LastReadCardUID = conn.Data.CardUID;
 							SuccessulScans.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.CardUID });
 						}
-					} else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
-					{
-						ReadCard(conn);
-					}
+					} 
+					//else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
+					//{
+					//	ReadCard(conn);
+					//}
 
 				}
 				catch (Exception ex)
@@ -182,7 +183,6 @@ namespace uFrUnity
 				await Task.Yield();
 			}
 
-			Info.Enqueue($"UpdateCardAndConnectionInfo Thread Stopped {conn.ReaderSN}");
 		}
 
 		private bool UpdateConnectionStatus(DL_STATUS status, ReaderConnection conn)
