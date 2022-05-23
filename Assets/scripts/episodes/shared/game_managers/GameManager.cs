@@ -284,13 +284,35 @@ public class GameManager : MonoBehaviour
         return ret;
     }
 
+    public List<GameStorage.ResourceType> AllResourcesForUserId(string id)
+    {
+        List<LevelData.Challenge> completedChallenges = new List<LevelData.Challenge>();
+
+        foreach (string c in UserDataForUserId(id).CompletedChallenges)
+        {
+            LevelData.Challenge challenge = FindChallenge(c);
+            if (challenge != null)
+            {
+                completedChallenges.Add(challenge);
+            }
+        }
+
+        List<GameStorage.ResourceType> ret = new List<GameStorage.ResourceType>();
+        foreach (LevelData.Challenge c in completedChallenges)
+        {
+            ret.AddRange(c.ResourceRewards);
+        }
+
+        return ret;
+    }
+
     public LevelData.Challenge NextChallengeForUserId(string id)
     {
         GameStorage.UserData userData = UserDataForUserId(id);
         for (int i = 0; i < ChallengeData.Challenges.Count; i++)
         {
             LevelData.Challenge c = ChallengeData.Challenges[i];
-            if (string.Equals(c.Name, userData.CurrentChallenge))
+            if (string.Equals(c.Name, CurrentChallengeForUserId(id).Name))
             {
                 if (i + 1 < ChallengeData.Challenges.Count)
                 {
@@ -302,6 +324,26 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        return null;
+    }
+
+    public LevelData.Challenge NextChallengeWithResourcesForUserId(string id)
+    {
+        bool reachedCurrentChallenge = false;
+        GameStorage.UserData userData = UserDataForUserId(id);
+
+        foreach (LevelData.Challenge c in ChallengeData.Challenges)
+        {
+            string currentChallenge = CurrentChallengeForUserId(id).Name;
+            if (string.Equals(c.Name, currentChallenge))
+            {
+                if (c.ResourceRewards.Count > 0)
+                {
+                    return c;
+                }
+            }
+        }
+
         return null;
     }
 

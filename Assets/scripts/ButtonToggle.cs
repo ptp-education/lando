@@ -17,6 +17,7 @@ public class ButtonToggle : MonoBehaviour
     public void ButtonUpdated(Button updatedButton)
     {
         onButtonPress_(updatedButton.name);
+        DisableAllButtons();
     }
 
     public void DisableAllButtons()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 using Lando.SmartObjects;
 
 public class CommandDispatch
@@ -28,12 +29,77 @@ public class CommandDispatch
         switch(stationType)
         {
             case SmartObjectType.ResourceStation:
+                OnResourceStationScan(id, stationType.ToString());
                 break;
             case SmartObjectType.TestingStation:
                 OnTestStationScan(id, stationType.ToString());
                 break;
             case SmartObjectType.HintStation:
                 break;
+        }
+    }
+
+    private void OnResourceStationScan(string id, string station)
+    {
+        List<GameStorage.ResourceType> allResourcesAvailable = gameManager_.AllResourcesForUserId(id);
+        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
+
+        if (userData.RedeemedResources.Count < allResourcesAvailable.Count)
+        {
+            //show that you can get resources, and redeem
+
+            List<GameStorage.ResourceType> allResourcesAvailableCopy = new List<GameStorage.ResourceType>(allResourcesAvailable);
+            List<GameStorage.ResourceType> redeemedResourcesCopy = new List<GameStorage.ResourceType>(userData.RedeemedResources);
+
+            for (int i = 0; i < allResourcesAvailableCopy.Count; i++)
+            {
+                for (int ii = 0; ii < redeemedResourcesCopy.Count; ii++)
+                {
+                    if (redeemedResourcesCopy[ii] == allResourcesAvailableCopy[i])
+                    {
+                        redeemedResourcesCopy.RemoveAt(ii);
+                        allResourcesAvailableCopy.RemoveAt(ii);
+                    }
+                }
+            }
+
+            gameManager_.SendNewAction(string.Format(
+                "-station {0} give-resources {1}",
+                station,
+                string.Join(" ", allResourcesAvailableCopy)));
+
+            userData.RedeemedResources = new List<GameStorage.ResourceType>(allResourcesAvailable);
+            gameManager_.SaveUserData(userData, id);
+        } else
+        {
+            //no resources available
+
+            LevelData.Challenge nextChallengeWithResource = gameManager_.NextChallengeWithResourcesForUserId(id);
+            if (nextChallengeWithResource != null)
+            {
+                //there are more resources available, show progress needed for more resources instead
+                int nextChallengeIndex = 0;
+                for(int i = 0; i < gameManager_.ChallengeData.Challenges.Count; i++)
+                {
+                    if (string.Equals(gameManager_.ChallengeData.Challenges[i].Name, nextChallengeWithResource.Name))
+                    {
+                        nextChallengeIndex = i;
+                        break;
+                    }
+                }
+                gameManager_.SendNewAction(string.Format(
+                    "-station {0} more-resources {1} {2} {3}",
+                    station,
+                    userData.CompletedChallenges.Count.ToString(),
+                    gameManager_.ChallengeData.Challenges.Count.ToString(),
+                    nextChallengeIndex.ToString()
+                ));
+            } else
+            {
+                //there are no more resources available in this class
+
+                gameManager_.SendNewAction(string.Format("-station {0} no-resources", station));
+            }
         }
     }
 
