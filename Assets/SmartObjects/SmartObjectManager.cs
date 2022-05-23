@@ -46,8 +46,6 @@ namespace Lando.SmartObjects
 				return;
 			}
 
-			DontDestroyOnLoad(this);
-
 			Instance = this;
 			m_ufrPlugin = GetComponent<uFrUnity.uFrUnityPlugin>();
 			if (m_configureOnAwake)

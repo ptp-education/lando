@@ -56,17 +56,6 @@ public class ControllerManager : GameManager
     {
         SmartObjectManager manager = SmartObjectManager.Instance;
 
-		if (manager == null)
-		{
-			var asyncOp = SceneManager.LoadSceneAsync("smart_object_manager", LoadSceneMode.Additive);
-			while(!asyncOp.isDone)
-			{
-				await Task.Yield();
-			}
-
-			manager = SmartObjectManager.Instance;
-		}
-
         if (manager != null)
         {
             SmartObjectConnector legoStoreConnector = await manager.GetSmartConnector(SmartObjectType.ResourceStation);
