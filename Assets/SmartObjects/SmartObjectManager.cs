@@ -19,8 +19,6 @@ namespace Lando.SmartObjects
 		private int m_configuringSmartObjectIndex = 0;// Which smart object are we currently configuring (if any)
 		private bool m_isConfigured = false; // Have all the requested smart objects been linked to a specific reader?
 
-		[SerializeField]
-		private Camera m_ourCamera = default;
 		/// <summary>
 		/// String-based unique name for a Physical object which needs to be assigned to a specific NFC/RFID reader.
 		/// </summary>
@@ -35,28 +33,16 @@ namespace Lando.SmartObjects
 
 		[SerializeField]
 		private bool m_configureOnAwake = true;
-		public static SmartObjectManager Instance { get; private set; }
 		const string KEY = "SmartObjectReaders";
 
 		private void Awake()
 		{
-			if (Instance != null)
-			{
-				Destroy(gameObject);
-				return;
-			}
-
-			Instance = this;
 			m_ufrPlugin = GetComponent<uFrUnity.uFrUnityPlugin>();
 			if (m_configureOnAwake)
 			{
 				Configure();
 			}
 
-			if (Camera.main != null)
-			{
-				m_ourCamera.enabled = false;
-			}
 		}
 
 		private void OnDestroy()
