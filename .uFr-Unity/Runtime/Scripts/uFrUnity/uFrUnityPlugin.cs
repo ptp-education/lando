@@ -119,7 +119,7 @@ namespace uFrUnity
 										var newConn = new ReaderConnection() { Reader = reader, Data = null, ReaderSN = reader.reader_sn };
 										if (!m_activeReaders.TryAdd(i, newConn))
 										{
-											Errors.Enqueue($"Failed to add new connected reader {i} to active readers");
+											//Errors.Enqueue($"Failed to add new connected reader {i} to active readers");
 										}
 										else
 										{
@@ -129,7 +129,7 @@ namespace uFrUnity
 									}
 									else
 									{
-										Errors.Enqueue($"Failed to add new connected reader {i} to active readers {status}");
+										//Errors.Enqueue($"Failed to add new connected reader {i} to active readers {status}");
 									}
 								}
 							}
@@ -180,7 +180,7 @@ namespace uFrUnity
 					Errors.Enqueue(ex.Message);
 				}
 
-				await Task.Yield();
+				await Task.Delay(500);
 			}
 
 		}

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using Lando.SmartObjects;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
+using Lando;
 
 public class StringsFile
 {
@@ -54,18 +55,7 @@ public class ControllerManager : GameManager
 
     private async void GetConnectors()
     {
-        SmartObjectManager manager = SmartObjectManager.Instance;
-
-		if (manager == null)
-		{
-			var asyncOp = SceneManager.LoadSceneAsync("smart_object_manager", LoadSceneMode.Additive);
-			while(!asyncOp.isDone)
-			{
-				await Task.Yield();
-			}
-
-			manager = SmartObjectManager.Instance;
-		}
+		SmartObjectManager manager = Globals.SmartManager;
 
         if (manager != null)
         {
