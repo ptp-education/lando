@@ -48,13 +48,15 @@ MonoBehaviour:
   HowToPlay:
     Name: 
     Thumbnail: {fileID: 0}
-    Command: 
+    ObjectToLoad: {fileID: 0}
   Challenges:
   - Name: 2-pounds
     Sprite: {fileID: 21300000, guid: 49730f6586a264b24899dcbb9b08b117, type: 3}
     ResourceRewards: 0000000000000000
     HintRewards:
-    - 
+    - test
+    - test2
+    - test3
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-2-trucks -bridge send-truck 2
@@ -65,8 +67,7 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: ad29165c422364ffca1940c2883219c5, type: 3}
     ResourceRewards: 000000000000000000000000
     HintRewards:
-    - test
-    - test
+    - test4
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-5-trucks -bridge send-truck 5
@@ -125,18 +126,24 @@ MonoBehaviour:
     EncourageCommand: 
   Hints:
   - Name: test
-    Thumbnail: {fileID: 0}
-    Command: 
+    Thumbnail: {fileID: 21300000, guid: f2eae9377b006473a9dd72eb7ef10c86, type: 3}
+    ObjectToLoad: {fileID: 2987956437303003458, guid: 8db6744f028ff41f0ab87c4c3e23980e, type: 3}
   - Name: test2
-    Thumbnail: {fileID: 0}
-    Command: 
+    Thumbnail: {fileID: 21300000, guid: 3c482c7ec7a4d4e028e2c717763375aa, type: 3}
+    ObjectToLoad: {fileID: 2987956437303003458, guid: e3db0612312bc49d1b557f13f6907a65, type: 3}
+  - Name: test3
+    Thumbnail: {fileID: 21300000, guid: 423022b570f1d4c798615616408ba4fa, type: 3}
+    ObjectToLoad: {fileID: 2987956437303003458, guid: 841d1127e60e24b79a5d416290338ad1, type: 3}
+  - Name: test4
+    Thumbnail: {fileID: 21300000, guid: 423022b570f1d4c798615616408ba4fa, type: 3}
+    ObjectToLoad: {fileID: 2987956437303003458, guid: 841d1127e60e24b79a5d416290338ad1, type: 3}
   WaysToFail:
   - Name: needs-taller
     ButtonName: Bridge touching potato
-    Command: touching-potato
+    ObjectToLoad: {fileID: 0}
   - Name: touching-sand
     ButtonName: Bridge touching sand
-    Command: touching-sand
+    ObjectToLoad: {fileID: 0}
   - Name: not-wide-enough
     ButtonName: Bridge not wide enough
-    Command: not-wide-enough
+    ObjectToLoad: {fileID: 0}

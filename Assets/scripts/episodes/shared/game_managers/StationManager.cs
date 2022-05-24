@@ -11,6 +11,16 @@ public class StationManager : GameManager
     [SerializeField] protected Sprite inactiveSprite_;
     [SerializeField] protected Sprite activeSprite_;
 
+    public virtual void NewVoiceover(string file)
+    {
+        //implement
+    }
+
+    public virtual void NewPrint(string file)
+    {
+        //implement
+    }
+
     protected override void NewNodeEventInternal(EpisodeNode n)
     {
         base.NewNodeEventInternal(n);

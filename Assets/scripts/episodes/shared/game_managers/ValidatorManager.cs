@@ -79,7 +79,7 @@ public class ValidatorManager : GameManager
                     "-validator {0} {1} {2}",
                     SmartObjectType.TestingStation.ToString(),
                     CommandDispatch.ValidatorResponse.BeforeTest.ToString(),
-                    failOption.Command)));
+                    failOption.Name)));
         }
 
         foreach (KeyValuePair<string, string> b in buttons)

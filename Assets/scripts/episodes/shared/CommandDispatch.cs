@@ -18,6 +18,12 @@ public class CommandDispatch
         ScanWristband
     }
 
+    public enum NoHintReason
+    {
+        NoMoreHints,
+        CompleteChallengesForMore
+    }
+
     public void Init(GameManager gameManager)
     {
         gameManager_ = gameManager;
@@ -36,8 +42,60 @@ public class CommandDispatch
                 OnTestStationScan(id, stationType.ToString());
                 break;
             case SmartObjectType.HintStation:
+                OnHintStationScan(id, stationType.ToString());
                 break;
         }
+    }
+
+    private void OnHintStationScan(string id, string station)
+    {
+        //TODO Write a check that makes sure LevelData doesn't give repeat hints. Otherwise breaks this logic
+
+        List<LevelData.Hint> hintsAvailableToUser = gameManager_.AllHintsForUserId(id);
+        List<LevelData.Hint> allAvailableHints = gameManager_.ChallengeData.Hints;
+        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
+
+        if (userData.RedeemedHints.Count < hintsAvailableToUser.Count)
+        {
+            //send all available hints
+
+            List<string> allHintsAvailableCopy = new List<string>();
+            foreach (LevelData.Hint h in hintsAvailableToUser)
+            {
+                allHintsAvailableCopy.Add(h.Name);
+            }
+
+            for (int i = 0; i < allHintsAvailableCopy.Count; i++)
+            {
+                if (userData.RedeemedHints.Contains(allHintsAvailableCopy[i]))
+                {
+                    allHintsAvailableCopy.RemoveAt(i);
+                }
+            }
+
+            gameManager_.SendNewAction(string.Format(
+                "-station {0} show-hints {1} {2}",
+                station,
+                nfcAtStation_[station],
+                string.Join(" ", allHintsAvailableCopy))); ;
+        } else if (userData.RedeemedHints.Count == allAvailableHints.Count)
+        {
+            gameManager_.SendNewAction(string.Format(
+                "-station {0} no-hints {1}",
+                station,
+                NoHintReason.NoMoreHints.ToString()));
+        } else
+        {
+            gameManager_.SendNewAction(string.Format(
+                "-station {0} no-hints {1}",
+                station,
+                NoHintReason.CompleteChallengesForMore.ToString()));
+        }
+    }
+
+    public void OnHintUsed(string id, string hint)
+    {
+        gameManager_.SaveUsedHint(id, hint);
     }
 
     private void OnResourceStationScan(string id, string station)

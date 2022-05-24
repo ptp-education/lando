@@ -32,7 +32,7 @@ public class LevelData : MonoBehaviour
     {
         public string Name;
         public Sprite Thumbnail;
-        public string Command;
+        public HintObject ObjectToLoad;
     }
 
     [Serializable]
@@ -40,6 +40,6 @@ public class LevelData : MonoBehaviour
     {
         public string Name;
         public string ButtonName;   //text to display on button
-        public string Command;
+        public HintObject ObjectToLoad;
     }
 }
