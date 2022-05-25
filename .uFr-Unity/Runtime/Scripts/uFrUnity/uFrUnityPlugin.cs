@@ -56,10 +56,10 @@ namespace uFrUnity
 
 		private void Awake()
 		{
-			//Task.Run(Discover, m_cancellationTokenSource.Token);
-			Discover();
-			HandleDisconnects();
-			//Task.Run(HandleDisconnects, m_cancellationTokenSource.Token);
+			Task.Run(Discover, m_cancellationTokenSource.Token);
+			//Discover();
+			//HandleDisconnects();
+			Task.Run(HandleDisconnects, m_cancellationTokenSource.Token);
 		}
 
 		private async void HandleDisconnects()
@@ -77,9 +77,12 @@ namespace uFrUnity
 							{
 								if (returnVal == 0)
 								{
-									if (!m_activeReaders.TryRemove(i, out ReaderConnection _))
+									lock (m_activeReaders)
 									{
-										Errors.Enqueue($"Failed to remove Disconnected reader {i} from active readers");
+										if (!m_activeReaders.TryRemove(i, out ReaderConnection _))
+										{
+											Errors.Enqueue($"Failed to remove Disconnected reader {i} from active readers");
+										}
 									}
 
 								}
@@ -113,24 +116,28 @@ namespace uFrUnity
 							{
 								if (!m_activeReaders.ContainsKey(i))
 								{
-									uFReader reader = new uFReader(i);
-									if (Ok(reader.open(), out var status))
-									{
-										var newConn = new ReaderConnection() { Reader = reader, Data = null, ReaderSN = reader.reader_sn };
-										if (!m_activeReaders.TryAdd(i, newConn))
+										uFReader reader = new uFReader(i);
+										if (Ok(reader.open(), out var status))
 										{
-											//Errors.Enqueue($"Failed to add new connected reader {i} to active readers");
+											lock (m_activeReaders)
+											{
+												var newConn = new ReaderConnection() { Reader = reader, Data = null, ReaderSN = reader.reader_sn };
+												if (!m_activeReaders.TryAdd(i, newConn))
+												{
+													//Errors.Enqueue($"Failed to add new connected reader {i} to active readers");
+												}
+												else
+												{
+													//UpdateCardAndConnectionInfo(newConn);
+													_ = Task.Run(() => UpdateCardAndConnectionInfo(newConn));
+												}
+											}
 										}
 										else
 										{
-											UpdateCardAndConnectionInfo(newConn);
-											//_ = Task.Run(() => ReadCard(newConn));
+											//Errors.Enqueue($"Failed to add new connected reader {i} to active readers {status}");
 										}
-									}
-									else
-									{
-										//Errors.Enqueue($"Failed to add new connected reader {i} to active readers {status}");
-									}
+									
 								}
 							}
 						}
@@ -140,7 +147,7 @@ namespace uFrUnity
 				{
 					Errors.Enqueue(ex.Message);
 				}
-				
+
 
 				await Task.Delay(500);
 			}
@@ -150,34 +157,39 @@ namespace uFrUnity
 		{
 			while (!m_cancellationTokenSource.IsCancellationRequested && conn.Connected)
 			{
-				try
+				lock (conn)
 				{
-					// If a card is connected (but we've already read it), keep checking connection info
-					// OR if a card was not connected
-					if (conn.CardConnected && conn.HaveReadCard || !conn.CardConnected)
+					try
 					{
-						if (!Ok(GetCardConnectionInfo(ref conn), out var status))
+						// If a card is connected (but we've already read it), keep checking connection info
+						// OR if a card was not connected
+						if (conn.CardConnected && conn.HaveReadCard || !conn.CardConnected)
 						{
-							if (!UpdateConnectionStatus(status, conn)) {
-								Errors.Enqueue($"Failed to GetCardConnectionInfo {conn.ReaderSN} {status}");
-							}
-	
-						} else if(!conn.HaveReadCard)
-						{
-							conn.CardConnected = true;
-							conn.LastReadCardUID = conn.Data.CardUID;
-							SuccessulScans.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.CardUID });
-						}
-					} 
-					//else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
-					//{
-					//	ReadCard(conn);
-					//}
+							if (!Ok(GetCardConnectionInfo(conn), out var status))
+							{
+								if (!UpdateConnectionStatus(status, conn))
+								{
+									Errors.Enqueue($"Failed to GetCardConnectionInfo {conn.ReaderSN} {status}");
+								}
 
-				}
-				catch (Exception ex)
-				{
-					Errors.Enqueue(ex.Message);
+							}
+							else if (!conn.HaveReadCard)
+							{
+								conn.CardConnected = true;
+								conn.LastReadCardUID = conn.Data.CardUID;
+								SuccessulScans.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.CardUID });
+							}
+						}
+						//else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
+						//{
+						//	ReadCard(conn);
+						//}
+
+					}
+					catch (Exception ex)
+					{
+						Errors.Enqueue(ex.Message);
+					}
 				}
 
 				await Task.Delay(500);
