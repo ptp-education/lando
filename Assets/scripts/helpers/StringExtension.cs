@@ -28,4 +28,13 @@ public static class StringExtensions
         }
         return ret;
     }
+
+    public static List<string> ConvertFromArgumentList(this string text)
+    {
+        string s = text.Remove(0, 1);
+        s = s.Remove(s.Length - 1);
+
+        string[] ret = s.Split('&');
+        return new List<string>(ret);
+    }
 }

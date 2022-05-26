@@ -44,6 +44,7 @@ public class GameStorage
         public string CurrentChallenge;
         public List<string> CompletedChallenges = new List<string>();
         public List<ResourceType> RedeemedResources = new List<ResourceType>();
+        public List<string> RedeemedHints = new List<string>();
     }
 
     private Dictionary<string, object> dict_ = new Dictionary<string, object>();

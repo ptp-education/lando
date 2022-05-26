@@ -73,7 +73,6 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
-        Debug.Log("new nfc scanned: " + nfcId + " at station: " + stationType.ToString());
         dispatch_.NewNfcScan(nfcId, stationType);
     }
 
@@ -120,11 +119,23 @@ public class ControllerManager : GameManager
         base.NewActionInternal(a);
 
         List<string> validatorArgs = ArgumentHelper.ArgumentsFromCommand("-validator", a);
+        List<string> hintUsedArgs = ArgumentHelper.ArgumentsFromCommand("-hint-used", a);
+        List<string> refreshArgs = ArgumentHelper.ArgumentsFromCommand("-refresh-station", a);
 
         if (validatorArgs.Count > 1)
         {
             List<string> additionalArgs = new List<string>(validatorArgs.GetRange(2, validatorArgs.Count - 2));
             dispatch_.NewValidatorAction(validatorArgs[0], validatorArgs[1], additionalArgs);
+        }
+
+        if (hintUsedArgs.Count > 1)
+        {
+            dispatch_.OnUsedHint(hintUsedArgs[0], hintUsedArgs[1]);
+        }
+
+        if (refreshArgs.Count > 0)
+        {
+            dispatch_.OnRefresh(refreshArgs[0], refreshArgs[1]);
         }
     }
 

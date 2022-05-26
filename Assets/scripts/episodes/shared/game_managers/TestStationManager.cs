@@ -34,6 +34,8 @@ public class TestStationManager : StationManager
     {
         base.NewRelevantAction(arguments);
 
+        if (!IsStationActive) return;
+
         if (string.Equals("load", arguments[0]))
         {
             HandleNewChallange(arguments[1]);
@@ -71,7 +73,6 @@ public class TestStationManager : StationManager
 
     private void HandleNewChallange(string challengeName, bool skipCheckForRewardFlow = false)
     {
-        if (!IsStationActive) return;
         if (!skipCheckForRewardFlow && rewardFlow_ != null && rewardFlow_.state == GoTweenState.Running) return;
 
         Reset();
@@ -229,7 +230,7 @@ public class TestStationManager : StationManager
 
             rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
             {
-                AudioPlayer.PlayAudio(nextChallenge.NextChallengeCommand, episode_.VORoot);
+                AudioPlayer.PlayVoiceover(nextChallenge.NextChallengeCommand, episode_.VORoot);
             })));
 
             rewardFlow_.insert(time + nextChallengeDuration - 0.5f, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>

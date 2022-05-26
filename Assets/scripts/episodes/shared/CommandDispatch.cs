@@ -41,11 +41,24 @@ public class CommandDispatch
         }
     }
 
+    public void OnRefresh(string id, string station)
+    {
+        SmartObjectType parsedResponse = (SmartObjectType)Enum.Parse(typeof(SmartObjectType), station);
+
+        switch(parsedResponse)
+        {
+            case SmartObjectType.HintStation:
+                OnHintStationScan(id, station);
+                break;
+        }
+    }
+
     private void OnHintStationScan(string id, string station)
     {
         //TODO Write a check that makes sure LevelData doesn't give repeat hints. Otherwise breaks this logic
 
         List<LevelData.Hint> hintsAvailableToUser = gameManager_.AllHintsForUserId(id);
+        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
 
         if (hintsAvailableToUser.Count > 0)
         {
@@ -56,10 +69,11 @@ public class CommandDispatch
             }
 
             gameManager_.SendNewAction(string.Format(
-                "-station {0} show-hints {1} {2}",
+                "-station {0} show-hints {1} {2} {3}",
                 station,
                 nfcAtStation_[station],
-                string.Join(" ", allHintsAvailableCopy))); ;
+                allHintsAvailableCopy.ConvertToStringArgument(),
+                userData.RedeemedHints.ConvertToStringArgument()));
         } else
         {
             gameManager_.SendNewAction(string.Format(
@@ -136,6 +150,11 @@ public class CommandDispatch
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
         gameManager_.SendNewAction(string.Format("-station {0} load {1}", station, c.Name));
+    }
+
+    public void OnUsedHint(string id, string hint)
+    {
+        gameManager_.UsedHint(id, hint);
     }
 
     public void NewValidatorAction(string station, string command, List<string> arguments)

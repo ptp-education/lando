@@ -11,19 +11,27 @@ public class StationManager : GameManager
     [SerializeField] protected Sprite inactiveSprite_;
     [SerializeField] protected Sprite activeSprite_;
 
+    public string StationName
+    {
+        get
+        {
+            return StationType.ToString();
+        }
+    }
+
     public virtual float NewVoiceover(string file)
     {
-        return AudioPlayer.PlayAudio(file, episode_.VORoot);
+        return AudioPlayer.PlayVoiceover(file, episode_.VORoot);
     }
 
     public virtual float NewVoiceover(List<string> files)
     {
-        return AudioPlayer.PlayAudio(files, episode_.VORoot);
+        return AudioPlayer.PlayVoiceover(files, episode_.VORoot);
     }
 
     public virtual void NewPrint(string file)
     {
-        //implement
+        
     }
 
     protected override void NewNodeEventInternal(EpisodeNode n)

@@ -27,6 +27,7 @@ public class HintObject : MonoBehaviour
     private System.Action onComplete_;
     private float lastVoiceoverCompleteTime_ = 0f;
     private bool autoSelfDestruct_;
+    private bool waitingToSelfDestruct_;
 
     private void Start()
     {
@@ -48,9 +49,10 @@ public class HintObject : MonoBehaviour
 
         timer_ += Time.deltaTime;
 
-        if (autoSelfDestruct_ && timer_ > lastVoiceoverCompleteTime_) 
+        if (autoSelfDestruct_ && !waitingToSelfDestruct_ && timer_ > lastVoiceoverCompleteTime_) 
         {
             onComplete_();
+            waitingToSelfDestruct_ = true;
         }
 
         foreach(Event e in events_)
@@ -85,7 +87,7 @@ public class HintObject : MonoBehaviour
 
                     if (e == events_.Last())
                     {
-                        autoSelfDestruct_ = events_.Find(e => e.SelfDestruct) != null;
+                        autoSelfDestruct_ = events_.Find(e => e.SelfDestruct) == null;
                     }
                 }
             }

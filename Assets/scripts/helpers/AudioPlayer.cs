@@ -11,6 +11,8 @@ public class AudioPlayer : MonoBehaviour
     private static GoTweenFlow radioFlow_;
     private static AudioPlayer instance_;
 
+    private static AudioSource voiceoverAudio_;
+
     private static string kSharedVoRoot = "audio/shared_vo/";
 
     private static AudioPlayer Instance
@@ -29,15 +31,29 @@ public class AudioPlayer : MonoBehaviour
 
     #region CORE_FUNCTIONS
 
-    public static float PlayAudio(string path, bool expectFailure = false)
+    public static float PlayAudio(string path, bool expectFailure = false, bool useVoiceover = false)
     {
         if (GameManager.MuteAll)
         {
             return -1f;
         }
 
+        AudioSource audioSource = null;
         AudioSource a = Resources.Load<AudioSource>("prefabs/episode_objects/audio_player");
-        AudioSource audioSource = GameObject.Instantiate(a);
+        audioSource = GameObject.Instantiate(a);
+
+        if (useVoiceover)
+        {
+            if (voiceoverAudio_ != null)
+            {
+                if (voiceoverAudio_.isPlaying)
+                {
+                    voiceoverAudio_.Stop();
+                }
+            }
+            voiceoverAudio_ = GameObject.Instantiate(Resources.Load<AudioSource>("prefabs/episode_objects/audio_player"));
+            audioSource = voiceoverAudio_;
+        }
 
         AudioClip clip = Resources.Load<AudioClip>(path);
 
@@ -166,20 +182,20 @@ public class AudioPlayer : MonoBehaviour
         return AudioPlayer.PlaySfx(file);
     }
 
-    public static float PlayAudio(string path, string root)
+    public static float PlayVoiceover(string path, string root)
     {
-        return PlayAudio(new List<string>() { path }, root);
+        return PlayVoiceover(new List<string>() { path }, root);
     }
 
-    public static float PlayAudio(List<string> paths, string root)
+    public static float PlayVoiceover(List<string> paths, string root)
     {
         string vo = paths[Random.Range(0, paths.Count)];
 
-        float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true);
+        float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true, useVoiceover: true);
 
         if (duration == -1f)
         {
-            duration = AudioPlayer.PlayAudio(kSharedVoRoot + vo);
+            duration = AudioPlayer.PlayAudio(kSharedVoRoot + vo, useVoiceover: true);
         }
 
         return duration;
