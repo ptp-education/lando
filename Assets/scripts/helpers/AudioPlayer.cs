@@ -11,6 +11,8 @@ public class AudioPlayer : MonoBehaviour
     private static GoTweenFlow radioFlow_;
     private static AudioPlayer instance_;
 
+    private static string kSharedVoRoot = "audio/shared_vo/";
+
     private static AudioPlayer Instance
     {
         get
@@ -24,6 +26,8 @@ public class AudioPlayer : MonoBehaviour
             return instance_;
         }
     }
+
+    #region CORE_FUNCTIONS
 
     public static float PlayAudio(string path, bool expectFailure = false)
     {
@@ -113,6 +117,74 @@ public class AudioPlayer : MonoBehaviour
         }
     }
 
+    public static float AudioLength(string path)
+    {
+        AudioClip clip = Resources.Load<AudioClip>(path);
+
+        if (clip == null)
+        {
+            return -1;
+        }
+
+        return clip.length;
+    }
+
+    public static float AudioLength(string path, string root)
+    {
+        float duration = AudioLength(root + path);
+
+        if (duration == -1f)
+        {
+            duration = AudioLength(kSharedVoRoot + root);
+        }
+
+        return duration;
+    }
+
+    #endregion
+
+    public static float PlayCheer()
+    {
+        List<string> cheers = new List<string>()
+        {
+            "airhorn",
+            "applausetrumpet",
+            "cheer"
+        };
+
+        return PlaySfx(cheers);
+    }
+
+    public static float PlaySfx(string file)
+    {
+        return AudioPlayer.PlayAudio("audio/sfx/" + file);
+    }
+
+    public static float PlaySfx(List<string> files)
+    {
+        string file = files[Random.Range(0, files.Count)];
+        return AudioPlayer.PlaySfx(file);
+    }
+
+    public static float PlayAudio(string path, string root)
+    {
+        return PlayAudio(new List<string>() { path }, root);
+    }
+
+    public static float PlayAudio(List<string> paths, string root)
+    {
+        string vo = paths[Random.Range(0, paths.Count)];
+
+        float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true);
+
+        if (duration == -1f)
+        {
+            duration = AudioPlayer.PlayAudio(kSharedVoRoot + vo);
+        }
+
+        return duration;
+    }
+
     public static void StartRadio()
     {
         StopRadio();
@@ -125,10 +197,12 @@ public class AudioPlayer : MonoBehaviour
         if (sf.FileNames.Length == 0)
         {
             return;
-        } else if (sf.FileNames.Length < 2)
+        }
+        else if (sf.FileNames.Length < 2)
         {
             nextSong = sf.FileNames[0];
-        } else
+        }
+        else
         {
             string currentlyPlaying = loopingSources_.ContainsKey(kRadio) ? loopingSources_[kRadio].Key : null;
             nextSong = currentlyPlaying;
@@ -158,11 +232,5 @@ public class AudioPlayer : MonoBehaviour
             radioFlow_ = null;
         }
         StopLoop(kRadio);
-    }
-
-    public static float AudioLength(string path)
-    {
-        AudioClip clip = Resources.Load<AudioClip>(path);
-        return clip.length;
     }
 }

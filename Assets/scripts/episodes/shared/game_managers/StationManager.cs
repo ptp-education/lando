@@ -11,9 +11,14 @@ public class StationManager : GameManager
     [SerializeField] protected Sprite inactiveSprite_;
     [SerializeField] protected Sprite activeSprite_;
 
-    public virtual void NewVoiceover(string file)
+    public virtual float NewVoiceover(string file)
     {
-        //implement
+        return AudioPlayer.PlayAudio(file, episode_.VORoot);
+    }
+
+    public virtual float NewVoiceover(List<string> files)
+    {
+        return AudioPlayer.PlayAudio(files, episode_.VORoot);
     }
 
     public virtual void NewPrint(string file)
@@ -25,7 +30,8 @@ public class StationManager : GameManager
     {
         base.NewNodeEventInternal(n);
 
-        background_.sprite = IsStationActive(n) ? activeSprite_ : inactiveSprite_;
+        Reset();
+        background_.sprite = IsStationActive ? activeSprite_ : inactiveSprite_;
     }
 
     protected override void NewActionInternal(string a)
@@ -42,12 +48,20 @@ public class StationManager : GameManager
         }
     }
 
-    protected virtual bool IsStationActive(EpisodeNode newNode)
+    protected virtual bool IsStationActive
     {
-        return newNode.TestingActive;
+        get
+        {
+            return currentNode_.TestingActive;
+        }
     }
 
     protected virtual void NewRelevantAction(List<string> arguments)
+    {
+        //stub
+    }
+
+    protected virtual void Reset()
     {
         //stub
     }

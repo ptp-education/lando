@@ -33,14 +33,13 @@ public class HintStationManager : StationManager
 
         if (string.Equals("no-hints", arguments[0]))
         {
-            CommandDispatch.NoHintReason parsedResponse = (CommandDispatch.NoHintReason)Enum.Parse(typeof(CommandDispatch.NoHintReason), arguments[1]);
-            HandleNoHints(parsedResponse);
+            HandleNoHints();
         }
     }
 
-    private void HandleNoHints(CommandDispatch.NoHintReason reason)
+    private void HandleNoHints()
     {
-        Debug.Log("no hints to show for reason: " + reason.ToString());
+        Debug.Log("complete more challenges to see hints");
         RemoveAllHintThumbnails();
     }
 
@@ -88,8 +87,6 @@ public class HintStationManager : StationManager
             Debug.LogWarning("Couldn't find hint: " + button.name);
             return;
         }
-
-        SendNewAction(string.Format("-used-hint {0} {1}", activeId_, hintUsed));
 
         HintObject hintObject = GameObject.Instantiate(hint.ObjectToLoad);
         hintObject.name = hintUsed;

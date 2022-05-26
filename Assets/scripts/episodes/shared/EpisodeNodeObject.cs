@@ -11,6 +11,8 @@ public class EpisodeNodeObject : MonoBehaviour
     public EpisodeNode Node;
     protected GameManager gameManager_;
 
+    private static float kMaxRunLength = 600f;
+
     private List<SpawnedObject> spawnedPrefabs_ = new List<SpawnedObject>();
     private float timer_ = 0f;
 
@@ -118,7 +120,7 @@ public class EpisodeNodeObject : MonoBehaviour
     {
         spawnedObjectParent_.SetAsLastSibling();
            
-        if (IsPlaying)
+        if (IsPlaying && timer_ < kMaxRunLength)
         {
             timer_ += Time.deltaTime;
         }

@@ -50,7 +50,9 @@ public class ControllerManager : GameManager
     {
         base.Init(nm);
 
+#if UNITY_EDITOR
         LoadStationManagers();
+#endif
     }
 
     private async void GetConnectors()
@@ -118,17 +120,11 @@ public class ControllerManager : GameManager
         base.NewActionInternal(a);
 
         List<string> validatorArgs = ArgumentHelper.ArgumentsFromCommand("-validator", a);
-        List<string> usedHintArgs = ArgumentHelper.ArgumentsFromCommand("-used-hint", a);
 
         if (validatorArgs.Count > 1)
         {
             List<string> additionalArgs = new List<string>(validatorArgs.GetRange(2, validatorArgs.Count - 2));
             dispatch_.NewValidatorAction(validatorArgs[0], validatorArgs[1], additionalArgs);
-        }
-
-        if (usedHintArgs.Count > 1)
-        {
-            dispatch_.OnHintUsed(usedHintArgs[0], usedHintArgs[1]);
         }
     }
 

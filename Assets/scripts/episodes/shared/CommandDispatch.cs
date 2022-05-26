@@ -18,12 +18,6 @@ public class CommandDispatch
         ScanWristband
     }
 
-    public enum NoHintReason
-    {
-        NoMoreHints,
-        CompleteChallengesForMore
-    }
-
     public void Init(GameManager gameManager)
     {
         gameManager_ = gameManager;
@@ -52,25 +46,13 @@ public class CommandDispatch
         //TODO Write a check that makes sure LevelData doesn't give repeat hints. Otherwise breaks this logic
 
         List<LevelData.Hint> hintsAvailableToUser = gameManager_.AllHintsForUserId(id);
-        List<LevelData.Hint> allAvailableHints = gameManager_.ChallengeData.Hints;
-        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
 
-        if (userData.RedeemedHints.Count < hintsAvailableToUser.Count)
+        if (hintsAvailableToUser.Count > 0)
         {
-            //send all available hints
-
             List<string> allHintsAvailableCopy = new List<string>();
             foreach (LevelData.Hint h in hintsAvailableToUser)
             {
                 allHintsAvailableCopy.Add(h.Name);
-            }
-
-            for (int i = 0; i < allHintsAvailableCopy.Count; i++)
-            {
-                if (userData.RedeemedHints.Contains(allHintsAvailableCopy[i]))
-                {
-                    allHintsAvailableCopy.RemoveAt(i);
-                }
             }
 
             gameManager_.SendNewAction(string.Format(
@@ -78,24 +60,12 @@ public class CommandDispatch
                 station,
                 nfcAtStation_[station],
                 string.Join(" ", allHintsAvailableCopy))); ;
-        } else if (userData.RedeemedHints.Count == allAvailableHints.Count)
-        {
-            gameManager_.SendNewAction(string.Format(
-                "-station {0} no-hints {1}",
-                station,
-                NoHintReason.NoMoreHints.ToString()));
         } else
         {
             gameManager_.SendNewAction(string.Format(
                 "-station {0} no-hints {1}",
-                station,
-                NoHintReason.CompleteChallengesForMore.ToString()));
+                station));
         }
-    }
-
-    public void OnHintUsed(string id, string hint)
-    {
-        gameManager_.SaveUsedHint(id, hint);
     }
 
     private void OnResourceStationScan(string id, string station)
@@ -231,7 +201,7 @@ public class CommandDispatch
     {
         GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
 
-        bool haveRedeemableHints = gameManager_.AllHintsForUserId(id).Count > userData.RedeemedHints.Count;
+        bool haveRedeemableHints = gameManager_.AllHintsForUserId(id).Count > 0;
 
         gameManager_.SendNewAction(
             string.Format(

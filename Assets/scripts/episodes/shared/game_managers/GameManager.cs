@@ -255,17 +255,6 @@ public class GameManager : MonoBehaviour
         GameStorageForUserId(id).SaveUserData(data);
     }
 
-    public void SaveUsedHint(string id, string hint)
-    {
-        GameStorage.UserData userData = UserDataForUserId(id);
-
-        if (!userData.RedeemedHints.Contains(hint))
-        {
-            userData.RedeemedHints.Add(hint);
-            SaveUserData(userData, id);
-        }
-    }
-
     public List<LevelData.Hint> AllHintsForUserId(string id)
     {
         List<LevelData.Challenge> completedChallenges = new List<LevelData.Challenge>();
@@ -295,6 +284,15 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        foreach(string h in ChallengeData.StartingHints)
+        {
+            LevelData.Hint hint = FindHint(h);
+            if (hint != null)
+            {
+                ret.Add(hint);
+            }
+        }
+
         return ret;
     }
 
@@ -316,6 +314,8 @@ public class GameManager : MonoBehaviour
         {
             ret.AddRange(c.ResourceRewards);
         }
+
+        ret.AddRange(ChallengeData.StartingResources);
 
         return ret;
     }
@@ -353,6 +353,23 @@ public class GameManager : MonoBehaviour
                 if (c.ResourceRewards.Count > 0)
                 {
                     return c;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public LevelData.Challenge NextChallengeForCurrentChallenge(string challenge)
+    {
+        for (int i = 0; i < ChallengeData.Challenges.Count; i++)
+        {
+            LevelData.Challenge currentChallenge = ChallengeData.Challenges[i];
+            if (string.Equals(currentChallenge.Name, challenge))
+            {
+                if (i < ChallengeData.Challenges.Count - 1)
+                {
+                    return ChallengeData.Challenges[i + 1];
                 }
             }
         }

@@ -7,7 +7,7 @@ public class LevelData : MonoBehaviour
 {
     [SerializeField] public List<GameStorage.ResourceType> StartingResources = new List<GameStorage.ResourceType>();
     [SerializeField] public List<string> StartingHints = new List<string>();
-    [SerializeField] public Hint HowToPlay; //we show this hint to everyone at the start of class, to set up the class
+    [SerializeField] public HintObject HowToPlay; //we show this hint to everyone at the start of class, to set up the class
     [SerializeField] public List<Challenge> Challenges = new List<Challenge>();
     [SerializeField] public List<Hint> Hints = new List<Hint>();
     [SerializeField] public List<BeforeTestFail> WaysToFail = new List<BeforeTestFail>();
@@ -38,7 +38,12 @@ public class LevelData : MonoBehaviour
     [Serializable]
     public class BeforeTestFail
     {
-        public string Name;
+        [HideInInspector] public string Name {
+            get
+            {
+                return ButtonName.Replace(' ', '-');
+            }
+        }
         public string ButtonName;   //text to display on button
         public HintObject ObjectToLoad;
     }

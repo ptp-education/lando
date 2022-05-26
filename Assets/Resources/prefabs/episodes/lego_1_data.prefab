@@ -43,107 +43,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingResources: 
-  StartingHints: []
-  HowToPlay:
-    Name: 
-    Thumbnail: {fileID: 0}
-    ObjectToLoad: {fileID: 0}
+  StartingResources: 0000000000000000
+  StartingHints:
+  - interlocking-bridge
+  HowToPlay: {fileID: 3584140693423423134, guid: b860d7753e1a34ceb8379afa23de5cca, type: 3}
   Challenges:
   - Name: 2-pounds
-    Sprite: {fileID: 21300000, guid: 49730f6586a264b24899dcbb9b08b117, type: 3}
-    ResourceRewards: 0000000000000000
+    Sprite: {fileID: 21300000, guid: e5f0f118c8a774c74a7df489590493b9, type: 3}
+    ResourceRewards: 00000000
     HintRewards:
-    - test
-    - test2
-    - test3
+    - add-piers
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-2-trucks -bridge send-truck 2
-    RequirementsCommand: -character talk testing-announce-2
+    RequirementsCommand: testing-announce-2
     NextChallengeCommand: 
     EncourageCommand: 
   - Name: 5-pounds
-    Sprite: {fileID: 21300000, guid: ad29165c422364ffca1940c2883219c5, type: 3}
-    ResourceRewards: 000000000000000000000000
-    HintRewards:
-    - test4
+    Sprite: {fileID: 21300000, guid: fcb23e441465d41c5ace847eb447d9b9, type: 3}
+    ResourceRewards: 00000000
+    HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-5-trucks -bridge send-truck 5
     RequirementsCommand: -character talk testing-announce-5
-    NextChallengeCommand: -character talk testing-next-announce-5
+    NextChallengeCommand: testing-next-announce-5
     EncourageCommand: 
   - Name: 10-pounds
-    Sprite: {fileID: 21300000, guid: ac32915d8922f4a1089d7d378089e86b, type: 3}
-    ResourceRewards: 
-    HintRewards: []
+    Sprite: {fileID: 21300000, guid: c0e02647f26b14e59b044acbd402a741, type: 3}
+    ResourceRewards: 00000000
+    HintRewards:
+    - thicker-platform
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-10-trucks -bridge send-truck 10
     RequirementsCommand: -character talk testing-announce-10
-    NextChallengeCommand: -character talk testing-next-announce-10
+    NextChallengeCommand: testing-next-announce-10
     EncourageCommand: 
   - Name: 15-pounds
-    Sprite: {fileID: 21300000, guid: bdd6d4b746e4f46738fffe48a48c7361, type: 3}
-    ResourceRewards: 0000000000000000000000000000000000000000
+    Sprite: {fileID: 21300000, guid: bbf4d25bf9ae54f599282052bae8dd14, type: 3}
+    ResourceRewards: 00000000
     HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk send-15-trucks -bridge send-truck 10
     RequirementsCommand: -character talk testing-announce-15
-    NextChallengeCommand: -character talk testing-next-announce-15
+    NextChallengeCommand: testing-next-announce-15
     EncourageCommand: 
   - Name: 15-pound-6-wide
-    Sprite: {fileID: 21300000, guid: 1c9e032ad1b514eeb9ba00c6d002c895, type: 3}
-    ResourceRewards: 
+    Sprite: {fileID: 21300000, guid: 25c8d84fdf6a54487be29e324e59233d, type: 3}
+    ResourceRewards: 00000000
     HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk result-choose -farm-selector show 1
     RequirementsCommand: -character talk testing-announce-15-6w-3
-    NextChallengeCommand: -character progression-talk testing-announce-15-6w
+    NextChallengeCommand: testing-announce-15-6w
     EncourageCommand: 
-  - Name: 20-pound-8-wide
-    Sprite: {fileID: 21300000, guid: f380f09a71d224e23ac686d081453f7b, type: 3}
-    ResourceRewards: 
+  - Name: 20-pound-6-wide
+    Sprite: {fileID: 21300000, guid: 118a40d142abc4fc3914552ecee90234, type: 3}
+    ResourceRewards: 00000000
     HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk result-choose -farm-selector show 2
     RequirementsCommand: -character talk testing-announce-20-8w
-    NextChallengeCommand: -character talk next-wider2
+    NextChallengeCommand: next-wider2
     EncourageCommand: 
-  - Name: 35-pound-10-wide
-    Sprite: {fileID: 21300000, guid: 74e034865000541c89a4db1fd9a78d2d, type: 3}
+  - Name: 35-pound-8-wide
+    Sprite: {fileID: 21300000, guid: 00c37acf0ebfd4b0ebc769556430de9e, type: 3}
     ResourceRewards: 
     HintRewards: []
     ScanRfidCommand: 
     FailCommand: 
     RewardCommand: -character talk result-choose -farm-selector show 3
     RequirementsCommand: -character talk testing-announce-35-10w
-    NextChallengeCommand: -character talk next-wider3
+    NextChallengeCommand: next-wider3
     EncourageCommand: 
   Hints:
-  - Name: test
-    Thumbnail: {fileID: 21300000, guid: f2eae9377b006473a9dd72eb7ef10c86, type: 3}
-    ObjectToLoad: {fileID: 2987956437303003458, guid: 8db6744f028ff41f0ab87c4c3e23980e, type: 3}
-  - Name: test2
-    Thumbnail: {fileID: 21300000, guid: 3c482c7ec7a4d4e028e2c717763375aa, type: 3}
-    ObjectToLoad: {fileID: 2987956437303003458, guid: e3db0612312bc49d1b557f13f6907a65, type: 3}
-  - Name: test3
-    Thumbnail: {fileID: 21300000, guid: 423022b570f1d4c798615616408ba4fa, type: 3}
-    ObjectToLoad: {fileID: 2987956437303003458, guid: 841d1127e60e24b79a5d416290338ad1, type: 3}
-  - Name: test4
-    Thumbnail: {fileID: 21300000, guid: 423022b570f1d4c798615616408ba4fa, type: 3}
-    ObjectToLoad: {fileID: 2987956437303003458, guid: 841d1127e60e24b79a5d416290338ad1, type: 3}
+  - Name: add-piers
+    Thumbnail: {fileID: 21300000, guid: 68e2f4384bdfe4187a710ac53b68b04e, type: 3}
+    ObjectToLoad: {fileID: 1594110473086923554, guid: 3dd3c0df9b0d5412db67586f13ad186c, type: 3}
+  - Name: interlocking-bridge
+    Thumbnail: {fileID: 21300000, guid: 54935f3565d344a56b8ff6db0023c3c4, type: 3}
+    ObjectToLoad: {fileID: 1110458064090189818, guid: 20dd97db3defb49fab71795ad17ab468, type: 3}
+  - Name: thicker-platform
+    Thumbnail: {fileID: 21300000, guid: e7a8b8a31396945c1a2a427b5b6f0cbd, type: 3}
+    ObjectToLoad: {fileID: 2593542554519462503, guid: d09bcb7c1e605483790195bb6ff5db66, type: 3}
   WaysToFail:
-  - Name: needs-taller
-    ButtonName: Bridge touching potato
-    ObjectToLoad: {fileID: 0}
-  - Name: touching-sand
-    ButtonName: Bridge touching sand
-    ObjectToLoad: {fileID: 0}
-  - Name: not-wide-enough
-    ButtonName: Bridge not wide enough
-    ObjectToLoad: {fileID: 0}
+  - ButtonName: Boulder doesn't fit
+    ObjectToLoad: {fileID: 2593542554519462503, guid: e458f25bf12f642a6922d5422b37815e, type: 3}
+  - ButtonName: Bridge should be on land
+    ObjectToLoad: {fileID: 2593542554519462503, guid: e2114913d2b554429afd7e759b7dc79c, type: 3}
