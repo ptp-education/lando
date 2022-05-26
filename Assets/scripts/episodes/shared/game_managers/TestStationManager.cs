@@ -123,7 +123,7 @@ public class TestStationManager : StationManager
 
         rewardFlow_ = new GoTweenFlow();
 
-        float time = 0f;
+        float time = 2f;
         for (int i = 0; i < prefabs.Count; i++) 
         {
             Image prefab = prefabs[i];
@@ -256,9 +256,9 @@ public class TestStationManager : StationManager
         {
             challengeFailedBackground_.gameObject.SetActive(true);
             List<string> files = new List<string>();
-            for (int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 11; i++)
             {
-                files.Add("hint-prompt-" + i.ToString());
+                files.Add("testing-offer-hint-" + i.ToString());
             }
             NewVoiceover(files);
         } else

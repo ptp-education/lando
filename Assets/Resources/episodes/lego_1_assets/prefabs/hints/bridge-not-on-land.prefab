@@ -59,7 +59,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: testing-potato
+    VoiceoverFile: testing-sand
     PrintFile: 
     ImageToSet: {fileID: 0}
     SelfDestruct: 0
