@@ -228,7 +228,7 @@
 
 		}
 
-		public static DL_STATUS GetCardConnectionInfo(ref uFrUnityPlugin.ReaderConnection reader)
+		public static DL_STATUS GetCardConnectionInfo(uFrUnityPlugin.ReaderConnection reader)
 		{
 			CARD_SAK Sak = CARD_SAK.UNKNOWN;
 			byte[] baUid = new byte[7];
