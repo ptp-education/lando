@@ -48,11 +48,12 @@ public class EpisodeNode : MonoBehaviour
         [HideInInspector] public bool Spawned = false;
     }
 
-    [SerializeField]
+    [Serializable]
     public class Options
     {
         [SerializeField] public string ButtonName;
         [SerializeField] public bool TeacherOnly;
+        [SerializeField] public string Command;
     }
 
     [Serializable]
@@ -110,6 +111,7 @@ public class EpisodeNode : MonoBehaviour
     //ALL OPTIONS
     public bool FadeInFromPreviousScene;
     public bool TestingActive;
+    public List<Options> OptionsToSpawn = new List<Options>();
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();

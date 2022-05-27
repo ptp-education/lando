@@ -5,24 +5,50 @@ using UnityEngine.UI;
 
 public class ChoicesHolder : MonoBehaviour
 {
-    [SerializeField] GameObject choicePrefab_;
+    [SerializeField] ChoiceButton choicePrefab_;
     [SerializeField] Transform choicesParent_;
 
-    private List<GameObject> spawnedChoices_ = new List<GameObject>();
+    private List<ChoiceButton> spawnedChoices_ = new List<ChoiceButton>();
+    private List<EpisodeNode.Options> options_;
 
-    public void AddOption(string option)
+    public void UpdateChoices(List<EpisodeNode.Options> options)
     {
-        GameObject c = Instantiate(choicePrefab_, choicesParent_);
-        c.GetComponentInChildren<Text>().text = option;
-        spawnedChoices_.Add(c);
+        DeleteOptions();
+
+        options_ = options;
+
+        for (int i = 0; i < options.Count; i++)
+        {
+            EpisodeNode.Options o = options[i];
+
+            ChoiceButton c = Instantiate(choicePrefab_, choicesParent_);
+            c.Setup((i + 1).ToString(), o.ButtonName, o.TeacherOnly);
+            spawnedChoices_.Add(c);
+        }
+    }
+
+    public string CommandForAction(int optionSelected, bool teacher)
+    {
+        if (optionSelected < options_.Count)
+        {
+            EpisodeNode.Options o = options_[optionSelected];
+            if (o.TeacherOnly)
+            {
+                return teacher ? o.Command : null;
+            } else
+            {
+                return o.Command;
+            }
+        }
+        return null;
     }
 
     public void DeleteOptions()
     {
-        foreach(GameObject o in spawnedChoices_)
+        foreach(ChoiceButton o in spawnedChoices_)
         {
             Destroy(o.gameObject);
         }
-        spawnedChoices_ = new List<GameObject>();
+        spawnedChoices_ = new List<ChoiceButton>();
     }
 }

@@ -16,9 +16,7 @@ public class GameManager : MonoBehaviour
     public const string TERMINAL_COMMAND = "-terminal";
     public const string PRINT_COMMAND = "-print";
     public const string CHARACTER_COMMAND = "-character";
-    public const string SPAWN_OPTIONS_COMMAND = "-spawnoption";
     public const string RFID_COMMAND = "-rfid";
-    public const string HIDE_SPAWN_OPTIONS_COMMAND = "-hidespawnoption";
 
     public static bool MuteAll = false;
 

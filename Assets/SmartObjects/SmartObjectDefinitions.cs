@@ -4,6 +4,9 @@ namespace Lando.SmartObjects
 	{
 		ResourceStation,
 		TestingStation,
-		HintStation
+		HintStation,
+		Option1,
+		Option2,
+		Option3
 	}
 }

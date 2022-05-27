@@ -19,7 +19,7 @@ public class StringsFile
 
 public class ControllerManager : GameManager
 {
-    [SerializeField] Transform shareManager_;
+    [SerializeField] ShareManager shareManager_;
     [SerializeField] private Dropdown episodesDropdown_;
     [SerializeField] Image muteButton_;
     [SerializeField] Transform uiHolder_;
@@ -29,16 +29,15 @@ public class ControllerManager : GameManager
 
     private List<string> episodePaths = new List<string>();
     private CommandDispatch dispatch_ = new CommandDispatch();
-    private int testNfcId_ = 9999;
+    private string testNfcId_ = "9999";
+
+    private string kTeacherNfcId = "9999";
 
     private List<StationManager> loadedStationManagers_ = new List<StationManager>();
 
     private void Start()
     {
-        if (Application.isEditor)
-        {
-            shareManager_.localScale = Application.isEditor ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
-        }
+        shareManager_.transform.localScale = Application.isEditor ? new Vector3(1f, 1f, 1f) : new Vector3(-1f, 1f, 1f);
 
         RefreshEpisodeList();
         RefreshMuteButton();
@@ -73,7 +72,28 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
-        dispatch_.NewNfcScan(nfcId, stationType);
+        switch(stationType)
+        {
+            case SmartObjectType.ResourceStation:
+            case SmartObjectType.TestingStation:
+            case SmartObjectType.HintStation:
+                dispatch_.NewNfcScan(nfcId, stationType);
+                break;
+            case SmartObjectType.Option1:
+                NewOptionScan(nfcId, 1);
+                break;
+            case SmartObjectType.Option2:
+                NewOptionScan(nfcId, 2);
+                break;
+            case SmartObjectType.Option3:
+                NewOptionScan(nfcId, 3);
+                break;
+        }
+    }
+
+    private void NewOptionScan(string nfcId, int option)
+    {
+        shareManager_.HandleOptionSelect(option - 1, string.Equals(kTeacherNfcId, nfcId));
     }
 
     private void LoadStationManagers()
@@ -178,7 +198,7 @@ public class ControllerManager : GameManager
 
     public void OnScrambleCodeClick()
     {
-        testNfcId_ = Random.Range(0, 10000);
+        testNfcId_ = Random.Range(0, 10000).ToString();
     }
 
     public void OnButtonPress(string command)
@@ -234,13 +254,13 @@ public class ControllerManager : GameManager
                 SendNewActionNetworked(NODE_COMMAND + " next");
                 break;
             case "select-1":
-                SendNewActionNetworked("-option 1");
+                NewNfcScan(testNfcId_.ToString(), SmartObjectType.Option1);
                 break;
             case "select-2":
-                SendNewActionNetworked("-option 2");
+                NewNfcScan(testNfcId_.ToString(), SmartObjectType.Option2);
                 break;
             case "select-3":
-                SendNewActionNetworked("-option 3");
+                NewNfcScan(testNfcId_.ToString(), SmartObjectType.Option3);
                 break;
         }
     }

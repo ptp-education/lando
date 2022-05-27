@@ -114,6 +114,9 @@ public class EpisodeNodeEditor : Editor
             }
         }
 
+        EditorGUILayout.LabelField("Options to spawn");
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("OptionsToSpawn"));
+
         EditorGUILayout.LabelField("Spawn Prefabs");
         EditorGUILayout.PropertyField(serializedObject.FindProperty("PrefabSpawnObjects"));
         foreach (EpisodeNode.PrefabSpawnObject o in myTarget.PrefabSpawnObjects)

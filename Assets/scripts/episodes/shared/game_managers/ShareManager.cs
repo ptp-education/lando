@@ -21,8 +21,6 @@ public class ShareManager : GameManager
 
     private void Start()
     {
-        nodeObjectParent_.transform.localScale = new Vector3(-1f, 1f, 1f);
-
         GameObject fadeOverlayObject = new GameObject("Fade Overlay");
         fadeOverlay_ = fadeOverlayObject.AddComponent<Image>();
         fadeOverlay_.color = Color.black;
@@ -116,16 +114,6 @@ public class ShareManager : GameManager
             HandleCharacterCommand(a);
         }
 
-        if (ArgumentHelper.ContainsCommand(SPAWN_OPTIONS_COMMAND, a))
-        {
-            HandleChoices(a);
-        }
-
-        if (ArgumentHelper.ContainsCommand(HIDE_SPAWN_OPTIONS_COMMAND, a))
-        {
-            choicesHolder_.DeleteOptions();
-        }
-
         if (ArgumentHelper.ContainsCommand(NODE_COMMAND, a))
         {
             HandleNodeAction(a);
@@ -188,6 +176,8 @@ public class ShareManager : GameManager
 
         RefreshCharacters(currentNode);
 
+        choicesHolder_.UpdateChoices(currentNode.OptionsToSpawn);
+
         for (int i = 0; i < 8; i++)
         {
             yield return 0;
@@ -234,6 +224,16 @@ public class ShareManager : GameManager
     }
 
     #region HANDLERS
+
+    public void HandleOptionSelect(int option, bool teacher)
+    {
+        string command = choicesHolder_.CommandForAction(option, teacher);
+
+        if (command != null)
+        {
+            SendNewActionInternal(command);
+        }
+    }
 
     private void HandleFadeOut(string action)
     {
@@ -307,20 +307,6 @@ public class ShareManager : GameManager
             return;
         }
         LoadNewNode(newNode.name);
-    }
-
-    private void HandleChoices(string a)
-    {
-        choicesHolder_.DeleteOptions();
-
-        List<string> args = ArgumentHelper.ArgumentsInQuotationsFromCommand(SPAWN_OPTIONS_COMMAND, a);
-
-        foreach(string o in args)
-        {
-            choicesHolder_.AddOption(o);
-        }
-
-        AudioPlayer.PlayAudio("audio/sfx/new-option");
     }
 
     private void HandleFadeIn(string a)

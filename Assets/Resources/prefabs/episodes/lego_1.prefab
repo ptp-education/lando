@@ -64,6 +64,7 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 0
   TestingActive: 1
+  OptionsToSpawn: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -141,124 +142,6 @@ MonoBehaviour:
       Command: -fadein 1
       Ran: 0
   NextNode: {fileID: 0}
-  OptionHolders:
-  - Name: Default
-    Options:
-    - Name: Trigger next stage
-      Action: -next-stage
-      Node: {fileID: 0}
-    - Name: Out of blocks
-      Action: -character talk out-of-blocks
-      Node: {fileID: 0}
-    - Name: Choose 1
-      Action: -farm-selector select 1 -farm-selector hide
-      Node: {fileID: 0}
-    - Name: Choose 2
-      Action: -farm-selector select 2 -farm-selector hide
-      Node: {fileID: 0}
-    - Name: Choose 3
-      Action: -farm-selector select 3 -farm-selector hide
-      Node: {fileID: 0}
-  - Name: Kid walking up
-    Options:
-    - Name: Scan card
-      Action: -character scan-card
-      Node: {fileID: 0}
-    - Name: Encourage
-      Action: -rfid encourage
-      Node: {fileID: 0}
-    - Name: Boulder doesn't fit
-      Action: -character talk testing-potato
-      Node: {fileID: 0}
-    - Name: Bridge should be on land
-      Action: -character talk testing-water
-      Node: {fileID: 0}
-    - Name: Read out challenge requirement
-      Action: -rfid requirement
-      Node: {fileID: 0}
-  - Name: Testing result
-    Options:
-    - Name: Exclaim
-      Action: -character exclaim
-      Node: {fileID: 0}
-    - Name: 'Reward: Game'
-      Action: -rfid reward
-      Node: {fileID: 0}
-    - Name: Next challenge
-      Action: -rfid next-challenge
-      Node: {fileID: 0}
-    - Name: Next challenge (deliveries)
-      Action: -character talk testing-announce-15-6w
-      Node: {fileID: 0}
-    - Name: 'Reward: UI'
-      Action: -rfid refresh
-      Node: {fileID: 0}
-    - Name: Offer hint
-      Action: -character suggest-printer
-      Node: {fileID: 0}
-    - Name: More blocks
-      Action: -more-blocks
-      Node: {fileID: 0}
-  - Name: Hints
-    Options:
-    - Name: Add Piers
-      Action: -character print wide-receipt-piers.pdf hint-piers -guide pier-hint
-      Node: {fileID: 0}
-    - Name: Interlocking bridge
-      Action: -character print wide-receipt-interlocking.pdf hint-interlocking -guide
-        interlocking-hint
-      Node: {fileID: 0}
-    - Name: Thicker platform
-      Action: -character print wide-receipt-thicker.pdf hint-thicker -guide thicker-hint
-      Node: {fileID: 0}
-    - Name: 4 blocks wide example
-      Action: -guide 6-blocks-wide
-      Node: {fileID: 0}
-    - Name: Combine bridges
-      Action: -combine-bridge
-      Node: {fileID: 0}
-    - Name: Complete more challenges
-      Action: -character talk hint-more-challenges
-      Node: {fileID: 0}
-    - Name: Out of hints
-      Action: -character talk hint-more-challenges
-      Node: {fileID: 0}
-  - Name: Time out
-    Options:
-    - Name: Announce time out
-      Action: -character talk map-timeout-1
-      Node: {fileID: 0}
-    - Name: Show choice
-      Action: -spawnoption "Test one more bridge" "End our day"
-      Node: {fileID: 0}
-    - Name: One more bridge
-      Action: -character talk map-timeout-2
-      Node: {fileID: 0}
-    - Name: End
-      Action: 
-      Node: {fileID: 1066416605895203608}
-  - Name: Group Reward
-    Options:
-    - Name: Allow multiple reward
-      Action: -character talk group-reward -rfid group-allow-multiple-rewards
-      Node: {fileID: 0}
-    - Name: Turn off multiple reward
-      Action: -rfid group-disallow-multiple-rewards
-      Node: {fileID: 0}
-  - Name: More Blocks
-    Options:
-    - Name: Reached the limit
-      Action: -character talk blocks-no-1
-      Node: {fileID: 0}
-    - Name: Finish with the blocks you have
-      Action: -character talk blocks-no-2
-      Node: {fileID: 0}
-    - Name: Explain engineers limit
-      Action: -character talk more-limited
-      Node: {fileID: 0}
-    - Name: Suggest magic printer
-      Action: -character suggest-printer
-      Node: {fileID: 0}
 --- !u!1 &2616118973168873716
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +263,7 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 0
   TestingActive: 1
+  OptionsToSpawn: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -441,43 +325,6 @@ MonoBehaviour:
       Command: -spawnoption "We got it!" "Can you repeat?"
       Ran: 0
   NextNode: {fileID: 8895641933595010203}
-  OptionHolders:
-  - Name: '1: Explain tools'
-    Options:
-    - Name: '1: Store rules'
-      Action: -character talk setup-store-rules
-      Node: {fileID: 0}
-    - Name: '2: Receipt explain'
-      Action: -lando-introduction
-      Node: {fileID: 0}
-    - Name: Prompt gold button
-      Action: -character talk setup-receipt-press
-      Node: {fileID: 0}
-    - Name: Print something for teacher
-      Action: -print "teacher-encourage.pdf"
-      Node: {fileID: 0}
-    - Name: '3: Explain pad'
-      Action: -character talk setup-pad-rules
-      Node: {fileID: 0}
-    - Name: Show rules
-      Action: -explain-rules
-      Node: {fileID: 0}
-  - Name: 2. Get it
-    Options:
-    - Name: Did everyone get it?
-      Action: -get-it
-      Node: {fileID: 0}
-    - Name: Repeat
-      Action: -explain-rules -hideall
-      Node: {fileID: 0}
-  - Name: '3: Line up'
-    Options:
-    - Name: '1: Line up'
-      Action: -character talk come-line-up
-      Node: {fileID: 0}
-    - Name: 2. Show checklist
-      Action: -character talk setup-checklist -guide checklist
-      Node: {fileID: 0}
 --- !u!1 &6534709637438714630
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,11 +386,11 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
   NextNode: {fileID: 0}
-  OptionHolders: []
 --- !u!1 &6925605007787659774
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,11 +452,14 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 0
   TestingActive: 0
+  OptionsToSpawn:
+  - ButtonName: Start Class
+    TeacherOnly: 1
+    Command: -node next
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
   NextNode: {fileID: 5938227998112230175}
-  OptionHolders: []
 --- !u!1 &8630444637633285850
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +524,7 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
@@ -690,18 +541,6 @@ MonoBehaviour:
     Ran: 0
   CommandLineContainers: []
   NextNode: {fileID: 9171459644701067454}
-  OptionHolders:
-  - Name: Response
-    Options:
-    - Name: Who are you
-      Action: -character talk office-who
-      Node: {fileID: 0}
-    - Name: We're not engineers
-      Action: -character talk office-engineers
-      Node: {fileID: 0}
-    - Name: We'll help you!
-      Action: -character talk office-next
-      Node: {fileID: 0}
 --- !u!1 &8888313925138704928
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,6 +605,7 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -803,26 +643,3 @@ MonoBehaviour:
       Command: -character talk intro-correct2
       Ran: 0
   NextNode: {fileID: 1329167699364838881}
-  OptionHolders:
-  - Name: Respond
-    Options:
-    - Name: Animals
-      Action: -character talk intro-animals
-      Node: {fileID: 0}
-    - Name: Barn
-      Action: -barnAnswer
-      Node: {fileID: 0}
-    - Name: Water
-      Action: -character talk intro-water
-      Node: {fileID: 0}
-  - Name: Respond 2
-    Options:
-    - Name: Home Depot
-      Action: -character talk intro-home-depot
-      Node: {fileID: 0}
-    - Name: Look on map
-      Action: -character talk intro-look
-      Node: {fileID: 0}
-    - Name: Correct answer
-      Action: -correctAnswer
-      Node: {fileID: 0}
