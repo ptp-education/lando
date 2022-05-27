@@ -86,7 +86,7 @@ public class EpisodeNodeEditor : Editor
             EditorGUILayout.LabelField(string.Format("Image ({0})", imagePath));
             myTarget.Image = EditorGUILayout.ObjectField(myTarget.Image, typeof(Object), false);
         }
-        else if (myTarget.Type == EpisodeNode.EpisodeType.LoopWithOptions)
+        else if (myTarget.Type == EpisodeNode.EpisodeType.LOOP_WITH_OPTIONS_DEPRECATED)
         {
             string videoLoopPath = "empty";
             if (videoLoop.objectReferenceValue != null)
@@ -132,8 +132,6 @@ public class EpisodeNodeEditor : Editor
 
         EditorGUILayout.LabelField("Next Node - leave empty if last episode");
         myTarget.NextNode = (EpisodeNode)EditorGUILayout.ObjectField(myTarget.NextNode, typeof(EpisodeNode), true);
-
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("OptionHolders"));
 
         serializedObject.ApplyModifiedProperties();
     }

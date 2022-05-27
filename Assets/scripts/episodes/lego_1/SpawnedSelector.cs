@@ -85,12 +85,12 @@ namespace Lando.Class.Lego1
                         }
                         if (selectedKey != null)
                         {
-                            gameManager_.SendNewAction(
+                            gameManager_.SendNewActionInternal(
                                 GameManager.FADEIN_COMMAND + " 0.8"
                             );
                             Go.to(transform, 0.5f, new GoTweenConfig().onComplete(t =>
                             {
-                                gameManager_.SendNewAction(
+                                gameManager_.SendNewActionInternal(
                                     "add-farm-" + selectedKey +
                                     " -rfid hide");
                             }));

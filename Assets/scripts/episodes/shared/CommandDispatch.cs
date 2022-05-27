@@ -68,7 +68,7 @@ public class CommandDispatch
                 allHintsAvailableCopy.Add(h.Name);
             }
 
-            gameManager_.SendNewAction(string.Format(
+            gameManager_.SendNewActionNetworked(string.Format(
                 "-station {0} show-hints {1} {2} {3}",
                 station,
                 nfcAtStation_[station],
@@ -76,7 +76,7 @@ public class CommandDispatch
                 userData.RedeemedHints.ConvertToStringArgument()));
         } else
         {
-            gameManager_.SendNewAction(string.Format(
+            gameManager_.SendNewActionNetworked(string.Format(
                 "-station {0} no-hints {1}",
                 station));
         }
@@ -106,7 +106,7 @@ public class CommandDispatch
                 }
             }
 
-            gameManager_.SendNewAction(string.Format(
+            gameManager_.SendNewActionNetworked(string.Format(
                 "-station {0} give-resources {1}",
                 station,
                 string.Join(" ", allResourcesAvailableCopy)));
@@ -131,7 +131,7 @@ public class CommandDispatch
                     }
                 }
 
-                gameManager_.SendNewAction(string.Format(
+                gameManager_.SendNewActionNetworked(string.Format(
                     "-station {0} more-resources {1} {2} {3}",
                     station,
                     userData.CompletedChallenges.Count.ToString(),
@@ -142,7 +142,7 @@ public class CommandDispatch
             {
                 //there are no more resources available in this class
 
-                gameManager_.SendNewAction(string.Format("-station {0} no-resources", station));
+                gameManager_.SendNewActionNetworked(string.Format("-station {0} no-resources", station));
             }
         }
     }
@@ -150,7 +150,7 @@ public class CommandDispatch
     private void OnTestStationScan(string id, string station)
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
-        gameManager_.SendNewAction(string.Format("-station {0} load {1}", station, c.Name));
+        gameManager_.SendNewActionNetworked(string.Format("-station {0} load {1}", station, c.Name));
     }
 
     public void OnUsedHint(string id, string hint)
@@ -166,7 +166,7 @@ public class CommandDispatch
 
         if (parsedResponse == ValidatorResponse.ScanWristband)
         {
-            gameManager_.SendNewAction(string.Format("-station {0} {1}", station, ValidatorResponse.ScanWristband.ToString()));
+            gameManager_.SendNewActionNetworked(string.Format("-station {0} {1}", station, ValidatorResponse.ScanWristband.ToString()));
             return;
         }
 
@@ -197,7 +197,7 @@ public class CommandDispatch
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
 
-        gameManager_.SendNewAction(
+        gameManager_.SendNewActionNetworked(
             string.Format(
                 "-station {0} {1} {2}",
                 station,
@@ -223,7 +223,7 @@ public class CommandDispatch
 
         bool haveRedeemableHints = gameManager_.AllHintsForUserId(id).Count > 0;
 
-        gameManager_.SendNewAction(
+        gameManager_.SendNewActionNetworked(
             string.Format(
                 "-station {0} {1} {2}",
                 station,
@@ -233,7 +233,7 @@ public class CommandDispatch
 
     private void OnValidatorProblem(string station, string id, string problem)
     {
-        gameManager_.SendNewAction(
+        gameManager_.SendNewActionNetworked(
             string.Format(
                 "-station {0} {1} {2}",
                 station,

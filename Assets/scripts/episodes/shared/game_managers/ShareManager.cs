@@ -108,7 +108,7 @@ public class ShareManager : GameManager
 
         if (ArgumentHelper.ContainsCommand(DIDI_HMMM, a))
         {
-            SendNewAction("-character talk hm-1 hm-2 hm-3 hm-4 hm-5 hm-6 hm-7 hm-8 hm-9 hm-10");
+            SendNewActionInternal("-character talk hm-1 hm-2 hm-3 hm-4 hm-5 hm-6 hm-7 hm-8 hm-9 hm-10");
         }
 
         if (ArgumentHelper.ContainsCommand(CHARACTER_COMMAND, a))
@@ -212,7 +212,7 @@ public class ShareManager : GameManager
             case EpisodeNode.EpisodeType.Image:
                 prefabPath += "image_player";
                 break;
-            case EpisodeNode.EpisodeType.LoopWithOptions:
+            case EpisodeNode.EpisodeType.LOOP_WITH_OPTIONS_DEPRECATED:
                 prefabPath += "loopwithoptions_player";
                 break;
             case EpisodeNode.EpisodeType.PREFAB_DEPRECATED:
@@ -391,7 +391,7 @@ public class ShareManager : GameManager
 
     private void HandleHideAll()
     {
-        SendNewAction("-art-holder hide -guideHideGuides -hidespawnoption");
+        SendNewActionInternal("-art-holder hide -guideHideGuides -hidespawnoption");
 
         if (activeNode_ != null)
         {

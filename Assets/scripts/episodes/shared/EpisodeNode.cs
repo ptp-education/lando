@@ -13,7 +13,7 @@ public class EpisodeNode : MonoBehaviour
         Video,
         Image,
         PREFAB_DEPRECATED,
-        LoopWithOptions
+        LOOP_WITH_OPTIONS_DEPRECATED
     }
 
     [Serializable]
@@ -21,7 +21,7 @@ public class EpisodeNode : MonoBehaviour
     {
         public enum Option
         {
-            Cat
+            Didi
         }
         [SerializeField] public Vector3 TalkingPosition;
         [SerializeField] public Vector3 Scale;
@@ -37,21 +37,6 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
-    public class OptionHolder
-    {
-        [SerializeField] public string Name;
-        [SerializeField] public List<Option> Options = new List<Option>();
-    }
-
-    [Serializable]
-    public class Option
-    {
-        [SerializeField] public string Name;
-        [SerializeField] public string Action;
-        [SerializeField] public EpisodeNode Node;
-    }
-
-    [Serializable]
     public class PrefabSpawnObject
     {
         [SerializeField] public float TimeStamp;
@@ -61,6 +46,13 @@ public class EpisodeNode : MonoBehaviour
         [SerializeField] public UnityEngine.Object Object;
         [SerializeField] public string Path;
         [HideInInspector] public bool Spawned = false;
+    }
+
+    [SerializeField]
+    public class Options
+    {
+        [SerializeField] public string ButtonName;
+        [SerializeField] public bool TeacherOnly;
     }
 
     [Serializable]
@@ -89,7 +81,7 @@ public class EpisodeNode : MonoBehaviour
         {
             [SerializeField] public UnityEngine.Object VideoObject;
             [SerializeField] public string VideoPath;
-        }
+    }
     }
 
     //BG AUDIO OPTIONS
@@ -111,7 +103,7 @@ public class EpisodeNode : MonoBehaviour
     public UnityEngine.Object Image;
     public string ImageFilePath;
 
-    //LOOPWITHOPTIONS OPTIONS
+    //LOOPWITHOPTIONS OPTIONS (DEPRECATED)
     //uses VideoLoop and VideoLoopFilePath
     public List<VideoOption> VideoOptions = new List<VideoOption>();
 
@@ -122,7 +114,6 @@ public class EpisodeNode : MonoBehaviour
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();
     public EpisodeNode NextNode;
-    public List<OptionHolder> OptionHolders = new List<OptionHolder>();
 
     public Episode Episode
     {
@@ -143,7 +134,7 @@ public class EpisodeNode : MonoBehaviour
             case EpisodeType.Image:
                 contentName = ImageFilePath;
                 break;
-            case EpisodeType.LoopWithOptions:
+            case EpisodeType.LOOP_WITH_OPTIONS_DEPRECATED:
                 contentName = VideoLoopFilePath;
                 break;
         }

@@ -105,7 +105,7 @@ public class HintStationManager : StationManager
             return;
         }
 
-        SendNewAction(string.Format("-hint-used {0} {1}", activeId_, hintUsed));
+        SendNewActionNetworked(string.Format("-hint-used {0} {1}", activeId_, hintUsed));
 
         HintObject hintObject = GameObject.Instantiate(hint.ObjectToLoad);
         hintObject.name = hintUsed;
@@ -119,7 +119,7 @@ public class HintStationManager : StationManager
 
     public void OnHintComplete()
     {
-        SendNewAction(string.Format("-refresh-station {0} {1}", activeId_, StationName));
+        SendNewActionNetworked(string.Format("-refresh-station {0} {1}", activeId_, StationName));
     }
 
     protected override void Reset()

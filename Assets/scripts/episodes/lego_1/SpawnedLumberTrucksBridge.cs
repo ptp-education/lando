@@ -71,7 +71,7 @@ public class SpawnedLumberTrucksBridge : SpawnedObject
         GoTweenFlow flow = new GoTweenFlow();
         flow.insert(0f, new GoTween(truck.transform, 1.5f, new GoTweenConfig().localPosition(nextStage_ ? challengeTwoLumberEnd_ : challengeOneLumberEnd_).setEaseType(GoEaseType.QuintInOut).onComplete(t =>
         {
-            gameManager_.SendNewAction("-farmhouse-increase");
+            gameManager_.SendNewActionInternal("-farmhouse-increase");
         })));
         flow.insert(1.5f, new GoTween(truck, 0.25f, new GoTweenConfig().colorProp("color", Color.clear).onComplete(t =>
         {

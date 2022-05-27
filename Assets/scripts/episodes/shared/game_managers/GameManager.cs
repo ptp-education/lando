@@ -87,7 +87,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SendNewAction(string a)
+    public void SendNewActionInternal(string a)
+    {
+        NewNodeAction(ACTION_PREFIX + a);
+    }
+
+    public void SendNewActionNetworked(string a)
     {
         if (networkManager_ != null)
         {

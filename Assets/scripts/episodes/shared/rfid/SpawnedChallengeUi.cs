@@ -228,7 +228,7 @@ public class SpawnedChallengeUi : SpawnedObject
         LevelData.Challenge c = CurrentChallengeForRfid(rfid);
         if (c != null && c.FailCommand != null && c.FailCommand.Length > 0)
         {
-            gameManager_.SendNewAction(c.FailCommand);
+            gameManager_.SendNewActionInternal(c.FailCommand);
         }
     }
 
@@ -241,7 +241,7 @@ public class SpawnedChallengeUi : SpawnedObject
         LevelData.Challenge c = CurrentChallengeForRfid(rfid);
         if (c != null && c.ScanRfidCommand != null && c.ScanRfidCommand.Length > 0)
         {
-            gameManager_.SendNewAction(c.ScanRfidCommand);
+            gameManager_.SendNewActionInternal(c.ScanRfidCommand);
         }
     }
 
@@ -254,7 +254,7 @@ public class SpawnedChallengeUi : SpawnedObject
         LevelData.Challenge c = CurrentChallengeForRfid(rfid);
         if (c != null && c.EncourageCommand != null && c.EncourageCommand.Length > 0)
         {
-            gameManager_.SendNewAction(c.EncourageCommand);
+            gameManager_.SendNewActionInternal(c.EncourageCommand);
         } else
         {
             GenericEncourage();
@@ -263,7 +263,7 @@ public class SpawnedChallengeUi : SpawnedObject
 
     private void GenericEncourage()
     {
-        gameManager_.SendNewAction("-character talk ready-to-test-1 ready-to-test-2 ready-to-test-3 ready-to-test-4 ready-to-test-5");
+        gameManager_.SendNewActionInternal("-character talk ready-to-test-1 ready-to-test-2 ready-to-test-3 ready-to-test-4 ready-to-test-5");
     }
 
     private void HandleAnnounceRequirements(string rfid)
@@ -273,7 +273,7 @@ public class SpawnedChallengeUi : SpawnedObject
             LevelData.Challenge c = CurrentChallengeForRfid(rfid);
             if (c != null)
             {
-                gameManager_.SendNewAction(c.RequirementsCommand);
+                gameManager_.SendNewActionInternal(c.RequirementsCommand);
             }
         }
     }
@@ -290,7 +290,7 @@ public class SpawnedChallengeUi : SpawnedObject
             if (c != null)
             {
                 GameStorage.UserData userData = UserDataForRfid(rfid);
-                gameManager_.SendNewAction(c.RewardCommand);
+                gameManager_.SendNewActionInternal(c.RewardCommand);
 
                 userData.CompletedChallenges.Add(c.Name);
                 lastRunChallenge_ = c;
@@ -314,7 +314,7 @@ public class SpawnedChallengeUi : SpawnedObject
             LevelData.Challenge c = CurrentChallengeForRfid(rfid);
             if (c != null)
             {
-                gameManager_.SendNewAction(c.NextChallengeCommand);
+                gameManager_.SendNewActionInternal(c.NextChallengeCommand);
             }
         }
     }

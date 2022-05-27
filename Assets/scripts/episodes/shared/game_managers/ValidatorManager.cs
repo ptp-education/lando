@@ -88,7 +88,7 @@ public class ValidatorManager : GameManager
             newButton.GetComponentInChildren<Text>().text = b.Key;
             newButton.onClick.AddListener(() =>
             {
-                SendNewAction(b.Value);
+                SendNewActionNetworked(b.Value);
             });
             newButton.transform.SetParent(testingButtonHolder_);
         }

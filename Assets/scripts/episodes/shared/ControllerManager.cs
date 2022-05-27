@@ -228,19 +228,19 @@ public class ControllerManager : GameManager
                 NewNfcScan(testNfcId_.ToString(), SmartObjectType.TestingStation);
                 break;
             case "back":
-                SendNewAction(NODE_COMMAND + " back");
+                SendNewActionNetworked(NODE_COMMAND + " back");
                 break;
             case "next":
-                SendNewAction(NODE_COMMAND + " next");
+                SendNewActionNetworked(NODE_COMMAND + " next");
                 break;
             case "select-1":
-                SendNewAction("-option 1");
+                SendNewActionNetworked("-option 1");
                 break;
             case "select-2":
-                SendNewAction("-option 2");
+                SendNewActionNetworked("-option 2");
                 break;
             case "select-3":
-                SendNewAction("-option 3");
+                SendNewActionNetworked("-option 3");
                 break;
         }
     }

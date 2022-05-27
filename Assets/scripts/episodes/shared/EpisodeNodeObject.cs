@@ -99,7 +99,7 @@ public class EpisodeNodeObject : MonoBehaviour
             }
             flow.insert(0, new GoTween(this.transform,  timeStamp, new GoTweenConfig().onComplete(t =>
             {
-                gameManager_.SendNewAction(command);
+                gameManager_.SendNewActionInternal(command);
             })));
         }
         flow.play();
@@ -142,7 +142,7 @@ public class EpisodeNodeObject : MonoBehaviour
             {
                 if (!c.Ran)
                 {
-                    gameManager_.SendNewAction(c.Command);
+                    gameManager_.SendNewActionInternal(c.Command);
                     c.Ran = true;
                 }
             }
