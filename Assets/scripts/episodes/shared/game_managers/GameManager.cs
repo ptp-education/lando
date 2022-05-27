@@ -358,8 +358,7 @@ public class GameManager : MonoBehaviour
 
         foreach (LevelData.Challenge c in ChallengeData.Challenges)
         {
-            string currentChallenge = CurrentChallengeForUserId(id).Name;
-            if (string.Equals(c.Name, currentChallenge))
+            if (!userData.CompletedChallenges.Contains(c.Name))
             {
                 if (c.ResourceRewards.Count > 0)
                 {

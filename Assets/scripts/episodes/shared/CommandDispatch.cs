@@ -130,12 +130,13 @@ public class CommandDispatch
                         break;
                     }
                 }
+
                 gameManager_.SendNewAction(string.Format(
                     "-station {0} more-resources {1} {2} {3}",
                     station,
                     userData.CompletedChallenges.Count.ToString(),
                     gameManager_.ChallengeData.Challenges.Count.ToString(),
-                    nextChallengeIndex.ToString()
+                    (nextChallengeIndex+1).ToString()
                 ));
             } else
             {
