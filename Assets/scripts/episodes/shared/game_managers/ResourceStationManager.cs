@@ -74,6 +74,7 @@ public class ResourceStationManager : StationManager
         }
 
         Reset();
+        AudioPlayer.PlaySfx("guide-appears");
 
         collectBlocksScreen_.gameObject.SetActive(true);
 
@@ -149,6 +150,7 @@ public class ResourceStationManager : StationManager
         }
 
         Reset();
+        AudioPlayer.PlaySfx("noentry");
 
         completeMoreChallengesScreen_.gameObject.SetActive(true);
         timeBeforeReset_ = kDefaultTimeout;
@@ -188,6 +190,7 @@ public class ResourceStationManager : StationManager
         }
 
         Reset();
+        AudioPlayer.PlaySfx("noentry");
         timeBeforeReset_ = kDefaultTimeout;
 
         noMoreBlocksScreen_.gameObject.SetActive(true);
