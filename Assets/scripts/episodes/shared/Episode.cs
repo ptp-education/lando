@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+using System.Linq;
 
 #if UNITY_EDITOR
 using UnityEditor.SceneManagement;
@@ -32,6 +33,18 @@ public class Episode : MonoBehaviour
                 {
                     return AllNodes[newCounter];
                 }
+            }
+        }
+        return null;
+    }
+
+    public EpisodeNode FindNode(string nodeName)
+    {
+        foreach(EpisodeNode n in AllNodes)
+        {
+            if (string.Equals(n.gameObject.name, nodeName))
+            {
+                return n;
             }
         }
         return null;

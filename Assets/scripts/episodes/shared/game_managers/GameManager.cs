@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public const string PRINT_COMMAND = "-print";
     public const string CHARACTER_COMMAND = "-character";
     public const string RFID_COMMAND = "-rfid";
+    public const string HIDE_CHOICES = "-hide-choices";
+    public const string SHOW_CHOICES = "-show-choices";
+    public const string OPTION_SELECT = "-option-select";
+    public const string CLAIM_REWARD = "-claim-reward";
 
     public static bool MuteAll = false;
 
@@ -85,7 +89,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SendNewActionInternal(string a)
+    public virtual void SendNewActionInternal(string a)
     {
         NewNodeAction(ACTION_PREFIX + a);
     }
@@ -424,6 +428,23 @@ public class GameManager : MonoBehaviour
             GameStorageForUserId(id).SaveUserData(userData);
         }
         return FindChallenge(userData.CurrentChallenge);
+    }
+
+    public string ActionForOptionSelect(int option, bool isTeacher)
+    {
+        if (option < currentNode_.OptionsToSpawn.Count)
+        {
+            EpisodeNode.Options o = currentNode_.OptionsToSpawn[option];
+            if(o.TeacherOnly)
+            {
+                return isTeacher ? o.Command : null;
+            }
+            else
+            {
+                return o.Command;
+            }
+        }
+        return null;
     }
 
     #endregion

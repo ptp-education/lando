@@ -72,28 +72,15 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
-        switch(stationType)
-        {
-            case SmartObjectType.ResourceStation:
-            case SmartObjectType.TestingStation:
-            case SmartObjectType.HintStation:
-                dispatch_.NewNfcScan(nfcId, stationType);
-                break;
-            case SmartObjectType.Option1:
-                NewOptionScan(nfcId, 1);
-                break;
-            case SmartObjectType.Option2:
-                NewOptionScan(nfcId, 2);
-                break;
-            case SmartObjectType.Option3:
-                NewOptionScan(nfcId, 3);
-                break;
-        }
+        //TODO add sharemanager optionsshowing status
+        dispatch_.NewNfcScan(nfcId, stationType, string.Equals(nfcId, kTeacherNfcId), shareManager_.OptionsActive);
     }
 
-    private void NewOptionScan(string nfcId, int option)
+    public override void SendNewActionInternal(string a)
     {
-        shareManager_.HandleOptionSelect(option - 1, string.Equals(kTeacherNfcId, nfcId));
+        base.SendNewActionInternal(a);
+
+        shareManager_.NewNodeAction(ACTION_PREFIX + a);
     }
 
     private void LoadStationManagers()
@@ -141,6 +128,7 @@ public class ControllerManager : GameManager
         List<string> validatorArgs = ArgumentHelper.ArgumentsFromCommand("-validator", a);
         List<string> hintUsedArgs = ArgumentHelper.ArgumentsFromCommand("-hint-used", a);
         List<string> refreshArgs = ArgumentHelper.ArgumentsFromCommand("-refresh-station", a);
+        List<string> claimReward = ArgumentHelper.ArgumentsFromCommand(CLAIM_REWARD, a);
 
         if (validatorArgs.Count > 1)
         {
@@ -156,6 +144,11 @@ public class ControllerManager : GameManager
         if (refreshArgs.Count > 0)
         {
             dispatch_.OnRefresh(refreshArgs[0], refreshArgs[1]);
+        }
+
+        if (claimReward.Count > 0)
+        {
+            dispatch_.OnClaimReward(claimReward[0]);
         }
     }
 

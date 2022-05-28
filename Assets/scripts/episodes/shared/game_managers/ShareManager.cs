@@ -19,6 +19,14 @@ public class ShareManager : GameManager
     private ChoicesHolder choicesHolder_;
     private Dictionary<string, OnscreenCharacter> characters_ = new Dictionary<string, OnscreenCharacter> ();
 
+    public bool OptionsActive
+    {
+        get
+        {
+            return choicesHolder_.IsActive;
+        }
+    }
+
     private void Start()
     {
         GameObject fadeOverlayObject = new GameObject("Fade Overlay");
@@ -102,6 +110,16 @@ public class ShareManager : GameManager
         if (ArgumentHelper.ContainsCommand(PRINT_COMMAND, a))
         {
             HandlePrintCommand(a);
+        }
+
+        if (ArgumentHelper.ContainsCommand(HIDE_CHOICES, a))
+        {
+            choicesHolder_.ToggleVisbility(false);
+        }
+
+        if (ArgumentHelper.ContainsCommand(SHOW_CHOICES, a))
+        {
+            choicesHolder_.ToggleVisbility(true);
         }
 
         if (ArgumentHelper.ContainsCommand(DIDI_HMMM, a))
@@ -225,16 +243,6 @@ public class ShareManager : GameManager
 
     #region HANDLERS
 
-    public void HandleOptionSelect(int option, bool teacher)
-    {
-        string command = choicesHolder_.CommandForAction(option, teacher);
-
-        if (command != null)
-        {
-            SendNewActionInternal(command);
-        }
-    }
-
     private void HandleFadeOut(string action)
     {
         string[] split = action.Split(' ');
@@ -289,9 +297,11 @@ public class ShareManager : GameManager
                 case "back":
                     MoveNode(-1);
                     break;
-
                 case "next":
                     MoveNode(1);
+                    break;
+                case "seek":
+                    SeekNode(args[1]);
                     break;
             }
         }
@@ -305,6 +315,16 @@ public class ShareManager : GameManager
         {
             Debug.LogWarning(string.Format("Unsuccessfully tried to jump from node \"{0}\" by amount {1}.", activeNode_.name, byAmount));
             return;
+        }
+        LoadNewNode(newNode.name);
+    }
+
+    private void SeekNode(string nodeName)
+    {
+        EpisodeNode newNode = episode_.FindNode(nodeName);
+        if (newNode == null)
+        {
+            Debug.LogWarning("Couldn't find node with name: " + nodeName);
         }
         LoadNewNode(newNode.name);
     }

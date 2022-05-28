@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3281699210728023843}
   - component: {fileID: 8895641933595010203}
   m_Layer: 5
-  m_Name: map home
+  m_Name: map-home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742334257710489929}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -64,7 +64,13 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 0
   TestingActive: 1
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - ButtonName: Claim reward!
+    TeacherOnly: 0
+    Command: -claim-reward {0}
+  - ButtonName: We're out of time!
+    TeacherOnly: 1
+    Command: -next node
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -91,20 +97,6 @@ MonoBehaviour:
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
-    Path: episodes/lego_1_assets/prefabs/lego_1_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
-    Path: prefabs/rfid/challenge-ui
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 8164016910345386814, guid: 46a8e598dbc13445cb405b5774b61e25, type: 3}
     Path: episodes/lego_1_assets/prefabs/selector
     Spawned: 0
@@ -117,16 +109,6 @@ MonoBehaviour:
       Ran: 0
     - TimeStamp: 5
       Command: -guide combine-bridge
-      Ran: 0
-  - CommandToCall: -more-blocks
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -character talk testing-more-blocks1 testing-more-blocks2 testing-more-blocks3
-        testing-more-blocks4 testing-more-blocks5 testing-more-blocks6 testing-more-blocks7
-        testing-more-blocks8 testing-more-blocks9 testing-more-blocks10
-      Ran: 0
-    - TimeStamp: 2.5
-      Command: -toggle-blocks-light
       Ran: 0
   - CommandToCall: -result-chosen
     StoredCommands:
@@ -141,7 +123,118 @@ MonoBehaviour:
     - TimeStamp: 0
       Command: -fadein 1
       Ran: 0
-  NextNode: {fileID: 0}
+  NextNode: {fileID: 1066416605895203608}
+--- !u!1 &2376049400359286258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210763356282659716}
+  - component: {fileID: 942924521453198062}
+  m_Layer: 5
+  m_Name: office-choice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &210763356282659716
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376049400359286258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4742334257710489929}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &942924521453198062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376049400359286258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: episodes/lego_1_screens/inside-developer-building
+  BgLoop: {fileID: 2800000, guid: 7ab5df53c6d574cdaa5829cb8fc744f2, type: 3}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: -508, y: -92, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 0}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoFilePath: Lego 1 - v3/P0-0.mp4
+  VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
+  Image: {fileID: 2800000, guid: 7ab5df53c6d574cdaa5829cb8fc744f2, type: 3}
+  ImageFilePath: episodes/lego_1_screens/inside-developer-building
+  VideoOptions: []
+  FadeInFromPreviousScene: 0
+  TestingActive: 0
+  OptionsToSpawn:
+  - ButtonName: Who are you?
+    TeacherOnly: 0
+    Command: -whoareyou
+  - ButtonName: We're not engineers
+    TeacherOnly: 0
+    Command: -notengineers
+  - ButtonName: We'll help you!
+    TeacherOnly: 0
+    Command: -willhelp
+  PrefabSpawnObjects: []
+  CommandLines: []
+  CommandLineContainers:
+  - CommandToCall: -whoareyou
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -hide-choices
+      Ran: 0
+    - TimeStamp: 0
+      Command: -character talk office-who
+      Ran: 0
+    - TimeStamp: 4.3
+      Command: -show-choices
+      Ran: 0
+  - CommandToCall: -notengineers
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -hide-choices
+      Ran: 0
+    - TimeStamp: 0
+      Command: -character talk office-engineers
+      Ran: 0
+    - TimeStamp: 9
+      Command: -show-choices
+      Ran: 0
+  - CommandToCall: -willhelp
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -hide-choices
+      Ran: 0
+    - TimeStamp: 0
+      Command: -character talk office-help
+      Ran: 0
+    - TimeStamp: 3
+      Command: -node next
+      Ran: 0
+  NextNode: {fileID: 9171459644701067454}
 --- !u!1 &2616118973168873716
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +265,10 @@ RectTransform:
   m_Children:
   - {fileID: 2535643155016533259}
   - {fileID: 9181479642337607032}
+  - {fileID: 210763356282659716}
   - {fileID: 817149735222943141}
+  - {fileID: 1358551629356647638}
+  - {fileID: 4797328475954461813}
   - {fileID: 8454755217522215561}
   - {fileID: 3281699210728023843}
   - {fileID: 4214327626978911248}
@@ -210,7 +306,7 @@ GameObject:
   - component: {fileID: 8454755217522215561}
   - component: {fileID: 1329167699364838881}
   m_Layer: 5
-  m_Name: map setup
+  m_Name: map-setup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,7 +324,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742334257710489929}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -263,15 +359,14 @@ MonoBehaviour:
   VideoOptions: []
   FadeInFromPreviousScene: 0
   TestingActive: 1
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - ButtonName: What's the first challenge?
+    TeacherOnly: 1
+    Command: -explain-rules
+  - ButtonName: Ready to line up
+    TeacherOnly: 1
+    Command: -node next
   PrefabSpawnObjects:
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3542844012294076493, guid: 10903cb3434994ed3b2b161041fedeaf, type: 3}
-    Path: episodes/_shared/standard_setup
-    Spawned: 0
   - TimeStamp: 0
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
@@ -279,17 +374,16 @@ MonoBehaviour:
     Object: {fileID: 5537306103791201731, guid: 4d0da096000854eefa5316e65a82442e, type: 3}
     Path: episodes/lego_1_assets/prefabs/lego_1_guide
     Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
-    Path: prefabs/rfid/challenge-ui
-    Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 1
+    Command: -character talk setup-store-rules
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -explain-rules
     StoredCommands:
+    - TimeStamp: 0
+      Command: -hide-choices
+      Ran: 0
     - TimeStamp: 0
       Command: -character talk setup-rules
       Ran: 0
@@ -305,13 +399,8 @@ MonoBehaviour:
     - TimeStamp: 11.5
       Command: -guide bridge-2-pounds
       Ran: 0
-  - CommandToCall: -lando-introduction
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -character talk setup-receipt-rules
-      Ran: 0
-    - TimeStamp: 7.5
-      Command: -print "printer.pdf"
+    - TimeStamp: 14
+      Command: -get-it
       Ran: 0
   - CommandToCall: -get-it
     StoredCommands:
@@ -319,12 +408,191 @@ MonoBehaviour:
       Command: -character talk setup-make-sense
       Ran: 0
     - TimeStamp: 2.5
-      Command: -hideall
-      Ran: 0
-    - TimeStamp: 3.5
-      Command: -spawnoption "We got it!" "Can you repeat?"
+      Command: -show-choices
       Ran: 0
   NextNode: {fileID: 8895641933595010203}
+--- !u!1 &4823310563839695393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4797328475954461813}
+  - component: {fileID: 6649877083967458947}
+  m_Layer: 5
+  m_Name: map-intro-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4797328475954461813
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823310563839695393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4742334257710489929}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6649877083967458947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4823310563839695393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: -486, y: -291, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: d3f2bf70caae74ac2af0cdf46e0807f6, type: 3}
+  ImageFilePath: episodes/lego_1_screens/map_zoomed_out
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  TestingActive: 0
+  OptionsToSpawn:
+  - ButtonName: Buy wood at Home Depot
+    TeacherOnly: 0
+    Command: -character talk intro-home-depot
+  - ButtonName: There's something on the map
+    TeacherOnly: 0
+    Command: -correctAnswer
+  PrefabSpawnObjects:
+  - TimeStamp: 0
+    SpawnKey: 
+    Position: {x: 524, y: -283, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    Object: {fileID: 4509499430257062133, guid: 19e07f9f0d9d44f37aadf31cf4a2fdb6, type: 3}
+    Path: episodes/lego_1_assets/prefabs/bridge_hologram
+    Spawned: 0
+  CommandLines: []
+  CommandLineContainers:
+  - CommandToCall: -correctAnswer
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk intro-correct1
+      Ran: 0
+    - TimeStamp: 9.5
+      Command: -show-bridge
+      Ran: 0
+    - TimeStamp: 11
+      Command: -character talk intro-correct2
+      Ran: 0
+    - TimeStamp: 13.5
+      Command: -node next
+      Ran: 0
+  NextNode: {fileID: 1329167699364838881}
+--- !u!1 &5515166326000895431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1358551629356647638}
+  - component: {fileID: 5668789927561864840}
+  m_Layer: 5
+  m_Name: map-intro-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1358551629356647638
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515166326000895431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4742334257710489929}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5668789927561864840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5515166326000895431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: -486, y: -291, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: d3f2bf70caae74ac2af0cdf46e0807f6, type: 3}
+  ImageFilePath: episodes/lego_1_screens/map_zoomed_out
+  VideoOptions: []
+  FadeInFromPreviousScene: 1
+  TestingActive: 0
+  OptionsToSpawn:
+  - ButtonName: Animals
+    TeacherOnly: 0
+    Command: -character talk intro-animals
+  - ButtonName: A barn
+    TeacherOnly: 0
+    Command: -character talk intro-barn
+  - ButtonName: Water
+    TeacherOnly: 0
+    Command: -character talk intro-water
+  PrefabSpawnObjects: []
+  CommandLines: []
+  CommandLineContainers:
+  - CommandToCall: -barnAnswer
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk intro-barn
+      Ran: 0
+    - TimeStamp: 9.5
+      Command: -node next
+      Ran: 0
+  NextNode: {fileID: 6649877083967458947}
 --- !u!1 &6534709637438714630
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +622,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742334257710489929}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -536,11 +804,11 @@ MonoBehaviour:
   - TimeStamp: 5.75
     Command: -character talk office-0
     Ran: 0
-  - TimeStamp: 13.85
-    Command: -spawnoption "Who are you?" "We're not engineers" "We'll help you!"
+  - TimeStamp: 12.75
+    Command: -node next
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 9171459644701067454}
+  NextNode: {fileID: 942924521453198062}
 --- !u!1 &8888313925138704928
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +820,7 @@ GameObject:
   - component: {fileID: 817149735222943141}
   - component: {fileID: 9171459644701067454}
   m_Layer: 5
-  m_Name: map intro
+  m_Name: map-intro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,7 +838,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4742334257710489929}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -606,40 +874,13 @@ MonoBehaviour:
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn: []
-  PrefabSpawnObjects:
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 524, y: -283, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 4509499430257062133, guid: 19e07f9f0d9d44f37aadf31cf4a2fdb6, type: 3}
-    Path: episodes/lego_1_assets/prefabs/bridge_hologram
-    Spawned: 0
+  PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1
     Command: -character talk intro-0
     Ran: 0
   - TimeStamp: 11
-    Command: -spawnoption "Animals!" "A barn" "Water"
+    Command: -node next
     Ran: 0
-  CommandLineContainers:
-  - CommandToCall: -barnAnswer
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -character talk intro-barn
-      Ran: 0
-    - TimeStamp: 9.5
-      Command: -spawnoption "Buy at Home Depot" "Is there something on the map?"
-        "
-      Ran: 0
-  - CommandToCall: -correctAnswer
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -character talk intro-correct1
-      Ran: 0
-    - TimeStamp: 9.5
-      Command: -show-bridge
-      Ran: 0
-    - TimeStamp: 11
-      Command: -character talk intro-correct2
-      Ran: 0
-  NextNode: {fileID: 1329167699364838881}
+  CommandLineContainers: []
+  NextNode: {fileID: 5668789927561864840}

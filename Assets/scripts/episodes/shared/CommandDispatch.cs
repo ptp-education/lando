@@ -23,7 +23,7 @@ public class CommandDispatch
         gameManager_ = gameManager;
     }
 
-    public void NewNfcScan(string id, SmartObjectType stationType)
+    public void NewNfcScan(string id, SmartObjectType stationType, bool isTeacher, bool optionsActive)
     {
         nfcAtStation_[stationType.ToString()] = id;
 
@@ -38,6 +38,15 @@ public class CommandDispatch
             case SmartObjectType.HintStation:
                 OnHintStationScan(id, stationType.ToString());
                 break;
+            case SmartObjectType.Option1:
+                OnOptionSelected(1, isTeacher, id, optionsActive);
+                break;
+            case SmartObjectType.Option2:
+                OnOptionSelected(2, isTeacher, id, optionsActive);
+                break;
+            case SmartObjectType.Option3:
+                OnOptionSelected(3, isTeacher, id, optionsActive);
+                break;
         }
     }
 
@@ -51,6 +60,44 @@ public class CommandDispatch
                 OnHintStationScan(id, station);
                 break;
         }
+    }
+
+    public void OnOptionSelected(int option, bool isTeacher, string nfcId, bool optionsActive)
+    {
+        if (!optionsActive) return;
+
+        string commandToCall = gameManager_.ActionForOptionSelect(option - 1, isTeacher);
+
+        if (commandToCall != null)
+        {
+            gameManager_.SendNewActionInternal(string.Format(commandToCall, nfcId));
+        }
+    }
+
+    public void OnClaimReward(string id)
+    {
+        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
+
+        if (userData.RedeemedChallenges.Count < userData.CompletedChallenges.Count)
+        {
+            List<string> unredeemedChallenges = new List<string>(userData.CompletedChallenges);
+            for (int i = unredeemedChallenges.Count - 1; i >= 0; i--)
+            {
+                if (userData.RedeemedChallenges.Contains(unredeemedChallenges[i]))
+                {
+                    unredeemedChallenges.RemoveAt(i);
+                }
+            }
+
+            string challengeToRedeem = unredeemedChallenges[0];
+            userData.RedeemedChallenges.Add(challengeToRedeem);
+            gameManager_.SaveUserData(userData, id);
+
+            LevelData.Challenge c = gameManager_.FindChallenge(challengeToRedeem);
+
+            gameManager_.SendNewActionInternal(c.RewardCommand);
+        }
+
     }
 
     private void OnHintStationScan(string id, string station)

@@ -9,13 +9,28 @@ public class ChoicesHolder : MonoBehaviour
     [SerializeField] Transform choicesParent_;
 
     private List<ChoiceButton> spawnedChoices_ = new List<ChoiceButton>();
-    private List<EpisodeNode.Options> options_;
+
+    public void ToggleVisbility(bool show)
+    {
+        choicesParent_.gameObject.SetActive(show);
+    }
+
+    public bool IsActive
+    {
+        get
+        {
+            return choicesParent_.gameObject.activeSelf;
+        }
+    }
 
     public void UpdateChoices(List<EpisodeNode.Options> options)
     {
         DeleteOptions();
 
-        options_ = options;
+        if (options.Count > 0)
+        {
+            ToggleVisbility(true);
+        }
 
         for (int i = 0; i < options.Count; i++)
         {
@@ -25,22 +40,6 @@ public class ChoicesHolder : MonoBehaviour
             c.Setup((i + 1).ToString(), o.ButtonName, o.TeacherOnly);
             spawnedChoices_.Add(c);
         }
-    }
-
-    public string CommandForAction(int optionSelected, bool teacher)
-    {
-        if (optionSelected < options_.Count)
-        {
-            EpisodeNode.Options o = options_[optionSelected];
-            if (o.TeacherOnly)
-            {
-                return teacher ? o.Command : null;
-            } else
-            {
-                return o.Command;
-            }
-        }
-        return null;
     }
 
     public void DeleteOptions()
