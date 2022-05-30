@@ -25,7 +25,7 @@ namespace uFrUnity
 			public bool IsReady => Data != null && Data.CardUID != null;
 			public bool CardConnected = false;
 
-			public bool HaveReadCard => IsReady && LastReadCardUID == Data.CardUID;
+			public bool HaveReadCard => IsReady && LastReadCardUID != null && LastReadCardUID == Data.CardUID;
 			public bool isReading = false;
 
 			public void ResetCardReads()
@@ -57,48 +57,8 @@ namespace uFrUnity
 		private void Awake()
 		{
 			Task.Run(Discover, m_cancellationTokenSource.Token);
-			//Discover();
-			//HandleDisconnects();
-			Task.Run(HandleDisconnects, m_cancellationTokenSource.Token);
 		}
 
-		private async void HandleDisconnects()
-		{
-			while (!m_cancellationTokenSource.IsCancellationRequested)
-			{
-				// A reader was disconnected
-				for (int i = 0; i < m_activeReaders.Count; i++)
-				{
-					if (m_activeReaders.ContainsKey(i))
-					{
-						if (m_activeReaders.TryGetValue(i, out ReaderConnection conn))
-						{
-							if (Ok(conn.Reader.ReaderStillConnected(out var returnVal), out var status))
-							{
-								if (returnVal == 0)
-								{
-									lock (m_activeReaders)
-									{
-										if (!m_activeReaders.TryRemove(i, out ReaderConnection _))
-										{
-											Errors.Enqueue($"Failed to remove Disconnected reader {i} from active readers");
-										}
-									}
-
-								}
-							}
-							else
-							{
-								Errors.Enqueue($"Failed to call ReaderStillConnected {i} from active readers {status}");
-							}
-
-						}
-					}
-				}
-
-				await Task.Delay(100);
-			}
-		}
 		private async void Discover()
 		{
 			while (!m_cancellationTokenSource.IsCancellationRequested)
@@ -128,14 +88,12 @@ namespace uFrUnity
 												}
 												else
 												{
-													//UpdateCardAndConnectionInfo(newConn);
 													_ = Task.Run(() => UpdateCardAndConnectionInfo(newConn));
 												}
 											}
 										}
 										else
 										{
-											//Errors.Enqueue($"Failed to add new connected reader {i} to active readers {status}");
 										}
 									
 								}
@@ -161,9 +119,7 @@ namespace uFrUnity
 				{
 					try
 					{
-						// If a card is connected (but we've already read it), keep checking connection info
-						// OR if a card was not connected
-						if (conn.CardConnected && conn.HaveReadCard || !conn.CardConnected)
+
 						{
 							if (!Ok(GetCardConnectionInfo(conn), out var status))
 							{
@@ -180,10 +136,6 @@ namespace uFrUnity
 								SuccessulScans.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.CardUID });
 							}
 						}
-						//else if (!conn.isReading && conn.CardConnected && !conn.HaveReadCard)
-						//{
-						//	ReadCard(conn);
-						//}
 
 					}
 					catch (Exception ex)
@@ -192,7 +144,7 @@ namespace uFrUnity
 					}
 				}
 
-				await Task.Delay(500);
+				await Task.Delay(50);
 			}
 
 		}
@@ -207,25 +159,6 @@ namespace uFrUnity
 			}
 
 			return false;
-		}
-
-		private void ReadCard(ReaderConnection conn)
-		{
-			System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
-			conn.isReading = true;
-			sw.Start();
-			if (!Ok(Read(ref conn), out var status))
-			{
-				Errors.Enqueue($"Failed to Read card info for reader: {conn.ReaderSN} {status}");
-				UpdateConnectionStatus(status, conn);
-			}
-			else
-			{
-				SuccessulReads.Enqueue(new SuccessfulRead() { ReaderId = conn.ReaderSN, ReaderData = conn.Data.Data });
-			}
-			sw.Stop();
-			conn.isReading = false;
-			Info.Enqueue($"ReadCard took {sw.ElapsedMilliseconds}");
 		}
 
 		private void Update()
