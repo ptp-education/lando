@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f42ca4de9bafbb348a740ce7f8ea3021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkedRoomName_: felix
 --- !u!4 &837124341
 Transform:
   m_ObjectHideFlags: 0

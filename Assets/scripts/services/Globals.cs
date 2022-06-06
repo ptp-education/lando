@@ -1,4 +1,4 @@
-#if !UNITY_IOS
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +7,8 @@ namespace Lando
 {
 	public class Globals : MonoBehaviour
 	{
+		[SerializeField] private string networkedRoomName_;
+
 		private static Globals s_instance = default;
 		private void Awake()
 		{
@@ -26,6 +28,15 @@ namespace Lando
 			SceneManager.LoadScene("main");
 		}
 
+		public static string NetworkRoomName
+        {
+			get
+            {
+				return s_instance.networkedRoomName_;
+            }
+        }
+
+#if !UNITY_IOS
 		private static SmartObjects.SmartObjectManager s_smartObjectManager = default;
 
 		public static SmartObjects.SmartObjectManager SmartManager
@@ -40,7 +51,6 @@ namespace Lando
 				return s_smartObjectManager;
 			}
 		}
+#endif
 	}
 }
-
-#endif

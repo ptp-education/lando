@@ -37,8 +37,13 @@ public class Lobby : MonoBehaviourPunCallbacks
 
         TypedLobby typedLobby = new TypedLobby(null, LobbyType.Default);
 
-        //PhotonNetwork.JoinOrCreateRoom(Application.isEditor ? "editor" : "prod", roomOptions, typedLobby);
-        PhotonNetwork.JoinOrCreateRoom("prod", roomOptions, typedLobby);
+        string roomToJoin = Lando.Globals.NetworkRoomName;
+        if (roomToJoin == null || roomToJoin.Length == 0)
+        {
+            roomToJoin = "default";
+        }
+
+        PhotonNetwork.JoinOrCreateRoom(roomToJoin, roomOptions, typedLobby);
         status_.text = "Joining room...";
     }
 
