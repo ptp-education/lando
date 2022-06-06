@@ -1,4 +1,5 @@
-﻿namespace uFrUnity
+﻿#if !UNITY_IOS
+namespace uFrUnity
 {
 	using System;
 	using System.Collections.Generic;
@@ -314,3 +315,4 @@
 		#endregion
 	}
 }
+#endif

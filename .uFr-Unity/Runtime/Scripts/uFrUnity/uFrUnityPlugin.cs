@@ -1,3 +1,4 @@
+#if !UNITY_IOS
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -107,7 +108,7 @@ namespace uFrUnity
 				}
 
 
-				await Task.Delay(500);
+				await Task.Delay(50);
 			}
 		}
 
@@ -196,3 +197,4 @@ namespace uFrUnity
 		}
 	}
 }
+#endif

@@ -34,6 +34,11 @@ public class StationManager : GameManager
         
     }
 
+    private void Start()
+    {
+        background_.sprite = inactiveSprite_;
+    }
+
     protected override void NewNodeEventInternal(EpisodeNode n)
     {
         base.NewNodeEventInternal(n);

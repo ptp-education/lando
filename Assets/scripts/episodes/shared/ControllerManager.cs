@@ -42,7 +42,9 @@ public class ControllerManager : GameManager
         RefreshEpisodeList();
         RefreshMuteButton();
 
+#if !UNITY_IOS
         GetConnectors();
+#endif
     }
 
     public override void Init(NetworkManager nm)
@@ -54,9 +56,10 @@ public class ControllerManager : GameManager
 #endif
     }
 
+#if !UNITY_IOS
     private async void GetConnectors()
     {
-		SmartObjectManager manager = Globals.SmartManager;
+        SmartObjectManager manager = Globals.SmartManager;
 
         if (manager != null)
         {
@@ -69,6 +72,7 @@ public class ControllerManager : GameManager
             magicPrinterConnector?.Connect(this.NewNfcScan);
         }
     }
+#endif
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {

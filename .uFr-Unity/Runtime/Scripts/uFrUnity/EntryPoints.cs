@@ -1,4 +1,6 @@
-﻿using System;
+﻿#if !UNITY_IOS
+
+using System;
 using System.Text;
 
 namespace uFrUnity
@@ -19,7 +21,7 @@ namespace uFrUnity
 
 		const string DLL_NAME = DLL_PATH + NAME_DLL;
 
-		#region SINGLE_READER
+#region SINGLE_READER
 		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, EntryPoint = "LinearRead")]
 		public static extern DL_STATUS LinearRead([Out] byte[] data,
 												   int linear_address,
@@ -69,9 +71,9 @@ namespace uFrUnity
 		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, EntryPoint = "GetDlogicCardType")]
 		public static extern DL_STATUS GetDlogicCardType(byte* bCardType);
 
-		#endregion
+#endregion
 
-		#region MULTI_READERS
+#region MULTI_READERS
 
 		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Auto, EntryPoint = "GetDlogicCardTypeM")]
 		public static extern DL_STATUS GetDlogicCardType(UFR_HANDLE hwnd, byte* bCardType);
@@ -141,6 +143,7 @@ namespace uFrUnity
 
 		[DllImport(DLL_NAME, CallingConvention = CallingConvention.StdCall, EntryPoint = "ReadNdefRecord_TextM")]
 		public static extern DL_STATUS ReadNdefRecord_Text(UFR_HANDLE hndUFR, byte[] text);
-		#endregion
+#endregion
 	}
 }
+#endif

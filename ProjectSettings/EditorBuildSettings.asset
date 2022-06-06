@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/bootstrap.unity
     guid: 49218d573fa338b458ee5189c9a850c9
+  - enabled: 1
+    path: Assets/scenes/testing_screen.unity
+    guid: aecd2ee7e04404b1d9924a25c3f02d47
+  - enabled: 1
+    path: Assets/scenes/printer_screen.unity
+    guid: 8bee85e885b5d402980090d6bf9e0423
+  - enabled: 1
+    path: Assets/scenes/resource_screen.unity
+    guid: 1500f3fc19f364823811cda9d3c8fcf6
   m_configObjects: {}

@@ -1,3 +1,4 @@
+#if !UNITY_IOS
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -42,3 +43,4 @@ namespace Lando
 	}
 }
 
+#endif

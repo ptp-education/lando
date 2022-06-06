@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
+#if !UNITY_IOS
 namespace Lando.SmartObjects
 {
 	[RequireComponent(typeof(uFrUnity.uFrUnityPlugin))]
@@ -59,7 +60,7 @@ namespace Lando.SmartObjects
 			m_ufrPlugin.OnScanCard -= M_ufrPlugin_OnReadData;
 		}
 
-		#region API
+#region API
 		public async Task<SmartObjectConnector> GetSmartConnector(SmartObjectType smartObjectType)
 		{
 			while (!m_isConfigured)
@@ -107,9 +108,9 @@ namespace Lando.SmartObjects
 			}
 			
 		}
-		#endregion
+#endregion
 
-		#region IMPLEMENTATION
+#region IMPLEMENTATION
 
 		private void M_ufrPlugin_OnReadData(uFrUnity.SuccessfulRead obj)
 		{
@@ -203,7 +204,7 @@ namespace Lando.SmartObjects
 				m_ufrPlugin.OnScanCard += M_ufrPlugin_OnReadData;
 			}
 		}
-		#endregion // IMPLEMENTATION
+#endregion // IMPLEMENTATION
 	}
 }
-
+#endif

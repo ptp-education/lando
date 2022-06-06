@@ -1,3 +1,4 @@
+#if !UNITY_IOS
 namespace uFrUnity
 {
 	using System;
@@ -385,3 +386,4 @@ namespace uFrUnity
 	}
 
 }
+#endif
