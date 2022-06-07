@@ -29,9 +29,12 @@ public class ResourceStationManager : StationManager
     {
         base.NewRelevantAction(arguments);
 
+        bool actionCaught = false;
+
         if (string.Equals("give-resources", arguments[0]))
         {
             GiveResources(new List<string>(arguments.GetRange(1, arguments.Count - 1)));
+            actionCaught = true;
         }
 
         if (string.Equals("more-resources", arguments[0]))
@@ -43,11 +46,18 @@ public class ResourceStationManager : StationManager
                 int nextResource = int.Parse(arguments[3]); //where the next resource is
                 MoreResources(position, total, nextResource);
             }
+            actionCaught = true;
         }
 
         if (string.Equals("no-resources", arguments[0]))
         {
             NoResources();
+            actionCaught = true;
+        }
+
+        if (!actionCaught)
+        {
+            AudioPlayer.PlaySfx("turn-on");
         }
     }
 
@@ -75,6 +85,7 @@ public class ResourceStationManager : StationManager
 
         Reset();
         AudioPlayer.PlaySfx("guide-appears");
+        AudioPlayer.PlayVoiceover("store-grab-" + (resources.Count > 10 ? "10" : resources.Count.ToString()), "audio/shared_vo/");
 
         collectBlocksScreen_.gameObject.SetActive(true);
 
@@ -151,6 +162,7 @@ public class ResourceStationManager : StationManager
 
         Reset();
         AudioPlayer.PlaySfx("noentry");
+        AudioPlayer.PlayVoiceover("store-complete-more", "audio/shared_vo/");
 
         completeMoreChallengesScreen_.gameObject.SetActive(true);
         timeBeforeReset_ = kDefaultTimeout;
@@ -191,6 +203,8 @@ public class ResourceStationManager : StationManager
 
         Reset();
         AudioPlayer.PlaySfx("noentry");
+        AudioPlayer.PlayVoiceover("store-no-more", "audio/shared_vo/");
+
         timeBeforeReset_ = kDefaultTimeout;
 
         noMoreBlocksScreen_.gameObject.SetActive(true);

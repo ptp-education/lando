@@ -89,13 +89,16 @@ public class CommandDispatch
                 }
             }
 
-            string challengeToRedeem = unredeemedChallenges[0];
-            userData.RedeemedChallenges.Add(challengeToRedeem);
-            gameManager_.SaveUserData(userData, id);
+            if (unredeemedChallenges.Count > 0)
+            {
+                string challengeToRedeem = unredeemedChallenges[0];
+                userData.RedeemedChallenges.Add(challengeToRedeem);
+                gameManager_.SaveUserData(userData, id);
 
-            LevelData.Challenge c = gameManager_.FindChallenge(challengeToRedeem);
+                LevelData.Challenge c = gameManager_.FindChallenge(challengeToRedeem);
 
-            gameManager_.SendNewActionInternal(c.RewardCommand);
+                gameManager_.SendNewActionInternal(c.RewardCommand);
+            }
         }
 
     }

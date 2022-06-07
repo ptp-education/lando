@@ -31,14 +31,23 @@ public class HintStationManager : StationManager
 
         if (!IsStationActive) return;
 
+        bool actionCaught = false;
+
         if (string.Equals("show-hints", arguments[0]))
         {
+            actionCaught = true;
             HandleShowHints(arguments[1], arguments[2], arguments[3]);
         }
 
         if (string.Equals("no-hints", arguments[0]))
         {
+            actionCaught = true;
             HandleNoHints();
+        }
+
+        if (!actionCaught)
+        {
+            AudioPlayer.PlaySfx("turn-on");
         }
     }
 
@@ -46,6 +55,7 @@ public class HintStationManager : StationManager
     {
         Reset();
 
+        AudioPlayer.PlaySfx("noentry");
         completeMoreChallengeBackground_.gameObject.SetActive(true);
 
         RemoveAllHintThumbnails();
@@ -67,6 +77,16 @@ public class HintStationManager : StationManager
         List<string> allHintsList = allHints.ConvertFromArgumentList();
         List<string> redeemedHintList = redeemedHints.ConvertFromArgumentList();
 
+        if (allHintsList.Count > 0)
+        {
+            List<string> voiceovers = new List<string>();
+            for (int i = 0; i <= 9; i++)
+            {
+                voiceovers.Add("hint-select-" + i.ToString());
+            }
+            AudioPlayer.PlayVoiceover(voiceovers, "audio/shared_vo/");
+        }
+
         foreach (string h in allHintsList)
         {
             LevelData.Hint hint = FindHint(h);
@@ -78,7 +98,7 @@ public class HintStationManager : StationManager
                 thumbnail.transform.localScale = Vector3.one;
                 thumbnail.name = h;
 
-                thumbnail.ToggleOverlay(redeemedHints.Contains(h));
+                thumbnail.ToggleOverlay(redeemedHintList.Contains(h));
             }
         }
     }

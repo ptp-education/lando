@@ -36,14 +36,18 @@ public class TestStationManager : StationManager
 
         if (!IsStationActive) return;
 
+        bool actionCaught = false;
+
         if (string.Equals("load", arguments[0]))
         {
             HandleNewChallange(arguments[1]);
+            actionCaught = true;
         }
 
         if (string.Equals(CommandDispatch.ValidatorResponse.Success.ToString(), arguments[0]))
         {
             HandleChallengeCompleted(arguments[1]);
+            actionCaught = true;
         }
 
         if (string.Equals(CommandDispatch.ValidatorResponse.Failure.ToString(), arguments[0]))
@@ -58,16 +62,24 @@ public class TestStationManager : StationManager
                 showHint = false;
             }
             HandleChallengeFailed(showHint);
+            actionCaught = true;
         }
 
         if (string.Equals(CommandDispatch.ValidatorResponse.BeforeTest.ToString(), arguments[0]))
         {
             HandleTestingProblem(arguments[1]);
+            actionCaught = true;
         }
 
         if (string.Equals(CommandDispatch.ValidatorResponse.ScanWristband.ToString(), arguments[0]))
         {
             HandleScanWristband();
+            actionCaught = true;
+        }
+
+        if (!actionCaught)
+        {
+            AudioPlayer.PlaySfx("turn-on");
         }
     }
 
@@ -121,6 +133,26 @@ public class TestStationManager : StationManager
         {
             prefabs.Add(blocksRewardPrefab_);
         }
+
+        List<string> voiceoverOptions = new List<string>();
+        voiceoverOptions.Add("reward-new-a");
+        voiceoverOptions.Add("reward-new-b");
+
+        if (currentChallenge.HintRewards.Count > 0)
+        {
+            voiceoverOptions.Add("reward-new-hints-a");
+            voiceoverOptions.Add("reward-new-hints-b");
+            voiceoverOptions.Add("reward-new-hints-c");
+        }
+
+        if (currentChallenge.ResourceRewards.Count > 0)
+        {
+            voiceoverOptions.Add("reward-new-blocks-a");
+            voiceoverOptions.Add("reward-new-blocks-b");
+            voiceoverOptions.Add("reward-new-blocks-c");
+        }
+
+        AudioPlayer.PlayVoiceover(voiceoverOptions, "audio/shared_vo/");
 
         rewardFlow_ = new GoTweenFlow();
 

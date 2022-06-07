@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     public const string OPTION_SELECT = "-option-select";
     public const string CLAIM_REWARD = "-claim-reward";
 
+    [SerializeField] protected bool PlaySounds = false;
+
     public static bool MuteAll = false;
 
     protected Episode episode_;
@@ -437,7 +439,17 @@ public class GameManager : MonoBehaviour
             EpisodeNode.Options o = currentNode_.OptionsToSpawn[option];
             if(o.TeacherOnly)
             {
-                return isTeacher ? o.Command : null;
+                if (!isTeacher)
+                {
+                    if (PlaySounds)
+                    {
+                        AudioPlayer.PlayVoiceover("option-teacher-only", "audio/shared_vo/");
+                    }
+                    return null;
+                } else
+                {
+                    return o.Command;
+                }
             }
             else
             {

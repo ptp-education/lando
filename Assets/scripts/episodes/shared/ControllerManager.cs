@@ -78,6 +78,15 @@ public class ControllerManager : GameManager
     {
         //TODO add sharemanager optionsshowing status
         dispatch_.NewNfcScan(nfcId, stationType, string.Equals(nfcId, kTeacherNfcId), shareManager_.OptionsActive);
+
+        switch(stationType)
+        {
+            case SmartObjectType.Option1:
+            case SmartObjectType.Option2:
+            case SmartObjectType.Option3:
+                AudioPlayer.PlaySfx("beep");
+                break;
+        }
     }
 
     public override void SendNewActionInternal(string a)
