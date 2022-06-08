@@ -13,6 +13,11 @@ public class ChoicesHolder : MonoBehaviour
     public void ToggleVisbility(bool show)
     {
         choicesParent_.gameObject.SetActive(show);
+
+        if (show)
+        {
+            AudioPlayer.PlaySfx("turn-off");
+        }
     }
 
     public bool IsActive
@@ -23,18 +28,18 @@ public class ChoicesHolder : MonoBehaviour
         }
     }
 
-    public void UpdateChoices(List<EpisodeNode.Options> options)
+    public void UpdateChoices(EpisodeNode.OptionsHolder holder)
     {
         DeleteOptions();
 
-        if (options.Count > 0)
+        if (holder.Options.Count > 0 && holder.StartShown)
         {
             ToggleVisbility(true);
         }
 
-        for (int i = 0; i < options.Count; i++)
+        for (int i = 0; i < holder.Options.Count; i++)
         {
-            EpisodeNode.Options o = options[i];
+            EpisodeNode.Option o = holder.Options[i];
 
             ChoiceButton c = Instantiate(choicePrefab_, choicesParent_);
             c.Setup((i + 1).ToString(), o.ButtonName, o.TeacherOnly);
@@ -49,5 +54,7 @@ public class ChoicesHolder : MonoBehaviour
             Destroy(o.gameObject);
         }
         spawnedChoices_ = new List<ChoiceButton>();
+
+        ToggleVisbility(false);
     }
 }

@@ -12,8 +12,7 @@ public class EpisodeNode : MonoBehaviour
     {
         Video,
         Image,
-        PREFAB_DEPRECATED,
-        LOOP_WITH_OPTIONS_DEPRECATED
+        Simulator
     }
 
     [Serializable]
@@ -49,11 +48,19 @@ public class EpisodeNode : MonoBehaviour
     }
 
     [Serializable]
-    public class Options
+    public class OptionsHolder
+    {
+        [SerializeField] public bool StartShown = true;
+        [SerializeField] public List<Option> Options = new List<Option>();
+    }
+
+    [Serializable]
+    public class Option
     {
         [SerializeField] public string ButtonName;
         [SerializeField] public bool TeacherOnly;
         [SerializeField] public string Command;
+        [SerializeField] public EventObject EventObject;
     }
 
     [Serializable]
@@ -61,6 +68,7 @@ public class EpisodeNode : MonoBehaviour
     {
         [SerializeField] public float TimeStamp;
         [SerializeField] public string Command;
+        [SerializeField] public EventObject EventObject;
         [HideInInspector] public bool Ran = false;
     }
 
@@ -82,7 +90,21 @@ public class EpisodeNode : MonoBehaviour
         {
             [SerializeField] public UnityEngine.Object VideoObject;
             [SerializeField] public string VideoPath;
+        }
     }
+
+    [Serializable]
+    public class SimulatorStep
+    {
+        [SerializeField] public EventObject Question;
+        [SerializeField] public EventObject Answer;
+    }
+
+    [Serializable]
+    public class SimulatorHolder
+    {
+        [SerializeField] public bool ShowAnswer = false;
+        [SerializeField] public List<SimulatorStep> Steps = new List<SimulatorStep>();
     }
 
     //BG AUDIO OPTIONS
@@ -108,10 +130,13 @@ public class EpisodeNode : MonoBehaviour
     //uses VideoLoop and VideoLoopFilePath
     public List<VideoOption> VideoOptions = new List<VideoOption>();
 
+    //Simulator Options
+    public SimulatorHolder SimulatorDetails;
+
     //ALL OPTIONS
     public bool FadeInFromPreviousScene;
     public bool TestingActive;
-    public List<Options> OptionsToSpawn = new List<Options>();
+    public OptionsHolder OptionsToSpawn;
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();
@@ -135,9 +160,6 @@ public class EpisodeNode : MonoBehaviour
                 break;
             case EpisodeType.Image:
                 contentName = ImageFilePath;
-                break;
-            case EpisodeType.LOOP_WITH_OPTIONS_DEPRECATED:
-                contentName = VideoLoopFilePath;
                 break;
         }
 

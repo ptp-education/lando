@@ -19,21 +19,6 @@ public class StationManager : GameManager
         }
     }
 
-    public virtual float NewVoiceover(string file)
-    {
-        return AudioPlayer.PlayVoiceover(file, episode_.VORoot);
-    }
-
-    public virtual float NewVoiceover(List<string> files)
-    {
-        return AudioPlayer.PlayVoiceover(files, episode_.VORoot);
-    }
-
-    public virtual void NewPrint(string file)
-    {
-        
-    }
-
     private void Start()
     {
         background_.sprite = inactiveSprite_;

@@ -7,7 +7,8 @@ public class CommandLineHelper : MonoBehaviour
 {
     static public void PrintPdf(string pdf)
     {
-        ExecuteProcessTerminal("lpr -P Star_TSP847II__STR_T_001_ \"" + "/Users/felixhu/legov5/" + pdf + "\"");
+        //TODO figure out how to make this dynamic
+        ExecuteProcessTerminal("lpr -P Star_TSP847II__STR_T_001_ \"" + "/Users/felixhu/lego-receipts/" + pdf + ".pdf\"");
     }
 
     static public string ExecuteProcessTerminal(string argument)

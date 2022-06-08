@@ -26,7 +26,7 @@ public class TestStationManager : StationManager
     private List<Image> indicators_ = new List<Image>();
     private List<Image> spawnedRewards_ = new List<Image>();
 
-    private HintObject activeHintObject_;
+    private EventObject activeHintObject_;
     private GoTweenFlow resetToCurrentChallengeFlow_;
     private GoTweenFlow rewardFlow_ = new GoTweenFlow();
 
@@ -316,8 +316,17 @@ public class TestStationManager : StationManager
             return;
         }
 
-        activeHintObject_ = GameObject.Instantiate(fail.ObjectToLoad);
-        activeHintObject_.Init(this, DestroyHintObject);
+        EventObject eo = GameObject.Instantiate(fail.ObjectToLoad);
+        eo.Init(EventObject.Type.iPad, this, () =>
+        {
+            DestroyHintObject();
+            ResetToCurrentChallenge();
+        });
+
+        eo.transform.SetParent(challengeProblemBackground_.transform);
+        eo.transform.localScale = Vector3.one;
+        eo.transform.localPosition = Vector3.zero;
+        activeHintObject_ = eo;
     }
 
     private void HandleScanWristband()
@@ -371,10 +380,15 @@ public class TestStationManager : StationManager
         resetToCurrentChallengeFlow_ = new GoTweenFlow();
         resetToCurrentChallengeFlow_.insert(0, new GoTween(this.transform, time, new GoTweenConfig().onComplete(t =>
         {
-            Reset();
-            currentChallengeBackground_.gameObject.SetActive(true);
+            ResetToCurrentChallenge();
         })));
         resetToCurrentChallengeFlow_.play();
+    }
+
+    private void ResetToCurrentChallenge()
+    {
+        Reset();
+        currentChallengeBackground_.gameObject.SetActive(true);
     }
 
     private void DestroyHintObject()

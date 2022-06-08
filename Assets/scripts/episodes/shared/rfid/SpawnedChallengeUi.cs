@@ -239,10 +239,7 @@ public class SpawnedChallengeUi : SpawnedObject
             return;
         }
         LevelData.Challenge c = CurrentChallengeForRfid(rfid);
-        if (c != null && c.ScanRfidCommand != null && c.ScanRfidCommand.Length > 0)
-        {
-            gameManager_.SendNewActionInternal(c.ScanRfidCommand);
-        }
+        gameManager_.SendNewActionInternal(c.RequirementsCommand);
     }
 
     private void HandleEncourage(string rfid)
@@ -252,13 +249,7 @@ public class SpawnedChallengeUi : SpawnedObject
             return;
         }
         LevelData.Challenge c = CurrentChallengeForRfid(rfid);
-        if (c != null && c.EncourageCommand != null && c.EncourageCommand.Length > 0)
-        {
-            gameManager_.SendNewActionInternal(c.EncourageCommand);
-        } else
-        {
-            GenericEncourage();
-        }
+        GenericEncourage();
     }
 
     private void GenericEncourage()

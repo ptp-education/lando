@@ -76,16 +76,26 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
-        //TODO add sharemanager optionsshowing status
-        dispatch_.NewNfcScan(nfcId, stationType, string.Equals(nfcId, kTeacherNfcId), shareManager_.OptionsActive);
+        dispatch_.NewNfcScan(nfcId, stationType);
 
+        int optionSelected = -1;
         switch(stationType)
         {
             case SmartObjectType.Option1:
-            case SmartObjectType.Option2:
-            case SmartObjectType.Option3:
-                AudioPlayer.PlaySfx("beep");
+                optionSelected = 1;
                 break;
+            case SmartObjectType.Option2:
+                optionSelected = 2;
+                break;
+            case SmartObjectType.Option3:
+                optionSelected = 3;
+                break;
+        }
+
+        if (optionSelected != -1)
+        {
+            shareManager_.NewOptionSelected(optionSelected, string.Equals(nfcId, kTeacherNfcId), nfcId);
+            AudioPlayer.PlaySfx("beep");
         }
     }
 

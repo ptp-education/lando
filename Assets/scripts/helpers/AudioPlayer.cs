@@ -159,6 +159,17 @@ public class AudioPlayer : MonoBehaviour
 
     #endregion
 
+    public static float PlayPrint()
+    {
+        List<string> files = new List<string>();
+        for (int i = 1; i <= 10; i++)
+        {
+            files.Add("hints-print-" + i.ToString());
+        }
+
+        return PlayVoiceover(files, "audio/shared_vo/");
+    }
+
     public static float PlayCheer()
     {
         List<string> cheers = new List<string>()

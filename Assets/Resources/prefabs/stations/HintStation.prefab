@@ -350,7 +350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainImage_: {fileID: 5140476350858754554}
   overlay_: {fileID: 1966517578626462882}
-  border_: {fileID: 0}
+  border_: {fileID: 2647467525003249011}
 --- !u!114 &5140476350858754554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,6 +663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127b33c7ce35a4ba7a30c41275cb590e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlaySounds: 0
   StationType: 2
   background_: {fileID: 5020464567077606240}
   inactiveSprite_: {fileID: 21300000, guid: 1603bb540df8041fab4030531b547e9a, type: 3}

@@ -13,17 +13,8 @@ public class HintStationManager : StationManager
     [SerializeField] private Image completeMoreChallengeBackground_;
     [SerializeField] private Image showingHintBackground_;
 
-    private HintObject activeHintObject_;
+    private EventObject activeHintObject_;
     private string activeId_;
-
-    //all available hints, ranked by recency
-    //names of hints, which we can use to pull up the actual hint
-
-    //no-hint reason
-
-    //clicking on a hint will send an action to dispatch that this ID used this hint
-
-    //initializing hints with callbacks, for when to print, when to say VO
 
     protected override void NewRelevantAction(List<string> arguments)
     {
@@ -127,9 +118,9 @@ public class HintStationManager : StationManager
 
         SendNewActionNetworked(string.Format("-hint-used {0} {1}", activeId_, hintUsed));
 
-        HintObject hintObject = GameObject.Instantiate(hint.ObjectToLoad);
+        EventObject hintObject = GameObject.Instantiate(hint.ObjectToLoad);
         hintObject.name = hintUsed;
-        hintObject.Init(this, OnHintComplete);
+        hintObject.Init(EventObject.Type.iPad, this, OnHintComplete);
         hintObject.transform.SetParent(showingHintBackground_.transform);
         hintObject.transform.localScale = Vector3.one;
         hintObject.transform.localPosition = Vector3.zero;

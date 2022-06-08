@@ -545,5 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f227211c995d649b99cd6e4e43cd26da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlaySounds: 0
   nodeObjectParent_: {fileID: 1968126628}
   OverlayParent: {fileID: 0}
+  CharacterParent: {fileID: 0}

@@ -11,6 +11,7 @@ public class ShareManager : GameManager
     [SerializeField] private Transform nodeObjectParent_;
 
     public Transform OverlayParent;
+    public Transform CharacterParent;
 
     private EpisodeNodeObject activeNode_;
 
@@ -18,14 +19,6 @@ public class ShareManager : GameManager
     private GoTweenFlow fadeFlow_;
     private ChoicesHolder choicesHolder_;
     private Dictionary<string, OnscreenCharacter> characters_ = new Dictionary<string, OnscreenCharacter> ();
-
-    public bool OptionsActive
-    {
-        get
-        {
-            return choicesHolder_.IsActive;
-        }
-    }
 
     private void Start()
     {
@@ -41,6 +34,10 @@ public class ShareManager : GameManager
         OverlayParent.transform.SetParent(transform, false);
         OverlayParent.transform.localPosition = Vector3.zero;
 
+        CharacterParent = new GameObject("Character Parent").GetComponent<Transform>();
+        CharacterParent.transform.SetParent(transform, false);
+        CharacterParent.transform.localPosition = Vector3.zero;
+
         ChoicesHolder choicesPrefab = Resources.Load<ChoicesHolder>("prefabs/episode_objects/choices_parent");
         choicesHolder_ = GameObject.Instantiate<ChoicesHolder>(choicesPrefab, transform);
     }
@@ -55,7 +52,8 @@ public class ShareManager : GameManager
         {
             choicesHolder_.transform.SetSiblingIndex(transform.childCount - 2);
         }
-        OverlayParent.transform.SetSiblingIndex(transform.childCount - 3);
+        OverlayParent.transform.SetSiblingIndex(transform.childCount - 4);
+        CharacterParent.transform.SetSiblingIndex(transform.childCount - 3);
     }
 
     protected override void NewNodeEventInternal(EpisodeNode node)
@@ -138,6 +136,45 @@ public class ShareManager : GameManager
         }
     }
 
+    public void NewOptionSelected(int option, bool isTeacher, string userId)
+    {
+        SendNewActionInternal(string.Format("{0} {1}", OPTION_SELECT, option.ToString()));
+
+        if (choicesHolder_.IsActive)
+        {
+            option = option - 1;
+            if (currentNode_.OptionsToSpawn.Options.Count > option)
+            {
+                EpisodeNode.Option selectedOption = currentNode_.OptionsToSpawn.Options[option];
+
+                if (!isTeacher && selectedOption.TeacherOnly)
+                {
+                    //don't run teacher only commands if the scanner is not a teacher
+                    return;
+                }
+
+                choicesHolder_.ToggleVisbility(false);
+
+                if (selectedOption.Command != null && selectedOption.Command.Length > 0)
+                {
+                    SendNewActionInternal(selectedOption.Command);
+                }
+
+                if (selectedOption.EventObject != null)
+                {
+                    EventObject eo = Instantiate(selectedOption.EventObject);
+                    eo.transform.SetParent(OverlayParent);
+                    eo.transform.localScale = Vector3.one;
+                    eo.transform.localPosition = Vector3.zero;
+                    eo.Init(EventObject.Type.Projector, this, () =>
+                    {
+                        choicesHolder_.ToggleVisbility(true);
+                    });
+                }
+            }
+        }
+    }
+
     private void RefreshCharacters(EpisodeNode nextNode)
     {
         foreach(EpisodeNode.Character nextCharacter in nextNode.Characters)
@@ -145,7 +182,7 @@ public class ShareManager : GameManager
             if (!characters_.ContainsKey(nextCharacter.Name))
             {
                 OnscreenCharacter characterPrefab = Resources.Load<OnscreenCharacter>("characters/" + nextCharacter.Name);
-                OnscreenCharacter newCharacter = Instantiate<OnscreenCharacter>(characterPrefab, transform);
+                OnscreenCharacter newCharacter = Instantiate<OnscreenCharacter>(characterPrefab, CharacterParent);
                 newCharacter.Init(this);
                 characters_[nextCharacter.Name] = newCharacter;
             }
@@ -171,7 +208,6 @@ public class ShareManager : GameManager
         EpisodeNodeObject previousNode = activeNode_;
         activeNode_ = LoadEpisodeNodeObject(currentNode);
 
-        activeNode_.Reset();
         choicesHolder_.DeleteOptions();
 
         if (fadeFlow_ != null)
@@ -220,12 +256,9 @@ public class ShareManager : GameManager
             case EpisodeNode.EpisodeType.Image:
                 prefabPath += "image_player";
                 break;
-            case EpisodeNode.EpisodeType.LOOP_WITH_OPTIONS_DEPRECATED:
-                prefabPath += "loopwithoptions_player";
+            case EpisodeNode.EpisodeType.Simulator:
+                prefabPath += "simulator_player";
                 break;
-            case EpisodeNode.EpisodeType.PREFAB_DEPRECATED:
-                Debug.LogWarning("Prefab objects have been deprecated");
-                return null;
         }
         EpisodeNodeObject o = Resources.Load<EpisodeNodeObject>(prefabPath);
         nodeObject = GameObject.Instantiate<EpisodeNodeObject>(o);

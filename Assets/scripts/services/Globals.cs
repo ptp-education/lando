@@ -32,6 +32,10 @@ namespace Lando
         {
 			get
             {
+				if (s_instance == null)
+                {
+					return null;
+                }
 				return s_instance.networkedRoomName_;
             }
         }

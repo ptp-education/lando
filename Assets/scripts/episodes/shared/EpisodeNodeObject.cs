@@ -8,7 +8,7 @@ public class EpisodeNodeObject : MonoBehaviour
     public static string kSpawnCommand = "-spawn-";
     public delegate void ReadyToStartLoop();
 
-    public EpisodeNode Node;
+    protected EpisodeNode node_;
     protected GameManager gameManager_;
 
     private static float kMaxRunLength = 600f;
@@ -17,9 +17,13 @@ public class EpisodeNodeObject : MonoBehaviour
     private float timer_ = 0f;
 
     private RectTransform spawnedObjectParent_;
-    public Transform OverlayParent;
 
     private void Start()
+    {
+        Setup();
+    }
+
+    protected virtual void Setup()
     {
         GameObject o = new GameObject("spawned prefab parent");
         o.AddComponent<RectTransform>();
@@ -32,7 +36,7 @@ public class EpisodeNodeObject : MonoBehaviour
     public virtual void Init(GameManager manager, EpisodeNode node)
     {
         gameManager_ = manager;
-        Node = node;
+        node_ = node;
     }
 
     public virtual bool IsPlaying
@@ -61,7 +65,7 @@ public class EpisodeNodeObject : MonoBehaviour
             SpawnObject(action.Substring(kSpawnCommand.Length).Trim());
         }
 
-        foreach(EpisodeNode.CommandContainer c in Node.CommandLineContainers)
+        foreach(EpisodeNode.CommandContainer c in node_.CommandLineContainers)
         {
             if (ArgumentHelper.ContainsCommand(c.CommandToCall, action))
             {
@@ -97,17 +101,33 @@ public class EpisodeNodeObject : MonoBehaviour
             {
                 timeStamp = 0.1f;
             }
-            flow.insert(0, new GoTween(this.transform,  timeStamp, new GoTweenConfig().onComplete(t =>
+            flow.insert(0, new GoTween(this.transform, timeStamp, new GoTweenConfig().onComplete(t =>
             {
                 gameManager_.SendNewActionInternal(command);
+                if (c.EventObject != null)
+                {
+                    SpawnEventObject(c.EventObject);
+                }
             })));
         }
         flow.play();
     }
 
+    private void SpawnEventObject(EventObject eventObject)
+    {
+        ShareManager sm = (ShareManager)gameManager_;
+        if (sm == null) return;
+
+        EventObject eo = GameObject.Instantiate(eventObject);
+        eo.Init(EventObject.Type.Projector, gameManager_, null);
+        eo.transform.SetParent(sm.OverlayParent);
+        eo.transform.localScale = Vector3.one;
+        eo.transform.localPosition = Vector3.zero;
+    }
+
     private void SpawnObject(string command)
     {
-        foreach (EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
+        foreach (EpisodeNode.PrefabSpawnObject o in node_.PrefabSpawnObjects)
         {
             if (string.Equals(o.SpawnKey, command))
             {
@@ -125,7 +145,7 @@ public class EpisodeNodeObject : MonoBehaviour
             timer_ += Time.deltaTime;
         }
 
-        foreach(EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
+        foreach(EpisodeNode.PrefabSpawnObject o in node_.PrefabSpawnObjects)
         {
             if (timer_ > o.TimeStamp && o.TimeStamp != -1f)
             {
@@ -136,13 +156,17 @@ public class EpisodeNodeObject : MonoBehaviour
             }
         }
 
-        foreach (EpisodeNode.CommandLine c in Node.CommandLines)
+        foreach (EpisodeNode.CommandLine c in node_.CommandLines)
         {
             if (timer_ > c.TimeStamp)
             {
                 if (!c.Ran)
                 {
                     gameManager_.SendNewActionInternal(c.Command);
+                    if (c.EventObject != null)
+                    {
+                        SpawnEventObject(c.EventObject);
+                    }
                     c.Ran = true;
                 }
             }
@@ -171,7 +195,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private void ResetSpawnedObjects()
     {
         timer_ = 0f;
-        foreach (EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
+        foreach (EpisodeNode.PrefabSpawnObject o in node_.PrefabSpawnObjects)
         {
             o.Spawned = false;
         }
@@ -186,7 +210,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private void ResetCommandLines()
     {
         timer_ = 0f;
-        foreach(EpisodeNode.CommandLine c in Node.CommandLines)
+        foreach(EpisodeNode.CommandLine c in node_.CommandLines)
         {
             c.Ran = false;
         }

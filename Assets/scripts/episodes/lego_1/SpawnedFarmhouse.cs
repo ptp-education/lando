@@ -25,11 +25,8 @@ public class SpawnedFarmhouse : SpawnedObject
     {
         base.ReceivedAction(action);
 
-        if (ArgumentHelper.ContainsCommand("-next-stage", action))
-        {
-            transform.localScale = new Vector3(0.6f, 0.6f);
-            transform.localPosition = new Vector3(684f, -258f);
-        }
+        transform.localScale = new Vector3(0.6f, 0.6f);
+        transform.localPosition = new Vector3(684f, -258f);
 
         if (ArgumentHelper.ContainsCommand("-farmhouse-increase", action))
         {

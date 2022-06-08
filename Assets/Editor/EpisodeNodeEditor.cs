@@ -86,32 +86,9 @@ public class EpisodeNodeEditor : Editor
             EditorGUILayout.LabelField(string.Format("Image ({0})", imagePath));
             myTarget.Image = EditorGUILayout.ObjectField(myTarget.Image, typeof(Object), false);
         }
-        else if (myTarget.Type == EpisodeNode.EpisodeType.LOOP_WITH_OPTIONS_DEPRECATED)
+        else if (myTarget.Type == EpisodeNode.EpisodeType.Simulator)
         {
-            string videoLoopPath = "empty";
-            if (videoLoop.objectReferenceValue != null)
-            {
-                videoLoopPath = AssetDatabase.GetAssetPath(videoLoop.objectReferenceValue.GetInstanceID());
-                videoLoopPath = videoLoopPath.Substring(kAssetPrefix.Length);
-                myTarget.VideoLoopFilePath = videoLoopPath;
-            }
-
-            EditorGUILayout.LabelField(string.Format("Video Loop ({0})", myTarget.VideoLoopFilePath));
-            myTarget.VideoLoop = EditorGUILayout.ObjectField(myTarget.VideoLoop, typeof(Object), false);
-
-            EditorGUILayout.LabelField("Video options");
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("VideoOptions"));
-
-            foreach(EpisodeNode.VideoOption o in myTarget.VideoOptions)
-            {
-                foreach(EpisodeNode.VideoOption.Video v in o.Videos)
-                {
-                    if (v.VideoObject != null)
-                    {
-                        v.VideoPath = AssetDatabase.GetAssetPath(v.VideoObject).Substring(kAssetPrefix.Length);
-                    }
-                }
-            }
+            EditorGUILayout.PropertyField(serializedObject.FindProperty("SimulatorDetails"));
         }
 
         EditorGUILayout.LabelField("Options to spawn");

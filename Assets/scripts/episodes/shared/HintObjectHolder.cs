@@ -17,6 +17,6 @@ public class HintObjectHolder : MonoBehaviour
     public void ToggleOverlay(bool show)
     {
         overlay_.gameObject.SetActive(show);
-        border_.color = show ? Color.white : new Color(0, 0, 0, 90);
+        border_.color = show ? Color.white : new Color(255, 255, 255, 90);
     }
 }

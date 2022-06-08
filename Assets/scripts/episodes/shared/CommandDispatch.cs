@@ -23,7 +23,7 @@ public class CommandDispatch
         gameManager_ = gameManager;
     }
 
-    public void NewNfcScan(string id, SmartObjectType stationType, bool isTeacher, bool optionsActive)
+    public void NewNfcScan(string id, SmartObjectType stationType)
     {
         nfcAtStation_[stationType.ToString()] = id;
 
@@ -38,15 +38,6 @@ public class CommandDispatch
             case SmartObjectType.HintStation:
                 OnHintStationScan(id, stationType.ToString());
                 break;
-            case SmartObjectType.Option1:
-                OnOptionSelected(1, isTeacher, id, optionsActive);
-                break;
-            case SmartObjectType.Option2:
-                OnOptionSelected(2, isTeacher, id, optionsActive);
-                break;
-            case SmartObjectType.Option3:
-                OnOptionSelected(3, isTeacher, id, optionsActive);
-                break;
         }
     }
 
@@ -59,18 +50,6 @@ public class CommandDispatch
             case SmartObjectType.HintStation:
                 OnHintStationScan(id, station);
                 break;
-        }
-    }
-
-    public void OnOptionSelected(int option, bool isTeacher, string nfcId, bool optionsActive)
-    {
-        if (!optionsActive) return;
-
-        string commandToCall = gameManager_.ActionForOptionSelect(option - 1, isTeacher);
-
-        if (commandToCall != null)
-        {
-            gameManager_.SendNewActionInternal(string.Format(commandToCall, nfcId));
         }
     }
 

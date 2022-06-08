@@ -13,16 +13,11 @@ public class SpawnedLumberTrucksBridge : SpawnedObject
     [SerializeField] private Vector3 challengeTwoLumberStart_;
     [SerializeField] private Vector3 challengeTwoLumberEnd_;
 
-    private bool nextStage_ = false;
+    private bool nextStage_ = true;
 
     public override void ReceivedAction(string action)
     {
         base.ReceivedAction(action);
-
-        if (ArgumentHelper.ContainsCommand("-next-stage", action))
-        {
-            nextStage_ = true;
-        }
 
         List<string> args = ArgumentHelper.ArgumentsFromCommand("-bridge", action);
 

@@ -242,6 +242,25 @@ public class GameManager : MonoBehaviour
         return ret;
     }
 
+    public virtual float NewVoiceover(string file)
+    {
+        return AudioPlayer.PlayVoiceover(file, episode_.VORoot);
+    }
+
+    public virtual float NewVoiceover(List<string> files)
+    {
+        return AudioPlayer.PlayVoiceover(files, episode_.VORoot);
+    }
+
+    public virtual void NewPrint(string file)
+    {
+        float time = AudioPlayer.PlayPrint();
+        Go.to(transform, time - 1f, new GoTweenConfig().onComplete(t =>
+        {
+            CommandLineHelper.PrintPdf(file);
+        }));
+    }
+
     #region USER_DATA
 
     public GameStorage GameStorageForUserId(string id)
@@ -430,33 +449,6 @@ public class GameManager : MonoBehaviour
             GameStorageForUserId(id).SaveUserData(userData);
         }
         return FindChallenge(userData.CurrentChallenge);
-    }
-
-    public string ActionForOptionSelect(int option, bool isTeacher)
-    {
-        if (option < currentNode_.OptionsToSpawn.Count)
-        {
-            EpisodeNode.Options o = currentNode_.OptionsToSpawn[option];
-            if(o.TeacherOnly)
-            {
-                if (!isTeacher)
-                {
-                    if (PlaySounds)
-                    {
-                        AudioPlayer.PlayVoiceover("option-teacher-only", "audio/shared_vo/");
-                    }
-                    return null;
-                } else
-                {
-                    return o.Command;
-                }
-            }
-            else
-            {
-                return o.Command;
-            }
-        }
-        return null;
     }
 
     #endregion
