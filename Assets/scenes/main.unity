@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 239405046}
   - component: {fileID: 239405045}
   m_Layer: 5
-  m_Name: validator
+  m_Name: validator_screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
