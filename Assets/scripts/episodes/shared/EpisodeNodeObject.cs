@@ -14,6 +14,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private static float kMaxRunLength = 600f;
 
     private List<SpawnedObject> spawnedPrefabs_ = new List<SpawnedObject>();
+    private EventObject activeEventObject_;
     private float timer_ = 0f;
 
     private RectTransform spawnedObjectParent_;
@@ -123,6 +124,8 @@ public class EpisodeNodeObject : MonoBehaviour
         eo.transform.SetParent(sm.OverlayParent);
         eo.transform.localScale = Vector3.one;
         eo.transform.localPosition = Vector3.zero;
+
+        activeEventObject_ = eo;
     }
 
     private void SpawnObject(string command)
@@ -204,7 +207,14 @@ public class EpisodeNodeObject : MonoBehaviour
             SpawnedObject o = spawnedPrefabs_[i];
             Destroy(o.gameObject);
         }
+
         spawnedPrefabs_ = new List<SpawnedObject>();
+
+        if (activeEventObject_ != null)
+        {
+            Destroy(activeEventObject_.gameObject);
+            activeEventObject_ = null;
+        }
     }
 
     private void ResetCommandLines()
