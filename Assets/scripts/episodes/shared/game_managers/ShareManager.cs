@@ -14,6 +14,7 @@ public class ShareManager : GameManager
     [HideInInspector] public Transform CharacterParent;
 
     private EpisodeNodeObject activeNode_;
+    private EpisodeNode.OptionsHolder activeOption_;
 
     private Image fadeOverlay_;
     private GoTweenFlow fadeFlow_;
@@ -139,6 +140,11 @@ public class ShareManager : GameManager
         {
             HandleClaimReward(a);
         }
+
+        if (ArgumentHelper.ContainsCommand(CHANGE_OPTIONS, a))
+        {
+            HandleUpdateOptions(a);
+        }
     }
 
     public void NewOptionSelected(int option, bool isTeacher, string userId)
@@ -148,9 +154,9 @@ public class ShareManager : GameManager
         if (choicesHolder_.IsActive)
         {
             option = option - 1;
-            if (currentNode_.OptionsToSpawn.Options.Count > option)
+            if (activeOption_.Options.Count > option)
             {
-                EpisodeNode.Option selectedOption = currentNode_.OptionsToSpawn.Options[option];
+                EpisodeNode.Option selectedOption = activeOption_.Options[option];
 
                 if (!isTeacher && selectedOption.TeacherOnly)
                 {
@@ -235,7 +241,10 @@ public class ShareManager : GameManager
 
         RefreshCharacters(currentNode);
 
-        choicesHolder_.UpdateChoices(currentNode.OptionsToSpawn);
+        if (currentNode.OptionsToSpawn.Count > 0)
+        {
+            UpdateOptions(currentNode.OptionsToSpawn[0]);
+        }
 
         for (int i = 0; i < 8; i++)
         {
@@ -247,6 +256,12 @@ public class ShareManager : GameManager
             previousNode.Reset();
             Destroy(previousNode.gameObject);
         }
+    }
+
+    private void UpdateOptions(EpisodeNode.OptionsHolder optionsHolder)
+    {
+        activeOption_ = optionsHolder;
+        choicesHolder_.UpdateChoices(optionsHolder);
     }
 
     private EpisodeNodeObject LoadEpisodeNodeObject(EpisodeNode node)
@@ -325,6 +340,19 @@ public class ShareManager : GameManager
         }
     }
 
+    public void HandleUpdateOptions(string a)
+    {
+        List<string> args = ArgumentHelper.ArgumentsFromCommand(CHANGE_OPTIONS, a);
+
+        if (args.Count > 0)
+        {
+            EpisodeNode.OptionsHolder optionsHolder = activeNode_.Node.OptionsToSpawn.Find(o => string.Equals(o.Name, args[0]));
+            if (optionsHolder != null)
+            {
+                UpdateOptions(optionsHolder);
+            }
+        }
+    }
 
     public void HandleClaimReward(string a)
     {

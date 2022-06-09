@@ -51,6 +51,7 @@ public class EpisodeNode : MonoBehaviour
     public class OptionsHolder
     {
         [SerializeField] public bool StartShown = true;
+        [SerializeField] public string Name;
         [SerializeField] public List<Option> Options = new List<Option>();
     }
 
@@ -136,7 +137,7 @@ public class EpisodeNode : MonoBehaviour
     //ALL OPTIONS
     public bool FadeInFromPreviousScene;
     public bool TestingActive;
-    public OptionsHolder OptionsToSpawn;
+    public List<OptionsHolder> OptionsToSpawn;
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();

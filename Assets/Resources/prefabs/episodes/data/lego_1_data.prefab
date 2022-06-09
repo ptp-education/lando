@@ -88,7 +88,8 @@ MonoBehaviour:
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk game-select-20lb -farm-selector show 1
+    RewardCommand: -character talk game-select-20lb -farm-selector show 1 -update-options
+      choose
     RequirementsVO: challenge-20-4w
     NextChallengeVO: challenge-20-4w
   - Name: 35-pound-6-wide
@@ -96,7 +97,8 @@ MonoBehaviour:
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk game-select-35lb -farm-selector show 2
+    RewardCommand: -character talk game-select-35lb -farm-selector show 2 -update-options
+      choose
     RequirementsVO: challenge-35-6w
     NextChallengeVO: challenge-35-6w
   - Name: 45-pound-8-wide
@@ -104,7 +106,8 @@ MonoBehaviour:
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk game-select-45lb -farm-selector show 3
+    RewardCommand: -character talk game-select-45lb -farm-selector show 3 -update-options
+      choose
     RequirementsVO: challenge-45-8w
     NextChallengeVO: challenge-45-8w
   Hints:

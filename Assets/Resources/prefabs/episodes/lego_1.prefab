@@ -68,15 +68,31 @@ MonoBehaviour:
   FadeInFromPreviousScene: 0
   TestingActive: 1
   OptionsToSpawn:
-    StartShown: 1
+  - StartShown: 1
+    Name: default
     Options:
     - ButtonName: Redeem Reward
       TeacherOnly: 0
       Command: -claim-reward {0}
       EventObject: {fileID: 0}
-    - ButtonName: Start Bridge Simulator
+    - ButtonName: Load Bridge Simulator
       TeacherOnly: 1
       Command: -node next
+      EventObject: {fileID: 0}
+  - StartShown: 1
+    Name: choose
+    Options:
+    - ButtonName: Left
+      TeacherOnly: 0
+      Command: -farm-selector select 1 -update-options default
+      EventObject: {fileID: 0}
+    - ButtonName: Middle
+      TeacherOnly: 0
+      Command: -farm-selector select 2 -update-options default
+      EventObject: {fileID: 0}
+    - ButtonName: Right
+      TeacherOnly: 0
+      Command: -farm-selector select 3 -update-options default
       EventObject: {fileID: 0}
   PrefabSpawnObjects:
   - TimeStamp: 0
@@ -183,9 +199,7 @@ MonoBehaviour:
       Answer: {fileID: -860130409809325442, guid: 77cc271fc36e74ab1a6d72fc7c0dd18a, type: 3}
   FadeInFromPreviousScene: 0
   TestingActive: 0
-  OptionsToSpawn:
-    StartShown: 0
-    Options: []
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
@@ -316,13 +330,14 @@ MonoBehaviour:
   FadeInFromPreviousScene: 0
   TestingActive: 0
   OptionsToSpawn:
-    StartShown: 0
+  - StartShown: 1
+    Name: 
     Options:
     - ButtonName: We got it!
       TeacherOnly: 0
       Command: -node next
       EventObject: {fileID: 0}
-    - ButtonName: Can you repeat?
+    - ButtonName: Can you repeat that?
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: 935424a553c2442f5bc27913a6dfdee7, type: 3}
@@ -422,7 +437,11 @@ MonoBehaviour:
   FadeInFromPreviousScene: 0
   TestingActive: 0
   OptionsToSpawn:
-    StartShown: 0
+  - StartShown: 1
+    Name: 
+    Options: []
+  - StartShown: 1
+    Name: 
     Options: []
   PrefabSpawnObjects: []
   CommandLines: []
@@ -485,7 +504,7 @@ MonoBehaviour:
   VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
   Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
-  ImageFilePath: episodes/lego_1_screens/splash-screen
+  ImageFilePath: episodes/_shared/splash-screen
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -493,7 +512,11 @@ MonoBehaviour:
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn:
-    StartShown: 1
+  - StartShown: 1
+    Name: 
+    Options: []
+  - StartShown: 1
+    Name: 
     Options: []
   PrefabSpawnObjects: []
   CommandLines: []
@@ -564,7 +587,8 @@ MonoBehaviour:
   FadeInFromPreviousScene: 0
   TestingActive: 0
   OptionsToSpawn:
-    StartShown: 1
+  - StartShown: 1
+    Name: 
     Options:
     - ButtonName: Play
       TeacherOnly: 1
@@ -642,7 +666,8 @@ MonoBehaviour:
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn:
-    StartShown: 0
+  - StartShown: 1
+    Name: 
     Options:
     - ButtonName: Helicopter
       TeacherOnly: 0

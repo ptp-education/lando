@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public const string SHOW_CHOICES = "-show-choices";
     public const string OPTION_SELECT = "-option-select";
     public const string CLAIM_REWARD = "-claim-reward";
+    public const string CHANGE_OPTIONS = "-update-options";
 
     [SerializeField] protected bool PlaySounds = false;
 

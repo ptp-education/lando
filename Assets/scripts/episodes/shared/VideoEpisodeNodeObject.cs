@@ -73,8 +73,8 @@ public class VideoEpisodeNodeObject : EpisodeNodeObject
 
     public void Preload()
     {
-        PreloadVideo(videoPlayerMain_, node_.VideoFilePath);
-        PreloadVideo(videoPlayerLoop_, node_.VideoLoopFilePath);
+        PreloadVideo(videoPlayerMain_, Node.VideoFilePath);
+        PreloadVideo(videoPlayerLoop_, Node.VideoLoopFilePath);
     }
 
     public override bool IsPlaying

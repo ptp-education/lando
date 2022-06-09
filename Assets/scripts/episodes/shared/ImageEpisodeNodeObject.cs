@@ -20,7 +20,7 @@ public class ImageEpisodeNodeObject : EpisodeNodeObject
     {
         base.Init(gameManager, node);
 
-        mainImage_.sprite = Resources.Load<Sprite>(node_.ImageFilePath);
+        mainImage_.sprite = Resources.Load<Sprite>(Node.ImageFilePath);
     }
 
     public override void ReceiveAction(string action)

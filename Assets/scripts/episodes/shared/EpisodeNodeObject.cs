@@ -8,7 +8,7 @@ public class EpisodeNodeObject : MonoBehaviour
     public static string kSpawnCommand = "-spawn-";
     public delegate void ReadyToStartLoop();
 
-    protected EpisodeNode node_;
+    public EpisodeNode Node;
     protected GameManager gameManager_;
 
     private static float kMaxRunLength = 600f;
@@ -36,7 +36,7 @@ public class EpisodeNodeObject : MonoBehaviour
     public virtual void Init(GameManager manager, EpisodeNode node)
     {
         gameManager_ = manager;
-        node_ = node;
+        Node = node;
     }
 
     public virtual bool IsPlaying
@@ -65,7 +65,7 @@ public class EpisodeNodeObject : MonoBehaviour
             SpawnObject(action.Substring(kSpawnCommand.Length).Trim());
         }
 
-        foreach(EpisodeNode.CommandContainer c in node_.CommandLineContainers)
+        foreach(EpisodeNode.CommandContainer c in Node.CommandLineContainers)
         {
             if (ArgumentHelper.ContainsCommand(c.CommandToCall, action))
             {
@@ -127,7 +127,7 @@ public class EpisodeNodeObject : MonoBehaviour
 
     private void SpawnObject(string command)
     {
-        foreach (EpisodeNode.PrefabSpawnObject o in node_.PrefabSpawnObjects)
+        foreach (EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
         {
             if (string.Equals(o.SpawnKey, command))
             {
@@ -145,7 +145,7 @@ public class EpisodeNodeObject : MonoBehaviour
             timer_ += Time.deltaTime;
         }
 
-        foreach(EpisodeNode.PrefabSpawnObject o in node_.PrefabSpawnObjects)
+        foreach(EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
         {
             if (timer_ > o.TimeStamp && o.TimeStamp != -1f)
             {
@@ -156,7 +156,7 @@ public class EpisodeNodeObject : MonoBehaviour
             }
         }
 
-        foreach (EpisodeNode.CommandLine c in node_.CommandLines)
+        foreach (EpisodeNode.CommandLine c in Node.CommandLines)
         {
             if (timer_ > c.TimeStamp)
             {
@@ -195,7 +195,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private void ResetSpawnedObjects()
     {
         timer_ = 0f;
-        foreach (EpisodeNode.PrefabSpawnObject o in node_.PrefabSpawnObjects)
+        foreach (EpisodeNode.PrefabSpawnObject o in Node.PrefabSpawnObjects)
         {
             o.Spawned = false;
         }
@@ -210,7 +210,7 @@ public class EpisodeNodeObject : MonoBehaviour
     private void ResetCommandLines()
     {
         timer_ = 0f;
-        foreach(EpisodeNode.CommandLine c in node_.CommandLines)
+        foreach(EpisodeNode.CommandLine c in Node.CommandLines)
         {
             c.Ran = false;
         }

@@ -61,7 +61,7 @@ public class SimulatorNodeObject : EpisodeNodeObject
             {
                 if (state_ == State.ShowingQuestion)
                 {
-                    if (node_.SimulatorDetails.ShowAnswer)
+                    if (Node.SimulatorDetails.ShowAnswer)
                     {
                         LoadNextAnswer(counter_);
                     } else
@@ -79,7 +79,7 @@ public class SimulatorNodeObject : EpisodeNodeObject
         state_ = State.ShowingAnswer;
         takingInput_ = false;
 
-        LoadEventObject(node_.SimulatorDetails.Steps[counter_].Answer, false, () =>
+        LoadEventObject(Node.SimulatorDetails.Steps[counter_].Answer, false, () =>
         {
             LoadNextQuestion(counter_ + 1);
         });
@@ -91,13 +91,13 @@ public class SimulatorNodeObject : EpisodeNodeObject
         state_ = State.ShowingQuestion;
         takingInput_ = false;
 
-        if (counter_ >= node_.SimulatorDetails.Steps.Count)
+        if (counter_ >= Node.SimulatorDetails.Steps.Count)
         {
             gameManager_.SendNewActionInternal("-node next");
             return;
         }
 
-        LoadEventObject(node_.SimulatorDetails.Steps[counter_].Question, true, () =>
+        LoadEventObject(Node.SimulatorDetails.Steps[counter_].Question, true, () =>
         {
             takingInput_ = true;
             AudioPlayer.PlaySfx("turn-off");
