@@ -151,6 +151,7 @@ public class CommandDispatch
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
         gameManager_.SendNewActionNetworked(string.Format("-station {0} load {1}", station, c.Name));
+        gameManager_.SendNewActionNetworked(string.Format("-validator-controller {0} load {1}", station, c.Name));
     }
 
     public void OnUsedHint(string id, string hint)
@@ -212,6 +213,7 @@ public class CommandDispatch
         if (nextChallenge != null)
         {
             userData.CurrentChallenge = nextChallenge.Name;
+            gameManager_.SendNewActionNetworked(string.Format("-validator-controller {0} load {1}", station, nextChallenge.Name));
         }
 
         gameManager_.SaveUserData(userData, id);

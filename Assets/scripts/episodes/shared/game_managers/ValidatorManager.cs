@@ -6,8 +6,33 @@ using Lando.SmartObjects;
 
 public class ValidatorManager : GameManager
 {
+    [SerializeField] private Image challengeImage_;
     [SerializeField] private Transform testingButtonHolder_;
     [SerializeField] private Button testingButtonPrefab_;
+
+    private void Start()
+    {
+        challengeImage_.color = Color.clear;
+    }
+
+    protected override void NewActionInternal(string a)
+    {
+        base.NewActionInternal(a);
+
+        List<string> args = ArgumentHelper.ArgumentsFromCommand("-validator-controller", a);
+        if (args.Count > 2)
+        {
+            string station = args[0];
+            string command = args[1];
+
+            switch(command)
+            {
+                case "load":
+                    RefreshChallenge(args[2]);
+                    break;
+            }
+        }
+    }
 
     protected override void NewEpisodeEventInternal(Episode e)
     {
@@ -26,6 +51,19 @@ public class ValidatorManager : GameManager
         {
             AddTestingButtons();
         }
+    }
+
+    private void RefreshChallenge(string challenge)
+    {
+        LevelData.Challenge c = ChallengeData.Challenges.Find(c => string.Equals(challenge, c.Name));
+        if (c == null)
+        {
+            Debug.LogWarning("Couldn't find challenge with name: " + challenge);
+            return;
+        }
+
+        challengeImage_.color = Color.white;
+        challengeImage_.sprite = c.Sprite;
     }
 
     private void RemoveTestingButtons()
