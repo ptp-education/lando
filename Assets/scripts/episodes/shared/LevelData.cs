@@ -20,8 +20,8 @@ public class LevelData : MonoBehaviour
         public List<string> HintRewards = new List<string>();   //hints you get for completing this challenge
         public string FailCommand;      //Fail after testing
         public string RewardCommand;    //Add a wood tower!
-        public string RequirementsCommand;  //Your bridge needs to support Nessy and 5 pounds!
-        public string NextChallengeCommand; //"the next challenge is 5 pounds!"
+        public string RequirementsVO;  //Your bridge needs to support Nessy and 5 pounds!
+        public string NextChallengeVO; //"the next challenge is 5 pounds!"
     }
 
     [Serializable]
