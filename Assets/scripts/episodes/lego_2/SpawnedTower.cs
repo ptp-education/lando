@@ -47,7 +47,7 @@ namespace Lando.Class.Lego2
 
             if (add != null)
             {
-                GameManager.Storage.AddObjectToList<string>(GameStorage.Key.Lego2Tower, add);
+                gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.Lego2Tower, add);
                 RefreshTower(true);
             }
         }
@@ -66,7 +66,7 @@ namespace Lando.Class.Lego2
 
             flow_ = new GoTweenFlow();
 
-            List<string> tower = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.Lego2Tower);
+            List<string> tower = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.Lego2Tower);
 
             if (tower == null)
             {

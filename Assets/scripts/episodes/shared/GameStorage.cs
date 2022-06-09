@@ -48,6 +48,20 @@ public class GameStorage
         public List<string> RedeemedChallenges = new List<string>();
     }
 
+    private Dictionary<string, GameStorage> userStorage_;
+
+    public Dictionary<string, GameStorage> UserStorage
+    {
+        get
+        {
+            if (userStorage_ == null)
+            {
+                userStorage_ = new Dictionary<string, GameStorage>();
+            }
+            return userStorage_;
+        }
+    }
+
     private Dictionary<string, object> dict_ = new Dictionary<string, object>();
 
     public void Add<T>(Key key, T value) where T : class
@@ -96,5 +110,6 @@ public class GameStorage
     public void ResetStorage()
     {
         dict_ = new Dictionary<string, object>();
+        userStorage_ = new Dictionary<string, GameStorage>();
     }
 }

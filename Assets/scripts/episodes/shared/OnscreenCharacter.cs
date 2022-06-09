@@ -168,7 +168,7 @@ public class OnscreenCharacter : MonoBehaviour
 
     public float ProgressionTalk(string audio, string root)
     {
-        List<string> previous = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.HintSpeechProgression);
+        List<string> previous = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.HintSpeechProgression);
         if (previous == null)
         {
             previous = new List<string>();
@@ -185,7 +185,7 @@ public class OnscreenCharacter : MonoBehaviour
             {
                 //if playing was successful, play and add to storage
                 previous.Add(play);
-                GameManager.Storage.Add<List<string>>(GameStorage.Key.HintSpeechProgression, previous);
+                gameManager_.Storage.Add<List<string>>(GameStorage.Key.HintSpeechProgression, previous);
                 return duration;
             } else if (i > 0)
             {

@@ -102,6 +102,7 @@ public class TestStationManager : StationManager
             return;
         }
 
+        AudioPlayer.PlayVoiceover(challenge.RequirementsVO, episode_.VORoot);
         challengeImage_.sprite = challenge.Sprite;
     }
 
@@ -258,11 +259,11 @@ public class TestStationManager : StationManager
         LevelData.Challenge nextChallenge = NextChallengeForCurrentChallenge(challengeName);
         if (nextChallenge != null)
         {
-            float nextChallengeDuration = AudioPlayer.AudioLength(nextChallenge.NextChallengeCommand, episode_.VORoot);
+            float nextChallengeDuration = AudioPlayer.AudioLength(nextChallenge.NextChallengeVO, episode_.VORoot);
 
             rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
             {
-                AudioPlayer.PlayVoiceover(nextChallenge.NextChallengeCommand, episode_.VORoot);
+                AudioPlayer.PlayVoiceover(nextChallenge.NextChallengeVO, episode_.VORoot);
             })));
 
             rewardFlow_.insert(time + nextChallengeDuration - 0.5f, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>

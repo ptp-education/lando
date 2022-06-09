@@ -53,35 +53,6 @@ public class CommandDispatch
         }
     }
 
-    public void OnClaimReward(string id)
-    {
-        GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
-
-        if (userData.RedeemedChallenges.Count < userData.CompletedChallenges.Count)
-        {
-            List<string> unredeemedChallenges = new List<string>(userData.CompletedChallenges);
-            for (int i = unredeemedChallenges.Count - 1; i >= 0; i--)
-            {
-                if (userData.RedeemedChallenges.Contains(unredeemedChallenges[i]))
-                {
-                    unredeemedChallenges.RemoveAt(i);
-                }
-            }
-
-            if (unredeemedChallenges.Count > 0)
-            {
-                string challengeToRedeem = unredeemedChallenges[0];
-                userData.RedeemedChallenges.Add(challengeToRedeem);
-                gameManager_.SaveUserData(userData, id);
-
-                LevelData.Challenge c = gameManager_.FindChallenge(challengeToRedeem);
-
-                gameManager_.SendNewActionInternal(c.RewardCommand);
-            }
-        }
-
-    }
-
     private void OnHintStationScan(string id, string station)
     {
         //TODO Write a check that makes sure LevelData doesn't give repeat hints. Otherwise breaks this logic
@@ -242,7 +213,7 @@ public class CommandDispatch
         {
             userData.CurrentChallenge = nextChallenge.Name;
         }
-        
+
         gameManager_.SaveUserData(userData, id);
     }
 

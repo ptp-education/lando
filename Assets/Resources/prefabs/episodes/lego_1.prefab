@@ -52,8 +52,8 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 535, y: -310, z: 0}
-    Scale: {x: -0.75, y: 0.75, z: 1}
+  - TalkingPosition: {x: -746, y: -310, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 5922904348003938260}
+  StartingNode: {fileID: 8895641933595010203}
   VORoot: audio/lego_1/
   LevelData: {fileID: 5750723246018985116, guid: 55b268c55f13940ca81e6323d92dcfb9, type: 3}
 --- !u!1 &2772260273257346145

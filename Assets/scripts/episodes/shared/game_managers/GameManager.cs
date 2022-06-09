@@ -50,21 +50,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public static GameStorage Storage = new GameStorage();
+    [SerializeField] private GameStorageHolder gameStorageOverride_;
 
-    private Dictionary<string, GameStorage> rfidStorage_;
-
-    public Dictionary<string, GameStorage> RfidStorage
+    private GameStorage storage_;
+    public GameStorage Storage
     {
         get
         {
-            if (rfidStorage_ == null)
+            if (storage_ == null)
             {
-                rfidStorage_ = new Dictionary<string, GameStorage>();
+                storage_ = gameStorageOverride_ == null ? new GameStorage() : gameStorageOverride_.Storage;
             }
-            return rfidStorage_;
+            return storage_;
         }
     }
+
 
     private string cachedNode_ = "";
 
@@ -138,8 +138,7 @@ public class GameManager : MonoBehaviour
 
         AudioPlayer.StopRadio();
 
-        Storage = new GameStorage();
-        rfidStorage_ = null;
+        Storage.ResetStorage();
     }
 
     public void NewNodeAction(string a)
@@ -265,12 +264,12 @@ public class GameManager : MonoBehaviour
 
     public GameStorage GameStorageForUserId(string id)
     {
-        if (RfidStorage.ContainsKey(id))
+        if (Storage.UserStorage.ContainsKey(id))
         {
-            return RfidStorage[id];
+            return Storage.UserStorage[id];
         }
-        RfidStorage[id] = new GameStorage();
-        return RfidStorage[id];
+        Storage.UserStorage[id] = new GameStorage();
+        return Storage.UserStorage[id];
     }
 
     public GameStorage.UserData UserDataForUserId(string id)

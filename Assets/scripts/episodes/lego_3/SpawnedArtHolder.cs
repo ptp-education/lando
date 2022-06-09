@@ -149,21 +149,21 @@ namespace Lando.Class.Lego3
 
                 if (ArgumentHelper.ContainsCommand("-add-art-1", action))
                 {
-                    GameManager.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "1");
+                    gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "1");
                     artAdded = true;
                 } else if (ArgumentHelper.ContainsCommand("-add-art-2", action))
                 {
-                    GameManager.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "2");
+                    gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "2");
                     artAdded = true;
                 }
                 else if (ArgumentHelper.ContainsCommand("-add-art-3", action))
                 {
-                    GameManager.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "3");
+                    gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "3");
                     artAdded = true;
                 }
                 else if (ArgumentHelper.ContainsCommand("-add-art-4", action))
                 {
-                    GameManager.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "4");
+                    gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.Lego3Art, level_.ToString() + " " + grams_.ToString() + " " + "4");
                     artAdded = true;
                 }
 
@@ -181,7 +181,7 @@ namespace Lando.Class.Lego3
 
             Image lastImage = null;
 
-            List<string> sculptures = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.Lego3Art);
+            List<string> sculptures = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.Lego3Art);
             if (sculptures == null) { return; }
             foreach(string s in sculptures)
             {

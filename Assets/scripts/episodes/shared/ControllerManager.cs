@@ -168,11 +168,6 @@ public class ControllerManager : GameManager
         {
             dispatch_.OnRefresh(refreshArgs[0], refreshArgs[1]);
         }
-
-        if (claimReward.Count > 0)
-        {
-            dispatch_.OnClaimReward(claimReward[0]);
-        }
     }
 
     private void Update()

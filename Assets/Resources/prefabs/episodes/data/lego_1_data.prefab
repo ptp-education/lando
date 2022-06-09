@@ -55,16 +55,16 @@ MonoBehaviour:
     - add-piers
     FailCommand: 
     RewardCommand: -character talk game-send-2-trucks -bridge send-truck 2
-    RequirementsCommand: -character talk challenge-2
-    NextChallengeCommand: -character talk challenge-2
+    RequirementsVO: challenge-2
+    NextChallengeVO: challenge-2
   - Name: 5-pounds
     Sprite: {fileID: 21300000, guid: fcb23e441465d41c5ace847eb447d9b9, type: 3}
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk game-send-5-trucks -bridge send-truck 5
-    RequirementsCommand: -character talk challenge-5
-    NextChallengeCommand: -character talk challenge-5
+    RequirementsVO: challenge-5
+    NextChallengeVO: challenge-5
   - Name: 10-pounds
     Sprite: {fileID: 21300000, guid: c0e02647f26b14e59b044acbd402a741, type: 3}
     ResourceRewards: 00000000
@@ -72,8 +72,8 @@ MonoBehaviour:
     - thicker-platform
     FailCommand: 
     RewardCommand: -character talk game-send-10-trucks -bridge send-truck 10
-    RequirementsCommand: -character talk challenge-10
-    NextChallengeCommand: -character talk challenge-10
+    RequirementsVO: challenge-10
+    NextChallengeVO: challenge-10
   - Name: 15-pounds
     Sprite: {fileID: 21300000, guid: bbf4d25bf9ae54f599282052bae8dd14, type: 3}
     ResourceRewards: 00000000
@@ -81,32 +81,32 @@ MonoBehaviour:
     - combine-bridges
     FailCommand: 
     RewardCommand: -character talk game-send-15-trucks -bridge send-truck 10
-    RequirementsCommand: -character talk challenge-15
-    NextChallengeCommand: -character talk challenge-15
+    RequirementsVO: challenge-15
+    NextChallengeVO: challenge-15
   - Name: 20-pound-4-wide
     Sprite: {fileID: 21300000, guid: 25c8d84fdf6a54487be29e324e59233d, type: 3}
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk game-select-20lb -farm-selector show 1
-    RequirementsCommand: -character talk challenge-20-4w
-    NextChallengeCommand: -character talk challenge-20-4w
+    RequirementsVO: challenge-20-4w
+    NextChallengeVO: challenge-20-4w
   - Name: 35-pound-6-wide
     Sprite: {fileID: 21300000, guid: 118a40d142abc4fc3914552ecee90234, type: 3}
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk game-select-35lb -farm-selector show 2
-    RequirementsCommand: -character talk challenge-35-6w
-    NextChallengeCommand: -character talk challenge-35-6w
+    RequirementsVO: challenge-35-6w
+    NextChallengeVO: challenge-35-6w
   - Name: 45-pound-8-wide
     Sprite: {fileID: 21300000, guid: 00c37acf0ebfd4b0ebc769556430de9e, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk game-select-45lb -farm-selector show 3
-    RequirementsCommand: -character talk challenge-45-8w
-    NextChallengeCommand: -character talk challenge-45-8w
+    RequirementsVO: challenge-45-8w
+    NextChallengeVO: challenge-45-8w
   Hints:
   - Name: add-piers
     Thumbnail: {fileID: 21300000, guid: 68e2f4384bdfe4187a710ac53b68b04e, type: 3}

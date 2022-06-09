@@ -44,7 +44,7 @@ public class SpawnedFarm : SpawnedObject
                 string newObject = split[split.Length - 1];
                 if (newObject.Length > 0)
                 {
-                    GameManager.Storage.AddObjectToList<string>(GameStorage.Key.FarmObjects, newObject);
+                    gameManager_.Storage.AddObjectToList<string>(GameStorage.Key.FarmObjects, newObject);
 
                     RefreshFarm(newObject);
                 }
@@ -120,7 +120,7 @@ public class SpawnedFarm : SpawnedObject
         }
         //orangetree, corn, cotton, wheat, appletree, peartree, arch, pig, cow, chicken, tractor
 
-        List<string> farmObjects = GameManager.Storage.GetValue<List<string>>(GameStorage.Key.FarmObjects);
+        List<string> farmObjects = gameManager_.Storage.GetValue<List<string>>(GameStorage.Key.FarmObjects);
         if (farmObjects == null || farmObjects.Count == 0) return;
 
         int orangeTrees = farmObjects.FindAll(s => string.Equals("orangetree", s)).Count;   //

@@ -10,8 +10,8 @@ public class ShareManager : GameManager
 
     [SerializeField] private Transform nodeObjectParent_;
 
-    public Transform OverlayParent;
-    public Transform CharacterParent;
+    [HideInInspector] public Transform OverlayParent;
+    [HideInInspector] public Transform CharacterParent;
 
     private EpisodeNodeObject activeNode_;
 
@@ -134,6 +134,11 @@ public class ShareManager : GameManager
         {
             HandleNodeAction(a);
         }
+
+        if (ArgumentHelper.ContainsCommand(CLAIM_REWARD, a))
+        {
+            HandleClaimReward(a);
+        }
     }
 
     public void NewOptionSelected(int option, bool isTeacher, string userId)
@@ -153,15 +158,15 @@ public class ShareManager : GameManager
                     return;
                 }
 
-                choicesHolder_.ToggleVisbility(false);
-
                 if (selectedOption.Command != null && selectedOption.Command.Length > 0)
                 {
-                    SendNewActionInternal(selectedOption.Command);
+                    SendNewActionInternal(string.Format(selectedOption.Command, userId));
                 }
 
                 if (selectedOption.EventObject != null)
                 {
+                    choicesHolder_.ToggleVisbility(false);
+
                     EventObject eo = Instantiate(selectedOption.EventObject);
                     eo.transform.SetParent(OverlayParent);
                     eo.transform.localScale = Vector3.one;
@@ -319,6 +324,43 @@ public class ShareManager : GameManager
             AudioPlayer.LoopAudio(node.BgLoopPath, AudioPlayer.kMain);
         }
     }
+
+
+    public void HandleClaimReward(string a)
+    {
+        List<string> args = ArgumentHelper.ArgumentsFromCommand(CLAIM_REWARD, a);
+
+        if (args.Count < 1) return;
+
+        string id = args[0];
+
+        Debug.LogWarning("looking for success in : " + gameObject.name + " with id: " + id);
+        GameStorage.UserData userData = UserDataForUserId(id);
+
+        if (userData.RedeemedChallenges.Count < userData.CompletedChallenges.Count)
+        {
+            List<string> unredeemedChallenges = new List<string>(userData.CompletedChallenges);
+            for (int i = unredeemedChallenges.Count - 1; i >= 0; i--)
+            {
+                if (userData.RedeemedChallenges.Contains(unredeemedChallenges[i]))
+                {
+                    unredeemedChallenges.RemoveAt(i);
+                }
+            }
+
+            if (unredeemedChallenges.Count > 0)
+            {
+                string challengeToRedeem = unredeemedChallenges[0];
+                userData.RedeemedChallenges.Add(challengeToRedeem);
+                SaveUserData(userData, id);
+
+                LevelData.Challenge c = FindChallenge(challengeToRedeem);
+
+                SendNewActionInternal(c.RewardCommand);
+            }
+        }
+    }
+
 
     private void HandleNodeAction(string a)
     {
