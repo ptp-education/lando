@@ -110,9 +110,6 @@ public class EpisodeNodeEditor : Editor
         EditorGUILayout.LabelField("Command Line Containers");
         EditorGUILayout.PropertyField(serializedObject.FindProperty("CommandLineContainers"));
 
-        EditorGUILayout.LabelField("Next Node - leave empty if last episode");
-        myTarget.NextNode = (EpisodeNode)EditorGUILayout.ObjectField(myTarget.NextNode, typeof(EpisodeNode), true);
-
         serializedObject.ApplyModifiedProperties();
     }
 

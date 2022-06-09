@@ -141,7 +141,6 @@ public class EpisodeNode : MonoBehaviour
     public List<PrefabSpawnObject> PrefabSpawnObjects = new List<PrefabSpawnObject>();
     public List<CommandLine> CommandLines = new List<CommandLine>();
     public List<CommandContainer> CommandLineContainers = new List<CommandContainer>();
-    public EpisodeNode NextNode;
 
     public Episode Episode
     {
