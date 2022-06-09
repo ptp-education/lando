@@ -66,18 +66,21 @@ public class EventObject : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        waitingToSelfDestruct_ = true;
     }
 
     private void Update()
     {
         if (timer_ > kMaxRunLength) return;
 
+        if (waitingToSelfDestruct_) return;
+
         timer_ += Time.deltaTime;
 
         if (autoSelfDestruct_ && !waitingToSelfDestruct_ && timer_ > lastVoiceoverCompleteTime_) 
         {
             SelfDestruct();
-            waitingToSelfDestruct_ = true;
         }
 
         foreach(Event e in events_)
