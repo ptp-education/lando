@@ -59,13 +59,16 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
   ImageFilePath: episodes/lego_1_screens/splash-screen
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 0
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
   NextNode: {fileID: 842470512690705984}
-  OptionHolders: []
 --- !u!1 &2079302127811205104
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,24 +131,16 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
   ImageFilePath: episodes/lego_4_screens/office
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
   NextNode: {fileID: 6012325773162433362}
-  OptionHolders:
-  - Name: Talk
-    Options:
-    - Name: Thank engineers
-      Action: -character talk office-end-1
-      Node: {fileID: 0}
-    - Name: Good bye
-      Action: -character talk office-end-2
-      Node: {fileID: 0}
-    - Name: Fade
-      Action: -fadeout 5
-      Node: {fileID: 0}
 --- !u!1 &2802677419071191658
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,43 +203,53 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 861fa0b6bf74d4a60b21339952b44f55, type: 3}
   ImageFilePath: episodes/lego_4_screens/intro
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: 
+    Options:
+    - ButtonName: Jump
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 7900fff58f9616147ab009c23e6e1b03, type: 3}
+    - ButtonName: Roll
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 93823d74acf5b9f4e9b79410ba50205a, type: 3}
   PrefabSpawnObjects: []
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 1.5
+    Command: -character talk map-intro-0
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 15
+    Command: -character talk map-intro-1
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 19
+    Command: -show-choices
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -intro
     StoredCommands:
     - TimeStamp: 0
       Command: -character talk map-intro-0
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 13.5
       Command: -character talk map-intro-1
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 18
       Command: -spawnoption "Momo should jump!" "Momo should shake the wall!"
+      EventObject: {fileID: 0}
       Ran: 0
   NextNode: {fileID: 1155452436755689151}
-  OptionHolders:
-  - Name: Say
-    Options:
-    - Name: Intro
-      Action: -intro
-      Node: {fileID: 0}
-    - Name: Spawn choices
-      Action: -spawnoption "Momo should jump!" "Momo should shake the wall!"
-      Node: {fileID: 0}
-    - Name: Transition to next scene
-      Action: -character talk map-intro-2
-      Node: {fileID: 0}
-  - Name: Response
-    Options:
-    - Name: Momo should jump
-      Action: -character talk map-intro-jump
-      Node: {fileID: 7312603429343225453}
-    - Name: Momo should shake the wall
-      Action: -character talk map-intro-shake
-      Node: {fileID: 7498788395349240756}
 --- !u!1 &3345662454743620094
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,11 +309,15 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 861fa0b6bf74d4a60b21339952b44f55, type: 3}
-  ImageFilePath: episodes/lego_4_screens/intro
+  Image: {fileID: 2800000, guid: 48b02ef3062fb7b4cbc2231a4b89682a, type: 3}
+  ImageFilePath: episodes/lego_4_screens/overlay_intro-option-1_pentagon
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -337,88 +346,65 @@ MonoBehaviour:
     StoredCommands:
     - TimeStamp: 0
       Command: -character talk setup-rules -hideall
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 1
       Command: -guide explainer-1
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 4.5
       Command: -guide explainer-2
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 7
       Command: -guide explainer-3
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 9.5
       Command: -guide explainer-4
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 15.5
       Command: -guide explainer-3
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 16.5
       Command: -guide explainer-4
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 17.5
       Command: -guide explainer-3
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 18.5
       Command: -guide explainer-4
+      EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -lando-introduction
     StoredCommands:
     - TimeStamp: 0
       Command: -character talk setup-receipt-rules
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 7.5
       Command: -print "printer.pdf"
+      EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -get-it
     StoredCommands:
     - TimeStamp: 0
       Command: -character talk setup-make-sense
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 2.5
       Command: -hideall
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 3.5
       Command: -spawnoption "We got it!" "Can you repeat?"
+      EventObject: {fileID: 0}
       Ran: 0
   NextNode: {fileID: 2796477096162768081}
-  OptionHolders:
-  - Name: '1: Explain tools'
-    Options:
-    - Name: '1: Store rules'
-      Action: -character talk setup-store-rules
-      Node: {fileID: 0}
-    - Name: '2: Receipt explain'
-      Action: -lando-introduction
-      Node: {fileID: 0}
-    - Name: 3. Receipt prompt press
-      Action: -character talk setup-receipt-press
-      Node: {fileID: 0}
-    - Name: Print for teacher
-      Action: -print "teacher-encourage.pdf"
-      Node: {fileID: 0}
-    - Name: '3: Explain pad'
-      Action: -character talk setup-pad-rules
-      Node: {fileID: 0}
-    - Name: Show rules
-      Action: -explain-rules
-      Node: {fileID: 0}
-  - Name: '2: Repeat?'
-    Options:
-    - Name: '1: Ask did everyone get it'
-      Action: -get-it
-      Node: {fileID: 0}
-    - Name: Repeat
-      Action: -explain-rules
-      Node: {fileID: 0}
-  - Name: '3: Line up'
-    Options:
-    - Name: '1: Line up'
-      Action: -hideall -character talk come-line-up
-      Node: {fileID: 0}
-    - Name: 2. Show checklist
-      Action: -character talk checklist -guide checklist
-      Node: {fileID: 0}
 --- !u!1 &4440565866868392372
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,15 +462,25 @@ MonoBehaviour:
   VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
   Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
-  ImageFilePath: episodes/lego_1_screens/splash-screen
+  ImageFilePath: episodes/_shared/splash-screen
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 0
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn:
+  - StartShown: 1
+    Name: 
+    Options:
+    - ButtonName: Play
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
   NextNode: {fileID: 842470512690705984}
-  OptionHolders: []
 --- !u!1 &4586636730854607025
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,30 +543,40 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
   ImageFilePath: episodes/lego_4_screens/office
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
     Command: -sfx "audio/sfx/car-travel"
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 0
     Command: -fadein 5
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 5
     Command: -sfx "audio/sfx/door-open"
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 6
     Command: -character talk office-0
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 16
+    Command: -character talk office-1
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 18
+    Command: -node next
+    EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
   NextNode: {fileID: 2520661034315749620}
-  OptionHolders:
-  - Name: Talk
-    Options:
-    - Name: Transition to next scene
-      Action: -character talk office-1
-      Node: {fileID: 0}
 --- !u!1 &4625422606827924374
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,8 +639,12 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 90e983ae0c9384bdb8bb0577eeb03b54, type: 3}
   ImageFilePath: episodes/lego_5_screens/carnival-lineup-background
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -663,129 +673,32 @@ MonoBehaviour:
     StoredCommands:
     - TimeStamp: 0
       Command: -character talk home-next-blocks
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
       Command: -toggle-blocks-light
+      EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
       Command: -sfx "audio/sfx/applausetrumpet"
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
       Command: -swing success
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 3
       Command: '-character talk home-success-1a home-success-1b home-success-1c home-success-1d
         home-success-1e home-success-1f '
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 6
       Command: -swing increment
+      EventObject: {fileID: 0}
       Ran: 0
   NextNode: {fileID: 0}
-  OptionHolders:
-  - Name: Default
-    Options:
-    - Name: Out of blocks
-      Action: -character talk out-of-blocks
-      Node: {fileID: 0}
-    - Name: Suggest hint
-      Action: -character prompt-hint
-      Node: {fileID: 0}
-  - Name: Kid walking up
-    Options:
-    - Name: Scan card
-      Action: -character scan-card
-      Node: {fileID: 0}
-    - Name: Encourage
-      Action: -rfid encourage
-      Node: {fileID: 0}
-    - Name: Too narrow
-      Action: -character talk map-fail-narrow
-      Node: {fileID: 0}
-    - Name: Read out challenge requirement
-      Action: -rfid requirement
-      Node: {fileID: 0}
-    - Name: Load swing
-      Action: -swing load
-      Node: {fileID: 0}
-  - Name: Testing result
-    Options:
-    - Name: Say Congrats
-      Action: -character exclaim
-      Node: {fileID: 0}
-    - Name: 'Reward: Game'
-      Action: -rfid reward
-      Node: {fileID: 0}
-    - Name: Next challenge
-      Action: -rfid next-challenge -swing hide
-      Node: {fileID: 0}
-    - Name: 'Reward: UI'
-      Action: -rfid refresh -swing hide -rfid load
-      Node: {fileID: 0}
-    - Name: Fail
-      Action: -rfid fail
-      Node: {fileID: 0}
-    - Name: Offer hint
-      Action: -character suggest-printer -swing hide
-      Node: {fileID: 0}
-    - Name: More blocks
-      Action: -more-blocks -swing hide
-      Node: {fileID: 0}
-  - Name: Hints
-    Options:
-    - Name: Use String
-      Action: '-character print "lego-5-string.pdf" map-hint-string -guide hint-string '
-      Node: {fileID: 0}
-    - Name: Tighten String
-      Action: '-character print "lego-5-tight-string.pdf" map-hint-string-tight -guide
-        hint-tight-string '
-      Node: {fileID: 0}
-    - Name: String Each Side
-      Action: '-character print "lego-5-each-side.pdf" map-hint-each-side -guide
-        hint-each-side '
-      Node: {fileID: 0}
-    - Name: Wider Beam
-      Action: '-character print "lego-5-wider.pdf" map-hint-wider -guide hint-wider-tower '
-      Node: {fileID: 0}
-    - Name: More string
-      Action: -character print "lego-5-more-string.pdf" map-hint-more-string -guide
-        hint-more-string
-      Node: {fileID: 0}
-    - Name: Arch
-      Action: -character print "lego-5-arch.pdf" map-hint-arch -guide hint-arch
-      Node: {fileID: 0}
-    - Name: Complete more challenges
-      Action: -character talk hint-more-challenges
-      Node: {fileID: 0}
-    - Name: Out of hints
-      Action: -character hints-out
-      Node: {fileID: 0}
-  - Name: Time out
-    Options:
-    - Name: Announce time out
-      Action: -character talk home-timesout-0
-      Node: {fileID: 0}
-    - Name: Show choice
-      Action: -spawnoption "Test one more wall" "End our day"
-      Node: {fileID: 0}
-    - Name: One more swing
-      Action: -character talk home-timesout-1
-      Node: {fileID: 0}
-  - Name: More Blocks
-    Options:
-    - Name: Reached the limit
-      Action: -character talk blocks-no-1
-      Node: {fileID: 0}
-    - Name: Finish with the blocks you have
-      Action: -character talk blocks-no-2
-      Node: {fileID: 0}
-    - Name: Explain engineers limit
-      Action: -character talk more-limited
-      Node: {fileID: 0}
-    - Name: Suggest magic printer
-      Action: -character suggest-printer
-      Node: {fileID: 0}
 --- !u!1 &5733257178101449599
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,22 +761,28 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: d666be74aef144db7ad8b8912168723f, type: 3}
   ImageFilePath: episodes/lego_4_screens/intro-roll
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1.5
     Command: -character talk map-intro-shake
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 0
     Command: -sfx "audio/sfx/wall-crash"
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 0.6
     Command: -sfx "audio/sfx/momo-grunt"
+    EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
   NextNode: {fileID: 2520661034315749620}
-  OptionHolders: []
 --- !u!1 &6410430740656083808
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,19 +845,24 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 13a883e08d491430e87dc0b8c6770d2a, type: 3}
   ImageFilePath: episodes/lego_4_screens/intro-eat
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 1
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1.5
     Command: -character talk map-intro-jump
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 0.8
     Command: -sfx "audio/sfx/momo-grunt"
+    EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
   NextNode: {fileID: 2520661034315749620}
-  OptionHolders: []
 --- !u!1 &6720832660718529540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,8 +925,12 @@ MonoBehaviour:
   Image: {fileID: 2800000, guid: 16d32070b9097478db3efafa8529088e, type: 3}
   ImageFilePath: episodes/lego_4_screens/success-background
   VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
   FadeInFromPreviousScene: 0
-  Prompt: 
+  TestingActive: 0
+  OptionsToSpawn: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -1035,152 +963,66 @@ MonoBehaviour:
   CommandLines:
   - TimeStamp: 2
     Command: -momo set-in-testing
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 0.1
     Command: -momo set-in-testing
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 0.5
     Command: -momo set-in-testing
+    EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 1
     Command: -momo set-in-testing
+    EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers:
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
       Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 2
       Command: -character talk map-success-more
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 4.5
       Command: -character talk map-success-customize -momo customize
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 3.5
       Command: -rfid hide
+      EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -game-success-last
     StoredCommands:
     - TimeStamp: 0
       Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
       Command: -character exclaim
+      EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 2
       Command: -character talk map-success-more
+      EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -delayed-spawn
     StoredCommands:
     - TimeStamp: 2
       Command: -momo testing
+      EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -more-delayed-spawn
     StoredCommands:
     - TimeStamp: 3
       Command: -momo testing
+      EventObject: {fileID: 0}
       Ran: 0
   NextNode: {fileID: 4061177169760033847}
-  OptionHolders:
-  - Name: Default
-    Options:
-    - Name: Select starter left
-      Action: -momo starter-select left -more-delayed-spawn
-      Node: {fileID: 0}
-    - Name: Select starter middle
-      Action: -momo starter-select middle -more-delayed-spawn
-      Node: {fileID: 0}
-    - Name: Select starter right
-      Action: -momo starter-select right -more-delayed-spawn
-      Node: {fileID: 0}
-  - Name: Kid walking up
-    Options:
-    - Name: Set testing state
-      Action: -momo testing
-      Node: {fileID: 0}
-    - Name: Scan card
-      Action: -character scan-card
-      Node: {fileID: 0}
-    - Name: Encourage
-      Action: -rfid encourage
-      Node: {fileID: 0}
-    - Name: Use a baseplate
-      Action: -character talk map-testing-baseplate -guide baseplate
-      Node: {fileID: 0}
-    - Name: Needs to be taller
-      Action: -character talk map-testing-taller -guide taller
-      Node: {fileID: 0}
-    - Name: HIt 3 times
-      Action: -character talk map-test-three-times-a map-test-three-times-b
-      Node: {fileID: 0}
-    - Name: Hit random place
-      Action: -character talk map-test-random
-      Node: {fileID: 0}
-    - Name: Read out current requirement
-      Action: -rfid requirement
-      Node: {fileID: 0}
-  - Name: Result
-    Options:
-    - Name: Set Failure State
-      Action: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
-      Node: {fileID: 0}
-    - Name: 'Reward: Game'
-      Action: -rfid reward
-      Node: {fileID: 0}
-    - Name: Select left
-      Action: -momo customize-select left -delayed-spawn
-      Node: {fileID: 0}
-    - Name: Select middle
-      Action: -momo customize-select middle -delayed-spawn
-      Node: {fileID: 0}
-    - Name: Select right
-      Action: -momo customize-select right -delayed-spawn
-      Node: {fileID: 0}
-    - Name: Next challenge
-      Action: -rfid next-challenge -swing hide
-      Node: {fileID: 0}
-    - Name: Offer hint
-      Action: -character suggest-printer -swing hide
-      Node: {fileID: 0}
-  - Name: Hints
-    Options:
-    - Name: Interlocking bricks
-      Action: -character print "interlocking-bricks.pdf" map-hint-0 -guide hintInterlocking
-      Node: {fileID: 0}
-    - Name: Supports
-      Action: -character print "receipt-wall-supports.pdf" map-hint-1 -guide hintSupports
-      Node: {fileID: 0}
-    - Name: Supports and wall
-      Action: -character print "receipt-build-walls-further-apart.pdf" map-hint-2
-        -guide hintSupportsAndWalls
-      Node: {fileID: 0}
-    - Name: More walls
-      Action: -character print "receipt-more-walls.pdf" map-hint-3 -guide hintMoreWalls
-      Node: {fileID: 0}
-    - Name: Walls further apart
-      Action: -character print "receipt-build-walls-further-apart.pdf" map-hint-4
-        -guide hintFurtherApart
-      Node: {fileID: 0}
-  - Name: More pieces
-    Options:
-    - Name: More pieces after first activity
-      Action: -character talk map-more-first-activity map-more-first-activity-b
-      Node: {fileID: 0}
-    - Name: Have another cup
-      Action: -character talk map-more-okay
-      Node: {fileID: 0}
-  - Name: Time out
-    Options:
-    - Name: Announce time out
-      Action: -character talk map-timeout-1
-      Node: {fileID: 0}
-    - Name: Show choice
-      Action: -spawnoption "Test one more wall" "End our day"
-      Node: {fileID: 0}
-    - Name: One more wall
-      Action: -character talk map-timeout-2
-      Node: {fileID: 0}
 --- !u!1 &8787345819776852158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,4 +1083,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingNode: {fileID: 1121075460186832798}
   VORoot: audio/lego_4/
-  ChallengeData: {fileID: 5750723246018985116, guid: 352af6324224a449cab2a2069426d30c, type: 3}
+  LevelData: {fileID: 0}
