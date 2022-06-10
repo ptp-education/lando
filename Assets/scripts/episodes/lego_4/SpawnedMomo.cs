@@ -224,6 +224,23 @@ public class SpawnedMomo : SpawnedObject
 
     public override void ReceivedAction(string action)
     {
+        //example reward call: -momo success 2830192
+        //2830192 = NFC id
+
+        //pseudo code / logic
+        /*
+         if (LevelOfMomo(nfcId) == 0)
+            HandleStarterPicker()     //this asks users to select their starter Momo (red, green, blue)
+            //we need to update the choices to be Left Middle Right, so that the player can select their Momo
+                //Look to Lego 1 reward to see how we do it (challenge name 20-pound-4-wide)
+            //after user selects their Starter, we need to go to main reward
+
+         main reward sequence:
+         //show the customized Momo of the player for a few seconds: HandleTesting();
+         //show the success image: HandleSuccess();
+         //show customize: HandleCustomize();
+         //update the choices to be Left Middle Right, so that the player can customize
+         */
         if (ArgumentHelper.ContainsCommand(GameManager.RFID_COMMAND, action))
         {
             List<string> args = ArgumentHelper.ArgumentsFromCommand(GameManager.RFID_COMMAND, action);
