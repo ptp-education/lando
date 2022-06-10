@@ -224,6 +224,27 @@ public class SpawnedMomo : SpawnedObject
 
     public override void ReceivedAction(string action)
     {
+        //-momo success 2830192
+        List<string> args = ArgumentHelper.ArgumentsFromCommand("-momo", action);
+        string commandType = args[0];
+        string nfcId = args[1];
+
+        if (LevelOfMomo(nfcId) == 0)
+        {
+            //show starter Momo
+            HandleStarterPicker();
+            //update options to Left Middle Right choices
+            gameManager_.SendNewActionInternal("-update-options choose");
+            //on finish choose, start reward sequence
+        } else
+        {
+            //RewardSequence();
+        }
+
+        //args = [success], [2830192]
+
+
+
         //example reward call: -momo success 2830192
         //2830192 = NFC id
 
@@ -241,64 +262,21 @@ public class SpawnedMomo : SpawnedObject
          //show customize: HandleCustomize();
          //update the choices to be Left Middle Right, so that the player can customize
          */
-        if (ArgumentHelper.ContainsCommand(GameManager.RFID_COMMAND, action))
-        {
-            List<string> args = ArgumentHelper.ArgumentsFromCommand(GameManager.RFID_COMMAND, action);
-            if (args.Count > 1)
-            {
-                currentRfid_ = args[1];
+    }
 
-                if (LevelOfMomo(currentRfid_) == 0)
-                {
-                    HandleStarterPicker();
-                } else if (LevelOfMomo(currentRfid_) == 1 && !inTesting_)
-                {
-                    HandleStarterPicker();
-                }
-                if (inTesting_ && LevelOfMomo(currentRfid_) > 0)
-                {
-                    HandleTesting();
-                }
-            }
-        }
+    private void RewardSequence(string nfcId)
+    {
+        //ShowMomoOnScreen();
 
-        if (ArgumentHelper.ContainsCommand(kCommand, action))
-        {
-            List<string> args = ArgumentHelper.ArgumentsFromCommand(kCommand, action);
-            if (args.Count > 0)
-            {
-                switch (args[0])
-                {
-                    case "starter":
-                        HandleStarterPicker();
-                        break;
-                    case "starter-select":
-                        if (args.Count > 1) HandleStarterPickerSelection(args[1]);
-                        break;
-                    case "customize":
-                        HandleCustomize();
-                        break;
-                    case "customize-select":
-                        if (args.Count > 1) HandleCustomizeSelection(args[1]);
-                        break;
-                    case "testing":
-                        HandleTesting();
-                        break;
-                    case "success":
-                        HandleSuccess();
-                        break;
-                    case "failure":
-                        HandleFailure();
-                        break;
-                    case "hide":
-                        Hide();
-                        break;
-                    case "set-in-testing":
-                        inTesting_ = true;
-                        break;
-                }
-            }
-        }
+        //ShowMomoEatingBerry
+
+        //ShowMomoUpgrade
+
+        //update options to Left Middle Right choices
+        gameManager_.SendNewActionInternal("-update-options choose");
+
+        //after choice is complete, bring options back to default
+        gameManager_.SendNewActionInternal("-update-options default");
     }
 
     private void HideAllScenes()
@@ -386,7 +364,7 @@ public class SpawnedMomo : SpawnedObject
         dismissingFlow_.play();
     }
 
-    private void HandleCustomize()
+    private void ShowMomoUpgrade()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
@@ -511,7 +489,7 @@ public class SpawnedMomo : SpawnedObject
         dismissingFlow_.play();
     }
 
-    private void HandleTesting()
+    private void ShowMomoOnScreen()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
@@ -523,7 +501,7 @@ public class SpawnedMomo : SpawnedObject
         SetSprite(neutralMomo_, currentRfid_, Status.Neutral);
     }
 
-    private void HandleSuccess()
+    private void ShowMomoEatingBerry()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
@@ -551,10 +529,10 @@ public class SpawnedMomo : SpawnedObject
     {
         if (neutralBackground_.gameObject.activeSelf)
         {
-            HandleTesting();
+            ShowMomoOnScreen();
         } else if (successBackground_.gameObject.activeSelf)
         {
-            HandleSuccess();
+            ShowMomoEatingBerry();
         } else if (failureBackground_.gameObject.activeSelf)
         {
             HandleFailure();
