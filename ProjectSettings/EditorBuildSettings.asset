@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/resource_screen.unity
     guid: 1500f3fc19f364823811cda9d3c8fcf6
+  - enabled: 1
+    path: Assets/scenes/validator_screen.unity
+    guid: 0a59233bd0350447dabc29a544ac4152
   m_configObjects: {}
