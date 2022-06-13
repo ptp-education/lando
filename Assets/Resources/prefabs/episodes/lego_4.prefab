@@ -68,6 +68,7 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &628669438561765494
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +167,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &2079302127811205104
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +239,7 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &2622218083841034790
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +340,7 @@ MonoBehaviour:
       Command: -node next
       EventObject: {fileID: 0}
       Ran: 0
+  NextNode: {fileID: 0}
 --- !u!1 &2802677419071191658
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +457,7 @@ MonoBehaviour:
       Command: -spawnoption "Momo should jump!" "Momo should shake the wall!"
       EventObject: {fileID: 0}
       Ran: 0
+  NextNode: {fileID: 0}
 --- !u!1 &3328939687015290096
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +537,7 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &3345662454743620094
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,6 +692,7 @@ MonoBehaviour:
       Command: -spawnoption "We got it!" "Can you repeat?"
       EventObject: {fileID: 0}
       Ran: 0
+  NextNode: {fileID: 0}
 --- !u!1 &4440565866868392372
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +768,7 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &4586636730854607025
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +864,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &4625422606827924374
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +986,7 @@ MonoBehaviour:
       Command: -swing increment
       EventObject: {fileID: 0}
       Ran: 0
+  NextNode: {fileID: 0}
 --- !u!1 &5538422780132337193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1070,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &5733257178101449599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1154,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &6410430740656083808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,6 +1234,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &6720832660718529540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1308,7 @@ MonoBehaviour:
     Options:
     - ButtonName: Redeem Reward
       TeacherOnly: 0
-      Command: -momo success {0}
+      Command: -claim-reward {0}
       EventObject: {fileID: 0}
     - ButtonName: Load Wall Simulator
       TeacherOnly: 1
@@ -1306,15 +1319,15 @@ MonoBehaviour:
     Options:
     - ButtonName: Left
       TeacherOnly: 0
-      Command: 
+      Command: -momo left {0} -update-options default
       EventObject: {fileID: 0}
     - ButtonName: MIddle
       TeacherOnly: 0
-      Command: 
+      Command: '-momo middle {0} -update-options default '
       EventObject: {fileID: 0}
     - ButtonName: Right
       TeacherOnly: 0
-      Command: 
+      Command: '-momo right {0} -update-options default '
       EventObject: {fileID: 0}
   PrefabSpawnObjects:
   - TimeStamp: 0
@@ -1329,19 +1342,11 @@ MonoBehaviour:
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
-      Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 2
-      Command: -character talk map-success-more
+      Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 4.5
-      Command: -character talk map-success-customize -momo customize
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 3.5
-      Command: -rfid hide
+      Command: -update-options choose
       EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -game-success-last
@@ -1354,8 +1359,8 @@ MonoBehaviour:
       Command: -character exclaim
       EventObject: {fileID: 0}
       Ran: 0
-    - TimeStamp: 2
-      Command: -character talk map-success-more
+    - TimeStamp: 4.5
+      Command: -update-options choose
       EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -delayed-spawn
@@ -1370,6 +1375,17 @@ MonoBehaviour:
       Command: -momo testing
       EventObject: {fileID: 0}
       Ran: 0
+  - CommandToCall: -game-success-initial
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 4.5
+      Command: -update-options choose
+      EventObject: {fileID: 0}
+      Ran: 0
+  NextNode: {fileID: 0}
 --- !u!1 &8628789538178719964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,6 +1465,7 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &8787345819776852158
 GameObject:
   m_ObjectHideFlags: 0

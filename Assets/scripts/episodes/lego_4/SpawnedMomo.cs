@@ -204,6 +204,8 @@ public class SpawnedMomo : SpawnedObject
     }
 
     private string currentRfid_;
+
+    private string nfcId_;
     private bool inTesting_ = false;
 
     private GoTweenFlow dismissingFlow_;
@@ -224,30 +226,53 @@ public class SpawnedMomo : SpawnedObject
 
     public override void ReceivedAction(string action)
     {
-        //-momo success 2830192
         List<string> args = ArgumentHelper.ArgumentsFromCommand("-momo", action);
-        print(args.Count);
-        foreach (string item in args)
-        {
-            print(item);
-        }
-        string commandType = args[0];
-        string nfcId = args[1];
+        Debug.LogWarning(action);
+        if (args.Count == 0) return;
+        
+        //-momo success 2830192
 
-        if (LevelOfMomo(nfcId) == 0)
+        string commandType = args[0];
+        if (args.Count > 1) 
+        { 
+            nfcId_ = args[1];
+
+            //testing
+            currentRfid_ = args[1];
+        }
+
+
+        if(LevelOfMomo(nfcId_) >= 3) 
+        { 
+            gameManager_.SendNewActionInternal("-node next");
+            return;
+        }
+
+        if (LevelOfMomo(nfcId_) == 0)
         {
             //show starter Momo
-            HandleStarterPicker();
+            if (commandType.Contains("success"))
+            {
+                HandleStarterPicker();
+            }
+            else { 
+                HandleStarterPickerSelection(commandType);
+            }
             //update options to Left Middle Right choices
             //gameManager_.SendNewActionInternal("-update-options choose");
             //on finish choose, start reward sequence
-            HandleStarterPickerSelection(commandType);
-        } else
+        } 
+        else
         {
-            RewardSequence(nfcId);
+            if (commandType.Contains("success"))
+            {
+                RewardSequence();
+            }
+            else
+            {
+                HandleCustomizeSelection(commandType);
+            }
         }
-
-        
 
         #region Comments
         //example reward call: -momo success 2830192
@@ -270,11 +295,17 @@ public class SpawnedMomo : SpawnedObject
         #endregion
     }
 
-    private void RewardSequence(string nfcId)
-    {
+    private IEnumerator DisplayMomo() {
         ShowMomoOnScreen();
-
+        yield return new WaitForSeconds(2);
         ShowMomoEatingBerry();
+    }
+
+    private void RewardSequence()
+    {
+        //ShowMomoOnScreen();
+
+        //ShowMomoEatingBerry();
 
         ShowMomoUpgrade();
 
@@ -309,14 +340,15 @@ public class SpawnedMomo : SpawnedObject
         starterSelected_.gameObject.SetActive(false);
 
         AudioPlayer.PlayAudio("audio/sfx/new-option");
-        print("succes momo");
+        gameManager_.SendNewActionInternal("-character talk momo-pick");
+        
     }
 
     //Select momo's color and initial setup
     private void HandleStarterPickerSelection(string choice)
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
-
+        Debug.LogWarning("picker selection");
         HideAllScenes();
         starterBackground_.gameObject.SetActive(true);
         starterSelected_.gameObject.SetActive(true);
@@ -370,11 +402,12 @@ public class SpawnedMomo : SpawnedObject
         {
             starterBackground_.gameObject.SetActive(false);
             starterSelected_.gameObject.SetActive(false);
+            StartCoroutine(DisplayMomo());
         })));
         dismissingFlow_.play();
     }
 
-    //Evolve the momo based on the current level
+    //Show the current upgrade that the user can do to their momo
     private void ShowMomoUpgrade()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
@@ -395,12 +428,20 @@ public class SpawnedMomo : SpawnedObject
             customizeAdultMomo_.sprite = sprites[2];
             customizeAdultMomo_.SetNativeSize();
             customizeAdultBackground_.gameObject.SetActive(true);
+            gameManager_.SendNewActionInternal("-character talk momo-adult");
+            Go.to(this, 2.5f, new GoTweenConfig().onComplete(t => {
+                gameManager_.SendNewActionInternal("-character talk momo-customization");
+            }));
         }
         if (level == 1)
         {
             customizeTeenMomo_.sprite = sprites[2];
             customizeTeenMomo_.SetNativeSize();
             customizeTeenBackground_.gameObject.SetActive(true);
+            gameManager_.SendNewActionInternal("-character talk momo-teen");
+            Go.to(this, 5f, new GoTweenConfig().onComplete(t => {
+                gameManager_.SendNewActionInternal("-character talk momo-customization");
+            }));
         }
     }
 
@@ -498,6 +539,7 @@ public class SpawnedMomo : SpawnedObject
         {
             customizeTeenBackground_.gameObject.SetActive(false);
             customizeAdultBackground_.gameObject.SetActive(false);
+            StartCoroutine(DisplayMomo());
         })));
         dismissingFlow_.play();
     }

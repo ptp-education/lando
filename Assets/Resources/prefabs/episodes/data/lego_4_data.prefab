@@ -51,7 +51,7 @@ MonoBehaviour:
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
-    RewardCommand: '-game-success -momo-success '
+    RewardCommand: -game-success-initial
     RequirementsVO: 
     NextChallengeVO: 
   - Name: 200g
