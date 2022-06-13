@@ -224,64 +224,65 @@ public class SpawnedMomo : SpawnedObject
 
     public override void ReceivedAction(string action)
     {
-        if (ArgumentHelper.ContainsCommand(GameManager.RFID_COMMAND, action))
+        //-momo success 2830192
+        List<string> args = ArgumentHelper.ArgumentsFromCommand("-momo", action);
+        print(args.Count);
+        foreach (string item in args)
         {
-            List<string> args = ArgumentHelper.ArgumentsFromCommand(GameManager.RFID_COMMAND, action);
-            if (args.Count > 1)
-            {
-                currentRfid_ = args[1];
+            print(item);
+        }
+        string commandType = args[0];
+        string nfcId = args[1];
 
-                if (LevelOfMomo(currentRfid_) == 0)
-                {
-                    HandleStarterPicker();
-                } else if (LevelOfMomo(currentRfid_) == 1 && !inTesting_)
-                {
-                    HandleStarterPicker();
-                }
-                if (inTesting_ && LevelOfMomo(currentRfid_) > 0)
-                {
-                    HandleTesting();
-                }
-            }
+        if (LevelOfMomo(nfcId) == 0)
+        {
+            //show starter Momo
+            HandleStarterPicker();
+            //update options to Left Middle Right choices
+            //gameManager_.SendNewActionInternal("-update-options choose");
+            //on finish choose, start reward sequence
+            HandleStarterPickerSelection(commandType);
+        } else
+        {
+            RewardSequence(nfcId);
         }
 
-        if (ArgumentHelper.ContainsCommand(kCommand, action))
-        {
-            List<string> args = ArgumentHelper.ArgumentsFromCommand(kCommand, action);
-            if (args.Count > 0)
-            {
-                switch (args[0])
-                {
-                    case "starter":
-                        HandleStarterPicker();
-                        break;
-                    case "starter-select":
-                        if (args.Count > 1) HandleStarterPickerSelection(args[1]);
-                        break;
-                    case "customize":
-                        HandleCustomize();
-                        break;
-                    case "customize-select":
-                        if (args.Count > 1) HandleCustomizeSelection(args[1]);
-                        break;
-                    case "testing":
-                        HandleTesting();
-                        break;
-                    case "success":
-                        HandleSuccess();
-                        break;
-                    case "failure":
-                        HandleFailure();
-                        break;
-                    case "hide":
-                        Hide();
-                        break;
-                    case "set-in-testing":
-                        inTesting_ = true;
-                        break;
-                }
-            }
-        }
+        
+
+        #region Comments
+        //example reward call: -momo success 2830192
+        //2830192 = NFC id
+
+        //pseudo code / logic
+        /*
+         if (LevelOfMomo(nfcId) == 0)
+            HandleStarterPicker()     //this asks users to select their starter Momo (red, green, blue)
+            //we need to update the choices to be Left Middle Right, so that the player can select their Momo
+                //Look to Lego 1 reward to see how we do it (challenge name 20-pound-4-wide)
+            //after user selects their Starter, we need to go to main reward
+
+         main reward sequence:
+         //show the customized Momo of the player for a few seconds: HandleTesting();
+         //show the success image: HandleSuccess();
+         //show customize: HandleCustomize();
+         //update the choices to be Left Middle Right, so that the player can customize
+         */
+        #endregion
+    }
+
+    private void RewardSequence(string nfcId)
+    {
+        ShowMomoOnScreen();
+
+        ShowMomoEatingBerry();
+
+        ShowMomoUpgrade();
+
+        //update options to Left Middle Right choices
+        //gameManager_.SendNewActionInternal("-update-options choose");
+
+        //after choice is complete, bring options back to default
+        //gameManager_.SendNewActionInternal("-update-options default");
     }
 
     private void HideAllScenes()
@@ -308,8 +309,10 @@ public class SpawnedMomo : SpawnedObject
         starterSelected_.gameObject.SetActive(false);
 
         AudioPlayer.PlayAudio("audio/sfx/new-option");
+        print("succes momo");
     }
 
+    //Select momo's color and initial setup
     private void HandleStarterPickerSelection(string choice)
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
@@ -344,6 +347,7 @@ public class SpawnedMomo : SpawnedObject
         AudioPlayer.PlayAudio("audio/sfx/arch");
         AudioPlayer.PlayAudio("audio/sfx/whoosh");
 
+        //----Momo's movement----
         starterMomo_.transform.localPosition = new Vector3(0, 1200, 0);
         Go.to(starterMomo_.transform, 1f, new GoTweenConfig().localPosition(Vector3.zero).setEaseType(GoEaseType.SineIn).onComplete(t =>
         {
@@ -354,6 +358,7 @@ public class SpawnedMomo : SpawnedObject
         flow.insert(1f, new GoTween(starterMomo_.transform, 0.25f, new GoTweenConfig().scale(1.1f)));
         flow.insert(1.25f, new GoTween(starterMomo_.transform, 0.25f, new GoTweenConfig().scale(1f)));
         flow.play();
+        //-----------------------
 
         if (dismissingFlow_ != null)
         {
@@ -369,7 +374,8 @@ public class SpawnedMomo : SpawnedObject
         dismissingFlow_.play();
     }
 
-    private void HandleCustomize()
+    //Evolve the momo based on the current level
+    private void ShowMomoUpgrade()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
@@ -420,6 +426,7 @@ public class SpawnedMomo : SpawnedObject
             customizeAdultMomo_.SetNativeSize();
         }
 
+        //Select accesories for the momo
         if (teenActive)
         {
             string selection = null;
@@ -462,6 +469,7 @@ public class SpawnedMomo : SpawnedObject
 
         AudioPlayer.PlayAudio("audio/sfx/pop");
 
+
         if (teenActive)
         {
             SetSprite(customizeTeenMomo_, currentRfid_, Status.Neutral);
@@ -494,7 +502,7 @@ public class SpawnedMomo : SpawnedObject
         dismissingFlow_.play();
     }
 
-    private void HandleTesting()
+    private void ShowMomoOnScreen()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
@@ -506,7 +514,7 @@ public class SpawnedMomo : SpawnedObject
         SetSprite(neutralMomo_, currentRfid_, Status.Neutral);
     }
 
-    private void HandleSuccess()
+    private void ShowMomoEatingBerry()
     {
         if (currentRfid_ == null || currentRfid_.Length == 0) return;
 
@@ -516,6 +524,7 @@ public class SpawnedMomo : SpawnedObject
 
         successBackground_.gameObject.SetActive(true);
         SetSprite(successMomo_, currentRfid_, Status.Success);
+        
     }
 
     private void HandleFailure()
@@ -534,10 +543,10 @@ public class SpawnedMomo : SpawnedObject
     {
         if (neutralBackground_.gameObject.activeSelf)
         {
-            HandleTesting();
+            ShowMomoOnScreen();
         } else if (successBackground_.gameObject.activeSelf)
         {
-            HandleSuccess();
+            ShowMomoEatingBerry();
         } else if (failureBackground_.gameObject.activeSelf)
         {
             HandleFailure();
@@ -549,6 +558,7 @@ public class SpawnedMomo : SpawnedObject
 
     }
 
+    //Handle level of momo
     private int LevelOfMomo(string rfid)
     {
         GameStorage gs = gameManager_.GameStorageForUserId(rfid);
@@ -572,6 +582,7 @@ public class SpawnedMomo : SpawnedObject
         return 0;
     }
 
+    //return sprites based on the momo's level
     private List<Sprite> SpritesEvolveForRfid(string rfid)
     {
         GameStorage gs = gameManager_.GameStorageForUserId(rfid);

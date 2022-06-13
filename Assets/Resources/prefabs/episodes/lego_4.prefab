@@ -29,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -68,7 +68,104 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 842470512690705984}
+--- !u!1 &628669438561765494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4847978656189304450}
+  - component: {fileID: 3706742137696148917}
+  m_Layer: 5
+  m_Name: map example
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4847978656189304450
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628669438561765494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048181044805120259}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3706742137696148917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628669438561765494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: 571, y: -256, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 594c97a4841ede341846e67bd56dc0f2, type: 3}
+  ImageFilePath: episodes/lego_4_screens/example-pentagon
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
+  FadeInFromPreviousScene: 1
+  TestingActive: 0
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: 
+    Options:
+    - ButtonName: Pentagon
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 655d09f2977e9264b863fcc0f602f4aa, type: 3}
+    - ButtonName: US Capitol Building
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: ae660992705ec96499436f44886e380f, type: 3}
+    - ButtonName: White House
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 198f3f346405bbb47a67acc54689b965, type: 3}
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 1.5
+    Command: -character talk map-example-0
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 6
+    Command: -character talk map-example-1
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 10
+    Command: -show-choices
+    EventObject: {fileID: 0}
+    Ran: 0
+  CommandLineContainers: []
 --- !u!1 &2079302127811205104
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,7 +195,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -140,7 +237,106 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 6012325773162433362}
+--- !u!1 &2622218083841034790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6732950926156683874}
+  - component: {fileID: 7495983457332220001}
+  m_Layer: 5
+  m_Name: explain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6732950926156683874
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622218083841034790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048181044805120259}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7495983457332220001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622218083841034790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: -650, y: -92, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
+  ImageFilePath: episodes/lego_4_screens/office
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
+  FadeInFromPreviousScene: 1
+  TestingActive: 0
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: 
+    Options:
+    - ButtonName: We got it!
+      TeacherOnly: 0
+      Command: -got-it
+      EventObject: {fileID: 0}
+    - ButtonName: Can you reapeat that?
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 40112ff11fe17314fa8b8b326d76e825, type: 3}
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 1.5
+    Command: 
+    EventObject: {fileID: 4200544645346117908, guid: 40112ff11fe17314fa8b8b326d76e825, type: 3}
+    Ran: 0
+  - TimeStamp: 25
+    Command: -show-choices
+    EventObject: {fileID: 0}
+    Ran: 0
+  CommandLineContainers:
+  - CommandToCall: -got-it
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk simulator-start
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 13
+      Command: -node next
+      EventObject: {fileID: 0}
+      Ran: 0
 --- !u!1 &2802677419071191658
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,22 +411,30 @@ MonoBehaviour:
     - ButtonName: Jump
       TeacherOnly: 0
       Command: 
-      EventObject: {fileID: 4200544645346117908, guid: 7900fff58f9616147ab009c23e6e1b03, type: 3}
+      EventObject: {fileID: 4200544645346117908, guid: b4426edb67b8e574f94644b6ec7f10c6, type: 3}
     - ButtonName: Roll
       TeacherOnly: 0
       Command: 
-      EventObject: {fileID: 4200544645346117908, guid: 93823d74acf5b9f4e9b79410ba50205a, type: 3}
+      EventObject: {fileID: 4200544645346117908, guid: 6156f59848e64624c8599b34b8fb9195, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1.5
     Command: -character talk map-intro-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 15
+  - TimeStamp: 6
     Command: -character talk map-intro-1
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 19
+  - TimeStamp: 12.5
+    Command: -character talk map-intro-2
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 17
+    Command: -character talk map-intro-3
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 23.5
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -249,7 +453,85 @@ MonoBehaviour:
       Command: -spawnoption "Momo should jump!" "Momo should shake the wall!"
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 1155452436755689151}
+--- !u!1 &3328939687015290096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2923773018779378133}
+  - component: {fileID: 7247898756546737522}
+  m_Layer: 5
+  m_Name: simulator-answer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2923773018779378133
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328939687015290096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048181044805120259}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7247898756546737522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328939687015290096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 2
+  Characters:
+  - TalkingPosition: {x: -837, y: -420, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
+  ImageFilePath: episodes/lego_4_screens/office
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 1
+    Steps:
+    - Question: {fileID: 4200544645346117908, guid: 0ac52584e7fa8a14896ea4e6a299c6fe, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 588cc94802de90047b3840d49a782eae, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 06ec791dbc22c12448d17dd2abd689fd, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 64ab4bc30df96264a98551f3c52b2133, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 3026af85aa0d43d44aace330f938e81f, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 6b06cba9696739a41aa1aee94f11397b, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 0636a6927a4860b4582a5d458e564ce6, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 782e54899ebc2354aa1058c619d0a24b, type: 3}
+  FadeInFromPreviousScene: 0
+  TestingActive: 0
+  OptionsToSpawn: []
+  PrefabSpawnObjects: []
+  CommandLines: []
+  CommandLineContainers: []
 --- !u!1 &3345662454743620094
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8155017708945484591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -279,7 +561,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 5
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -404,7 +686,6 @@ MonoBehaviour:
       Command: -spawnoption "We got it!" "Can you repeat?"
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 2796477096162768081}
 --- !u!1 &4440565866868392372
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,16 +752,15 @@ MonoBehaviour:
   TestingActive: 0
   OptionsToSpawn:
   - StartShown: 1
-    Name: 
+    Name: Play
     Options:
-    - ButtonName: Play
+    - ButtonName: play
       TeacherOnly: 1
       Command: -node next
       EventObject: {fileID: 0}
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 842470512690705984}
 --- !u!1 &4586636730854607025
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,16 +847,15 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 16
+  - TimeStamp: 18
     Command: -character talk office-1
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 18
+  - TimeStamp: 21.5
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 2520661034315749620}
 --- !u!1 &4625422606827924374
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5409455853208806673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -606,7 +885,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -698,7 +977,89 @@ MonoBehaviour:
       Command: -swing increment
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
+--- !u!1 &5538422780132337193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8914094934709479670}
+  - component: {fileID: 1329982987017976179}
+  m_Layer: 5
+  m_Name: map pentagon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8914094934709479670
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538422780132337193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048181044805120259}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1329982987017976179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5538422780132337193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: 571, y: -256, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 594c97a4841ede341846e67bd56dc0f2, type: 3}
+  ImageFilePath: episodes/lego_4_screens/example-pentagon
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
+  FadeInFromPreviousScene: 1
+  TestingActive: 0
+  OptionsToSpawn: []
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 1.5
+    Command: -character talk map-pentagon-0
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 6
+    Command: -character talk map-pentagon-1
+    EventObject: {fileID: 4200544645346117908, guid: 30003fe73f596664aad02d35c01d8c38, type: 3}
+    Ran: 0
+  - TimeStamp: 16
+    Command: -node next
+    EventObject: {fileID: 0}
+    Ran: 0
+  CommandLineContainers: []
 --- !u!1 &5733257178101449599
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +1076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4259730403428766429
 RectTransform:
   m_ObjectHideFlags: 0
@@ -728,7 +1089,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 4
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -782,7 +1143,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 2520661034315749620}
 --- !u!1 &6410430740656083808
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +1159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4495149421796750951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -812,7 +1172,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 3
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -862,7 +1222,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 2520661034315749620}
 --- !u!1 &6720832660718529540
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +1251,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -929,16 +1288,35 @@ MonoBehaviour:
     ShowAnswer: 0
     Steps: []
   FadeInFromPreviousScene: 0
-  TestingActive: 0
-  OptionsToSpawn: []
+  TestingActive: 1
+  OptionsToSpawn:
+  - StartShown: 1
+    Name: default
+    Options:
+    - ButtonName: Redeem Reward
+      TeacherOnly: 0
+      Command: -momo success {0}
+      EventObject: {fileID: 0}
+    - ButtonName: Load Wall Simulator
+      TeacherOnly: 1
+      Command: 
+      EventObject: {fileID: 0}
+  - StartShown: 1
+    Name: choose
+    Options:
+    - ButtonName: Left
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 0}
+    - ButtonName: MIddle
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 0}
+    - ButtonName: Right
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 0}
   PrefabSpawnObjects:
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3542844012294076493, guid: 10903cb3434994ed3b2b161041fedeaf, type: 3}
-    Path: episodes/_shared/standard_setup
-    Spawned: 0
   - TimeStamp: 0
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
@@ -946,42 +1324,12 @@ MonoBehaviour:
     Object: {fileID: 1950537136018021120, guid: 8f2471d7cb4894e07838889aa3d68d6b, type: 3}
     Path: episodes/lego_4_assets/prefabs/momo
     Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5537306103791201731, guid: da425202c8bdf4073964820ed3fa4374, type: 3}
-    Path: episodes/lego_4_assets/prefabs/lego_4_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
-    Path: prefabs/rfid/challenge-ui
-    Spawned: 0
-  CommandLines:
-  - TimeStamp: 2
-    Command: -momo set-in-testing
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 0.1
-    Command: -momo set-in-testing
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 0.5
-    Command: -momo set-in-testing
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 1
-    Command: -momo set-in-testing
-    EventObject: {fileID: 0}
-    Ran: 0
+  CommandLines: []
   CommandLineContainers:
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
-      Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 2
@@ -1022,7 +1370,85 @@ MonoBehaviour:
       Command: -momo testing
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 4061177169760033847}
+--- !u!1 &8628789538178719964
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675608553158892311}
+  - component: {fileID: 8854752049783685267}
+  m_Layer: 5
+  m_Name: simulator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1675608553158892311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628789538178719964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048181044805120259}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8854752049783685267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8628789538178719964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 2
+  Characters:
+  - TalkingPosition: {x: -837, y: -420, z: 0}
+    Scale: {x: 0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
+  ImageFilePath: episodes/lego_4_screens/office
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps:
+    - Question: {fileID: 4200544645346117908, guid: 0ac52584e7fa8a14896ea4e6a299c6fe, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 588cc94802de90047b3840d49a782eae, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 06ec791dbc22c12448d17dd2abd689fd, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 64ab4bc30df96264a98551f3c52b2133, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 3026af85aa0d43d44aace330f938e81f, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 6b06cba9696739a41aa1aee94f11397b, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 0636a6927a4860b4582a5d458e564ce6, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 782e54899ebc2354aa1058c619d0a24b, type: 3}
+  FadeInFromPreviousScene: 0
+  TestingActive: 0
+  OptionsToSpawn: []
+  PrefabSpawnObjects: []
+  CommandLines: []
+  CommandLineContainers: []
 --- !u!1 &8787345819776852158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,13 +1480,18 @@ RectTransform:
   - {fileID: 9118896633182590273}
   - {fileID: 1420489051585815462}
   - {fileID: 6263283830157168111}
-  - {fileID: 4495149421796750951}
-  - {fileID: 4259730403428766429}
-  - {fileID: 8155017708945484591}
+  - {fileID: 4847978656189304450}
+  - {fileID: 8914094934709479670}
+  - {fileID: 6732950926156683874}
+  - {fileID: 1675608553158892311}
+  - {fileID: 2923773018779378133}
   - {fileID: 8085736101218383721}
   - {fileID: 5868912819390049787}
   - {fileID: 7476242058815124570}
   - {fileID: 5409455853208806673}
+  - {fileID: 8155017708945484591}
+  - {fileID: 4495149421796750951}
+  - {fileID: 4259730403428766429}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1083,4 +1514,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingNode: {fileID: 1121075460186832798}
   VORoot: audio/lego_4/
-  LevelData: {fileID: 0}
+  LevelData: {fileID: 5750723246018985116, guid: 352af6324224a449cab2a2069426d30c, type: 3}
