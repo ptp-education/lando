@@ -206,6 +206,7 @@ public class SpawnedMomo : SpawnedObject
     private string currentRfid_;
 
     private string nfcId_;
+    private string commandType_;
     private bool inTesting_ = false;
 
     private GoTweenFlow dismissingFlow_;
@@ -232,7 +233,7 @@ public class SpawnedMomo : SpawnedObject
         
         //-momo success 2830192
 
-        string commandType = args[0];
+        commandType_ = args[0];
         if (args.Count > 1) 
         { 
             nfcId_ = args[1];
@@ -247,31 +248,23 @@ public class SpawnedMomo : SpawnedObject
             gameManager_.SendNewActionInternal("-node next");
             return;
         }
-
         if (LevelOfMomo(nfcId_) == 0)
         {
             //show starter Momo
-            if (commandType.Contains("success"))
+            if (commandType_.Contains("success"))
             {
                 HandleStarterPicker();
             }
-            else { 
-                HandleStarterPickerSelection(commandType);
+            else
+            {
+                HandleStarterPickerSelection(commandType_);
             }
             //update options to Left Middle Right choices
             //gameManager_.SendNewActionInternal("-update-options choose");
             //on finish choose, start reward sequence
-        } 
-        else
-        {
-            if (commandType.Contains("success"))
-            {
-                RewardSequence();
-            }
-            else
-            {
-                HandleCustomizeSelection(commandType);
-            }
+        }
+        else { 
+            StartCoroutine(DisplayMomo(commandType_, false));
         }
 
         #region Comments
@@ -295,10 +288,29 @@ public class SpawnedMomo : SpawnedObject
         #endregion
     }
 
-    private IEnumerator DisplayMomo() {
-        ShowMomoOnScreen();
-        yield return new WaitForSeconds(2);
-        ShowMomoEatingBerry();
+    private IEnumerator DisplayMomo(string command, bool start) {
+        if (!start)
+        {
+            if (command.Contains("success"))
+            {
+                ShowMomoOnScreen();
+                yield return new WaitForSeconds(1);
+                ShowMomoEatingBerry();
+                yield return new WaitForSeconds(1);
+                RewardSequence();
+                Debug.LogWarning("reward");
+            }
+            else
+            {
+                HandleCustomizeSelection(command);
+                Debug.LogWarning("customize");
+            }
+        }
+        else {
+            ShowMomoOnScreen();
+            yield return new WaitForSeconds(1);
+            ShowMomoEatingBerry();
+        }
     }
 
     private void RewardSequence()
@@ -341,6 +353,7 @@ public class SpawnedMomo : SpawnedObject
 
         AudioPlayer.PlayAudio("audio/sfx/new-option");
         gameManager_.SendNewActionInternal("-character talk momo-pick");
+        Debug.LogWarning("starter picker");
         
     }
 
@@ -402,7 +415,8 @@ public class SpawnedMomo : SpawnedObject
         {
             starterBackground_.gameObject.SetActive(false);
             starterSelected_.gameObject.SetActive(false);
-            StartCoroutine(DisplayMomo());
+            StartCoroutine(DisplayMomo(commandType_, true));
+            gameManager_.SendNewActionInternal("-update-options default");
         })));
         dismissingFlow_.play();
     }
@@ -539,7 +553,8 @@ public class SpawnedMomo : SpawnedObject
         {
             customizeTeenBackground_.gameObject.SetActive(false);
             customizeAdultBackground_.gameObject.SetActive(false);
-            StartCoroutine(DisplayMomo());
+            ShowMomoOnScreen();
+            gameManager_.SendNewActionInternal("-update-options default");
         })));
         dismissingFlow_.play();
     }
@@ -610,14 +625,17 @@ public class SpawnedMomo : SpawnedObject
 
         if (adultCustomization != null && adultCustomization.Length > 0)
         {
+            Debug.LogWarning(3);
             return 3;
         }
         if (teenCustomization != null && teenCustomization.Length > 0)
         {
+            Debug.LogWarning(2);
             return 2;
         }
         if (starter != null && starter.Length > 0)
         {
+            Debug.LogWarning(1);
             return 1;
         }
 

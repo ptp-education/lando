@@ -128,8 +128,8 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 594c97a4841ede341846e67bd56dc0f2, type: 3}
-  ImageFilePath: episodes/lego_4_screens/example-pentagon
+  Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
+  ImageFilePath: episodes/lego_4_screens/office
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
       EventObject: {fileID: 4200544645346117908, guid: 198f3f346405bbb47a67acc54689b965, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
-  - TimeStamp: 1.5
+  - TimeStamp: 1
     Command: -character talk map-example-0
     EventObject: {fileID: 0}
     Ran: 0
@@ -162,9 +162,13 @@ MonoBehaviour:
     Command: -character talk map-example-1
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 10
+  - TimeStamp: 7
+    Command: 
+    EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
+    Ran: 0
+  - TimeStamp: 10.5
     Command: -show-choices
-    EventObject: {fileID: 0}
+    EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
     Ran: 0
   CommandLineContainers: []
   NextNode: {fileID: 0}
@@ -305,7 +309,7 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
-  FadeInFromPreviousScene: 1
+  FadeInFromPreviousScene: 0
   TestingActive: 0
   OptionsToSpawn:
   - StartShown: 0
@@ -487,7 +491,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -761,7 +765,7 @@ MonoBehaviour:
   - StartShown: 1
     Name: Play
     Options:
-    - ButtonName: play
+    - ButtonName: Play
       TeacherOnly: 1
       Command: -node next
       EventObject: {fileID: 0}
@@ -1052,7 +1056,7 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
-  FadeInFromPreviousScene: 1
+  FadeInFromPreviousScene: 0
   TestingActive: 0
   OptionsToSpawn: []
   PrefabSpawnObjects: []
@@ -1061,11 +1065,11 @@ MonoBehaviour:
     Command: -character talk map-pentagon-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 7
     Command: -character talk map-pentagon-1
     EventObject: {fileID: 4200544645346117908, guid: 30003fe73f596664aad02d35c01d8c38, type: 3}
     Ran: 0
-  - TimeStamp: 16
+  - TimeStamp: 17
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -1264,7 +1268,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1300,7 +1304,7 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
-  FadeInFromPreviousScene: 0
+  FadeInFromPreviousScene: 1
   TestingActive: 1
   OptionsToSpawn:
   - StartShown: 1
@@ -1319,15 +1323,15 @@ MonoBehaviour:
     Options:
     - ButtonName: Left
       TeacherOnly: 0
-      Command: -momo left {0} -update-options default
+      Command: -momo left {0}
       EventObject: {fileID: 0}
     - ButtonName: MIddle
       TeacherOnly: 0
-      Command: '-momo middle {0} -update-options default '
+      Command: -momo middle {0}
       EventObject: {fileID: 0}
     - ButtonName: Right
       TeacherOnly: 0
-      Command: '-momo right {0} -update-options default '
+      Command: -momo right {0}
       EventObject: {fileID: 0}
   PrefabSpawnObjects:
   - TimeStamp: 0
@@ -1339,13 +1343,23 @@ MonoBehaviour:
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
+  - CommandToCall: -game-success-initial
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 2
+      Command: -update-options choose
+      EventObject: {fileID: 0}
+      Ran: 0
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
       Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
       EventObject: {fileID: 0}
       Ran: 0
-    - TimeStamp: 4.5
+    - TimeStamp: 2
       Command: -update-options choose
       EventObject: {fileID: 0}
       Ran: 0
@@ -1373,16 +1387,6 @@ MonoBehaviour:
     StoredCommands:
     - TimeStamp: 3
       Command: -momo testing
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -game-success-initial
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 4.5
-      Command: -update-options choose
       EventObject: {fileID: 0}
       Ran: 0
   NextNode: {fileID: 0}
@@ -1501,8 +1505,8 @@ RectTransform:
   - {fileID: 8914094934709479670}
   - {fileID: 6732950926156683874}
   - {fileID: 1675608553158892311}
-  - {fileID: 2923773018779378133}
   - {fileID: 8085736101218383721}
+  - {fileID: 2923773018779378133}
   - {fileID: 5868912819390049787}
   - {fileID: 7476242058815124570}
   - {fileID: 5409455853208806673}
