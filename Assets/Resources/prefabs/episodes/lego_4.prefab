@@ -1312,7 +1312,7 @@ MonoBehaviour:
     Options:
     - ButtonName: Redeem Reward
       TeacherOnly: 0
-      Command: -claim-reward {0}
+      Command: -claim-reward {0} -update-options empty
       EventObject: {fileID: 0}
     - ButtonName: Load Wall Simulator
       TeacherOnly: 1
@@ -1323,16 +1323,19 @@ MonoBehaviour:
     Options:
     - ButtonName: Left
       TeacherOnly: 0
-      Command: -momo left {0}
+      Command: -momo left {0} -update-options empty
       EventObject: {fileID: 0}
     - ButtonName: MIddle
       TeacherOnly: 0
-      Command: -momo middle {0}
+      Command: -momo middle {0} -update-options empty
       EventObject: {fileID: 0}
     - ButtonName: Right
       TeacherOnly: 0
-      Command: -momo right {0}
+      Command: -momo right {0} -update-options empty
       EventObject: {fileID: 0}
+  - StartShown: 1
+    Name: empty
+    Options: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
