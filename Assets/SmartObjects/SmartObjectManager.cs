@@ -134,6 +134,7 @@ namespace Lando.SmartObjects
 
 		private async Task RunConfiguration()
 		{
+			PlayerPrefs.DeleteKey(KEY);
 
 			void ReadData(uFrUnity.SuccessfulRead obj)
 			{
@@ -146,29 +147,30 @@ namespace Lando.SmartObjects
 
 			try
 			{
-				if (PlayerPrefs.HasKey(KEY))
-				{
-					SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(KEY));
-					var readers = data.Connectors;
-					if (readers.Count == m_smartObjectsToConfigure.Length)
-					{
-						m_smartObjectReaders.Clear();
-						foreach (var reader in readers)
-						{
-							m_smartObjectReaders.Add(reader.UID, reader);
-						}
-						m_isConfigured = true;
-						m_smartObjectConfigurator.gameObject.SetActive(false);
-					}
+				//Always reconfigure NFC readers
+				//if (PlayerPrefs.HasKey(KEY))
+				//{
+				//	SaveData data = JsonUtility.FromJson<SaveData>(PlayerPrefs.GetString(KEY));
+				//	var readers = data.Connectors;
+				//	if (readers.Count == m_smartObjectsToConfigure.Length)
+				//	{
+				//		m_smartObjectReaders.Clear();
+				//		foreach (var reader in readers)
+				//		{
+				//			m_smartObjectReaders.Add(reader.UID, reader);
+				//		}
+				//		m_isConfigured = true;
+				//		m_smartObjectConfigurator.gameObject.SetActive(false);
+				//	}
+				//}
 
-				}
-
-				if (!m_isConfigured)
+                if (!m_isConfigured)
 				{
 					m_smartObjectConfigurator.gameObject.SetActive(true);
 					//m_ufrPlugin.OnReadData += ReadData;
 					m_ufrPlugin.OnScanCard += ReadData;
 
+					m_smartObjectConfigurator.transform.localScale = Vector3.one;
 					Text message = m_smartObjectConfigurator.GetComponentInChildren<Text>();
 					while (m_configuringSmartObjectIndex < m_smartObjectsToConfigure.Length)
 					{
@@ -186,6 +188,9 @@ namespace Lando.SmartObjects
 
 					m_smartObjectConfigurator.gameObject.SetActive(false);
 					m_isConfigured = true;
+				} else
+                {
+					m_smartObjectConfigurator.transform.localScale = Vector3.zero;
 				}
 			}
 			catch (Exception ex)

@@ -29,9 +29,9 @@ public class ControllerManager : GameManager
 
     private List<string> episodePaths = new List<string>();
     private CommandDispatch dispatch_ = new CommandDispatch();
-    private string testNfcId_ = "9999";
+    private string testNfcId_ = "04835E2AD86D81";
 
-    private string kTeacherNfcId = "9999";
+    private string kTeacherNfcId = "04835E2AD86D81";
 
     private List<StationManager> loadedStationManagers_ = new List<StationManager>();
 
@@ -63,13 +63,19 @@ public class ControllerManager : GameManager
 
         if (manager != null)
         {
-            SmartObjectConnector legoStoreConnector = await manager.GetSmartConnector(SmartObjectType.ResourceStation);
-            SmartObjectConnector magicPadConnector = await manager.GetSmartConnector(SmartObjectType.HintStation);
-            SmartObjectConnector magicPrinterConnector = await manager.GetSmartConnector(SmartObjectType.TestingStation);
+            SmartObjectConnector resourceStationConnector = await manager.GetSmartConnector(SmartObjectType.ResourceStation);
+            SmartObjectConnector hintStationConnector = await manager.GetSmartConnector(SmartObjectType.HintStation);
+            SmartObjectConnector testingStationConnector = await manager.GetSmartConnector(SmartObjectType.TestingStation);
+            SmartObjectConnector option1Connector = await manager.GetSmartConnector(SmartObjectType.Option1);
+            SmartObjectConnector option2Connector = await manager.GetSmartConnector(SmartObjectType.Option2);
+            SmartObjectConnector option3Connector = await manager.GetSmartConnector(SmartObjectType.Option3);
 
-            legoStoreConnector?.Connect(this.NewNfcScan);
-            magicPadConnector?.Connect(this.NewNfcScan);
-            magicPrinterConnector?.Connect(this.NewNfcScan);
+            resourceStationConnector?.Connect(this.NewNfcScan);
+            hintStationConnector?.Connect(this.NewNfcScan);
+            testingStationConnector?.Connect(this.NewNfcScan);
+            option1Connector?.Connect(this.NewNfcScan);
+            option2Connector?.Connect(this.NewNfcScan);
+            option3Connector?.Connect(this.NewNfcScan);
         }
     }
 #endif

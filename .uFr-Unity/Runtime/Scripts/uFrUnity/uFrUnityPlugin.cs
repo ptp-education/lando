@@ -176,12 +176,12 @@ namespace uFrUnity
 
 			while (Errors.TryDequeue(out string error))
 			{
-				Debug.LogWarning(error);
+				//Debug.LogWarning(error);
 			}
 
 			while(Info.TryDequeue(out string info))
 			{
-				Debug.Log(info);
+				//Debug.Log(info);
 			}
 
 			m_readers = m_activeReaders.Values.ToList();
