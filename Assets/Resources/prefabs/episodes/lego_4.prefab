@@ -332,7 +332,11 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: 4200544645346117908, guid: 40112ff11fe17314fa8b8b326d76e825, type: 3}
     Ran: 0
-  - TimeStamp: 23.5
+  - TimeStamp: 24
+    Command: -character talk setup-make-sense
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 27
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -1294,7 +1298,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 330, y: -256, z: 0}
+  - TalkingPosition: {x: 700, y: -256, z: 0}
     Scale: {x: -0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -1319,7 +1323,7 @@ MonoBehaviour:
       EventObject: {fileID: 0}
     - ButtonName: Load Wall Simulator
       TeacherOnly: 1
-      Command: 
+      Command: -node next
       EventObject: {fileID: 0}
   - StartShown: 1
     Name: choose
@@ -1347,7 +1351,11 @@ MonoBehaviour:
     Object: {fileID: 1950537136018021120, guid: 8f2471d7cb4894e07838889aa3d68d6b, type: 3}
     Path: episodes/lego_4_assets/prefabs/momo
     Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 0.2
+    Command: -hide-choices
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -game-success-initial
     StoredCommands:
@@ -1359,7 +1367,11 @@ MonoBehaviour:
       Command: -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
-    - TimeStamp: 2
+    - TimeStamp: 0.5
+      Command: 
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 2.5
       Command: -update-options choose
       EventObject: {fileID: 0}
       Ran: 0
@@ -1371,10 +1383,6 @@ MonoBehaviour:
       Ran: 0
     - TimeStamp: 0
       Command: -update-options empty
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 2
-      Command: -update-options choose
       EventObject: {fileID: 0}
       Ran: 0
   - CommandToCall: -game-success-last
@@ -1389,22 +1397,6 @@ MonoBehaviour:
       Ran: 0
     - TimeStamp: 0
       Command: -update-options empty
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 4.5
-      Command: -update-options choose
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -delayed-spawn
-    StoredCommands:
-    - TimeStamp: 2
-      Command: -momo testing
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -more-delayed-spawn
-    StoredCommands:
-    - TimeStamp: 3
-      Command: -momo testing
       EventObject: {fileID: 0}
       Ran: 0
   NextNode: {fileID: 0}
