@@ -296,8 +296,8 @@ MonoBehaviour:
   BgLoop: {fileID: 0}
   Type: 1
   Characters:
-  - TalkingPosition: {x: -650, y: -92, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+  - TalkingPosition: {x: 800, y: -400, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -323,13 +323,16 @@ MonoBehaviour:
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: 4200544645346117908, guid: 40112ff11fe17314fa8b8b326d76e825, type: 3}
+  - StartShown: 0
+    Name: empty
+    Options: []
   PrefabSpawnObjects: []
   CommandLines:
-  - TimeStamp: 1.5
+  - TimeStamp: 0
     Command: 
     EventObject: {fileID: 4200544645346117908, guid: 40112ff11fe17314fa8b8b326d76e825, type: 3}
     Ran: 0
-  - TimeStamp: 25
+  - TimeStamp: 23.5
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -337,7 +340,7 @@ MonoBehaviour:
   - CommandToCall: -got-it
     StoredCommands:
     - TimeStamp: 0
-      Command: -character talk simulator-start
+      Command: -character talk simulator-start -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 13
@@ -1312,7 +1315,7 @@ MonoBehaviour:
     Options:
     - ButtonName: Redeem Reward
       TeacherOnly: 0
-      Command: -claim-reward {0} -update-options empty
+      Command: -claim-reward {0}
       EventObject: {fileID: 0}
     - ButtonName: Load Wall Simulator
       TeacherOnly: 1
@@ -1325,7 +1328,7 @@ MonoBehaviour:
       TeacherOnly: 0
       Command: -momo left {0} -update-options empty
       EventObject: {fileID: 0}
-    - ButtonName: MIddle
+    - ButtonName: Middle
       TeacherOnly: 0
       Command: -momo middle {0} -update-options empty
       EventObject: {fileID: 0}
@@ -1352,6 +1355,10 @@ MonoBehaviour:
       Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
       EventObject: {fileID: 0}
       Ran: 0
+    - TimeStamp: 0
+      Command: -update-options empty
+      EventObject: {fileID: 0}
+      Ran: 0
     - TimeStamp: 2
       Command: -update-options choose
       EventObject: {fileID: 0}
@@ -1360,6 +1367,10 @@ MonoBehaviour:
     StoredCommands:
     - TimeStamp: 0
       Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 2
@@ -1374,6 +1385,10 @@ MonoBehaviour:
       Ran: 0
     - TimeStamp: 0
       Command: -character exclaim
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 4.5

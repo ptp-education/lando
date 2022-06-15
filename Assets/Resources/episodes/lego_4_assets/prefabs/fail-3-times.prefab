@@ -51,35 +51,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 1
-    VoiceoverFile: 
-    CommandLine: -character talk map-test-three-times-a
+  - TimeStamp: 0
+    VoiceoverFile: map-test-three-times-a
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 37f0db3b227e1ea4481edb48cbc917fa, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c76c2c27bfba42240af2bc9eafb7f045, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: dfdb2213bd7870f40bd02134eb5d0039, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 4
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

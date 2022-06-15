@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SimulatorNodeObject : EpisodeNodeObject
 {
@@ -72,6 +73,8 @@ public class SimulatorNodeObject : EpisodeNodeObject
             }
         }
     }
+
+
 
     private void LoadNextAnswer(int counter)
     {
