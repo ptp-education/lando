@@ -43,34 +43,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints: []
   Challenges:
   - Name: 100g
     Sprite: {fileID: 21300000, guid: 15bdf8ef6170b4db6bbda28048d4dc32, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 507fbebd37897461ba6c1ad7b3bde2a8, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-100
-    EncourageCommand: 
-    NextChallengeCommand: 
+    RequirementsVO: 
+    NextChallengeVO: 
   - Name: 200g
     Sprite: {fileID: 21300000, guid: 8e2480759da4c44e1a259bc02e1bf53f, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: a3f891503b7c146a2b965d938cdb3182, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-200
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-200
+    RequirementsVO: 
+    NextChallengeVO: 
   - Name: 500g
     Sprite: {fileID: 21300000, guid: 78e792aee055c4ab988f1fc39834fa8f, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 5112fdb3bf66045d28d068e3b41676ba, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success-last
-    RequirementsCommand: -character talk testing-announce-500
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500
+    RequirementsVO: 
+    NextChallengeVO: 
+  Hints: []
+  WaysToFail:
+  - ButtonName: 
+    ObjectToLoad: {fileID: 0}

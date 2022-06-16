@@ -846,6 +846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: monsters
       objectReference: {fileID: 0}
+    - target: {fileID: 8743171521701233206, guid: f2f44541305274d828d363ea57259d23, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2f44541305274d828d363ea57259d23, type: 3}
 --- !u!224 &7044480717532599912 stripped
@@ -947,6 +951,10 @@ PrefabInstance:
     - target: {fileID: 5554267666592885122, guid: 8d547e31b8e214f0e8b582aeb9742e11, type: 3}
       propertyPath: m_Name
       value: map-volunteers
+      objectReference: {fileID: 0}
+    - target: {fileID: 5554267666592885122, guid: 8d547e31b8e214f0e8b582aeb9742e11, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2601238864704676276, guid: 8d547e31b8e214f0e8b582aeb9742e11, type: 3}
