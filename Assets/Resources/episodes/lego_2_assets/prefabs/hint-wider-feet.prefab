@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: hint-wider-feets
+    VoiceoverFile: hint-wider-feet
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ff8eb2368f309be429c8baceb6e4201d, type: 3}

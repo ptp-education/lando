@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk arch-q
+    VoiceoverFile: problem-wide
+    CommandLine: -character talk problem-wide
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 69c4b5708af42854b9ea71182f378823, type: 3}
     SelfDestruct: 0
@@ -70,6 +70,13 @@ MonoBehaviour:
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 56933f8ea373f92429b71b463965084c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

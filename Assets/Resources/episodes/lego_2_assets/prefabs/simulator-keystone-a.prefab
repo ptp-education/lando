@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk keystone-a
+    CommandLine: -character talk simulator-keystone-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ae055bd72daf19a4388d3f34b3195d4b, type: 3}
     SelfDestruct: 0
@@ -65,14 +65,14 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 9f5ffac70fa097246b1829681f2bfa4a, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.5
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0950481423fca054f98ca41a914481a3, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 9
+  - TimeStamp: 8.3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

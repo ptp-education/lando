@@ -51,14 +51,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
-    CommandLine: -character talk keystone-q
+    CommandLine: -character talk simulator-keystone-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 33500e361504b254aa80bd3a565936f5, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2.5
+  - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

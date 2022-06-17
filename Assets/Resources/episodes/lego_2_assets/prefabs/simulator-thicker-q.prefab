@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
-    CommandLine: -character talk thicker-q
+    CommandLine: -character talk simulator-thicker-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a86ed38d932123a4a988b67b2a07d63c, type: 3}
     SelfDestruct: 0

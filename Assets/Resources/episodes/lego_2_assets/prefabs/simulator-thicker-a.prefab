@@ -53,33 +53,26 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk thicker-a
+    CommandLine: -character talk simulator-thicker-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: bb5e8f97e54072a48b0d7fa8b425b618, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2.5
+  - TimeStamp: 2.2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9ccfec5d5758aad4ba176aedd604e5a0, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5.5
+  - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 77f0b9542a2dd33429875b84cf10e675, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 8.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 48f16c5bf6ebe934b9b81782dd4bc7d9, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 10.5
+  - TimeStamp: 7.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

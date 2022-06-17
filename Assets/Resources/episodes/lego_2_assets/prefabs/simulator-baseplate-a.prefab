@@ -53,16 +53,16 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk baseplate-
+    CommandLine: -character talk simulator-baseplate-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0c5c37fe2deeba243867342110a3405b, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 18.7
+  - TimeStamp: 12
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 0}
+    ImageToSet: {fileID: 21300000, guid: 0c5c37fe2deeba243867342110a3405b, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}
