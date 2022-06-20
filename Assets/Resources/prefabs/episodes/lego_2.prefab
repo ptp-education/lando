@@ -35,9 +35,9 @@ RectTransform:
   - {fileID: 1922456957501383967}
   - {fileID: 822360947470793880}
   - {fileID: 2077290767503316601}
-  - {fileID: 2549833172269006310}
-  - {fileID: 3332595802778454907}
   - {fileID: 1769247998118269658}
+  - {fileID: 3332595802778454907}
+  - {fileID: 2549833172269006310}
   - {fileID: 4573677607920781161}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -483,31 +483,44 @@ MonoBehaviour:
     Options:
     - ButtonName: We Got it!
       TeacherOnly: 0
-      Command: -node next
+      Command: -understood
       EventObject: {fileID: 0}
     - ButtonName: Can you repeat it?
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: e3cfedd1dea2c2f43b2c8bcb367a4231, type: 3}
+  - StartShown: 1
+    Name: empty
+    Options: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1
     Command: 
     EventObject: {fileID: -860130409809325442, guid: e3cfedd1dea2c2f43b2c8bcb367a4231, type: 3}
     Ran: 0
-  - TimeStamp: 26
-    Command: -character talk simulator-previous
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 37
+  - TimeStamp: 26.5
     Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 41
+  - TimeStamp: 30
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
-  CommandLineContainers: []
+  CommandLineContainers:
+  - CommandToCall: -understood
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -update-options empty
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -character talk simulator-previous
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 11
+      Command: -node next
+      EventObject: {fileID: 0}
+      Ran: 0
 --- !u!1 &4053134994914644971
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +957,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2549833172269006310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -957,7 +970,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7143213592482387843}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1260,7 +1273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3332595802778454907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1423,7 +1436,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7143213592482387843}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
