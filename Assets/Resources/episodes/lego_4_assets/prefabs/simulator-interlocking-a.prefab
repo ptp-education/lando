@@ -65,70 +65,63 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 55df81e80708ac94baeb1c927677620d, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 55df81e80708ac94baeb1c927677620d, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 9
+  - TimeStamp: 7.2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: d1006424ffc46a640a5e36ce0e2ca6c2, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 10.5
+  - TimeStamp: 9
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: f67e8c8e210020342939453ef35e2d81, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 12.5
+  - TimeStamp: 10
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 3580e69e969d60f4da602637bddd2b3f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 14.5
+  - TimeStamp: 11
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ab88cc6340950764e92587fd0609a285, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 15.5
+  - TimeStamp: 12
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 145c634c27c790941bd27137f9329ac2, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 17.5
+  - TimeStamp: 15
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 09ccd682d58e8c14c90c4623dc8c51c5, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 24
+  - TimeStamp: 18.2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 5d8fba6f275c26545b83b686a4098fc7, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 25
+  - TimeStamp: 19
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 3802b3f50e0f87645b62d3c9a5bcfd4e, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 30
+  - TimeStamp: 22.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

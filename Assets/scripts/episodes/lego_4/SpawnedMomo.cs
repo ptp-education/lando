@@ -420,15 +420,11 @@ public class SpawnedMomo : SpawnedObject
             customizeSenior_.background_.gameObject.SetActive(true);
 
             //TODO: This should change to senior VO
-            gameManager_.SendNewActionInternal("-character talk momo-adult");
-            Go.to(this, 5f, new GoTweenConfig().onComplete(t =>
-            {
-                gameManager_.SendNewActionInternal("-character talk momo-customization");
-                Go.to(this, 2.5f, new GoTweenConfig().onComplete(y => {
-                    gameManager_.SendNewActionInternal("-update-options choose");
-                }
-                ));
-            }));
+            gameManager_.SendNewActionInternal("-character talk momo-customization");
+            Go.to(this, 2.5f, new GoTweenConfig().onComplete(y => {
+                gameManager_.SendNewActionInternal("-update-options choose");
+            }
+            ));
         }
 
         if (level == 2)
@@ -453,14 +449,9 @@ public class SpawnedMomo : SpawnedObject
             customizeTeen_.background_.gameObject.SetActive(true);
 
             gameManager_.SendNewActionInternal("-character talk momo-teen");
-            Go.to(this, 5f, new GoTweenConfig().onComplete(t =>
+            Go.to(this, 5.8f, new GoTweenConfig().onComplete(t =>
             {
-                gameManager_.SendNewActionInternal("-character talk momo-customization");
-                Go.to(this, 2.5f, new GoTweenConfig().onComplete(y => {
-                    gameManager_.SendNewActionInternal("-update-options choose");
-                }
-                ));
-
+                gameManager_.SendNewActionInternal("-update-options choose");
             }));
         }
     }

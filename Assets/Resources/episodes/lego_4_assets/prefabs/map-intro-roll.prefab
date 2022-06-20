@@ -105,19 +105,12 @@ MonoBehaviour:
     Ran: 0
   - TimeStamp: 2
     VoiceoverFile: 
-    CommandLine: -character talk map-intro-shake-0
+    CommandLine: -character talk map-intro-roll
     PrintFile: 
     ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
-    VoiceoverFile: 
-    CommandLine: -character talk map-intro-shake-1
-    PrintFile: 
-    ImageToSet: {fileID: 0}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 19
+  - TimeStamp: 17
     VoiceoverFile: 
     CommandLine: -node next
     PrintFile: 

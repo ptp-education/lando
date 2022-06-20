@@ -51,28 +51,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 1
+  - TimeStamp: 0
     VoiceoverFile: 
     CommandLine: -character talk simulator-supports-a
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: fbc0da080539aa549a0937726ae5228c, type: 3}
+    ImageToSet: {fileID: 21300000, guid: fa0208e4ec8ed75469b12d60af95e627, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: b43b79592f962104c817e87b1229cfdf, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 8b35c56250d1ac24b8369f758136b194, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 9.5
+  - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: bea43e78744dff3449404c81f3981a7a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 444f579e72494094c89d7a601dcf34f6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 24
+  - TimeStamp: 10
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

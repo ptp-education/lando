@@ -103,7 +103,7 @@ MonoBehaviour:
     ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5.5
+  - TimeStamp: 4.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

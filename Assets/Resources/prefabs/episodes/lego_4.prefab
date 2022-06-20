@@ -155,18 +155,18 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1
-    Command: -character talk map-example-0
+    Command: -character talk map-pentagon-0
     EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 6
-    Command: -character talk map-example-1
+    Command: -character talk map-pentagon-1
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 7
+  - TimeStamp: 8
     Command: 
     EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
     Ran: 0
-  - TimeStamp: 10.5
+  - TimeStamp: 9
     Command: -show-choices
     EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
     Ran: 0
@@ -332,11 +332,11 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: 4200544645346117908, guid: 40112ff11fe17314fa8b8b326d76e825, type: 3}
     Ran: 0
-  - TimeStamp: 24
+  - TimeStamp: 19
     Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 27
+  - TimeStamp: 22
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -344,10 +344,10 @@ MonoBehaviour:
   - CommandToCall: -got-it
     StoredCommands:
     - TimeStamp: 0
-      Command: -character talk simulator-start -update-options empty
+      Command: -character talk simulator-previous -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
-    - TimeStamp: 13
+    - TimeStamp: 11.3
       Command: -node next
       EventObject: {fileID: 0}
       Ran: 0
@@ -437,19 +437,7 @@ MonoBehaviour:
     Command: -character talk map-intro-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 6
-    Command: -character talk map-intro-1
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 12.5
-    Command: -character talk map-intro-2
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 17
-    Command: -character talk map-intro-3
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 23.5
+  - TimeStamp: 19.5
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -866,11 +854,7 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 18
-    Command: -character talk office-1
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 21.5
+  - TimeStamp: 19
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -1068,15 +1052,15 @@ MonoBehaviour:
   OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines:
-  - TimeStamp: 1.5
-    Command: -character talk map-pentagon-0
+  - TimeStamp: 0.5
+    Command: -character talk map-pentagon-2
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 7
-    Command: -character talk map-pentagon-1
+  - TimeStamp: 4.5
+    Command: -character talk map-pentagon-3
     EventObject: {fileID: 4200544645346117908, guid: 30003fe73f596664aad02d35c01d8c38, type: 3}
     Ran: 0
-  - TimeStamp: 17
+  - TimeStamp: 13
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -1463,10 +1447,10 @@ MonoBehaviour:
   ImageFilePath: episodes/lego_4_screens/office
   VideoOptions: []
   SimulatorDetails:
-    ShowAnswer: 0
+    ShowAnswer: 1
     Steps:
-    - Question: {fileID: 4200544645346117908, guid: 0ac52584e7fa8a14896ea4e6a299c6fe, type: 3}
-      Answer: {fileID: 4200544645346117908, guid: 588cc94802de90047b3840d49a782eae, type: 3}
+    - Question: {fileID: 4200544645346117908, guid: 0742173fb51a4844797c2a99b63cbcbc, type: 3}
+      Answer: {fileID: 4200544645346117908, guid: 2b39b0f3a0c711142b0e3091ead157e9, type: 3}
     - Question: {fileID: 4200544645346117908, guid: 06ec791dbc22c12448d17dd2abd689fd, type: 3}
       Answer: {fileID: 4200544645346117908, guid: 64ab4bc30df96264a98551f3c52b2133, type: 3}
     - Question: {fileID: 4200544645346117908, guid: 3026af85aa0d43d44aace330f938e81f, type: 3}

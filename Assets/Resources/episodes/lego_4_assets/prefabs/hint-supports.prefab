@@ -52,17 +52,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: hint-support
+    VoiceoverFile: hint-supports
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: c3fc644dd33de4ab181842e45a28ce1f, type: 3}
+    ImageToSet: {fileID: 21300000, guid: b0beaf1a0183b4b44a9f80143e3500a6, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: ef7243a798dde4e9c974f474db1809d7, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 196e1d0dff9c44158b72b6cf7c6c87dd, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 2
@@ -76,14 +76,14 @@ MonoBehaviour:
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 196e1d0dff9c44158b72b6cf7c6c87dd, type: 3}
+    ImageToSet: {fileID: 21300000, guid: ef7243a798dde4e9c974f474db1809d7, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: b0beaf1a0183b4b44a9f80143e3500a6, type: 3}
+    ImageToSet: {fileID: 21300000, guid: c3fc644dd33de4ab181842e45a28ce1f, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 5

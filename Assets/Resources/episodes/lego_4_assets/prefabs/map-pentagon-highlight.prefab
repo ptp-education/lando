@@ -89,28 +89,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 1.5
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 3dfb4d77aa431f847b2b30407b77840d, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 4.5
+  - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b289828e7130ed84da7ab0b8d49ca06f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 8.5
+  - TimeStamp: 5.2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9956de139cd092440a97b349a966b83c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 11
+  - TimeStamp: 8
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

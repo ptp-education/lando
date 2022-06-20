@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: hint-walls-supports
+    VoiceoverFile: hint-even-more-walls
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 15a90083b85924ade9352fabe4bf44d9, type: 3}

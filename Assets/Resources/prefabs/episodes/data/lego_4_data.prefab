@@ -83,25 +83,25 @@ MonoBehaviour:
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success-last
     RequirementsVO: 
-    NextChallengeVO: testing-next-announce-800
+    NextChallengeVO: challenge-next-800
   Hints:
   - Name: build-supports
-    Thumbnail: {fileID: 21300000, guid: c3fc644dd33de4ab181842e45a28ce1f, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 866cc5e99c12cf44b834750a6de33600, type: 3}
     ObjectToLoad: {fileID: 4200544645346117908, guid: a1ade7f9200a19d409a753eeabceaabe, type: 3}
   - Name: interlocking-data
-    Thumbnail: {fileID: 21300000, guid: 4a87825745b7e4656bc1e93b709d1b8f, type: 3}
+    Thumbnail: {fileID: 21300000, guid: be72093143355564d928f3da24d18f17, type: 3}
     ObjectToLoad: {fileID: 4200544645346117908, guid: f077eedc28c436d419cdb99c96f91e19, type: 3}
   - Name: more-walls
-    Thumbnail: {fileID: 21300000, guid: b5bbcd4afb68842d09d8f812071aa2d9, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 76c7e5d28431e9c43b183c76aee7087d, type: 3}
     ObjectToLoad: {fileID: 4200544645346117908, guid: 93271af72c0960941874f6be3730f108, type: 3}
   - Name: even-more-walls
-    Thumbnail: {fileID: 21300000, guid: 405a3153503584717b92b4fa407ee870, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 137219266c0ee2a4da621d111368b55e, type: 3}
     ObjectToLoad: {fileID: 4200544645346117908, guid: ba59f4a16b9632947a5f3603b34bf3db, type: 3}
   - Name: ceiling
     Thumbnail: {fileID: 21300000, guid: 51e9c0675950c99409387a86f5eadde1, type: 3}
     ObjectToLoad: {fileID: 4200544645346117908, guid: fcf5dddcb55092e4cb20a50a94e68af0, type: 3}
   - Name: short-supporrts
-    Thumbnail: {fileID: 21300000, guid: c9ea6ae9fc603ac419284a45d12dd61b, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 7c6d7654eb1bdc641a214b398c44bdbe, type: 3}
     ObjectToLoad: {fileID: 4200544645346117908, guid: 14082c1c57dddfb4695c5af0280b9ed3, type: 3}
   WaysToFail:
   - ButtonName: 6 block tall

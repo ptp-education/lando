@@ -55,24 +55,17 @@ MonoBehaviour:
     VoiceoverFile: hint-short-supports
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: b42c043af019de84c882c3db641b1e6a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 40fb09ca07668d8449b591ed2589d980, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 7e7eb6bd41cae214e97d86709427851d, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 432293a9798613047a33ebfa59a84450, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 4.7
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
