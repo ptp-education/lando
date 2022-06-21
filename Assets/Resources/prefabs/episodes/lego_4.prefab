@@ -1447,7 +1447,7 @@ MonoBehaviour:
   ImageFilePath: episodes/lego_4_screens/office
   VideoOptions: []
   SimulatorDetails:
-    ShowAnswer: 1
+    ShowAnswer: 0
     Steps:
     - Question: {fileID: 4200544645346117908, guid: 0742173fb51a4844797c2a99b63cbcbc, type: 3}
       Answer: {fileID: 4200544645346117908, guid: 2b39b0f3a0c711142b0e3091ead157e9, type: 3}

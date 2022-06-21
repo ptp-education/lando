@@ -32,6 +32,18 @@ public class SpawnedMomo : SpawnedObject
             whiskers_?.gameObject.SetActive(false);
             wings_?.gameObject.SetActive(false);
         }
+
+        public void TurnOffCustomizations() {
+            antenna_?.gameObject.SetActive(false);
+            tail_?.gameObject.SetActive(false);
+            spots_?.gameObject.SetActive(false);
+            claws_?.gameObject.SetActive(false);
+            mohawk_?.gameObject.SetActive(false);
+            nose_?.gameObject.SetActive(false);
+            stripes_?.gameObject.SetActive(false);
+            whiskers_?.gameObject.SetActive(false);
+            wings_?.gameObject.SetActive(false);
+        }
     }
 
     [Header("Scene")]
@@ -217,6 +229,11 @@ public class SpawnedMomo : SpawnedObject
             starterBackground_.transform.SetParent(sm.OverlayParent);
         }
 
+        InitCustomization();
+    }
+
+    private void InitCustomization() 
+    {
         neutral_.InitCustomization();
         success_.InitCustomization();
         failure_.InitCustomization();
@@ -232,10 +249,11 @@ public class SpawnedMomo : SpawnedObject
 
     public override void ReceivedAction(string action)
     {
+        Debug.LogWarning(action);
         List<string> args = ArgumentHelper.ArgumentsFromCommand("-momo", action);
         if (args.Count == 0) return;
 
-        //-momo success 2830192
+        //InitCustomization();
 
         commandType_ = args[0];
         if (args.Count > 1)
@@ -321,6 +339,7 @@ public class SpawnedMomo : SpawnedObject
         starterBackground_.gameObject.SetActive(false);
         customizeTeenBackground_.gameObject.SetActive(false);
         customizeAdultBackground_.gameObject.SetActive(false);
+        customizeSenior_.background_.gameObject.SetActive(false);
         evolveBackground_.gameObject.SetActive(false);
 
         neutral_.background_.gameObject.SetActive(false);
@@ -444,9 +463,8 @@ public class SpawnedMomo : SpawnedObject
         }
         if (level == 1)
         {
-            customizeTeen_.momo_.sprite = sprites[1];
-
             customizeTeen_.background_.gameObject.SetActive(true);
+            customizeTeen_.momo_.sprite = sprites[1];
 
             gameManager_.SendNewActionInternal("-character talk momo-teen");
             Go.to(this, 5.8f, new GoTweenConfig().onComplete(t =>
@@ -492,7 +510,6 @@ public class SpawnedMomo : SpawnedObject
                     break;
             }
             gs.Add<string>(GameStorage.Key.MomoTeenCustomization, selection);
-            sprites = SpritesEvolveForRfid(currentRfid_);
         } else if (adultActive)
         {
             string selection = null;
@@ -578,6 +595,7 @@ public class SpawnedMomo : SpawnedObject
         {
             customizeTeenBackground_.gameObject.SetActive(false);
             customizeAdultBackground_.gameObject.SetActive(false);
+            customizeSenior_.background_.gameObject.SetActive(false);
             ShowMomoOnScreen();
             gameManager_.SendNewActionInternal("-update-options default");
         })));
@@ -591,6 +609,8 @@ public class SpawnedMomo : SpawnedObject
 
         AudioPlayer.PlayAudio("audio/sfx/momo-grunt");
 
+        neutral_.TurnOffCustomizations();
+
         neutralBackground_.gameObject.SetActive(true);
         SetSprite(neutralMomo_, currentRfid_, Status.Neutral);
     }
@@ -602,6 +622,8 @@ public class SpawnedMomo : SpawnedObject
         HideAllScenes();
 
         AudioPlayer.PlayAudio("audio/sfx/momo-grunt");
+
+        success_.TurnOffCustomizations();
 
         successBackground_.gameObject.SetActive(true);
         SetSprite(success_.momo_, currentRfid_, Status.Success);
@@ -615,6 +637,8 @@ public class SpawnedMomo : SpawnedObject
         HideAllScenes();
 
         AudioPlayer.PlayAudio("audio/sfx/wall-crash");
+
+        failure_.TurnOffCustomizations();
 
         failureBackground_.gameObject.SetActive(true);
         SetSprite(failureMomo_, currentRfid_, Status.Failure);
@@ -699,6 +723,7 @@ public class SpawnedMomo : SpawnedObject
         }
         else if (LevelOfMomo(rfid) == 2)
         {
+            customizeTeen_.TurnOffCustomizations();
             switch (teenCustomization)
             {
                 case kAntenna:
@@ -737,7 +762,8 @@ public class SpawnedMomo : SpawnedObject
             }
         }
         else if (LevelOfMomo(rfid) == 3) {
-
+            customizeTeen_.TurnOffCustomizations();
+            customizeAdult_.TurnOffCustomizations();
             switch (teenCustomization)
             {
                 case kAntenna:
@@ -812,9 +838,21 @@ public class SpawnedMomo : SpawnedObject
         //Senior Customization
         if (seniorCustomization != null && seniorCustomization.Length > 0)
         {
+            neutral_.nose_.gameObject.SetActive(false);
+            neutral_.claws_.gameObject.SetActive(false);
+            neutral_.wings_.gameObject.SetActive(true);
+
+            success_.nose_.gameObject.SetActive(false);
+            success_.claws_.gameObject.SetActive(false);
+            success_.wings_.gameObject.SetActive(false);
+
+            failure_.nose_.gameObject.SetActive(false);
+            failure_.claws_.gameObject.SetActive(false);
+            failure_.wings_.gameObject.SetActive(false);
             switch (seniorCustomization)
             {
                 case kWings:
+                    
                     switch (status)
                     {
                         case Status.Neutral:
@@ -910,6 +948,29 @@ public class SpawnedMomo : SpawnedObject
         //Adult customization
         if (adultCustomization != null && adultCustomization.Length > 0)
         {
+            neutral_.whiskers_.gameObject.SetActive(false);
+            success_.whiskers_.gameObject.SetActive(false);
+            failure_.whiskers_.gameObject.SetActive(false);
+
+            neutral_.mohawk_.gameObject.SetActive(false);
+            success_.mohawk_.gameObject.SetActive(false);
+            failure_.mohawk_.gameObject.SetActive(false);
+
+            neutral_.stripes_.gameObject.SetActive(false);
+            success_.stripes_.gameObject.SetActive(false);
+            failure_.stripes_.gameObject.SetActive(false);
+
+            neutral_.antenna_.gameObject.SetActive(false);
+            success_.antenna_.gameObject.SetActive(false);
+            failure_.antenna_.gameObject.SetActive(false);
+
+            neutral_.spots_.gameObject.SetActive(false);
+            success_.spots_.gameObject.SetActive(false);
+            failure_.spots_.gameObject.SetActive(false);
+
+            neutral_.tail_.gameObject.SetActive(false);
+            success_.tail_.gameObject.SetActive(false);
+            failure_.tail_.gameObject.SetActive(false);
             switch (adultCustomization)
             {
                 case kWhiskers:
@@ -1042,6 +1103,17 @@ public class SpawnedMomo : SpawnedObject
         //Teen customization
         if (teenCustomization != null && teenCustomization.Length > 0)
         {
+            neutral_.antenna_.gameObject.SetActive(false);
+            success_.antenna_.gameObject.SetActive(false);
+            failure_.antenna_.gameObject.SetActive(false);
+
+            neutral_.spots_.gameObject.SetActive(false);
+            success_.spots_.gameObject.SetActive(false);
+            failure_.spots_.gameObject.SetActive(false);
+
+            neutral_.tail_.gameObject.SetActive(false);
+            success_.tail_.gameObject.SetActive(false);
+            failure_.tail_.gameObject.SetActive(false);
             switch (teenCustomization)
             {
                 case kAntenna:
