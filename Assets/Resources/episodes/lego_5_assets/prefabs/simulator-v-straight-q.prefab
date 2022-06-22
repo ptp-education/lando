@@ -53,45 +53,17 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk simulator-v-straight-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ce7ff283a24f1004ca95af7d3adb0135, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0b746a3dcb383dd448b735fbc9737e7a, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 8.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 807fdf9f473c91b4f9da642d32225c2d, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 17
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 0ce0bf9060f86924193f257eb8b13b6a, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 19
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 677be1688b26a3749bcc07377b12c65c, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 26
-    VoiceoverFile: 
-    CommandLine: -character talk setup-make-sense
-    PrintFile: 
-    ImageToSet: {fileID: 0}
-    SelfDestruct: 0
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

@@ -236,8 +236,8 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 12.5
-    Command: -character talk office-1
+  - TimeStamp: 14.3
+    Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
@@ -677,7 +677,21 @@ MonoBehaviour:
     Steps: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - StartShown: 1
+    Name: default
+    Options:
+    - ButtonName: Redeem reward
+      TeacherOnly: 0
+      Command: -claim-reward {0}
+      EventObject: {fileID: 0}
+    - ButtonName: Load swing simulator
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
+  - StartShown: 1
+    Name: empty
+    Options: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -685,20 +699,6 @@ MonoBehaviour:
     Scale: {x: 1, y: 1, z: 1}
     Object: {fileID: 1950537136018021120, guid: 578f8d8219326429bbc9e12ae0a53ab4, type: 3}
     Path: episodes/lego_5_assets/prefabs/swing
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 7445188016951668458, guid: a643afc8016cd4895b5d39419eab174c, type: 3}
-    Path: episodes/lego_5_assets/prefabs/lego_5_guide
-    Spawned: 0
-  - TimeStamp: 0
-    SpawnKey: 
-    Position: {x: 0, y: 0, z: 0}
-    Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 3483735794464290167, guid: 61b664140390e48d5ba9b69373cbb3ef, type: 3}
-    Path: prefabs/rfid/challenge-ui
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
@@ -798,18 +798,43 @@ MonoBehaviour:
     Steps: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: default
+    Options:
+    - ButtonName: We got it!
+      TeacherOnly: 0
+      Command: -got-it
+      EventObject: {fileID: 0}
+    - ButtonName: Can you repeat it?
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: -860130409809325442, guid: 534c7bf59ffd8154fbbd660ccf505130, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
+  - TimeStamp: 0
+    Command: -sfx "audio/sfx/new-building"
+    EventObject: {fileID: 0}
+    Ran: 0
   - TimeStamp: 1.5
-    Command: -character talk intro-0
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 10.5
     Command: 
+    EventObject: {fileID: -860130409809325442, guid: 534c7bf59ffd8154fbbd660ccf505130, type: 3}
+    Ran: 0
+  - TimeStamp: 22
+    Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
-  CommandLineContainers: []
+  CommandLineContainers:
+  - CommandToCall: -got-it
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -character talk simulator-previous
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -node next
+      EventObject: {fileID: 0}
+      Ran: 0
 --- !u!1 &6114239394994368521
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,11 +906,11 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1.5
-    Command: -character talk intro-0
+    Command: -character talk map-intro-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 10.5
-    Command: 
+  - TimeStamp: 25.5
+    Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []

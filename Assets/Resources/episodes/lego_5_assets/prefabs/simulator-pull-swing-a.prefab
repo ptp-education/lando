@@ -53,40 +53,40 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk simulator-pull-swing-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0ef3307d395dd5d4a8685ba6b087023a, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 2.3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 058f524b2a75385418b63eb8e3103bed, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 8.5
+  - TimeStamp: 6.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ca5e2936150189e41b7589a3cb4d719d, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 17
+  - TimeStamp: 7.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: e096e73818b6c794997b992ebd35c3a9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 19
+  - TimeStamp: 8.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6e71ac7b6ad0d404aa4442fe8675e401, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 26
+  - TimeStamp: 10
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

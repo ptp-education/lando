@@ -53,16 +53,9 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk problem-swing-higher
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b79531803e044734d8e147a9cc02e219, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 6
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 0b746a3dcb383dd448b735fbc9737e7a, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

@@ -53,17 +53,17 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk simulator-stabilize-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 92252b8a61fc1bf45845f82f24935cf6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 0b746a3dcb383dd448b735fbc9737e7a, type: 3}
-    SelfDestruct: 0
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
