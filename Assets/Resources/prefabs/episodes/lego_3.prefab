@@ -82,14 +82,14 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
-    Command: -character talk map-intro2-0 -showPieces
+    Command: -character talk explainer-0
     EventObject: {fileID: -860130409809325442, guid: b96befe8ee4d06544b4f50e8f2153d2b, type: 3}
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 22.4
     Command: -character talk setup-make-sense
-    EventObject: {fileID: -860130409809325442, guid: b96befe8ee4d06544b4f50e8f2153d2b, type: 3}
+    EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 26.5
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -97,10 +97,10 @@ MonoBehaviour:
   - CommandToCall: -got-it
     StoredCommands:
     - TimeStamp: 0
-      Command: 
+      Command: -character talk simulator-previous
       EventObject: {fileID: 0}
       Ran: 0
-    - TimeStamp: 0
+    - TimeStamp: 13
       Command: -node-next
       EventObject: {fileID: 0}
       Ran: 0
@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 5712271654655354252}
   - component: {fileID: 3277004500170335158}
   m_Layer: 5
-  m_Name: explainer (1)
+  m_Name: simulator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,28 +551,25 @@ MonoBehaviour:
     Steps: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: default
+    Options:
+    - ButtonName: Start challenge
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
   PrefabSpawnObjects: []
   CommandLines:
-  - TimeStamp: 1
-    Command: -introTalk
+  - TimeStamp: 0
+    Command: -character talk map-intro-0
+    EventObject: {fileID: -860130409809325442, guid: 052ca6f4954af614f9be42a5aa0189d7, type: 3}
+    Ran: 0
+  - TimeStamp: 20.3
+    Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
-  CommandLineContainers:
-  - CommandToCall: -introTalk
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -character talk map-intro-0
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 6
-      Command: ' -character talk map-intro-1'
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 14
-      Command: -spawnoption "Use an elevator!" "Take the stairs!" "Build a crane!"
-      EventObject: {fileID: 0}
-      Ran: 0
+  CommandLineContainers: []
 --- !u!1 &8072378228731454334
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,8 +870,8 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 10
-    Command: ' -character talk office-1'
+  - TimeStamp: 13.3
+    Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
