@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-swing-q
+    CommandLine: -character talk simulator-stablize-swing-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1179cf2dc3d20874480cf6aeb5a77d77, type: 3}
     SelfDestruct: 0

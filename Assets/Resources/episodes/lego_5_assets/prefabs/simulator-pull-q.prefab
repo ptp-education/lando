@@ -51,14 +51,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: -character talk simulator-pull-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 7513f7bd008ab574e97cc6a8725956ad, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 5.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
