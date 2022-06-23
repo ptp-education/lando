@@ -53,45 +53,52 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk simulator-counterweights-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0c6facc8d8501014a8daf9b8d803437b, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 893d897116e46904da9b1035db8a5d4a, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6ed97735690c69f4da95728a47f5eef9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 24f70887f8a9cb84691c455fd19c634f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 04a67d8a84066c446a5916b44b75878d, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 8390def47d666314a91152dd4700a5d0, type: 3}
-    SelfDestruct: 1
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 18.3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

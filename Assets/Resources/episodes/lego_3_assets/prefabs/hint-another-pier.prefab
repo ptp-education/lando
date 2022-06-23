@@ -53,12 +53,12 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk hint-another-pier
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a5ae5392adb01ff41badd95857d1294a, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
