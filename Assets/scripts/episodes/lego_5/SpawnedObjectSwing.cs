@@ -173,6 +173,11 @@ namespace Lando.Class.Lego5
                 correctSizeSwing_.gameObject.SetActive(true);
                 animalInSwing_.gameObject.SetActive(true);
                 AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
+
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    HandleSuccess();
+                    Debug.LogWarning("successs");
+                }));
             }
         }
 
