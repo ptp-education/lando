@@ -65,7 +65,7 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
-  FadeInFromPreviousScene: 0
+  FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn:
   - StartShown: 0
@@ -81,15 +81,15 @@ MonoBehaviour:
       EventObject: {fileID: -860130409809325442, guid: b96befe8ee4d06544b4f50e8f2153d2b, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
-  - TimeStamp: 0
+  - TimeStamp: 1.5
     Command: 
     EventObject: {fileID: -860130409809325442, guid: b96befe8ee4d06544b4f50e8f2153d2b, type: 3}
     Ran: 0
-  - TimeStamp: 18.7
+  - TimeStamp: 19.2
     Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 22.5
+  - TimeStamp: 24
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -239,13 +239,28 @@ MonoBehaviour:
       TeacherOnly: 0
       Command: -claim-reward {0}
       EventObject: {fileID: 0}
-  - StartShown: 0
+    - ButtonName: Load crane simulator
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
+  - StartShown: 1
     Name: multiple
     Options:
     - ButtonName: Left
       TeacherOnly: 0
-      Command: -claim-reward {0}
+      Command: -add-art-1 -update-options empty
       EventObject: {fileID: 0}
+    - ButtonName: Middle
+      TeacherOnly: 0
+      Command: -add-art-2 -update-options empty
+      EventObject: {fileID: 0}
+    - ButtonName: Right
+      TeacherOnly: 0
+      Command: -add-art-3 -update-options empty
+      EventObject: {fileID: 0}
+  - StartShown: 1
+    Name: empty
+    Options: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 

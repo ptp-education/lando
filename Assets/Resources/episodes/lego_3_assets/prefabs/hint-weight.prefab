@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk hint-weigh-down
+    VoiceoverFile: hint-weigh-down
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: faf1df7de916ebf4dba6f3c1a2149c3c, type: 3}
     SelfDestruct: 0
@@ -77,13 +77,6 @@ MonoBehaviour:
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: d8968fa19f4967144b1d114282756131, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 2.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

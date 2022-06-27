@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk problem-tall-enough
+    VoiceoverFile: problem-tall-enough
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ebd3bab108cb0aa4d95050591fd23e08, type: 3}
     SelfDestruct: 0

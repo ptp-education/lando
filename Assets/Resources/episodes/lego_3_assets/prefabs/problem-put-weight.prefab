@@ -52,17 +52,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk problem-weight-end
+    VoiceoverFile: problem-weight-end
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 4c042efd47e8e504ba02546b74173030, type: 3}
+    ImageToSet: {fileID: 21300000, guid: b185c1b3aae3c794990b127670395ce1, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 4e736486383befd45993f09c4fef6faa, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 0}
+    ImageToSet: {fileID: 21300000, guid: c16d0f0b6f1c92a49bacf634322000e3, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 1.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 3d9f7ae4cce7760439c761f4f377e89c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5d9e24f2245b17c4db4cae238da38a9b, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

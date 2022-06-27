@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk hint-further-counterweight
+    VoiceoverFile: hint-further-counterweight
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 89a8f42f69d10114aacf8cbfdd09f9ed, type: 3}
     SelfDestruct: 0
@@ -84,13 +84,6 @@ MonoBehaviour:
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a891035aa4b11784996018b7db005abf, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 3
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

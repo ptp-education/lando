@@ -56,8 +56,7 @@ MonoBehaviour:
     HintRewards:
     - further-counterweight
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 1 200 -update-options
-      multiple
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 200
     RequirementsVO: 
     NextChallengeVO: challenge-1-200
   - Name: 1-500
@@ -66,7 +65,7 @@ MonoBehaviour:
     HintRewards:
     - weight-down
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 1 500 -hidespawnoption
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 500
     RequirementsVO: 
     NextChallengeVO: challenge-1-500
   - Name: 2-200
@@ -74,7 +73,7 @@ MonoBehaviour:
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 2 100 -hidespawnoption
+    RewardCommand: -character talk map-success-sculpture -art-holder show 2 200 -hidespawnoption
     RequirementsVO: 
     NextChallengeVO: challenge-2-200
   - Name: 2-500
@@ -90,7 +89,7 @@ MonoBehaviour:
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 3 100 -hidespawnoption
+    RewardCommand: -character talk map-success-sculpture -art-holder show 3 200 -hidespawnoption
     RequirementsVO: 
     NextChallengeVO: challenge-3-200
   - Name: 3-500
@@ -106,7 +105,7 @@ MonoBehaviour:
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 4 100 -hidespawnoption
+    RewardCommand: -character talk map-success-sculpture -art-holder show 4 200 -hidespawnoption
     RequirementsVO: 
     NextChallengeVO: challenge-4-200
   - Name: 4-500
