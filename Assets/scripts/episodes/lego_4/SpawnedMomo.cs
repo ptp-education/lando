@@ -574,14 +574,37 @@ public class SpawnedMomo : SpawnedObject
             GoTweenFlow flow = new GoTweenFlow();
             flow.insert(0f, new GoTween(customizeTeenMomo_.transform, 0.25f, new GoTweenConfig().scale(0.55f)));
             flow.insert(0.25f, new GoTween(customizeTeenMomo_.transform, 0.25f, new GoTweenConfig().scale(0.5f)));
+
+            flow.insert(0f, new GoTween(customizeTeen_.tail_.transform, 0.25f, new GoTweenConfig().scale(0.55f)));
+            flow.insert(0.25f, new GoTween(customizeTeen_.tail_.transform, 0.25f, new GoTweenConfig().scale(0.5f)));
+
             flow.play();
-        } else
+        }
+        else if (adultActive)
         {
             SetSprite(customizeAdultMomo_, currentRfid_, Status.Neutral);
 
             GoTweenFlow flow = new GoTweenFlow();
             flow.insert(0f, new GoTween(customizeAdultMomo_.transform, 0f, new GoTweenConfig().scale(0.35f)));
             flow.insert(0.25f, new GoTween(customizeAdultMomo_.transform, 0.25f, new GoTweenConfig().scale(0.3f)));
+
+            flow.insert(0f, new GoTween(customizeAdult_.tail_.transform, 0f, new GoTweenConfig().scale(0.55f)));
+            flow.insert(0.25f, new GoTween(customizeAdult_.tail_.transform, 0.25f, new GoTweenConfig().scale(0.5f)));
+            flow.play();
+        }
+        else if (seniorActive) 
+        {
+            SetSprite(customizeAdultMomo_, currentRfid_, Status.Neutral);
+
+            GoTweenFlow flow = new GoTweenFlow();
+            flow.insert(0f, new GoTween(customizeSenior_.momo_.transform, 0f, new GoTweenConfig().scale(0.35f)));
+            flow.insert(0.25f, new GoTween(customizeSenior_.momo_.transform, 0.25f, new GoTweenConfig().scale(0.3f)));
+
+            flow.insert(0f, new GoTween(customizeSenior_.tail_.transform, 0f, new GoTweenConfig().scale(0.55f)));
+            flow.insert(0.25f, new GoTween(customizeSenior_.tail_.transform, 0.25f, new GoTweenConfig().scale(0.5f)));
+
+            flow.insert(0f, new GoTween(customizeSenior_.wings_.transform, 0f, new GoTweenConfig().scale(0.35f)));
+            flow.insert(0.25f, new GoTween(customizeSenior_.wings_.transform, 0.25f, new GoTweenConfig().scale(0.3f)));
             flow.play();
         }
 
@@ -688,6 +711,7 @@ public class SpawnedMomo : SpawnedObject
     }
 
     //return sprites based on the momo's level
+    //Sprites for customization screen
     private List<Sprite> SpritesEvolveForRfid(string rfid)
     {
         GameStorage gs = gameManager_.GameStorageForUserId(rfid);
@@ -764,6 +788,8 @@ public class SpawnedMomo : SpawnedObject
         else if (LevelOfMomo(rfid) == 3) {
             customizeTeen_.TurnOffCustomizations();
             customizeAdult_.TurnOffCustomizations();
+            Debug.LogWarning(teenCustomization);
+            Debug.LogWarning(adultCustomization);
             switch (teenCustomization)
             {
                 case kAntenna:
@@ -776,6 +802,7 @@ public class SpawnedMomo : SpawnedObject
                     break;   
                 case kTail:  
                     customizeSenior_.tail_.gameObject.SetActive(true);
+                    customizeSenior_.tail_.sprite = adultTail_;
                     break;
             }
 
@@ -838,9 +865,12 @@ public class SpawnedMomo : SpawnedObject
         //Senior Customization
         if (seniorCustomization != null && seniorCustomization.Length > 0)
         {
+            Debug.LogWarning(seniorCustomization);
+            Debug.LogWarning(adultCustomization);
+            Debug.LogWarning(teenCustomization);
             neutral_.nose_.gameObject.SetActive(false);
             neutral_.claws_.gameObject.SetActive(false);
-            neutral_.wings_.gameObject.SetActive(true);
+            neutral_.wings_.gameObject.SetActive(false);
 
             success_.nose_.gameObject.SetActive(false);
             success_.claws_.gameObject.SetActive(false);
@@ -907,6 +937,97 @@ public class SpawnedMomo : SpawnedObject
                     }
                     break;
             }
+            switch (adultCustomization)
+            {
+                case kWhiskers:
+                    switch (status)
+                    {
+                        case Status.Neutral:
+                            neutral_.whiskers_.gameObject.SetActive(true);
+                            neutral_.whiskers_.sprite = adultWhiskersNeutral_;
+                            break;
+                        case Status.Success:
+                            success_.whiskers_.gameObject.SetActive(true);
+                            success_.whiskers_.sprite = adultWhiskersHappy_;
+                            break;
+                        case Status.Failure:
+                            failure_.whiskers_.gameObject.SetActive(true);
+                            failure_.whiskers_.sprite = adultWhiskersSad_;
+                            break;
+                        case Status.Transforming: return null;
+                    }
+                    break;
+                case kMohawk:
+                    neutral_.mohawk_.gameObject.SetActive(true);
+                    success_.mohawk_.gameObject.SetActive(true);
+                    failure_.mohawk_.gameObject.SetActive(true);
+                    break;
+                case kStripes:
+                    switch (status)
+                    {
+                        case Status.Neutral:
+                            neutral_.stripes_.gameObject.SetActive(true);
+                            neutral_.stripes_.sprite = adultStripesNeutral_;
+                            break;
+                        case Status.Success:
+                            success_.stripes_.gameObject.SetActive(true);
+                            success_.stripes_.sprite = adultStripesHappy_;
+                            break;
+                        case Status.Failure:
+                            failure_.stripes_.gameObject.SetActive(true);
+                            failure_.stripes_.sprite = adultStripesSad_;
+                            break;
+                        case Status.Transforming: return null;
+                    }
+                    break;
+            }
+            switch (teenCustomization)
+            {
+                case kAntenna:
+                    switch (status)
+                    {
+                        case Status.Neutral:
+                            neutral_.antenna_.gameObject.SetActive(true);
+                            neutral_.antenna_.sprite = adultAntennaNeutral_;
+                            break;
+                        case Status.Success:
+                            success_.antenna_.gameObject.SetActive(true);
+                            success_.antenna_.sprite = adultAntennaHappy_;
+                            break;
+                        case Status.Failure:
+                            failure_.antenna_.gameObject.SetActive(true);
+                            failure_.antenna_.sprite = adultAntennaSad_;
+                            break;
+                        case Status.Transforming: return null;
+                    }
+                    break;
+                case kSpots:
+                    switch (status)
+                    {
+                        case Status.Neutral:
+                            neutral_.spots_.gameObject.SetActive(true);
+                            neutral_.spots_.sprite = adultSpotsNeutral_;
+                            break;
+                        case Status.Success:
+                            success_.spots_.gameObject.SetActive(true);
+                            success_.spots_.sprite = adultSpotsHappy_;
+                            break;
+                        case Status.Failure:
+                            failure_.spots_.gameObject.SetActive(true);
+                            failure_.spots_.sprite = adultSpotsSad_;
+                            break;
+                        case Status.Transforming: return null;
+                    }
+                    break;
+                case kTail:
+                    neutral_.tail_.gameObject.SetActive(true);
+                    neutral_.tail_.sprite = adultTail_;
+                    success_.tail_.gameObject.SetActive(true);
+                    success_.tail_.sprite = adultTail_;
+                    failure_.tail_.gameObject.SetActive(true);
+                    failure_.tail_.sprite = adultTail_;
+                    break;
+            }
             switch (starter)
             {
                 case kRed:
@@ -948,6 +1069,7 @@ public class SpawnedMomo : SpawnedObject
         //Adult customization
         if (adultCustomization != null && adultCustomization.Length > 0)
         {
+            Debug.LogWarning(adultCustomization);
             neutral_.whiskers_.gameObject.SetActive(false);
             success_.whiskers_.gameObject.SetActive(false);
             failure_.whiskers_.gameObject.SetActive(false);
@@ -1103,6 +1225,7 @@ public class SpawnedMomo : SpawnedObject
         //Teen customization
         if (teenCustomization != null && teenCustomization.Length > 0)
         {
+            Debug.LogWarning("teen");
             neutral_.antenna_.gameObject.SetActive(false);
             success_.antenna_.gameObject.SetActive(false);
             failure_.antenna_.gameObject.SetActive(false);
