@@ -71,7 +71,7 @@ MonoBehaviour:
   - StartShown: 0
     Name: default
     Options:
-    - ButtonName: We go it!
+    - ButtonName: We got it!
       TeacherOnly: 0
       Command: -got-it
       EventObject: {fileID: 0}
@@ -82,14 +82,14 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
-    Command: -character talk explainer-0
+    Command: 
     EventObject: {fileID: -860130409809325442, guid: b96befe8ee4d06544b4f50e8f2153d2b, type: 3}
     Ran: 0
-  - TimeStamp: 18.5
+  - TimeStamp: 18.7
     Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 26.5
+  - TimeStamp: 22.5
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -230,8 +230,22 @@ MonoBehaviour:
     ShowAnswer: 0
     Steps: []
   FadeInFromPreviousScene: 0
-  TestingActive: 0
-  OptionsToSpawn: []
+  TestingActive: 1
+  OptionsToSpawn:
+  - StartShown: 1
+    Name: default
+    Options:
+    - ButtonName: Redeem reward
+      TeacherOnly: 0
+      Command: -claim-reward {0}
+      EventObject: {fileID: 0}
+  - StartShown: 0
+    Name: multiple
+    Options:
+    - ButtonName: Left
+      TeacherOnly: 0
+      Command: -claim-reward {0}
+      EventObject: {fileID: 0}
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
@@ -626,11 +640,11 @@ MonoBehaviour:
       EventObject: {fileID: 0}
   PrefabSpawnObjects: []
   CommandLines:
-  - TimeStamp: 0
+  - TimeStamp: 1
     Command: -character talk map-intro-0
     EventObject: {fileID: -860130409809325442, guid: 052ca6f4954af614f9be42a5aa0189d7, type: 3}
     Ran: 0
-  - TimeStamp: 18
+  - TimeStamp: 19
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -692,14 +706,21 @@ MonoBehaviour:
   VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
   Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
-  ImageFilePath: episodes/lego_1_screens/splash-screen
+  ImageFilePath: episodes/_shared/splash-screen
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
   FadeInFromPreviousScene: 0
   TestingActive: 0
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - StartShown: 1
+    Name: Play
+    Options:
+    - ButtonName: Play
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []

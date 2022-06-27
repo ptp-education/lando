@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: 
+    CommandLine: -character talk explainer-0
     PrintFile: 
     ImageToSet: {fileID: 0}
     SelfDestruct: 0

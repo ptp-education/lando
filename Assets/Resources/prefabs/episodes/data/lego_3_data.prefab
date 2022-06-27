@@ -56,7 +56,8 @@ MonoBehaviour:
     HintRewards:
     - further-counterweight
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 1 100 -hidespawnoption
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 200 -update-options
+      multiple
     RequirementsVO: 
     NextChallengeVO: challenge-1-200
   - Name: 1-500
