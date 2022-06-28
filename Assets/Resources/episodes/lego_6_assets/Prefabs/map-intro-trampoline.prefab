@@ -53,10 +53,17 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk map-intro-trampoline
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 75fbe1bb70be27445948ae6e413a1d23, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 23.2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

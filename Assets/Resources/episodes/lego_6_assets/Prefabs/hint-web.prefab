@@ -53,35 +53,35 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk hint-web
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 07b2b9a706b1c5c48bee0f2431ed54c2, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 0.5
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 29ba3b6f69b7d5649bde3df50bc6a2dc, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9cad748eae6f9f34685ae18601435a5d, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1.5
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: cb7c6f567b6440445860d6248999ea22, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 2
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1e028b07bcfb7e64e965a521cf0d215a, type: 3}
     SelfDestruct: 0

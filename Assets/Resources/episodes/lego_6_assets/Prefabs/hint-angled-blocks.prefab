@@ -53,28 +53,28 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk hint-angled-blocks
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b5fec6322c0500846864850238b91058, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 0.5
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 61e3761701b5cb44e94f058eac434b15, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0352572b98805654ea44a08128a32c14, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1.5
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1e092727bac699c48a951cb2567803e7, type: 3}
     SelfDestruct: 0

@@ -53,9 +53,16 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk map-intro-trap
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6e3b7d2bf598114469820df147111bcb, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 16.2
+    VoiceoverFile: 
+    CommandLine: -node next
+    PrintFile: 
+    ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

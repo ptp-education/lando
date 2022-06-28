@@ -53,42 +53,42 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk simulator-heigh-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 281c5b9ee3e1b064790326fe9371b804, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 3.1
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1b4e0ea5b10d1e648a22e999d988dd3c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 5.1
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a175ba3ad205c6749b1fc19e8e7e2273, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 8.5
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0c1e1239e2e98c848adbdae0f76b8cde, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 10
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 13453e47e72853446b90a6de2abeb908, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 13
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b53e237d8a531de40a76cb8ad2ff8ca1, type: 3}
     SelfDestruct: 0
