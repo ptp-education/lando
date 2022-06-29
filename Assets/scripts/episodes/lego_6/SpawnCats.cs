@@ -15,6 +15,7 @@ namespace Lando.Class.Lego6
             public Image defaultCatRight;
             public Image jumpCat;
             public Image crateCat;
+            public Image escapeCat;
 
             public List<Cat> otherChallengesCats_;
             public List<Image> otherCats_;
@@ -103,9 +104,7 @@ namespace Lando.Class.Lego6
         private int currentAmountCats_ = 0; //every 3 cats, daycare becomes bigger
         private int currentLevel = 1;
 
-        private int randomLeft_;
-        private int randomMiddle_;
-        private int randomRight_;
+        private float waitTime = 0;
 
         private void Start()
         {
@@ -129,17 +128,21 @@ namespace Lando.Class.Lego6
             {
                 CatSafe();
             }
-            else if (args.Contains("top") || args.Contains("middle") || args.Contains("bottom")) 
+            else if (args.Contains("top") || args.Contains("middle") || args.Contains("bottom"))
             {
                 CustomizeYourCat(commandType);
+            }
+            else if (args.Contains("failure")) 
+            {
+                CatFailure();
             }
         }
 
         private void ShowChallengeScreen() 
         {
-            randomLeft_ = Random.Range(0, 15);
-            randomMiddle_ = Random.Range(0, 15);
-            randomRight_ = Random.Range(0, 15);
+            int randomLeft_ = Random.Range(0, 15);
+            int randomMiddle_ = Random.Range(0, 15);
+            int randomRight_ = Random.Range(0, 15);
 
             while (randomMiddle_ == randomLeft_ || randomMiddle_ == randomRight_) 
             {
@@ -195,6 +198,62 @@ namespace Lando.Class.Lego6
             int randomCat_ = Random.Range(0, 3);
 
             GetCat(randomCat_);
+            gameManager_.SendNewActionInternal("-update-options empty");
+        }
+
+        private void CatFailure() 
+        {
+            int randomCat_ = Random.Range(0, 3);
+            gameManager_.SendNewActionInternal("-update-options empty");
+            switch (currentLevel)
+            {
+                case 1:
+                    level1_.escapeCat.sprite = level1_.cats_[randomCat_].jumping_;
+                    level1_.jumpCat.sprite = level1_.cats_[randomCat_].jumping_;
+                    ShowEscapeSequence(level1_.jumpCat.gameObject, level1_.escapeCat.gameObject, level1_, randomCat_);
+                    break;
+                case 2:
+                    level2_.escapeCat.sprite = level2_.cats_[randomCat_].jumping_;
+                    level2_.jumpCat.sprite = level2_.cats_[randomCat_].jumping_;
+                    ShowEscapeSequence(level2_.jumpCat.gameObject,level2_.escapeCat.gameObject, level2_, randomCat_);
+                    break;
+                case 3:
+                    level3_.escapeCat.sprite = level3_.cats_[randomCat_].jumping_;
+                    level3_.jumpCat.sprite = level3_.cats_[randomCat_].jumping_;
+                    ShowEscapeSequence(level3_.jumpCat.gameObject, level3_.escapeCat.gameObject, level3_, randomCat_);
+                    break;
+                case 4:
+                    level4_.escapeCat.sprite = level4_.cats_[randomCat_].jumping_;
+                    level4_.jumpCat.sprite = level4_.cats_[randomCat_].jumping_;
+                    ShowEscapeSequence(level4_.jumpCat.gameObject, level4_.escapeCat.gameObject, level4_, randomCat_);
+                    break;
+            }
+        }
+
+        private void ShowEscapeSequence(GameObject jumping_,GameObject escape_, Challenge currentChallenge_, int selectedCat_) 
+        {
+            jumping_.SetActive(true);
+            Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
+                jumping_.SetActive(false);
+                escape_.SetActive(true);
+                AudioPlayer.PlayAudio("audio/lego_6/cat-failure");
+                Go.to(this, 3.8f, new GoTweenConfig().onComplete(t => {
+                    escape_.SetActive(false);
+                    switch (selectedCat_)
+                    {
+                        case 0:
+                            currentChallenge_.defaultCatLeft.gameObject.SetActive(true);
+                            break;
+                        case 1:
+                            currentChallenge_.defaultCatMiddle.gameObject.SetActive(true);
+                            break;
+                        case 2:
+                            currentChallenge_.defaultCatRight.gameObject.SetActive(true);
+                            break;
+                    }
+                    gameManager_.SendNewActionInternal("-update-options default");
+                }));
+            }));
         }
 
         private void GetCat(int selectionCat) 
@@ -250,16 +309,77 @@ namespace Lando.Class.Lego6
             }
         }
 
+        private void ShowCat(Challenge currentChallenge_, int selectedCat_)
+        {
+            switch (selectedCat_)
+            {
+                case 0:
+                    currentChallenge_.defaultCatLeft.gameObject.SetActive(true);
+                    break;
+                case 1:
+                    currentChallenge_.defaultCatMiddle.gameObject.SetActive(true);
+                    break;
+                case 2:
+                    currentChallenge_.defaultCatRight.gameObject.SetActive(true);
+                    break;
+            }
+        }
+
         private void ShowCatJumpingSequence(GameObject catJumping, GameObject catCrate) {
+            waitTime = 0;
+            if (currentLevel == 1)
+            {
+                AudioPlayer.PlayAudio("audio/lego_6/cat-solid");
+                waitTime += 3f;
+            }
+            else if (currentLevel == 2)
+            {
+                AudioPlayer.PlayAudio("audio/lego_6/cat-tabby");
+                waitTime += 5f;
+            }
+            else if (currentLevel == 3)
+            {
+                AudioPlayer.PlayAudio("audio/lego_6/cat-spots");
+                waitTime += 2f;
+            }
+            else if (currentLevel == 4) 
+            {
+                AudioPlayer.PlayAudio("audio/lego_6/cat-special");
+                waitTime += 6.5f;
+            }
             catJumping.SetActive(true);
-            Go.to(this,1f,new GoTweenConfig().onComplete(t => {
+            Go.to(this, 1f,new GoTweenConfig().onComplete(t => {
                 catJumping.SetActive(false);
                 catCrate.SetActive(true);
-                Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
-                    catCrate.SetActive(false);
-                    ShowCustomizationScreen();
+                Go.to(this, waitTime - 1, new GoTweenConfig().onComplete(t => {
+                    PlayRandomVOReward();
+                    Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
+                        catCrate.SetActive(false);
+                        ShowCustomizationScreen();
+                    }));
                 }));
             }));
+        }
+
+        private void PlayRandomVOReward() 
+        {
+            int randomVO = Random.Range(0, 3);
+            waitTime = 0;
+            switch (randomVO) 
+            {
+                case 0:
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-into-the-crate");
+                    waitTime += 2;
+                    break;
+                case 1:
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-meowvelous");
+                    waitTime += 2;
+                    break;
+                case 2:
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-stuck-landing");
+                    waitTime += 4.5f;
+                    break;
+            }
         }
 
         private void ShowCustomizationScreen()
@@ -287,7 +407,25 @@ namespace Lando.Class.Lego6
 
             customizationScreen_.SetActive(true);
             //3 options appear (Top, Middle, Bottom)
-            gameManager_.SendNewActionInternal("-update-options choose");
+            if (currentLevel == 1)
+            {
+                AudioPlayer.PlayAudio("audio/lego_6/cat-dressroom-0");
+                Go.to(this, 2.5f, new GoTweenConfig().onComplete(t =>
+                {
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-customization");
+                    Go.to(this, 7f, new GoTweenConfig().onComplete(t =>
+                    {
+                        gameManager_.SendNewActionInternal("-update-options choose");
+                    }));
+                }));
+            }
+            else {
+                AudioPlayer.PlayAudio("audio/lego_6/cat-customization");
+                Go.to(this, 7f, new GoTweenConfig().onComplete(t =>
+                {
+                    gameManager_.SendNewActionInternal("-update-options choose");
+                }));
+            }
         }
 
         private Sprite GetClothes(int selection) {
@@ -339,10 +477,15 @@ namespace Lando.Class.Lego6
                     break;
 
             }
-
+            gameManager_.SendNewActionInternal("-update-options empty");
             clothesCustomization_.sprite = catPlaceholder_.customization_;
 
-            Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
+            GoTweenFlow flow = new GoTweenFlow();
+            flow.insert(0f, new GoTween(catCustomization_.transform, 0.25f, new GoTweenConfig().scale(1.25f)));
+            flow.insert(0.25f, new GoTween(catCustomization_.transform, 0.25f, new GoTweenConfig().scale(1f)));
+            flow.play();
+
+            Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                 customizationScreen_.SetActive(false);
                 ShowDaycareScreen();
             }));
@@ -352,7 +495,9 @@ namespace Lando.Class.Lego6
         {
             currentAmountCats_++;
             daycareBg_.gameObject.SetActive(true);
+
             float xMin_ = 0, xMax_ = 0, yMin_ = 0, yMax_ = 0;
+            float waitTime = 8;
 
             if (currentAmountCats_ <= 3)
             {
@@ -361,13 +506,67 @@ namespace Lando.Class.Lego6
                 xMax_ = daycareLevel1_.xMax;
                 yMin_ = daycareLevel1_.yMin;
                 yMax_ = daycareLevel1_.yMax;
+
+                AudioPlayer.PlayAudio("audio/sfx/new-building");
+                Go.to(this, 1.5f, new GoTweenConfig().onComplete(t => { 
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
+                }));
+                waitTime = 8;
             }
-            else if (currentAmountCats_ > 3 && currentAmountCats_ <= 6) {
+            else if (currentAmountCats_ > 3 && currentAmountCats_ <= 6) 
+            {
                 daycareBg_.sprite = daycareLevel2_.background_;
                 xMin_ = daycareLevel2_.xMin;
                 xMax_ = daycareLevel2_.xMax;
                 yMin_ = daycareLevel2_.yMin;
                 yMax_ = daycareLevel2_.yMax;
+                AudioPlayer.PlayAudio("audio/lego_6/new-building");
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
+                }));
+                waitTime = 8;
+
+            }
+            else if (currentAmountCats_ > 6 && currentAmountCats_ <= 9)
+            {
+                daycareBg_.sprite = daycareLevel3_.background_;
+                xMin_ = daycareLevel3_.xMin;
+                xMax_ = daycareLevel3_.xMax;
+                yMin_ = daycareLevel3_.yMin;
+                yMax_ = daycareLevel3_.yMax;
+                AudioPlayer.PlayAudio("audio/lego_6/new-building");
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
+                }));
+                waitTime = 8;
+
+            }
+            else if (currentAmountCats_ > 9 && currentAmountCats_ <= 12)
+            {
+                daycareBg_.sprite = daycareLevel4_.background_;
+                xMin_ = daycareLevel4_.xMin;
+                xMax_ = daycareLevel4_.xMax;
+                yMin_ = daycareLevel4_.yMin;
+                yMax_ = daycareLevel4_.yMax;
+                AudioPlayer.PlayAudio("audio/lego_6/new-building");
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
+                }));
+                waitTime = 8;
+
+            }
+            else if (currentAmountCats_ > 12)
+            {
+                daycareBg_.sprite = daycareLevel5_.background_;
+                xMin_ = daycareLevel5_.xMin;
+                xMax_ = daycareLevel5_.xMax;
+                yMin_ = daycareLevel5_.yMin;
+                yMax_ = daycareLevel5_.yMax;
+                AudioPlayer.PlayAudio("audio/lego_6/new-building");
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    AudioPlayer.PlayAudio("audio/lego_6/cat-finish");
+                }));
+                waitTime = 12;
             }
 
             Vector3 catPosition = new Vector3(Random.Range(xMin_, xMax_), Random.Range(yMin_, yMax_), 0);
@@ -382,21 +581,14 @@ namespace Lando.Class.Lego6
             catGO.transform.GetChild(0).GetComponent<Image>().sprite = catPlaceholder_.customization_;
 
             
-            Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
+            //after a delay next challenge screen appear
+            //Show default options
+            Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
                 currentLevel++;
                 ShowChallengeScreen();
                 daycareBg_.gameObject.SetActive(false);
                 gameManager_.SendNewActionInternal("-update-options default");
             }));
-            //after a delay next challenge screen appear
-            //Show default options
-        }
-
-        Vector3 GetBottomLeftCorner(RectTransform rt)
-        {
-            Vector3[] v = new Vector3[4];
-            rt.GetWorldCorners(v);
-            return v[0];
         }
     }
 }

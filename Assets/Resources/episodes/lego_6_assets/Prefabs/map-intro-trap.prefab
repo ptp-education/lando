@@ -63,7 +63,7 @@ MonoBehaviour:
     CommandLine: -node next
     PrintFile: 
     ImageToSet: {fileID: 0}
-    SelfDestruct: 0
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

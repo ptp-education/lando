@@ -157,7 +157,7 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 12.3
+  - TimeStamp: 12
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -191,7 +191,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329907666954554417}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -219,7 +219,7 @@ MonoBehaviour:
   VideoLoop: {fileID: 102900000, guid: cdc779d2e3ce34154b92bd48f8fefa10, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P0-0.mp4
   Image: {fileID: 2800000, guid: 91b4245cc8afb4dc7be065e3db9014a3, type: 3}
-  ImageFilePath: episodes/lego_1_screens/splash-screen
+  ImageFilePath: episodes/_shared/splash-screen
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -259,7 +259,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329907666954554417}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -625,7 +625,7 @@ MonoBehaviour:
   Type: 2
   Characters:
   - TalkingPosition: {x: -725, y: -354, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+    Scale: {x: 0, y: 0, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -764,9 +764,9 @@ RectTransform:
   - {fileID: 8948809275025258672}
   - {fileID: 7883811709321331277}
   - {fileID: 3726180056306944181}
-  - {fileID: 1695111733287322695}
-  - {fileID: 5299076042579235017}
   - {fileID: 8606285561960942660}
+  - {fileID: 5299076042579235017}
+  - {fileID: 1695111733287322695}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -884,6 +884,10 @@ MonoBehaviour:
     Ran: 0
   - TimeStamp: 15
     Command: -update-options default
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 15
+    Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers:
@@ -1044,7 +1048,7 @@ MonoBehaviour:
   Type: 2
   Characters:
   - TalkingPosition: {x: -725, y: -354, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+    Scale: {x: 0, y: 0, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4

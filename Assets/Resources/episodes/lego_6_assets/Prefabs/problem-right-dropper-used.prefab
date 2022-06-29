@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk problem-right-dropper
+    VoiceoverFile: problem-right-dropper
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 4fee51fbb6faacc418a223e89a8bd2c7, type: 3}
     SelfDestruct: 0

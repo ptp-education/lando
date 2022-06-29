@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk hint-angled-blocks
+    VoiceoverFile: hint-angled-blocks
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b5fec6322c0500846864850238b91058, type: 3}
     SelfDestruct: 0

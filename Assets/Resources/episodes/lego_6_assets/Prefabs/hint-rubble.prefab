@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk hint-rubble
+    VoiceoverFile: hint-rubble
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 020ecf39a9b3d2f4287a7953802f9ce8, type: 3}
     SelfDestruct: 0
