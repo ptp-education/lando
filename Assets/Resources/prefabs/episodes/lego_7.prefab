@@ -29,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329907666954554417}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -191,7 +191,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 329907666954554417}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -294,7 +294,15 @@ MonoBehaviour:
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
-    Steps: []
+    Steps:
+    - Question: {fileID: -860130409809325442, guid: dffbf14699d675942a0fa774928e3f5a, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 682cb6b0e26e6b744825483a18ae845d, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 8dbd41cc2018dd54ea1232c9ae4ecd90, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 2e6ced8a33e54e4459b96259120a1c8f, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 7755a71db8dcfaf47b12cc947ba3d107, type: 3}
+      Answer: {fileID: -860130409809325442, guid: a7a505bdcf58f4843a43ec4d4b190621, type: 3}
+    - Question: {fileID: -860130409809325442, guid: c446e1d5d831e394c901133a3314de34, type: 3}
+      Answer: {fileID: -860130409809325442, guid: ae2996194755d2d40901c7861376f50e, type: 3}
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn: []
@@ -552,25 +560,119 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 96b628f7bf8114547aef176cfd11d87b, type: 3}
-  ImageFilePath: episodes/lego_5_screens/forest
+  Image: {fileID: 2800000, guid: 6d092152537a4a748b42d6376a84b274, type: 3}
+  ImageFilePath: episodes/lego_7_assets/Intro/introduction_damaged-forest
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
-  OptionsToSpawn: []
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: default
+    Options:
+    - ButtonName: Trebuchet
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: -860130409809325442, guid: 5215cfddbd5dacf48bb78011020b8add, type: 3}
+    - ButtonName: Crossbow
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: -860130409809325442, guid: f2659f4ca40aa9b4dbd58f5e7cb14e8a, type: 3}
+    - ButtonName: Catapult
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: -860130409809325442, guid: e1a7b34e30a5db1478bf7fc0bd0dcaa3, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1.5
-    Command: -character talk intro-0
+    Command: -character talk map-intro-0
     EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 10.5
-    Command: -spawnoption "Have a feast!" "Build a carnival" "Throw a dance party"
+    Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
+  CommandLineContainers: []
+--- !u!1 &6861288487633459645
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5506228227131800397}
+  - component: {fileID: 2648619637779509203}
+  m_Layer: 5
+  m_Name: simulator-answer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5506228227131800397
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6861288487633459645}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 329907666954554417}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2648619637779509203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6861288487633459645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  Type: 2
+  Characters:
+  - TalkingPosition: {x: 571, y: -256, z: 0}
+    Scale: {x: 0, y: 0, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: fefcd62f7970347f599268d92d0f23f9, type: 3}
+  ImageFilePath: episodes/lego_5_screens/carnival-background
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 1
+    Steps:
+    - Question: {fileID: -860130409809325442, guid: dffbf14699d675942a0fa774928e3f5a, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 682cb6b0e26e6b744825483a18ae845d, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 8dbd41cc2018dd54ea1232c9ae4ecd90, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 2e6ced8a33e54e4459b96259120a1c8f, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 7755a71db8dcfaf47b12cc947ba3d107, type: 3}
+      Answer: {fileID: -860130409809325442, guid: a7a505bdcf58f4843a43ec4d4b190621, type: 3}
+    - Question: {fileID: -860130409809325442, guid: c446e1d5d831e394c901133a3314de34, type: 3}
+      Answer: {fileID: -860130409809325442, guid: ae2996194755d2d40901c7861376f50e, type: 3}
+  FadeInFromPreviousScene: 1
+  TestingActive: 0
+  OptionsToSpawn: []
+  PrefabSpawnObjects: []
+  CommandLines: []
   CommandLineContainers: []
 --- !u!1 &6992512420788641164
 GameObject:
@@ -606,6 +708,7 @@ RectTransform:
   - {fileID: 8906311432766413689}
   - {fileID: 1695111733287322695}
   - {fileID: 7883811709321331277}
+  - {fileID: 5506228227131800397}
   - {fileID: 5299076042579235017}
   - {fileID: 8606285561960942660}
   m_Father: {fileID: 0}
@@ -690,8 +793,8 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 96b628f7bf8114547aef176cfd11d87b, type: 3}
-  ImageFilePath: episodes/lego_5_screens/forest
+  Image: {fileID: 21300000, guid: e5d364b9dc28e4268bc2550bfe04260d, type: 3}
+  ImageFilePath: episodes/lego_5_screens/office
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0

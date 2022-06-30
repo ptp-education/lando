@@ -43,52 +43,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints: []
   Challenges:
-  - Name: 100g
+  - Name: Zone 1
     Sprite: {fileID: 21300000, guid: 0a10a0e2d207b45b18a59988cffc7253, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: af3deb3dc5ee940d7951bea465fb8477, type: 3}
-    ScanRfidCommand: -swing spawn 100
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-100
-    EncourageCommand: 
-    NextChallengeCommand: 
-    Rewards: 
-  - Name: 200g
+    RequirementsVO: 
+    NextChallengeVO: 
+  - Name: Zone 2
     Sprite: {fileID: 21300000, guid: bd88c012a23ff4761bdd6d818215cbea, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 14d33478682a54eb688943fb4ec0ab97, type: 3}
-    ScanRfidCommand: -swing spawn 200
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-200
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-200
-    Rewards: 
-  - Name: 500g
+    RequirementsVO: 
+    NextChallengeVO: 
+  - Name: Zone 3
     Sprite: {fileID: 21300000, guid: e42ec9966a1a84388a2bad9c61bbf333, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: f1e5c1f92cf1943eb8385b014b61f910, type: 3}
-    ScanRfidCommand: -swing spawn 500
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-500
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500
-    Rewards: 
-  - Name: 800g
+    RequirementsVO: 
+    NextChallengeVO: 
+  - Name: Zone 4
     Sprite: {fileID: 21300000, guid: 6bb8658da389a4f28aced968c17af490, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 2825bb1b86910448cbd02c13f0bc8cf6, type: 3}
-    ScanRfidCommand: -swing spawn 800
-    LoadCommand: 
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-800
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-800
-    Rewards: 
+    RequirementsVO: 
+    NextChallengeVO: 
+  Hints:
+  - Name: interlocking-arm
+    Thumbnail: {fileID: 21300000, guid: dd1d6276fc3cfdc429fe62c8e3f41e6a, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6ecadb400a418af42bd2c6370d9c8687, type: 3}
+  - Name: longer-arm
+    Thumbnail: {fileID: 21300000, guid: 87b3ca54feb74bf48969093c4b1e799b, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: a1a815ac4ad90f54fa0df2a5fb548c64, type: 3}
+  - Name: stronger-elastic-band
+    Thumbnail: {fileID: 21300000, guid: 207fd7ac43dc20245bb68df672988251, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: ed1250c913facc44f905156b7778a3ac, type: 3}
+  - Name: stronger-tower
+    Thumbnail: {fileID: 21300000, guid: 59a17fc261fae804c9a3549659a85210, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: ee5dd4863ba49084fad46b18a4720a98, type: 3}
+  - Name: thicker-arm
+    Thumbnail: {fileID: 21300000, guid: 8778c04b62746d046ac08ef874d8ffae, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 1a901aadddf4b4c45a43edd7808204d5, type: 3}
+  WaysToFail: []

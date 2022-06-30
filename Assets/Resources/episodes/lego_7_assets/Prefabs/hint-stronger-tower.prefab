@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 364074704597059915}
   - component: {fileID: 759647174285219434}
   m_Layer: 0
-  m_Name: map-intro-catapult
+  m_Name: hint-stronger-tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,16 +53,65 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk map-intro-catapult
+    CommandLine: -character talk map-intro-trebuchet
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 03a58e361dac70f4f9830a61db95d815, type: 3}
+    ImageToSet: {fileID: 21300000, guid: fa9d3eabec93ffb4882a1fff2c66bd96, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 0
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: bf659e03d5745e349a62ba2d595ca20f, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 5de09730e87b4d44cbf4146ffa5d264f, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: f1b11b3b91b819043b58a0a55993017c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 4b391c73d8919aa4d91d4ca65893f2a1, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 92fa0e30aae0829418e9328cea8ef46c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a626195ee1993304281b2baf8edc3a0c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 434b62546863f84488b39e356fb522d7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: f59fd8aab9b859c48be47c74fda203ec, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 605e4a8b582c279418e8d98d6a5322f2, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

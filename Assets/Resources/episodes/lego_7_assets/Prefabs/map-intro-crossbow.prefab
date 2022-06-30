@@ -53,52 +53,10 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk map-intro-crossbow
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 091e091027cb043a0a0ca59563788351, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 59a3234178df2274fa5c16b9eaadf68c, type: 3}
     SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 6
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: de91a429f7d63466db14df342f177c97, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 8.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: aeed4bcbeb5e94bdfa20de91b8d35aa4, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 17
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: d7ec2d10a698d4ddcb7756f570490582, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 19
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: ed4f8a4366c714a1a9cba435d35c6c0e, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 26
-    VoiceoverFile: 
-    CommandLine: -character talk setup-make-sense
-    PrintFile: 
-    ImageToSet: {fileID: 0}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 29
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 0}
-    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
