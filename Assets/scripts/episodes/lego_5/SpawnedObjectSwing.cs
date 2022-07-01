@@ -19,15 +19,18 @@ namespace Lando.Class.Lego5
 
         [SerializeField] private Image iconPrefab_;
         [SerializeField] private Image rsvpHolder_;
-
+        
+        [Header("Small animals")]
         [SerializeField] private Choice bird_;
         [SerializeField] private Choice bunny_;
         [SerializeField] private Choice ferret_;
 
+        [Header("Medium animals")]
         [SerializeField] private Choice deer_;
         [SerializeField] private Choice zebra_;
         [SerializeField] private Choice seal_;
 
+        [Header("Big animals")]
         [SerializeField] private Choice elephant_;
         [SerializeField] private Choice giraffe_;
         [SerializeField] private Choice hippo_;
@@ -38,6 +41,9 @@ namespace Lando.Class.Lego5
 
         private Image animalInSwing_;
         private Image correctSizeSwing_;
+
+        //this have track of which challenge is currently
+        private int currentStage_ = 0;
 
         [System.Serializable]
         public class Choice
@@ -73,7 +79,7 @@ namespace Lando.Class.Lego5
                     switch(args[0])
                     {
                         case "spawn":
-                            if (args.Count > 1) HandleSpawnAnimal(args[1]);
+                            HandleSpawnAnimal();
                             break;
                         case "load":
                             HandleLoad();
@@ -95,7 +101,7 @@ namespace Lando.Class.Lego5
             }
         }
 
-        private void HandleSpawnAnimal(string weight)
+        private void HandleSpawnAnimal()
         {
             Hide();
 
@@ -103,9 +109,9 @@ namespace Lando.Class.Lego5
 
             Image set = null;
 
-            switch(weight)
+            switch(currentStage_)
             {
-                case "100":
+                case 0:
                     choices.Add(bunny_);
                     choices.Add(ferret_);
                     choices.Add(bird_);
@@ -113,7 +119,7 @@ namespace Lando.Class.Lego5
                     set = smallAnimal_;
                     correctSizeSwing_ = smallAnimalSeat_;
                     break;
-                case "200":
+                case 1:
                     choices.Add(zebra_);
                     choices.Add(seal_);
                     choices.Add(deer_);
@@ -121,7 +127,7 @@ namespace Lando.Class.Lego5
                     set = mediumAnimal_;
                     correctSizeSwing_ = mediumAnimalSeat_;
                     break;
-                case "500":
+                case 2:
                     choices.Add(elephant_);
                     choices.Add(giraffe_);
                     choices.Add(hippo_);
@@ -129,7 +135,7 @@ namespace Lando.Class.Lego5
                     set = largeAnimal_;
                     correctSizeSwing_ = largeAnimalSeat_;
                     break;
-                case "800":
+                case 3:
                     choices.Add(dino1_);
                     choices.Add(dino2_);
                     choices.Add(dino3_);
@@ -154,8 +160,10 @@ namespace Lando.Class.Lego5
             iconPrefab_.sprite = choices[selection].AnimalIcon;
 
             AudioPlayer.PlayAudio(choices[selection].Sound);
+            currentStage_++;
         }
 
+        //Put animal in the swing
         private void HandleLoad()
         {
             if (correctSizeSwing_ != null && animalInSwing_ != null)
@@ -165,6 +173,11 @@ namespace Lando.Class.Lego5
                 correctSizeSwing_.gameObject.SetActive(true);
                 animalInSwing_.gameObject.SetActive(true);
                 AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
+
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    HandleSuccess();
+                    Debug.LogWarning("successs");
+                }));
             }
         }
 
@@ -184,6 +197,7 @@ namespace Lando.Class.Lego5
             icon.transform.localScale = Vector3.one;
             Go.addTween(new GoTween(icon, 0.5f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.BounceIn)));
             AudioPlayer.PlayAudio("audio/sfx/ding");
+            HandleSpawnAnimal();
         }
 
         private void HandleCrash()
