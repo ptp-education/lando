@@ -20,6 +20,7 @@ public class GameStorage
         MomoStarter,
         MomoTeenCustomization,
         MomoAdultCustomization,
+        MomoSeniorCustomization,
         UserData,
         HintSpeechProgression
     }

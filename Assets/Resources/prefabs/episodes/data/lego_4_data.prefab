@@ -43,34 +43,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartingResources: 0000000000000000
+  StartingHints:
+  - interlocking-data
+  - build-supports
   Challenges:
   - Name: 100g
-    Sprite: {fileID: 21300000, guid: 15bdf8ef6170b4db6bbda28048d4dc32, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 507fbebd37897461ba6c1ad7b3bde2a8, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: 37e0fa5d407e82a4b9fcc84b069d339e, type: 3}
+    ResourceRewards: 00000000
+    HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
-    RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-100
-    EncourageCommand: 
-    NextChallengeCommand: 
+    RewardCommand: -game-success-initial
+    RequirementsVO: 
+    NextChallengeVO: testing-next-announce-100
   - Name: 200g
-    Sprite: {fileID: 21300000, guid: 8e2480759da4c44e1a259bc02e1bf53f, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: a3f891503b7c146a2b965d938cdb3182, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: a45a1d7f8c722e44aa5fed97f38ad10c, type: 3}
+    ResourceRewards: 00000000
+    HintRewards:
+    - more-walls
+    - ceiling
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    RequirementsCommand: -character talk testing-announce-200
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-200
+    RequirementsVO: 
+    NextChallengeVO: testing-next-announce-200
   - Name: 500g
-    Sprite: {fileID: 21300000, guid: 78e792aee055c4ab988f1fc39834fa8f, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 5112fdb3bf66045d28d068e3b41676ba, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: 31fc6c289aa03304f9b74b2c7e77db70, type: 3}
+    ResourceRewards: 00000000
+    HintRewards:
+    - even-more-walls
+    - short-supports
+    FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
+    RewardCommand: -game-success
+    RequirementsVO: 
+    NextChallengeVO: testing-next-announce-500
+  - Name: 800g
+    Sprite: {fileID: 21300000, guid: df4800c4de4c7c14abf360e84056417f, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success-last
-    RequirementsCommand: -character talk testing-announce-500
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500
+    RequirementsVO: 
+    NextChallengeVO: challenge-next-800
+  Hints:
+  - Name: build-supports
+    Thumbnail: {fileID: 21300000, guid: 866cc5e99c12cf44b834750a6de33600, type: 3}
+    ObjectToLoad: {fileID: 4200544645346117908, guid: a1ade7f9200a19d409a753eeabceaabe, type: 3}
+  - Name: interlocking-data
+    Thumbnail: {fileID: 21300000, guid: be72093143355564d928f3da24d18f17, type: 3}
+    ObjectToLoad: {fileID: 4200544645346117908, guid: f077eedc28c436d419cdb99c96f91e19, type: 3}
+  - Name: more-walls
+    Thumbnail: {fileID: 21300000, guid: 76c7e5d28431e9c43b183c76aee7087d, type: 3}
+    ObjectToLoad: {fileID: 4200544645346117908, guid: 93271af72c0960941874f6be3730f108, type: 3}
+  - Name: even-more-walls
+    Thumbnail: {fileID: 21300000, guid: 137219266c0ee2a4da621d111368b55e, type: 3}
+    ObjectToLoad: {fileID: 4200544645346117908, guid: ba59f4a16b9632947a5f3603b34bf3db, type: 3}
+  - Name: ceiling
+    Thumbnail: {fileID: 21300000, guid: 51e9c0675950c99409387a86f5eadde1, type: 3}
+    ObjectToLoad: {fileID: 4200544645346117908, guid: fcf5dddcb55092e4cb20a50a94e68af0, type: 3}
+  - Name: short-supporrts
+    Thumbnail: {fileID: 21300000, guid: 7c6d7654eb1bdc641a214b398c44bdbe, type: 3}
+    ObjectToLoad: {fileID: 4200544645346117908, guid: 14082c1c57dddfb4695c5af0280b9ed3, type: 3}
+  WaysToFail:
+  - ButtonName: 6 block tall
+    ObjectToLoad: {fileID: 4200544645346117908, guid: 76760f205d44e3b46ac608fe8862c802, type: 3}
+  - ButtonName: Raise weight higher
+    ObjectToLoad: {fileID: 4200544645346117908, guid: 11c5c16ffce5e9e4ba1abe8bae848280, type: 3}
+  - ButtonName: Hit 3 times
+    ObjectToLoad: {fileID: 4200544645346117908, guid: 7203c65b34599e9469705f67153544d8, type: 3}
