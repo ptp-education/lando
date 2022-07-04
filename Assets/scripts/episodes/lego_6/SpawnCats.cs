@@ -121,7 +121,6 @@ namespace Lando.Class.Lego6
         {
             List<string> args = ArgumentHelper.ArgumentsFromCommand("-cat", action);
             if (args.Count == 0) return;
-            Debug.LogWarning(args[0]);
             string commandType = args[0];
 
             if (args.Contains("success"))
@@ -507,10 +506,6 @@ namespace Lando.Class.Lego6
                 yMin_ = daycareLevel1_.yMin;
                 yMax_ = daycareLevel1_.yMax;
 
-                AudioPlayer.PlayAudio("audio/sfx/new-building");
-                Go.to(this, 1.5f, new GoTweenConfig().onComplete(t => { 
-                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
-                }));
                 waitTime = 8;
             }
             else if (currentAmountCats_ > 3 && currentAmountCats_ <= 6) 
