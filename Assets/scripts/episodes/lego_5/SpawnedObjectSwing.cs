@@ -173,10 +173,10 @@ namespace Lando.Class.Lego5
                 correctSizeSwing_.gameObject.SetActive(true);
                 animalInSwing_.gameObject.SetActive(true);
                 AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
-
+                gameManager_.SendNewActionInternal("-update-options empty");
                 Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                     HandleSuccess();
-                    Debug.LogWarning("successs");
+
                 }));
             }
         }
@@ -185,7 +185,6 @@ namespace Lando.Class.Lego5
         {
             Hide();
             successImage_.gameObject.SetActive(true);
-            AudioPlayer.PlayAudio("audio/sfx/applausetrumpet");
         }
 
         private void HandleIncrementCounter()
@@ -197,6 +196,7 @@ namespace Lando.Class.Lego5
             icon.transform.localScale = Vector3.one;
             Go.addTween(new GoTween(icon, 0.5f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.BounceIn)));
             AudioPlayer.PlayAudio("audio/sfx/ding");
+            gameManager_.SendNewActionInternal("-update-options default");
             HandleSpawnAnimal();
         }
 
