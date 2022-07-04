@@ -291,7 +291,7 @@ MonoBehaviour:
   TestingActive: 1
   OptionsToSpawn:
   - StartShown: 1
-    Name: 
+    Name: default
     Options:
     - ButtonName: Redeem reward
       TeacherOnly: 0
@@ -301,6 +301,9 @@ MonoBehaviour:
       TeacherOnly: 1
       Command: -node next
       EventObject: {fileID: 0}
+  - StartShown: 1
+    Name: empty
+    Options: []
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 

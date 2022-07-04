@@ -54,7 +54,8 @@ namespace Lando.Class.Lego2
 
         private void RefreshTower(bool animate)
         {
-            foreach(Image i in towerParent_.GetComponentsInChildren<Image>())
+            gameManager_.SendNewActionInternal("-update-options empty");
+            foreach (Image i in towerParent_.GetComponentsInChildren<Image>())
             {
                 Destroy(i.gameObject);
             }
@@ -192,6 +193,7 @@ namespace Lando.Class.Lego2
                         flow_.insert(7.5f, new GoTween(levelText_.transform, 0.01f, new GoTweenConfig().onComplete(t =>
                         {
                             AudioPlayer.PlayAudio("audio/sfx/wind-whoosh");
+                            gameManager_.SendNewActionInternal("-update-options default");
                         })));
                         flow_.insert(7.5f, new GoTween(map_.transform, 1f, new GoTweenConfig().localPosition(targetPosition)));
                         flow_.insert(7.5f, new GoTween(map_.transform, 1f, new GoTweenConfig().scale(targetScale)));
