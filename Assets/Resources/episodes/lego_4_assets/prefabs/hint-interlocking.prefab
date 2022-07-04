@@ -65,13 +65,6 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: c6e38de52c1304f8c8c1b46621930284, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 0}
-    SelfDestruct: 0
-    Ran: 0
   image_: {fileID: 2445146870255289116}
 --- !u!222 &1082716433388788486
 CanvasRenderer:

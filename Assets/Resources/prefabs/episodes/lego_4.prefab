@@ -29,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -68,7 +68,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &628669438561765494
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,42 +135,18 @@ MonoBehaviour:
     Steps: []
   FadeInFromPreviousScene: 1
   TestingActive: 0
-  OptionsToSpawn:
-  - StartShown: 0
-    Name: 
-    Options:
-    - ButtonName: Pentagon
-      TeacherOnly: 0
-      Command: 
-      EventObject: {fileID: 4200544645346117908, guid: 655d09f2977e9264b863fcc0f602f4aa, type: 3}
-    - ButtonName: US Capitol Building
-      TeacherOnly: 0
-      Command: 
-      EventObject: {fileID: 4200544645346117908, guid: ae660992705ec96499436f44886e380f, type: 3}
-    - ButtonName: White House
-      TeacherOnly: 0
-      Command: 
-      EventObject: {fileID: 4200544645346117908, guid: 198f3f346405bbb47a67acc54689b965, type: 3}
+  OptionsToSpawn: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1
     Command: -character talk map-pentagon-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 6
-    Command: -character talk map-pentagon-1
+  - TimeStamp: 5.9
+    Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 8
-    Command: 
-    EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
-    Ran: 0
-  - TimeStamp: 9
-    Command: -show-choices
-    EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
-    Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &2079302127811205104
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +176,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -243,7 +218,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &2622218083841034790
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +247,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -351,7 +325,6 @@ MonoBehaviour:
       Command: -node next
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &2802677419071191658
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,7 +429,6 @@ MonoBehaviour:
       Command: -spawnoption "Momo should jump!" "Momo should shake the wall!"
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &3328939687015290096
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +458,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -510,7 +482,7 @@ MonoBehaviour:
   Type: 2
   Characters:
   - TalkingPosition: {x: -837, y: -420, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+    Scale: {x: 0, y: 0, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -536,7 +508,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &3345662454743620094
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +537,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -691,7 +662,6 @@ MonoBehaviour:
       Command: -spawnoption "We got it!" "Can you repeat?"
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &4440565866868392372
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +737,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &4586636730854607025
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +828,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &4625422606827924374
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,7 +857,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -981,7 +949,6 @@ MonoBehaviour:
       Command: -swing increment
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &5538422780132337193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,7 +978,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1065,7 +1032,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &5733257178101449599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1061,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1149,7 +1115,100 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
+--- !u!1 &6050227710332013916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7008317980840604335}
+  - component: {fileID: 1061797719780021632}
+  m_Layer: 5
+  m_Name: map example-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7008317980840604335
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050227710332013916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2048181044805120259}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1061797719780021632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050227710332013916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BgLoopPath: 
+  BgLoop: {fileID: 0}
+  Type: 1
+  Characters:
+  - TalkingPosition: {x: 571, y: -256, z: 0}
+    Scale: {x: -0.75, y: 0.75, z: 1}
+    SelectedCharacter: 0
+  Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoFilePath: Lego 1 - v3/P2-0.mp4
+  VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
+  VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
+  Image: {fileID: 2800000, guid: 594c97a4841ede341846e67bd56dc0f2, type: 3}
+  ImageFilePath: episodes/lego_4_screens/example-pentagon
+  VideoOptions: []
+  SimulatorDetails:
+    ShowAnswer: 0
+    Steps: []
+  FadeInFromPreviousScene: 0
+  TestingActive: 0
+  OptionsToSpawn:
+  - StartShown: 0
+    Name: 
+    Options:
+    - ButtonName: Pentagon
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 655d09f2977e9264b863fcc0f602f4aa, type: 3}
+    - ButtonName: US Capitol Building
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: ae660992705ec96499436f44886e380f, type: 3}
+    - ButtonName: White House
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: 4200544645346117908, guid: 198f3f346405bbb47a67acc54689b965, type: 3}
+  PrefabSpawnObjects: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-pentagon-1
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 3
+    Command: -show-choices
+    EventObject: {fileID: 0}
+    Ran: 0
+  CommandLineContainers: []
 --- !u!1 &6410430740656083808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,7 +1238,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1229,7 +1288,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &6720832660718529540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1317,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1282,7 +1340,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 700, y: -256, z: 0}
+  - TalkingPosition: {x: 850, y: -400, z: 0}
     Scale: {x: -0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -1383,7 +1441,6 @@ MonoBehaviour:
       Command: -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &8628789538178719964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1470,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1437,7 +1494,7 @@ MonoBehaviour:
   Type: 2
   Characters:
   - TalkingPosition: {x: -837, y: -420, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+    Scale: {x: 0, y: 0, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -1463,7 +1520,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &8787345819776852158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1552,7 @@ RectTransform:
   - {fileID: 1420489051585815462}
   - {fileID: 6263283830157168111}
   - {fileID: 4847978656189304450}
+  - {fileID: 7008317980840604335}
   - {fileID: 8914094934709479670}
   - {fileID: 6732950926156683874}
   - {fileID: 1675608553158892311}
