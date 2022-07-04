@@ -43,54 +43,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints:
+  - build-arch
+  - pillars-arch
+  - interlocking
   Challenges:
-  - Name: 1
-    Sprite: {fileID: 21300000, guid: f0da0f681a78845f0b047b20b4be2869, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 96b788fbf894f4ab5b99848f28d5cbe7, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+  - Name: 2lbs
+    Sprite: {fileID: 21300000, guid: abf64c1c0cded85488f0728567713171, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-add-wood -tower-add-wood
-    RequirementsCommand: -character talk testing-announce-2
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-2
-  - Name: 2
-    Sprite: {fileID: 21300000, guid: e139f1c505fe1440b941c34d9f6d64d7, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 071a7cdf75f2e4057a21917a10f0b88b, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RequirementsVO: 
+    NextChallengeVO: challenge-2
+  - Name: 5lbs
+    Sprite: {fileID: 21300000, guid: 0d0569bd03ad6b7469b7abf9d3bde040, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - double-up-blocks
     FailCommand: 
     RewardCommand: -character talk map-success-add-bronze -tower-add-bronze
-    RequirementsCommand: -character talk testing-announce-5
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-5
-  - Name: 3
-    Sprite: {fileID: 21300000, guid: e6cdf13f15b714d30b2535c46555e298, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 852d21e03308741b5be785675560db75, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RequirementsVO: 
+    NextChallengeVO: challenge-5
+  - Name: 10lbs
+    Sprite: {fileID: 21300000, guid: 4a28e5b66afe85744872ed992ba69942, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - wider-arch
     FailCommand: 
     RewardCommand: -character talk map-success-add-silver -tower-add-silver
-    RequirementsCommand: -character talk testing-announce-10
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-10
-  - Name: 4
-    Sprite: {fileID: 21300000, guid: 5fa42805f517f4008b1a37ad3d6805e9, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: f5ba1315c35a94786af0a12cc48a2c67, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RequirementsVO: 
+    NextChallengeVO: challenge-10
+  - Name: 15lbs
+    Sprite: {fileID: 21300000, guid: 218d2e85775d22d4aa18d9eede5e7876, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - wider-feet
+    - combine-bridges
     FailCommand: 
     RewardCommand: -character talk map-success-add-gold -tower-add-gold
-    RequirementsCommand: -character talk testing-announce-15
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-15
-  - Name: 5
-    Sprite: {fileID: 21300000, guid: 0de72eeed3da7484787e1a349cb3286b, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 85846b40b212b4aad945a80309c9b7cb, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RequirementsVO: 
+    NextChallengeVO: challenge-15
+  - Name: 20lbs
+    Sprite: {fileID: 21300000, guid: ea274386cfb14df4987ee7215308b821, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-add-obsidian -tower-add-obsidian
-    RequirementsCommand: -character talk testing-announce-20
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-20
+    RequirementsVO: 
+    NextChallengeVO: challenge-20
+  Hints:
+  - Name: build-arch
+    Thumbnail: {fileID: 21300000, guid: 8cd911fd7bb7a2a4492b7a602d32feb7, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: d74c1c6b341f3c94eb534bce2d217a71, type: 3}
+  - Name: double-up-blocks
+    Thumbnail: {fileID: 21300000, guid: 0c8c791c9cb0e9240a1164dce4ed3630, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 50a99dba678c0a948957801e8e1a02d8, type: 3}
+  - Name: pillars-arch
+    Thumbnail: {fileID: 21300000, guid: 0d97d4ff1f910b24987a77d2b2819097, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 0f4fa32f3e6d45d4b805bcad100c5d74, type: 3}
+  - Name: wider-feet
+    Thumbnail: {fileID: 21300000, guid: b93c17d82499743488bae7bf2a5a51d8, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: d610215965a379446b09fed0d082dd64, type: 3}
+  - Name: wider-arch
+    Thumbnail: {fileID: 21300000, guid: 9d3ae58533558f54183024a0df09c5a0, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 198a5c40392e50a4587c0cd4c7fc1609, type: 3}
+  - Name: combine-bridges
+    Thumbnail: {fileID: 21300000, guid: e9e54bbdef717fe4797b043386dea28b, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 3806fed1194ba2442bbab4a19f064b8e, type: 3}
+  - Name: interlocking
+    Thumbnail: {fileID: 21300000, guid: 1a84c102e3968a54eacce409c0206798, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: af49534410388364c83279c6af136e6a, type: 3}
+  WaysToFail:
+  - ButtonName: Not wide enough
+    ObjectToLoad: {fileID: -860130409809325442, guid: 96447c99e3e044346bebb8aa03eadcc8, type: 3}
+  - ButtonName: Roll
+    ObjectToLoad: {fileID: -860130409809325442, guid: f21a7b778f7dce541bc42a3d531bc4b2, type: 3}
+  - ButtonName: Can not touch center
+    ObjectToLoad: {fileID: -860130409809325442, guid: 77af180194a8b5b48bb7355edf35cd5e, type: 3}
