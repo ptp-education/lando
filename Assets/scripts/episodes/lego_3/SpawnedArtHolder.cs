@@ -45,6 +45,11 @@ namespace Lando.Class.Lego3
         private int level_ = -1;
         private int grams_ = -1;
 
+        private void Start()
+        {
+            gameManager_.SendNewActionInternal("-update-options default");
+        }
+
         public override void Hide()
         {
             base.Hide();
@@ -71,9 +76,9 @@ namespace Lando.Class.Lego3
                             level_ = 1;
                             switch(args[2])
                             {
-                                case "100":
+                                case "200":
                                     levelHolder_.sprite = levelOne100Holder_;
-                                    grams_ = 100;
+                                    grams_ = 200;
                                     break;
                                 case "500":
                                     levelHolder_.sprite = levelOne500Holder_;
@@ -85,9 +90,9 @@ namespace Lando.Class.Lego3
                             level_ = 2;
                             switch (args[2])
                             {
-                                case "100":
+                                case "200":
                                     levelHolder_.sprite = levelTwo100Holder_;
-                                    grams_ = 100;
+                                    grams_ = 200;
                                     break;
                                 case "500":
                                     levelHolder_.sprite = levelTwo500Holder_;
@@ -99,9 +104,9 @@ namespace Lando.Class.Lego3
                             level_ = 3;
                             switch (args[2])
                             {
-                                case "100":
+                                case "200":
                                     levelHolder_.sprite = levelThree100Holder_;
-                                    grams_ = 100;
+                                    grams_ = 200;
                                     break;
                                 case "500":
                                     levelHolder_.sprite = levelThree500Holder_;
@@ -113,9 +118,9 @@ namespace Lando.Class.Lego3
                             level_ = 3;
                             switch (args[2])
                             {
-                                case "100":
+                                case "200":
                                     levelHolder_.sprite = levelFour100Holder_;
-                                    grams_ = 100;
+                                    grams_ = 200;
                                     break;
                                 case "500":
                                     levelHolder_.sprite = levelFour500Holder_;
@@ -141,6 +146,7 @@ namespace Lando.Class.Lego3
                     level_ = -1;
                     grams_ = -1;
                 }
+                gameManager_.SendNewActionInternal("-update-options multiple");
             }
 
             if (level_ > 0)
@@ -211,7 +217,7 @@ namespace Lando.Class.Lego3
                     case "1":
                         switch (split[1])
                         {
-                            case "100":
+                            case "200":
                                 toUse = levelOneSmallHolders;
                                 break;
                             case "500":
@@ -222,7 +228,7 @@ namespace Lando.Class.Lego3
                     case "2":
                         switch (split[1])
                         {
-                            case "100":
+                            case "200":
                                 toUse = levelTwoSmallHolders;
                                 break;
                             case "500":
@@ -233,7 +239,7 @@ namespace Lando.Class.Lego3
                     case "3":
                         switch (split[1])
                         {
-                            case "100":
+                            case "200":
                                 toUse = levelThreeSmallHolders;
                                 break;
                             case "500":
@@ -244,7 +250,7 @@ namespace Lando.Class.Lego3
                     case "4":
                         switch (split[1])
                         {
-                            case "100":
+                            case "200":
                                 toUse = levelThreeSmallHolders;
                                 break;
                             case "500":
@@ -274,7 +280,9 @@ namespace Lando.Class.Lego3
             {
                 Vector2 savedScale = lastImage.transform.localScale;
                 lastImage.transform.localScale = Vector3.zero;
-                Go.to(lastImage.transform, 1.5f, new GoTweenConfig().scale(savedScale).setEaseType(GoEaseType.BounceInOut));
+                Go.to(lastImage.transform, 1.5f, new GoTweenConfig().scale(savedScale).setEaseType(GoEaseType.BounceInOut).onComplete(t => {
+                    gameManager_.SendNewActionInternal("-update-options default");
+                }));
             }
 
             Hide();
@@ -340,7 +348,7 @@ namespace Lando.Class.Lego3
                 case "1":
                     switch (grams)
                     {
-                        case "100":
+                        case "200":
                             spritesToUse = levelOne100_;
                             break;
                         case "500":
@@ -351,7 +359,7 @@ namespace Lando.Class.Lego3
                 case "2":
                     switch (grams)
                     {
-                        case "100":
+                        case "200":
                             spritesToUse = levelTwo100_;
                             break;
                         case "500":
@@ -362,7 +370,7 @@ namespace Lando.Class.Lego3
                 case "3":
                     switch (grams)
                     {
-                        case "100":
+                        case "200":
                             spritesToUse = levelThree100_;
                             break;
                         case "500":
@@ -373,7 +381,7 @@ namespace Lando.Class.Lego3
                 case "4":
                     switch (grams)
                     {
-                        case "100":
+                        case "200":
                             spritesToUse = levelFour100_;
                             break;
                         case "500":

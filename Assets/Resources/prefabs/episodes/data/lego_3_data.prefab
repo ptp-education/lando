@@ -43,84 +43,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints:
+  - counterweight
+  - another-pier
+  - notch
+  - interlocking
   Challenges:
-  - Name: 1-100
-    Sprite: {fileID: 21300000, guid: a7d5d399dacfd4cd79ab186c3d616cb3, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 71c49ee9d3fe54698b260a07a494d381, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+  - Name: 1-200
+    Sprite: {fileID: 21300000, guid: 3b3e672525c7b0e4aa6bb796f997ff8f, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - further-counterweight
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 1 100 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-100-1
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-100-1
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 200
+    RequirementsVO: 
+    NextChallengeVO: challenge-1-200
   - Name: 1-500
-    Sprite: {fileID: 21300000, guid: 69238ecb87b0e41cfa9757dd8f4071d9, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 0ac8d67fc55bf45c7a251529393a8d1b, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: 90fc9985abea66541ab2b84fd523f17c, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - weight-down
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 1 500 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-500-1
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500-1
-  - Name: 2-100
-    Sprite: {fileID: 21300000, guid: ae5f06adf273d4adaa20883f83676623, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: f0b0e6240f89a46788a4aaffbf0ad564, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RewardCommand: -character talk map-success-sculpture -art-holder show 1 500
+    RequirementsVO: 
+    NextChallengeVO: challenge-1-500
+  - Name: 2-200
+    Sprite: {fileID: 21300000, guid: 4cc3d8c9532f3624783ea352566b73c8, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 2 100 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-100-2
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-100-2
+    RewardCommand: -character talk map-success-sculpture -art-holder show 2 200 -hidespawnoption
+    RequirementsVO: 
+    NextChallengeVO: challenge-2-200
   - Name: 2-500
-    Sprite: {fileID: 21300000, guid: 1093deb0cc73949d68d7c04881342484, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 17cf79776cc7a472e946e768a1d149c2, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: 4219f895f849e43449a0a885f192e691, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 2 500 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-500-2
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500-2
-  - Name: 3-100
-    Sprite: {fileID: 21300000, guid: 23af9e1b45a194d9a8064552b3a3332c, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 83ad83ceb952a47758a72d84300231b1, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RequirementsVO: 
+    NextChallengeVO: challenge-2-500
+  - Name: 3-200
+    Sprite: {fileID: 21300000, guid: cf6afc30de48c6343af1caedca50f0fe, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 3 100 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-100-3
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-100-3
+    RewardCommand: -character talk map-success-sculpture -art-holder show 3 200 -hidespawnoption
+    RequirementsVO: 
+    NextChallengeVO: challenge-3-200
   - Name: 3-500
-    Sprite: {fileID: 21300000, guid: 42f7df290a08c48feae21eab685a0faa, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 419cd212dc475403c9ecdc28a0b05944, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: 6999575a53f7ce444941e8cb93a0e012, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 3 500 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-500-3
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500-3
-  - Name: 4-100
-    Sprite: {fileID: 21300000, guid: c0bcc459ba8a644a28cded060b44dfb8, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: 7009f218396bc41cf9b84fb03fea1e29, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    RequirementsVO: 
+    NextChallengeVO: challenge-3-500
+  - Name: 4-200
+    Sprite: {fileID: 21300000, guid: 6ec7d5243c35bea4b8364008cf014065, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
-    RewardCommand: -character talk map-success-sculpture -art-holder show 4 100 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-100-4
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-100-4
+    RewardCommand: -character talk map-success-sculpture -art-holder show 4 200 -hidespawnoption
+    RequirementsVO: 
+    NextChallengeVO: challenge-4-200
   - Name: 4-500
-    Sprite: {fileID: 21300000, guid: 254f75945632b4134b4634803dac75c8, type: 3}
-    CompletedSprite: {fileID: 21300000, guid: bb91973b6b3cb44f4bd53bfa963808e8, type: 3}
-    ScanRfidCommand: 
-    LoadCommand: 
+    Sprite: {fileID: 21300000, guid: 22e34e80b14e10d479c81f889042a745, type: 3}
+    ResourceRewards: 
+    HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 4 500 -hidespawnoption
-    RequirementsCommand: -character talk testing-announce-500-4
-    EncourageCommand: 
-    NextChallengeCommand: -character talk testing-next-announce-500-4
+    RequirementsVO: 
+    NextChallengeVO: challenge-4-500
+  Hints:
+  - Name: counterweight
+    Thumbnail: {fileID: 21300000, guid: 83cdd99e97a606b44b86abb7fdf439a5, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6b59834520f47974097c1ad4d7e61e56, type: 3}
+  - Name: another-pier
+    Thumbnail: {fileID: 21300000, guid: 94e6547a19807c4409b800f70ded85ce, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 58a5d0d98b7304e4cbc496120fe5ee57, type: 3}
+  - Name: further-counterweight
+    Thumbnail: {fileID: 21300000, guid: 6368c1d1275a86442953bdde116cec99, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: cd2bbb6e718fc7348b48e267bb532a26, type: 3}
+  - Name: weight-down
+    Thumbnail: {fileID: 21300000, guid: b7f3ce50c04d0364bad3c8704a832340, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6fec5286165ef1143a02753e5980352a, type: 3}
+  - Name: notch
+    Thumbnail: {fileID: 21300000, guid: 42113f32b796fb141827f88a5553e4e3, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: a44d9c069a828ce48846eb7b1c97897c, type: 3}
+  - Name: interlocking
+    Thumbnail: {fileID: 21300000, guid: 7d2cfd5804df1fe4eabf2b4a589e093f, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6991d330b40f5d2469a72c438662ae40, type: 3}
+  WaysToFail:
+  - ButtonName: Not tall enough
+    ObjectToLoad: {fileID: -860130409809325442, guid: 0aa4f75061266b5438fbf24287fc0c8b, type: 3}
+  - ButtonName: Not wide enough
+    ObjectToLoad: {fileID: -860130409809325442, guid: d32fee752ac0bab4187776423414a250, type: 3}
+  - ButtonName: Put weight at the end
+    ObjectToLoad: {fileID: -860130409809325442, guid: 339f76b512968e24e88d95eb7dea58fd, type: 3}
