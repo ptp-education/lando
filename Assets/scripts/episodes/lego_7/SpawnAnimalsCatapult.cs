@@ -31,7 +31,11 @@ namespace Lando.Class.Lego7
         [SerializeField] private Image inCatapultAnimal_;
         [SerializeField] private Image flyingAnimal_;
         [SerializeField] private Image failureAnimal_;
-        [SerializeField] private Image successAnimal_;
+
+        [SerializeField] private Image frogSuccess_;
+        [SerializeField] private Image fishSuccess_;
+        [SerializeField] private Image lizardSuccess_;
+        [SerializeField] private Image gliderSuccess_;
 
         [SerializeField] private GameObject select_;
         [SerializeField] private GameObject inCatapult_;
@@ -142,21 +146,47 @@ namespace Lando.Class.Lego7
                 case "left":
                     inCatapultAnimal_.sprite = selectedAnimal_[0].inCatapult_;
                     flyingAnimal_.sprite = selectedAnimal_[0].flying_;
-                    successAnimal_.sprite = selectedAnimal_[0].success_;
+
+                    DisplayAnimalSuccess(selectedAnimal_[0]);
                     break;
                 case "middle":
                     inCatapultAnimal_.sprite = selectedAnimal_[1].inCatapult_;
                     flyingAnimal_.sprite = selectedAnimal_[1].flying_;
-                    successAnimal_.sprite = selectedAnimal_[1].success_;
+
+                    DisplayAnimalSuccess(selectedAnimal_[1]);
                     break;
                 case "right":
                     inCatapultAnimal_.sprite = selectedAnimal_[2].inCatapult_;
                     flyingAnimal_.sprite = selectedAnimal_[2].flying_;
-                    successAnimal_.sprite = selectedAnimal_[2].success_;
+
+                    DisplayAnimalSuccess(selectedAnimal_[2]);
                     break;
             }
 
             ShowAnimalInCatapult();
+        }
+
+        private void DisplayAnimalSuccess(Animal currentAnimal_) 
+        {
+            switch (currentLevel_)
+            {
+                case 1:
+                    frogSuccess_.gameObject.SetActive(true);
+                    frogSuccess_.sprite = currentAnimal_.success_;
+                    break;
+                case 2:
+                    fishSuccess_.gameObject.SetActive(true);
+                    fishSuccess_.sprite = currentAnimal_.success_;
+                    break;
+                case 3:
+                    lizardSuccess_.gameObject.SetActive(true);
+                    lizardSuccess_.sprite = currentAnimal_.success_;
+                    break;
+                case 4:
+                    gliderSuccess_.gameObject.SetActive(true);
+                    gliderSuccess_.sprite = currentAnimal_.success_;
+                    break;
+            }
         }
 
         private void ShowAnimalInCatapult()
@@ -181,7 +211,7 @@ namespace Lando.Class.Lego7
         private void ShowAnimalFlying()
         {
             inCatapult_.SetActive(false);
-            flying_.SetActive(false);
+            flying_.SetActive(true);
             gameManager_.SendNewActionInternal("-update-options empty");
             Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
                 ShowAnimalSuccess();
@@ -192,8 +222,7 @@ namespace Lando.Class.Lego7
         {
             flying_.SetActive(false);
             success_.SetActive(true);
-
-            Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
+            Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                 currentLevel_++;
                 selectedAnimal_.Clear();
                 ShowAnimalSelection();
