@@ -772,7 +772,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: -725, y: -354, z: 0}
+  - TalkingPosition: {x: -725, y: -454, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -791,18 +791,18 @@ MonoBehaviour:
   - StartShown: 0
     Name: default
     Options:
-    - ButtonName: Crossbow
-      TeacherOnly: 0
-      Command: 
-      EventObject: {fileID: -860130409809325442, guid: f2659f4ca40aa9b4dbd58f5e7cb14e8a, type: 3}
-    - ButtonName: Trebuchet
-      TeacherOnly: 0
-      Command: 
-      EventObject: {fileID: -860130409809325442, guid: 5215cfddbd5dacf48bb78011020b8add, type: 3}
     - ButtonName: Catapult
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: e1a7b34e30a5db1478bf7fc0bd0dcaa3, type: 3}
+    - ButtonName: Trebuchet
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: -860130409809325442, guid: 5215cfddbd5dacf48bb78011020b8add, type: 3}
+    - ButtonName: Crossbow
+      TeacherOnly: 0
+      Command: 
+      EventObject: {fileID: -860130409809325442, guid: f2659f4ca40aa9b4dbd58f5e7cb14e8a, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
