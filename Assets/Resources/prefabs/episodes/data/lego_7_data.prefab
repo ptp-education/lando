@@ -46,42 +46,42 @@ MonoBehaviour:
   StartingResources: 
   StartingHints: []
   Challenges:
-  - Name: Zone 1
-    Sprite: {fileID: 21300000, guid: 0a10a0e2d207b45b18a59988cffc7253, type: 3}
+  - Name: zone-1
+    Sprite: {fileID: 21300000, guid: 800faaceaeb49794098aa5c746ec3532, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: 
-  - Name: Zone 2
-    Sprite: {fileID: 21300000, guid: bd88c012a23ff4761bdd6d818215cbea, type: 3}
+    NextChallengeVO: challenge-1
+  - Name: zone-2
+    Sprite: {fileID: 21300000, guid: 2ffbb42761ec16642952515288bd8464, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: 
-  - Name: Zone 3
-    Sprite: {fileID: 21300000, guid: e42ec9966a1a84388a2bad9c61bbf333, type: 3}
+    NextChallengeVO: challenge-2
+  - Name: zone-3
+    Sprite: {fileID: 21300000, guid: a95e4d9f6030d9d4489a8304013e146d, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: 
-  - Name: Zone 4
-    Sprite: {fileID: 21300000, guid: 6bb8658da389a4f28aced968c17af490, type: 3}
+    NextChallengeVO: challenge-3
+  - Name: zone-4
+    Sprite: {fileID: 21300000, guid: dd9c7c2b2d0c83f458b34104fb918771, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: 
+    NextChallengeVO: challenge-4
   Hints:
   - Name: interlocking-arm
     Thumbnail: {fileID: 21300000, guid: dd1d6276fc3cfdc429fe62c8e3f41e6a, type: 3}

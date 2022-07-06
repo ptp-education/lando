@@ -53,19 +53,19 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk map-intro-trebuchet
+    CommandLine: -character talk simulator-interlocking-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 8b24da3d1ec40664bb077b0617eb9ffa, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 2.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 88ce9cf076b2a9246a645a82089e7e3e, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

@@ -52,34 +52,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk map-intro-trebuchet
+    VoiceoverFile: hint-longer-arm
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 4174bd7c2da417a4580b52948bcc9c56, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9d656018de140d443ad1967106f44780, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: d7f845719ea31f54ebc3cbba5f75bde4, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6518a83f8098d4140a538b0461bc94ac, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Lando.Class.Lego7 
 {
@@ -45,6 +46,8 @@ namespace Lando.Class.Lego7
 
         private List<Animal> selectedAnimal_= new List<Animal>();
 
+        private float waitTime_ = 1f;
+
         private void Start()
         {
             ShowAnimalSelection();
@@ -83,7 +86,14 @@ namespace Lando.Class.Lego7
         private void ShowAnimalSelection() 
         {
             Hide();
-            gameManager_.SendNewActionInternal("-update-options choose");
+            if (currentLevel_ <= 4)
+            {
+                gameManager_.SendNewActionInternal("-update-options choose");
+            }
+            else if (currentLevel_ > 4) 
+            {
+                gameManager_.SendNewActionInternal("-update-options default");
+            }
             select_.SetActive(true);
             List<int> randomAnimals = new List<int>();
             int number = 0;
@@ -213,9 +223,79 @@ namespace Lando.Class.Lego7
             inCatapult_.SetActive(false);
             flying_.SetActive(true);
             gameManager_.SendNewActionInternal("-update-options empty");
-            Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
+            waitTime_ = SelectAudioSuccess();
+            Go.to(this, waitTime_, new GoTweenConfig().onComplete(t => {
                 ShowAnimalSuccess();
             }));
+        }
+
+        private float SelectAudioSuccess() 
+        {
+            int randomAudio = 0;
+            switch (currentLevel_)
+            {
+                case 1:
+                    randomAudio = Random.Range(0, 2);
+                    AudioPlayer.PlayAudio($"audio/lego_7/animal-frog-success-{randomAudio}");
+                    if (randomAudio == 0)
+                    {
+                        return 3.5f;
+                    }
+                    else 
+                    {
+                        return 1.5f;
+                    }
+                case 2:
+                    randomAudio = Random.Range(0, 3);
+                    AudioPlayer.PlayAudio($"audio/lego_7/animal-fish-success-{randomAudio}");
+                    if (randomAudio == 0)
+                    {
+                        return 5f;
+                    }
+                    else if (randomAudio == 1)
+                    {
+                        return 3f;
+                    }
+                    else 
+                    {
+                        return 3.1f;
+                    }
+                case 3:
+                    randomAudio = Random.Range(0, 4);
+                    AudioPlayer.PlayAudio($"audio/lego_7/animal-lizard-success-{randomAudio}");
+                    if (randomAudio == 0)
+                    {
+                        return 2.6f;
+                    }
+                    else if (randomAudio == 1)
+                    {
+                        return 2.7f;
+                    }
+                    else if (randomAudio == 2)
+                    {
+                        return 1.2f;
+                    }
+                    else
+                    {
+                        return 2.6f;
+                    }
+                case 4:
+                    randomAudio = Random.Range(0, 3);
+                    AudioPlayer.PlayAudio($"audio/lego_7/animal-sugar-success-{randomAudio}");
+                    if (randomAudio == 0)
+                    {
+                        return 5.3f;
+                    }
+                    else if (randomAudio == 1)
+                    {
+                        return 3.3f;
+                    }
+                    else
+                    {
+                        return 4.7f;
+                    }
+            }
+            return 1;
         }
 
         private void ShowAnimalSuccess() 

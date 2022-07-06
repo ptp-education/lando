@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk map-intro-trebuchet
+    CommandLine: -character talk simulator-stronger-tower-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1c8abc2a7960eca4c8f2414c5cd7b063, type: 3}
     SelfDestruct: 0

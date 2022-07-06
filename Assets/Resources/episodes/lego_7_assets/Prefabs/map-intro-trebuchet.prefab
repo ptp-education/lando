@@ -55,8 +55,15 @@ MonoBehaviour:
     VoiceoverFile: 
     CommandLine: -character talk map-intro-trebuchet
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: d3af16866f3f2e6468dfc2d009642483, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 85da6f37c17e07e4f998836a955fb629, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 9.2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

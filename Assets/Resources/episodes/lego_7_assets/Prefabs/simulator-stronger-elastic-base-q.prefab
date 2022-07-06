@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk map-intro-trebuchet
+    CommandLine: -character talk simulator-elastic-base-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c5020e909feacc3448fac5a6c77227e2, type: 3}
     SelfDestruct: 0

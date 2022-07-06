@@ -55,15 +55,22 @@ MonoBehaviour:
     VoiceoverFile: 
     CommandLine: -character talk map-intro-catapult
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 03a58e361dac70f4f9830a61db95d815, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 8909ff61fb1bfb044ae7635e7df1516c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 14
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: bf659e03d5745e349a62ba2d595ca20f, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 5623c04b6b066fd4bb78260bb6cbde2c, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 26.7
+    VoiceoverFile: 
+    CommandLine: -node next
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
