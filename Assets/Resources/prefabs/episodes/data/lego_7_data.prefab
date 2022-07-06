@@ -54,7 +54,7 @@ MonoBehaviour:
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: challenge-1
+    NextChallengeVO: next-challenge-1
   - Name: zone-2
     Sprite: {fileID: 21300000, guid: 2ffbb42761ec16642952515288bd8464, type: 3}
     ResourceRewards: 
@@ -63,7 +63,7 @@ MonoBehaviour:
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: challenge-2
+    NextChallengeVO: next-challenge-2
   - Name: zone-3
     Sprite: {fileID: 21300000, guid: a95e4d9f6030d9d4489a8304013e146d, type: 3}
     ResourceRewards: 
@@ -72,7 +72,7 @@ MonoBehaviour:
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: challenge-3
+    NextChallengeVO: next-challenge-3
   - Name: zone-4
     Sprite: {fileID: 21300000, guid: dd9c7c2b2d0c83f458b34104fb918771, type: 3}
     ResourceRewards: 
@@ -81,7 +81,7 @@ MonoBehaviour:
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
     RequirementsVO: 
-    NextChallengeVO: challenge-4
+    NextChallengeVO: next-challenge-4
   Hints:
   - Name: interlocking-arm
     Thumbnail: {fileID: 21300000, guid: dd1d6276fc3cfdc429fe62c8e3f41e6a, type: 3}
