@@ -518,8 +518,8 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: adf0161c20829bc4d85e3e5d8c5f8cc1, type: 3}
-  ImageFilePath: episodes/lego_6_screens/game_background_level-1
+  Image: {fileID: 2800000, guid: 32fefd33bbd49fb4f991967e49a7ffc0, type: 3}
+  ImageFilePath: episodes/lego_8_screens/introduction_1
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -541,17 +541,17 @@ MonoBehaviour:
   - StartShown: 1
     Name: choose
     Options:
-    - ButtonName: Top
+    - ButtonName: Left
       TeacherOnly: 0
-      Command: -cat top
+      Command: -hotel left
       EventObject: {fileID: 0}
     - ButtonName: Middle
       TeacherOnly: 0
-      Command: -cat middle
+      Command: -hotel middle
       EventObject: {fileID: 0}
-    - ButtonName: Bottom
+    - ButtonName: Right
       TeacherOnly: 0
-      Command: -cat bottom
+      Command: -hotel right
       EventObject: {fileID: 0}
   - StartShown: 1
     Name: empty
@@ -569,7 +569,7 @@ MonoBehaviour:
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
-      Command: -cat success
+      Command: -hotel success
       EventObject: {fileID: 0}
       Ran: 0
 --- !u!1 &5225646464594165411
