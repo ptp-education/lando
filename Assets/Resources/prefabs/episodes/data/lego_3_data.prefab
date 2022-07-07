@@ -57,8 +57,8 @@ MonoBehaviour:
     - further-counterweight
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 1 200
-    RequirementsVO: 
-    NextChallengeVO: challenge-1-200
+    RequirementsVO: challenge-1-200
+    NextChallengeVO: next-challenge-1-200
   - Name: 1-500
     Sprite: {fileID: 21300000, guid: 90fc9985abea66541ab2b84fd523f17c, type: 3}
     ResourceRewards: 
@@ -66,56 +66,56 @@ MonoBehaviour:
     - weight-down
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 1 500
-    RequirementsVO: 
-    NextChallengeVO: challenge-1-500
+    RequirementsVO: challenge-1-500
+    NextChallengeVO: next-challenge-1-500
   - Name: 2-200
     Sprite: {fileID: 21300000, guid: 4cc3d8c9532f3624783ea352566b73c8, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 2 200 -hidespawnoption
-    RequirementsVO: 
-    NextChallengeVO: challenge-2-200
+    RequirementsVO: challenge-2-200
+    NextChallengeVO: next-challenge-2-200
   - Name: 2-500
     Sprite: {fileID: 21300000, guid: 4219f895f849e43449a0a885f192e691, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 2 500 -hidespawnoption
-    RequirementsVO: 
-    NextChallengeVO: challenge-2-500
+    RequirementsVO: challenge-2-500
+    NextChallengeVO: next-challenge-2-500
   - Name: 3-200
     Sprite: {fileID: 21300000, guid: cf6afc30de48c6343af1caedca50f0fe, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 3 200 -hidespawnoption
-    RequirementsVO: 
-    NextChallengeVO: challenge-3-200
+    RequirementsVO: challenge-3-200
+    NextChallengeVO: next-challenge-3-200
   - Name: 3-500
     Sprite: {fileID: 21300000, guid: 6999575a53f7ce444941e8cb93a0e012, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 3 500 -hidespawnoption
-    RequirementsVO: 
-    NextChallengeVO: challenge-3-500
+    RequirementsVO: challenge-3-500
+    NextChallengeVO: next-challenge-3-500
   - Name: 4-200
     Sprite: {fileID: 21300000, guid: 6ec7d5243c35bea4b8364008cf014065, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 4 200 -hidespawnoption
-    RequirementsVO: 
-    NextChallengeVO: challenge-4-200
+    RequirementsVO: challenge-4-200
+    NextChallengeVO: next-challenge-4-200
   - Name: 4-500
     Sprite: {fileID: 21300000, guid: 22e34e80b14e10d479c81f889042a745, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-sculpture -art-holder show 4 500 -hidespawnoption
-    RequirementsVO: 
-    NextChallengeVO: challenge-4-500
+    RequirementsVO: challenge-4-500
+    NextChallengeVO: next-challenge-4-500
   Hints:
   - Name: counterweight
     Thumbnail: {fileID: 21300000, guid: 83cdd99e97a606b44b86abb7fdf439a5, type: 3}
