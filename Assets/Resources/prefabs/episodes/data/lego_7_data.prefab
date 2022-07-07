@@ -44,12 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingResources: 
-  StartingHints: []
+  StartingHints:
+  - interlocking-arm
+  - stronger-tower
   Challenges:
   - Name: zone-1
     Sprite: {fileID: 21300000, guid: 800faaceaeb49794098aa5c746ec3532, type: 3}
     ResourceRewards: 
-    HintRewards: []
+    HintRewards:
+    - stronger-elastic-base
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
@@ -58,7 +61,9 @@ MonoBehaviour:
   - Name: zone-2
     Sprite: {fileID: 21300000, guid: 2ffbb42761ec16642952515288bd8464, type: 3}
     ResourceRewards: 
-    HintRewards: []
+    HintRewards:
+    - longer-arm
+    - thicker-arm
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
@@ -67,7 +72,8 @@ MonoBehaviour:
   - Name: zone-3
     Sprite: {fileID: 21300000, guid: a95e4d9f6030d9d4489a8304013e146d, type: 3}
     ResourceRewards: 
-    HintRewards: []
+    HintRewards:
+    - stronger-elastic-arm
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
@@ -98,4 +104,7 @@ MonoBehaviour:
   - Name: thicker-arm
     Thumbnail: {fileID: 21300000, guid: 8778c04b62746d046ac08ef874d8ffae, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 1a901aadddf4b4c45a43edd7808204d5, type: 3}
+  - Name: stronger-elastic-base
+    Thumbnail: {fileID: 21300000, guid: 8d79b5a63a4441f439ef522b9c758d41, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6a494945d0127db4680739ae40dfcb40, type: 3}
   WaysToFail: []
