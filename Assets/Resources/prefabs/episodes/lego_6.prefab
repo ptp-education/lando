@@ -886,7 +886,7 @@ MonoBehaviour:
     Command: -update-options default
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 15
+  - TimeStamp: 16
     Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
