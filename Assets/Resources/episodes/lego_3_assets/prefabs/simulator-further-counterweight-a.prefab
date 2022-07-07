@@ -58,46 +58,32 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: a7bde55f1c902704898cc01890a92db7, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 1
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9ceca9b54c5821c4096b307ef9a6f22f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2
+  - TimeStamp: 5.1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c6d6b70a8248df04ea40f821fde2e92b, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: c6d6b70a8248df04ea40f821fde2e92b, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 4
+  - TimeStamp: 7.1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: bcc82f7012a97ee428e489c504a4cf95, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 9
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 68984a5331ea257439cf2765a2c59a22, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 13.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}
