@@ -984,10 +984,17 @@ MonoBehaviour:
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: 5c1c1965bc7a32f46b90ec84ace82c21, type: 3}
+  - StartShown: 0
+    Name: empty
+    Options: []
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 1.5
     Command: -character talk map-intro-1
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 1.5
+    Command: -sfx "audio/sfx/cat-meow"
     EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 15.2

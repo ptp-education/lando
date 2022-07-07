@@ -60,7 +60,14 @@ MonoBehaviour:
     Ran: 0
   - TimeStamp: 16.2
     VoiceoverFile: 
-    CommandLine: -node next
+    CommandLine: -update-options empty -node next
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 16.7
+    VoiceoverFile: 
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 0}
     SelfDestruct: 1
