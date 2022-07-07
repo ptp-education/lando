@@ -726,20 +726,12 @@ MonoBehaviour:
   - CommandToCall: -game-success
     StoredCommands:
     - TimeStamp: 0
-      Command: -sfx "audio/sfx/applausetrumpet"
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 0
       Command: -swing load
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 3
       Command: '-character talk home-success-1a home-success-1b home-success-1c home-success-1d
         home-success-1e home-success-1f '
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 7
-      Command: -swing increment
       EventObject: {fileID: 0}
       Ran: 0
 --- !u!1 &5477469782974784974
@@ -834,7 +826,7 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: -860130409809325442, guid: 534c7bf59ffd8154fbbd660ccf505130, type: 3}
     Ran: 0
-  - TimeStamp: 22
+  - TimeStamp: 23
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
