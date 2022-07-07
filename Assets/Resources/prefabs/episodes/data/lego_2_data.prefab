@@ -55,8 +55,8 @@ MonoBehaviour:
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-add-wood -tower-add-wood
-    RequirementsVO: 
-    NextChallengeVO: challenge-2
+    RequirementsVO: challenge-2
+    NextChallengeVO: next-challenge-2
   - Name: 5lbs
     Sprite: {fileID: 21300000, guid: 0d0569bd03ad6b7469b7abf9d3bde040, type: 3}
     ResourceRewards: 
@@ -64,8 +64,8 @@ MonoBehaviour:
     - double-up-blocks
     FailCommand: 
     RewardCommand: -character talk map-success-add-bronze -tower-add-bronze
-    RequirementsVO: 
-    NextChallengeVO: challenge-5
+    RequirementsVO: challenge-5
+    NextChallengeVO: next-challenge-5
   - Name: 10lbs
     Sprite: {fileID: 21300000, guid: 4a28e5b66afe85744872ed992ba69942, type: 3}
     ResourceRewards: 
@@ -73,8 +73,8 @@ MonoBehaviour:
     - wider-arch
     FailCommand: 
     RewardCommand: -character talk map-success-add-silver -tower-add-silver
-    RequirementsVO: 
-    NextChallengeVO: challenge-10
+    RequirementsVO: challenge-10
+    NextChallengeVO: next-challenge-10
   - Name: 15lbs
     Sprite: {fileID: 21300000, guid: 218d2e85775d22d4aa18d9eede5e7876, type: 3}
     ResourceRewards: 
@@ -83,16 +83,16 @@ MonoBehaviour:
     - combine-bridges
     FailCommand: 
     RewardCommand: -character talk map-success-add-gold -tower-add-gold
-    RequirementsVO: 
-    NextChallengeVO: challenge-15
+    RequirementsVO: challenge-15
+    NextChallengeVO: next-challenge-15
   - Name: 20lbs
     Sprite: {fileID: 21300000, guid: ea274386cfb14df4987ee7215308b821, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: 
     RewardCommand: -character talk map-success-add-obsidian -tower-add-obsidian
-    RequirementsVO: 
-    NextChallengeVO: challenge-20
+    RequirementsVO: challenge-20
+    NextChallengeVO: next-challenge-20
   Hints:
   - Name: build-arch
     Thumbnail: {fileID: 21300000, guid: 8cd911fd7bb7a2a4492b7a602d32feb7, type: 3}
