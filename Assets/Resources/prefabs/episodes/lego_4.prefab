@@ -29,7 +29,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -204,7 +204,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -543,6 +543,7 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &4440565866868392372
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,11 +706,12 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 19
+  - TimeStamp: 18.7
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &5538422780132337193
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +795,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &6050227710332013916
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +825,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2048181044805120259}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -887,6 +890,7 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
+  NextNode: {fileID: 0}
 --- !u!1 &6720832660718529540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,6 +1164,7 @@ RectTransform:
   - {fileID: 2923773018779378133}
   - {fileID: 7476242058815124570}
   - {fileID: 5868912819390049787}
+  - {fileID: 7008317980840604335}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
