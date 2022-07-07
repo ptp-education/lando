@@ -566,7 +566,7 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 0
     Steps: []
-  FadeInFromPreviousScene: 0
+  FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn: []
   PrefabSpawnObjects: []
@@ -575,7 +575,7 @@ MonoBehaviour:
     Command: -character talk map-intro-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 30
+  - TimeStamp: 31
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -791,15 +791,15 @@ MonoBehaviour:
   - StartShown: 0
     Name: default
     Options:
-    - ButtonName: Catapult
+    - ButtonName: 1
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: e1a7b34e30a5db1478bf7fc0bd0dcaa3, type: 3}
-    - ButtonName: Trebuchet
+    - ButtonName: 2
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: 5215cfddbd5dacf48bb78011020b8add, type: 3}
-    - ButtonName: Crossbow
+    - ButtonName: 3
       TeacherOnly: 0
       Command: 
       EventObject: {fileID: -860130409809325442, guid: f2659f4ca40aa9b4dbd58f5e7cb14e8a, type: 3}
@@ -906,7 +906,11 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: -860130409809325442, guid: f9f0ff2dba0dbac45934ff031adfe121, type: 3}
     Ran: 0
-  - TimeStamp: 52.5
+  - TimeStamp: 54
+    Command: -character talk setup-make-sense
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 57.5
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
