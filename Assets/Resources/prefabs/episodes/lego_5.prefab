@@ -823,10 +823,14 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 1.5
+    Command: -character talk explainer-0
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 4
     Command: 
     EventObject: {fileID: -860130409809325442, guid: 534c7bf59ffd8154fbbd660ccf505130, type: 3}
     Ran: 0
-  - TimeStamp: 23
+  - TimeStamp: 24.2
     Command: -show-choices
     EventObject: {fileID: 0}
     Ran: 0
@@ -918,6 +922,10 @@ MonoBehaviour:
   - TimeStamp: 1.5
     Command: -character talk map-intro-0
     EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 11
+    Command: 
+    EventObject: {fileID: -860130409809325442, guid: 78e94cb372068a34c97e68c98fd6c1a1, type: 3}
     Ran: 0
   - TimeStamp: 25.5
     Command: -node next

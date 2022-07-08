@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 364074704597059915}
   - component: {fileID: 759647174285219434}
   m_Layer: 0
-  m_Name: explainer
+  m_Name: map-intro-highlight-elephant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,47 +53,12 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-1
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: ce7ff283a24f1004ca95af7d3adb0135, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 86c416842f824c44b8d6c2574b69fc15, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 0b746a3dcb383dd448b735fbc9737e7a, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 8
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 807fdf9f473c91b4f9da642d32225c2d, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 11.8
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 0ce0bf9060f86924193f257eb8b13b6a, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 14
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 677be1688b26a3749bcc07377b12c65c, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 16.5
-    VoiceoverFile: 
-    CommandLine: -character talk setup-make-sense
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: fefcd62f7970347f599268d92d0f23f9, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 20
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
