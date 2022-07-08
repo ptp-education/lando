@@ -420,8 +420,8 @@ namespace Lando.Class.Lego6
                 }));
             }
             else {
-                AudioPlayer.PlayAudio("audio/lego_6/cat-customization");
-                Go.to(this, 7f, new GoTweenConfig().onComplete(t =>
+                AudioPlayer.PlayAudio("audio/lego_6/cat-customization-1");
+                Go.to(this, 2.2f, new GoTweenConfig().onComplete(t =>
                 {
                     gameManager_.SendNewActionInternal("-update-options choose");
                 }));

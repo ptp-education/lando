@@ -882,12 +882,12 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: -860130409809325442, guid: 501e83f1b5744f54782bce97bfdb579a, type: 3}
     Ran: 0
-  - TimeStamp: 15
-    Command: -update-options default
+  - TimeStamp: 18.5
+    Command: -character talk setup-make-sense
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 16
-    Command: -character talk setup-make-sense
+  - TimeStamp: 22
+    Command: -update-options default
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers:
