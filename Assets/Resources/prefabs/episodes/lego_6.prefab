@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgLoopPath: 
+  BgLoopPath: audio/sfx/wind
   BgLoop: {fileID: 0}
   Type: 1
   Characters:
@@ -566,10 +566,28 @@ MonoBehaviour:
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
-  - CommandToCall: -game-success
+  - CommandToCall: -game-success-1
     StoredCommands:
     - TimeStamp: 0
-      Command: -cat success
+      Command: -cat success 1
+      EventObject: {fileID: 0}
+      Ran: 0
+  - CommandToCall: -game-success-2
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -cat success 2
+      EventObject: {fileID: 0}
+      Ran: 0
+  - CommandToCall: -game-success-3
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -cat success 3
+      EventObject: {fileID: 0}
+      Ran: 0
+  - CommandToCall: -game-success-4
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -cat success 4
       EventObject: {fileID: 0}
       Ran: 0
 --- !u!1 &5225646464594165411
