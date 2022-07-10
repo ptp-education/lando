@@ -56,8 +56,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e -cat-failure
     RewardCommand: -game-success-1
-    RequirementsVO: 
-    NextChallengeVO: challenge-1
+    RequirementsVO: challenge-1
+    NextChallengeVO: next-challenge-1
   - Name: level2
     Sprite: {fileID: 21300000, guid: a7c381e5385861d4e9ab0ab4bd365acc, type: 3}
     ResourceRewards: 
@@ -68,8 +68,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success-2
-    RequirementsVO: 
-    NextChallengeVO: challenge-2
+    RequirementsVO: challenge-2
+    NextChallengeVO: next-challenge-2
   - Name: level3
     Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
     ResourceRewards: 
@@ -78,8 +78,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success-3
-    RequirementsVO: 
-    NextChallengeVO: challenge-3
+    RequirementsVO: challenge-3
+    NextChallengeVO: next-challenge-3
   - Name: level4
     Sprite: {fileID: 21300000, guid: 2bb919f7f41f223448de545ad4779b68, type: 3}
     ResourceRewards: 
@@ -87,8 +87,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success-4
-    RequirementsVO: 
-    NextChallengeVO: challenge-4
+    RequirementsVO: challenge-4
+    NextChallengeVO: next-challenge-4
   Hints:
   - Name: rubble
     Thumbnail: {fileID: 21300000, guid: e7d6671203dade649a1ddb494e0d2d6f, type: 3}
