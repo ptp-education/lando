@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    CommandLine: -character talk stabilize-swing-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b7f261b3c9476db4f8c480ce993c1c02, type: 3}
     SelfDestruct: 0

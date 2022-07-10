@@ -52,8 +52,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk explainer-start
+    VoiceoverFile: hint-move-tower-closer
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6cb7a91bd95129b40aa265f63e2ff02b, type: 3}
     SelfDestruct: 0
