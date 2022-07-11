@@ -98,23 +98,37 @@ namespace Lando.Class.Lego6
         [SerializeField] private GameObject newCat_; //cat that'll appear in the daycare
         [SerializeField] private GameObject customizationScreen_;
         [SerializeField] private Sprite emptySprite_;
+        [SerializeField] private Image jumpCat_;
+        [SerializeField] private Image crateCat_;
+
 
         private Cat catPlaceholder_ = new Cat();//From here we'll get the corresponding cat sprite
 
         private int currentAmountCats_ = 0; //every 3 cats, daycare becomes bigger
         private int currentLevel = 1;
+        private int currentLevelScreen = 1;
+
+        float xMin_ = 0, xMax_ = 0, yMin_ = 0, yMax_ = 0;
 
         private float waitTime = 0;
 
+        private List<RectTransform> catsInDaycare = new List<RectTransform>();
+
+        private GameObject catGO;
+
         private void Start()
         {
-            ShowChallengeScreen();
             Hide();
+            ShowChallengeScreen();
         }
 
         public override void Hide() { 
             customizationScreen_.SetActive(false);
             daycareBg_.gameObject.SetActive(false);
+            level1_.container_.SetActive(false);
+            level2_.container_.SetActive(false);
+            level3_.container_.SetActive(false);
+            level4_.container_.SetActive(false);
         }
 
         public override void ReceivedAction(string action)
@@ -125,6 +139,7 @@ namespace Lando.Class.Lego6
 
             if (args.Contains("success"))
             {
+                int.TryParse(args[1], out currentLevel);
                 CatSafe();
             }
             else if (args.Contains("top") || args.Contains("middle") || args.Contains("bottom"))
@@ -141,32 +156,49 @@ namespace Lando.Class.Lego6
         {
             int randomLeft_ = Random.Range(0, 15);
             int randomMiddle_ = Random.Range(0, 15);
-            int randomRight_ = Random.Range(0, 15);
 
-            while (randomMiddle_ == randomLeft_ || randomMiddle_ == randomRight_) 
+            while (randomMiddle_ == randomLeft_) 
             {
                 randomMiddle_ = Random.Range(0, 15);
             }
+
+            int randomRight_ = Random.Range(0, 15);
 
             while (randomRight_ == randomLeft_ || randomMiddle_ == randomRight_)
             {
                 randomRight_ = Random.Range(0, 15);
             }
 
-            switch (currentLevel) 
+            level1_.cats_[0] = solidCats_[randomLeft_];
+            level1_.cats_[1] = solidCats_[randomMiddle_];
+            level1_.cats_[2] = solidCats_[randomRight_];
+
+            level2_.cats_[0] = tabbyCats_[randomLeft_];
+            level2_.cats_[1] = tabbyCats_[randomMiddle_];
+            level2_.cats_[2] = tabbyCats_[randomRight_];
+
+            level3_.cats_[0] = spotsCats_[randomLeft_];
+            level3_.cats_[1] = spotsCats_[randomMiddle_];
+            level3_.cats_[2] = spotsCats_[randomRight_];
+
+            level4_.cats_[0] = specialCats_[randomLeft_];
+            level4_.cats_[1] = specialCats_[randomMiddle_];
+            level4_.cats_[2] = specialCats_[randomRight_];
+
+            switch (currentLevelScreen) 
             {
                 case 1:
                     level1_.container_.SetActive(true);
-                    level1_.cats_[0] = solidCats_[randomLeft_];
-                    level1_.cats_[1] = solidCats_[randomMiddle_];
-                    level1_.cats_[2] = solidCats_[randomRight_];
                     level1_.ApplySprites();
                     break;
                 case 2:
                     level2_.container_.SetActive(true);
-                    level2_.cats_[0] = tabbyCats_[randomLeft_];
-                    level2_.cats_[1] = tabbyCats_[randomMiddle_];
-                    level2_.cats_[2] = tabbyCats_[randomRight_];
+
+                    ShowCat(level1_);
+
+                    level1_.defaultCatLeft = level2_.otherCats_[0];
+                    level1_.defaultCatMiddle = level2_.otherCats_[1];
+                    level1_.defaultCatRight = level2_.otherCats_[2];
 
                     level2_.otherChallengesCats_.Add(level1_.cats_[0]);
                     level2_.otherChallengesCats_.Add(level1_.cats_[1]);
@@ -176,16 +208,60 @@ namespace Lando.Class.Lego6
                     break;
                 case 3:
                     level3_.container_.SetActive(true);
-                    level3_.cats_[0] = spotsCats_[randomLeft_];
-                    level3_.cats_[1] = spotsCats_[randomMiddle_];
-                    level3_.cats_[2] = spotsCats_[randomRight_];
+
+                    ShowCat(level1_);
+                    ShowCat(level2_);
+
+                    level1_.defaultCatLeft = level3_.otherCats_[0];
+                    level1_.defaultCatMiddle = level3_.otherCats_[1];
+                    level1_.defaultCatRight = level3_.otherCats_[2];
+
+                    level2_.defaultCatLeft = level3_.otherCats_[3];
+                    level2_.defaultCatMiddle = level3_.otherCats_[4];
+                    level2_.defaultCatRight = level3_.otherCats_[5];
+
+                    level3_.otherChallengesCats_.Add(level1_.cats_[0]);
+                    level3_.otherChallengesCats_.Add(level1_.cats_[1]);
+                    level3_.otherChallengesCats_.Add(level1_.cats_[2]);
+
+                    level3_.otherChallengesCats_.Add(level2_.cats_[0]);
+                    level3_.otherChallengesCats_.Add(level2_.cats_[1]);
+                    level3_.otherChallengesCats_.Add(level2_.cats_[2]);
+
                     level3_.ApplySprites();
                     break;
                 case 4:
                     level4_.container_.SetActive(true);
-                    level4_.cats_[0] = specialCats_[randomLeft_];
-                    level4_.cats_[1] = specialCats_[randomMiddle_];
-                    level4_.cats_[2] = specialCats_[randomRight_];
+
+                    level1_.defaultCatLeft = level4_.otherCats_[0];
+                    level1_.defaultCatMiddle = level4_.otherCats_[1];
+                    level1_.defaultCatRight = level4_.otherCats_[2];
+
+                    ShowCat(level1_);
+                    ShowCat(level2_);
+                    ShowCat(level3_);
+                    ShowCat(level4_);
+
+                    level2_.defaultCatLeft = level4_.otherCats_[3];
+                    level2_.defaultCatMiddle = level4_.otherCats_[4];
+                    level2_.defaultCatRight = level4_.otherCats_[5];
+
+                    level3_.defaultCatLeft = level4_.otherCats_[6];
+                    level3_.defaultCatMiddle = level4_.otherCats_[7];
+                    level3_.defaultCatRight = level4_.otherCats_[8];
+
+                    level4_.otherChallengesCats_.Add(level1_.cats_[0]);
+                    level4_.otherChallengesCats_.Add(level1_.cats_[1]);
+                    level4_.otherChallengesCats_.Add(level1_.cats_[2]);
+                         
+                    level4_.otherChallengesCats_.Add(level2_.cats_[0]);
+                    level4_.otherChallengesCats_.Add(level2_.cats_[1]);
+                    level4_.otherChallengesCats_.Add(level2_.cats_[2]);
+                         
+                    level4_.otherChallengesCats_.Add(level3_.cats_[0]);
+                    level4_.otherChallengesCats_.Add(level3_.cats_[1]);
+                    level4_.otherChallengesCats_.Add(level3_.cats_[2]);
+
                     level4_.ApplySprites();
                     break;
             }
@@ -195,7 +271,7 @@ namespace Lando.Class.Lego6
         private void CatSafe()
         {
             int randomCat_ = Random.Range(0, 3);
-
+            GetCurrentState();
             GetCat(randomCat_);
             gameManager_.SendNewActionInternal("-update-options empty");
         }
@@ -255,39 +331,64 @@ namespace Lando.Class.Lego6
             }));
         }
 
+        private void GetCurrentState() 
+        {
+            if (level1_.container_.activeSelf)
+            {
+                jumpCat_ = level1_.jumpCat;
+                crateCat_ = level1_.crateCat;
+            }
+            else if (level2_.container_.activeSelf) 
+            {
+                jumpCat_ = level2_.jumpCat;
+                crateCat_ = level2_.crateCat;
+            }
+            else if (level3_.container_.activeSelf)
+            {
+                jumpCat_ = level3_.jumpCat;
+                crateCat_ = level3_.crateCat;
+            }
+            else if (level4_.container_.activeSelf)
+            {
+                jumpCat_ = level4_.jumpCat;
+                crateCat_ = level4_.crateCat;
+            }
+        }
+
         private void GetCat(int selectionCat) 
         {
             switch (currentLevel)
             {
                 case 1:
                     catPlaceholder_ = level1_.cats_[selectionCat];
-                    level1_.jumpCat.sprite = catPlaceholder_.jumping_;
-                    level1_.crateCat.sprite = catPlaceholder_.sitting_;
+
+                    jumpCat_.sprite = catPlaceholder_.jumping_;
+                    crateCat_.sprite = catPlaceholder_.sitting_;
 
                     GetSavedCat(level1_, selectionCat);
 
-                    ShowCatJumpingSequence(level1_.jumpCat.gameObject, level1_.crateCat.gameObject);
+                    ShowCatJumpingSequence();
                     break;
                 case 2:
-                    level2_.jumpCat.sprite = level2_.cats_[selectionCat].jumping_;
-                    level2_.crateCat.sprite = level2_.cats_[selectionCat].sitting_;
                     catPlaceholder_ = level2_.cats_[selectionCat];
+                    jumpCat_.sprite = catPlaceholder_.jumping_;
+                    crateCat_.sprite = catPlaceholder_.sitting_;
                     GetSavedCat(level2_, selectionCat);
-                    ShowCatJumpingSequence(level2_.jumpCat.gameObject, level2_.crateCat.gameObject);
+                    ShowCatJumpingSequence();
                     break;
                 case 3:
-                    level3_.jumpCat.sprite = level3_.cats_[selectionCat].jumping_;
-                    level3_.crateCat.sprite = level3_.cats_[selectionCat].sitting_;
                     catPlaceholder_ = level3_.cats_[selectionCat];
+                    jumpCat_.sprite = catPlaceholder_.jumping_;
+                    crateCat_.sprite = catPlaceholder_.sitting_;
                     GetSavedCat(level3_, selectionCat);
-                    ShowCatJumpingSequence(level3_.jumpCat.gameObject, level3_.crateCat.gameObject);
+                    ShowCatJumpingSequence();
                     break;
                 case 4:
-                    level4_.jumpCat.sprite = level4_.cats_[selectionCat].jumping_;
-                    level4_.crateCat.sprite = level4_.cats_[selectionCat].sitting_;
                     catPlaceholder_ = level4_.cats_[selectionCat];
+                    jumpCat_.sprite = catPlaceholder_.jumping_;
+                    crateCat_.sprite = catPlaceholder_.sitting_;
                     GetSavedCat(level4_, selectionCat);
-                    ShowCatJumpingSequence(level4_.jumpCat.gameObject, level4_.crateCat.gameObject);
+                    ShowCatJumpingSequence();
                     break;
             }
         }
@@ -308,23 +409,14 @@ namespace Lando.Class.Lego6
             }
         }
 
-        private void ShowCat(Challenge currentChallenge_, int selectedCat_)
+        private void ShowCat(Challenge currentChallenge_)
         {
-            switch (selectedCat_)
-            {
-                case 0:
-                    currentChallenge_.defaultCatLeft.gameObject.SetActive(true);
-                    break;
-                case 1:
-                    currentChallenge_.defaultCatMiddle.gameObject.SetActive(true);
-                    break;
-                case 2:
-                    currentChallenge_.defaultCatRight.gameObject.SetActive(true);
-                    break;
-            }
+            currentChallenge_.defaultCatLeft.gameObject.SetActive(true);
+            currentChallenge_.defaultCatMiddle.gameObject.SetActive(true);
+            currentChallenge_.defaultCatRight.gameObject.SetActive(true);
         }
 
-        private void ShowCatJumpingSequence(GameObject catJumping, GameObject catCrate) {
+        private void ShowCatJumpingSequence() {
             waitTime = 0;
             if (currentLevel == 1)
             {
@@ -346,14 +438,14 @@ namespace Lando.Class.Lego6
                 AudioPlayer.PlayAudio("audio/lego_6/cat-special");
                 waitTime += 6.5f;
             }
-            catJumping.SetActive(true);
+            jumpCat_.gameObject.SetActive(true);
             Go.to(this, 1f,new GoTweenConfig().onComplete(t => {
-                catJumping.SetActive(false);
-                catCrate.SetActive(true);
+                jumpCat_.gameObject.SetActive(false);
+                crateCat_.gameObject.SetActive(true);
                 Go.to(this, waitTime - 1, new GoTweenConfig().onComplete(t => {
                     PlayRandomVOReward();
                     Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
-                        catCrate.SetActive(false);
+                        crateCat_.gameObject.SetActive(false);
                         ShowCustomizationScreen();
                     }));
                 }));
@@ -383,18 +475,19 @@ namespace Lando.Class.Lego6
 
         private void ShowCustomizationScreen()
         {
+            Hide();
             catCustomization_.sprite = catPlaceholder_.default_;
             clothesCustomization_.sprite = emptySprite_;
             //select random customization items
             int selectTop_ = Random.Range(0, 7);
             int selectMiddle_ = Random.Range(0, 7);
-            int selectBottom_ = Random.Range(0, 7);
 
-            while (selectMiddle_ == selectTop_ || selectMiddle_ == selectBottom_) 
+            while (selectMiddle_ == selectTop_) 
             {
                 selectMiddle_ = Random.Range(0, 7);
             }
 
+            int selectBottom_ = Random.Range(0, 7);
             while (selectBottom_ == selectTop_ || selectMiddle_ == selectBottom_)
             {
                 selectBottom_ = Random.Range(0, 7);
@@ -419,8 +512,8 @@ namespace Lando.Class.Lego6
                 }));
             }
             else {
-                AudioPlayer.PlayAudio("audio/lego_6/cat-customization");
-                Go.to(this, 7f, new GoTweenConfig().onComplete(t =>
+                AudioPlayer.PlayAudio("audio/lego_6/cat-customization-1");
+                Go.to(this, 2.2f, new GoTweenConfig().onComplete(t =>
                 {
                     gameManager_.SendNewActionInternal("-update-options choose");
                 }));
@@ -495,95 +588,125 @@ namespace Lando.Class.Lego6
             currentAmountCats_++;
             daycareBg_.gameObject.SetActive(true);
 
-            float xMin_ = 0, xMax_ = 0, yMin_ = 0, yMax_ = 0;
-            float waitTime = 8;
-
-            if (currentAmountCats_ <= 3)
+            switch (currentAmountCats_) 
             {
-                daycareBg_.sprite = daycareLevel1_.background_;
-                xMin_ = daycareLevel1_.xMin;
-                xMax_ = daycareLevel1_.xMax;
-                yMin_ = daycareLevel1_.yMin;
-                yMax_ = daycareLevel1_.yMax;
+                case 1:
+                    daycareBg_.sprite = daycareLevel1_.background_;
+                    xMin_ = daycareLevel1_.xMin;
+                    xMax_ = daycareLevel1_.xMax;
+                    yMin_ = daycareLevel1_.yMin;
+                    yMax_ = daycareLevel1_.yMax;
 
-                waitTime = 8;
+                    AudioPlayer.PlayAudio("audio/sfx/cat-meow");
+                    catGO = Instantiate(newCat_);
+                    SetupCat();
+                    waitTime = 4;
+                    break;
+                case 4:
+                    SetupDaycare(daycareLevel2_, catGO, "audio/lego_6/cat-expand", 8);
+                    break;
+                case 7:
+                    SetupDaycare(daycareLevel3_, catGO, "audio/lego_6/cat-expand", 8);
+                    break;
+                case 10:
+                    SetupDaycare(daycareLevel4_, catGO, "audio/lego_6/cat-expand", 8);
+                    break;
+                case 13:
+                    SetupDaycare(daycareLevel5_, catGO, "audio/lego_6/cat-finish", 12);
+                    break;
+                default:
+                    AudioPlayer.PlayAudio("audio/sfx/cat-meow");
+                    catGO = Instantiate(newCat_);
+                    SetupCat();
+                    break;
             }
-            else if (currentAmountCats_ > 3 && currentAmountCats_ <= 6) 
-            {
-                daycareBg_.sprite = daycareLevel2_.background_;
-                xMin_ = daycareLevel2_.xMin;
-                xMax_ = daycareLevel2_.xMax;
-                yMin_ = daycareLevel2_.yMin;
-                yMax_ = daycareLevel2_.yMax;
-                AudioPlayer.PlayAudio("audio/lego_6/new-building");
-                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
+
+            //after a delay next challenge screen appear
+            //Show default options
+            Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
+                if (currentLevelScreen < 4) currentLevelScreen++;
+                ShowChallengeScreen();
+                daycareBg_.gameObject.SetActive(false);
+                gameManager_.SendNewActionInternal("-update-options default");
+            }));
+        }
+
+        private void SetupDaycare(Daycare daycare, GameObject newCat, string voRoot, float wait) 
+        {
+            xMin_ = daycare.xMin;
+            xMax_ = daycare.xMax;
+            yMin_ = daycare.yMin;
+            yMax_ = daycare.yMax;
+
+            AudioPlayer.PlayAudio(voRoot);
+            waitTime = wait;
+            Go.to(this, 2.5f, new GoTweenConfig().onComplete(t => {
+                gameManager_.SendNewActionInternal("-fadein 2");
+                AudioPlayer.PlayAudio("audio/sfx/new-building");
+                Go.to(this, 1f, new GoTweenConfig().onComplete(t => {
+                    AudioPlayer.PlayAudio("audio/sfx/cat-meow");
+                    daycareBg_.sprite = daycare.background_;
+                    catGO = Instantiate(newCat_);
+                    SetupCat();
                 }));
-                waitTime = 8;
+            }));
 
-            }
-            else if (currentAmountCats_ > 6 && currentAmountCats_ <= 9)
-            {
-                daycareBg_.sprite = daycareLevel3_.background_;
-                xMin_ = daycareLevel3_.xMin;
-                xMax_ = daycareLevel3_.xMax;
-                yMin_ = daycareLevel3_.yMin;
-                yMax_ = daycareLevel3_.yMax;
-                AudioPlayer.PlayAudio("audio/lego_6/new-building");
-                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
-                }));
-                waitTime = 8;
+        }
 
-            }
-            else if (currentAmountCats_ > 9 && currentAmountCats_ <= 12)
-            {
-                daycareBg_.sprite = daycareLevel4_.background_;
-                xMin_ = daycareLevel4_.xMin;
-                xMax_ = daycareLevel4_.xMax;
-                yMin_ = daycareLevel4_.yMin;
-                yMax_ = daycareLevel4_.yMax;
-                AudioPlayer.PlayAudio("audio/lego_6/new-building");
-                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                    AudioPlayer.PlayAudio("audio/lego_6/cat-expand");
-                }));
-                waitTime = 8;
-
-            }
-            else if (currentAmountCats_ > 12)
-            {
-                daycareBg_.sprite = daycareLevel5_.background_;
-                xMin_ = daycareLevel5_.xMin;
-                xMax_ = daycareLevel5_.xMax;
-                yMin_ = daycareLevel5_.yMin;
-                yMax_ = daycareLevel5_.yMax;
-                AudioPlayer.PlayAudio("audio/lego_6/new-building");
-                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                    AudioPlayer.PlayAudio("audio/lego_6/cat-finish");
-                }));
-                waitTime = 12;
-            }
-
+        private void SetupCat() 
+        {
             Vector3 catPosition = new Vector3(Random.Range(xMin_, xMax_), Random.Range(yMin_, yMax_), 0);
 
-            GameObject catGO = Instantiate(newCat_);
+            float randomScale = Random.Range(0.7f, 1.2f);
+            int facingDirection = Random.Range(-10, 11);
 
             catGO.transform.SetParent(daycareBg_.transform);
 
             catGO.GetComponent<RectTransform>().anchoredPosition = (Vector2)catPosition;
 
+            CheckCatSpawnPosition(catGO.GetComponent<RectTransform>());
+
+            if (facingDirection >= 0)
+            {
+                catGO.GetComponent<RectTransform>().localScale = new Vector3(randomScale, randomScale, randomScale);
+            }
+            else
+            {
+                catGO.GetComponent<RectTransform>().localScale = new Vector3(-randomScale, randomScale, randomScale);
+            }
+
             catGO.GetComponent<Image>().sprite = catPlaceholder_.default_;
             catGO.transform.GetChild(0).GetComponent<Image>().sprite = catPlaceholder_.customization_;
 
-            
-            //after a delay next challenge screen appear
-            //Show default options
-            Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
-                currentLevel++;
-                ShowChallengeScreen();
-                daycareBg_.gameObject.SetActive(false);
-                gameManager_.SendNewActionInternal("-update-options default");
-            }));
+            catsInDaycare.Add(catGO.GetComponent<RectTransform>());
+            catGO = null;
+        }
+
+        private void CheckCatSpawnPosition(RectTransform newCat) 
+        {
+            foreach (RectTransform cat in catsInDaycare)
+            {
+                while (newCat.anchoredPosition.x <= cat.anchoredPosition.x + 10 && newCat.anchoredPosition.x >= cat.anchoredPosition.x - 10) 
+                {
+                    newCat.anchoredPosition = new Vector2(Random.Range(xMin_, xMax_),newCat.anchoredPosition.y);
+                }
+                while (newCat.anchoredPosition.y <= cat.anchoredPosition.y + 10 && newCat.anchoredPosition.y >= cat.anchoredPosition.y - 10)
+                {
+                    newCat.anchoredPosition = new Vector2(newCat.anchoredPosition.x, Random.Range(xMin_, xMax_));
+                }
+
+                if (newCat.anchoredPosition.y > cat.anchoredPosition.y) 
+                {
+                    if (cat.GetSiblingIndex() > 0)
+                    {
+                        newCat.SetSiblingIndex(cat.GetSiblingIndex() - 1);
+                    }
+                    else 
+                    {
+                        newCat.SetSiblingIndex(0);
+                    }
+                }
+            }
         }
     }
 }
