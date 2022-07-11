@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4824520685840941836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2578990030495541908}
+  - component: {fileID: 5750723246018985116}
+  m_Layer: 0
+  m_Name: lego_7_data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2578990030495541908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1217.1252, y: 657.4921, z: -199.57349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750723246018985116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints:
+  - interlocking-arm
+  - stronger-tower
+  Challenges:
+  - Name: zone-1
+    Sprite: {fileID: 21300000, guid: 800faaceaeb49794098aa5c746ec3532, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - stronger-elastic-base
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success
+    RequirementsVO: 
+    NextChallengeVO: next-challenge-1
+  - Name: zone-2
+    Sprite: {fileID: 21300000, guid: 2ffbb42761ec16642952515288bd8464, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - longer-arm
+    - thicker-arm
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success
+    RequirementsVO: 
+    NextChallengeVO: next-challenge-2
+  - Name: zone-3
+    Sprite: {fileID: 21300000, guid: a95e4d9f6030d9d4489a8304013e146d, type: 3}
+    ResourceRewards: 
+    HintRewards:
+    - stronger-elastic-arm
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success
+    RequirementsVO: 
+    NextChallengeVO: next-challenge-3
+  - Name: zone-4
+    Sprite: {fileID: 21300000, guid: dd9c7c2b2d0c83f458b34104fb918771, type: 3}
+    ResourceRewards: 
+    HintRewards: []
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success
+    RequirementsVO: 
+    NextChallengeVO: next-challenge-4
+  Hints:
+  - Name: interlocking-arm
+    Thumbnail: {fileID: 21300000, guid: dd1d6276fc3cfdc429fe62c8e3f41e6a, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6ecadb400a418af42bd2c6370d9c8687, type: 3}
+  - Name: longer-arm
+    Thumbnail: {fileID: 21300000, guid: 87b3ca54feb74bf48969093c4b1e799b, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: a1a815ac4ad90f54fa0df2a5fb548c64, type: 3}
+  - Name: stronger-elastic-band
+    Thumbnail: {fileID: 21300000, guid: 207fd7ac43dc20245bb68df672988251, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: ed1250c913facc44f905156b7778a3ac, type: 3}
+  - Name: stronger-tower
+    Thumbnail: {fileID: 21300000, guid: 59a17fc261fae804c9a3549659a85210, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: ee5dd4863ba49084fad46b18a4720a98, type: 3}
+  - Name: thicker-arm
+    Thumbnail: {fileID: 21300000, guid: 8778c04b62746d046ac08ef874d8ffae, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 1a901aadddf4b4c45a43edd7808204d5, type: 3}
+  - Name: stronger-elastic-base
+    Thumbnail: {fileID: 21300000, guid: 8d79b5a63a4441f439ef522b9c758d41, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 6a494945d0127db4680739ae40dfcb40, type: 3}
+  WaysToFail: []
