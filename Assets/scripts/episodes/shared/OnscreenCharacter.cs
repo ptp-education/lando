@@ -30,11 +30,11 @@ public class OnscreenCharacter : MonoBehaviour
     {
         string vo = audio[Random.Range(0, audio.Count)];
 
-        float duration = AudioPlayer.PlayAudio(root + vo, expectFailure: true);
+        float duration = AudioPlayer.PlayVoiceover(vo, root);
 
         if (duration == -1f)
         {
-            duration = AudioPlayer.PlayAudio(kSharedVoRoot + vo);
+            duration = AudioPlayer.PlayVoiceover(vo, kSharedVoRoot);
         }
 
         if (duration == -1f)

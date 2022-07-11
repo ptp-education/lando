@@ -29,9 +29,9 @@ public class ControllerManager : GameManager
 
     private List<string> episodePaths = new List<string>();
     private CommandDispatch dispatch_ = new CommandDispatch();
-    private string testNfcId_ = "04835E2AD86D81";
+    private string testNfcId_ = "047F5E2AD86D80";
 
-    private string kTeacherNfcId = "04835E2AD86D81";
+    private string kTeacherNfcId = "047F5E2AD86D80";
 
     private List<StationManager> loadedStationManagers_ = new List<StationManager>();
 
@@ -98,6 +98,7 @@ public class ControllerManager : GameManager
                 break;
         }
 
+        Debug.LogWarning(nfcId);
         if (optionSelected != -1)
         {
             shareManager_.NewOptionSelected(optionSelected, string.Equals(nfcId, kTeacherNfcId), nfcId);
@@ -115,7 +116,7 @@ public class ControllerManager : GameManager
     private void LoadStationManagers()
     {
         //debug only - should not need station managers in controller in production
-        if (!Application.isEditor) return;
+        if (true) return;
 
         foreach(StationManager p in stationManagerPrefabs_)
         {

@@ -105,6 +105,7 @@ public class EventObject : MonoBehaviour
                     {
                         image_.color = Color.white;
                         image_.sprite = e.ImageToSet;
+                        AudioPlayer.PlaySfx("bubble-pop");
 
                         switch(type_)
                         {

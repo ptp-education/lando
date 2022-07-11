@@ -137,5 +137,10 @@ public class SimulatorNodeObject : EpisodeNodeObject
             Destroy(activeEventObject_.gameObject);
             activeEventObject_ = null;
         }
+        if (buttonHolder_ != null)
+        {
+            Destroy(buttonHolder_.gameObject);
+            buttonHolder_ = null;
+        }
     }
 }

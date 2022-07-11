@@ -70,7 +70,8 @@ public class AudioPlayer : MonoBehaviour
 
         Go.to(audioSource.transform, clip.length * 2f, new GoTweenConfig().onComplete(t =>
         {
-            Destroy(audioSource.gameObject);
+            DestroyImmediate(audioSource.gameObject);
+            audioSource = null;
         }));
 
         return clip.length;

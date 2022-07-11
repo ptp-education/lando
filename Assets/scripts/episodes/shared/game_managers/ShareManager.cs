@@ -16,6 +16,8 @@ public class ShareManager : GameManager
     private EpisodeNodeObject activeNode_;
     private EpisodeNode.OptionsHolder activeOption_;
 
+    private List<GameObject> spawnedObjects_ = new List<GameObject>();
+
     private Image fadeOverlay_;
     private GoTweenFlow fadeFlow_;
     private ChoicesHolder choicesHolder_;
@@ -181,6 +183,7 @@ public class ShareManager : GameManager
                     {
                         choicesHolder_.ToggleVisbility(true);
                     });
+                    spawnedObjects_.Add(eo.gameObject);
                 }
             }
         }
@@ -220,6 +223,12 @@ public class ShareManager : GameManager
         activeNode_ = LoadEpisodeNodeObject(currentNode);
 
         choicesHolder_.DeleteOptions();
+
+        for (int i = 0; i < spawnedObjects_.Count; i++)
+        {
+            Destroy(spawnedObjects_[i].gameObject);
+        }
+        spawnedObjects_ = new List<GameObject>();
 
         if (fadeFlow_ != null)
         {
