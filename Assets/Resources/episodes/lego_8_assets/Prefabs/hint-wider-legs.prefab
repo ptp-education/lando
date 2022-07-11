@@ -52,48 +52,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: simulator-height-q
+    VoiceoverFile: hint-wider-legs
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 57fd47524f43dba45a1d1829bbb23d0e, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 0.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: bd59ae70d41e982429d82818000ac3a6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ef034d71e92966440948d7e9342fa9b4, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 1.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 082ef9326e053814eb3b7c2687dd0931, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 16d8dd7cb702b2c41b7b5eea733bd135, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 2.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: cdeb5c8ecf3a96a46be7afacded7ef53, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

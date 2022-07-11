@@ -51,13 +51,12 @@ MonoBehaviour:
   - Name: 200g
     Sprite: {fileID: 21300000, guid: e0b57deb025b8864b9e69007c55e6da4, type: 3}
     ResourceRewards: 
-    HintRewards:
-    - rubble
+    HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e -cat-failure
-    RewardCommand: -game-success
-    RequirementsVO: 
-    NextChallengeVO: challenge-1
+    RewardCommand: -game-success-0
+    RequirementsVO: challenge-200
+    NextChallengeVO: next-challenge-200
   - Name: 500g
     Sprite: {fileID: 21300000, guid: a7c381e5385861d4e9ab0ab4bd365acc, type: 3}
     ResourceRewards: 
@@ -65,9 +64,9 @@ MonoBehaviour:
     - use-weights
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
-    RequirementsVO: 
-    NextChallengeVO: challenge-2
+    RewardCommand: -game-success-1
+    RequirementsVO: challenge-500
+    NextChallengeVO: next-challenge-500
   - Name: 1000g
     Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
     ResourceRewards: 
@@ -75,44 +74,44 @@ MonoBehaviour:
     - add-weights
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
-    RequirementsVO: 
-    NextChallengeVO: challenge-3
+    RewardCommand: -game-success-2
+    RequirementsVO: challenge-1000
+    NextChallengeVO: next-challenge-1000
   - Name: 2000g
     Sprite: {fileID: 21300000, guid: 2bb919f7f41f223448de545ad4779b68, type: 3}
     ResourceRewards: 
     HintRewards:
-    - build-a-bridge
+    - build-bridge
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
-    RequirementsVO: 
-    NextChallengeVO: challenge-4
+    RewardCommand: -game-success-3
+    RequirementsVO: challenge-2000
+    NextChallengeVO: next-challenge-2000
   - Name: 3000g
     Sprite: {fileID: 21300000, guid: 2bb919f7f41f223448de545ad4779b68, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
-    RequirementsVO: 
-    NextChallengeVO: challenge-4
+    RewardCommand: -game-success-4
+    RequirementsVO: challenge-3000
+    NextChallengeVO: next-challenge-3000
   Hints:
-  - Name: add-weights
-    Thumbnail: {fileID: 21300000, guid: 96fb86339611a2a4f936196805047bd5, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: 1e456252d14d1074aa50e611d2723da4, type: 3}
-  - Name: build-a-bridge
-    Thumbnail: {fileID: 21300000, guid: be78ea980fc22384cac53a8987123c49, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: f4c9cd5ceace71b448fa0ebc501579c0, type: 3}
+  - Name: wider-legs
+    Thumbnail: {fileID: 21300000, guid: 51f4e11e09394cb4a98cb2e85a22168f, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 8889916c700560a49bf706ab0fafeaea, type: 3}
   - Name: use-string
     Thumbnail: {fileID: 21300000, guid: 32a0ec4d88f791f4f8a96214e47e02f4, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: b30f8b29e0d410949afd871c442a0391, type: 3}
   - Name: use-weights
     Thumbnail: {fileID: 21300000, guid: 94685b4bca830f1478f940b6f56fd3cb, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 4e53d9e17bda1ae468333b2de10a6c5b, type: 3}
-  - Name: wider-legs
-    Thumbnail: {fileID: 21300000, guid: 51f4e11e09394cb4a98cb2e85a22168f, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: 8889916c700560a49bf706ab0fafeaea, type: 3}
+  - Name: add-weights
+    Thumbnail: {fileID: 21300000, guid: 96fb86339611a2a4f936196805047bd5, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 1e456252d14d1074aa50e611d2723da4, type: 3}
+  - Name: build-bridge
+    Thumbnail: {fileID: 21300000, guid: be78ea980fc22384cac53a8987123c49, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: f4c9cd5ceace71b448fa0ebc501579c0, type: 3}
   WaysToFail:
   - ButtonName: Can only touch rope
     ObjectToLoad: {fileID: -860130409809325442, guid: 4f3c11a3aaaf3594694f3060d86af604, type: 3}

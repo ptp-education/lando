@@ -53,12 +53,12 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-height-q
+    CommandLine: -character talk simulator-which-way-pull-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1e316b7b3a3953b4db75ed648f0f5395, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 4.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

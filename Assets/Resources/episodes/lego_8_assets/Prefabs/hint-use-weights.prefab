@@ -52,41 +52,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: simulator-height-q
+    VoiceoverFile: hint-weights
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 992ab373270e22e469e2abf9799eb458, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 0.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 4f4c717704200bf43a87925572281005, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 11f53864cc249dd448071dc19b581521, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 1.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 01dbf3e3e350e1848a452859cc8f3b6c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9c234a5eaa0b62644b9f315d19b328d8, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 2.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

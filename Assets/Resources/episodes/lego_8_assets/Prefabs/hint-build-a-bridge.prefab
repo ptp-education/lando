@@ -52,34 +52,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk simulator-height-q
+    VoiceoverFile: hint-build-bridge
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 46c66d5f282b3bb409cbe779e7699f25, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 0.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c77402d1914d90b469bcda16ff2dbc21, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 019063ff5bf26c24c9f4a549e39acba8, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 1.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b10972844bce86e43a99cdbc91d9a3ed, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

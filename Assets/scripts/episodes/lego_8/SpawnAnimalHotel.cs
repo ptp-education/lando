@@ -34,8 +34,7 @@ namespace Lando.Class.Lego8
         [SerializeField] private Image middleObject_;
         [SerializeField] private Image rightObject_;
 
-
-        private int currentLevel_ = 1;
+        private int currentLevel_ = 0;
         private int indexObject_;
 
         int randomLeft_ = 0;
@@ -53,6 +52,10 @@ namespace Lando.Class.Lego8
             if (args_.Count == 0) return;
 
             string commandType = args_[0];
+            if (args_.Count > 1) 
+            {
+                int.TryParse(args_[1], out currentLevel_);
+            }
 
             if (args_.Contains("success"))
             {
@@ -69,28 +72,59 @@ namespace Lando.Class.Lego8
         private void ShowCurrentAnimal() 
         {
             gameManager_.SendNewActionInternal("-update-options default");
-            animalNeutral_ = neutralAnimals_[currentLevel_ - 1];
+            animalNeutral_?.gameObject.SetActive(false);
+            animalNeutral_ = neutralAnimals_[currentLevel_];
             animalNeutral_.gameObject.SetActive(true);
 
-            animalNeutral_.sprite = animals_[currentLevel_ - 1].neutral_;
-            animalSleeping_.sprite = animals_[currentLevel_ - 1].sleeping_;
+            animalNeutral_.sprite = animals_[currentLevel_].neutral_;
+            animalSleeping_.sprite = animals_[currentLevel_].sleeping_;
         }
 
         private void RewardSequence() 
         {
-            animalNeutral_.gameObject.SetActive(false);
-            successBackground_.gameObject.SetActive(true);
-            animalSleeping_.gameObject.SetActive(true);
-
+            float waitTime = 0;
+            ShowCurrentAnimal();
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                tipJar_.gameObject.SetActive(true);
-                tipJar_.sprite = tipJars_[currentLevel_ - 1];
+                animalNeutral_.gameObject.SetActive(false);
+                successBackground_.gameObject.SetActive(true);
+                animalSleeping_.gameObject.SetActive(true);
+
                 Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                    animalSleeping_.gameObject.SetActive(false);
-                    tipJar_.gameObject.SetActive(false);
-                    ShowObjectsToPlace();
+                    waitTime = waitTipJar();
+                    tipJar_.gameObject.SetActive(true);
+                    AudioPlayer.PlayAudio("audio/sfx/coins");
+                    tipJar_.sprite = tipJars_[currentLevel_];
+                    Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
+                        animalSleeping_.gameObject.SetActive(false);
+                        tipJar_.gameObject.SetActive(false);
+                        ShowObjectsToPlace();
+                    }));
                 }));
             }));
+        }
+
+        private float waitTipJar() 
+        {
+            switch (currentLevel_) 
+            {
+                case 0:
+                    AudioPlayer.PlayAudio("audio/lego_8/hotel-tip-10");
+                    return 4.7f;
+                case 1:
+                    AudioPlayer.PlayAudio("audio/lego_8/hotel-tip-50");
+                    return 4.0f;
+                case 2:
+                    AudioPlayer.PlayAudio("audio/lego_8/hotel-tip-100");
+                    return 6f;
+                case 3:
+                    AudioPlayer.PlayAudio("audio/lego_8/hotel-tip-500");
+                    return 4.0f;
+                case 4:
+                    AudioPlayer.PlayAudio("audio/lego_8/hotel-tip-1000");
+                    return 6f;
+            }
+
+            return 2f;
         }
 
         private void ShowObjectsToPlace() 
@@ -130,27 +164,23 @@ namespace Lando.Class.Lego8
                 case "left":
                     hotel_[randomLeft_].gameObject.SetActive(true);
                     hotel_[randomLeft_].sprite = objectsToPlace_[randomLeft_];
+                    objectsToPlace_.Remove(objectsToPlace_[randomLeft_]);
+                    hotel_.Remove(hotel_[randomLeft_]);
                     break;
                 case "middle":
                     hotel_[randomMiddle_].gameObject.SetActive(true);
                     hotel_[randomMiddle_].sprite = objectsToPlace_[randomMiddle_];
+                    objectsToPlace_.Remove(objectsToPlace_[randomMiddle_]);
+                    hotel_.Remove(hotel_[randomMiddle_]);
                     break;
                 case "right":
                     hotel_[randomRight_].gameObject.SetActive(true);
                     hotel_[randomRight_].sprite = objectsToPlace_[randomRight_];
+                    objectsToPlace_.Remove(objectsToPlace_[randomRight_]);
+                    hotel_.Remove(hotel_[randomRight_]);
                     break;
             }
-
-            //need to check if this is correct
-            //ask if once  an object appear in the options, can appear again or just remove it
-            objectsToPlace_.Remove(objectsToPlace_[randomLeft_]);
-            objectsToPlace_.Remove(objectsToPlace_[randomMiddle_]);
-            objectsToPlace_.Remove(objectsToPlace_[randomRight_]);
-
-            hotel_.Remove(hotel_[randomLeft_]);
-            hotel_.Remove(hotel_[randomMiddle_]);
-            hotel_.Remove(hotel_[randomRight_]);
-
+            AudioPlayer.PlayAudio("audio/sfx/customization-selection");
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                 successBackground_.SetActive(false);
                 currentLevel_++;

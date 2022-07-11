@@ -52,13 +52,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk simulator-height-q
+    VoiceoverFile: problem-only-touch-rope
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 92f7a5ecf2f875e478fca69009bbeba1, type: 3}
+    ImageToSet: {fileID: 21300000, guid: c9fdbfb437a6e6742a8b3e7a9c8757e0, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.6
+  - TimeStamp: 3.4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
