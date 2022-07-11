@@ -115,6 +115,13 @@ MonoBehaviour:
     CommandLine: -node next
     PrintFile: 
     ImageToSet: {fileID: 0}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 18
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 0}
     SelfDestruct: 1
     Ran: 0
   image_: {fileID: 2445146870255289116}

@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-interblocking-a
+    CommandLine: -character talk simulator-interlocking-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 90b20cd14387ece479225554ac44c632, type: 3}
     SelfDestruct: 0
