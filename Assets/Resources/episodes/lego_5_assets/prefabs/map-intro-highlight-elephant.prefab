@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 364074704597059915}
   - component: {fileID: 759647174285219434}
   m_Layer: 0
-  m_Name: simulator-stabilize-a
+  m_Name: map-intro-highlight-elephant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,24 +53,17 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-stabilize-a
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: bd6c14afab1b6d048ba69aaa7f7aea32, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 86c416842f824c44b8d6c2574b69fc15, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3.5
+  - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: bcbb141af49cc1543bb4bf310b6360b4, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 6
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 94d856b1b0bb2e24a9bf6bcfd9dc5c54, type: 3}
-    SelfDestruct: 0
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

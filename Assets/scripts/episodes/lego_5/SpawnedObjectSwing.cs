@@ -42,6 +42,8 @@ namespace Lando.Class.Lego5
         private Image animalInSwing_;
         private Image correctSizeSwing_;
 
+        private Sprite currentIcon_;
+
         //this have track of which challenge is currently
         private int currentStage_ = 0;
 
@@ -157,7 +159,7 @@ namespace Lando.Class.Lego5
             successImage_.sprite = choices[selection].AnimalSuccess;
             failureImage_.sprite = choices[selection].AnimalFailure;
 
-            iconPrefab_.sprite = choices[selection].AnimalIcon;
+            currentIcon_ = choices[selection].AnimalIcon;
 
             AudioPlayer.PlayAudio(choices[selection].Sound);
             currentStage_++;
@@ -173,10 +175,9 @@ namespace Lando.Class.Lego5
                 correctSizeSwing_.gameObject.SetActive(true);
                 animalInSwing_.gameObject.SetActive(true);
                 AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
-                gameManager_.SendNewActionInternal("-update-options empty");
+
                 Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                     HandleSuccess();
-
                 }));
             }
         }
@@ -185,6 +186,10 @@ namespace Lando.Class.Lego5
         {
             Hide();
             successImage_.gameObject.SetActive(true);
+            AudioPlayer.PlayAudio("audio/sfx/applausetrumpet");
+            Go.to(this, 3f, new GoTweenConfig().onComplete(t => {
+                HandleIncrementCounter();
+            }));
         }
 
         private void HandleIncrementCounter()
@@ -194,9 +199,9 @@ namespace Lando.Class.Lego5
             icon.transform.localScale = Vector3.zero;
             icon.transform.SetParent(rsvpHolder_.transform);
             icon.transform.localScale = Vector3.one;
+            icon.sprite = currentIcon_;
             Go.addTween(new GoTween(icon, 0.5f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.BounceIn)));
             AudioPlayer.PlayAudio("audio/sfx/ding");
-            gameManager_.SendNewActionInternal("-update-options default");
             HandleSpawnAnimal();
         }
 
