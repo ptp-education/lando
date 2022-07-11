@@ -146,7 +146,10 @@ namespace Lando.Class.Lego3
                     level_ = -1;
                     grams_ = -1;
                 }
-                gameManager_.SendNewActionInternal("-update-options multiple");
+                AudioPlayer.PlayAudio("audio/lego_3/map-success/sculpture");
+                Go.to(this, 2.5f, new GoTweenConfig().onComplete(t => {
+                    gameManager_.SendNewActionInternal("-update-options multiple");
+                }));
             }
 
             if (level_ > 0)
