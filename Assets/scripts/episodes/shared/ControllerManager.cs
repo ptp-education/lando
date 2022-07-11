@@ -118,7 +118,7 @@ public class ControllerManager : GameManager
         //debug only - should not need station managers in controller in production
         if (true) return;
 
-        foreach(StationManager p in stationManagerPrefabs_)
+        foreach (StationManager p in stationManagerPrefabs_)
         {
             StationManager station = Instantiate(p);
             station.transform.SetParent(stationHolder_);

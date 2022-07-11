@@ -42,7 +42,7 @@ public class ChoicesHolder : MonoBehaviour
             EpisodeNode.Option o = holder.Options[i];
 
             ChoiceButton c = Instantiate(choicePrefab_, choicesParent_);
-            c.Setup((i + 1).ToString(), o.ButtonName, o.TeacherOnly);
+            c.Setup(o.ButtonName, o.TeacherOnly);
             spawnedChoices_.Add(c);
         }
     }
