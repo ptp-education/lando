@@ -89,9 +89,16 @@ MonoBehaviour:
   - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego4-hint-walls-supports
     ImageToSet: {fileID: 21300000, guid: 405a3153503584717b92b4fa407ee870, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 405a3153503584717b92b4fa407ee870, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 2445146870255289116}
 --- !u!222 &1082716433388788486

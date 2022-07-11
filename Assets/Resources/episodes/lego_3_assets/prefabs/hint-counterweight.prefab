@@ -65,6 +65,20 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: f449bed2b659ec345b934d1c4f9a8e14, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego3-hint-counterweight
+    ImageToSet: {fileID: 21300000, guid: f449bed2b659ec345b934d1c4f9a8e14, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: f449bed2b659ec345b934d1c4f9a8e14, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:
