@@ -72,6 +72,20 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego4-hint-ceiling
+    ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 2445146870255289116}
 --- !u!222 &1082716433388788486
 CanvasRenderer:

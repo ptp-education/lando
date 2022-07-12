@@ -100,11 +100,25 @@ public class SimulatorNodeObject : EpisodeNodeObject
             return;
         }
 
-        LoadEventObject(Node.SimulatorDetails.Steps[counter_].Question, true, () =>
+        float voTime = 0f;
+        if (counter != 0)
         {
-            takingInput_ = true;
-            AudioPlayer.PlaySfx("turn-off");
-        });
+            List<string> startVoOptions = new List<string>();
+            for (int i = 0; i <= 12; i++)
+            {
+                startVoOptions.Add("simulator-next-" + i.ToString());
+            }
+            voTime = AudioPlayer.PlayVoiceover(startVoOptions) + 0.4f;
+        }
+
+        Go.to(transform, voTime, new GoTweenConfig().onComplete(t =>
+        {
+            LoadEventObject(Node.SimulatorDetails.Steps[counter_].Question, true, () =>
+            {
+                takingInput_ = true;
+                AudioPlayer.PlaySfx("turn-off");
+            });
+        }));
     }
 
     private void LoadEventObject(EventObject eventObject, bool dontDestroy, System.Action callback)

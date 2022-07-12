@@ -71,7 +71,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &628669438561765494
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +173,6 @@ MonoBehaviour:
     EventObject: {fileID: 4200544645346117908, guid: 98b83b14e9cb1db44a2feeb01d48a86b, type: 3}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &2079302127811205104
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +244,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &2622218083841034790
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +351,6 @@ MonoBehaviour:
       Command: -node next
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &2802677419071191658
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,7 +459,6 @@ MonoBehaviour:
       Command: -spawnoption "Momo should jump!" "Momo should shake the wall!"
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &3328939687015290096
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +538,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &4440565866868392372
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +613,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &4586636730854607025
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,7 +704,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &5538422780132337193
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +787,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &6050227710332013916
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +881,6 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &6720832660718529540
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,6 +987,10 @@ MonoBehaviour:
     Path: episodes/lego_4_assets/prefabs/momo
     Spawned: 0
   CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-home-starter
+    EventObject: {fileID: 0}
+    Ran: 0
   - TimeStamp: 0.2
     Command: -hide-choices
     EventObject: {fileID: 0}
@@ -1044,7 +1038,6 @@ MonoBehaviour:
       Command: -update-options empty
       EventObject: {fileID: 0}
       Ran: 0
-  NextNode: {fileID: 0}
 --- !u!1 &8628789538178719964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1117,6 @@ MonoBehaviour:
   PrefabSpawnObjects: []
   CommandLines: []
   CommandLineContainers: []
-  NextNode: {fileID: 0}
 --- !u!1 &8787345819776852158
 GameObject:
   m_ObjectHideFlags: 0

@@ -103,6 +103,20 @@ MonoBehaviour:
   - TimeStamp: 4.5
     VoiceoverFile: 
     CommandLine: 
+    PrintFile: lego-2-pillars
+    ImageToSet: {fileID: 21300000, guid: ee698e4f4c03ccb49b374ac84a742aae, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: ee698e4f4c03ccb49b374ac84a742aae, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ee698e4f4c03ccb49b374ac84a742aae, type: 3}
     SelfDestruct: 1

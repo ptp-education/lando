@@ -339,7 +339,11 @@ MonoBehaviour:
     Object: {fileID: 5737312327994467632, guid: 52ffb8f5b9855ff49aa93961ac1e71ff, type: 3}
     Path: episodes/lego_6_assets/Prefabs/CatsHolder
     Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-home-starter
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -game-success-1
     StoredCommands:

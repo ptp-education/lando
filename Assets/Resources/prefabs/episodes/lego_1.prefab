@@ -320,7 +320,7 @@ MonoBehaviour:
     Options:
     - ButtonName: We got it!
       TeacherOnly: 0
-      Command: -node next
+      Command: -got-it
       EventObject: {fileID: 0}
     - ButtonName: Can you repeat that?
       TeacherOnly: 0
@@ -607,7 +607,11 @@ MonoBehaviour:
     Object: {fileID: 8164016910345386814, guid: 46a8e598dbc13445cb405b5774b61e25, type: 3}
     Path: episodes/lego_1_assets/_prefabs/selector
     Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-home-starter
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers: []
 --- !u!1 &8202170035513024116
 GameObject:

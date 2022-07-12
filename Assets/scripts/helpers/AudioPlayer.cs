@@ -33,6 +33,7 @@ public class AudioPlayer : MonoBehaviour
 
     public static float PlayAudio(string path, bool expectFailure = false, bool useVoiceover = false)
     {
+        Debug.LogWarning(path);
         if (GameManager.MuteAll)
         {
             return -1f;
@@ -192,6 +193,11 @@ public class AudioPlayer : MonoBehaviour
     {
         string file = files[Random.Range(0, files.Count)];
         return AudioPlayer.PlaySfx(file);
+    }
+
+    public static float PlayVoiceover(List<string> paths)
+    {
+        return PlayVoiceover(paths, kSharedVoRoot);
     }
 
     public static float PlayVoiceover(string path, string root)

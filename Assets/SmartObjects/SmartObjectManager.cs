@@ -140,6 +140,7 @@ namespace Lando.SmartObjects
 			{
 				if (!m_smartObjectReaders.ContainsKey(obj.ReaderId))
 				{
+					AudioPlayer.PlaySfx("beep");
 					m_smartObjectReaders.Add(obj.ReaderId, new SmartObjectConnector(obj.ReaderId, m_smartObjectsToConfigure[m_configuringSmartObjectIndex]));
 					m_configuringSmartObjectIndex++;
 				}
