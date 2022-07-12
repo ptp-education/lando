@@ -226,7 +226,7 @@ namespace Lando.Class.Lego7
         {
             //Show animal in catapult screen
             //If test is successfull show animal flying
-
+            gameManager_.SendNewActionInternal("-fade in 1");
             inCatapult_.SetActive(true);
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                 ShowAnimalFlying();
@@ -249,6 +249,7 @@ namespace Lando.Class.Lego7
             flying_.SetActive(true);
 
             waitTime_ = SelectAudioSuccess();
+            AudioPlayer.PlayAudio("audio/sfx/wind-whoosh");
             Go.to(this, waitTime_, new GoTweenConfig().onComplete(t => {
                 ShowAnimalSuccess();
             }));

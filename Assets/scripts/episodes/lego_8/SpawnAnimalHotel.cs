@@ -43,7 +43,7 @@ namespace Lando.Class.Lego8
 
         private void Start()
         {
-            ShowCurrentAnimal();
+            //ShowCurrentAnimal();
         }
 
         public override void ReceivedAction(string action)
@@ -55,6 +55,11 @@ namespace Lando.Class.Lego8
             if (args_.Count > 1) 
             {
                 int.TryParse(args_[1], out currentLevel_);
+            }
+
+            if (hotel_.Count < 3) 
+            {
+                gameManager_.SendNewActionInternal("-update-options simulator");
             }
 
             if (args_.Contains("success"))
@@ -72,11 +77,11 @@ namespace Lando.Class.Lego8
         private void ShowCurrentAnimal() 
         {
             gameManager_.SendNewActionInternal("-update-options default");
-            animalNeutral_?.gameObject.SetActive(false);
-            animalNeutral_ = neutralAnimals_[currentLevel_];
-            animalNeutral_.gameObject.SetActive(true);
+            //animalNeutral_?.gameObject.SetActive(false);
+            //animalNeutral_ = neutralAnimals_[currentLevel_];
+            //animalNeutral_.gameObject.SetActive(true);
 
-            animalNeutral_.sprite = animals_[currentLevel_].neutral_;
+            //animalNeutral_.sprite = animals_[currentLevel_].neutral_;
             animalSleeping_.sprite = animals_[currentLevel_].sleeping_;
         }
 
@@ -84,21 +89,20 @@ namespace Lando.Class.Lego8
         {
             float waitTime = 0;
             ShowCurrentAnimal();
-            Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                animalNeutral_.gameObject.SetActive(false);
-                successBackground_.gameObject.SetActive(true);
-                animalSleeping_.gameObject.SetActive(true);
-
-                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                    waitTime = waitTipJar();
-                    tipJar_.gameObject.SetActive(true);
-                    AudioPlayer.PlayAudio("audio/sfx/coins");
-                    tipJar_.sprite = tipJars_[currentLevel_];
-                    Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
-                        animalSleeping_.gameObject.SetActive(false);
-                        tipJar_.gameObject.SetActive(false);
-                        ShowObjectsToPlace();
-                    }));
+            animalSleeping_.gameObject.SetActive(true);
+            GoTweenFlow flow = new GoTweenFlow();
+            flow.insert(0f, new GoTween(successBackground_.transform, 0.5f, new GoTweenConfig().scale(1.5f)));
+            flow.insert(2f, new GoTween(successBackground_.transform, 0.5f, new GoTweenConfig().scale(1f)));
+            flow.play();
+            Go.to(this, 2.5f, new GoTweenConfig().onComplete(t => {
+                waitTime = waitTipJar();
+                tipJar_.gameObject.SetActive(true);
+                AudioPlayer.PlayAudio("audio/sfx/coins");
+                tipJar_.sprite = tipJars_[currentLevel_];
+                Go.to(this, waitTime, new GoTweenConfig().onComplete(t => {
+                    animalSleeping_.gameObject.SetActive(false);
+                    tipJar_.gameObject.SetActive(false);
+                    ShowObjectsToPlace();
                 }));
             }));
         }
@@ -144,9 +148,9 @@ namespace Lando.Class.Lego8
                 randomRight_ = Random.Range(0, objectsToPlace_.Count);
             }
 
-            leftObject_.gameObject.SetActive(true);
-            middleObject_.gameObject.SetActive(true);
-            rightObject_.gameObject.SetActive(true);
+            leftObject_.transform.parent.gameObject.SetActive(true);
+            middleObject_.transform.parent.gameObject.SetActive(true);
+            rightObject_.transform.parent.gameObject.SetActive(true);
 
             leftObject_.sprite = objectsToPlace_[randomLeft_];
             middleObject_.sprite = objectsToPlace_[randomMiddle_];
@@ -156,9 +160,9 @@ namespace Lando.Class.Lego8
 
         private void SelectObjectToPlace(string command) 
         {
-            leftObject_.gameObject.SetActive(false);
-            middleObject_.gameObject.SetActive(false);
-            rightObject_.gameObject.SetActive(false);
+            leftObject_.transform.parent.gameObject.SetActive(false);
+            middleObject_.transform.parent.gameObject.SetActive(false);
+            rightObject_.transform.parent.gameObject.SetActive(false);
             switch (command) 
             {
                 case "left":
@@ -182,9 +186,9 @@ namespace Lando.Class.Lego8
             }
             AudioPlayer.PlayAudio("audio/sfx/customization-selection");
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                successBackground_.SetActive(false);
+                //successBackground_.SetActive(false);
                 currentLevel_++;
-                ShowCurrentAnimal();
+                gameManager_.SendNewActionInternal("-update-options default");
             }));
         }
     }

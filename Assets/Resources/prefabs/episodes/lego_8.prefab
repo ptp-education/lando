@@ -417,6 +417,13 @@ MonoBehaviour:
   - StartShown: 1
     Name: empty
     Options: []
+  - StartShown: 1
+    Name: simulator
+    Options:
+    - ButtonName: Load trap simulator
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 

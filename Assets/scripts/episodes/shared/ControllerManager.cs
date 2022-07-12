@@ -116,7 +116,7 @@ public class ControllerManager : GameManager
     private void LoadStationManagers()
     {
         //debug only - should not need station managers in controller in production
-        if (true) return;
+        //if (true) return;
 
         foreach (StationManager p in stationManagerPrefabs_)
         {

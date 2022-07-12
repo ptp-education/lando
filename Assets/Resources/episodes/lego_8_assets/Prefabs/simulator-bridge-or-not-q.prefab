@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-bridge-or-not
+    CommandLine: -character talk simulator-bridge-or-not-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 1847105a60d73e040a577ed33ccc938f, type: 3}
     SelfDestruct: 0

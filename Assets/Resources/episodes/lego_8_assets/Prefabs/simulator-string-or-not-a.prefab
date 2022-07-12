@@ -53,7 +53,7 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-string-or-not-q
+    CommandLine: -character talk simulator-string-or-not-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b3e9d59e9da812949af2d36a314b89c3, type: 3}
     SelfDestruct: 0
