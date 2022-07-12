@@ -276,7 +276,11 @@ MonoBehaviour:
     Object: {fileID: 5537306103791201731, guid: aeb120e3368c34695b29b5b0d0891a99, type: 3}
     Path: episodes/lego_3_assets/prefabs/art_holder
     Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-home-starter
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -more-blocks
     StoredCommands:

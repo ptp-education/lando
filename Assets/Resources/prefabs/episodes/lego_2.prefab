@@ -150,7 +150,11 @@ MonoBehaviour:
     Object: {fileID: 5537306103791201731, guid: f0fd69fb380f34ce086b398c33289c36, type: 3}
     Path: episodes/lego_2_assets/prefabs/tower
     Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-home-starter
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -more-blocks
     StoredCommands:
