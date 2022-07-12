@@ -19,12 +19,10 @@ namespace Lando.Class.Lego7
             public Sprite success_;
         }
 
-        public List<Animal> level1_;
-        public List<Animal> level2_;
-        public List<Animal> level3_;
-        public List<Animal> level4_;
-
-        private int currentLevel_ = 1;
+        [SerializeField] private List<Animal> level1_;
+        [SerializeField] private List<Animal> level2_;
+        [SerializeField] private List<Animal> level3_;
+        [SerializeField] private List<Animal> level4_;
 
         [SerializeField] private Image leftAnimal_;
         [SerializeField] private Image middleAnimal_;
@@ -47,28 +45,35 @@ namespace Lando.Class.Lego7
         private List<Animal> selectedAnimal_= new List<Animal>();
 
         private float waitTime_ = 1f;
+        private int currentLevel_ = 0;
+        private int previousLevel = 1;
 
         private void Start()
         {
-            ShowAnimalSelection();
+            select_.SetActive(true);
         }
 
         public override void ReceivedAction(string action)
         {
-            List<string> args = ArgumentHelper.ArgumentsFromCommand("-animal", action);
-            if (args.Count == 0) return;
+            List<string> args_ = ArgumentHelper.ArgumentsFromCommand("-animal", action);
+            if (args_.Count == 0) return;
 
-            string commandType = args[0];
+            string commandType = args_[0];
 
-            if (args.Contains("left") || args.Contains("middle") || args.Contains("right"))
+            if (args_.Count > 1)
+            {
+                int.TryParse(args_[1], out currentLevel_);
+            }
+
+            if (args_.Contains("left") || args_.Contains("middle") || args_.Contains("right"))
             {
                 SelectAnimal(commandType);
             }
-            else if (args.Contains("success"))
+            else if (args_.Contains("success"))
             {
-                ShowAnimalFlying();
+                ShowAnimalSelection();
             }
-            else if (args.Contains("failure")) 
+            else if (args_.Contains("failure")) 
             {
                 ShowAnimalFailure();
             }
@@ -83,32 +88,40 @@ namespace Lando.Class.Lego7
             failure_.SetActive(false);
         }
 
+        private void HideOptions() 
+        {
+            leftAnimal_.gameObject.SetActive(false);
+            middleAnimal_.gameObject.SetActive(false);
+            rightAnimal_.gameObject.SetActive(false);
+        }
+
+        private void ShowOptions()
+        {
+            leftAnimal_.gameObject.SetActive(true);
+            middleAnimal_.gameObject.SetActive(true);
+            rightAnimal_.gameObject.SetActive(true);
+        }
+
         private void ShowAnimalSelection() 
         {
             Hide();
-            if (currentLevel_ <= 4)
-            {
-                gameManager_.SendNewActionInternal("-update-options choose");
-            }
-            else if (currentLevel_ > 4) 
-            {
-                gameManager_.SendNewActionInternal("-update-options default");
-            }
+            ShowOptions();
             select_.SetActive(true);
+            gameManager_.SendNewActionInternal("-update-options choose");
             List<int> randomAnimals = new List<int>();
             int number = 0;
             for (int i = 0; i < 3; i++)
             {
                 while (randomAnimals.Contains(number)) 
                 {
-                    number = UnityEngine.Random.Range(0, 5);
+                    number = Random.Range(0, 5);
                 }
                 randomAnimals.Add(number);
             }
 
             switch (currentLevel_) 
             {
-                case 1:
+                case 0:
                     leftAnimal_.sprite = level1_[randomAnimals[0]].neutral_;
                     middleAnimal_.sprite = level1_[randomAnimals[1]].neutral_;
                     rightAnimal_.sprite = level1_[randomAnimals[2]].neutral_;
@@ -117,7 +130,7 @@ namespace Lando.Class.Lego7
                     selectedAnimal_.Add(level1_[randomAnimals[1]]);
                     selectedAnimal_.Add(level1_[randomAnimals[2]]);
                     break;
-                case 2:
+                case 1:
                     leftAnimal_.sprite = level2_[randomAnimals[0]].neutral_;
                     middleAnimal_.sprite = level2_[randomAnimals[1]].neutral_;
                     rightAnimal_.sprite = level2_[randomAnimals[2]].neutral_;
@@ -126,7 +139,7 @@ namespace Lando.Class.Lego7
                     selectedAnimal_.Add(level2_[randomAnimals[1]]);
                     selectedAnimal_.Add(level2_[randomAnimals[2]]);
                     break;
-                case 3:
+                case 2:
                     leftAnimal_.sprite = level3_[randomAnimals[0]].neutral_;
                     middleAnimal_.sprite = level3_[randomAnimals[1]].neutral_;
                     rightAnimal_.sprite = level3_[randomAnimals[2]].neutral_;
@@ -135,7 +148,7 @@ namespace Lando.Class.Lego7
                     selectedAnimal_.Add(level3_[randomAnimals[1]]);
                     selectedAnimal_.Add(level3_[randomAnimals[2]]);
                     break;
-                case 4:
+                case 3:
                     leftAnimal_.sprite = level4_[randomAnimals[0]].neutral_;
                     middleAnimal_.sprite = level4_[randomAnimals[1]].neutral_;
                     rightAnimal_.sprite = level4_[randomAnimals[2]].neutral_;
@@ -148,8 +161,18 @@ namespace Lando.Class.Lego7
 
         }
 
+        private void SelectAnimalToSend() 
+        {
+            gameManager_.SendNewActionInternal("-update-options choose");
+            if (previousLevel <= currentLevel_) 
+            {
+                ShowAnimalSelection();
+            }
+        }
+
         private void SelectAnimal(string command)
         {
+            gameManager_.SendNewActionInternal("-update-options empty");
             select_.SetActive(false);
             switch (command)
             {
@@ -180,19 +203,19 @@ namespace Lando.Class.Lego7
         {
             switch (currentLevel_)
             {
-                case 1:
+                case 0:
                     frogSuccess_.gameObject.SetActive(true);
                     frogSuccess_.sprite = currentAnimal_.success_;
                     break;
-                case 2:
+                case 1:
                     fishSuccess_.gameObject.SetActive(true);
                     fishSuccess_.sprite = currentAnimal_.success_;
                     break;
-                case 3:
+                case 2:
                     lizardSuccess_.gameObject.SetActive(true);
                     lizardSuccess_.sprite = currentAnimal_.success_;
                     break;
-                case 4:
+                case 3:
                     gliderSuccess_.gameObject.SetActive(true);
                     gliderSuccess_.sprite = currentAnimal_.success_;
                     break;
@@ -205,7 +228,9 @@ namespace Lando.Class.Lego7
             //If test is successfull show animal flying
 
             inCatapult_.SetActive(true);
-            gameManager_.SendNewActionInternal("-update-options default");
+            Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                ShowAnimalFlying();
+            }));
         }
 
         private void ShowAnimalFailure()
@@ -222,7 +247,7 @@ namespace Lando.Class.Lego7
         {
             inCatapult_.SetActive(false);
             flying_.SetActive(true);
-            gameManager_.SendNewActionInternal("-update-options empty");
+
             waitTime_ = SelectAudioSuccess();
             Go.to(this, waitTime_, new GoTweenConfig().onComplete(t => {
                 ShowAnimalSuccess();
@@ -234,7 +259,7 @@ namespace Lando.Class.Lego7
             int randomAudio = 0;
             switch (currentLevel_)
             {
-                case 1:
+                case 0:
                     randomAudio = Random.Range(0, 2);
                     AudioPlayer.PlayAudio($"audio/lego_7/animal-frog-success-{randomAudio}");
                     if (randomAudio == 0)
@@ -245,7 +270,7 @@ namespace Lando.Class.Lego7
                     {
                         return 1.5f;
                     }
-                case 2:
+                case 1:
                     randomAudio = Random.Range(0, 3);
                     AudioPlayer.PlayAudio($"audio/lego_7/animal-fish-success-{randomAudio}");
                     if (randomAudio == 0)
@@ -260,7 +285,7 @@ namespace Lando.Class.Lego7
                     {
                         return 3.1f;
                     }
-                case 3:
+                case 2:
                     randomAudio = Random.Range(0, 4);
                     AudioPlayer.PlayAudio($"audio/lego_7/animal-lizard-success-{randomAudio}");
                     if (randomAudio == 0)
@@ -279,7 +304,7 @@ namespace Lando.Class.Lego7
                     {
                         return 2.6f;
                     }
-                case 4:
+                case 3:
                     randomAudio = Random.Range(0, 3);
                     AudioPlayer.PlayAudio($"audio/lego_7/animal-sugar-success-{randomAudio}");
                     if (randomAudio == 0)
@@ -303,9 +328,13 @@ namespace Lando.Class.Lego7
             flying_.SetActive(false);
             success_.SetActive(true);
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                currentLevel_++;
+                //currentLevel_++;
+                previousLevel = currentLevel_;
                 selectedAnimal_.Clear();
-                ShowAnimalSelection();
+                Hide();
+                select_.SetActive(true);
+                HideOptions();
+                gameManager_.SendNewActionInternal("-update-options default");
             }));
         }
 

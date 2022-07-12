@@ -378,7 +378,7 @@ MonoBehaviour:
     Name: play
     Options:
     - ButtonName: Play
-      TeacherOnly: 0
+      TeacherOnly: 1
       Command: -node next
       EventObject: {fileID: 0}
   PrefabSpawnObjects: []
@@ -453,6 +453,17 @@ MonoBehaviour:
   TestingActive: 1
   OptionsToSpawn:
   - StartShown: 1
+    Name: default
+    Options:
+    - ButtonName: Redeem reward
+      TeacherOnly: 0
+      Command: -claim-reward {0}
+      EventObject: {fileID: 0}
+    - ButtonName: Load catapult simulator
+      TeacherOnly: 1
+      Command: -node next
+      EventObject: {fileID: 0}
+  - StartShown: 1
     Name: choose
     Options:
     - ButtonName: Left
@@ -468,17 +479,6 @@ MonoBehaviour:
       Command: -animal right
       EventObject: {fileID: 0}
   - StartShown: 1
-    Name: default
-    Options:
-    - ButtonName: Redeem reward
-      TeacherOnly: 0
-      Command: -claim-reward {0}
-      EventObject: {fileID: 0}
-    - ButtonName: Load catapult simulator
-      TeacherOnly: 1
-      Command: -node next
-      EventObject: {fileID: 0}
-  - StartShown: 1
     Name: empty
     Options: []
   PrefabSpawnObjects:
@@ -491,14 +491,44 @@ MonoBehaviour:
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
-  - CommandToCall: -game-success
+  - CommandToCall: -game-success-0
     StoredCommands:
     - TimeStamp: 0
       Command: -sfx "audio/sfx/applausetrumpet"
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
-      Command: -animal success
+      Command: -animal success 0
+      EventObject: {fileID: 0}
+      Ran: 0
+  - CommandToCall: -game-success-1
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -sfx "audio/sfx/applausetrumpet"
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -animal success 1
+      EventObject: {fileID: 0}
+      Ran: 0
+  - CommandToCall: -game-success-2
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -sfx "audio/sfx/applausetrumpet"
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -animal success 2
+      EventObject: {fileID: 0}
+      Ran: 0
+  - CommandToCall: -game-success-3
+    StoredCommands:
+    - TimeStamp: 0
+      Command: -sfx "audio/sfx/applausetrumpet"
+      EventObject: {fileID: 0}
+      Ran: 0
+    - TimeStamp: 0
+      Command: -animal success 3
       EventObject: {fileID: 0}
       Ran: 0
 --- !u!1 &6114239394994368521
@@ -553,7 +583,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: -725, y: -354, z: 0}
+  - TalkingPosition: {x: -725, y: -454, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}

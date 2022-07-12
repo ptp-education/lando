@@ -55,8 +55,8 @@ MonoBehaviour:
     - stronger-elastic-base
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
-    RequirementsVO: 
+    RewardCommand: -game-success-0
+    RequirementsVO: challenge-1
     NextChallengeVO: next-challenge-1
   - Name: zone-2
     Sprite: {fileID: 21300000, guid: 2ffbb42761ec16642952515288bd8464, type: 3}
@@ -66,7 +66,7 @@ MonoBehaviour:
     - thicker-arm
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
+    RewardCommand: -game-success-1
     RequirementsVO: 
     NextChallengeVO: next-challenge-2
   - Name: zone-3
@@ -76,7 +76,7 @@ MonoBehaviour:
     - stronger-elastic-arm
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
+    RewardCommand: -game-success-2
     RequirementsVO: 
     NextChallengeVO: next-challenge-3
   - Name: zone-4
@@ -85,7 +85,7 @@ MonoBehaviour:
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success
+    RewardCommand: -game-success-3
     RequirementsVO: 
     NextChallengeVO: next-challenge-4
   Hints:
