@@ -86,6 +86,20 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 874a0d0a0748c2b4abf77e7b9b596bf7, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego5-hint-string-higher
+    ImageToSet: {fileID: 21300000, guid: 874a0d0a0748c2b4abf77e7b9b596bf7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 874a0d0a0748c2b4abf77e7b9b596bf7, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

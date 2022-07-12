@@ -194,6 +194,11 @@ public class AudioPlayer : MonoBehaviour
         return AudioPlayer.PlaySfx(file);
     }
 
+    public static float PlayVoiceover(List<string> paths)
+    {
+        return PlayVoiceover(paths, kSharedVoRoot);
+    }
+
     public static float PlayVoiceover(string path, string root)
     {
         return PlayVoiceover(new List<string>() { path }, root);
