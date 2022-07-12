@@ -67,7 +67,7 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success-1
-    RequirementsVO: 
+    RequirementsVO: challenge-2
     NextChallengeVO: next-challenge-2
   - Name: zone-3
     Sprite: {fileID: 21300000, guid: a95e4d9f6030d9d4489a8304013e146d, type: 3}
@@ -77,7 +77,7 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success-2
-    RequirementsVO: 
+    RequirementsVO: challenge-3
     NextChallengeVO: next-challenge-3
   - Name: zone-4
     Sprite: {fileID: 21300000, guid: dd9c7c2b2d0c83f458b34104fb918771, type: 3}
@@ -86,7 +86,7 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success-3
-    RequirementsVO: 
+    RequirementsVO: challenge-4
     NextChallengeVO: next-challenge-4
   Hints:
   - Name: interlocking-arm

@@ -173,7 +173,7 @@ namespace Lando.Class.Lego7
         private void SelectAnimal(string command)
         {
             gameManager_.SendNewActionInternal("-update-options empty");
-            select_.SetActive(false);
+            //
             switch (command)
             {
                 case "left":
@@ -226,10 +226,30 @@ namespace Lando.Class.Lego7
         {
             //Show animal in catapult screen
             //If test is successfull show animal flying
-            gameManager_.SendNewActionInternal("-fade in 1");
-            inCatapult_.SetActive(true);
+            gameManager_.SendNewActionInternal("-fadein 2.5");
+            AudioPlayer.PlayAudio("audio/sfx/catapult");
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                ShowAnimalFlying();
+                switch (currentLevel_) 
+                {
+                    case 0:
+                        AudioPlayer.PlayAudio("audio/sfx/frog");
+                        break;
+                    case 1:
+                        AudioPlayer.PlayAudio("audio/sfx/bubbles");
+                        break;
+                    case 2:
+                        AudioPlayer.PlayAudio("audio/sfx/snake-hiss");
+                        break;
+                    case 3:
+                        AudioPlayer.PlayAudio("audio/sfx/momo-happy");
+                        break;
+                }
+                
+                inCatapult_.SetActive(true);
+                select_.SetActive(false);
+                Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
+                    ShowAnimalFlying();
+                }));
             }));
         }
 
@@ -328,6 +348,7 @@ namespace Lando.Class.Lego7
         {
             flying_.SetActive(false);
             success_.SetActive(true);
+            AudioPlayer.PlayAudio("audio/sfx/cheer");
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                 //currentLevel_++;
                 previousLevel = currentLevel_;
