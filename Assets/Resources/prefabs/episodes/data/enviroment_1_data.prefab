@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4824520685840941836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2578990030495541908}
+  - component: {fileID: 5750723246018985116}
+  m_Layer: 0
+  m_Name: enviroment_1_data
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2578990030495541908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1217.1252, y: 657.4921, z: -199.57349}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750723246018985116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4824520685840941836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingResources: 
+  StartingHints:
+  - wider-legs
+  - use-string
+  Challenges:
+  - Name: Level1-yellow
+    Sprite: {fileID: 21300000, guid: e0b57deb025b8864b9e69007c55e6da4, type: 3}
+    ResourceRewards: 
+    HintRewards: []
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e -cat-failure
+    RewardCommand: -game-success-0
+    RequirementsVO: challenge-1
+    NextChallengeVO: next-challenge-1
+  - Name: Level2-green
+    Sprite: {fileID: 21300000, guid: a7c381e5385861d4e9ab0ab4bd365acc, type: 3}
+    ResourceRewards: 
+    HintRewards: []
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success-1
+    RequirementsVO: challenge-2
+    NextChallengeVO: next-challenge-2
+  - Name: Black-line
+    Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
+    ResourceRewards: 
+    HintRewards: []
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success-2
+    RequirementsVO: challenge-black
+    NextChallengeVO: next-challenge-black
+  Hints:
+  - Name: funnel-water
+    Thumbnail: {fileID: 21300000, guid: 00fb4e528edf8d64895483d735e62b7c, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: ce05fd1f79c518a47b98fe74f35e0750, type: 3}
+  - Name: dont-waste-water
+    Thumbnail: {fileID: 21300000, guid: 2fd680ce9af8124459aaacb0c9976466, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 8022ceaed95669242893b57dae7e90fb, type: 3}
+  - Name: taller-walls
+    Thumbnail: {fileID: 21300000, guid: 50973c3db8ff75b41beb781ca8e22439, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 92b7ed7429f0a104899378f2974e445e, type: 3}
+  - Name: plugging-reservoir
+    Thumbnail: {fileID: 21300000, guid: b4f75c67521ba7548921f84dfd96339f, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: effd921783840a64ea3e6198ee16bdfc, type: 3}
+  WaysToFail:
+  - ButtonName: Baseplate not in holder
+    ObjectToLoad: {fileID: -860130409809325442, guid: fd61622b39e0a96469a559538c980719, type: 3}
