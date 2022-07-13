@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b3c4d7a1b614f62aa119b75632da99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingResources: 
+  StartingResources: 00000000
   StartingHints:
   - build-arch
   - pillars-arch
