@@ -52,7 +52,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 89ab8cad054de4beb8bf3966434ccf00, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 0, y: -92, z: 0}
+  - TalkingPosition: {x: -400, y: -92, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
@@ -86,11 +86,11 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 51
+  - TimeStamp: 24.5
     Command: 
     EventObject: {fileID: -860130409809325442, guid: bfd2e3572070a3d4bb1fae685c9f8ad7, type: 3}
     Ran: 0
-  - TimeStamp: 51
+  - TimeStamp: 38.5
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -304,16 +304,12 @@ MonoBehaviour:
   ImageFilePath: episodes/lego_6_screens/game_introduction_1
   VideoOptions: []
   SimulatorDetails:
-    ShowAnswer: 0
+    ShowAnswer: 1
     Steps:
-    - Question: {fileID: -860130409809325442, guid: efaeda99875a00c48b67b42d35be961e, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 0e70e773e17a96045abb6f2683ea903b, type: 3}
-    - Question: {fileID: -860130409809325442, guid: 7d2aa3411a896f54a877486cd92a21e6, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 137e516fc8cbd8640be8ceefa60973e9, type: 3}
-    - Question: {fileID: -860130409809325442, guid: 10e67674727881147ae1c55ae1ad8254, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 178eca6ab68c9b342ac17f056b75b14f, type: 3}
-    - Question: {fileID: -860130409809325442, guid: 940ccca6ad9d992418e1b955e093312f, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 5a8a863554cb3104295f55c64a5e472a, type: 3}
+    - Question: {fileID: -860130409809325442, guid: ac3e3a00aef65ef4e8385ee6b145227e, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 1152b3be71e34134297e86e99c1b55d6, type: 3}
+    - Question: {fileID: -860130409809325442, guid: b02c2959e25a2474198718c27d02b606, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 350f5b72fe852804a8739ac03dfa8834, type: 3}
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn: []
@@ -379,8 +375,8 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 32fefd33bbd49fb4f991967e49a7ffc0, type: 3}
-  ImageFilePath: episodes/lego_8_screens/introduction_1
+  Image: {fileID: 2800000, guid: d8ded7fd87a1f7f418cb9cc8cae1e5d4, type: 3}
+  ImageFilePath: episodes/enviroment_1_screens/background_detailed-challenge_map_1
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -395,49 +391,27 @@ MonoBehaviour:
       TeacherOnly: 0
       Command: -claim-reward {0}
       EventObject: {fileID: 0}
-    - ButtonName: Load trap simulator
+    - ButtonName: Load ancient manuscript
       TeacherOnly: 1
       Command: -node next
-      EventObject: {fileID: 0}
-  - StartShown: 1
-    Name: choose
-    Options:
-    - ButtonName: Left
-      TeacherOnly: 0
-      Command: -hotel left
-      EventObject: {fileID: 0}
-    - ButtonName: Middle
-      TeacherOnly: 0
-      Command: -hotel middle
-      EventObject: {fileID: 0}
-    - ButtonName: Right
-      TeacherOnly: 0
-      Command: -hotel right
       EventObject: {fileID: 0}
   - StartShown: 1
     Name: empty
     Options: []
-  - StartShown: 1
-    Name: simulator
-    Options:
-    - ButtonName: Load trap simulator
-      TeacherOnly: 1
-      Command: -node next
-      EventObject: {fileID: 0}
   PrefabSpawnObjects:
   - TimeStamp: 0
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5737312327994467632, guid: a87b9436104d47241b69193c9c865613, type: 3}
-    Path: episodes/lego_8_assets/Prefabs/SpawnAnimalHotel
+    Object: {fileID: 5737312327994467632, guid: 9aa60a9ad694d9b4c80255f6aabf6e6c, type: 3}
+    Path: episodes/enviroment_1_assets/Prefabs/SpawnElectricity
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
   - CommandToCall: -game-success-0
     StoredCommands:
     - TimeStamp: 0
-      Command: -hotel success 0
+      Command: -electricity success 0
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
@@ -447,7 +421,7 @@ MonoBehaviour:
   - CommandToCall: -game-success-1
     StoredCommands:
     - TimeStamp: 0
-      Command: -hotel success 1
+      Command: -electricity success 1
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
@@ -457,27 +431,7 @@ MonoBehaviour:
   - CommandToCall: -game-success-2
     StoredCommands:
     - TimeStamp: 0
-      Command: -hotel success 2
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 0
-      Command: -sfx "audio/sfx/applausetrumpet"
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -game-success-3
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -hotel success 3
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 0
-      Command: -sfx "audio/sfx/applausetrumpet"
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -game-success-4
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -hotel success 4
+      Command: -electricity success 2
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
@@ -549,14 +503,10 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 0
     Steps:
-    - Question: {fileID: -860130409809325442, guid: efaeda99875a00c48b67b42d35be961e, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 0e70e773e17a96045abb6f2683ea903b, type: 3}
-    - Question: {fileID: -860130409809325442, guid: 7d2aa3411a896f54a877486cd92a21e6, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 137e516fc8cbd8640be8ceefa60973e9, type: 3}
-    - Question: {fileID: -860130409809325442, guid: 10e67674727881147ae1c55ae1ad8254, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 178eca6ab68c9b342ac17f056b75b14f, type: 3}
-    - Question: {fileID: -860130409809325442, guid: 940ccca6ad9d992418e1b955e093312f, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 5a8a863554cb3104295f55c64a5e472a, type: 3}
+    - Question: {fileID: -860130409809325442, guid: ac3e3a00aef65ef4e8385ee6b145227e, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 1152b3be71e34134297e86e99c1b55d6, type: 3}
+    - Question: {fileID: -860130409809325442, guid: b02c2959e25a2474198718c27d02b606, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 350f5b72fe852804a8739ac03dfa8834, type: 3}
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn: []
@@ -637,7 +587,7 @@ MonoBehaviour:
     Command: -character talk map-intro-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 29.8
+  - TimeStamp: 15.5
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -766,8 +716,8 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 55fcfe04efef44823b1ab90c0d4b21e1, type: 3}
-  ImageFilePath: episodes/lego_4_screens/office
+  Image: {fileID: 2800000, guid: 164f3c0e489e3cd4b8af2ec00a470e14, type: 3}
+  ImageFilePath: episodes/enviroment_1_screens/background_detailed-challenge_aanphes-falls
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -788,7 +738,7 @@ MonoBehaviour:
     - ButtonName: Can you repeat it?
       TeacherOnly: 0
       Command: 
-      EventObject: {fileID: -860130409809325442, guid: 7e395444c16f6a4429a67d3b7988d5b3, type: 3}
+      EventObject: {fileID: -860130409809325442, guid: c8fb3530a600f2c4c983b2818d467c71, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
@@ -796,6 +746,10 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 1.5
+    Command: -character talk explainer-0
+    EventObject: {fileID: 0}
+    Ran: 0
+  - TimeStamp: 16
     Command: 
     EventObject: {fileID: -860130409809325442, guid: c8fb3530a600f2c4c983b2818d467c71, type: 3}
     Ran: 0

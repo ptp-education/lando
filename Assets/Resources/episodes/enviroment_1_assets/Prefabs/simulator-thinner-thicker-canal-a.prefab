@@ -53,40 +53,40 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: 
+    CommandLine: -character talk simulator-thinner-thicker-a
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: cb2ae0460344c2c4f8e1bae245764064, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 01601e970e9fcb849874ee89937d1562, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: f2b8ddb719280af459062199371b9fa6, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 141693669182f3d4a9af4deedcc70bcf, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 7
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 12a1f91b593606a4ea2ecfd1003806ad, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 5f6e71a2a20ec454f94da2f8d35c79a8, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 9
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 33d291e9488dbea40a4e3430473f8e6c, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 2339971b04de07a41894620da634bb06, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 11.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 39050b3f80aab1c4ebf47ece236ac071, type: 3}
+    ImageToSet: {fileID: 21300000, guid: d61d4de1e4462664f90822cb2eb34fb0, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 14
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

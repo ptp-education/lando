@@ -33,7 +33,6 @@ public class AudioPlayer : MonoBehaviour
 
     public static float PlayAudio(string path, bool expectFailure = false, bool useVoiceover = false)
     {
-        Debug.LogWarning(path);
         if (GameManager.MuteAll)
         {
             return -1f;

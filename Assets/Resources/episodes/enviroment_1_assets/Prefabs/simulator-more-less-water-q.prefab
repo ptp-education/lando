@@ -53,16 +53,9 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: 
+    CommandLine: -character talk simulator-more-less-water-q
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: e6c11fa24f2f8504ba2e8e1caba714e9, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 3
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 0}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

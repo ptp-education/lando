@@ -53,58 +53,51 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-0
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 164f3c0e489e3cd4b8af2ec00a470e14, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 9
-    VoiceoverFile: 
-    CommandLine: 
+    CommandLine: -character talk explainer-1
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 3db6e2809b9ff444980b8cd807fe4355, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 33.5
+  - TimeStamp: 2
     VoiceoverFile: 
-    CommandLine: -character talk setup-make-sense
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b53b238a25e707345930ff4d632720f7, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 33.5
+  - TimeStamp: 5.2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: baeffc2118b28274c9f662d0e96c0bc9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 33.5
+  - TimeStamp: 7
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 066f79933a0e90e40a09ffe12c6a722f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 33.5
+  - TimeStamp: 10.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 03c6bdde97fb44948af1ed9980ffb4fe, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 33.5
+  - TimeStamp: 15
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 605c2ca2cb9d955489545092909ff271, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 33.5
+  - TimeStamp: 17.5
     VoiceoverFile: 
     CommandLine: -character talk setup-make-sense
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 066f79933a0e90e40a09ffe12c6a722f, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 605c2ca2cb9d955489545092909ff271, type: 3}
     SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}

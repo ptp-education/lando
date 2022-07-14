@@ -58,7 +58,7 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 37aaeb1417a9ccc41bae505b506f6822, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 15
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
