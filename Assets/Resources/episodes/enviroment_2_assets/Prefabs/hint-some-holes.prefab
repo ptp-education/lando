@@ -52,34 +52,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
+    VoiceoverFile: hint-have-holes
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 12651168bca2d784f91e6f65582bc28f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 658768c5a063939419e00d71ee5494ea, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6afc4f4d130342647bcb057ab7192227, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c025d3cee8a68ee4f8e24cde97d04825, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

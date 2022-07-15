@@ -53,31 +53,38 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-more-less-water-a
+    CommandLine: -character talk simulator-holes-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 295331d77bf1779499b20d75834e5dba, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 044e8ef3944caec45b4e4b358d14992e, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6.5
+  - TimeStamp: 6
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: f2b02f19aec398d41b7a7fde9f704011, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 9.2
+  - TimeStamp: 11.2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 99d309e2d3f8f6245b416442868d9d47, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 14
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 99d309e2d3f8f6245b416442868d9d47, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

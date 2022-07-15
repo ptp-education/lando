@@ -52,13 +52,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
+    VoiceoverFile: hint-use-less-blocks
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a8ff2d7ccf12c5b4ab3e1438f50913cf, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

@@ -53,19 +53,26 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk explainer-1
+    CommandLine: -update-options empty
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0
+    VoiceoverFile: 
+    CommandLine: -character talk explainer-0
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: bf0c8a2a95f3cc643b83513fa357531a, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2
+  - TimeStamp: 11
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 07ecaf797768c97458ddf859ba9c8063, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5.2
+  - TimeStamp: 14
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

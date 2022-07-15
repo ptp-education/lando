@@ -53,17 +53,24 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-more-less-water-a
+    CommandLine: -character talk simulator-plastic-bag-a
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: f23f0812c7a6bfd42b82cb5a600bbdcd, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 2.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a839ea8040baf5d4b93d275097207ebc, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8.7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a839ea8040baf5d4b93d275097207ebc, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

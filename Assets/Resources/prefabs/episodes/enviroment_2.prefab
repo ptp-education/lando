@@ -86,7 +86,7 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 24.5
+  - TimeStamp: 32
     Command: 
     EventObject: {fileID: -860130409809325442, guid: e07471e4afa2b7d4aab7c75bc3eefd0b, type: 3}
     Ran: 0
@@ -306,10 +306,12 @@ MonoBehaviour:
   SimulatorDetails:
     ShowAnswer: 1
     Steps:
-    - Question: {fileID: -860130409809325442, guid: ac3e3a00aef65ef4e8385ee6b145227e, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 1152b3be71e34134297e86e99c1b55d6, type: 3}
-    - Question: {fileID: -860130409809325442, guid: b02c2959e25a2474198718c27d02b606, type: 3}
-      Answer: {fileID: -860130409809325442, guid: 350f5b72fe852804a8739ac03dfa8834, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 9b25290a648c47344914c107d3699890, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 26f019f0e08acde43a6d0f200b13dbb5, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 2896685dc5eec774dab2a9eab06bcbd2, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 16598c1f032a5bd42a6c3d5b288922c1, type: 3}
+    - Question: {fileID: -860130409809325442, guid: 36f2a9f4c041c624bb4f17dada27bf7a, type: 3}
+      Answer: {fileID: -860130409809325442, guid: 81f11695072fa1d47814941b8782e4f7, type: 3}
   FadeInFromPreviousScene: 1
   TestingActive: 0
   OptionsToSpawn: []
@@ -662,14 +664,10 @@ MonoBehaviour:
     EventObject: {fileID: 0}
     Ran: 0
   - TimeStamp: 1.5
-    Command: -character talk explainer-0
-    EventObject: {fileID: 0}
-    Ran: 0
-  - TimeStamp: 16
     Command: 
     EventObject: {fileID: -860130409809325442, guid: fa54e080b22b58a429e24b19a83b0045, type: 3}
     Ran: 0
-  - TimeStamp: 37
+  - TimeStamp: 19
     Command: -update-options default
     EventObject: {fileID: 0}
     Ran: 0

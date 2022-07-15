@@ -52,20 +52,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
+    VoiceoverFile: hint-plastic-bag
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 114340334786bc24fbd80e55a8961599, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: cdae3b481d0f1b04cbebec47db7a4dae, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

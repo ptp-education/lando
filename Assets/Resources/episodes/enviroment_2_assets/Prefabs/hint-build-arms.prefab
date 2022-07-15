@@ -52,34 +52,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
+    VoiceoverFile: hint-build-arms
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 0db695b0878e7104d903ec3d552d3290, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: ff8d38a51b084ad488b2c90ec2d292a9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 9f2bb4ad712f61849a0a9a7123771b4c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b6b1c0b7c83408b448f64b02d775c6ff, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 0
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

@@ -77,16 +77,16 @@ MonoBehaviour:
     NextChallengeVO: next-challenge-3
   Hints:
   - Name: plastic-floats
-    Thumbnail: {fileID: 21300000, guid: 00fb4e528edf8d64895483d735e62b7c, type: 3}
+    Thumbnail: {fileID: 21300000, guid: f9bf577cfa27bff49a0e33302b2c4160, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: b6668d740cc59c34fa6cf1c938e834fe, type: 3}
   - Name: use-less-blocks
-    Thumbnail: {fileID: 21300000, guid: 2fd680ce9af8124459aaacb0c9976466, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 86533f348985ca042abeceb62854519f, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: e813ff739b7fde344b56b20b413f8467, type: 3}
   - Name: have-some-holes
-    Thumbnail: {fileID: 21300000, guid: 50973c3db8ff75b41beb781ca8e22439, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 2304c2298b316234a9c9c4315f3e1085, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 9dba7cb0d81ffe34da0bf8ef31235d00, type: 3}
   - Name: build-arms
-    Thumbnail: {fileID: 21300000, guid: b4f75c67521ba7548921f84dfd96339f, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 4ce0f90fcc257fa46a21ea47d0de157d, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 05e5bf53d28ef8b41938d7a1ef9ab2f4, type: 3}
   WaysToFail:
   - ButtonName: Right garbage
