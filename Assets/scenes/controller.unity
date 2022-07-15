@@ -1616,8 +1616,6 @@ MonoBehaviour:
   stationHolder_: {fileID: 83352434}
   stationManagerPrefabs_:
   - {fileID: 180090960011549564, guid: 9bca714f55cdf4afb92b17c05193399b, type: 3}
-  - {fileID: 7761982877196505332, guid: 2805888472caa4ad8b7346d407248db7, type: 3}
-  - {fileID: 718018916163827703, guid: 212a1bb8855c34b1389ae8b30e77aa0f, type: 3}
 --- !u!1 &494400549
 GameObject:
   m_ObjectHideFlags: 0

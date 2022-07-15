@@ -79,6 +79,20 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 531c15e371a377344a1161df97379115, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego7-hint-interlocking-arm
+    ImageToSet: {fileID: 21300000, guid: 531c15e371a377344a1161df97379115, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 531c15e371a377344a1161df97379115, type: 3}
+    SelfDestruct: 0
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

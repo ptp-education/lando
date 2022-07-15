@@ -33,6 +33,8 @@ public class ControllerManager : GameManager
 
     private string kTeacherNfcId = "047F5E2AD86D80";
 
+    private KeyValuePair<SmartObjectType, string> lastScannedNfcId_;
+
     private List<StationManager> loadedStationManagers_ = new List<StationManager>();
 
     private void Start()
@@ -82,6 +84,14 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
+        if (lastScannedNfcId_.Key == stationType && lastScannedNfcId_.Value.Equals(nfcId))
+        {
+            if (lastScannedNfcId_.Key != SmartObjectType.Option1 && lastScannedNfcId_.Key != SmartObjectType.Option2 && lastScannedNfcId_.Key != SmartObjectType.Option3)
+                return;
+        }
+
+        lastScannedNfcId_ = new KeyValuePair<SmartObjectType, string>(stationType, nfcId);
+
         dispatch_.NewNfcScan(nfcId, stationType);
 
         int optionSelected = -1;
@@ -98,7 +108,6 @@ public class ControllerManager : GameManager
                 break;
         }
 
-        Debug.LogWarning(nfcId);
         if (optionSelected != -1)
         {
             shareManager_.NewOptionSelected(optionSelected, string.Equals(nfcId, kTeacherNfcId), nfcId);
@@ -149,6 +158,13 @@ public class ControllerManager : GameManager
         base.NewEpisodeEventInternal(e);
 
         dispatch_.Init(this);
+    }
+
+    protected override void NewNodeEventInternal(EpisodeNode n)
+    {
+        base.NewNodeEventInternal(n);
+
+        lastScannedNfcId_ = new KeyValuePair<SmartObjectType, string>();
     }
 
     protected override void NewActionInternal(string a)

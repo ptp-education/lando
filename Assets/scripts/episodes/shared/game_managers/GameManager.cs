@@ -294,6 +294,11 @@ public class GameManager : MonoBehaviour
         SaveUserData(userData, id);
     }
 
+    public List<LevelData.Hint> AllHints()
+    {
+        return ChallengeData.Hints;
+    }
+
     public List<LevelData.Hint> AllHintsForUserId(string id)
     {
         List<LevelData.Challenge> completedChallenges = new List<LevelData.Challenge>();

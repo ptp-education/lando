@@ -436,7 +436,7 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 725, y: -256, z: 0}
+  - TalkingPosition: {x: 479, y: -256, z: 0}
     Scale: {x: -0.75, y: 0.75, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -489,7 +489,11 @@ MonoBehaviour:
     Object: {fileID: 4875390486311538617, guid: deb88f820594b7d40bf408f99bf0ff50, type: 3}
     Path: episodes/lego_7_assets/Prefabs/animals
     Spawned: 0
-  CommandLines: []
+  CommandLines:
+  - TimeStamp: 0
+    Command: -character talk map-home-starter
+    EventObject: {fileID: 0}
+    Ran: 0
   CommandLineContainers:
   - CommandToCall: -game-success-0
     StoredCommands:

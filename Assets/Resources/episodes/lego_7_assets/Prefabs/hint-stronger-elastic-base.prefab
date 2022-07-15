@@ -79,6 +79,20 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 66613bf6aafadb24e871c2184cf50da0, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 'lego7-hint-stronger-elastic-base '
+    ImageToSet: {fileID: 21300000, guid: 66613bf6aafadb24e871c2184cf50da0, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 66613bf6aafadb24e871c2184cf50da0, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

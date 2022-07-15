@@ -200,10 +200,11 @@ public class CommandDispatch
 
         gameManager_.SendNewActionNetworked(
             string.Format(
-                "-station {0} {1} {2}",
+                "-station {0} {1} {2} {3}",
                 station,
                 CommandDispatch.ValidatorResponse.Success.ToString(),
-                c.Name));
+                c.Name,
+                id));
 
         GameStorage.UserData userData = gameManager_.UserDataForUserId(id);
 

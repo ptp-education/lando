@@ -46,7 +46,7 @@ public class TestStationManager : StationManager
 
         if (string.Equals(CommandDispatch.ValidatorResponse.Success.ToString(), arguments[0]))
         {
-            HandleChallengeCompleted(arguments[1]);
+            HandleChallengeCompleted(arguments[1], arguments[2]);
             actionCaught = true;
         }
 
@@ -106,174 +106,204 @@ public class TestStationManager : StationManager
         challengeImage_.sprite = challenge.Sprite;
     }
 
-    private void HandleChallengeCompleted(string challengeName)
+    private void HandleChallengeCompleted(string challengeName, string id)
     {
         if (rewardFlow_ != null && rewardFlow_.state == GoTweenState.Running) return;
 
         Reset();
 
-        for (int i = 0; i < this.spawnedRewards_.Count; i++)
-        {
-            Destroy(this.spawnedRewards_[i].gameObject);
-        }
-        spawnedRewards_ = new List<Image>();
-
-        challengeSuccessBackground_.gameObject.SetActive(true);
-
         AudioPlayer.PlayCheer();
 
-        List<Image> prefabs = new List<Image>();
-        prefabs.Add(gameRewardPrefab_);
+        LevelData.Challenge nextChallenge = NextChallengeForCurrentChallenge(challengeName);
 
-        LevelData.Challenge currentChallenge = FindChallenge(challengeName);
-        for (int i = 0; i < currentChallenge.HintRewards.Count; i++)
-        {
-            prefabs.Add(hintRewardPrefab_);
-        }
-        for (int i = 0; i < currentChallenge.ResourceRewards.Count; i++)
-        {
-            prefabs.Add(blocksRewardPrefab_);
-        }
-
-        List<string> voiceoverOptions = new List<string>();
-        voiceoverOptions.Add("reward-new-a");
-        voiceoverOptions.Add("reward-new-b");
-
-        if (currentChallenge.HintRewards.Count > 0)
-        {
-            voiceoverOptions.Add("reward-new-hints-a");
-            voiceoverOptions.Add("reward-new-hints-b");
-            voiceoverOptions.Add("reward-new-hints-c");
-        }
-
-        if (currentChallenge.ResourceRewards.Count > 0)
-        {
-            voiceoverOptions.Add("reward-new-blocks-a");
-            voiceoverOptions.Add("reward-new-blocks-b");
-            voiceoverOptions.Add("reward-new-blocks-c");
-        }
-
-        AudioPlayer.PlayVoiceover(voiceoverOptions, "audio/shared_vo/");
+        float time = 1f;
 
         rewardFlow_ = new GoTweenFlow();
 
-        float time = 2f;
-        for (int i = 0; i < prefabs.Count; i++) 
-        {
-            Image prefab = prefabs[i];
-            Image reward = GameObject.Instantiate(prefab);
-
-            reward.transform.SetParent(rewardHolder_);
-            reward.transform.localScale = Vector3.zero;
-
-            rewardFlow_.insert(time + i * 0.3f, new GoTween(reward.transform, 0.2f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.SineIn)));
-            rewardFlow_.insert(time + i * 0.3f, new GoTween(reward.transform, 0.01f, new GoTweenConfig().onComplete(t =>
-            {
-                AudioPlayer.PlaySfx("pop");
-            })));
-
-            spawnedRewards_.Add(reward);
-        }
-
-        time += prefabs.Count * 0.3f + 1.5f;
-
-        rewardFlow_.insert(time - 1f, new GoTween(transform, 0.1f, new GoTweenConfig().onComplete(t =>
-        {
-            foreach(Image i in spawnedRewards_)
-            {
-                i.transform.SetParent(i.transform.parent.parent);
-            }
-        })));
-
-        int separateCounter = 0;
-        for (int i = spawnedRewards_.Count - 1; i >= 0; i--)
-        {
-            Image reward = spawnedRewards_[i];
-            rewardFlow_.insert(time + separateCounter * 0.6f,
-                new GoTween(
-                    reward.transform,
-                    0.9f,
-                    new GoTweenConfig().vector3XProp("localPosition", wristBandCenter_.localPosition.x)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f,
-                new GoTween(
-                    reward.transform,
-                    0.45f,
-                    new GoTweenConfig().vector3YProp("localPosition", wristBandCenter_.localPosition.y + 250f).setEaseType(GoEaseType.SineOut)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f,
-                new GoTween(
-                    reward.transform,
-                    0.45f,
-                    new GoTweenConfig().scale(1.15f).setEaseType(GoEaseType.SineOut)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f + 0.45f,
-                new GoTween(
-                    reward.transform,
-                    0.45f,
-                    new GoTweenConfig().vector3YProp("localPosition", wristBandCenter_.localPosition.y).setEaseType(GoEaseType.SineIn)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f + 0.45f,
-                new GoTween(
-                    reward.transform,
-                    0.45f,
-                    new GoTweenConfig().scale(1f).setEaseType(GoEaseType.SineIn)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f, new GoTween(reward.transform, 0.01f, new GoTweenConfig().onComplete(t =>
-            {
-                AudioPlayer.PlaySfx("whoosh");
-            })));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f - 0.1f,
-                new GoTween(
-                    reward.transform,
-                    0.1f,
-                    new GoTweenConfig().scale(0f).setEaseType(GoEaseType.SineIn)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f,
-                new GoTween(
-                    wristBand_,
-                    0.075f,
-                    new GoTweenConfig().scale(1.05f)));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f,
-                new GoTween(
-                    wristBand_,
-                    0.075f,
-                    new GoTweenConfig().onComplete(t =>
-                    {
-                        AudioPlayer.PlaySfx("beep");
-                    })));
-
-            rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f + 0.075f,
-                new GoTween(
-                    wristBand_,
-                    0.075f,
-                    new GoTweenConfig().scale(1f)));
-
-            separateCounter++;
-        }
-
-        time += spawnedRewards_.Count * 0.6f + 1.5f;
-
-        LevelData.Challenge nextChallenge = NextChallengeForCurrentChallenge(challengeName);
         if (nextChallenge != null)
         {
             float nextChallengeDuration = AudioPlayer.AudioLength(nextChallenge.NextChallengeVO, episode_.VORoot);
 
             rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
             {
-                AudioPlayer.PlayVoiceover(nextChallenge.NextChallengeVO, episode_.VORoot);
-            })));
-
-            rewardFlow_.insert(time + nextChallengeDuration - 0.5f, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
-            {
                 HandleNewChallange(nextChallenge.Name, skipCheckForRewardFlow: true);
                 AudioPlayer.PlaySfx("ding");
             })));
+
+            time += nextChallengeDuration;
         }
 
+        rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
+        {
+            SendNewActionNetworked(string.Format("-claim-reward {0}", id));
+        })));
+
         rewardFlow_.play();
+
+        //To restore this code, we need to go to CommandDispatch and send challenge name again
+
+        //for (int i = 0; i < this.spawnedRewards_.Count; i++)
+        //{
+        //    Destroy(this.spawnedRewards_[i].gameObject);
+        //}
+        //spawnedRewards_ = new List<Image>();
+
+        //challengeSuccessBackground_.gameObject.SetActive(true);
+
+        //AudioPlayer.PlayCheer();
+
+        //List<Image> prefabs = new List<Image>();
+        //prefabs.Add(gameRewardPrefab_);
+
+        //LevelData.Challenge currentChallenge = FindChallenge(challengeName);
+        //for (int i = 0; i < currentChallenge.HintRewards.Count; i++)
+        //{
+        //    prefabs.Add(hintRewardPrefab_);
+        //}
+        //for (int i = 0; i < currentChallenge.ResourceRewards.Count; i++)
+        //{
+        //    prefabs.Add(blocksRewardPrefab_);
+        //}
+
+        //List<string> voiceoverOptions = new List<string>();
+        //voiceoverOptions.Add("reward-new-a");
+        //voiceoverOptions.Add("reward-new-b");
+
+        //if (currentChallenge.HintRewards.Count > 0)
+        //{
+        //    voiceoverOptions.Add("reward-new-hints-a");
+        //    voiceoverOptions.Add("reward-new-hints-b");
+        //    voiceoverOptions.Add("reward-new-hints-c");
+        //}
+
+        //if (currentChallenge.ResourceRewards.Count > 0)
+        //{
+        //    voiceoverOptions.Add("reward-new-blocks-a");
+        //    voiceoverOptions.Add("reward-new-blocks-b");
+        //    voiceoverOptions.Add("reward-new-blocks-c");
+        //}
+
+        //AudioPlayer.PlayVoiceover(voiceoverOptions, "audio/shared_vo/");
+
+        //rewardFlow_ = new GoTweenFlow();
+
+        //float time = 2f;
+        //for (int i = 0; i < prefabs.Count; i++) 
+        //{
+        //    Image prefab = prefabs[i];
+        //    Image reward = GameObject.Instantiate(prefab);
+
+        //    reward.transform.SetParent(rewardHolder_);
+        //    reward.transform.localScale = Vector3.zero;
+
+        //    rewardFlow_.insert(time + i * 0.3f, new GoTween(reward.transform, 0.2f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.SineIn)));
+        //    rewardFlow_.insert(time + i * 0.3f, new GoTween(reward.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+        //    {
+        //        AudioPlayer.PlaySfx("pop");
+        //    })));
+
+        //    spawnedRewards_.Add(reward);
+        //}
+
+        //time += prefabs.Count * 0.3f + 1.5f;
+
+        //rewardFlow_.insert(time - 1f, new GoTween(transform, 0.1f, new GoTweenConfig().onComplete(t =>
+        //{
+        //    foreach(Image i in spawnedRewards_)
+        //    {
+        //        i.transform.SetParent(i.transform.parent.parent);
+        //    }
+        //})));
+
+        //int separateCounter = 0;
+        //for (int i = spawnedRewards_.Count - 1; i >= 0; i--)
+        //{
+        //    Image reward = spawnedRewards_[i];
+        //    rewardFlow_.insert(time + separateCounter * 0.6f,
+        //        new GoTween(
+        //            reward.transform,
+        //            0.9f,
+        //            new GoTweenConfig().vector3XProp("localPosition", wristBandCenter_.localPosition.x)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f,
+        //        new GoTween(
+        //            reward.transform,
+        //            0.45f,
+        //            new GoTweenConfig().vector3YProp("localPosition", wristBandCenter_.localPosition.y + 250f).setEaseType(GoEaseType.SineOut)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f,
+        //        new GoTween(
+        //            reward.transform,
+        //            0.45f,
+        //            new GoTweenConfig().scale(1.15f).setEaseType(GoEaseType.SineOut)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f + 0.45f,
+        //        new GoTween(
+        //            reward.transform,
+        //            0.45f,
+        //            new GoTweenConfig().vector3YProp("localPosition", wristBandCenter_.localPosition.y).setEaseType(GoEaseType.SineIn)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f + 0.45f,
+        //        new GoTween(
+        //            reward.transform,
+        //            0.45f,
+        //            new GoTweenConfig().scale(1f).setEaseType(GoEaseType.SineIn)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f, new GoTween(reward.transform, 0.01f, new GoTweenConfig().onComplete(t =>
+        //    {
+        //        AudioPlayer.PlaySfx("whoosh");
+        //    })));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f - 0.1f,
+        //        new GoTween(
+        //            reward.transform,
+        //            0.1f,
+        //            new GoTweenConfig().scale(0f).setEaseType(GoEaseType.SineIn)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f,
+        //        new GoTween(
+        //            wristBand_,
+        //            0.075f,
+        //            new GoTweenConfig().scale(1.05f)));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f,
+        //        new GoTween(
+        //            wristBand_,
+        //            0.075f,
+        //            new GoTweenConfig().onComplete(t =>
+        //            {
+        //                AudioPlayer.PlaySfx("beep");
+        //            })));
+
+        //    rewardFlow_.insert(time + separateCounter * 0.6f + 0.9f + 0.075f,
+        //        new GoTween(
+        //            wristBand_,
+        //            0.075f,
+        //            new GoTweenConfig().scale(1f)));
+
+        //    separateCounter++;
+        //}
+
+        //time += spawnedRewards_.Count * 0.6f + 1.5f;
+
+        //LevelData.Challenge nextChallenge = NextChallengeForCurrentChallenge(challengeName);
+        //if (nextChallenge != null)
+        //{
+        //    float nextChallengeDuration = AudioPlayer.AudioLength(nextChallenge.NextChallengeVO, episode_.VORoot);
+
+        //    rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
+        //    {
+        //        AudioPlayer.PlayVoiceover(nextChallenge.NextChallengeVO, episode_.VORoot);
+        //    })));
+
+        //    rewardFlow_.insert(time + nextChallengeDuration - 0.5f, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
+        //    {
+        //        HandleNewChallange(nextChallenge.Name, skipCheckForRewardFlow: true);
+        //        AudioPlayer.PlaySfx("ding");
+        //    })));
+        //}
+
+        //rewardFlow_.play();
     }
 
     private void HandleChallengeFailed(bool showHint)

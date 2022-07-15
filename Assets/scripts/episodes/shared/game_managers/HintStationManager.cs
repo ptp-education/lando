@@ -42,6 +42,16 @@ public class HintStationManager : StationManager
         }
     }
 
+    protected override void NewNodeEventInternal(EpisodeNode n)
+    {
+        base.NewNodeEventInternal(n);
+
+        if (IsStationActive)
+        {
+            ShowAllHints();
+        }
+    }
+
     private void HandleNoHints()
     {
         Reset();
@@ -50,6 +60,25 @@ public class HintStationManager : StationManager
         completeMoreChallengeBackground_.gameObject.SetActive(true);
 
         RemoveAllHintThumbnails();
+    }
+
+    private void ShowAllHints()
+    {
+        Reset();
+        selectHintBackground_.gameObject.SetActive(true);
+        RemoveAllHintThumbnails();
+
+        selectHintBackground_.gameObject.SetActive(true);
+        foreach (LevelData.Hint h in AllHints())
+        {
+            HintObjectHolder thumbnail = GameObject.Instantiate<HintObjectHolder>(thumbnailPrefab_);
+            thumbnail.SetSprite(h.Thumbnail);
+            thumbnail.transform.SetParent(hintsBackground_);
+            thumbnail.transform.localScale = Vector3.one;
+            thumbnail.name = h.Name;
+
+            thumbnail.ToggleOverlay(false);
+        }
     }
 
     private void HandleShowHints(string activeId, string allHints, string redeemedHints)
@@ -130,7 +159,8 @@ public class HintStationManager : StationManager
 
     public void OnHintComplete()
     {
-        SendNewActionNetworked(string.Format("-refresh-station {0} {1}", activeId_, StationName));
+        ShowAllHints();
+        //SendNewActionNetworked(string.Format("-refresh-station {0} {1}", activeId_, StationName));
     }
 
     protected override void Reset()

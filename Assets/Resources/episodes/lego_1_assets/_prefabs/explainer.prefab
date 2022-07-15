@@ -95,7 +95,7 @@ MonoBehaviour:
     Ran: 0
   - TimeStamp: 29
     VoiceoverFile: 
-    CommandLine: 
+    CommandLine: -show-choices
     PrintFile: 
     ImageToSet: {fileID: 0}
     SelfDestruct: 1

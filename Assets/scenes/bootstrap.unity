@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &221037067
 RectTransform:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1122aeddc4700404ab6653fae136b8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_smartObjectsToConfigure: 020000000000000001000000030000000400000005000000
+  m_smartObjectsToConfigure: 01000000030000000400000005000000
   m_smartObjectConfigurator: {fileID: 221037068}
   m_configureOnAwake: 1
 --- !u!114 &523139113

@@ -82,9 +82,16 @@ MonoBehaviour:
   - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: 'lego7-hint-longer-arm '
     ImageToSet: {fileID: 21300000, guid: 870e7043756cb25488f4b79fcff5682f, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 870e7043756cb25488f4b79fcff5682f, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
