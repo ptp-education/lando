@@ -53,9 +53,9 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    CommandLine: -character talk simulator-longer-q
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: b7b4be96d69590d4b96d4cec496db27b, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

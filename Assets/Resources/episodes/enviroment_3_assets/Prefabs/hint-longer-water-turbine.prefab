@@ -52,10 +52,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    VoiceoverFile: hint-longer-water-turbine
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: e919845cf23407d43a0970e50fdfb4c0, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 0.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 43e6b5f5ef069cf49aae6b63dd140d90, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 1
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a6a4862ddd62c044e871660fb6f6147f, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 1.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5fedfdf90ca570a4996ce11f6d0dd1d6, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 56ba5af3acbf8c141ab44466c49f454e, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 0d268be424734d141a6b8514fe8fe9c3, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

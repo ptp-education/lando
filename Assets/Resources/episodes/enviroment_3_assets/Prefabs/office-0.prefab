@@ -53,9 +53,16 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 96ac92ecc45c05041ae83ff6e0080608, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 17
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: e549c406259169647800a6118e5dae1d, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

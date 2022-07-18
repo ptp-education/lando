@@ -52,10 +52,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   events_:
   - TimeStamp: 0
-    VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    VoiceoverFile: hint-water-hits-at-the-end
+    CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: f5354ae9176dde4409bc1d99417ba54f, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 1
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: f5354ae9176dde4409bc1d99417ba54f, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: babe57f1466187e4aa5cfcb64ed21a95, type: 3}
     SelfDestruct: 0
     Ran: 0
   image_: {fileID: 759647174285219434}

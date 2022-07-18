@@ -86,11 +86,11 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 38.5
+  - TimeStamp: 33.5
     Command: 
     EventObject: {fileID: -860130409809325442, guid: d0e949edd52241344af245a9b073c3c0, type: 3}
     Ran: 0
-  - TimeStamp: 59
+  - TimeStamp: 66.5
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -610,8 +610,8 @@ MonoBehaviour:
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoLoopFilePath: Lego 1 - v3/P2-0.mp4
-  Image: {fileID: 2800000, guid: 164f3c0e489e3cd4b8af2ec00a470e14, type: 3}
-  ImageFilePath: episodes/enviroment_1_screens/background_detailed-challenge_aanphes-falls
+  Image: {fileID: 2800000, guid: d5deebd577d4e074e9a9bc91e2b08917, type: 3}
+  ImageFilePath: episodes/enviroment_2_assets/background_introduction_1
   VideoOptions: []
   SimulatorDetails:
     ShowAnswer: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
     - ButtonName: Can you repeat it?
       TeacherOnly: 0
       Command: 
-      EventObject: {fileID: -860130409809325442, guid: fa54e080b22b58a429e24b19a83b0045, type: 3}
+      EventObject: {fileID: -860130409809325442, guid: ae9206c8d54c23c4c83e3f18bcae4ccd, type: 3}
   PrefabSpawnObjects: []
   CommandLines:
   - TimeStamp: 0
@@ -643,7 +643,7 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: -860130409809325442, guid: ae9206c8d54c23c4c83e3f18bcae4ccd, type: 3}
     Ran: 0
-  - TimeStamp: 23
+  - TimeStamp: 16.7
     Command: -update-options default
     EventObject: {fileID: 0}
     Ran: 0

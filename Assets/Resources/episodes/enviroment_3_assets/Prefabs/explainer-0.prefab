@@ -53,10 +53,38 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    CommandLine: -character talk explainer-0
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: fd8f2efc08c99214498d211c37a0ed83, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 9c10dafb80b24594b977e14b81525df9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: fbac1f464203e4f44884b820d6a4e850, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10.2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 7b0e2faabe554a841af0d392d66cd8d7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 12
+    VoiceoverFile: 
+    CommandLine: -character talk setup-make-sense
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

@@ -53,10 +53,45 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    CommandLine: -character talk simulator-turbine-balanced-a
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: c86ec4fccda21eb489e7d813867a480a, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 84df36a808673624d80318bfad27d459, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 55a6cc1b8218d83419fcc97aa8af18bb, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 14dc424500fe1934e8d35ae9d687caf2, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 7d6b57b62fccec145a92d6e5caf9fff8, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 7d6b57b62fccec145a92d6e5caf9fff8, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

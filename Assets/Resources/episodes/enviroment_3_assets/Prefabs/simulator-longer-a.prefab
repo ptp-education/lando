@@ -53,10 +53,45 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: 
-    CommandLine: -character talk simulator-plastic-bag-q
+    CommandLine: -character talk simulator-longer-a
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 038b731c0fe78f14ea6931ac4f5f381a, type: 3}
+    ImageToSet: {fileID: 21300000, guid: c06fd3284e44e054d9ec0eb927ec8736, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 73b95da5f5692b34bbe7badd74026fc2, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6.7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 47197ad6abb91b04a87f089006980a03, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 99e6defa4e8d2a2468e84cd21d4dc4a7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 9.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 91fa845ba89fcf04f94d32650e17de9a, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 91fa845ba89fcf04f94d32650e17de9a, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

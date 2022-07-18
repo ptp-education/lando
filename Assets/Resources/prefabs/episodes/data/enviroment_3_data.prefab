@@ -95,18 +95,12 @@ MonoBehaviour:
     NextChallengeVO: next-challenge-5
   Hints:
   - Name: longer-water-turbine
-    Thumbnail: {fileID: 21300000, guid: f9bf577cfa27bff49a0e33302b2c4160, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 38e42e0ab6f224d49bcfb8665a692b54, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 475f26ccefc3dfb458b1a56e186cafd9, type: 3}
   - Name: water-hits-at-the-end
-    Thumbnail: {fileID: 21300000, guid: 86533f348985ca042abeceb62854519f, type: 3}
+    Thumbnail: {fileID: 21300000, guid: 4fa2e21ec6187a745952780e9796ee00, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 2e6aa4fc18e8e224c9ac85d819b1e9af, type: 3}
   - Name: wider-water-turbine
-    Thumbnail: {fileID: 21300000, guid: 2304c2298b316234a9c9c4315f3e1085, type: 3}
+    Thumbnail: {fileID: 21300000, guid: d5c1a7cf56cdaa447b9412cd7f63b984, type: 3}
     ObjectToLoad: {fileID: -860130409809325442, guid: 61fa683992222b44aa0bf3081757c8bc, type: 3}
-  WaysToFail:
-  - ButtonName: Right garbage
-    ObjectToLoad: {fileID: -860130409809325442, guid: e1c1d8a0f8464a943b0f15c58fbad671, type: 3}
-  - ButtonName: Fill an entire cup
-    ObjectToLoad: {fileID: -860130409809325442, guid: 683675b12df89ed44bf29e03e7e2075e, type: 3}
-  - ButtonName: First remove garbage
-    ObjectToLoad: {fileID: -860130409809325442, guid: 75361d5a11c241340bf16e502e81944d, type: 3}
+  WaysToFail: []
