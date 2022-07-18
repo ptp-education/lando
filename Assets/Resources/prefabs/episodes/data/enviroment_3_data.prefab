@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2578990030495541908}
   - component: {fileID: 5750723246018985116}
   m_Layer: 0
-  m_Name: enviroment_2_data
+  m_Name: enviroment_3_data
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,46 +48,61 @@ MonoBehaviour:
   - wider-legs
   - use-string
   Challenges:
-  - Name: Level1-small-plastic
+  - Name: level1-50g
     Sprite: {fileID: 21300000, guid: e0b57deb025b8864b9e69007c55e6da4, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e -cat-failure
-    RewardCommand: -alien success 0 {0} -game-success
+    RewardCommand: -turbine success 0 -game-success
     RequirementsVO: challenge-1
     NextChallengeVO: next-challenge-1
-  - Name: Level2-medium-plastic
+  - Name: level2-100g
     Sprite: {fileID: 21300000, guid: a7c381e5385861d4e9ab0ab4bd365acc, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success -alien success 1 {0}
+    RewardCommand: -game-success -turbine success 1
     RequirementsVO: challenge-2
     NextChallengeVO: next-challenge-2
-  - Name: Level3-large-plastic
+  - Name: level3-200g
     Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success -alien success 2 {0}
+    RewardCommand: -game-success -turbine success 2
     RequirementsVO: challenge-3
     NextChallengeVO: next-challenge-3
+  - Name: level4-300g
+    Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
+    ResourceRewards: 
+    HintRewards: []
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success -alien success 3
+    RequirementsVO: challenge-4
+    NextChallengeVO: next-challenge-4
+  - Name: level5-500g
+    Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
+    ResourceRewards: 
+    HintRewards: []
+    FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
+      home-crash-0b home-crash-0e
+    RewardCommand: -game-success -alien success 4
+    RequirementsVO: challenge-5
+    NextChallengeVO: next-challenge-5
   Hints:
-  - Name: plastic-floats
+  - Name: longer-water-turbine
     Thumbnail: {fileID: 21300000, guid: f9bf577cfa27bff49a0e33302b2c4160, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: b6668d740cc59c34fa6cf1c938e834fe, type: 3}
-  - Name: use-less-blocks
+    ObjectToLoad: {fileID: -860130409809325442, guid: 475f26ccefc3dfb458b1a56e186cafd9, type: 3}
+  - Name: water-hits-at-the-end
     Thumbnail: {fileID: 21300000, guid: 86533f348985ca042abeceb62854519f, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: e813ff739b7fde344b56b20b413f8467, type: 3}
-  - Name: have-some-holes
+    ObjectToLoad: {fileID: -860130409809325442, guid: 2e6aa4fc18e8e224c9ac85d819b1e9af, type: 3}
+  - Name: wider-water-turbine
     Thumbnail: {fileID: 21300000, guid: 2304c2298b316234a9c9c4315f3e1085, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: 9dba7cb0d81ffe34da0bf8ef31235d00, type: 3}
-  - Name: build-arms
-    Thumbnail: {fileID: 21300000, guid: 4ce0f90fcc257fa46a21ea47d0de157d, type: 3}
-    ObjectToLoad: {fileID: -860130409809325442, guid: 05e5bf53d28ef8b41938d7a1ef9ab2f4, type: 3}
+    ObjectToLoad: {fileID: -860130409809325442, guid: 61fa683992222b44aa0bf3081757c8bc, type: 3}
   WaysToFail:
   - ButtonName: Right garbage
     ObjectToLoad: {fileID: -860130409809325442, guid: e1c1d8a0f8464a943b0f15c58fbad671, type: 3}
