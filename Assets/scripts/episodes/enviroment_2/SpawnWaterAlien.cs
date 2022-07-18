@@ -61,12 +61,8 @@ public class SpawnWaterAlien : SpawnedObject
 
         if (args_.Count == 0) return;
 
-        //-alien success 0 423424
-
-        nfcId = args_[2];
-        Debug.LogWarning($"nfc id: {nfcId}");
-
         int.TryParse(args_[1], out currentLevel_);
+        nfcId = args_[2];
 
         if (args_.Contains("success"))
         {
@@ -76,15 +72,14 @@ public class SpawnWaterAlien : SpawnedObject
 
     private void CheckIfHaveAlien(string id)
     {
+        gameManager_.SendNewActionInternal("-update-options empty");
         if (studentsAliens_.ContainsKey(id))
         {
-            Debug.LogWarning("have id");
             currentAlien_ = studentsAliens_[id];
             CleanGarbage();
         }
         else
         {
-            Debug.LogWarning("doesnt have id");
             CreateAlien(id);
         }
     }
@@ -123,11 +118,18 @@ public class SpawnWaterAlien : SpawnedObject
         //play clean sound
         //make alien grow or just happy
         garbage_.SetActive(false);
+        AudioPlayer.PlayAudio("audio/sfx/whoosh");
+        AudioPlayer.PlayAudio("audio/sfx/wave");
         Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
             EvolveAlien();
-            Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                garbage_.SetActive(true);
-                currentAlien_ = null;
+            Go.to(this, waitAudioTime(), new GoTweenConfig().onComplete(t => {
+                gameManager_.SendNewActionInternal("-fadein 3");
+                AudioPlayer.PlayAudio("audio/sfx/water-trash");
+                Go.to(this, 2.5f, new GoTweenConfig().onComplete(t => {
+                    garbage_.SetActive(true);
+                    gameManager_.SendNewActionInternal("-update-options default");
+                    currentAlien_ = null;
+                }));
             }));
         }));
     }
@@ -159,8 +161,11 @@ public class SpawnWaterAlien : SpawnedObject
         flow.play();
     }
 
-    private void FirstStage() 
+    private float waitAudioTime() 
     {
-        
+        int randomAudio = Random.Range(0, 3);
+        AudioPlayer.PlayAudio($"audio/enviroment_2/alien-{currentLevel_}-{randomAudio}");
+        AudioPlayer.PlayAudio("audio/sfx/arch");
+        return AudioPlayer.AudioLength($"audio/enviroment_2/alien-{currentLevel_}-{randomAudio}");
     }
 }

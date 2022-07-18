@@ -79,6 +79,13 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: cfbb9fd54ee5f10429d300a40ba97381, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 18
+    VoiceoverFile: 
+    CommandLine: -character talk setup-make-sense
+    PrintFile: 
+    ImageToSet: {fileID: 0}
+    SelfDestruct: 0
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

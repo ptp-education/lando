@@ -86,11 +86,11 @@ MonoBehaviour:
     Command: -character talk office-0
     EventObject: {fileID: 0}
     Ran: 0
-  - TimeStamp: 32
+  - TimeStamp: 38.5
     Command: 
     EventObject: {fileID: -860130409809325442, guid: e07471e4afa2b7d4aab7c75bc3eefd0b, type: 3}
     Ran: 0
-  - TimeStamp: 38.5
+  - TimeStamp: 59
     Command: -node next
     EventObject: {fileID: 0}
     Ran: 0
@@ -410,32 +410,8 @@ MonoBehaviour:
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
-  - CommandToCall: -game-0
+  - CommandToCall: -game-success
     StoredCommands:
-    - TimeStamp: 0
-      Command: -alien success 0 {0}
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 0
-      Command: -sfx "audio/sfx/applausetrumpet"
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -game-success-1
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -alien success 1 {0}
-      EventObject: {fileID: 0}
-      Ran: 0
-    - TimeStamp: 0
-      Command: -sfx "audio/sfx/applausetrumpet"
-      EventObject: {fileID: 0}
-      Ran: 0
-  - CommandToCall: -game-success-2
-    StoredCommands:
-    - TimeStamp: 0
-      Command: -alien success 2 {0}
-      EventObject: {fileID: 0}
-      Ran: 0
     - TimeStamp: 0
       Command: -sfx "audio/sfx/applausetrumpet"
       EventObject: {fileID: 0}
@@ -667,7 +643,7 @@ MonoBehaviour:
     Command: 
     EventObject: {fileID: -860130409809325442, guid: fa54e080b22b58a429e24b19a83b0045, type: 3}
     Ran: 0
-  - TimeStamp: 19
+  - TimeStamp: 23
     Command: -update-options default
     EventObject: {fileID: 0}
     Ran: 0

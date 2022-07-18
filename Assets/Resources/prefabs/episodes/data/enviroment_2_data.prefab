@@ -54,7 +54,7 @@ MonoBehaviour:
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e -cat-failure
-    RewardCommand: -game-0
+    RewardCommand: -alien success 0 {0} -game-success
     RequirementsVO: challenge-1
     NextChallengeVO: next-challenge-1
   - Name: Level2-medium-plastic
@@ -63,7 +63,7 @@ MonoBehaviour:
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success-1
+    RewardCommand: -game-success -alien success 1 {0}
     RequirementsVO: challenge-2
     NextChallengeVO: next-challenge-2
   - Name: Level3-large-plastic
@@ -72,7 +72,7 @@ MonoBehaviour:
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
-    RewardCommand: -game-success-2
+    RewardCommand: -game-success -alien success 1 {0}
     RequirementsVO: challenge-3
     NextChallengeVO: next-challenge-3
   Hints:

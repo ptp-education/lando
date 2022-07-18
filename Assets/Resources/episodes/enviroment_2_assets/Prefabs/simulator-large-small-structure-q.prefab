@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events_:
-  - TimeStamp: 0
+  - TimeStamp: 1.5
     VoiceoverFile: 
     CommandLine: -character talk simulator-large-small-q
     PrintFile: 

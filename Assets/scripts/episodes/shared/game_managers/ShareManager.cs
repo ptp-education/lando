@@ -393,7 +393,7 @@ public class ShareManager : GameManager
 
                 LevelData.Challenge c = FindChallenge(challengeToRedeem);
 
-                SendNewActionInternal(c.RewardCommand);
+                SendNewActionInternal(string.Format(c.RewardCommand, id));
             }
         }
     }

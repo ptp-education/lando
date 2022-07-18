@@ -249,11 +249,11 @@ public class SpawnedMomo : SpawnedObject
 
     public override void ReceivedAction(string action)
     {
-        Debug.LogWarning(action);
         List<string> args = ArgumentHelper.ArgumentsFromCommand("-momo", action);
         if (args.Count == 0) return;
 
         //InitCustomization();
+        Debug.LogWarning(action);
 
         commandType_ = args[0];
         if (args.Count > 1)
