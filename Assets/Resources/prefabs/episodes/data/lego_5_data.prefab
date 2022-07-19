@@ -55,7 +55,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsVO: 
+    OnScanCommand: -swing spawn 0
+    RequirementsVO: testing-announce-100
     NextChallengeVO: 
   - Name: 200g
     Sprite: {fileID: 21300000, guid: 2ee316031defba14c855f5aa749fc916, type: 3}
@@ -67,7 +68,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsVO: 
+    OnScanCommand: -swing spawn 1
+    RequirementsVO: testing-announce-200
     NextChallengeVO: 
   - Name: 500g
     Sprite: {fileID: 21300000, guid: 33c7e0814c0c4ec48be991bfcf54f609, type: 3}
@@ -78,7 +80,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsVO: 
+    OnScanCommand: -swing spawn 2
+    RequirementsVO: testing-announce-500
     NextChallengeVO: 
   - Name: 800g
     Sprite: {fileID: 21300000, guid: abc7e0e3ed2c31c409e26328ea010712, type: 3}
@@ -87,7 +90,8 @@ MonoBehaviour:
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success
-    RequirementsVO: 
+    OnScanCommand: -swing spawn 3
+    RequirementsVO: testing-announce-800
     NextChallengeVO: 
   Hints:
   - Name: arch

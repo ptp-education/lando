@@ -999,7 +999,7 @@ MonoBehaviour:
   - CommandToCall: -game-success-initial
     StoredCommands:
     - TimeStamp: 0
-      Command: -momo success {0} -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
@@ -1177,6 +1177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 1121075460186832798}
+  StartingNode: {fileID: 2796477096162768081}
   VORoot: audio/lego_4/
   LevelData: {fileID: 5750723246018985116, guid: 352af6324224a449cab2a2069426d30c, type: 3}

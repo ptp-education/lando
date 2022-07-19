@@ -371,7 +371,6 @@ public class ShareManager : GameManager
 
         string id = args[0];
 
-        Debug.LogWarning("looking for success in : " + gameObject.name + " with id: " + id);
         GameStorage.UserData userData = UserDataForUserId(id);
 
         if (userData.RedeemedChallenges.Count < userData.CompletedChallenges.Count)
@@ -393,7 +392,7 @@ public class ShareManager : GameManager
 
                 LevelData.Challenge c = FindChallenge(challengeToRedeem);
 
-                SendNewActionInternal(c.RewardCommand);
+                SendNewActionInternal(string.Format(c.RewardCommand, id));
             }
         }
     }
