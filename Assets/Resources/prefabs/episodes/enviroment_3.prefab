@@ -328,8 +328,8 @@ MonoBehaviour:
     SpawnKey: 
     Position: {x: 0, y: 0, z: 0}
     Scale: {x: 1, y: 1, z: 1}
-    Object: {fileID: 5737312327994467632, guid: a325c37db4c19044a8a4a433a8b487ce, type: 3}
-    Path: episodes/enviroment_2_assets/Prefabs/SpawnWaterAlien
+    Object: {fileID: 5737312327994467632, guid: f7b218fd709c1b24799dfacc052262da, type: 3}
+    Path: episodes/enviroment_3_assets/Prefabs/SpawnTurbine
     Spawned: 0
   CommandLines: []
   CommandLineContainers:
