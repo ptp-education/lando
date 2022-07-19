@@ -68,8 +68,8 @@ public class AudioPlayer : MonoBehaviour
         }
 
         audioSource.PlayOneShot(clip);
-        Debug.LogWarning(path);
-        if (path.Contains("audio/lego")) { 
+
+        if (path.Contains("audio/lego") || path.Contains("audio/enviroment") || path.Contains("audio/shared_vo")) { 
             newAudioSource_ = audioSource;
         }
         Go.to(audioSource.transform, clip.length * 2f, new GoTweenConfig().onComplete(t =>

@@ -43,7 +43,7 @@ public class OnscreenCharacter : MonoBehaviour
             return duration;
         }
 
-        voiceBubble_.gameObject.SetActive(true);
+        InvokeRepeating("ManageBubble", 0, 0.05f);
         //Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
         //{
         //    voiceBubble_.gameObject.SetActive(false);
@@ -52,28 +52,20 @@ public class OnscreenCharacter : MonoBehaviour
         return duration;
     }
 
-    private void Update()
+    private void ManageBubble() 
     {
-
-        //AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-        if (AudioPlayer.GetAudioSourcePlaying() != null) 
+        if (AudioPlayer.GetAudioSourcePlaying() != null)
         {
-            float[] spectrum = new float[512];
-            AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris);
-
-                Debug.LogWarning(spectrum[0] - 10);
+            float[] spectrum = new float[64];
+            AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
             if (spectrum[0] - 10 <= -9.999974)
             {
+                Debug.LogWarning(spectrum[0] - 10);
                 voiceBubble_.gameObject.SetActive(false);
             }
             else
             {
                 voiceBubble_.gameObject.SetActive(true);
-            }
-            for (int i = 1; i < spectrum.Length - 1; i++)
-            {
-                Debug.DrawLine(new Vector3(Mathf.Log(i - 1), spectrum[i - 1] - 10, 1), new Vector3(Mathf.Log(i), spectrum[i] - 10, 1), Color.green);
-                
             }
         }
     }
