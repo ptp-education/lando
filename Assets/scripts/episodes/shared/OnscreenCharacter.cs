@@ -44,12 +44,38 @@ public class OnscreenCharacter : MonoBehaviour
         }
 
         voiceBubble_.gameObject.SetActive(true);
-        Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
-        {
-            voiceBubble_.gameObject.SetActive(false);
-        }));
+        //Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
+        //{
+        //    voiceBubble_.gameObject.SetActive(false);
+        //}));
 
         return duration;
+    }
+
+    private void Update()
+    {
+
+        //AudioListener.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+        if (AudioPlayer.GetAudioSourcePlaying() != null) 
+        {
+            float[] spectrum = new float[512];
+            AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.BlackmanHarris);
+
+                Debug.LogWarning(spectrum[0] - 10);
+            if (spectrum[0] - 10 <= -9.999974)
+            {
+                voiceBubble_.gameObject.SetActive(false);
+            }
+            else
+            {
+                voiceBubble_.gameObject.SetActive(true);
+            }
+            for (int i = 1; i < spectrum.Length - 1; i++)
+            {
+                Debug.DrawLine(new Vector3(Mathf.Log(i - 1), spectrum[i - 1] - 10, 1), new Vector3(Mathf.Log(i), spectrum[i] - 10, 1), Color.green);
+                
+            }
+        }
     }
 
     public void ScanCard()

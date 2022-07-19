@@ -12,6 +12,7 @@ public class AudioPlayer : MonoBehaviour
     private static AudioPlayer instance_;
 
     private static AudioSource voiceoverAudio_;
+    private static AudioSource newAudioSource_;
 
     private static string kSharedVoRoot = "audio/shared_vo/";
 
@@ -67,7 +68,10 @@ public class AudioPlayer : MonoBehaviour
         }
 
         audioSource.PlayOneShot(clip);
-
+        Debug.LogWarning(path);
+        if (path.Contains("audio/lego")) { 
+            newAudioSource_ = audioSource;
+        }
         Go.to(audioSource.transform, clip.length * 2f, new GoTweenConfig().onComplete(t =>
         {
             DestroyImmediate(audioSource.gameObject);
@@ -75,6 +79,10 @@ public class AudioPlayer : MonoBehaviour
         }));
 
         return clip.length;
+    }
+
+    public static AudioSource GetAudioSourcePlaying() {
+        return newAudioSource_;
     }
 
     public static AudioSource LoopAudio(string path, int layer = kMain)
