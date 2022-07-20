@@ -110,9 +110,7 @@ public class TestStationManager : StationManager
     {
         if (rewardFlow_ != null && rewardFlow_.state == GoTweenState.Running) return;
 
-        Reset();
-
-        AudioPlayer.PlayCheer();
+        AudioPlayer.PlaySfx("chime");
 
         LevelData.Challenge nextChallenge = NextChallengeForCurrentChallenge(challengeName);
 
@@ -122,7 +120,7 @@ public class TestStationManager : StationManager
 
         if (nextChallenge != null)
         {
-            float nextChallengeDuration = AudioPlayer.AudioLength(nextChallenge.NextChallengeVO, episode_.VORoot);
+            float nextChallengeDuration = AudioPlayer.AudioLength(nextChallenge.RequirementsVO, episode_.VORoot);
 
             rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>
             {
@@ -130,7 +128,7 @@ public class TestStationManager : StationManager
                 AudioPlayer.PlaySfx("ding");
             })));
 
-            time += nextChallengeDuration;
+            time += nextChallengeDuration + 0.8f;
         }
 
         rewardFlow_.insert(time, new GoTween(transform, 0.01f, new GoTweenConfig().onComplete(t =>

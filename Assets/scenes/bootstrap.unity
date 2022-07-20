@@ -151,7 +151,7 @@ RectTransform:
   m_GameObject: {fileID: 221037066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children:
   - {fileID: 1360584158}
   m_Father: {fileID: 523139110}
@@ -275,9 +275,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1122aeddc4700404ab6653fae136b8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_ufrPlugin: {fileID: 0}
+  m_configuringSmartObjectIndex: 0
+  m_isConfigured: 0
   m_smartObjectsToConfigure: 01000000030000000400000005000000
   m_smartObjectConfigurator: {fileID: 221037068}
   m_configureOnAwake: 1
+  m_saveData:
+    Connectors: []
 --- !u!114 &523139113
 MonoBehaviour:
   m_ObjectHideFlags: 0

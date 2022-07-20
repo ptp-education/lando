@@ -84,12 +84,6 @@ public class ControllerManager : GameManager
 
     private void NewNfcScan(string nfcId, SmartObjectType stationType)
     {
-        if (lastScannedNfcId_.Key == stationType && lastScannedNfcId_.Value.Equals(nfcId))
-        {
-            if (lastScannedNfcId_.Key != SmartObjectType.Option1 && lastScannedNfcId_.Key != SmartObjectType.Option2 && lastScannedNfcId_.Key != SmartObjectType.Option3)
-                return;
-        }
-
         lastScannedNfcId_ = new KeyValuePair<SmartObjectType, string>(stationType, nfcId);
 
         dispatch_.NewNfcScan(nfcId, stationType);

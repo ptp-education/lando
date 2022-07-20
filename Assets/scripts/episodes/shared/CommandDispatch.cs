@@ -150,6 +150,9 @@ public class CommandDispatch
     private void OnTestStationScan(string id, string station)
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
+
+        gameManager_.SendNewActionInternal(c.OnScanCommand);
+
         gameManager_.SendNewActionNetworked(string.Format("-station {0} load {1}", station, c.Name));
         gameManager_.SendNewActionNetworked(string.Format("-validator-controller {0} load {1}", station, c.Name));
     }

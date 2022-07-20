@@ -99,7 +99,11 @@ public class EventObject : MonoBehaviour
                     }
                     if (e.PrintFile != null && e.PrintFile.Length > 0)
                     {
-                        gameManager_.NewPrint(e.PrintFile);
+                        gameManager_.SendNewActionNetworked(GameManager.PRINT_COMMAND + " " + e.PrintFile);
+                        Go.addTween(new GoTween(transform, 1f, new GoTweenConfig().onComplete(t =>
+                        {
+                            AudioPlayer.PlayPrint();
+                        })));
                     }
                     if (e.ImageToSet != null)
                     {

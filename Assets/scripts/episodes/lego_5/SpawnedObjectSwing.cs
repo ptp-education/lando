@@ -44,8 +44,7 @@ namespace Lando.Class.Lego5
 
         private Sprite currentIcon_;
 
-        //this have track of which challenge is currently
-        private int currentStage_ = 0;
+        private int lastSetCounter_;
 
         [System.Serializable]
         public class Choice
@@ -81,7 +80,10 @@ namespace Lando.Class.Lego5
                     switch(args[0])
                     {
                         case "spawn":
-                            HandleSpawnAnimal();
+                            if (args.Count > 1)
+                            {
+                                HandleSpawnAnimal(int.Parse(args[1]));
+                            }
                             break;
                         case "load":
                             HandleLoad();
@@ -103,7 +105,7 @@ namespace Lando.Class.Lego5
             }
         }
 
-        private void HandleSpawnAnimal()
+        private void HandleSpawnAnimal(int counter)
         {
             Hide();
 
@@ -111,7 +113,9 @@ namespace Lando.Class.Lego5
 
             Image set = null;
 
-            switch(currentStage_)
+            lastSetCounter_ = counter;
+
+            switch(counter)
             {
                 case 0:
                     choices.Add(bunny_);
@@ -146,6 +150,7 @@ namespace Lando.Class.Lego5
                     correctSizeSwing_ = largeAnimalSeat_;
                     break;
             }
+
             int selection = Random.Range(0, choices.Count);
 
             animalWaiting_.gameObject.SetActive(true);
@@ -162,7 +167,6 @@ namespace Lando.Class.Lego5
             currentIcon_ = choices[selection].AnimalIcon;
 
             AudioPlayer.PlayAudio(choices[selection].Sound);
-            currentStage_++;
         }
 
         //Put animal in the swing
@@ -202,7 +206,7 @@ namespace Lando.Class.Lego5
             icon.sprite = currentIcon_;
             Go.addTween(new GoTween(icon, 0.5f, new GoTweenConfig().scale(1f).setEaseType(GoEaseType.BounceIn)));
             AudioPlayer.PlayAudio("audio/sfx/ding");
-            HandleSpawnAnimal();
+            HandleSpawnAnimal(Mathf.Min(lastSetCounter_ + 1, 3));
         }
 
         private void HandleCrash()
