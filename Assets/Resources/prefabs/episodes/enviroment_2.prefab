@@ -389,10 +389,6 @@ MonoBehaviour:
   - StartShown: 1
     Name: default
     Options:
-    - ButtonName: Redeem reward
-      TeacherOnly: 0
-      Command: -claim-reward {0}
-      EventObject: {fileID: 0}
     - ButtonName: Load ancient manuscript
       TeacherOnly: 1
       Command: -node next

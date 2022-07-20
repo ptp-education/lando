@@ -182,6 +182,7 @@ namespace Lando.Class.Lego5
 
                 Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                     HandleSuccess();
+                    
                 }));
             }
         }
