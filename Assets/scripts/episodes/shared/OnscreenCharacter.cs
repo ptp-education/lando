@@ -60,7 +60,6 @@ public class OnscreenCharacter : MonoBehaviour
             AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
             if (spectrum[0] - 10 <= -9.999974)
             {
-                Debug.LogWarning(spectrum[0] - 10);
                 voiceBubble_.gameObject.SetActive(false);
             }
             else

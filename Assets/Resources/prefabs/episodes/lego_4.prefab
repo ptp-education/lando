@@ -512,7 +512,7 @@ MonoBehaviour:
   Type: 2
   Characters:
   - TalkingPosition: {x: -837, y: -420, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+    Scale: {x: 0, y: 0, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -929,12 +929,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcec4995e7154c6abf5dfde8a9c4c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgLoopPath: 
-  BgLoop: {fileID: 8300000, guid: 92233aba0176b4f31bd0d23c3203f195, type: 3}
+  BgLoopPath: audio/sfx/wind-blowing
+  BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 700, y: -256, z: 0}
-    Scale: {x: -0.75, y: 0.75, z: 1}
+  - TalkingPosition: {x: 870, y: -356, z: 0}
+    Scale: {x: -0.6, y: 0.6, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -999,7 +999,7 @@ MonoBehaviour:
   - CommandToCall: -game-success-initial
     StoredCommands:
     - TimeStamp: 0
-      Command: -momo success -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
+      Command: -sfx "audio/sfx/momo-happy" -sfx "audio/sfx/cheer"
       EventObject: {fileID: 0}
       Ran: 0
     - TimeStamp: 0
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   Type: 2
   Characters:
   - TalkingPosition: {x: -837, y: -420, z: 0}
-    Scale: {x: 0.75, y: 0.75, z: 1}
+    Scale: {x: 0, y: 0, z: 1}
     SelectedCharacter: 0
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
@@ -1177,6 +1177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4dd41f7533e44e1ba478c5fb105949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartingNode: {fileID: 2796477096162768081}
+  StartingNode: {fileID: 1121075460186832798}
   VORoot: audio/lego_4/
   LevelData: {fileID: 5750723246018985116, guid: 352af6324224a449cab2a2069426d30c, type: 3}

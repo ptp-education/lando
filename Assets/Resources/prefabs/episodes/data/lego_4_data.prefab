@@ -53,8 +53,9 @@ MonoBehaviour:
     ResourceRewards: 00000000
     HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
-    RewardCommand: -game-success-initial
-    RequirementsVO: 
+    RewardCommand: -momo success {0} -game-success-initial
+    OnScanCommand: 
+    RequirementsVO: testing-announce-100
     NextChallengeVO: testing-next-announce-100
   - Name: 200g
     Sprite: {fileID: 21300000, guid: a45a1d7f8c722e44aa5fed97f38ad10c, type: 3}
@@ -64,7 +65,8 @@ MonoBehaviour:
     - ceiling
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    RequirementsVO: 
+    OnScanCommand: 
+    RequirementsVO: testing-announce-200
     NextChallengeVO: testing-next-announce-200
   - Name: 500g
     Sprite: {fileID: 21300000, guid: 31fc6c289aa03304f9b74b2c7e77db70, type: 3}
@@ -74,7 +76,8 @@ MonoBehaviour:
     - short-supports
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    RequirementsVO: 
+    OnScanCommand: 
+    RequirementsVO: testing-announce-500
     NextChallengeVO: testing-next-announce-500
   - Name: 800g
     Sprite: {fileID: 21300000, guid: df4800c4de4c7c14abf360e84056417f, type: 3}
@@ -82,7 +85,8 @@ MonoBehaviour:
     HintRewards: []
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success-last
-    RequirementsVO: 
+    OnScanCommand: 
+    RequirementsVO: challenge-800
     NextChallengeVO: challenge-next-800
   Hints:
   - Name: build-supports

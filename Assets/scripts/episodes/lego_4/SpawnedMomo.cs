@@ -217,7 +217,6 @@ public class SpawnedMomo : SpawnedObject
     private string nfcId_;
     private string commandType_;
     private bool isRunning = false;
-    private bool inTesting_ = false;
 
     private GoTweenFlow dismissingFlow_;
 
@@ -253,7 +252,6 @@ public class SpawnedMomo : SpawnedObject
         if (args.Count == 0) return;
 
         //InitCustomization();
-        Debug.LogWarning(action);
 
         commandType_ = args[0];
         if (args.Count > 1)
@@ -645,7 +643,7 @@ public class SpawnedMomo : SpawnedObject
         HideAllScenes();
 
         AudioPlayer.PlayAudio("audio/sfx/momo-grunt");
-
+        AudioPlayer.PlayAudio("audio/sfx/jump");
         success_.TurnOffCustomizations();
 
         successBackground_.gameObject.SetActive(true);

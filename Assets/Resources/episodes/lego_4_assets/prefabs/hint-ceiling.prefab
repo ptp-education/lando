@@ -72,14 +72,56 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b42c043af019de84c882c3db641b1e6a, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: lego4-hint-ceiling
+    ImageToSet: {fileID: 21300000, guid: 7e7eb6bd41cae214e97d86709427851d, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 10
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b42c043af019de84c882c3db641b1e6a, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 7e7eb6bd41cae214e97d86709427851d, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b6646f197ff08104091705023a279430, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 9
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
