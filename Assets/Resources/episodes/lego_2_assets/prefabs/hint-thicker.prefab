@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 364074704597059915}
   - component: {fileID: 759647174285219434}
   m_Layer: 0
-  m_Name: hint-ticker
+  m_Name: hint-thicker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,21 +107,63 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 2ddc63c4e28d1a74893665e1114e2919, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 6a012e085d6a90a4ab48951722f80fe1, type: 3}
+    SelfDestruct: 0
+    Ran: 0
   - TimeStamp: 4.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 2ddc63c4e28d1a74893665e1114e2919, type: 3}
+    ImageToSet: {fileID: 21300000, guid: cd958924fcfe4a440a16d5d29718a4ea, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 81aa1c5cb5e199442aa95d47f40f3af8, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 8bd237225639617409adbce93128a473, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 16e1ba2e2bb3978468ec6122b954adb6, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 6.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 4187fb26a5eb6e4488a9e20c8b09c49b, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 47f383ddf5dc59b4bbca5be16badc71c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 2ddc63c4e28d1a74893665e1114e2919, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 12
+  - TimeStamp: 8.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

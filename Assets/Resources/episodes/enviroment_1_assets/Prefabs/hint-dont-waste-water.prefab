@@ -65,6 +65,41 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 6ae2111c136993d42900767f281ffd3e, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 318d14b4d7492034aa5dce4df8cf7d10, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 6ae2111c136993d42900767f281ffd3e, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: enviroment1-hint-dont-waste-water
+    ImageToSet: {fileID: 21300000, guid: 318d14b4d7492034aa5dce4df8cf7d10, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 6ae2111c136993d42900767f281ffd3e, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 6ae2111c136993d42900767f281ffd3e, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

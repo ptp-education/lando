@@ -58,26 +58,47 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 136f883b3c16e4b27bb3702da0c253b9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 1.5
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 62dc3c8cba7c44b10aefe2f6c0d8ecb9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c9c24a098dfa440a1a37bea58a0e27fb, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 136f883b3c16e4b27bb3702da0c253b9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: lego1-piers
+    ImageToSet: {fileID: 21300000, guid: 62dc3c8cba7c44b10aefe2f6c0d8ecb9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c9c24a098dfa440a1a37bea58a0e27fb, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: c9c24a098dfa440a1a37bea58a0e27fb, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 1321275184219575338}
 --- !u!222 &6099055981916378231

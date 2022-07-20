@@ -72,6 +72,34 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 8e224144eb2dc9544b9ec03fe0aa330d, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 8ea3c893581a6b142a8caed657015fd0, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: enviroment1-hint-taller-walls
+    ImageToSet: {fileID: 21300000, guid: ffe08bbd8337471478674ae13e044182, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 8e224144eb2dc9544b9ec03fe0aa330d, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 8e224144eb2dc9544b9ec03fe0aa330d, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

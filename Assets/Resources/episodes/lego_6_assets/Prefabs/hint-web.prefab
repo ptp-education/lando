@@ -86,6 +86,48 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 1e028b07bcfb7e64e965a521cf0d215a, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 07b2b9a706b1c5c48bee0f2431ed54c2, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego6-hint-web
+    ImageToSet: {fileID: 21300000, guid: 29ba3b6f69b7d5649bde3df50bc6a2dc, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 9cad748eae6f9f34685ae18601435a5d, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: cb7c6f567b6440445860d6248999ea22, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 1e028b07bcfb7e64e965a521cf0d215a, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 1e028b07bcfb7e64e965a521cf0d215a, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

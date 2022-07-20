@@ -75,23 +75,44 @@ MonoBehaviour:
   - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego7-hint-interlocking
     ImageToSet: {fileID: 21300000, guid: 531c15e371a377344a1161df97379115, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: lego7-hint-interlocking-arm
-    ImageToSet: {fileID: 21300000, guid: 531c15e371a377344a1161df97379115, type: 3}
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5564fdf0d75b5604d9acd8f25d0417fa, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 10
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 050919cfa150959429e330a92f0477e3, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 445bb11d14da7ef479d32f30f21fd76a, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 531c15e371a377344a1161df97379115, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 445bb11d14da7ef479d32f30f21fd76a, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915

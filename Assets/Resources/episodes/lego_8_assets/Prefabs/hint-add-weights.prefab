@@ -86,6 +86,48 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 99e2c091b1f9a734aaadacbe78b3ba67, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: d1fa7331cf37af749acccabe9f7eeb50, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego8-hint-add-weights
+    ImageToSet: {fileID: 21300000, guid: 70c3798ed7a4f4f49ba25cbfddbf6264, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a8dd50c9dd3eca84ab515e632dd5f783, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: c4bd8c7dea6eb474ca98985771ed400c, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 99e2c091b1f9a734aaadacbe78b3ba67, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 99e2c091b1f9a734aaadacbe78b3ba67, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

@@ -86,12 +86,47 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: b81fc94b255014664bb6788f1b1864c6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 7
+  - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: lego1-combine
-    ImageToSet: {fileID: 0}
+    ImageToSet: {fileID: 21300000, guid: 61f479edbae03463a8ff8123544079fb, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: e9f263750b56e4e99aaab20461b222bd, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: e94089d9a181e47f5a532c83042b161b, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 570f616eb78354159a8334c177e97836, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 9
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b81fc94b255014664bb6788f1b1864c6, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b81fc94b255014664bb6788f1b1864c6, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 1321275184219575338}
 --- !u!222 &6099055981916378231

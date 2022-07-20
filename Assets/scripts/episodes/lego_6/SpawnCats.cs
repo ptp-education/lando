@@ -141,6 +141,7 @@ namespace Lando.Class.Lego6
             {
                 int.TryParse(args[1], out currentLevel);
                 CatSafe();
+                AudioPlayer.PlayAudio("audio/sfx/applausetrumpet");
             }
             else if (args.Contains("top") || args.Contains("middle") || args.Contains("bottom"))
             {
@@ -439,6 +440,7 @@ namespace Lando.Class.Lego6
                 waitTime += 6.5f;
             }
             jumpCat_.gameObject.SetActive(true);
+            AudioPlayer.PlayAudio("audio/sfx/shaking-bush");
             Go.to(this, 1f,new GoTweenConfig().onComplete(t => {
                 jumpCat_.gameObject.SetActive(false);
                 crateCat_.gameObject.SetActive(true);

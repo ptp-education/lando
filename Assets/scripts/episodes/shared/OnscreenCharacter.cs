@@ -43,7 +43,7 @@ public class OnscreenCharacter : MonoBehaviour
             return duration;
         }
 
-        InvokeRepeating("ManageBubble", 0, 0.05f);
+        InvokeRepeating("ManageBubble", 0, 0.15f);
         //Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
         //{
         //    voiceBubble_.gameObject.SetActive(false);

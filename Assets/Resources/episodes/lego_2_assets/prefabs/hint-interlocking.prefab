@@ -58,39 +58,60 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: c6c1635d383aad14fbd0f78ba7de8ae6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 1
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: c6c1635d383aad14fbd0f78ba7de8ae6, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 1.5
+  - TimeStamp: 0.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: cd228b91fb6bfde43945efd300e50716, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: fae1ef81aa1ced64da296b2f1c108cf6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2.5
+  - TimeStamp: 1.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 5e1c17f8ec414b04d9d021dae6b601f6, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 3
+  - TimeStamp: 2
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 6d6ff16e0c158784ca75d713c1c7ee1b, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: c6c1635d383aad14fbd0f78ba7de8ae6, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: cd228b91fb6bfde43945efd300e50716, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego-2-hint-interlocking
+    ImageToSet: {fileID: 21300000, guid: fae1ef81aa1ced64da296b2f1c108cf6, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5e1c17f8ec414b04d9d021dae6b601f6, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 4.5
@@ -100,14 +121,7 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 6d6ff16e0c158784ca75d713c1c7ee1b, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6.5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 6d6ff16e0c158784ca75d713c1c7ee1b, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 10
+  - TimeStamp: 5.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

@@ -65,6 +65,48 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 5d7f39e2503e7ef43a74e2164ddbedc0, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a7dee723ffb91144a8ec754540a2a7be, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego6-hint-narrow-tower
+    ImageToSet: {fileID: 21300000, guid: a7dee723ffb91144a8ec754540a2a7be, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5d7f39e2503e7ef43a74e2164ddbedc0, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a7dee723ffb91144a8ec754540a2a7be, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5d7f39e2503e7ef43a74e2164ddbedc0, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5d7f39e2503e7ef43a74e2164ddbedc0, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

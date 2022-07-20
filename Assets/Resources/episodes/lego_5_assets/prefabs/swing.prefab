@@ -744,28 +744,28 @@ MonoBehaviour:
     AnimalSuccess: {fileID: 21300000, guid: f2d3011ce45c449adb3e1d680a192f80, type: 3}
     AnimalIcon: {fileID: 21300000, guid: 0a42da671d43c4a9fbe40ea76b2e95fc, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: 4d3e7bdaf567b4e3c9858381f4f93403, type: 3}
-    Sound: audio/sfx/bubble-pop
+    Sound: audio/sfx/rabbit
   ferret_:
     Animal: {fileID: 21300000, guid: a33acac01143d4faeac14e371547aa87, type: 3}
     AnimalFailure: {fileID: 21300000, guid: 559832d9b2b634aa299715f8fe90a795, type: 3}
     AnimalSuccess: {fileID: 21300000, guid: 310243eb3855e42868f74ba8f07f8d95, type: 3}
     AnimalIcon: {fileID: 21300000, guid: 64a321149b2e54295a9c0847bd1bb474, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: 5ac6eb03bab6548d091f374661b47cf5, type: 3}
-    Sound: audio/sfx/bubble-pop
+    Sound: audio/sfx/squirrel
   deer_:
     Animal: {fileID: 21300000, guid: 8f68dfdb06c544d6e8fd7fe5c3cf167f, type: 3}
     AnimalFailure: {fileID: 21300000, guid: bd4cb908791fb439aa84f9ef4a03090b, type: 3}
     AnimalSuccess: {fileID: 21300000, guid: ded56662ad2de44b183b40c577c3b0a1, type: 3}
     AnimalIcon: {fileID: 21300000, guid: 377f6afd981b647188822bf33c4fd4b6, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: 08114b5d7c70d448dab599fc3e2b3981, type: 3}
-    Sound: audio/sfx/bubble-pop
+    Sound: audio/sfx/deer
   zebra_:
     Animal: {fileID: 21300000, guid: 26c79ebd3f1134ee5b15e929a42a3757, type: 3}
     AnimalFailure: {fileID: 21300000, guid: fde6705b4edea4e11abd5d7e55ec0fc1, type: 3}
     AnimalSuccess: {fileID: 21300000, guid: c9c06a6d82f63400e80911608eac6176, type: 3}
     AnimalIcon: {fileID: 21300000, guid: e80950e581a8841c88175bb34499ba62, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: 2ce300fb231ba4f949034d2db03a142e, type: 3}
-    Sound: audio/sfx/bubble-pop
+    Sound: audio/sfx/zebra
   seal_:
     Animal: {fileID: 21300000, guid: d375f40e318d3402c9fcece64589bed3, type: 3}
     AnimalFailure: {fileID: 21300000, guid: c7ea3867a329e4c33bf0b1df53a4bbdc, type: 3}
@@ -786,14 +786,14 @@ MonoBehaviour:
     AnimalSuccess: {fileID: 21300000, guid: 3eedc3e8dced54d8c9b1cc18763be937, type: 3}
     AnimalIcon: {fileID: 21300000, guid: 6aaa81f8927214649b8adde2fd5f0568, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: 0027df0bd735c4ce3ab4e6aa0ffb86c5, type: 3}
-    Sound: audio/sfx/bubble-pop
+    Sound: audio/sfx/giraffe
   hippo_:
     Animal: {fileID: 21300000, guid: a755a0ccd1f57432a86f5de8ab8b7e48, type: 3}
     AnimalFailure: {fileID: 21300000, guid: 4a35696ba13c64169b807ded88f33ddd, type: 3}
     AnimalSuccess: {fileID: 21300000, guid: c82874765844c4f318e14fa4d998631f, type: 3}
     AnimalIcon: {fileID: 21300000, guid: c50712f2038c54241b5bcf3a0a18f83b, type: 3}
     AnimalWaiting: {fileID: 21300000, guid: f29e17cd1aed748fc879fcb3d44877d8, type: 3}
-    Sound: audio/sfx/bubble-pop
+    Sound: audio/sfx/hippo
   dino1_:
     Animal: {fileID: 21300000, guid: b82033c09e5b34f78a31a1229c66841d, type: 3}
     AnimalFailure: {fileID: 21300000, guid: 8ed30521e495544c1abf838ed6879865, type: 3}

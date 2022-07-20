@@ -72,14 +72,28 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 81bef25663e142341adca97d385bd42c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
     PrintFile: lego3-hint-another-pier
+    ImageToSet: {fileID: 21300000, guid: 66e2e9c34c1408f418e9c8db9f86af29, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 7ca0e505db5b0584087092d21d0333b9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 81bef25663e142341adca97d385bd42c, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 10
+  - TimeStamp: 6
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

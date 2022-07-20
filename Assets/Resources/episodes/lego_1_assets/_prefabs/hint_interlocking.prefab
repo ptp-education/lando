@@ -53,24 +53,66 @@ MonoBehaviour:
   events_:
   - TimeStamp: 0
     VoiceoverFile: hint-interlocking
-    CommandLine: -character talk hint-interlocking
+    CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: a97c3a91ce24447c6bdd3b68fa0826e9, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 2
+  - TimeStamp: 1
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
     ImageToSet: {fileID: 21300000, guid: fb5e02ae720a24ad8aeead77b7f8dfd7, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a97c3a91ce24447c6bdd3b68fa0826e9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: fb5e02ae720a24ad8aeead77b7f8dfd7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a97c3a91ce24447c6bdd3b68fa0826e9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
   - TimeStamp: 5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: lego1-interlocking
-    ImageToSet: {fileID: 0}
+    ImageToSet: {fileID: 21300000, guid: fb5e02ae720a24ad8aeead77b7f8dfd7, type: 3}
     SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a97c3a91ce24447c6bdd3b68fa0826e9, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: fb5e02ae720a24ad8aeead77b7f8dfd7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: fb5e02ae720a24ad8aeead77b7f8dfd7, type: 3}
+    SelfDestruct: 1
     Ran: 0
   image_: {fileID: 1321275184219575338}
 --- !u!222 &6099055981916378231

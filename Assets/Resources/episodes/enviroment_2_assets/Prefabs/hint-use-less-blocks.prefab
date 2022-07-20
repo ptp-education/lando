@@ -65,6 +65,69 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 0b1b64f384f0d19409f6ce93c1ce1044, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a8ff2d7ccf12c5b4ab3e1438f50913cf, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 0b1b64f384f0d19409f6ce93c1ce1044, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a8ff2d7ccf12c5b4ab3e1438f50913cf, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 0b1b64f384f0d19409f6ce93c1ce1044, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a8ff2d7ccf12c5b4ab3e1438f50913cf, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: enviroment2-hint-use-less-blocks
+    ImageToSet: {fileID: 21300000, guid: 0b1b64f384f0d19409f6ce93c1ce1044, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: a8ff2d7ccf12c5b4ab3e1438f50913cf, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 9
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 0b1b64f384f0d19409f6ce93c1ce1044, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 10
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 0b1b64f384f0d19409f6ce93c1ce1044, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

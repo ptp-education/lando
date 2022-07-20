@@ -79,6 +79,41 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 1e092727bac699c48a951cb2567803e7, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 2
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: b5fec6322c0500846864850238b91058, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 2.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: lego6-hint-angled-blocks
+    ImageToSet: {fileID: 21300000, guid: 61e3761701b5cb44e94f058eac434b15, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 0352572b98805654ea44a08128a32c14, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 1e092727bac699c48a951cb2567803e7, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 1e092727bac699c48a951cb2567803e7, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:

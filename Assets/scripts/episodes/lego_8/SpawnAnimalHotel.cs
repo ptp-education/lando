@@ -184,6 +184,7 @@ namespace Lando.Class.Lego8
                     hotel_.Remove(hotel_[randomRight_]);
                     break;
             }
+            AudioPlayer.PlayAudio("audio/sfx/shaking-bush");
             AudioPlayer.PlayAudio("audio/sfx/customization-selection");
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
                 //successBackground_.SetActive(false);

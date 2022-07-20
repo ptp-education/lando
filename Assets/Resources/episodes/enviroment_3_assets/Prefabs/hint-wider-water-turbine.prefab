@@ -79,6 +79,41 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 23f3dad99b796734ba3d774e13d2d4f8, type: 3}
     SelfDestruct: 0
     Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: enviroment3-hint-wider-water-turbine
+    ImageToSet: {fileID: 21300000, guid: 5e25d8231fa512441a4ab537d3c9ab2b, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 6c8593e9ab13200428cca0ef267d7e09, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: bb9f221eca137a34abae0a5db8387564, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 23f3dad99b796734ba3d774e13d2d4f8, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 8
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 23f3dad99b796734ba3d774e13d2d4f8, type: 3}
+    SelfDestruct: 1
+    Ran: 0
   image_: {fileID: 759647174285219434}
 --- !u!222 &364074704597059915
 CanvasRenderer:
