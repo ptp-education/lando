@@ -9,6 +9,8 @@ public class EventObject : MonoBehaviour
     [SerializeField] private List<Event> events_ = new List<Event>();
     [SerializeField] private Image image_;
 
+    private const float kTimeout = 5f;
+
     [System.Serializable]
     public class Event
     {
@@ -90,7 +92,7 @@ public class EventObject : MonoBehaviour
                 if (timer_ >= e.TimeStamp)
                 {
                     //we should complete destruct the hint at least 5 seconds after the last event
-                    lastVoiceoverCompleteTime_ = Mathf.Max(lastVoiceoverCompleteTime_, timer_ + 5f);
+                    lastVoiceoverCompleteTime_ = Mathf.Max(lastVoiceoverCompleteTime_, timer_ + kTimeout);
 
                     if (e.VoiceoverFile != null && e.VoiceoverFile.Length > 0)
                     {
