@@ -89,14 +89,14 @@ MonoBehaviour:
   - TimeStamp: 2.5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: lego6-hint-supports
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: c714352244c6107409035fb9f21336e6, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego6-hint-supports
     ImageToSet: {fileID: 21300000, guid: f15ae88a7e4510f4ebed274d2974c9b3, type: 3}
     SelfDestruct: 0
     Ran: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: e2160f88c9f46b44596a3f995ed09f70, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 7.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

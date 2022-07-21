@@ -96,14 +96,14 @@ MonoBehaviour:
   - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: lego-2-combine-your-bridges
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 51b522bedd8b68d4fb875adf0535032c, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego-2-combine-your-bridges
     ImageToSet: {fileID: 21300000, guid: 1bca00972957b734c82de53f1e428ba6, type: 3}
     SelfDestruct: 0
     Ran: 0
@@ -111,24 +111,17 @@ MonoBehaviour:
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 00f617be727f65a41b24adda790d21aa, type: 3}
+    ImageToSet: {fileID: 21300000, guid: 03979576fc20b3141bf17057419c9bda, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 4.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
-    ImageToSet: {fileID: 21300000, guid: 03979576fc20b3141bf17057419c9bda, type: 3}
-    SelfDestruct: 0
-    Ran: 0
-  - TimeStamp: 5
-    VoiceoverFile: 
-    CommandLine: 
-    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 00f617be727f65a41b24adda790d21aa, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 6
+  - TimeStamp: 7.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

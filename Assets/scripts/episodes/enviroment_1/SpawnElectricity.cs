@@ -9,15 +9,12 @@ public class SpawnElectricity : SpawnedObject
 {
     [SerializeField] private Image meter_;
 
-    [SerializeField] private Sprite zoneBackground1_;
-    [SerializeField] private Sprite zoneBackground2_;
-    [SerializeField] private Sprite zoneBackground3_;
-    [SerializeField] private Sprite zoneBackground4_;
-    [SerializeField] private Sprite zoneBackground5_;
+    [SerializeField] private Image zoneBackground1_;
+    [SerializeField] private Image zoneBackground2_;
+    [SerializeField] private Image zoneBackground3_;
+    [SerializeField] private Image zoneBackground4_;
 
-    [SerializeField] private Image zoneBackground_;
-
-    private float voltage = 0;
+    public float voltage = 0;
     private float totalVoltage;
     private int currentLevel = 0;
     private int currentZone = 0;
@@ -115,23 +112,22 @@ public class SpawnElectricity : SpawnedObject
         {
             case 0:
                 totalVoltage = 15000;
-                zoneBackground_.sprite = zoneBackground1_;
                 break;
             case 1:
                 totalVoltage = 30000;
-                zoneBackground_.sprite = zoneBackground2_;
+                zoneBackground1_.color = Color.white;
                 break;
             case 2:
                 totalVoltage = 45000;
-                zoneBackground_.sprite = zoneBackground3_;
+                zoneBackground2_.color = Color.white;
                 break;
             case 3:
                 totalVoltage = 60000;
-                zoneBackground_.sprite = zoneBackground4_;
+                zoneBackground3_.color = Color.white;
                 break;
             case 4:
                 totalVoltage = 75000;
-                zoneBackground_.sprite = zoneBackground5_;
+                zoneBackground4_.color = Color.white;
                 break;
         }
     }

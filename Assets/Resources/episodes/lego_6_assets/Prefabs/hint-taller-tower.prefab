@@ -75,7 +75,7 @@ MonoBehaviour:
   - TimeStamp: 1.5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: lego6-hint-taller-tower
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 637e0ad957839dc42885701207228549, type: 3}
     SelfDestruct: 0
     Ran: 0
@@ -89,11 +89,32 @@ MonoBehaviour:
   - TimeStamp: 2.5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego6-hint-taller-tower
     ImageToSet: {fileID: 21300000, guid: ebe41ecc5f2319241b0ffbe8c1a2c1f0, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 3
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 637e0ad957839dc42885701207228549, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 3.5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 5e6080898d47df742a42520969e46198, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 4
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: ebe41ecc5f2319241b0ffbe8c1a2c1f0, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

@@ -96,14 +96,14 @@ MonoBehaviour:
   - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: lego8-hint-wider-legs
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: 411faac1ff2090b41b0b1c31ed0d5a37, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego8-hint-wider-legs
     ImageToSet: {fileID: 21300000, guid: 57fd47524f43dba45a1d1829bbb23d0e, type: 3}
     SelfDestruct: 0
     Ran: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: 411faac1ff2090b41b0b1c31ed0d5a37, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 7
+  - TimeStamp: 9.5
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 

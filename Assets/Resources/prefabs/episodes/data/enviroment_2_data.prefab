@@ -49,30 +49,33 @@ MonoBehaviour:
   - use-string
   Challenges:
   - Name: Level1-small-plastic
-    Sprite: {fileID: 21300000, guid: e0b57deb025b8864b9e69007c55e6da4, type: 3}
+    Sprite: {fileID: 21300000, guid: 2098438f616043447ac1f286c3835a3f, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e -cat-failure
     RewardCommand: -alien success 0 {0} -game-success
+    OnScanCommand: 
     RequirementsVO: challenge-1
     NextChallengeVO: next-challenge-1
   - Name: Level2-medium-plastic
-    Sprite: {fileID: 21300000, guid: a7c381e5385861d4e9ab0ab4bd365acc, type: 3}
+    Sprite: {fileID: 21300000, guid: b877b7fa9dea3b241b168eced3e65d9f, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success -alien success 1 {0}
+    OnScanCommand: 
     RequirementsVO: challenge-2
     NextChallengeVO: next-challenge-2
   - Name: Level3-large-plastic
-    Sprite: {fileID: 21300000, guid: 0b6d2497a780da34cb460cf31f8e4329, type: 3}
+    Sprite: {fileID: 21300000, guid: 826d446ebecd7b64e9030b7d1cefdfde, type: 3}
     ResourceRewards: 
     HintRewards: []
     FailCommand: -sfx "audio/sfx/wall-crash" -swing crash -character talk home-crash-0a
       home-crash-0b home-crash-0e
     RewardCommand: -game-success -alien success 2 {0}
+    OnScanCommand: 
     RequirementsVO: challenge-3
     NextChallengeVO: next-challenge-3
   Hints:

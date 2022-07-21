@@ -79,10 +79,31 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: d82911fc4f3ed284d983cd32e72e850f, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 4
     VoiceoverFile: 
     CommandLine: 
     PrintFile: lego5-hint-arch
+    ImageToSet: {fileID: 21300000, guid: 88fc998b209ff3a4498cadf5acc4f581, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 5
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: c488f2eb1c5800149918c077e4185606, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 6
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
+    ImageToSet: {fileID: 21300000, guid: 60b13b42d8ddec343980d92ed5d9f5cb, type: 3}
+    SelfDestruct: 0
+    Ran: 0
+  - TimeStamp: 7
+    VoiceoverFile: 
+    CommandLine: 
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: d82911fc4f3ed284d983cd32e72e850f, type: 3}
     SelfDestruct: 0
     Ran: 0

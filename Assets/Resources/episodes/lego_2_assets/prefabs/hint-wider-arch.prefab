@@ -96,14 +96,14 @@ MonoBehaviour:
   - TimeStamp: 3
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: lego-2-wider-arch
+    PrintFile: 
     ImageToSet: {fileID: 21300000, guid: d8f1ca282ddb8654db7b91eb17381732, type: 3}
     SelfDestruct: 0
     Ran: 0
   - TimeStamp: 3.5
     VoiceoverFile: 
     CommandLine: 
-    PrintFile: 
+    PrintFile: lego-2-wider-arch
     ImageToSet: {fileID: 21300000, guid: 46006db2d21a7dd4797f48b91ff403ad, type: 3}
     SelfDestruct: 0
     Ran: 0
@@ -114,7 +114,7 @@ MonoBehaviour:
     ImageToSet: {fileID: 21300000, guid: b5a1b984005fb4b4d8741c794cd17c06, type: 3}
     SelfDestruct: 0
     Ran: 0
-  - TimeStamp: 5
+  - TimeStamp: 7
     VoiceoverFile: 
     CommandLine: 
     PrintFile: 
