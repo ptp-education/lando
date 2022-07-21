@@ -22,7 +22,7 @@ public class SpawnTurbine : SpawnedObject
     [SerializeField] private Transform electricMeter_;
     [SerializeField] private List<Vector2> zonePositions_;
 
-    private float currentVoltage;
+    public float currentVoltage;
     private float totalVoltage;
 
     private int currentLevel_;
@@ -42,7 +42,7 @@ public class SpawnTurbine : SpawnedObject
 
         int.TryParse(args_[1], out currentLevel_);
 
-        if (args_.Contains("success")) 
+        if (ArgumentHelper.ContainsCommand("success", action)) 
         {
             gameManager_.SendNewActionInternal("-update-options empty");
             FIllVoltage();
@@ -99,17 +99,17 @@ public class SpawnTurbine : SpawnedObject
             case 0:
                 //Zoom in
                 AudioPlayer.PlayAudio("audio/sfx/whoosh");
-                zone1_.background_.sprite = zone1_.upgradedBackground_;
+                
                 GoTweenFlow zone1Flow = new GoTweenFlow();
                 zone1Flow.insert(0f, new GoTween(this.transform, 0.5f, new GoTweenConfig().scale(1.7f)));
                 zone1Flow.insert(0f, new GoTween(this.transform.GetComponent<RectTransform>(), 0.5f, new GoTweenConfig().anchoredPosition(zonePositions_[0])));
                 zone1Flow.insert(0f, new GoTween(electricMeter_, 1f, new GoTweenConfig().scale(new Vector3(1, 0, 1))));
-                zone1Flow.insert(0.5f, new GoTween(zone1_.buildings_[0].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone1Flow.insert(.65f, new GoTween(zone1_.buildings_[1].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone1Flow.insert(.80f, new GoTween(zone1_.buildings_[2].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone1Flow.insert(.95f, new GoTween(zone1_.buildings_[3].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone1Flow.insert(1.1f, new GoTween(zone1_.buildings_[4].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone1Flow.insert(1.25f, new GoTween(zone1_.buildings_[5].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+
+                zone1Flow.insert(1f, new GoTween(zone1_.buildings_[0].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone1Flow.insert(1.5f, new GoTween(zone1_.buildings_[1].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { 
+                    AudioPlayer.PlayAudio("audio/sfx/pop");
+                    zone1_.background_.sprite = zone1_.upgradedBackground_;
+                })));
                 zone1Flow.play();
 
                 AudioPlayer.PlayAudio("audio/sfx/cheer");
@@ -127,16 +127,15 @@ public class SpawnTurbine : SpawnedObject
                 break;
             case 1:
                 AudioPlayer.PlayAudio("audio/sfx/whoosh");
-                zone2_.background_.sprite = zone2_.upgradedBackground_;
                 GoTweenFlow zone2Flow = new GoTweenFlow();
                 zone2Flow.insert(0f, new GoTween(this.transform, 0.5f, new GoTweenConfig().scale(1.7f)));
                 zone2Flow.insert(0f, new GoTween(this.transform.GetComponent<RectTransform>(), 0.5f, new GoTweenConfig().anchoredPosition(zonePositions_[1])));
                     
-                zone2Flow.insert(0.5f, new GoTween(zone2_.buildings_[0].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone2Flow.insert(.65f, new GoTween(zone2_.buildings_[1].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone2Flow.insert(.80f, new GoTween(zone2_.buildings_[2].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone2Flow.insert(.95f, new GoTween(zone2_.buildings_[3].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone2Flow.insert(1.1f, new GoTween(zone2_.buildings_[4].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone2Flow.insert(1f, new GoTween(zone2_.buildings_[0].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone2Flow.insert(1.5f, new GoTween(zone2_.buildings_[1].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { 
+                    AudioPlayer.PlayAudio("audio/sfx/pop");
+                    zone2_.background_.sprite = zone2_.upgradedBackground_;
+                })));
                 zone2Flow.insert(0f, new GoTween(electricMeter_, 1f, new GoTweenConfig().scale(new Vector3(1, 0, 1))));
                 zone2Flow.play();
 
@@ -155,14 +154,15 @@ public class SpawnTurbine : SpawnedObject
                 break;
             case 2:
                 AudioPlayer.PlayAudio("audio/sfx/whoosh");
-                zone3_.background_.sprite = zone3_.upgradedBackground_;
                 GoTweenFlow zone3Flow = new GoTweenFlow();
                 zone3Flow.insert(0f, new GoTween(this.transform, 0.5f, new GoTweenConfig().scale(1.7f)));
                 zone3Flow.insert(0f, new GoTween(this.transform.GetComponent<RectTransform>(), 0.5f, new GoTweenConfig().anchoredPosition(zonePositions_[2])));
                     
-                zone3Flow.insert(0.5f, new GoTween(zone3_.buildings_[0].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone3Flow.insert(.65f, new GoTween(zone3_.buildings_[1].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone3Flow.insert(.80f, new GoTween(zone3_.buildings_[2].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone3Flow.insert(1f, new GoTween(zone3_.buildings_[0].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone3Flow.insert(1.5f, new GoTween(zone3_.buildings_[1].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { 
+                    AudioPlayer.PlayAudio("audio/sfx/pop");
+                    zone3_.background_.sprite = zone3_.upgradedBackground_;
+                })));
                 zone3Flow.insert(0f, new GoTween(electricMeter_, 1f, new GoTweenConfig().scale(new Vector3(1, 0, 1))));
                 zone3Flow.play();
 
@@ -181,16 +181,15 @@ public class SpawnTurbine : SpawnedObject
                 break;
             case 3:
                 AudioPlayer.PlayAudio("audio/sfx/whoosh");
-                zone4_.background_.sprite = zone4_.upgradedBackground_;
                 GoTweenFlow zone4Flow = new GoTweenFlow();
                 zone4Flow.insert(0f, new GoTween(this.transform, 0.5f, new GoTweenConfig().scale(1.7f)));
                 zone4Flow.insert(0f, new GoTween(this.transform.GetComponent<RectTransform>(), 0.5f, new GoTweenConfig().anchoredPosition(zonePositions_[3])));
                     
-                zone4Flow.insert(0.5f, new GoTween(zone4_.buildings_[0].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone4Flow.insert(.65f, new GoTween(zone4_.buildings_[1].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone4Flow.insert(.80f, new GoTween(zone4_.buildings_[2].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone4Flow.insert(.95f, new GoTween(zone4_.buildings_[3].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
-                zone4Flow.insert(1.1f, new GoTween(zone4_.buildings_[4].transform, 0.15f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone4Flow.insert(1f, new GoTween(zone4_.buildings_[0].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { AudioPlayer.PlayAudio("audio/sfx/pop"); })));
+                zone4Flow.insert(1.5f, new GoTween(zone4_.buildings_[1].transform, 0.5f, new GoTweenConfig().scale(1).onComplete(t => { 
+                    AudioPlayer.PlayAudio("audio/sfx/pop");
+                    zone4_.background_.sprite = zone4_.upgradedBackground_;
+                })));
                 zone4Flow.play();
 
                 AudioPlayer.PlayAudio("audio/sfx/cheer");
