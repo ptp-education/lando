@@ -300,9 +300,9 @@ public class SpawnedMomo : SpawnedObject
                 yield return new WaitForSeconds(1);
                 RewardSequence();
             }
-            else
+            if (commandType_.Contains("show"))
             {
-                HandleCustomizeSelection(commandType_);
+                ShowMomoOnScreen();
             }
         }
         else {
@@ -786,8 +786,6 @@ public class SpawnedMomo : SpawnedObject
         else if (LevelOfMomo(rfid) == 3) {
             customizeTeen_.TurnOffCustomizations();
             customizeAdult_.TurnOffCustomizations();
-            Debug.LogWarning(teenCustomization);
-            Debug.LogWarning(adultCustomization);
             switch (teenCustomization)
             {
                 case kAntenna:
@@ -863,9 +861,6 @@ public class SpawnedMomo : SpawnedObject
         //Senior Customization
         if (seniorCustomization != null && seniorCustomization.Length > 0)
         {
-            Debug.LogWarning(seniorCustomization);
-            Debug.LogWarning(adultCustomization);
-            Debug.LogWarning(teenCustomization);
             neutral_.nose_.gameObject.SetActive(false);
             neutral_.claws_.gameObject.SetActive(false);
             neutral_.wings_.gameObject.SetActive(false);
@@ -1067,7 +1062,6 @@ public class SpawnedMomo : SpawnedObject
         //Adult customization
         if (adultCustomization != null && adultCustomization.Length > 0)
         {
-            Debug.LogWarning(adultCustomization);
             neutral_.whiskers_.gameObject.SetActive(false);
             success_.whiskers_.gameObject.SetActive(false);
             failure_.whiskers_.gameObject.SetActive(false);
@@ -1223,7 +1217,6 @@ public class SpawnedMomo : SpawnedObject
         //Teen customization
         if (teenCustomization != null && teenCustomization.Length > 0)
         {
-            Debug.LogWarning("teen");
             neutral_.antenna_.gameObject.SetActive(false);
             success_.antenna_.gameObject.SetActive(false);
             failure_.antenna_.gameObject.SetActive(false);
