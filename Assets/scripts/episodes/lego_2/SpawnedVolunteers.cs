@@ -19,12 +19,10 @@ namespace Lando.Class.Lego2
                 {
                     GameObject volunteer = v;
                     float timeCopy = time;
-                    Debug.LogWarning(timeCopy.ToString());
                     flow.insert(time, new GoTween(this, 0.1f, new GoTweenConfig().onComplete(t =>
                     {
                         v.gameObject.SetActive(true);
                         AudioPlayer.PlayAudio("audio/sfx/bubble-pop");
-                        Debug.LogWarning(timeCopy.ToString());
                     })));
 
                     time += 0.25f;

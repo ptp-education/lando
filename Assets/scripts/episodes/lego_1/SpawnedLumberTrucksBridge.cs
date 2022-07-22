@@ -52,7 +52,7 @@ public class SpawnedLumberTrucksBridge : SpawnedObject
         }
         flow.insert(time + 1f, new GoTween(transform, 0.5f, new GoTweenConfig().onComplete(t =>
         {
-            Debug.Log("rewards finished");
+            //Reward Finished
         })));
         flow.play();
     }
