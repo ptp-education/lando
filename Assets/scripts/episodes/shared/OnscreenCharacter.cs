@@ -61,15 +61,17 @@ public class OnscreenCharacter : MonoBehaviour
         {
             float[] spectrum = new float[64];
             AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-            if (spectrum[0] - 10 >= -9.999974)
-            {
-                changeVolumeTiming += Time.deltaTime;
-            }
-            else 
+           
+            if (spectrum[10] - 10 <= -9.999999)
             {
                 changeVolumeTiming = 0;
             }
-            HandleSpeaking(changeVolumeTiming >= 0.2f);
+            else 
+            {
+                changeVolumeTiming += Time.deltaTime;
+            }
+            //This value can be changed to reactivate the bubble
+            HandleSpeaking(changeVolumeTiming >= 0.15f);
         }
     }
 
