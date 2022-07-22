@@ -61,7 +61,15 @@ public class OnscreenCharacter : MonoBehaviour
         {
             float[] spectrum = new float[64];
             AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-            HandleSpeaking(spectrum[0] - 10 > -9.999974);
+            if (spectrum[0] - 10 >= -9.999974)
+            {
+                changeVolumeTiming += Time.deltaTime;
+            }
+            else 
+            {
+                changeVolumeTiming = 0;
+            }
+            HandleSpeaking(changeVolumeTiming >= 0.2f);
         }
     }
 
