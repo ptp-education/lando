@@ -289,7 +289,6 @@ public class SpawnedMomo : SpawnedObject
     }
 
     private IEnumerator DisplayMomo() {
-
         if (LevelOfMomo(nfcId_) > 1)
         {
             if (commandType_.Contains("success"))
@@ -300,9 +299,9 @@ public class SpawnedMomo : SpawnedObject
                 yield return new WaitForSeconds(1);
                 RewardSequence();
             }
-            if (commandType_.Contains("show"))
+            else
             {
-                ShowMomoOnScreen();
+                HandleCustomizeSelection(commandType_);
             }
         }
         else {
