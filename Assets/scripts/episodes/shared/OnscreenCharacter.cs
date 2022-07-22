@@ -16,6 +16,8 @@ public class OnscreenCharacter : MonoBehaviour
 
     private GameManager gameManager_;
 
+    private float changeVolumeTiming = 0f;
+
     public void Init(GameManager gm)
     {
         gameManager_ = gm;
@@ -43,7 +45,6 @@ public class OnscreenCharacter : MonoBehaviour
             return duration;
         }
 
-        InvokeRepeating("ManageBubble", 0, 0.15f);
         //Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
         //{
         //    voiceBubble_.gameObject.SetActive(false);
@@ -52,7 +53,7 @@ public class OnscreenCharacter : MonoBehaviour
         return duration;
     }
 
-    private void ManageBubble() 
+    private void Update() 
     {
         if (AudioPlayer.GetAudioSourcePlaying() != null)
         {
@@ -60,11 +61,21 @@ public class OnscreenCharacter : MonoBehaviour
             AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
             if (spectrum[0] - 10 <= -9.999974)
             {
-                voiceBubble_.gameObject.SetActive(false);
+                changeVolumeTiming += Time.deltaTime;
             }
             else
             {
-                voiceBubble_.gameObject.SetActive(true);
+                changeVolumeTiming = 0;
+            }
+
+            if (changeVolumeTiming >= 0.3f)
+            {
+                //Event with bubble
+                voiceBubble_.SetActive(false);
+            }
+            else 
+            {
+                voiceBubble_.SetActive(true);
             }
         }
     }
