@@ -151,7 +151,7 @@ public class CommandDispatch
     {
         LevelData.Challenge c = gameManager_.CurrentChallengeForUserId(id);
 
-        gameManager_.SendNewActionInternal(c.OnScanCommand);
+        gameManager_.SendNewActionInternal(string.Format(c.OnScanCommand, id));
 
         gameManager_.SendNewActionNetworked(string.Format("-station {0} load {1}", station, c.Name));
         gameManager_.SendNewActionNetworked(string.Format("-validator-controller {0} load {1}", station, c.Name));

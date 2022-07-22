@@ -54,7 +54,7 @@ MonoBehaviour:
   Characters:
   - TalkingPosition: {x: -400, y: -92, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
+    SelectedCharacter: 1
   Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
   VideoFilePath: Lego 1 - v3/P1-1.mp4
   VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}

@@ -20,7 +20,8 @@ public class EpisodeNode : MonoBehaviour
     {
         public enum Option
         {
-            Didi
+            Didi,
+            Kiki
         }
         [SerializeField] public Vector3 TalkingPosition;
         [SerializeField] public Vector3 Scale;

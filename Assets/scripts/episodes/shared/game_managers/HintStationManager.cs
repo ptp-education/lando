@@ -42,15 +42,15 @@ public class HintStationManager : StationManager
         }
     }
 
-    protected override void NewNodeEventInternal(EpisodeNode n)
-    {
-        base.NewNodeEventInternal(n);
+    //protected override void NewNodeEventInternal(EpisodeNode n)
+    //{
+    //    base.NewNodeEventInternal(n);
 
-        if (IsStationActive)
-        {
-            ShowAllHints();
-        }
-    }
+    //    if (IsStationActive)
+    //    {
+    //        ShowAllHints();
+    //    }
+    //}
 
     private void HandleNoHints()
     {
@@ -159,8 +159,8 @@ public class HintStationManager : StationManager
 
     public void OnHintComplete()
     {
-        ShowAllHints();
-        //SendNewActionNetworked(string.Format("-refresh-station {0} {1}", activeId_, StationName));
+        //ShowAllHints();
+        SendNewActionNetworked(string.Format("-refresh-station {0} {1}", activeId_, StationName));
     }
 
     protected override void Reset()

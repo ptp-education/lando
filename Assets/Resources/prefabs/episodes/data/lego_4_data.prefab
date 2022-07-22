@@ -65,7 +65,7 @@ MonoBehaviour:
     - ceiling
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    OnScanCommand: 
+    OnScanCommand: -momo show {0}
     RequirementsVO: testing-announce-200
     NextChallengeVO: testing-next-announce-200
   - Name: 500g
@@ -76,7 +76,7 @@ MonoBehaviour:
     - short-supports
     FailCommand: -momo failure -character talk home-crash-0e home-crash-0f home-crash-0g
     RewardCommand: -game-success
-    OnScanCommand: 
+    OnScanCommand: -momo show {0}
     RequirementsVO: testing-announce-500
     NextChallengeVO: testing-next-announce-500
   - Name: 800g
