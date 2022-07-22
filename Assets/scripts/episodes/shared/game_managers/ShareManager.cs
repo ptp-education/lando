@@ -530,38 +530,11 @@ public class ShareManager : GameManager
             case "delayed-talk":
                 characters.ForEach(c => c.DelayedTalk(args[1], args.GetRange(2, args.Count - 2), episode_.VORoot));
                 break;
-            case "hints-out":
-                characters.ForEach(c => c.OutOfHints());
-                break;
-            case "scan-card":
-                characters.ForEach(c => c.ScanCard());
-                break;
-            case "exclaim":
-                characters.ForEach(c => c.Exclaim());
-                break;
-            case "suggest-printer":
-                characters.ForEach(c => c.SuggestPrinter());
-                break;
-            case "prompt-hint":
-                characters.ForEach(c => c.PromptHint());
-                break;
             case "talk":
                 characters.ForEach(c => c.Talk(args.GetRange(1, args.Count - 1), episode_.VORoot));
                 break;
             case "progression-talk":
                 characters.ForEach(c => c.ProgressionTalk(args[1], episode_.VORoot));
-                break;
-            case "cheer":
-                characters.ForEach(c => c.Cheer(args.GetRange(1, args.Count - 1), episode_.VORoot));
-                break;
-            case "wave":
-                characters.ForEach(c => c.Wave());
-                break;
-            case "phone":
-                characters.ForEach(c => c.Phone());
-                break;
-            case "idle":
-                characters.ForEach(c => c.Idle());
                 break;
         }
     }

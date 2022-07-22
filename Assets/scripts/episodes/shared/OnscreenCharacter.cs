@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class OnscreenCharacter : MonoBehaviour
 {
-    [SerializeField] private GameObject voiceBubble_;
     [SerializeField] private GameObject thoughtBubble_;
-    [SerializeField] private Animator anim_;
-    [SerializeField] private float speed_ = 250f;
 
     private static string kSharedVoRoot = "audio/shared_vo/";
-
-    private bool firstWave_ = true;
-    private GoTweenFlow walkFlow_;
 
     private GameManager gameManager_;
 
     public void Init(GameManager gm)
     {
         gameManager_ = gm;
+    }
+
+    protected virtual void HandleSpeaking(bool isSpeaking)
+    {
+        if (thoughtBubble_ != null)
+        {
+            thoughtBubble_.gameObject.SetActive(isSpeaking);
+        }
     }
 
     public float Talk(string audio, string root)
@@ -58,80 +60,8 @@ public class OnscreenCharacter : MonoBehaviour
         {
             float[] spectrum = new float[64];
             AudioPlayer.GetAudioSourcePlaying().GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
-            if (spectrum[0] - 10 <= -9.999974)
-            {
-                voiceBubble_.gameObject.SetActive(false);
-            }
-            else
-            {
-                voiceBubble_.gameObject.SetActive(true);
-            }
+            HandleSpeaking(spectrum[0] - 10 > -9.999974);
         }
-    }
-
-    public void ScanCard()
-    {
-        List<string> files = new List<string>();
-        for (int i = 1; i <= 12; i++)
-        {
-            files.Add("testing-scan-card-" + i.ToString());
-        }
-        Talk(files, kSharedVoRoot);
-    }
-
-    public void OutOfHints()
-    {
-        List<string> files = new List<string>();
-        for (int i = 1; i <= 6; i++)
-        {
-            files.Add("hints-out-" + i.ToString());
-        }
-        Talk(files, kSharedVoRoot);
-    }
-
-    public void Exclaim()
-    {
-        List<string> files = new List<string>();
-        for (int i = 1; i <= 24; i++)
-        {
-            files.Add("testing-exclaim-" + i.ToString());
-        }
-
-        anim_.Play("didi-cheer");
-        Talk(files, kSharedVoRoot);
-    }
-
-    public void PromptHint()
-    {
-        List<string> files = new List<string>();
-        for (int i = 1; i <= 9; i++)
-        {
-            files.Add("hint-prompt-" + i.ToString());
-        }
-        Talk(files, kSharedVoRoot);
-    }
-
-    public void SuggestPrinter()
-    {
-        List<string> files = new List<string>();
-        for (int i = 1; i <= 11; i++)
-        {
-            files.Add("testing-offer-hint-" + i.ToString());
-        }
-
-        float duration = Talk(files, kSharedVoRoot);
-
-        thoughtBubble_.SetActive(true);
-
-        Go.to(transform, duration, new GoTweenConfig().onComplete(t =>
-        {
-            thoughtBubble_.gameObject.SetActive(false);
-        }));
-    }
-
-    public void HideMagicPrinter()
-    {
-        thoughtBubble_.SetActive(false);
     }
 
     public void DelayedTalk(string delay, List<string> audio, string root)
@@ -141,14 +71,6 @@ public class OnscreenCharacter : MonoBehaviour
         {
             Talk(audio, root);
         }));
-    }
-
-    public void Cheer(List<string> audio, string root)
-    {
-        if (Talk(audio, root) > 0f)
-        {
-            anim_.Play("didi-cheer");
-        }
     }
 
     public float TalkAndPrint(List<string> audio, string print, string root)
@@ -215,58 +137,5 @@ public class OnscreenCharacter : MonoBehaviour
             }
         }
         return -1f;
-    }
-
-    public void Wave()
-    {
-        anim_.Play("didi-wave");
-        AudioPlayer.PlayAudio("audio/sfx/wave");
-
-        if (firstWave_)
-        {
-            firstWave_ = false;
-            return;
-        }
-
-        if (Random.Range(1, 100) > 40)
-        {
-            Go.to(transform, 0.3f, new GoTweenConfig().onComplete(t =>
-            {
-                List<string> hiFiles = new List<string> { "hi-a", "hi-b", "hi-b", "hi-e", "hi-e,", "hi-h", "hi-h", "hi-h", "hi-i", "hi-j", "hi-k", "hi-l", "hi-m", "hi-n", "hi-o", "hi-p", "hi-p", "hi-n", "hi-j", "hi-k" };
-                AudioPlayer.PlayAudio("audio/didi_hi/" + hiFiles[Random.Range(0, hiFiles.Count)]);
-            }));
-        }
-    }
-
-    public void Walk(int xPosition)
-    {
-        if (walkFlow_ != null)
-        {
-            walkFlow_.destroy();
-            walkFlow_ = null;
-        }
-
-        walkFlow_ = new GoTweenFlow();
-
-        anim_.Play("didi-walk");
-        float duration = Mathf.Abs(transform.localPosition.x - xPosition) / speed_;
-
-        walkFlow_.insert(0f, new GoTween(transform, duration, new GoTweenConfig().localPosition(new Vector3(xPosition, transform.localPosition.y, transform.localPosition.z)).onComplete(t =>
-        {
-            anim_.Play("didi-idle");
-        })));
-
-        walkFlow_.play();
-    }
-
-    public void Phone()
-    {
-        anim_.Play("didi-onphone");
-    }
-
-    public void Idle()
-    {
-        anim_.Play("didi-idle");
-
     }
 }
