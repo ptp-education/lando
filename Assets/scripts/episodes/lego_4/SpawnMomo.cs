@@ -42,6 +42,9 @@ public class SpawnMomo : SpawnedObject
     private int currentLevel_;
     private string command_;
 
+    //Store the momos of the students
+    private Dictionary<string, Momo> studentsmomos_;
+
     public override void ReceivedAction(string action)
     {
         List<string> args_ = ArgumentHelper.ArgumentsFromCommand("-momo", action);
@@ -73,9 +76,14 @@ public class SpawnMomo : SpawnedObject
 
     }
 
+    private void ShowMomoCustomizations() 
+    {
+        //Activate customization screen based on the current level
+    }
+
     private void CustomizeMomo()
     {
-        //Get the options
+        //Get the option selected
         //Check the current level and with that see what customization have to attached
     }
 
@@ -91,7 +99,7 @@ public class SpawnMomo : SpawnedObject
 
     private void RewardSequence()
     {
-        //Check the current level because level 1 have different behaviour
+        //Check if the 'studentsMomos_' have the current nfcID, if doesn't have it, jump to select momos color
         //Based on that Show the eating animation or the select momo screen
     }
 }

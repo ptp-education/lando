@@ -837,7 +837,7 @@ MonoBehaviour:
   - {x: 664, y: 179}
   - {x: -588, y: -203}
   - {x: 455, y: -380}
-  currentVoltage: 15000
+  currentVoltage: 0
 --- !u!1 &6158576372876041508
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,9 +52,9 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: 89ab8cad054de4beb8bf3966434ccf00, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: -400, y: -92, z: 0}
+  - TalkingPosition: {x: -400, y: -400, z: 0}
     Scale: {x: 0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
+    SelectedCharacter: 1
   Video: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
   VideoFilePath: Lego 1 - v3/P1-1.mp4
   VideoLoop: {fileID: 102900000, guid: 178321a3500d54608bd01da6bdbfed32, type: 3}
@@ -370,9 +370,9 @@ MonoBehaviour:
   BgLoop: {fileID: 8300000, guid: a34b817451bf2421086ee02cc4a14023, type: 3}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 800, y: -456, z: 0}
+  - TalkingPosition: {x: 800, y: -650, z: 0}
     Scale: {x: -0.5, y: 0.5, z: 1}
-    SelectedCharacter: 0
+    SelectedCharacter: 1
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
@@ -599,9 +599,9 @@ MonoBehaviour:
   BgLoop: {fileID: 0}
   Type: 1
   Characters:
-  - TalkingPosition: {x: 725, y: -354, z: 0}
+  - TalkingPosition: {x: 725, y: -650, z: 0}
     Scale: {x: -0.75, y: 0.75, z: 1}
-    SelectedCharacter: 0
+    SelectedCharacter: 1
   Video: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}
   VideoFilePath: Lego 1 - v3/P2-0.mp4
   VideoLoop: {fileID: 102900000, guid: a807a210e74c44c05afd8cca63150e2b, type: 3}

@@ -76,6 +76,7 @@ public class AudioPlayer : MonoBehaviour
         {
             DestroyImmediate(audioSource.gameObject);
             audioSource = null;
+            newAudioSource_ = null;
         }));
 
         return clip.length;
