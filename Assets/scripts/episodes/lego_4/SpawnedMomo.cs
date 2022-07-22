@@ -271,11 +271,15 @@ public class SpawnedMomo : SpawnedObject
         if (LevelOfMomo(nfcId_) == 0)
         {
             //show starter Momo
-            if (commandType_.Contains("success"))
+            if (ArgumentHelper.ContainsCommand(("success"), commandType_))
             {
                 HandleStarterPicker();
             }
-            else
+            else if (ArgumentHelper.ContainsCommand(("show"), commandType_))
+            {
+                ShowMomoOnScreen();
+            }
+            else 
             {
                 HandleStarterPickerSelection(commandType_);
             }
@@ -291,7 +295,7 @@ public class SpawnedMomo : SpawnedObject
     private IEnumerator DisplayMomo() {
         if (LevelOfMomo(nfcId_) > 1)
         {
-            if (commandType_.Contains("success"))
+            if (ArgumentHelper.ContainsCommand(("success"), commandType_))
             {
                 ShowMomoOnScreen();
                 yield return new WaitForSeconds(1);

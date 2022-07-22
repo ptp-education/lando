@@ -75,6 +75,7 @@ public class SpawnedLumberTrucksBridge : SpawnedObject
         flow.play();
     }
 
+    //This is in case any truck didn't get destroyed?
     private void DestroyAllTrucks()
     {
         foreach (Image i in truckParent_.GetComponentsInChildren<Image>())

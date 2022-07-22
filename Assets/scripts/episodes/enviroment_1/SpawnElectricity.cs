@@ -33,7 +33,7 @@ public class SpawnElectricity : SpawnedObject
             int.TryParse(args_[1], out currentLevel);
         }
 
-        if (args_.Contains("success")) 
+        if (ArgumentHelper.ContainsCommand(("success"), args_[0])) 
         {
             AddVoltage();
             gameManager_.SendNewActionInternal("-update-options empty");

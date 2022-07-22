@@ -62,26 +62,21 @@ namespace Lando.Class.Lego8
                 gameManager_.SendNewActionInternal("-update-options simulator");
             }
 
-            if (args_.Contains("success"))
+            gameManager_.SendNewActionInternal("-update-options empty");
+
+            if (ArgumentHelper.ContainsCommand(("success"), args_[0]))
             {
                 RewardSequence();
-                gameManager_.SendNewActionInternal("-update-options empty");
             }
-            else if (args_.Contains("left") || args_.Contains("middle") || args_.Contains("right")) 
+            else
             {
                 SelectObjectToPlace(commandType);
-                gameManager_.SendNewActionInternal("-update-options empty");
             }
         }
 
         private void ShowCurrentAnimal() 
         {
             gameManager_.SendNewActionInternal("-update-options default");
-            //animalNeutral_?.gameObject.SetActive(false);
-            //animalNeutral_ = neutralAnimals_[currentLevel_];
-            //animalNeutral_.gameObject.SetActive(true);
-
-            //animalNeutral_.sprite = animals_[currentLevel_].neutral_;
             animalSleeping_.sprite = animals_[currentLevel_].sleeping_;
         }
 
@@ -187,7 +182,6 @@ namespace Lando.Class.Lego8
             AudioPlayer.PlayAudio("audio/sfx/shaking-bush");
             AudioPlayer.PlayAudio("audio/sfx/customization-selection");
             Go.to(this, 2f, new GoTweenConfig().onComplete(t => {
-                //successBackground_.SetActive(false);
                 currentLevel_++;
                 gameManager_.SendNewActionInternal("-update-options default");
             }));

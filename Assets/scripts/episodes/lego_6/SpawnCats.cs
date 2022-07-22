@@ -137,19 +137,15 @@ namespace Lando.Class.Lego6
             if (args.Count == 0) return;
             string commandType = args[0];
 
-            if (args.Contains("success"))
+            if (ArgumentHelper.ContainsCommand(("success"), args[0]))
             {
                 int.TryParse(args[1], out currentLevel);
                 CatSafe();
                 AudioPlayer.PlayAudio("audio/sfx/applausetrumpet");
             }
-            else if (args.Contains("top") || args.Contains("middle") || args.Contains("bottom"))
+            else
             {
                 CustomizeYourCat(commandType);
-            }
-            else if (args.Contains("failure")) 
-            {
-                CatFailure();
             }
         }
 

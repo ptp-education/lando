@@ -37,7 +37,8 @@ public class SpawnedFarm : SpawnedObject
 
         foreach(string a in actions)
         {
-            if (a.Contains("add-farm-"))
+            if (ArgumentHelper.ContainsCommand(("add-farm-"), a))
+                
             {
                 string[] split = a.Split('-');
 

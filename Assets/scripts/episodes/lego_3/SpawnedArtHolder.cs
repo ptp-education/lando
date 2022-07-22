@@ -65,7 +65,7 @@ namespace Lando.Class.Lego3
             {
                 List<string> args = ArgumentHelper.ArgumentsFromCommand("-art-holder", action);
 
-                if (string.Equals(args[0], "show"))
+                if (ArgumentHelper.ContainsCommand(("show"), args[0]))
                 {
                     AudioPlayer.PlayAudio("audio/sfx/door-open");
 

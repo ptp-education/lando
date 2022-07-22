@@ -65,17 +65,13 @@ namespace Lando.Class.Lego7
                 int.TryParse(args_[1], out currentLevel_);
             }
 
-            if (args_.Contains("left") || args_.Contains("middle") || args_.Contains("right"))
-            {
-                SelectAnimal(commandType);
-            }
-            else if (args_.Contains("success"))
+            if (ArgumentHelper.ContainsCommand(("success"), args_[0]))
             {
                 ShowAnimalSelection();
             }
-            else if (args_.Contains("failure")) 
+            else
             {
-                ShowAnimalFailure();
+                SelectAnimal(commandType);
             }
         }
 

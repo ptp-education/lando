@@ -64,7 +64,7 @@ public class SpawnWaterAlien : SpawnedObject
         int.TryParse(args_[1], out currentLevel_);
         nfcId = args_[2];
 
-        if (args_.Contains("success"))
+        if (ArgumentHelper.ContainsCommand(("success"), args_[0]))
         {
             CheckIfHaveAlien(nfcId);
         }

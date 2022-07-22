@@ -41,6 +41,10 @@ public class SpawnedFarmhouse : SpawnedObject
 
     private void RefreshHouse(bool playSound)
     {
+        //Maybe this could be refactored
+        //Store locally the current requirement so it can be compared with the houselevel
+        //And so it can be houselevel / currentRequirement to get the scale of the progress bar (just like in E1 with the voltage meter)
+        //So we can avoid the ford everytime the student scan
         int houseLevel = 0;
         GameStorage.Integer houseLevelStorage = gameManager_.Storage.GetValue<GameStorage.Integer>(GameStorage.Key.HouseLevel);
         if (houseLevelStorage != null)
